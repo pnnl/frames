@@ -1,9 +1,0 @@
-SCC = This is a Source Code Control file
-
-[ChronSrc.dsp]
-SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
-SCC_Project_Name = "$/GENII/Plume/code/ChronSrc", LXSAAAAA
-
-[ChronSrc.dsw]
-SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
-SCC_Project_Name = "$/GENII/Plume/code/ChronSrc", LXSAAAAA
