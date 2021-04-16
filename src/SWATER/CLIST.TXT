@@ -1,0 +1,356 @@
+C----------------------------------------------------------------------
+
+C     Surface Water Transport Data for a Usage Location
+C     Module of GENII                       Version of 11-Dec-86 RAP
+  
+      COMMON /SWPAR/ SWQB,SWDPTH(20),SWDZ(20),SWIDTH(20),SWFLOW(20),
+     .               SWLSX(20), SWOSY(20), MIXR, TREL, SWTT(20)
+C
+      REAL SWQB, SWDPTH, SWDZ, SWIDTH, SWFLOW, SWLSX, SWOSY, MIXR, TREL
+      REAL SWTT
+C-----------------------------------------------------------------------
+C----------------------------------------------------------------------
+
+C     Concentration Common Block
+C     Module of ENV                        Version of 1-Dec-88 RAP
+  
+      COMMON /CONC/ SOLCON(9,4), SL2CON(9,6), NONAGS(9), RESSOL(9),
+     .              DSCON(9,4), DS2CON(9,6), NONAGD(9), DSRES(9),
+     .              GWCON(9), SWCON(9), SWIRR(9),
+     .              AIRCON(9), ARPCON(9), ARFCON(9,4), ARF2CN(9,6),
+     .              AQUCON(9,4), SEDCON(9), 
+     .              PLTCON(9,4), ANMCON(9,4), DWCON(9),
+     .              QAIR(9), QSW(9), QWAS(9),
+     .              EXPOS(9,24), PAKADD(9),
+     .              ARPXCN(9), PWTAIR(9), PWTXAR(9), 
+     .              CT0AIR(9,4), CT0AI2 (9,6), SWACUT(9) 
+
+      REAL DSCON, DS2CON, GWCON, SWCON, AIRCON, 
+     .     SOLCON, SL2CON, AQUCON, SEDCON, ARFCON, ARF2CN, ARPCON,
+     .     QAIR, QSW, QWAS, NONAGS, NONAGD, RESSOL, DSRES,
+     .     PLTCON, ANMCON, DWCON, EXPOS, PAKADD, 
+     .     ARPXCN, PWTAIR, PWTXAR, CT0AIR, CT0AI2, SWACUT
+
+C-----------------------------------------------------------------------
+C----------------------------------------------------------------------
+C
+C     Options / Flags / General Common Block
+C     Module of GENII/SWATER         Version of 31-Oct-96 DLS/RAP
+C
+      COMMON  /OPT/ YRSEC, M3L, YRHR, P, SWAT
+C
+      LOGICAL SWAT
+C     
+      REAL M3L, P, YRSEC, YRHR
+
+C-----------------------------------------------------------------------
+C----------------------------------------------------------------------
+C
+C     Radionuclide (Single Chain) Common Block
+C     Module of GENII                         Version of 18-Feb-88 RAP
+C
+C  
+      COMMON /RAD/ NONUC, IMOD(9), ICL(9), HL(9), ATNUM(9), IRMD(9),
+     .             C14, H3
+      INTEGER NONUC, IMOD, ICL, ATNUM, IRMD
+      REAL HL
+      LOGICAL C14, H3
+
+      COMMON /RADC/ ELT(9), AW(9), 
+     .              BONE(9), 
+     .              CLASS(9)
+
+      CHARACTER ELT*2, AW*6, BONE*1, CLASS*1
+C-----------------------------------------------------------------------
+C----------------------------------------------------------------------
+
+C     Time Common Block
+C     Module of GENII                        Version of 1-Jul-87 RAP
+
+      COMMON /TIMES/ NTIME, ITIME, NBEFORE, ITIMT,
+     .               BEFORE, BEFAIR, BEFIRR, LOIC,
+     .               RELEND, NTKEND, DCEND, 
+     .               AQUTT(4), RECTT, SWTT, HSTART
+
+      INTEGER NTIME, ITIME, BEFAIR, BEFIRR, LOIC, NBEFORE, ITIMT
+      REAL BEFORE, RELEND, NTKEND, DCEND, AQUTT, RECTT, SWTT
+      REAL*8 HSTART
+
+C-----------------------------------------------------------------------
+C   SWATER:     FNAMES.CMN             Version Date: 30-Oct-96               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK FNAMES                              *
+C                                                                            *
+C  Common block FNAMES contains file names                                   *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    30-Oct-96  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/SWATER 
+C     Referenced by modules: SWATER, GETNAM
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    GIDFNM     CHAR*8  file name prefix for GID file
+C    RUNFNM     CHAR*8  file name prefix for run files (WFF, WFC, ERR)
+C    SETNAM     CHAR*14 Name of data set in GID file for this run
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  30-Oct-96       DLS  Modified for use with SWATER                
+C==== COMMON Block Definition ================================================
+C
+      COMMON/FNAMES/GIDFNM,RUNFNM,SETNAM
+C
+C==== Variable Declarations ==================================================
+C
+      CHARACTER      GIDFNM*8, RUNFNM*8, SETNAM*14
+C
+C---- END OF COMMON BLOCK FNAMES ---------------------------------------------
+C   SWATER:     DEVICE.FTN             Version Date: 30-Oct-96               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK DEVICE                              *
+C                                                                            *
+C  Common block DEVICE provides logical unit numbers for each I/O file       *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    30-Oct-96  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: MEPAS/HAZ2
+C     Referenced by modules: 
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C   NERR is logical unit for output error messages, unit 6.
+C   NGID is logical unit for input from GID file, unit 7.
+C   NWFF is logical unit for input water flux file, unit 8.
+C   NWCF is logical unit for output water concentration file, unit 9.
+C   NSLS is logical unit for output file .SLS, listing of input, unit 10.    
+C   NIDF is logical unit for input file FACIL.ID, for file names, unit 11.     
+C   NRMD is logical unit for input file RMDLIB.DAT decay data, unit 12.     
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  30-Oct-1996     DLS  Initial application to SWATER
+C==== COMMON Block Definition ================================================
+C
+      COMMON/DEVICE/NERR,NGID,NWFF,NWCF,NSLS,NIDF,NRMD
+C
+C==== Variable Declarations ==================================================
+C
+      integer NERR,NGID,NWFF,NWCF,NSLS,NIDF,NRMD
+C
+C---- END OF COMMON BLOCK DEVICE ---------------------------------------------
+
+C----------------------------------------------------------------------
+C
+C     Radionuclide Decay Parameters Common Block
+C     Module of GENII                         Version of 1-Jun-87 RAP
+C
+C  
+      COMMON /DECAY/ NUC, IFRM(2,20), DK(2,20), AL(20), ALDAY(20),
+     .               CHNAM(20) 
+      INTEGER IFRM, NUC
+      CHARACTER*12 CHNAM
+      REAL DK, AL
+      REAL*8  ALDAY
+ 
+C-----------------------------------------------------------------------
+C   MEPAS HAZ2: TITLS.FTN             Version Date: 14-Dec-1995            
+C   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK TITLS                               *
+C                                                                            *
+C  Common block TITLS contains titles from input files                       *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/30/87 (Converted to PC)                              *
+C  Last Modified:    14 Dec 95  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: MEPAS/HAZ2
+C     Referenced by modules: 
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C     variable    CHAR  nnnnnnnnnnnnnnnnnnnnnn
+C     ATITL1      CHAR  First title line from atmospheric file
+C     ATITLE      CHAR  First line from atmospheric release rate file
+C     WTITLE      CHAR  Title line from water pathway data file
+C     POPTTL      CHAR  Title from population data file
+C     RTITLE      CHAR  Title of run
+C     PDTITL      CHAR  Title from pollutant data library
+C     STITLE      CHAR  Title from SIF file
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C     20-Nov-95    DLS  Revised parameters to CHARACTER*80 and eliminated
+C                       unused parameters (ATITL1 still 20A4)
+C     27-Nov-95    DLS  Added CTITLE for RMDLIB.DAT file title
+C     14-Dec-95    DLS  Added ATITLE for atmospheric release rate file
+C==== COMMON Block Definition ================================================
+C
+      COMMON/TITLS/ ATITL1(20),WTITLE,POPTTL,PDTITL,RTITLE,STITLE,
+     .              CTITLE,ATITLE
+C
+C==== Variable Declarations ==================================================
+C
+      CHARACTER*80 WTITLE,POPTTL,PDTITL,ATITLE,
+     .            RTITLE,STITLE,CTITLE
+      CHARACTER*4 ATITL1
+C
+C   SWATER:     SWINFO.CMN             Version Date: 30-Oct-96               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK SWINFO                              *
+C                                                                            *
+C  Common block SWINFO contains information related to the current analysis  *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    30-Oct-96  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/SWATER 
+C     Referenced by modules: SWATER, HEADOUT
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    RIVNUM     INT     Number of rivers considered (1 for current version)
+C    RIVNAM(10) CHAR*32 Name of river(s)
+C    NMEDIA     INT     Number of media data sets contained in WFF file
+C    SITNAM     CHAR*32 Name of site
+C    MEDNAM     CHAR*32 Name of usage location (medium)
+C    MEDTYPE    CHAR*13 Type of medium (must be "Surface water")
+C    NUMSIT     INT     Index of site for extraction of data from GID
+C    NUMRIV     INT     Index of river medium for extraction of data from GID
+C    NAMMEDIA   CHAR*32 Name of media to be analyzed in this analysis
+C    EXLOCNAM   CHAR*32 Name of exposure locations for current analysis
+C    EXSRCNAM   CHAR*32 Name of source (eg river x) for current location
+C    NUMEXP     INT     Number of exposure location to include
+C    SWTYPE     CHAR*7  Release type, 'acute ' or 'chronic'
+C    SWMODL     CHAR*15 Water body model to use: 'River' or 'Near-shore lake'
+C    INDX(9)    INT     Cross index between each chain member and GID subscript
+C    NDS(100)   INT     Number of progeny for each constituent in the GID
+C    CNAM(9,30) CHAR*20 Names of radionuclides in decay chains
+C    CID(9,30)  CHAR*12 Id of radionuclides in decay chains
+C    NPROG(30)  INT     Number of progeny for each parent
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  30-Oct-96       DLS  Modified for use with SWATER                
+C==== COMMON Block Definition ================================================
+C
+      COMMON/SWINFO/RIVNUM,RIVNAM(10),NMEDIA,SITNAM,MEDNAM,MEDTYPE,
+     .              NUMSIT,NUMRIV,NAMMEDIA, EXLOCNAM(20), NUMEXP,
+     .              SWTYPE,SWMODL,EXSRCNAM(20),INDX(9),NDS(100),
+     .              CNAM(9,30),CID(9,30),NPROG(30)
+C
+C==== Variable Declarations ==================================================
+C
+      CHARACTER*32 RIVNAM, SITNAM, MEDNAM, NAMMEDIA, EXLOCNAM, EXSRCNAM
+      CHARACTER*14 MEDTYPE
+      CHARACTER*7 SWTYPE
+      CHARACTER*15 SWMODL
+      CHARACTER*12 CID
+      CHARACTER*20 CNAM
+      INTEGER RIVNUM,NMEDIA,NUMSIT,NUMRIV,NUMEXP,INDX,NDS,NPROG
+C
+C---- END OF COMMON BLOCK SWINFO ---------------------------------------------
+C   SWATER:     SWCON.CMN             Version Date: 31-Oct-96               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK SWCON                               *
+C                                                                            *
+C  Common block SWINFO contains calculated concentrations for water conc.    *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    31-Oct-96                                               *
+C  Last Modified:    31-Oct-96  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/SWATER 
+C     Referenced by modules: SWACUTE         
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    SWCON(9)   REAL    Water concentration for each chain member at 1 location
+C    QSW(9)     REAL    Release to surface water body Bq for each member Bq 
+C                          during defined release period (TREL)
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  31-Oct-96       DLS  Initial programming                         
+C==== COMMON Block Definition ================================================
+C
+      COMMON/SWCON/SWCON(9),QSW(9)
+C
+C==== Variable Declarations ==================================================
+C
+C---- END OF COMMON BLOCK SWCON ----------------------------------------------

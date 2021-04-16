@@ -1,0 +1,218 @@
+"mf,Version 2.1"
+"Boundary Conditions:User Defined:usr,RIF Receptor Intakes Module,rif.exe 1,rif.exe 0,rcp.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+Use this module only if you know the receptor constituent intakes for the human populations.  The constituent intake rates at user provided points in time and media are entered directly through the interface.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny intakes.  Therefore, this module assumes that the progeny intakes are input along with the parent intakes.
+
+MODULE REFERENCES
+Document:  FRAMES Known Receptor Intakes
+
+Authors:
+  Mitch Pelton
+  Gariann Gelston
+  Melanie Eslinger
+
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+  http://mepas.pnl.gov/FramesV1/documents/knownrif.pdf
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     rif Receptor Intakes
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,Read
+1,con,,1,1
+1,Write
+"rif,Receptor Intakes"
+82,Variables
+CVTFormat,Not Stochastic,,,,CVT format,0,STRING
+"progeny,Not Stochastic,,,,Use progeny,0,,LOGICAL
+name1,Not Stochastic,,,,Media Name,0,STRING
+kind1,Not Stochastic,,,,Type of exposure,0,STRING
+locx1,Continuous,km,,,X location for Air,0,FLOAT
+locy1,Continuous,km,,,Y location for Air,0,FLOAT
+begAge1,Continuous,yr,,,Beginning age for Air,0,FLOAT
+endAge1,Continuous,yr,,,Ending age for Air,0,FLOAT
+chemname1,Not Stochastic,,,,Constituent name for Air,0,STRING
+casid1,Not Stochastic,,,,Chemical Abstract System Identification for Air,1,STRING
+Variable,FSCNAME,Site,Index2
+time1,Not Stochastic,yr,,,Time for Air,2,FLOAT
+Variable,casid1,Index1,Index2,Index3
+Label,index #,Index4,,
+dur1,Continuous,yr,,,Duration for Air,1,FLOAT
+Label,time index #,Index4,,
+population1,Continuous,,,,Population for Air,1,FLOAT
+Label,flux index #,Index4,,
+exptype1,Not Stochastic,,,,Exposure type for Air,2,STRING
+Variable,casid1,Site,Index2
+Label,flux index #,Index4,,
+efxtype1,Not Stochastic,,,,Effects type for Air,2,STRING
+Variable,casid1,Site,Index2
+Label,flux index #,Index4,,
+route1,Not Stochastic,,,,Intake Route for Air,2,STRING
+Variable,casid1,Site,Index2
+Label,flux index #,Index4,,
+path1,Not Stochastic,,,,Constituent pathway for Air,2,STRING
+Variable,casid1,Site,Index2
+Label, flux index #,Index4,,
+conc1,Continuous,mg/kg/day,,,Concentration for Air,3,FLOAT
+Variable,casid1,Site,Index2
+Label,flux index #,Index4,,
+Label,time index #,Index5
+name2,Not Stochastic,,,,Media Name,0,STRING
+kind2,Not Stochastic,,,,Type of exposure,0,STRING
+locx2,Continuous,km,,,X location for Aquifer,0,FLOAT
+locy2,Continuous,km,,,Y location for Aquifer,0,FLOAT
+begAge2,Continuous,yr,,,Beginning age for Aquifer,0,FLOAT
+endAge2,Continuous,yr,,,Ending age for Aquifer,0,FLOAT
+chemname2,Not Stochastic,,,,Constituent name for Aquifer,0,STRING
+casid2,Not Stochastic,,,,Chemical Abstract System Identification for Aquifer,1,STRING
+Variable,FSCNAME,Site,Index2
+time2,Not Stochastic,yr,,,Time for Aquifer,2,FLOAT
+Variable,casid2,Index1,Index2,Index3
+Label,index #,Index4,,
+dur2,Continuous,yr,,,Duration for Aquifer,1,FLOAT
+Label,time index #,Index4,,
+population2,Continuous,,,,Population for Aquifer,1,FLOAT
+Label,flux index #,Index4,,
+exptype2,Not Stochastic,,,,Exposure type for Aquifer,2,STRING
+Variable,casid2,Site,Index2
+Label,flux index #,Index4,,
+efxtype2,Not Stochastic,,,,Effects type for Aquifer,2,STRING
+Variable,casid2,Site,Index2
+Label,flux index #,Index4,,
+route2,Not Stochastic,,,,Intake Route for Aquifer,2,STRING
+Variable,casid2,Site,Index2
+Label,flux index #,Index4,,
+path2,Not Stochastic,,,,Constituent pathway for Aquifer,2,STRING
+Variable,casid2,Site,Index2
+Label, flux index #,Index4,,
+conc2,Continuous,mg/kg/day,,,Concentration for Aquifer,3,FLOAT
+Variable,casid2,Site,Index2
+Label,flux index #,Index4,,
+Label,time index #,Index5
+name3,Not Stochastic,,,,Media Name,0,STRING
+kind3,Not Stochastic,,,,Type of exposure,0,STRING
+locx3,Continuous,km,,,X location for Surface Water,0,FLOAT
+locy3,Continuous,km,,,Y location for Surface Water,0,FLOAT
+begAge3,Continuous,yr,,,Beginning age for Surface Water,0,FLOAT
+endAge3,Continuous,yr,,,Ending age for Surface Water,0,FLOAT
+chemname3,Not Stochastic,,,,Constituent name for Surface Water,0,STRING
+casid3,Not Stochastic,,,,Chemical Abstract System Identification for Surface Water,1,STRING
+Variable,FSCNAME,Site,Index2
+time3,Not Stochastic,yr,,,Time for Surface Water,2,FLOAT
+Variable,casid3,Index1,Index2,Index3
+Label,index #,Index4,,
+dur3,Continuous,yr,,,Duration for Surface Water,1,FLOAT
+Label,time index #,Index4,,
+population3,Continuous,,,,Population for Surface Water,1,FLOAT
+Label,flux index #,Index4,,
+exptype3,Not Stochastic,,,,Exposure type for Surface Water,2,STRING
+Variable,casid3,Site,Index2
+Label,flux index #,Index4,,
+efxtype3,Not Stochastic,,,,Effects type for Surface Water,2,STRING
+Variable,casid3,Site,Index2
+Label,flux index #,Index4,,
+route3,Not Stochastic,,,,Intake Route for Surface Water,2,STRING
+Variable,casid3,Site,Index2
+Label,flux index #,Index4,,
+path3,Not Stochastic,,,,Constituent pathway for Surface Water,2,STRING
+Variable,casid3,Site,Index2
+Label, flux index #,Index4,,
+conc3,Continuous,mg/kg/day,,,Concentration for Surface Water,3,FLOAT
+Variable,casid3,Site,Index2
+Label,flux index #,Index4,,
+Label,time index #,Index5
+name4,Not Stochastic,,,,Media Name,0,STRING
+kind4,Not Stochastic,,,,Type of exposure,0,STRING
+locx4,Continuous,km,,,X location for Wetlands,0,FLOAT
+locy4,Continuous,km,,,Y location for Wetlands,0,FLOAT
+begAge4,Continuous,yr,,,Beginning age for Wetlands,0,FLOAT
+endAge4,Continuous,yr,,,Ending age for Wetlands,0,FLOAT
+chemname4,Not Stochastic,,,,Constituent name for Wetlands,0,STRING
+casid4,Not Stochastic,,,,Chemical Abstract System Identification for Wetlands,1,STRING
+Variable,FSCNAME,Site,Index2
+time4,Not Stochastic,yr,,,Time for Wetlands,2,FLOAT
+Variable,casid4,Index1,Index2,Index3
+Label,index #,Index4,,
+dur4,Continuous,yr,,,Duration for Wetlands,1,FLOAT
+Label,time index #,Index4,,
+population4,Continuous,,,,Population for Wetlands,1,FLOAT
+Label,flux index #,Index4,,
+exptype4,Not Stochastic,,,,Exposure type for Wetlands,2,STRING
+Variable,casid4,Site,Index2
+Label,flux index #,Index4,,
+efxtype4,Not Stochastic,,,,Effects type for Wetlands,2,STRING
+Variable,casid4,Site,Index2
+Label,flux index #,Index4,,
+route4,Not Stochastic,,,,Intake Route for Wetlands,2,STRING
+Variable,casid4,Site,Index2
+Label,flux index #,Index4,,
+path4,Not Stochastic,,,,Constituent pathway for Wetlands,2,STRING
+Variable,casid4,Site,Index2
+Label, flux index #,Index4,,
+conc4,Continuous,mg/kg/day,,,Concentration for Wetlands,3,FLOAT
+Variable,casid4,Site,Index2
+Label,flux index #,Index4,,
+Label,time index #,Index5
+name5,Not Stochastic,,,,Media Name,0,STRING
+kind5,Not Stochastic,,,,Type of exposure,0,STRING
+locx5,Continuous,km,,,X location for Soil,0,FLOAT
+locy5,Continuous,km,,,Y location for Soil,0,FLOAT
+begAge5,Continuous,yr,,,Beginning age for Soil,0,FLOAT
+endAge5,Continuous,yr,,,Ending age for Soil,0,FLOAT
+chemname5,Not Stochastic,,,,Constituent name for Soil,0,STRING
+casid5,Not Stochastic,,,,Chemical Abstract System Identification for Soil,1,STRING
+Variable,FSCNAME,Site,Index2
+time5,Not Stochastic,yr,,,Time for Soil,2,FLOAT
+Variable,casid5,Index1,Index2,Index3
+Label,index #,Index4,,
+dur5,Continuous,yr,,,Duration for Soil,1,FLOAT
+Label,time index #,Index4,,
+population5,Continuous,,,,Population for Soil,1,FLOAT
+Label,flux index #,Index4,,
+exptype5,Not Stochastic,,,,Exposure type for Soil,2,STRING
+Variable,casid5,Site,Index2
+Label,flux index #,Index4,,
+efxtype5,Not Stochastic,,,,Effects type for Soil,2,STRING
+Variable,casid5,Site,Index2
+Label,flux index #,Index4,,
+route5,Not Stochastic,,,,Intake Route for Soil,2,STRING
+Variable,casid5,Site,Index2
+Label,flux index #,Index4,,
+path5,Not Stochastic,,,,Constituent pathway for Soil,2,STRING
+Variable,casid5,Site,Index2
+Label, flux index #,Index4,,
+conc5,Continuous,mg/kg/day,,,Concentration for Soil,3,FLOAT
+Variable,casid5,Site,Index2
+Label,flux index #,Index4,,
+Label,time index #,Index5

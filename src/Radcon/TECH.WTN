@@ -1,0 +1,28 @@
+C     MEPAS RADCON: ISV.WTN               VERSION DATE: 12-02-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: CSOURCE.FTN 
+C
+C     This include statement contains values for technology types used in RAAS
+C
+C     Creation Date:     11/08/92 - JWB
+C     Last Modified:     12/02/92 - JWB
+C
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C     12/02/92     JWB  INCLUDE statements added to subroutine CONTAM         
+C
+C=== Referenced by: RADCOND, LEACHV, CONTAM, SOURCE
+C
+C=== Significant Parameters ==================================================
+C
+C    ANALYSIS  - TYPE OF ANALYSIS BEING CONDUCTED (BASELINE, REMEDIATION)
+C    TECH_TYPE - THE TECHNOLOGY TYPE BEING SIMULATED
+C
+C*****************************************************************************
+C
+      INTEGER*4 analysis, tech_type
+C
+      COMMON/TECH/analysis, tech_type

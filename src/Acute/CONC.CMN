@@ -1,0 +1,31 @@
+C----------------------------------------------------------------------
+C
+C     Concentration Common Block
+C     Module of ENV                        Version of 1-Dec-88 RAP
+C     Revised for use in EDUP/GENII ACUTE component: 19-Mar-98  BAN
+C
+C     Subroutines that use this common block must also include PARMTR.PAR 
+C     which provides the maximum chain length parameter, CHAINLEN.
+C
+      COMMON /CONC/ SOLCON(CHAINLEN,4), SL2CON(CHAINLEN,6),
+     .        RESSOL(CHAINLEN),
+     .        GWCON(CHAINLEN), GWIRR(CHAINLEN), SWCON(CHAINLEN),
+     .        SWIRR(CHAINLEN), AIRCON(CHAINLEN), ARPCON(CHAINLEN),
+     .        ARFCON(CHAINLEN,4), ARF2CN(CHAINLEN,6),AQUCON(CHAINLEN,4),
+     .        SEDCON(CHAINLEN),PLTCON(CHAINLEN,4), ANMCON(CHAINLEN,4),
+     .        QAIR(CHAINLEN), QSW(CHAINLEN), 
+     .        EXPOS(CHAINLEN,28), ARPXCN(CHAINLEN),
+     .        PWTAIR(CHAINLEN), PWTXAR(CHAINLEN),CT0AIR(CHAINLEN,4),
+     .        CT0AI2(CHAINLEN,6), SWACUT(CHAINLEN),EXTD(CHAINLEN),
+     .        DRYDEP(CHAINLEN), WETDEP(CHAINLEN), TOTDEP(CHAINLEN),
+     .        RESAVG(CHAINLEN), SOLAVG(CHAINLEN,4), SL2AVG(CHAINLEN,6)
+
+      REAL GWCON, SWCON, AIRCON, 
+     .     SOLCON, SL2CON, AQUCON, SEDCON, ARFCON, ARF2CN, ARPCON,
+     .     QAIR, QSW, RESSOL, 
+     .     PLTCON, ANMCON, EXPOS,  
+     .     ARPXCN, PWTAIR, PWTXAR, CT0AIR, CT0AI2, SWACUT,
+     .     EXTD, DRYDEP, WETDEP, TOTDEP, RESAVG, SOLAVG, SL2AVG
+C
+C-----------------------------------------------------------------------
+C

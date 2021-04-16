@@ -1,0 +1,24 @@
+C-----------------------------------------------------------------------
+C     NUCNAM
+C           DESCRIPTION: RADIONUCLIDE NAMES IN MASTER LIST
+C  
+C     Module of DITTY              Last modification: 8-May-87 RAP
+C     Modified for EDUP/GENII ACUTE component last: 29-Jul-97 DLS
+C-----------------------------------------------------------------------
+C
+C     NUCTOT        - NO. OF RADIONUCLIDES IN THE MASTER LIST.
+C     AW(9)         - 6 CHARACTER ATOMIC WEIGHT SYMBOL FOR EACH RADIO-
+C                     NUCLIDE IN THE MASTER LIST.
+C     ELT(9)        - 2 CHARACTER ELEMENT NAME FOR EACH RADIONUCLIDE
+C                     IN THE MASTER LIST.
+C
+C----- Common Block Definition -----------------------------------------------
+C
+      COMMON /NUCNAM/ NUCTOT, AW(CHAINLEN), ELT(CHAINLEN)
+C
+C----- Type Declarations -----------------------------------------------------
+C
+      CHARACTER*2 ELT
+      CHARACTER*6 AW
+C
+C-----------------------------------------------------------------------

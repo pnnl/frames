@@ -1,0 +1,16 @@
+"riv3",15                               
+ ******************************************************************************
+          Modeling Parent Contaminant Number   1 for Scenario Number   1
+ ******************************************************************************
+
+ Modeling Medium #             1
+ Medium Type (MED)          =  5
+ Source Configuration       =  0
+ Source Term Discharge Type =  3
+ SURFACE WATER ENVIRONMENT
+
+
+
+WARNING --> Contaminant Number =  1
+The solubility limit is being used for the initial concentration.
+

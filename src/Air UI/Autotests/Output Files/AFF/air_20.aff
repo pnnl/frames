@@ -1,0 +1,145 @@
+"usr4",144                              
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.5"
+"  Site Index: 1"
+"  Module Index: 1"
+"  Module Name: usr4"
+"  Created:  5/18/2004 2:12:37 PM"
+"=================================================="
+1
+"all"
+"Area"
+78539816,"m^2"
+0,"m"
+0,"m"
+0,"m/s"
+20,"C"
+20,"C"
+1
+"Particle 1",1.5,"um",3,"g/cm^3",
+25
+"1,1,1,2-Tetrachloroethane","630206","yr","g/yr",2,0
+0,1000
+1,1000
+"ACTINIUM-228","AC228","yr","pCi/yr",2,3
+0,1000
+1,1000
+"THORIUM-228","TH228","yr","pCi/yr",2,"ACTINIUM-228","AC228"
+0,0
+1,0
+"RADIUM-224","RA224","yr","pCi/yr",2,"ACTINIUM-228","AC228"
+0,0
+1,0
+"LEAD-212","PB212","yr","pCi/yr",2,"ACTINIUM-228","AC228"
+0,0
+1,0
+"Aldrin","309002","yr","g/yr",2,0
+0,1000
+1,1000
+"Aluminum Fluoride","7784181","yr","g/yr",2,0
+0,1000
+1,1000
+"Benzyl alcohol","100516","yr","g/yr",2,0
+0,1000
+1,1000
+"Cadmium","7440439","yr","g/yr",2,0
+0,1000
+1,1000
+"Dinitrobenzene","99650","yr","g/yr",2,0
+0,1000
+1,1000
+"Endosulfan I (Alpha)","115297A","yr","g/yr",2,0
+0,1000
+1,1000
+"Fluorene","86737","yr","g/yr",2,0
+0,1000
+1,1000
+"Glucinium","7440417","yr","g/yr",2,0
+0,1000
+1,1000
+"IODINE-129","I129","yr","pCi/yr",2,0
+0,1000
+1,1000
+"LEAD-210","PB210","yr","pCi/yr",2,2
+0,1000
+1,1000
+"BISMUTH-210","BI210","yr","pCi/yr",2,"LEAD-210","PB210"
+0,0
+1,0
+"POLONIUM-210","PO210","yr","pCi/yr",2,"LEAD-210","PB210"
+0,0
+1,0
+"Methanol","67561","yr","g/yr",2,0
+0,1000
+1,1000
+"Methylene chloride","75092","yr","g/yr",2,0
+0,1000
+1,1000
+"Naphthalene","91203","yr","g/yr",2,0
+0,1000
+1,1000
+"Octalox","60571","yr","g/yr",2,0
+0,1000
+1,1000
+"PCB (General Classification)","1336363","yr","g/yr",2,0
+0,1000
+1,1000
+"RADIUM-223","RA223","yr","pCi/yr",2,0
+0,1000
+1,1000
+"SELENIUM-79","SE79","yr","pCi/yr",2,0
+0,1000
+1,1000
+"Sodium Iodide","7681825","yr","g/yr",2,0
+0,1000
+1,1000
+"THORIUM-230","TH230","yr","pCi/yr",2,5
+0,1000
+1,1000
+"RADIUM-226","RA226","yr","pCi/yr",2,"THORIUM-230","TH230"
+0,0
+1,0
+"RADON-222","RN222","yr","pCi/yr",2,"THORIUM-230","TH230"
+0,0
+1,0
+"LEAD-210","PB210","yr","pCi/yr",2,"THORIUM-230","TH230"
+0,0
+1,0
+"BISMUTH-210","BI210","yr","pCi/yr",2,"THORIUM-230","TH230"
+0,0
+1,0
+"POLONIUM-210","PO210","yr","pCi/yr",2,"THORIUM-230","TH230"
+0,0
+1,0
+"TRITIUM (elemental)","H3-EL","yr","pCi/yr",2,0
+0,1000
+1,1000
+"URANIUM-234","U234","yr","pCi/yr",2,6
+0,1000
+1,1000
+"THORIUM-230","TH230","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"RADIUM-226","RA226","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"RADON-222","RN222","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"LEAD-210","PB210","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"BISMUTH-210","BI210","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"POLONIUM-210","PO210","yr","pCi/yr",2,"URANIUM-234","U234"
+0,0
+1,0
+"Xylene","1330207","yr","g/yr",2,0
+0,1000
+1,1000
+"ZIRCONIUM-88","ZR88","yr","pCi/yr",2,0
+0,1000
+1,1000

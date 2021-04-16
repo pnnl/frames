@@ -1,0 +1,42 @@
+<h2>CASE STUDIES AND APPLICATIONS</h2>
+
+
+<br><font face="Verdana"><font color="#000080"><font size=-1>This software
+platform was developed with problem-solving in mind and is application-oriented.
+FRAMES combines the best of both government and industrial technical knowledge
+and expertise and has been independently reviewed for technicality and
+usability. Several of FRAMES applications are described as follows:</font></font></font>
+<blockquote>
+<li>
+<font face="Verdana"><font color="#000080"><font size=-1>FRAMES has been
+used for the Baseline Risk Assessment at the DOE Pantex Plant in Texas.
+A site-specific groundwater transport code was linked into FRAMES and its
+models to conduct a source to impacts analysis. A client lauded the work
+ because of the quality results and efficient use of modeling resources</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana"><font color="#000080"><font size=-1>The FRAMES concept
+was a critical component of EPA's Hazardous Waste Identification Rule (HWIR).
+FRAMES concepts were used to integrate selected fate, transport, exposure,
+and impact codes to develop nation-wide regulatory information. The EPA
+client awarded Battelle the highest technical and management marks possible.</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana"><font color="#000080"><font size=-1>FRAMES has been
+applied at several DOD sites that have been contaminated with an assortment
+of chemicals. FRAMES allowed Battelle staff to link their suite of environmental
+codes with client-preferred codes to provide the appropriate modeling system
+for the specific application. DOD has repeatedly come back to Battelle
+because of its unique capabilities and service.</font></font></font></li>
+</blockquote>
+
+<p>
+<u><font size=+1><font face="Verdana"><font color="#000080">CASE STUDIES</u></font>
+<p>
+<font face="Verdana"><font color="#000080"><font size=-1>
+<b><a href="Examplecase1_weap01.pdf" target=_blank>Example of an Aquatic Ecological Assessment,</b></a> Based on a User-Defined Water Concentration Module and WEAP
+<br><b><a href="Examplecase1_weap02.pdf" target=_blank>Example of an Aquatic Ecological Assessment,</b></a> Based on Recovery, TBP, and WEAP Models
+
+<p> View the <a href="tutorial.html"><b>Tutorial</b></a> for another example case.

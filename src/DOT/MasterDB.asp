@@ -1,0 +1,2 @@
+<%	' define the connection string for the master database
+	MasterConnect = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=frames;Password=frames2000;Initial Catalog=FramesStructures;Data Source=wd32435"%>

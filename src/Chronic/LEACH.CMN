@@ -1,0 +1,53 @@
+C   GENII/EXPOS LEACH.CMN             Version Date: 12-Jun-97               
+C   Copyright 1997 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                                                                            *
+C  Common block LEACH                            
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    28-Nov-95                                                *
+C  Last Modified:    12-Jun-97  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/EXPOS
+C     Referenced by modules: GETLEACH
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    LCHOPT      INT    Leach rate option flag (1-use ENVLIB values, 2-calc.
+C                       using soil parameters and Kd, 3-user defined leach rates
+C    ALEACH(9)   REAL*8 Leach rate constant for loss from agricultural soil
+C    VLEACH      REAL*4 Total infiltration rate (cm/yr)
+C    THICK       REAL*4 thickness of agricultural soil plow layer
+C    MOISTC      REAL*4 moisture content of agricultural soil
+C    BULKD       REAL*4 bulk density of agricultural soil
+C    SOILKD(20)  REAL*4 Kd value for agricultural soil (ml/g)
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  
+C==== COMMON Block Definition ================================================
+C
+      COMMON/LEACH/LCHOPT, ALEACH(lenchain), THICK, MOISTC, BULKD,
+     .             SOILKD(lenchain),VLEACH
+c      COMMON/LEACH/LCHOPT, ALEACH(100,9), THICK, MOISTC, BULKD,
+c     .             SOILKD(20),VLEACH
+C
+C==== Variable Declarations ==================================================
+C
+      INTEGER LCHOPT
+      REAL*4 ALEACH
+      REAL*4 THICK, MOISTC, BULKD, SOILKD, VLEACH
+C

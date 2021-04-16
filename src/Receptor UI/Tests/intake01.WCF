@@ -1,0 +1,16 @@
+"aqu5",7
+1
+"aqu5 has known Aquifer concentration values."
+1
+"fcm3","Aquifer",1
+"Benzene","71432","yr","g/ml",2,0
+0.0,10.0
+200.0,10.0
+"riv9",0000000007
+1
+"riv9 has known Surface water concentration values."
+1
+"fcm3","Surface water",1
+"Benzene","71432","yr","g/ml",2,0
+0.0,30.0
+100.0,30.0

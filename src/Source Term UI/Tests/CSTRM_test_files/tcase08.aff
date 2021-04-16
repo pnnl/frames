@@ -1,0 +1,26 @@
+"src2",25                               
+7
+================================================================================
+  Source Term Release Module Version: Framework PoP  January 1997  
+  Run:
+  Site:
+  Run Performed:
+  Output Filename:
+================================================================================
+1
+All
+area
+100
+0,m2
+0,m
+0,m/s
+20,Deg C
+20,Deg C
+2
+Gas 1,0,fraction,0,g/cm^3
+Particle 1,7.5,um,1.5,g/cm^3
+1
+Chromium VI,7440473,yr,g/yr,3,0
+0,0,0
+1,0,7.250669296e-05
+50,0,7.250669296e-05

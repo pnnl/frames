@@ -1,0 +1,21 @@
+!-----------------------------------------------------------------------
+!     CONIN
+!           DESCRIPTION: RADIONUCLIDE CONCENTRATIONS IN VARIOUS MEDIA
+!           USED BY: EXPOS, SETCON
+!-----------------------------------------------------------------------
+!
+      COMMON /CONIN/  AIRCIN(20,20,36),  DEPTOT(20,20,36)
+!
+      REAL  AIRCIN, DEPTOT
+!
+!
+!   AIRCIN(9,10,36) - AIR CONCENTRATION
+!                     DIRECTION, BQ/M3
+!   DEPDRY(9,10,36) - DRY DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+!                     DIRECTION, BQ/M3/SEC
+!   DEPWET(9,10,36) - WET DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+!                     DIRECTION, BQ/M3/SEC
+!   DEPTOT(9,10,36) - TOTAL DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+!                     DIRECTION, BQ/M3/SEC
+!   EXTDOS(9,10,36) - EXTERNAL DOSE, PLUME, OF CHAIN MEMBERS, BY DISTANCE AND
+!                     DIRECTION, SV

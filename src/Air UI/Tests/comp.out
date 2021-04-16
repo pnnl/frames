@@ -1,0 +1,26 @@
+Comparing files air_13.GID and air_13b.gid
+****** air_13.GID
+"SrcDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FRAMES\FUISRC.DES"
+"SrcScrX",1,1,0,0,0,0,0,"n/a","n/a",132.874
+"SrcScrY",1,1,0,0,0,0,0,"n/a","n/a",411.4114
+"SrcNum",1,0,0,0,0,0,0,"n/a","n/a",1
+****** air_13b.gid
+"SrcDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FRAMES\FUISRC.DES"
+"SrcScrX",1,1,0,0,0,0,0,"n/a","n/a",112.2047
+"SrcScrY",1,1,0,0,0,0,0,"n/a","n/a",321.3213
+"SrcNum",1,0,0,0,0,0,0,"n/a","n/a",1
+******
+
+****** air_13.GID
+"AirDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FRAMES\Mepair.des"
+"AirScrX",1,1,0,0,0,0,0,"n/a","n/a",284.4488
+"AirScrY",1,1,0,0,0,0,0,"n/a","n/a",411.4114
+"AirSrcName",1,1,1,0,0,0,0,"n/a","n/a","src2"
+****** air_13b.gid
+"AirDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FRAMES\Mepair.des"
+"AirScrX",1,1,0,0,0,0,0,"n/a","n/a",247.0472
+"AirScrY",1,1,0,0,0,0,0,"n/a","n/a",321.3213
+"AirSrcName",1,1,1,0,0,0,0,"n/a","n/a","src2"
+******
+
+

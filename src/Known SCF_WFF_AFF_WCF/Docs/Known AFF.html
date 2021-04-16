@@ -1,0 +1,76 @@
+<html>
+<head>
+   <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <meta NAME="Author" content="G. Sakamoto, S. Mahasenen">
+   <title>Boundary Condition Module Help
+</title>
+</head>
+<body background="frames1.jpg">
+<a NAME="top"></a>
+<hr WIDTH="100%">
+<center><h1>AFF Air Emission Rates Module Help</h1></center>
+<hr WIDTH="100%">
+<br>
+<p>Use this module only if you know the constituent air emission rates. The constituent air emmisons, at user provided points in time, are entered directly through the interface.&nbsp; This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny emissions.  Therefore, this module assumes that the progeny emissions will be input along with the parent emissions.
+<p>For more information about the file specification that this module produces see <a href="http://mepas.pnl.gov/FRAMESV1/aff.html">AFF Specifications</a> on the <a href="http://mepas.pnl.gov/FRAMESV1">FRAMES</a> web site.
+<p><b>AFF Boundary Condition Parameters</b>
+<p><b><i>Type of release</i></b><a NAME="transmit"></a>
+<br>Select either a point or area release type to be modeled. Click the down arrow key and then click the appopriate option. Point source releases occur through a relatively small area such as a stack, vent, or cooling tower.&nbsp; Area source releases occur from a contaminated surface area, or through a surface area from contamination under the surface. Typical area sources are landfills, ponds, spills, etc.
+<p><b><i>Exit area of source</i></b><a NAME="one"></a>
+<br>Units: m^2 (square meters)
+<br>Range: Greater than 0.
+<p>Enter the exit area of the point or area source.&nbsp; The exit area is the area of the source through which constituent is released.
+<p><b><i>Exit height of source</i></b><a NAME="two"></a>
+<br>Units: m (meters)
+<br>Range: Greater than 0.
+<p>For point sources, enter the height of the release.&nbsp; For a stack release, this height is measured from the base to the top of the stack.&nbsp; For a vent this parameter is measured from the base of the structure to the vent.
+<p><b><i>Height of adjacent structure</i></b><a NAME="three"></a>
+<br>Units: m (meters)
+<br>Range: Greater than or equal to 0.
+<p>For point sources, give the maximum height in meters of the building with the vent or of structures immediately next to stacks. This parameter is used to estimate how buildings, influence the initial dispersion and plume rise.&nbsp; If there are no buildings, or for cooling towers not located in the wake of an adjacent building, this value is 0.0.
+<p><b><i>Exit velocity of source</i></b><a NAME="four"></a>
+<br>Units: m/s (meters per second)
+<br>Range: Greater than or equal to 0.
+<p>For point sources, enter the vertical component of the exit velocity.&nbsp; Enter 0.0 for horizontal releases.
+<p><b><i>Exit temperature of source</i></b><a NAME="five"></a>
+<br>Units: C (degrees centigrade)
+<br>Range: None
+<p>For point sources, enter the temperature of the release.&nbsp; If the release is not heated, enter the annual average air temperature.
+<p><b><i>Ambient air temperature</i></b><a NAME="six"></a>
+<br>Units: C (degrees centigrade)
+<br>Range: None
+<p>For point sources, enter the annual average atmospheric temperature.&nbsp; An annual summary of the Local Climatological Data (LCD) for the nearest representative national weather service station should be obtained, because they contain the average annual air temperature, as well as other data needed for atmospheric modeling.&nbsp; They are published by the Environmental Data Service, NOAA, National Climatic Center (NCC) in Asheville, North Carolina. The annual average air temperature can be found in the "Normals, Means, and Extremes" table of the LCD.
+<p><b><i>Flux Types</i></b><a NAME="flux"></a>
+<br>Selecting the "Flux Types" button allows for the specification of the physical form of the constituents being released.&nbsp; The user may define up to four flux types - Gas, Particle 1, Particle 2 and Particle 3.&nbsp; All four or a minimum of one must be selected for analysis.&nbsp; The default flux type is a release of particulates having a radius of 0.03 um and a particle density of 1.5 g/cm3.&nbsp; To turn on other particulate categories, select the appropriate check box and either accept or modify the default particle radius and density (3.0 um and 1.5 g/cm3 for "Particle 2," and 10.0 um and 1.5 g/cm3 for "Particle 3").&nbsp; If any constituents in this scenario are released as a gas, make sure to select the "Gas 1" check box.
+<p><b><i>Reactive Fraction</i></b><a NAME="reactive"></a>
+<br>Units: fraction
+<br>Range: 0 to 1 Inclusive
+<p>Defines the fraction of the gas that is reactive.&nbsp; Mostly used for Radon emissions.
+<p><b><i>Density</i></b><a NAME="density"></a>
+<br>Units: g/cm^3 (grams per cubic centimeter)
+<br>Range: Greater than 0.
+<p>Defines the ratio of suspended mass to the volume of air.&nbsp; Input a density for each selected particle.
+<p><b><i>Radius</i></b><a NAME="radius"></a>
+<br>Units: um (micrometers)
+<br>Range: Positive integer greater than 0.
+<p>Defines the radius of the suspended particle.&nbsp; Input a radius for each selected particle.
+<center>
+<p><img SRC="AFF-Flux Types.jpg">
+<br><b><font size=-1>Fig: Flux Types</font></b>
+</center>
+<p><b><i>Constituent</i></b><a NAME="parent">
+<br>The list of constituents is identified by a 'Constituent' database module.&nbsp; Each of the constituents selected for analysis in the 'Constituent' module appears in this drop-down box.&nbsp; Use the drop down-box or the « » buttons to make differeent constituent selections.&nbsp; As a new selection is made the spreadsheet closest to the drop-down box is updated with the appropriate time series.&nbsp; If the selected constituent has progeny and if the "Include Progeny" option is checked under the "Options" menu, then an identical set of controls will appear to the left of the parent.&nbsp; The progeny will be displayed as the parent is displayed but only those progeny that relate to the displayed parent are available for data entry.
+<p><b><i>Time</i></b></a><a NAME="constituent"></a>
+<br>Units: yr (years)
+<br>Range: Greater than or equal to 0.
+<p>A minimum of two times must be entered.&nbsp; Times must be entered in chronological, ascending order (i.e., 0, 5, 10 not 0, 10, 5).&nbsp; The spreadsheet rows must be used consecutively.&nbsp; Anything below a skipped time row will be deleted.&nbsp; A point in time at which a measurement/estimate is given should be relative to all other times entered in the interface and the overall simulation.
+<p><b><i>Particle and Gas Flux</i></b>
+<br>Units: g/yr (grams per year) or pCi/yr (picocuries per year)
+<br>Range: Greater than or equal to 0.
+<p>Mass fluxes need to be entered for each constituent and progeny if appropriate.&nbsp; The mass flux categories available depend on the settings made under Flux Types.&nbsp; Items left blank in rows that have a valid time defined are filled with zeros. All rows after and including the first row with an invalid time are ignored and cleared.
+<center>
+<p><img SRC="AFF-Constituent.jpg">
+<br><b><font size=-1>Fig: Constituent</font></b>
+</center>
+</body>
+</html>

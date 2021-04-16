@@ -1,0 +1,15 @@
+C----------------------------------------------------------------------
+C
+C     Radionuclide Decay Parameters Common Block
+C     Module of GENII                         Version of 1-Jun-87 RAP
+C
+C  
+      COMMON /DECAY/ NUC, IFRM(2,LENCHAIN), DK(2,LENCHAIN),
+     .               AL(LENCHAIN), ALDAY(LENCHAIN)
+ 
+      INTEGER IFRM, NUC
+      REAL DK, AL
+      REAL*8  ALDAY
+ 
+C-----------------------------------------------------------------------
+

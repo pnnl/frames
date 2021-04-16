@@ -1,0 +1,115 @@
+<a NAME="top"></a>
+<h2>Air Flux File (AFF)</h2>
+The AFF is a spatial average through an exit area into unconstrained air passing by the area. The exit area is normally defined by physical characteristics of the source. In all cases, the exit area is the area used to define the spatial average of the air flux. The air fluxes are in pCi/yr or g/yr depending on whether the constituent is a radionuclide or chemical. These flux values are the instantaneous values at a specified time (i.e. the value is not a time-average). There are NO limits on number of constituents, progeny, fluxes. The number of constituent types is unlimited.
+<p>
+The following outline is a description of the basic information provided in the AFF. An example AFF file is included after the outline. Comparing the line by line description in the outline to the example should clarify and help locate data contained in the AFF file. Lines beginning with ';' are descriptive comments only and will not appear in the actual AFF file.
+<br>
+<br><B><I>For each</I></B> 'Module' a producing an AFF section
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Module Name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Lines in section - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Header Lines - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Header Line'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header information - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Header Line'
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Number of Data Sets - <B>[Const INTEGER]</B> - 1
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Data Set'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Set name - <B>[Const STRING]</B> - "All"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source Type Name - <B>[Const STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> Stack, vent, etc. - "POINT"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> Landfill, pond, etc. - "AREA"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Area of Source - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Area Unit - <B>[Const STRING]</B> - "m2"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Height - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> 'Source Type' = AREA <B><I>then</I></B> 'Exit Height' = 0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Height units - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjacent Structure Height - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> 'Source Type' = AREA <B><I>then</I></B> 'Adjacent Structure Height' = 0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjacent Structure Height unit - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Velocity - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> 'Source Type' = AREA <B><I>then</I></B> 'Exit Velocity' = 0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Velocity unit - <B>[Const STRING]</B> - "m/s"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Temperature - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Temperature unit - <B>[Const STRING]</B> - "deg C"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambient Air Temperature - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambient Air Temperature unit - <B>[Const STRING]</B> - "deg C"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Flux Types - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Flux Type'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux Type Name - <B>[Const STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> Gas, <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Flux Type Name' = "Gas 1"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>ElseIf</I></B> Particle <B><I>then</I></B> "Particle #" followed by the particle count
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Flux Type Name' = "Particle 1" / "Particle 2" / "Particle 3", ...
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>If</I></B> Type Name = "Gas #" <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reactive Gas fraction - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reactive Gas fraction unit - <B>[Const STRING]</B> - "fraction"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Else</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Particle Radius - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Particle Radius unit - <B>[Const STRING]</B> - "um"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux Type Density - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux Type Density unit - <B>[Const STRING]</B> - "g/cm3"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Flux Type'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Constituents - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Constituent'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent ID - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time unit - <B>[Const STRING]</B> - "yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux unit - <B>[Const STRING]</B> - "pCi/y" or "g/y"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Time Flux Pairs - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Progeny - <B>[INTEGER]</B> - 0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;must be set to zero for 1.6 spec
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Flux Type'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Flux Type'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Constituent'
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Data Set'
+<br><B><I>Next</I></B> 'Module'
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<p style="margin-top: -2; margin-bottom: -2">
+<p><a NAME="aff_example"><B>Air Flux File Example:</B></a>
+<p>This AFF example is from the case created using the <a href="start.html">Getting Started</a> document and <a href="tutorial.html">Tutorial</a>.
+<p><pre><font face="Verdana"; size=2>
+
+Paste example here
+
+</font></pre>
+<B>End of example file</B>
+<br><div align="center"><a href="pdcf.html#pdcf">Go to Specifications</a> | <a href="#top">Go to Top</a></div>

@@ -1,0 +1,68 @@
+!   MEPAS HAZ2: DERMDAT.FTN          Version Date: 29-Dec-1993
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK DERMDAT                            *
+!                                                                            *
+!  Common block DERMDAT contains parameters used in dermal absorption
+!  exposure calculations, independent of pollutant and location
+!                                                                           *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    10/01/92                                                *
+!  Last Modified:    29-Dec-93  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!     SKINL       Real  Thickness of skin (cm)
+!     TESHWR      Real  Duration of each showering event (hr/event)
+!     TESWIM      Real  Duration of each swimming event (hr/event)
+!     EVSHWR      Real  Showering events per day (annual average event/d)
+!     EVSWIM      REAL  Swimming events per day (annual average event/d)
+!     EVSOIL      REAL  Soil dermal contact events per day (ann. ave./d)
+!     TEBOAT      REAL  Duration of each boating event (hr/event)
+!     TESHOR      REAL  Duration of each shoreline event (hr/event)
+!     EVBOAT      REAL  Boating events per day (annual average event/d)
+!     EVSHOR      REAL  Shoreline events per day (annual average event/d)
+!     TSS         REAL  Thickness of shoreline sediment (m)
+!     TMS         REAL  Thickness of measured soil (m)
+!     TAS         Real  Thickness of soil for atmospheric non-agr. pathways
+!     RHOAS       Real  Density of soil for atmospheric deposition
+!     RHOSS       REAL  Density of shoreline sediment (g/cm3)
+!     ROHMS       REAL  Density of measured soil (g/cm3)
+!     ASKIN(4)    Real  Area of skin exposed while showering (1), swimming (2),
+!                       soil contact (3), sediment contact (4)
+!     UBRSH       Real  Ventilation rate while showering, m3/d
+!     ADHFAC      Real  Soil adherance factor for dermal absorption from soil
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!     03-AUG-93    DLS  Added Andelman factors: ANDFC and ANDFR
+!     06-Oct-93    DLS  Added boating parameters: TEBOAT and EVBOAT
+!                       added shoreline parameters: TESHOR and EVSHOR
+!                       added sediment parameters: TSS and RHOSS
+!                       added measured soil parameters: TMS and RHOMS
+!                       added sediment skin contact area: ASKIN(4)
+!     29-Dec-93    DLS  added TAS and RHOAS for atmospheric pathways
+!==== COMMON Block Definition ================================================
+!
+      COMMON /DERMDAT/ TSS, TMS, TAS, RHOSS, RHOMS, RHOAS, ANDFC, ANDFR, ANDFO
+!
+!==== Variable Declarations ==================================================
+!
+      REAL ANDFC, ANDFR, TSS, TMS, TAS, RHOSS, RHOMS, RHOAS, ANDFO
+!

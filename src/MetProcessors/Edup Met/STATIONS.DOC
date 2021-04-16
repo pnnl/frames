@@ -1,0 +1,72 @@
+Name of Station                    State   Station Latitude Longitude Elevation  Wind Hgt
+                                             ID     (deg)     (deg)      (ft)      (ft)
+-----------------------------------------------------------------------------------------
+Fairbanks International AP           AK      FAI    64.817   147.867     436        30    
+Kodiak State CG Base                 AK      KDK    57.750   152.300      14        33
+Mobile Bates Field AP                AL      MOB    30.683    88.250     211        22
+Fort Smith Municipal AP              AR      FSM    35.333    94.367     447        23
+Little Rock Adams Field              AR      LIT    34.733    92.233     257        20
+Tucson International AP              AZ      TUS    32.133   110.933    2584        20
+Fresno Air Terminal                  CA      FAT    36.783   119.717     328        20
+Los Angeles International AP         CA      LAX    33.933   188.400      97        30
+San Diego Miramar NAS                CA      NKX    32.867   117.133      15        12(a)
+San Francisco International AP       CA      SFO    37.617   122.383       8        33
+Denver Stapleton International AP    CO      DEN    39.767   104.867    5283        33
+Grand Junction Walker Field AP       CO      GJT    39.100   108.550    4843        22
+Washington National AP               DC      DCA    38.850    77.033      10        20
+Miami International AP               FL      MIA    25.800    80.300       7        23
+Orlando International AP             FL      MCO    28.450    81.317      96        20
+Atlanta Hartsfield International AP  GA      ATL    33.650    84.433    1010        20
+Savannah Municipal AP                GA      SAV    32.133    81.200      46        30
+Honolulu International AP            HI      HLN    21.333   157.917       7        25
+Des Moines Municipal AP              IA      DSM    41.533    93.650     938        20
+Boise Air Terminal                   ID      BOI    43.567   116.217    2838        20
+Chicago-O'Hare International AP      IL      ORD    42.000    87.883     658        20
+Peoria-Greater Peoria AP             IL      PIA    40.667    89.683     652        20
+Evansville Dress Regional AP         IN      EVV    38.050    87.320     381        20
+Russell Municipal AP                 KS      RSL    38.867    98.817     570        29(a)
+Lake Charles Municipal AP            LA      LCH    30.117    93.217       9        33
+Boston Logan International AP        MA      BOS    42.367    71.033      15        22
+Bangor International AP              ME      BGR    44.800    68.817      59        20(a)
+Detroit Metropolitan AP              MI      DTW    42.233    83.333     633        20
+Sault Ste Marie Wx Station Office    MI      SSM    46.467    84.350     718        20
+International Falls AP               MN      INL    48.567    93.383    1179        20    
+Minneapolis-St.Paul International AP MN      MSP    44.883    93.217     834        33
+Kansas City International AP         MO      MCI    39.317    94.717    1014        32
+Meridian Naval Air Station           MS      NMM    32.550    88.567      88        11(a)
+Billings Logan International AP      MT      BIL    45.800   108.533    3567        25
+Missoula Johnson-Bell Field          MT      MSO    46.933   114.100    3190        32
+Asheville Regional AP                NC      AVL    35.433    82.550    2140        20
+Raleigh-Durham AP                    NC      RDU    35.867    78.783     434        20
+Bismarck Municipal AP                ND      BIS    46.767   100.750    1647        20
+North Platte Lee Bird Field AP       NE      LBF    41.133   100.683    2775        20
+Albuquerque International AP         NM      ABQ    35.033   106.617    5311        23
+Las Vegas McCarran International AP  NV      LAS    36.083   116.167    2162        20
+Reno Cannon International AP         NV      RNO    39.500   119.783    4404        30
+Binghamton Link Field AP             NY      BGM    42.217    75.983    1590        22
+Buffalo-Greater International AP     NY      BUF    42.933    78.733     705        33
+New York JFK International AP        NY      JFK    40.650    73.783      13        20
+Dayton J.H. Cox International AP     OH      DAY    39.900    84.200     995        22
+Medford Jackson County AP            OR      MFR    42.383   122.883    1298        20
+Pendelton Municipal AP               OR      PDT    45.683   118.850    1482        20
+Pittsburgh-Greater International AP  PA      PIT    40.500    80.217    1137        20
+Rapid City Regional AP               SD      RAP    44.050   103.067    3162        21
+Nashville Metropolitan AP            TN      BNA    36.117    86.683     590        25
+Austin R. Mueller Municipal AP       TX      AUS    30.283    97.700     597        33
+Corpus Christi NAAS                  TX      NGP    27.683    97.283       6        12(a)
+Dallas Hensley Field NAS             TX      NBE    32.733    96.967     143        15(a)
+El Paso International AP             TX      ELP    31.800   106.400    3918        32
+Lubbock International AP             TX      LBB    33.650   101.817    3254        25
+Cedar City Municipal AP              UT      CDC    37.700   113.100    1712        20(a)
+Salt Lake City International AP      UT      SLC    40.783   111.950    4221        20
+Norfolk Naval Air Station            VA      NGU    36.950    76.283       6        15(a)
+Burlington International AP          VT      BTV    44.467    73.150     916        32
+Seattle-Tacoma International AP      WA      SEA    47.450   122.300     400        20
+Green Bay Austin Straubel Field      WI      GRB    44.500    88.117     682        20
+Huntington Tri-State AP              WV      HTS    38.367    82.550     827        20
+Lander Hunt Field AP                 WY      LND    42.817   108.733    5557        32
+
+Note:  Wind Heights (farthest column) are the anemometer heights above ground at the various
+       stations in 1984 except for those denoted by (a), which are the anemometer heights 
+       at the stations in 1979.
+

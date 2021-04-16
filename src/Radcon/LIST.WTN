@@ -1,0 +1,33 @@
+C     MEPAS RADCON: LIST.FTN              VERSION DATE: 06-09-1998
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: LIST.FTN 
+C
+C     Formally called as COMMON/LIST/in each subroutine, it is now an 
+C     INCLUDE 'LIST.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains decay-product names and CAS ids.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     06/09/98 - JPM
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, WLIST, MULREC, MEASUR
+C
+C=== Significant Parameters ==================================================
+C
+C    CS      - contaminant concentation for that integration time step
+C    CS_SPEC - Time Specific Modification - dummy CS array, being used
+C              to avoid complications.  Trying to keep this modification
+C              as unobtrusive as possible.
+C    NAME2   - decay-product name
+C    CASID2  - decay-product CAS id
+C
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      REAL*4    CS(MAXNTI,MAXCON),CS_SPEC(MAXNTI,MAXCON)
+      CHARACTER*18 IVS(MAXCON),CASN2(MAXCON)
+C
+      COMMON/LIST/CS,IVS,CASN2,CS_SPEC

@@ -1,0 +1,48 @@
+C   INTAKE:    AGES.CMN                Version Date: 09-Jun-97               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK AGES                                *
+C                                                                            *
+C  Common block AGES contains age group divisions                            *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    09-Jun-97  DLStrenge                                    *
+C  Last Modified:    09-Jun-97  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/INTAKE 
+C     Referenced by modules: REDCAS, RIFDSET
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    NAGES      INT     number of age groups for this receptor location        
+C    LOWAGE(6)  REAL    Lower boundary for each age group
+C    UPAGE(6)   REAL    Upper bound of each age group                     
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  09-Jun-97       DLS  Initial Preparation  
+C  11/10/01        BAN  Revised to lower and upper bounds                       
+C==== COMMON Block Definition ================================================
+C
+      COMMON/AIRINFO/NAGES,LOWAGE(6),UPAGE(6)
+C
+C==== Variable Declarations ==================================================
+C
+      REAL LOWAGE, UPAGE
+      INTEGER NAGES
+C
+C---- END OF COMMON BLOCK AGES -----------------------------------------------
+C

@@ -1,0 +1,12 @@
+"sen2",11                               
+2
+"Sensitivity/Uncertainty Module for FRAMES"
+"Beta Test version"
+1,1
+"GwDrink","Goundwater ingestion rate from rcp5"
+"DoseAll","Cumulative dose peak from hei4 for all [chronic.usr7.Aquifer]"
+3
+"realizations","GwDrink","DoseAll peak time","DoseAll"
+1,"3.6668E-01",30,0.09966682127
+2,"3.2951E+00",30,0.8881389574
+3,"2.4433E+00",30,0.6595309468

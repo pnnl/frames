@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>My perception</title>
+</head>
+<body>
+<h2>
+ My perception
+</h2>
+<p>
+  I provide this section so that you can see where I am coming from in
+  the case that I misinterpret the way something works.
+</p>
+<p>
+ <li>A simulation is a bunch of modules connected together by lines in
+ the FRAMES environment.  Each module specifies required and optional
+ input and output types.  This specification determines which modules
+ will be connected as input and output.  One module gets the ball
+ rolling by processing it's user input data, then sending it's output
+ to the modules connected to it's output slots.  Those modules then
+ process this input data, and send it to their output slots.  This
+ repeats until the last module, with no outputs defined, is reached.
+ </li>
+ <li>A gid file defines this simulation.  It stores the module
+ properties such as name and GUI positioning of the icon representing
+ the module in the simulation.  It also defines which modules are
+ connected as inputs and as outputs.
+ </li>
+ <li>All datasets of the same type are stored in the same file.  For
+ example, ATO datasets are stored in .ato file.are stored in one file,
+ in no necessary order.
+ </li>
+ <li>Merging, adding, interpolating, unioning, superpositioning...I
+ use most of these words to mean the same thing.  I do however, try to
+ use the word most suitable for the context in which it is used, as I
+ know that they all have different meanings.
+</p>
+</body>
+</html>

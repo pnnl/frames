@@ -1,0 +1,10 @@
+            <h2>Getting Started</h2><p>
+
+
+            A document called "Getting Started with FRAMES" has been created that describes how to start using FRAMES software. The user will gain a more complete understanding of how to use FRAMES by building an example case. Step-by-step instructions to build a case are given starting with a case scenario and ending with viewing results. All data needed to run the example case is included in appendix of document.<p>
+            This document is currently undergoing the review process for external release, and will be available soon.
+<!------           View <a href="getting_started.doc" target="_blank" title="Getting Started with FRAMES 1.3 Document">Getting Started with FRAMES 1.3</a> as a Microsoft Word Document<p>
+            View <a href="getting_started.pdf" target="_blank" title="Getting Started with FRAMES 1.3 Document">Getting Started with FRAMES 1.3</a> as a .pdf file.<p>
+            View <a href="1_FRAMES Introduction.pps" target="_blank" title="Getting Started with FRAMES 1.3 Document">Getting Started with FRAMES 1.3</a> as an animated Power point Presentation.------>
+            
+            <p>

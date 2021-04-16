@@ -1,0 +1,51 @@
+"mf","Version 2.1"
+"Viewer:Viewer:vwr","RAGS Table Generator - Central Tendency","","ragsgen.exe CT","vwr.ico"
+"
+MODULE VERSION
+1.4
+
+MODULE DESCRIPTION
+RAGS Table Generator
+
+This module populates RAGS tables in .XLS from the scenario
+files.
+
+Requires:
+  Microsoft Excel to be installed.
+
+MODULE REFERENCES
+NOTE:  This module has not been fully tested please use 
+with caution as results may be incorrect.
+
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 hif Health Impacts required as input
+
+Valid Output Writes
+
+SYSTEM REQUIREMENTS
+Operating System:     WIN 95 / NT
+Processor:            Pentium
+RAM Memory:           Minimum 4MB
+Disk Space:           Minimum 4MB free disk space
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bonnie Hoopes
+Mailing Address:      PO Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        bonnie.hoopes@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,"Reads"
+1,"hif","Health Impacts",1,1
+0,"Writes"
+0,"Variables"

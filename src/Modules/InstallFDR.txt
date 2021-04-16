@@ -1,0 +1,14 @@
+import FRAMES2API.*;
+Install inst=new Install();
+
+String path="C:\\Program Files\\FRAMESV2\\";
+String DicPath=path+"Dictionaries\\";
+String ModPath=path;
+String ExePath=path;
+
+inst.Start(path);
+
+inst.Mod(ModPath,"fdr.MOD",ExePath);
+System.out.println("success");
+
+inst.End();

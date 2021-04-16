@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="idl" name="ProcessIDL" value="false"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="optimize.0" name="OptimizableType" value="intuitive.ide.borland.jb10.ProfilerBootstrap"/>
+  <property category="optimize.0" name="oicc.FilterFile" value="C:\Documents and Settings\d3m293\jbproject\DSP\DSP.oif"/>
+  <property category="optimize.0" name="oipr.FilterFile" value="C:\Documents and Settings\d3m293\jbproject\DSP\DSP.oif"/>
+  <property category="optimize.1" name="OptimizableType" value="intuitive.ide.borland.jb10.ProfilerBootstrap"/>
+  <property category="optimize.1" name="oicc.FilterFile" value="C:\Documents and Settings\d3m293\jbproject\DSP\DSP.oif"/>
+  <property category="optimize.1" name="oipr.FilterFile" value="C:\Documents and Settings\d3m293\jbproject\DSP\DSP.oif"/>
+  <property category="personality" name="personality" value=""/>
+  <property category="runtime" name="ConfigurationCount" value="1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="DSP"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="gov.epa.hwir.dsp.DSP"/>
+  <property category="runtime.0" name="application.parameters" value="C:\3mra\ssf C:\3mra\grf hdprod.ssf"/>
+  <property category="runtime.0" name="custom.init_required" value="0"/>
+  <property category="runtime.0" name="custom.override_required" value="1"/>
+  <property category="runtime.0" name="custom.required.1" value="JUnit"/>
+  <property category="runtime.0" name="custom.required.2" value="javaHWIRIO"/>
+  <property category="runtime.0" name="custom.required.3" value="StatDll"/>
+  <property category="runtime.1" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.1" name="ConfigurationName" value="IOtest"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.1" name="application.class" value="gov.epa.hwir.util.IOTest"/>
+  <property category="runtime.1" name="application.vmparameters" value="&quot;-D java.library.path gov.epa.hwir.util.javaHWIRIO.Debug.javaHWIRIO&quot;"/>
+  <property category="runtime.1" name="custom.init_required" value="0"/>
+  <property category="runtime.1" name="custom.override_required" value="1"/>
+  <property category="runtime.1" name="custom.required.1" value="JUnit"/>
+  <property category="runtime.1" name="custom.required.2" value="javaHWIRIO"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore;sqlj"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 4.0"/>
+  <property category="sforce" name="logininfo" value=""/>
+  <property category="sforce" name="logininfo2" value=""/>
+  <property category="sforce" name="loginurl" value="https://www.salesforce.com/services/Soap/c/2.5"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2004"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.2_01-b06"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="JUnit;StatDll;javaHWIRIO"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <node name="Debug" type="NavigationDirectory">
+    <property category="directorynode" name="showSubdirectories" value="1"/>
+    <property category="directorynode" name="url" value="src/gov/epa/hwir/util/javaStatDll/Debug"/>
+  </node>
+  <node name="gov" type="Package"/>
+  <node name="DSP" type="Archive">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.wizard.archive.ExecutableJarArchiver"/>
+    <property category="archiving" name="executableEnabled.1" value="1"/>
+    <property category="archiving" name="executableEnabled.2" value="1"/>
+    <property category="archiving" name="executableEnabled.3" value="0"/>
+    <property category="archiving" name="executableEnabled.4" value="0"/>
+    <property category="archiving" name="executableEnabled.5" value="0"/>
+    <property category="archiving" name="executableFiles.1" value=""/>
+    <property category="archiving" name="executableFiles.2" value=""/>
+    <property category="archiving" name="executableFiles.3" value=""/>
+    <property category="archiving" name="executableFiles.4" value=""/>
+    <property category="archiving" name="executableFiles.5" value=""/>
+    <property category="archiving" name="manifestConfigFile" value="1"/>
+    <property category="archiving" name="sourceJar" value="DSP.jar"/>
+    <property category="archiving" name="targetPath" value="DSP.jar"/>
+  </node>
+  <file path="src/gov/epa/hwir/util/javaHWIRIO/Debug/javaHWIRIO.dll"/>
+  <file path="src/gov/epa/hwir/util/javaHWIRIO/Debug/javaHWIRIO.lib"/>
+</project>

@@ -1,0 +1,45 @@
+"mf,Version 2.1"
+"Viewer:Viewer:vwr,HIF Maximum Impacts by Target Organ and Age Group,,xlschart.exe hif4,vwr.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This module reads in an HIF file and produces a Risk/Hazard Summary.
+User chooses Media (source), Constituent, Impact, Exposure Route, 
+and Exposure Pathway.
+
+MODULE REFERENCES
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 hif Health Impacts required as input
+
+Valid Output Writes
+     <none>
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Fred Rutz
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        frederick.rutz@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,Reads
+1,hif,Health Impacts,1,1
+0,Writes
+0,Variables

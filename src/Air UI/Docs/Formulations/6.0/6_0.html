@@ -1,0 +1,67 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>6.0 Indoor Air Concentration</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><center><font size="3"><b><u>6.0 INDOOR AIR CONCENTRATION</u></b></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+An indoor air concentration component was added to allow evaluations of
+long-term climatological exposures in residences.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The residence structure is assumed to be within one of the directional
+computation sectors used in the implement of the sector average Gaussian
+dispersion model. Two influences of the structure on indoor concentrations
+are considered: indoor filtration/deposition and enhanced dispersion. The
+use of a sector average dispersion model means that the lateral dispersion
+(i.e., width of the building) will not be important in the concentration
+computation. If plume has not sufficiently dispersed vertically to envelop
+the structure, enhanced indoor vertical mixing can reduce the indoor concentrations
+compared to outdoor concentrations. The filtration/deposition process which
+is a function of contaminant properties will apply in all cases. The indoor
+concentration is computed using
+
+<br>
+
+<br><img SRC="Image103.gif" height=27 width=157 align=LEFT>
+<p align="center">(76)</p>
+
+<br>
+
+<br>where
+
+<ul>
+<br>C&acute;&nbsp;= indoor concentration (g/m<sup>3</sup> )
+<br>C<sub>ijk</sub>(x,z)&acute;&nbsp;= outdoor air concentration with <font face="Symbol">s</font><sub>z</sub> minimum of h<sub>b</sub> (g/m<sup>3</sup>)
+<br>F<sub>r</sub>&nbsp; = filtration efficiency fraction (dimensionless)
+<br>h<sub>b&nbsp; </sub>= interior height of building (m)
+</ul>
+
+<br>The MEPAS model default values for F<sub>r</sub> are 0.9, 0.5, 0.10, 0.50,
+0.0, 0.10, and 0.90 for deposition classes 1, 2, 3, 4, 5, 6, and 7, respectively.
+The default value for h<sub>b</sub> is 2.44 m.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The average indoor concentration is computed in the same manner as the
+outdoor concentration by summing the contributions for all ambient conditions.
+Although the options for indoor concentrations are not incorporated in
+the current MEPAS user interface, indoor concentrations computed based
+on default values are computed and available in intermediate output files.
+
+</font>
+</body>
+</html>

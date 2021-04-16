@@ -1,0 +1,49 @@
+"mf,Version 2.1"
+"Viewer:Viewer:vwr,SUF WCF Confidence Interval,,xlschart.exe sufscf,vwr.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This module will display, in spreadsheet and a graphical chart, the contents of the section in an SUF file specified by the commandline passed from FRAMES to this viewer. The charts show a cumulative probability curve (CDF).
+
+IMPORTANT NOTE:
+  Requires Microsoft Excel to be installed.
+
+MODULE REFERENCES
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 suf Sensitivity/Uncertainty required as input
+
+Valid Output Writes
+     <none>
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bonnie Hoopes
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        bonnie.hoopes@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+4,Reads
+2,suf,Sensitivity/Uncertainty,1,1,wcf,Aquifer,1,1
+2,suf,Sensitivity/Uncertainty,1,1,wcf,Aquifer-Total,1,1
+2,suf,Sensitivity/Uncertainty,1,1,wcf,Surface Water,1,1
+2,suf,Sensitivity/Uncertainty,1,1,wcf,Surface Water-Total,1,1
+0,Writes
+0,Variables

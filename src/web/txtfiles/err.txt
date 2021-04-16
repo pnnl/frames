@@ -1,0 +1,5 @@
+<a NAME="top"></a>
+<h2>Error Message File (ERR)</h2>
+This is an ASCII file with no specific format. The existence of an ERR at the end of a Model, Tool or UI execution signals an error to the FUI. All executables will create the ERR file before ANY processing is done and delete it only after ALL processing is complete. This provides a mechanism to detect an unexpectant module crash, through the existance of the ERR. Executables are expected to write information about the errors that have occured during processing. If the ERR exists when control is given back to the FUI, it is read and shown to the user.
+<br>
+<br><div align="center"><a href="pdcf.html#pdcf">Go to Specifications</a> | <a href="#top">Go to Top</a></div>

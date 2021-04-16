@@ -1,0 +1,16 @@
+"riv2",15                               
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.4"
+"  Site Index: 1"
+"  Module Index: 1"
+"  Module Name: riv2"
+"  Created:  7/17/2003 5:55:19 PM"
+"=================================================="
+1
+"all","Surface Water",1
+"Boron (elemental)","7440428","yr","g/ml",3,0
+0,0.00000317
+200,0.00000317
+200.001,0

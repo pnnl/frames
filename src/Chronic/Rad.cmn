@@ -1,0 +1,14 @@
+C----------------------------------------------------------------------
+C
+C     Radionuclide (Single Chain) Common Block
+C     Module of GENII                         Version of 18-Feb-88 RAP
+C
+C  
+      COMMON /RAD/ NONUC, IMOD(LENCHAIN), ICL(LENCHAIN), HL(LENCHAIN),
+     .             ATNUM(LENCHAIN), IRMD(LENCHAIN),
+     .             C14, H3, H3EL, ANION(LENCHAIN)
+C      COMMON /RAD/ NONUC, IMOD(9), ICL(9), HL(9), ATNUM(9), IRMD(9),
+C     .             C14, H3, ANION(9)
+      INTEGER NONUC, IMOD, ICL, ATNUM, IRMD
+      REAL HL
+      LOGICAL C14, H3, H3EL, ANION

@@ -1,0 +1,16 @@
+C++++ Start Insert Deck DISTC ++++++++++++++++++++++++++++++++++++++++++
+C History: Paul W. Eslinger : 01 Jul 1992
+C Variables for random distributions
+C   DLABEL: Vector of distribution labels (subroutines SGEN and SINV)
+C           Defined in subroutine INIT
+C   MXDIST: Maximum number of distributions including the constant
+C           distribution assigned number 0
+C
+      PARAMETER (MXCONT = 14)
+      PARAMETER (MXDISC =  1)
+      PARAMETER (MXDIST = 1+MXCONT+MXDISC)
+      PARAMETER (MXDST2 = MXDIST-1)
+      CHARACTER*16 DLABEL
+      COMMON /DISTC/ DLABEL(0:MXDST2)
+C
+C++++ End Insert Deck DISTC ++++++++++++++++++++++++++++++++++++++++++++

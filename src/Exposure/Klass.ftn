@@ -1,0 +1,43 @@
+!   MEPAS HAZ2: KLASS.FTN             Version Date: 08-03-1992
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK KLASS                               *
+!                                                                            *
+!  Common block KLASS contains the chemical class index and other index      *
+!                     values for each of the twenty input pollutants         *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    09/28/89 (Converted to PC)                              *
+!  Last Modified:    08/03/92 - DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!
+!==== COMMON Block Definition ================================================
+!
+      COMMON/KLASS/ICLS(20)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

@@ -1,0 +1,22 @@
+C----------------------------------------------------------------------
+C
+C     Animal Products Parameters Common Block
+C     Module of GENII                        Version of 12-Aug-88 RAP
+  
+      COMMON /ANMPAR/ TRANSA(6), YELDA(6), GRWPA(6),
+     .                STORTM(6), DIETFR(6), FMI(6,9),
+     .                DWFACA(4), HLDUPA(4),
+     .                CONS2(4), HARVA(9,6), ADJET2(4),
+     .                CONSUM(6), DWATER(4),
+     .                IRRSA(6), IRTIMA(6), RIRRA(6),
+     .                TPRODA(4), FRACUT(4), ANMFED, 
+     .                BIOMA2(6), DRYFA2(6)
+
+      REAL RIRRA, TRANSA, YELDA, GRWPA, STORTM, DIETFR, FMI,
+     .     DWFACA, HLDUPA, CONS2, CONSUM, DWATER, IRTIMA, ADJET2,
+     .     FRACUT, BIOMA2, DRYFA2
+      LOGICAL ANMFED	
+      INTEGER IRRSA
+
+C-----------------------------------------------------------------------
+

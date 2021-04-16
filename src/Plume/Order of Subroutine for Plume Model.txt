@@ -1,0 +1,125 @@
+Order of Subroutines in Acute Plume Model
+ACUTESRC - Main Program
+	GETFILES -- read file names...rsfile, nuclfile, metfile, outfile		
+	RDRSVARA -- read data in rsfile... model controls... number of sources....  
+		SETLVEL
+	SCTORCAC
+	GETCHAIN
+	OPMETFIL
+	READMET
+		CHECKMET
+	SAMEDATE
+	SETPLMET
+		INVMOL
+		U01
+		USTAR
+	RDNUCLID
+		C_DKFACT
+			CHAIN
+	NUCDATIN
+		COMPSTR
+	RESETOUT
+	DEPPRP
+		PROFILE
+		DDEPVEL
+		WDEP_I2
+		WDEPPART
+	CALCPONT
+		PRE_PLUM
+			PROFILE
+			FNPLMRS
+			TURBSIGV
+			TURBSIGW
+			ISCWKFLG
+				CALCSIG
+					BOCCDIST
+					BOCCSIG
+					BUCDIST
+						CUBICSLV
+					BUCSIG
+					NRCDIST
+					NSIG1
+					ISC2DIST
+					ISC2SIG
+					PLUMESIG
+					DISTSIGZ
+			CALCSIG
+				. . . 
+		CALCRISE
+		MODSIG
+			ISCWKSIG
+				CALCSIG
+					. . .
+			ENCHSIG
+		PTSECONC
+			VERTTERM
+		PTCONC
+			VERTTERM
+		CALCDPL
+			VERTTERM
+		DEPPLUM
+			ERF1
+		CALCCONC
+			CLCSHINE
+				SAPLSHN1
+					SHNINTERP
+				SAPLSHN2
+					VERTTERM
+				CLPLSHN1
+					SHNINTERP
+				CLPLSHN2
+					VERTTERM
+	CALCAREA
+		PRE_AREA
+			PROFILE
+			TURBSIGV
+			TURBSIGW
+			CALCSIG
+				. . .
+		CALCSIG
+			. . .
+		ARSECONC
+			CALCSIG
+				. . .
+			PTSECONC
+				VERTTERM
+			INTSIMP
+				TRAPZD
+		AREACONC
+			AREAINT
+			INTSIMP
+				TRAPZD
+		CALCDPL
+			. . .
+		DEPPLUM
+			. . .
+		CALCCONC
+			. . .
+	PLUMEOUT
+		WRITHEAD
+
+The Chronic Plume is pretty similar - the order is
+CHRONSRC - Main Program
+	GETFILES
+	RDRSVAR
+		SETLVEL
+	SRCTOREC
+	GETCHAIN
+	RDNUCLID
+		. . .
+	NUCDATIN
+		COMPSTR
+	RESETOUT
+	OPMETFIL
+	READMET
+		CHECKMET
+	SETPLMET
+		. . . 
+	DEPPRP
+		. . .
+	CALCPONT
+		. . .
+	CALCAREA
+		. . .
+	PLUMEOUT
+		WRITHEAD

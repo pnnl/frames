@@ -1,0 +1,85 @@
+"mf,Version 2.1"
+"Fate & Transport:Surface Water:riv,GENII V.2 Surface Water Module,gen_riv.exe ,gen_riv.bat ,riv.ico
+"
+MODULE VERSION
+  2.10 Compiled on 1 June 2010
+
+MODULE DESCRIPTION
+GENII Surface Water Module
+
+The GENII V.2 surface water module may be used to estimate 
+radionuclide water concentrations downstream from a point 
+release.  Models are included to describe acute or chronic 
+releases to rivers or lake environments.  The output from 
+the model is represented as a step function over the
+defined release period, with the concentration being the 
+average for the release period.
+
+Limitations:
+    Radionuclides only
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 wff Aquifer required as input
+     0 to 1 wff Surface Water required as input
+
+Valid Output Writes
+     wcf Aquifer
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K3-54
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnl.gov
+URL Address:          http://mepas.pnl.gov/earth
+"
+2,Read
+2,con,,1,1,wff,Aquifer,1,1
+2,con,,1,1,wff,Surface Water,1,1
+1,Write
+"wcf,Surface Water"
+19,Variables
+"GNIPond,Not Stochastic,N/A,min,0,max,3,Type of impoudment,0,INTEGER
+"GNSWTYPE,Not Stochastic,N/A,min,0,max,3,Type of release and body of water,0,INTEGER
+"GNSWRELTYPE,Not Stochastic,N/A,,,Type of release,0, STRING
+"GNSWWATERTYPE,Not Stochastic,N/A,,,Type of water body,0,STRING
+"GNSWTREL,Not Stochastic,yr,min,0.01,max,1000000,Duration of the release to the surface water,0,FLOAT
+"GNSWEXPNUM,Not Stochastic,N/A,,,Number of exposure locations,0,INTEGER
+"GNSWEXPNAME,Not Stochastic,N/A,,,name,1,STRING
+Label,exposure location #,Index1
+"GNSWTT,Continuous,hr,min,0,max,10000,Travel time in surface water,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWDSCHG,Continuous,m^3/sec,min,0.1,max,50000,Total volumetric flow rate of river,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWVELOC,Continuous,m/s,min,0.1,max,10,Average long-shore flow velocity,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWLSX,Continuous,m,min,0.0001,max,5000000,Downstream distance,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWOSY,Continuous,m,min,0,max,10000,Offshore distance to water intake,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWDPTH,Continuous,m,min,0.1,max,100,Constant river flow depth,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWIDTH,Continuous,m,min,0.1,max,10000,Constant river width,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNSWZDEP,Continuous,m,min,0,max,100,Depth of the usage intake in the water body,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNPONDVOL,Continuous,m^3,min,0,max,10000000000,Impoundment effective volume,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNPONDOUT,Continuous,m^3/sec,min,0,max,1000000,Impoundment outflow rate,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNPONDYRS,Continuous,yr,min,0,max,1000000,Impoundment years of prior operation,1,FLOAT
+Variable,GNSEXPNAME,Index1
+"GNPONDDIS,Continuous,m^3/sec,min,0,max,1000000,Plant discharge rate into impoundment,1,FLOAT
+Variable,GNSEXPNAME,Index1

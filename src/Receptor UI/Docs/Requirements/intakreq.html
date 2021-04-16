@@ -1,0 +1,539 @@
+<html>
+<head>
+<Title>Requirements for the MEPAS Intake Module</Title>
+</head>
+<body alink="#336666"  vlink="#A8A8A8" link="#0000ff">
+
+
+
+<br><font color="#000000" face="verdana" size="4">PNNL-SA-32285</font>
+<br><font face="verdana" size="2">Written by:  Dennis Strenge
+<br>
+<br>Prepared for the U.S. Department of Energy
+<br>
+<br>Pacific Northwest National Laboratory
+<br>Operated by the U.S. Department of Energy
+<br>By Battelle
+</font>
+<br>
+<br>
+<br>
+<br><font color="#000000" face="verdana" size="3"><center><b>Requirements for the MEPAS Intake Module</b></center></font>
+<br>
+
+<hr width="100%" align="center">
+<p>
+<font color="#000000" face="verdana" size="2">
+<B><P>1.0 Introduction</B> </P>
+<P>This document describes the requirements for the Multimedia Environmental Pollutant Assessment System (MEPAS) intake module. The module is specifically designed for inclusion in the Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES), which is a platform that allows for the linking of various multimedia modules into complete source/transport/exposure assessment systems (Whelan et al. 1997). These requirements can be used by software engineers and testers to ensure this module meets the needs of the clients and users. </P>
+
+<B><P>2.0 Purpose of the MEPAS Intake Module</B> </P>
+<P>For all but the external radiation exposure pathways, the MEPAS intake module calculates chemical and radionuclide intakes for individuals at the point of exposure or contact with contaminated media (e.g., water, soil, air, food crops, meat, or milk). For the external radiation exposure to soil or water pathways, the exposure medium concentration is computed and output.&nbsp; For the external radiation exposure to outdoor air, the output is dependent on the input information provided in the ATO file.&nbsp; If dose equivalence is input then dose equivalent is output, otherwise, air concentration is output.. Table 1 shows the exposure pathways addressed by this module as a function of the transport media. The module receives input data from exposure modules, as well as data supplied by the user through a module user interface (MUI). The average contaminant intakes (or exposure medium concentrations and dose equivalence for the external radiation pathways) are supplied to receptor health impact modules, or can serve as the endpoint of the simulation. </P>
+
+<B><P>3.0 Summary of Requirements for the MEPAS Intake Module</B> </P>
+<P>This section provides an overall summary of the requirements for the MEPAS intake module. Detailed input, output, and scientific requirements are described in sections 4.0, 5.0, and 6.0 respectively. </P>
+
+<DIR><P>The MEPAS intake module will: </P></DIR>
+
+<OL>
+
+<LI>output the exposure medium concentrations for external radiation exposure to air, soil or water pathways, dose equivalence for the external radiation exposure to outdoor air, or chemical and radionuclide intake rates (average mass of chemical per unit body weight per unit time during the exposure period, or total radionuclide activity intake during the exposure period) for the remaining exposure pathways in Table 1 - These computations are based on exposure medium chemical and radionuclide concentrations for each time period in a set of exposure duration time periods.</LI>
+
+<LI>allow up to 25 constituents to be considered in a scenario</LI>
+
+<LI>operate under Windows 95 and have a user-friendly MUI with a standard Windows look and feel</LI>
+
+<LI>meet the module specifications for FRAMES.</LI></OL>
+
+<B><P>Table 1.</B> MEPAS Intake Module Exposure Pathways for Each Transport Medium
+
+<BR>&nbsp; </P>
+
+
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=623>
+<TR><TD WIDTH="48%" VALIGN="BOTTOM" HEIGHT=24>
+<P ALIGN="CENTER"><FONT SIZE=2>Exposure Pathway</FONT></TD>
+<TD WIDTH="52%" VALIGN="TOP" COLSPAN=7 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Transport or Source Medium</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24><P></P></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Ground water</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Surface Water</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Atmosphere</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Soil</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of drinking water</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Dermal contact with water while showering</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Inadvertent ingestion of water while showering</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of leafy vegetables</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of other vegetables</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of meat</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of milk</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of fin fish</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Ingestion of shellfish</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Inadvertent ingestion of water while swimming</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Dermal contact with water while swimming</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Dermal contact with sediment during shoreline use</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P>Inadvertent ingestion of sediment during shoreline use</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Inadvertent ingestion of soil</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Dermal contact with soil</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P>Indoor inhalation of volatile chemicals released from shower water</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P>Indoor inhalation of volatile chemicals released from other domestic water uses</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Inhalation of outdoor air from a passing plume</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>Inhalation of resuspended soil particles</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>External exposure to radionuclides while swimming</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>External exposure to radionuclides while boating</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P>External exposure to radionuclides in sediment during shoreline use</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P>External exposure to radionuclides in soil</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=24>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+</TR>
+<TR><TD WIDTH="48%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P>External exposure to radionuclides in outdoor air from a passing plume</FONT></TD>
+<TD WIDTH="14%" VALIGN="MIDDLE" HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">Yes</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" COLSPAN=2 HEIGHT=40>
+<FONT SIZE=2><P ALIGN="CENTER">No</FONT></TD>
+</TR>
+</TABLE>
+
+<B><P>&nbsp;</P>
+<P>4.0 Input Requirements for the MEPAS Intake Module</B> </P>
+<P>Data needed to compute intake rates (or to output exposure medium concentrations or dose equivalence for the external radiation pathways) are obtained from two sources. The boundary conditions (i.e., contaminant concentrations in the exposure medium) are obtained from the previous module in the scenario (i.e., an exposure module). Media intake rates (e.g., drinking water ingestion rate, air inhalation rate, etc.) and other receptor characteristics are obtained from the user through the MUI. The boundary conditions are communicated to the module through the Exposure Pathway File (EPF). The input data supplied through the MUI is communicated to the model through the Global Input Data (GID) file and the model pre-processor. </P><DIR>
+
+<P>There are some general requirements associated with the MUI, which are: </P></DIR>
+
+
+<OL>
+<LI>The MUI will operate in Windows 95 and will have a standard Windows look and feel.</LI>
+<LI>The MUI will have on-line help in an HTML format that provides users with an easy-to-understand description of all input parameters required by the MUI.</LI>
+<LI>The MUI will provide users with a choice of units for all input parameters having dimensions associated with them.</LI>
+<LI>The MUI will include a reference feature in which the source of the specified value for each input item can be referenced if the user desires.</LI>
+<LI>The MUI will show the range of values allowed for each input data item, when the cursor is positioned on that item, as a scrolling message at the bottom of the screen. When an out-of-range value is entered in a field, the MUI will indicate this by a red background in the input field and a scrolling error message in addition to the allowed range message. Data input values within range are shown with a green field background.</LI></OL>
+<DIR>
+
+<P>The MUI must also allow the user to input the following data to define the exposure scenario: </P></DIR>
+
+<OL>
+<LI>The body weight for the exposed individual and the exposure duration to be applied to all exposure pathways.</LI>
+<LI>The model to be used to evaluate dermal absorption for organic constituents. The options are to use the EPA dermal absorption model (a non-linear function of contact time and chemical properties) or the linear dermal absorption model (absorption proportional to permeability constant and contact time). The linear dermal absorption model is the only option available for inorganic chemicals and radionuclides.</LI>
+<LI>The drinking water intake rate for groundwater and surface water used as a source of domestic water.</LI></OL>
+<DIR>
+
+<P>The following data are obtained from the EPF by the MEPAS intake module, and are required for the module to perform its computations: </P></DIR>
+
+<OL>
+<LI>Average exposure medium concentration for each exposure pathway (except external radiation exposure to outdoor air within a passing plume), specified time interval, contaminant (including progeny), and exposure location, contained in the EPF - Multiple exposure locations are allowed only for the atmospheric transport analysis.</LI>
+
+<LI>Average dose equivalence for the external radiation exposure to outdoor air within a passing plume</LI></OL>
+<DIR>
+
+<P>The MUI must allow the user to define additional parameters that are needed in the analysis. These parameters are identified in the following requirements: </P></DIR>
+
+<OL>
+<LI>The MUI will allow the user to define/modify drinking water annual exposure frequency factor (fraction of days per year that drinking water ingestion occurs).</LI>
+<LI>The MUI will allow the user to define/modify the following domestic water pathway parameters:</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>thickness of skin layer (used only for EPA dermal exposure model for organic chemicals) </LI>
+<LI>shower daily frequency factor </LI>
+<LI>shower event duration </LI>
+<LI>dermal contact skin area exposed while showering </LI>
+<LI>inhalation rate while showering or while indoors for exposure to constituents released from domestic water </LI>
+<LI>rate of water ingestion for inadvertent ingestion while showering </LI>
+<LI>shower dermal contact annual exposure frequency factor </LI>
+<LI>shower inadvertent ingestion annual exposure frequency factor </LI>
+<LI>shower or indoor air inhalation annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to shoreline exposure (for the surface water transport pathway only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>duration of one shoreline exposure event </LI>
+<LI>daily frequency of shoreline exposure events </LI>
+<LI>ingestion rate of shoreline sediments </LI>
+<LI>shore width factor for external shoreline radiation exposure </LI>
+<LI>area of skin contacted during shoreline exposure events </LI>
+<LI>shoreline dermal contact annual exposure frequency factor </LI>
+<LI>shoreline sediment ingestion annual exposure frequency factor </LI>
+<LI>shoreline external exposure annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to swimming exposure pathways (for the surface water transport pathway only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>thickness of skin layer (used only for EPA dermal exposure model for organic chemicals) </LI>
+<LI>duration of one swimming event </LI>
+<LI>water ingestion rate while swimming </LI>
+<LI>daily frequency of swimming events </LI>
+<LI>area of skin exposed while swimming </LI>
+<LI>swimming inadvertent ingestion annual exposure frequency factor </LI>
+<LI>swimming dermal contact annual exposure frequency factor </LI>
+<LI>swimming external exposure annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to boating exposure pathway (for the surface water transport pathway only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>duration of one boating event </LI>
+<LI>daily frequency of boating events </LI>
+<LI>boating geometry factor for external exposure </LI>
+<LI>boating external exposure annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to aquatic food exposure pathways (for the surface water transport pathway only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>ingestion rate of fin fish </LI>
+<LI>ingestion rate of shellfish </LI>
+<LI>fin fish ingestion annual exposure frequency factor </LI>
+<LI>shellfish ingestion annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to soil exposure pathways (for the atmospheric transport and measured soil pathways only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>area of skin exposed during soil contact events </LI>
+<LI>soil adherence factor for skin contact events </LI>
+<LI>daily frequency of skin contact events </LI>
+<LI>soil skin contact events annual exposure frequency factor </LI>
+<LI>soil ingestion rate </LI>
+<LI>soil ingestion annual exposure frequency factor </LI>
+<LI>thickness of measured soil contamination layer </LI>
+<LI>density of measured soil contamination layer.</LI></UL>
+</UL>
+
+<P>&nbsp;</P>
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to air exposure pathways (for the atmospheric transport measured soil pathways only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>inhalation rate for exposure to contaminated air </LI>
+<LI>inhalation rate for the resuspension pathway </LI>
+<LI>air inhalation annual exposure frequency factor </LI>
+<LI>soil resuspension factor annual exposure frequency factor </LI>
+<LI>external air radiation dose annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to external exposure to contaminated soil (for the atmospheric transport measured soil pathways only):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>fraction of time spent indoors </LI>
+<LI>fraction of time spent outdoors </LI>
+<LI>shielding factor for time spent indoors </LI>
+<LI>shielding factor for time spent outdoors </LI>
+<LI>daily exposure time to external ground contamination </LI>
+<LI>external ground radiation exposure annual exposure frequency factor. </LI></UL>
+</UL>
+
+<OL>
+
+<LI>The MUI will allow the user to define/modify the following parameters related to terrestrial food products (value are applied to all four transport pathways):</LI></OL>
+
+
+<UL>
+
+<UL>
+<LI>ingestion rate of leafy vegetables </LI>
+<LI>ingestion rate of other vegetables </LI>
+<LI>ingestion rate of meat </LI>
+<LI>ingestion rate of milk </LI>
+<LI>leafy vegetable ingestion annual exposure frequency factor </LI>
+<LI>other vegetable ingestion annual exposure frequency factor </LI>
+<LI>meat ingestion annual exposure frequency factor </LI>
+<LI>milk ingestion annual exposure frequency factor. </LI></UL>
+</UL>
+
+<B><P>&nbsp;</P>
+<P>5.0 Output Requirements for the MEPAS Intake Module</B> </P>
+<P>The MEPAS intake module is required to produce a Receptor Intake File (RIF) that contains time-varying, average radiation dose equivalence for the external radiation exposure to outdoor air pathway (if input is in terms of radiation dose, otherwise output is in terms of concentration), exposure medium concentrations for the other external radiation exposure pathways, or chemical and radionuclide intake rates for the remaining exposure pathways in Table 1, in accordance with the FRAMES data file specifications. The module also is required to produce a list file (*.RLS file) in ASCII format that documents the data actually read in by the model and provides a summary of intermediate calculation results such as summary intake factors. The data output to the RIF includes radiation dose equivalence for the external radiation exposure to outdoor air pathway, exposure medium concentration for the other external radiation exposure pathways, and chemical and radionuclide intake rates for the remaining exposure pathways in Table 1, for each exposure duration time period, constituent (including progeny), and exposure location. Multiple exposure locations are allowed only for the atmospheric transport analysis. </P>
+<B><P>&nbsp;</P>
+<P>6.0 Scientific Requirements for the MEPAS Intake Module</B> </P>
+<P>The scope of the intake analysis is determined by the modules that are connected to the exposure module (e.g., atmospheric transport or groundwater), and by the selections the user makes in the intake module MUI. The scientific formulations for this module are provided in Strenge and Chamberlain (1995). </P>
+<P>Scientific requirements for the intake module are </P>
+<OL>
+
+<LI>The MEPAS intake module will calculate dermal absorption of organic chemicals from water using the EPA dermal absorption model or the linear absorption model as requested by the user, and as supporting chemical parameters are available in the database.</LI>
+<LI>The MEPAS intake module will read the dose equivalence values or air concentrations, make adjustments for exposure frequency as necessary, and write the results to the RIF file as radiation dose equivalence or air concentration for the external radiation exposure to outdoor air pathway.</LI>
+<LI>The module will calculate and write to the RIF the chemical intake rates evaluated for both non-carcinogenic effects and for carcinogenic effects.</LI></OL>
+
+<B><P>&nbsp;</P>
+<P>7.0 References</B> </P>
+<P>Strenge, D. L. and P. J. Chamberlain II. 1995. <I>Multimedia Environmental Pollutant Assessment System (MEPAS): Exposure Pathway and Human Health Impact Assessment Models</I>. PNL-10523. Pacific Northwest Laboratory, Richland, Washington. </P>
+<P>Whelan G., K. J. Castleton, J. W. Buck, G. M. Gelston, B. L. Hoopes, M. A. Pelton, D. L. Strenge, and R. N Kickert. 1997. <I>Concepts of a Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES)</I>. PNNL-11748, Pacific Northwest National Laboratory, Richland, Washington. </P></font>
+
+</body>
+</html>
+

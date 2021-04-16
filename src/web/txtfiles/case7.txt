@@ -1,0 +1,38 @@
+
+<h2>Test Case 7 </h2><p>
+
+<b> Description and Rationale </b><p>
+
+
+This case verifies that icons visible in the Icon panel reflect the actual module description files (DES) in the FRAMES User Interface (FUI) working directory.  It also verifies that the user can reassign icons at will for each item on the icon panel.  The user will need to know the directory in which FRAMES is installed and how to rename and edit files. <p>
+
+
+
+<b>  Instructions for Performing the Test and Expected Results </b><p>
+
+
+
+            Start the FUI and observe the icons in the Icon panel.  Note the presence of the Sensitivity Icon.  Now Exit the FUI and go to the FRAMES directory using a file browser like Windows Explorer.  Rename the Sensitivity description file from MepSens.des to MepSens.tmp.  Now Restart the FUI and note that the Sensitivity Icon is no longer visible.  Exit the FUI.<p>
+
+
+
+            Return to the FRAMES directory and rename MepSens.tmp back to MepSens.des.  Edit MepSens.Des and change the first word of the second line from “Sensitivity” to “TEST SENS” making certain to leave the colon “:”.  Exit the editor and restart the FUI.  Notice that the new group TEST SENS on the Icon panel and the question mark icon.  The icon indicates that the FUI does not know what icon to use for the new group and one has not be specified explicitly in the description file.  <p>Now reassign the icon by clicking on the Sensitivity item in the icon panel and then right-click to bring up the icon menu.  Select ‘Change Sensitivity Icon’.  A file open form will allow you to select a new icon.  Locate an *.ico and Open it.  Note the new icon for TEST SENS on the icon panel.  Exit the FUI.<p>
+
+
+
+            <p>Return to the FRAMES directory and again edit MepSens.des.  Restore the first word of the second line to “Sensitivity” making certain to leave the colon “:”.  Exit the editor and restart the FUI.  Notice that the Sensitivity item in the icon panel is fully restored as it was before the test began.<p>
+
+
+
+<b>           Results </b><p>
+
+
+
+The above instructions were followed and the results matched the expectations.
+
+
+<p>
+
+ <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"> <p>
+<a href="software.html#testing"><b>Return to the Testing outline on Software page.</a></b>

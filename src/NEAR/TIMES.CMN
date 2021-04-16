@@ -1,0 +1,19 @@
+C----------------------------------------------------------------------
+
+C     Time Common Block
+C     Module of GENII                        Version of 1-Jul-87 RAP
+
+      COMMON /TIMES/ NTIME, ITIME, NBEFORE, ITIMT,
+     .               BEFORE, BEFAIR, BEFIRR, LOIC,
+     .               RELEND, NTKEND, DCEND, IPRIOR,
+     .               AQUTT(4), RECTT, SWTT, HSTART,
+     .               TMAX, TSOIL
+
+      INTEGER NTIME, ITIME, BEFAIR, BEFIRR, LOIC, NBEFORE, ITIMT
+      LOGICAL IPRIOR
+      REAL BEFORE, RELEND, NTKEND, DCEND, AQUTT, RECTT, SWTT, TMAX
+      REAL TSOIL
+      REAL*8 HSTART
+
+C-----------------------------------------------------------------------
+

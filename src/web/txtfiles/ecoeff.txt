@@ -1,0 +1,68 @@
+
+<img src="images/icon_ecoeffects.gif" ALT="vadose zone" align=left><h2>Ecological Effects</h2>
+<p>
+
+The Ecological Effects Component of FRAMES correlates simulated, modeled, or measured ecological
+constituent levels (e.g., concentration, body burden, dose) with toxicological benchmarks and provides a
+statistical analysis of this comparison.
+<p>
+Ecological Effects takes in Ecological Benchmark Database data and time-varying constituent concentrations from Surface Water and connects to an ecological exposure component of FRAMES.
+
+<p>
+Ecological Effects module produces two types of output each for time-varying concentrations and/or doses/body burdens.  The two forms of outputs are as follows:
+<br>1. When consuming information from a WCF, WEAP shall produce a table, computing acute (e.g., #96-
+hr) and chronic exposures (e.g., >96-hr), for percentage of time that a time series of
+concentrations, doses, or body burdens are
+a. below an acceptable limit (e.g., Chronic Limit, Criterion Continuous Concentration [CCC],
+No Observable Effects Level [NOEL], No Observable Adverse Effects Level [NOAEL],
+etc.)
+<br>b. above an unacceptable limit (e.g., exposure duration curves associated with Lethal
+Concentration for 50% mortality [LC-50], Lethal Dose for 50% mortality [LD-50], Effective
+Dose at 50% [ED-50], etc.)
+<br>c. in between acceptable and unacceptable limits.
+This table will result in a maximum of six values.
+<br>2. When consuming information from a WCF, WEAP shall produce a table reporting Probability of
+Exceedence, based on Period of Record (i.e., assumed equal to Exposure Duration) versus
+Concentration: probability that concentration will be equal to or greater than a selected value.
+<br>3. When consuming a BBF, WEAP shall produce a table reporting Ecological Hazard Quotient
+(EHQ) versus time. EHQ is defined as ratio of the body burden to a benchmark dose.
+<br>4. When consuming an BBF, WEAP shall produce a table reporting Probability of Exceedence,
+based on Period of Record (i.e., assumed equal to Exposure Duration) versus EHQ:
+probability that an EHQ will be equal to or greater than a selected value.
+<br>5. When consuming an BBF, WEAP shall produce a table reporting Probability of Exceedence,
+based on Period of Record (i.e., assumed equal to Exposure Duration) versus Dose or Body
+Burden: probability that the dose/body burden will be equal to or greater than a selected value.
+
+<p><b>TYPICALLY TAKES IN . . .</b>
+<ul>
+<li>
+<b>Input
+from user</b></li>
+
+<li>
+<b><a href="gid.html">GLOBAL INPUT DATA (GID)
+FILE</a></b></li>
+
+
+<li>
+<b><a href="bbf.html">BODY BURDEN FILE (BBF)</b></li></a>
+
+<li>
+<b><a href="wcf.html">WATER CONCENTRATION FILE (WCF) </b></li></a>
+
+</ul>
+<b>TYPICALLY PRODUCES . . .</b>
+<p> Ecological Effects statistically analyzes time-varying water-column concentrations and compares these results to
+ecological benchmarks to determine health impacts to selected lifeforms. It tabularizes percentage
+of time that a lifeform is associated with an ecological health impact region for a given chemical, based on
+<Br>1) time-varying water-column concentrations,
+<br>2) an impact-toxicity benchmark curve (e.g., percent mortality
+LC curve), and
+<Br>3) lower acceptable limit curve.
+
+
+<p>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<p>
+To next Model Type: <a href="ecoexp.html">Ecological Exposure</a>
+<br>Back to <a href="software.html#model_types">Model Types</a>

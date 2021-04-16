@@ -1,0 +1,44 @@
+!   MEPAS HAZ2: IXY.FTN             Version Date: 25-Jun-97
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK DEL                                *
+!                                                                            *
+!  Common block DEL array of results
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    02/03/87 (Converted to PC)                              *
+!  Last Modified:    25-Jun-97  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!     variable    CHAR  nnnnnnnnnnnnnnnnnnnnnn
+!     IX1         INT  Current index to axis-1 position
+!     IX2         INT  Current index to axis-2 position
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!
+!==== COMMON Block Definition ================================================
+!
+      COMMON /IXY/ IX1,IX2
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

@@ -1,0 +1,56 @@
+"mf,Version 2.1"
+"Boundary Conditions:User Defined:usr,SCF Spreadsheet Imports,SCFImport.exe 0,SCFImport.bat 1,src.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This module directly import soil concentrations from an
+Excel spreadsheet in a specific format. See SCFImportTemplate.xls
+
+MODULE REFERENCES
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     scf Soil
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bonnie Hoopes
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        bonnie.hoopes@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,Reads
+1,con,,1,1
+1,Writes
+"scf,Soil"
+9,Variables
+"Filename,Not Stochastic,,,,File name,0,STRING
+"Worksheet,Not Stochastic,,,,Worksheet,0,STRING
+"Consumer,Not Stochastic,,,,Consumer,0,STRING
+"Dataset,Not Stochastic,,,,Dataset,0,STRING
+"Dtype,Continuous,,,,Dtype,0,FLOAT
+"NumDS,Continuous,,,,NumDS,0,INTEGER
+"NumCon,Continuous,,,,Number of contituents,0,INTEGER
+CASID,Not Stochastic,,,,Contsituent ID,1,STRING
+Variable,FSCNAME,Site,Index2
+"StartDate,Continuous,,,,Start date,1,STRING
+Variable,CASID,Site,Index2

@@ -1,0 +1,50 @@
+C   dose:aLLPAR.CMN                Version Date: 15-Jun-98               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK ALLPAR                              *
+C                                                                            *
+C  Common block ALLPAR contains exposure pathway parameters                  *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    15-Jun-98  BA Napier                                    *
+C  Last Modified:    29-OCT-98  BAN                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/DOSE/RISK 
+C     Referenced by modules: REDCAS
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C   Parameter 
+C   Name      Type    Parameter Description
+C  ---------  ----  -----------------------------------------------------
+C
+C  HEINC      LOG   INCREMENTAL HEALTH EFFECTS
+C  HEFAT      LOG   FATALITIES
+C  HECEDE     LOG   DO ICRP-30 DOSE CALCULATIONS
+C  IHEAST     INT   FLAG FOR USING SLOPE FACTORS
+C  FGR13      LOG   FLAF FOR USING FGR 13
+C
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  15-Jun-98       BAN  Initial Preparation                         
+C==== COMMON Block Definition ================================================
+C
+      COMMON/ALLPAR/HEINC, HEFAT, HECEDE,FGR13, IHEAST, SOILT, 
+     .              heconinc, heconfat, heconfsh
+C
+      LOGICAL HEINC, HEFAT, HECEDE, FGR13
+	  INTEGER IHEAST
+C
+C---- END OF COMMON BLOCK ALLPAR ---------------------------------------------
+C

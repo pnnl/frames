@@ -1,0 +1,41 @@
+C     MEPAS RADCON: DUMMY.FTN             VERSION DATE: 10-26-1995
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: DUMMY.FTN 
+C
+C     Formally called as COMMON/DUMMMY/in each subroutine, it is now an 
+C     INCLUDE 'DUMMY.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains various variables for medium properties.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     10/26/95 - JPM
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, CONTAM, DUMMYV, FUNCTION, LIMIT1, LIMITS, 
+C                   MEASUR, SSGW
+C
+C=== Significant Parameters ==================================================
+C
+C    U1 - leach rate in PSZ, GW flow in SZ, and river flow rate in SW
+C    C3,C4,C5,C9 - variables used in conputing Green's function
+C    E1,E2,E3 - effective dispersivities in x-, y-, and z-direction
+C    AL - half-life or decay rate of constituent and decay-products
+C    UNITS - the units uned in the model (atto; 1.E-18 is generally used
+C    M1 - number of parent constituents
+C    NDS - number of decay-products associated with parent constiteunt
+C    ALEN - length of the source along a river boundary
+C    ZTOP - z-coordinate for top of yz-area source
+C    ZBOT - z-coordinate for bottom of yz-area source
+C
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      REAL*4    U1,C4,C3,C5,C9,X2,E1,E2,E3,B2,C2,AL2,AL(MAXCON,12)
+      REAL*4    UNITS,ARG,ALAM,H1,B1,ALPHA,ALEN,ZTOP,ZBOT
+      INTEGER*4 M1,ND,N2
+      INTEGER*4 NDS(MAXCON)
+C
+      COMMON/DUMMY/U1,C4,C3,C5,C9,X2,E1,E2,E3,B2,M1,C2,AL2,AL,
+     1             UNITS,ARG,ND,ALAM,NDS,N2,H1,B1,ALPHA,ALEN,ZTOP,ZBOT

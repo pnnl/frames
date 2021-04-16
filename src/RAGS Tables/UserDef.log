@@ -1,0 +1,4 @@
+Line 160: Class MSComCtl2.UpDown of control UpDown1 was not a loaded control class.
+Line 348: Class MSComctlLib.StatusBar of control StatusBar1 was not a loaded control class.
+Line 392: Class ComctlLib.ProgressBar of control ProgressBar1 was not a loaded control class.
+Line 404: Class MSComctlLib.TreeView of control TreeView1 was not a loaded control class.

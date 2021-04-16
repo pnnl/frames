@@ -1,0 +1,24 @@
+!C-------- COMMON BLOCK FOR ORNL special output measures for population
+!C
+      REAL mirgw,mirg,mirhw,mirh
+      COMMON/HPORNL/ HETR, HETRW,  HEG(21),  HEH(21),  HET(21),  &
+                     HEGW(21), HEHW(21), HETW(21),mirgw(21),     &
+                     mirg(21),mirhw(21),mirh(21)
+!KJC File number for special ORNL processing
+!                     INTEGER TXT
+!
+!   HETR         Total population dose from direct radiation pathway
+!   HETRW        Same as HETR with time discounting
+!   HEG(21)      ingestion health effects, by  pollutant
+!   HEH(21)      inhalation health effects, by pollutant
+!   HET(21)      total health effects, by pollutant
+!   HEGW(21)     time weighted (discounted) ingestion health effects
+!   HEHW(21)     time weighted inhalation health effects
+!   HETW(21)     time weighted total health effects
+!   MIRGW(21)    MIR time weighted for ingestion
+!   MIRHW(21)    MIR time weighted for inhalation
+!   MIRG(21)     MIR unweighted for ingestion
+!   MIRH(21)     MIR unweighted for inhalation
+!
+!   health effects are cancer incidence.  For radionuclides this is 2.7 times
+!   the number of fatalities.

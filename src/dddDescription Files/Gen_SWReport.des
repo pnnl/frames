@@ -1,0 +1,55 @@
+"mf,Version 2.1"
+"Reports:Report Generator:nes,GENII V.2 Surface Water Dose Report Generator,SWReport.exe ,SWViewer.exe ,vwr.ico
+"
+MODULE VERSION
+  2.10 Compiled on 1 June 2010
+
+MODULE DESCRIPTION
+GENII V.2 Surface Water Report Generator
+
+The GENII V.2 health report generator prepares
+output in a standard format for compliance
+demonstrations.  Population and food production
+quantities may be input to estimate collective doses.
+
+Limitations:  Radionuclides only
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 hif Health Impacts required as input
+
+Valid Output Writes
+     epa Surface Water Dose Compliance File
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K3-54
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnl.gov
+URL Address:          http://mepas.pnl.gov/earth
+"
+1,Read
+2,con,,1,1,hif,Health Impacts,1,1
+1,Write
+"epa,Surface Water Dose Compliance File"
+9,Variables
+CVTFormat,Not Stochastic,,,,CVT format,0,STRING
+"reportunits,Not Stochastic,N/A,min,0,max,3,Reports output units,0,INTEGER
+"printdetails,Not Stochastic,N/A,min,0,max,1,Print details by pathway by rad,0,INTEGER
+"exposuretype,Not Stochastic,N/A,min,0,max,1,Type of exposure,0,INTEGER
+"filename,Not Stochastic,N/A,,,Pathway production file name,0,STRING
+"facName,Not Stochastic,N/A,,,Facility Name,0,STRING
+"facAddress,Not Stochastic,N/A,,,Street Address,0,STRING
+"facCityState,Not Stochastic,N/A,,,City-State-Zip,0,STRING
+"facUserName,Not Stochastic,N/A,,,User Name,0,STRING

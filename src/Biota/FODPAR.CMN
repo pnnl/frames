@@ -1,0 +1,16 @@
+C----------------------------------------------------------------------
+
+C     Terrestrial Foods Parameters Common Block
+C     Module of ENV                        Version of 12-Mar-90 RAP
+
+  
+      COMMON /FODPAR/ DPVL(LENCHAIN),trans(1),
+     .                BVI(1,LENCHAIN), LEAFRS, 
+     .                GRWP(1),
+     .                HARVT(LENCHAIN,1),
+     .                ABSHUM,
+     .                           BIOMAS(1), DRYFAC(1), RAIN
+c
+      REAL DPVL, BVI, GRWP,  trans,
+     .      LEAFRS,  BIOMAS, DRYFAC, ABSHUM, RAIN
+c-----------------------------------------------------------------------

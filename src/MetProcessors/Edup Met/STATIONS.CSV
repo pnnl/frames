@@ -1,0 +1,65 @@
+Name of Station,State,Station ID,Latitude,Longitude,Elevation (m),Wind Hgt (ft)
+Fairbanks International Airport,AK,FAI,64.817,147.867,436,30
+Kodiak State CG Base,AK,KDK,57.750,152.300,15,33
+Mobile Bates Field (Regional) Airport,AL,MOB,30.683,88.250,211,22
+Fort Smith Municipal Airport,AR,FSM,35.333,94.367,447,23
+Little Rock Adams Field,AR,LIT,34.733,92.233,257,20
+Tucson International Airport,AZ,TUS,32.133,110.933,2584,20
+Fresno Air Terminal,CA,FAT,36.783,119.717,328,20
+Los Angeles International Airport,CA,LAX,33.933,188.400,97,30
+San Diego Miramar Naval Air Station,CA,NKX,32.867,117.133,15,12
+San Fransico International Airport,CA,SFO,37.617,122.383,8,33
+Denver Stapleton International Airport,CO,DEN,39.767,104.867,5282,33
+Grand Junction Walker Field Airport,CO ,GJT,39.100,108.550,4843,22
+Washington National Airport ,DC,DCA,38.850,77.033,10,20
+Miami International Airport,FL,MIA,25.800,80.300,7,23
+Orlando International Airport,FL,MCO,28.450,81.317,96,20
+Atlanta Hardsfield International Airport,GA,ATL,33.650,84.433,1010,20
+Savannah Municipal (International) Airport,GA,SAV,32.133,81.200,46,30
+Honolulu International Airport,HI,HLN,21.333,157.917,7,25
+Des Moines Municipal (International) Airport,IA,DSM,41.533,93.650,938,20
+Boise Air Terminal,ID,BOI,43.567,116.217,2838,20
+Chicago-O'Hare International Airport,IL,ORD,42.000,87.883,658,20
+Peoria-Greater Peoria Airport,IL,PIA,40.667,89.683,652,20
+Evansville Dress Regional Airport,IN,EVV,38.050,87.320,381,20
+Russel Municipal Airport,KS,RSL,38.867,98.817,570,29
+Lake Charles Municipal Airport,LA,LCH,30.117,93.217,9,33
+Boston Logan International Airport,MA,BOS,42.367,71.033,15,22
+Bangor International Airport,ME,BGR,44.800,68.817,59,20
+Detroit Metropolitian Airport,MI,DTW,42.233,83.333,633,20
+Sault Ste Maire Weather Station Office,MI,SSM,46.467,84.350,718,20
+International Falls Airport,MN,INL,48.567,93.383,1179,20
+Minneapolis-St.Paul International Airport,MN,MSP,44.883,93.217,834,33
+Kansas City International Airport,MO,MCI,39.317,94.717,1014,32
+Meridian Naval Air Station,MS,NMM,32.550,88.567,88,11
+Billings Logan International Airport,MT,BIL,45.800,108.533,3567,25
+Missoula Johnson-Bell Field,MT,MSO,46.933,114.100,3190,32
+Ashville Regional Airport,NC,AVL,35.433,82.550,2140,20
+Raleigh-Durham Airport,NC,RDU,35.867,78.783,434,20
+Bismark Municipal Airport,ND,BIS,46.767,100.750,1647,20
+North Platte Lee Bird Field Airport,NE,LBF,41.133,100.683,2775,20
+Albuquerque International Airport,NM,ABQ,35.033,106.617,5311,23
+Las Vegas McCarran International Airport,NV,LAS,36.083,116.167,2162,20
+Reno Cannon International Airport,NV,RNO,39.500,119.783,4404,30
+Binghamton Link Field Airport,NY,BGM,42.217,75.983,1590,22
+Buffalo-Greater Buffalo International Airport,NY,BUF,42.933,78.733,705,33
+New York JFK International Airport,NY,JFK,40.650,73.783,13,20
+Dayton J.H. Cox International Airport,OH,DAY,39.900,84.200,995,22
+Medford Jackson County Airport,OR,MFR,42.383,122.883,1298,20
+Pendelton Municipal Airport,OR,PDT,45.683,118.850,1482,20
+Pittsburgh-Greater Pittsburgh Internation AP,PA,PIT,40.500,80.217,1137,20
+Rapid City Regional Airport,SD,RAP,44.050,103.067,3162,21
+Nashville Metropoltian Airport,TN,BNA,36.117,86.683,590,25
+Austin R. Mueller Municipal Airport,TX,AUS,30.283,97.700,597,33
+Corpus Christi Naval Air Station,TX,NGP,27.683,97.283,6,12
+Dallas Hensley Field Naval Air Station,TX,NBE,32.733,96.967,143,15
+El Paso International Airport,TX,ELP,31.800,106.400,3918,32
+Lubbock International (Regional) Airport,TX,LBB,33.650,101.817,3254,25
+Cedar City Municipal Airport,UT,CDC,37.700,113.100,1712,20
+Salt Lake City International Airport,UT,SLC,40.783,111.950,4221,20
+Norfolk Naval Air Station,VA,NGU,36.950,76.283,6,15
+Burlington International Airport,VT,BTV,44.467,73.150,916,32
+Seattle-Tacoma International Airport,WA,SEA,47.450,122.300,400,20
+Green Bay Austin Straubel Field,WI,GRB,44.500,88.117,682,20
+Huntington Tri-State Airport,WV,HTS,38.367,82.550,827,20
+Lander Hunt Field Airport,WY,LND,42.817,108.733,5557,32

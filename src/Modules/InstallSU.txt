@@ -1,0 +1,78 @@
+import FRAMES2API.*;
+import javax.swing.*;
+
+Install inst=new Install();
+
+/*
+UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+JFileChooser jfc=new JFileChooser("C:\\program files\\FRAMESV2\\");
+jfc.setDialogTitle("Select the path to the FRAMESV2 installation");
+jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+if(jfc.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) { exit(); }
+String path=jfc.getSelectedFile().getAbsolutePath()+ "\\";
+*/
+
+String path=bsh.args[0];
+System.out.println("Path is {"+path+"}");
+String DicPath=path+"\\Dictionaries\\";
+String IconPath=path+"\\Icons\\";
+String ModPath=path+"\\";
+String ExePath=path+"\\";
+
+inst.Start(path);
+
+System.out.println("Adding FRAMES Domain");
+inst.Domain("FRAMES",IconPath+"fui.ico");
+
+System.out.println("Adding FRAMES System Groups");
+inst.SystemGroup("FRAMES","Sensitivity",IconPath+"sen.ico");
+
+System.out.println("Adding Domain Database Group");
+inst.DatabaseGroup("FRAMES","Distribution",IconPath+"dbase.ico");
+
+System.out.println("Adding 3MRA Model Groups");
+inst.ModelGroup("FRAMES","Example",IconPath+"env.ico");
+
+System.out.println("Adding Distribution Dictionaries");
+inst.Dic(DicPath,"EmpDist.dic");
+inst.Dic(DicPath,"JohnSbDist.dic");
+inst.Dic(DicPath,"JohnSuDist.dic");
+inst.Dic(DicPath,"LogUniformDist.dic");
+inst.Dic(DicPath,"NormalDist.dic");
+inst.Dic(DicPath,"TriDist.dic");
+inst.Dic(DicPath,"UniformDist.dic");
+
+System.out.println("Adding Distribution Database UI Dictionary");
+inst.Dic(DicPath,"NormalDistUI.dic");
+
+System.out.println("Adding Sensitivity Uncertainty Dictionaries");
+inst.Dic(DicPath,"Iteration.dic");
+inst.Dic(DicPath,"SampledValues.dic");
+inst.Dic(DicPath,"Seed.dic");
+inst.Dic(DicPath,"SeedValue.dic");
+inst.Dic(DicPath,"StochIter.dic");
+inst.Dic(DicPath,"SummaryValues.dic");
+
+System.out.println("Adding Simple Model Dictionaries");
+inst.Dic(DicPath,"SimpleOutput.dic");
+inst.Dic(DicPath,"SimpleUI.dic");
+
+System.out.println("Adding Model modules");
+inst.Mod(ModPath,"SimpleUI.MOD",ExePath);
+
+System.out.println("Adding System modules");
+inst.Mod(ModPath,"StochIter.MOD",ExePath);
+
+System.out.println("Adding Database modules");
+inst.Mod(ModPath,"NormalList.MOD",ExePath);
+
+System.out.println("Adding Tools");
+inst.Mod(ModPath,"SystemPackager.MOD",ExePath);
+inst.Mod(ModPath,"SimulationPackager.MOD",ExePath);
+inst.Mod(ModPath,"ModulePackager.MOD",ExePath);
+inst.Mod(ModPath,"SimulationUnpackager.MOD",ExePath);
+inst.Mod(ModPath,"ModuleUnpackager.MOD",ExePath);
+
+inst.End();
+
+exit();

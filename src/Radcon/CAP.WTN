@@ -1,0 +1,44 @@
+C     MEPAS RADCON: cap.wtn             VERSION DATE: 05-15-98
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: MASSS.FTN 
+C
+C
+C     Creation Date:     10/27/92 - JLS
+C     Last Modified:     05/15/98 - PDM
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, MASS
+C
+C=== Significant Parameters ==================================================
+C
+C    incr - the loop counter for remediation
+c pdm
+c    numitr - the number of infiltration rates used in the simulation
+c    tremed(i) - time in years from the start of the simulation to the time 
+c                the infiltration rate changes for the ith time as a result of 
+c                remediation or other causes; e.g., tremed(1) might be the 
+c                time when a cover is placed, reducing infiltration, with 
+c                tremed(2) the time when the cover fails, thus increasing 
+c                infiltration
+c                Note: tremed will have numitr-1 values
+C
+C pdm These variables no longer used.
+C    tcap - time in years from the start of release to remediation
+C    tfail- time in years from the start of release to remediation failure
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      INTEGER*2 incr, numitr
+      REAL*4    tremed
+C
+      Dimension tremed(MAXITR)
+      COMMON/CAP/incr,numitr,tremed
+c
+c      REAL*4    tcap, tfail, fractf, flxdns, clay_ks
+C
+c      Dimension flxdns(10)
+c      COMMON/CAP/incr,numitr,tcap,tfail,fractf,flxdns,clay_ks
+c pdm
+

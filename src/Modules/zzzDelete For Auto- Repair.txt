@@ -1,0 +1,1 @@
+If this file is deleted, the MSWindowsInstaller will auto-repair the related components:

@@ -1,0 +1,323 @@
+"exp4",322                              
+  1,
+  Medium type - Air Source air3
+  1,
+"chronic","exp4","Air",   1,  2,
+    10.00,"km",    10.00,"km",
+"Benzene","71432", 0,    5,
+     0.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","mg/kg"
+ 1.177E-10,
+"Other vegetables","ingestion","mg/kg"
+ 1.579E-11,
+"Meat","ingestion","mg/kg"
+ 6.970E-15,
+"Milk","ingestion","mg/L"
+ 1.548E-14,
+"Soil","ingestion","mg/kg"
+ 3.103E-11,
+"Soil","dermal","mg/kg"
+ 3.103E-11,
+"Air","inhalation","mg/m^3"
+ 4.740E-10,
+"Soil","inhalation","mg/m^3"
+ 1.862E-16,
+"Soil","external","N/A"
+ 0.000E+00,
+"Air","external","N/A"
+ 0.000E+00,
+    25.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","mg/kg"
+ 1.177E-10,
+"Other vegetables","ingestion","mg/kg"
+ 1.580E-11,
+"Meat","ingestion","mg/kg"
+ 6.970E-15,
+"Milk","ingestion","mg/L"
+ 1.548E-14,
+"Soil","ingestion","mg/kg"
+ 3.105E-11,
+"Soil","dermal","mg/kg"
+ 3.105E-11,
+"Air","inhalation","mg/m^3"
+ 4.740E-10,
+"Soil","inhalation","mg/m^3"
+ 1.863E-16,
+"Soil","external","N/A"
+ 0.000E+00,
+"Air","external","N/A"
+ 0.000E+00,
+    50.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","mg/kg"
+ 1.177E-10,
+"Other vegetables","ingestion","mg/kg"
+ 1.580E-11,
+"Meat","ingestion","mg/kg"
+ 6.970E-15,
+"Milk","ingestion","mg/L"
+ 1.548E-14,
+"Soil","ingestion","mg/kg"
+ 3.105E-11,
+"Soil","dermal","mg/kg"
+ 3.105E-11,
+"Air","inhalation","mg/m^3"
+ 4.740E-10,
+"Soil","inhalation","mg/m^3"
+ 1.863E-16,
+"Soil","external","N/A"
+ 0.000E+00,
+"Air","external","N/A"
+ 0.000E+00,
+    75.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","mg/kg"
+ 1.177E-10,
+"Other vegetables","ingestion","mg/kg"
+ 1.580E-11,
+"Meat","ingestion","mg/kg"
+ 6.970E-15,
+"Milk","ingestion","mg/L"
+ 1.548E-14,
+"Soil","ingestion","mg/kg"
+ 3.105E-11,
+"Soil","dermal","mg/kg"
+ 3.105E-11,
+"Air","inhalation","mg/m^3"
+ 4.740E-10,
+"Soil","inhalation","mg/m^3"
+ 1.863E-16,
+"Soil","external","N/A"
+ 0.000E+00,
+"Air","external","N/A"
+ 0.000E+00,
+   100.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","mg/kg"
+ 2.562E-15,
+"Other vegetables","ingestion","mg/kg"
+ 2.562E-15,
+"Meat","ingestion","mg/kg"
+ 5.851E-19,
+"Milk","ingestion","mg/L"
+ 1.501E-19,
+"Soil","ingestion","mg/kg"
+ 1.780E-14,
+"Soil","dermal","mg/kg"
+ 1.780E-14,
+"Air","inhalation","mg/m^3"
+ 0.000E+00,
+"Soil","inhalation","mg/m^3"
+ 1.068E-19,
+"Soil","external","N/A"
+ 0.000E+00,
+"Air","external","N/A"
+ 0.000E+00,
+"STRONTIUM-90","SR90", 1,    5,
+     0.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.384E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 1.928E-15,
+"Meat","ingestion","Bq/kg"
+ 4.917E-17,
+"Milk","ingestion","Bq/L"
+ 6.703E-16,
+"Soil","ingestion","Bq/kg"
+ 1.598E-14,
+"Soil","dermal","Bq/kg"
+ 1.598E-14,
+"Air","inhalation","Bq/m^3"
+ 2.930E-17,
+"Soil","inhalation","Bq/m^3"
+ 9.588E-20,
+"Soil","external","Bq/kg"
+ 1.598E-14,
+"Air","external","Bq/m^3"
+ 2.930E-17,
+"YTTRIUM-90","Y90", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.326E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 2.902E-16,
+"Meat","ingestion","Bq/kg"
+ 1.331E-17,
+"Milk","ingestion","Bq/L"
+ 5.701E-18,
+"Soil","ingestion","Bq/kg"
+ 1.046E-14,
+"Soil","dermal","Bq/kg"
+ 1.046E-14,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 6.276E-20,
+"Soil","external","Bq/kg"
+ 1.046E-14,
+"Air","external","Bq/m^3"
+ 0.000E+00,
+    25.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.385E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 1.929E-15,
+"Meat","ingestion","Bq/kg"
+ 4.920E-17,
+"Milk","ingestion","Bq/L"
+ 6.704E-16,
+"Soil","ingestion","Bq/kg"
+ 1.599E-14,
+"Soil","dermal","Bq/kg"
+ 1.599E-14,
+"Air","inhalation","Bq/m^3"
+ 2.930E-17,
+"Soil","inhalation","Bq/m^3"
+ 9.595E-20,
+"Soil","external","Bq/kg"
+ 1.599E-14,
+"Air","external","Bq/m^3"
+ 2.930E-17,
+"YTTRIUM-90","Y90", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.326E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 2.902E-16,
+"Meat","ingestion","Bq/kg"
+ 1.331E-17,
+"Milk","ingestion","Bq/L"
+ 5.701E-18,
+"Soil","ingestion","Bq/kg"
+ 1.047E-14,
+"Soil","dermal","Bq/kg"
+ 1.047E-14,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 6.283E-20,
+"Soil","external","Bq/kg"
+ 1.047E-14,
+"Air","external","Bq/m^3"
+ 0.000E+00,
+    50.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.385E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 1.929E-15,
+"Meat","ingestion","Bq/kg"
+ 4.920E-17,
+"Milk","ingestion","Bq/L"
+ 6.704E-16,
+"Soil","ingestion","Bq/kg"
+ 1.599E-14,
+"Soil","dermal","Bq/kg"
+ 1.599E-14,
+"Air","inhalation","Bq/m^3"
+ 2.930E-17,
+"Soil","inhalation","Bq/m^3"
+ 9.595E-20,
+"Soil","external","Bq/kg"
+ 1.599E-14,
+"Air","external","Bq/m^3"
+ 2.930E-17,
+"YTTRIUM-90","Y90", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.326E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 2.902E-16,
+"Meat","ingestion","Bq/kg"
+ 1.331E-17,
+"Milk","ingestion","Bq/L"
+ 5.701E-18,
+"Soil","ingestion","Bq/kg"
+ 1.047E-14,
+"Soil","dermal","Bq/kg"
+ 1.047E-14,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 6.283E-20,
+"Soil","external","Bq/kg"
+ 1.047E-14,
+"Air","external","Bq/m^3"
+ 0.000E+00,
+    75.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.385E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 1.929E-15,
+"Meat","ingestion","Bq/kg"
+ 4.920E-17,
+"Milk","ingestion","Bq/L"
+ 6.704E-16,
+"Soil","ingestion","Bq/kg"
+ 1.599E-14,
+"Soil","dermal","Bq/kg"
+ 1.599E-14,
+"Air","inhalation","Bq/m^3"
+ 2.930E-17,
+"Soil","inhalation","Bq/m^3"
+ 9.595E-20,
+"Soil","external","Bq/kg"
+ 1.599E-14,
+"Air","external","Bq/m^3"
+ 2.930E-17,
+"YTTRIUM-90","Y90", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.326E-15,
+"Other vegetables","ingestion","Bq/kg"
+ 2.902E-16,
+"Meat","ingestion","Bq/kg"
+ 1.331E-17,
+"Milk","ingestion","Bq/L"
+ 5.701E-18,
+"Soil","ingestion","Bq/kg"
+ 1.047E-14,
+"Soil","dermal","Bq/kg"
+ 1.047E-14,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 6.283E-20,
+"Soil","external","Bq/kg"
+ 1.047E-14,
+"Air","external","Bq/m^3"
+ 0.000E+00,
+   100.0,"yr",   25.0,"yr", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 1.279E-18,
+"Other vegetables","ingestion","Bq/kg"
+ 1.274E-18,
+"Meat","ingestion","Bq/kg"
+ 2.653E-20,
+"Milk","ingestion","Bq/L"
+ 1.079E-19,
+"Soil","ingestion","Bq/kg"
+ 1.279E-17,
+"Soil","dermal","Bq/kg"
+ 1.279E-17,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 7.673E-23,
+"Soil","external","Bq/kg"
+ 1.279E-17,
+"Air","external","Bq/m^3"
+ 0.000E+00,
+"YTTRIUM-90","Y90", 10,
+"Leafy vegetables","ingestion","Bq/kg"
+ 1.056E-20,
+"Other vegetables","ingestion","Bq/kg"
+ 1.056E-20,
+"Meat","ingestion","Bq/kg"
+ 6.379E-22,
+"Milk","ingestion","Bq/L"
+ 3.978E-23,
+"Soil","ingestion","Bq/kg"
+ 1.126E-17,
+"Soil","dermal","Bq/kg"
+ 1.126E-17,
+"Air","inhalation","Bq/m^3"
+ 0.000E+00,
+"Soil","inhalation","Bq/m^3"
+ 6.759E-23,
+"Soil","external","Bq/kg"
+ 1.126E-17,
+"Air","external","Bq/m^3"
+ 0.000E+00,

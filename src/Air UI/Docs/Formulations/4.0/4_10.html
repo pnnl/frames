@@ -1,0 +1,57 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>4.10 Source Mass Budget</title>
+</head>
+<body>
+
+<font face="verdana" size="2">
+
+<br><center><font><b><u>4.10 SOURCE MASS BUDGET</u></b></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+emission of a constituent will deplete the inventory of that constituent
+at the site. With one exception, the depletion of the mass by a gaseous
+emission in the inventory of an area source is assumed to proportionally
+reduce the emission rate. The exception is for the case of a landfill treatment/old
+spill volatilization computation where a constant emission rate is assumed
+with a linear reduction in the inventory. The depletion of mass for particulate
+emissions also does not change the emission rate.
+
+<br>
+
+<br>For sites where the inventory is known, or can be estimated, the proportional depletion is computed using
+
+<br>
+
+<br><img SRC="Image87.gif" height=24 width=58 align=LEFT>
+<p align="center">(67)</p>
+
+<br>where
+
+<ul>
+<br>f<sub>m</sub> = mass emission depletion fraction
+<br>t = elapsed time (s)
+<br>H = mass removal half-life (s).
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In the current MEPAS user interface implementation, the default is to assume
+that source depletion occurs for all gaseous and particulate constituents
+in an area source case for which inventories are input. The investigator
+has the option of defining an average emission rate for a 70-year period
+with no inventory, or an initial emission rate with the inventory. The
+former requires that the investigator externally account for mass depletion,
+and the latter allows use of MEPAS formulations to account for the source
+depletion.
+<br>&nbsp;
+<br>&nbsp;
+
+</font>
+</body>
+</html>

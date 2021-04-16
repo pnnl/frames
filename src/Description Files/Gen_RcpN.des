@@ -1,0 +1,156 @@
+"mf","Version 2.1"
+"Human Exposure & Risk:Receptor Intakes:rcp","GENII V.2 NESHAPS Receptor Intakes Module","gen_rcpN.exe ","gen_rcp.bat ","rcp.ico"
+"
+MODULE VERSION
+  2.0 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+GENII V.2 NESHAPS Receptor Intakes Module
+
+The GENII V.2 NESHAPS Recptor Intakes module may be used to 
+estimate annual, time-integrated intakes from 
+exposure to contaminated soil, groundwater, 
+surface water, and atmospheric transport pathways.  
+Up to 6 age groups may be specified.
+
+Limitations:
+    Radionuclides only.
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 epf Exposure Pathways required as input
+
+Valid Output Writes
+     rif Receptor Intakes
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K3-54
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth
+"
+1,"Read"
+2,"con","",1,1,"epf","Exposure Pathways",1,1
+1,"Write"
+"rif","Receptor Intakes"
+51,"Variables"
+UEXAIR,Continuous,hr,Min,0,Max,24,Daily plume immersion exposure time,1,FLOAT
+Label,age group #,Index1
+TEXAIR,Continuous,day,Min,0,Max,365,Yearly plume immersion exposure time,1,FLOAT
+Label,age group #,Index1
+SHIN,Continuous,,Min,0,Max,1,Indoor shielding factor,1,FLOAT
+Label,age group #,Index1
+SHOUT,Continuous,,Min,0,Max,1,Outdoor shielding factor,1,FLOAT
+Label,age group #,Index1
+UEXGRD,Continuous,hr,Min,0,Max,24,Daily external ground exposure time,1,FLOAT
+Label,age group #,Index1
+TEXGRD,Continuous,day,Min,0,Max,365,Yearly external ground exposure time,1,FLOAT
+Label,age group #,Index1
+FTIN,Continuous,fraction,Min,0,Max,1,Fraction of time spent indoors,1,FLOAT
+Label,age group #,Index1
+FTOUT,Continuous,fraction,Min,0,Max,1,Fraction of time spent outdoors,1,FLOAT
+Label,age group #,Index1
+EVSWIM,Continuous,evt/day,Min,0,Max,10,Frequency of swimming event,1,INTEGER
+Label,age group #,Index1
+TESWIM,Continuous,hr,Min,0,Max,24,Duration of swimming event,1,FLOAT
+Label,age group #,Index1
+TSWIM,Continuous,day,Min,0,Max,365,Swimming days,1,FLOAT
+Label,age group #,Index1
+USWIM,Continuous,L/hr,Min,0,Max,10,Ingestion rate of water while swimming,1,FLOAT
+Label,age group #,Index1
+SFBOAT,Continuous,,Min,0,Max,1,Shielding factor,1,FLOAT
+Label,age group #,Index1
+EVBOAT,Continuous,evt/day,Min,0,Max,10,Frequency of boating event,1,INTEGER
+Label,age group #,Index1
+TEBOAT,Continuous,hr,Min,0,Max,24,Duration of boating event,1,FLOAT
+Label,age group #,Index1
+TBOAT,Continuous,day,Min,0,Max,365,Boating days,1,FLOAT
+Label,age group #,Index1
+EVSHOR,Continuous,evt/day,Min,0,Max,10,Frequency of shoreline use,1,INTEGER
+Label,age group #,Index1
+TESHOR,Continuous,hr,Min,0,Max,24,Duration of shoreline use events,1,FLOAT
+Label,age group #,Index1
+TSHOR,Continuous,day,Min,0,Max,365,Shoreline days,1,FLOAT
+Label,age group #,Index1
+SWFAC,Continuous,,Min,0,Max,1,Shoreline width factor,1,FLOAT
+Label,age group #,Index1
+UCRP,Continuous,kg/day,Min,0,Max,10,Crop consumption rate,2,FLOAT
+Variable,TFDLabel,Index2
+Label,age group #,Index1
+TCRP,Continuous,day/yr,Min,0,Max,365,Crop consumption period,2,FLOAT
+Variable,TFDLabel,Index2
+Label,age group #,Index1
+UANM,Continuous,kg/day,Min,0,Max,10,Animal product consumption rate,2,FLOAT
+Variable,ANFLabel,Index2
+Label,age group #,Index1
+TANM,Continuous,day/yr,Min,0,Max,365,Animal product consumption period,2,FLOAT
+Variable,ANFLabel,Index2
+Label,age group #,Index1
+UAQU,Continuous,kg/day,Min,0,Max,10,Aquatic food consumption rate,2,FLOAT
+Variable,AQFLabel,Index2
+Label,age group #,Index1
+TAQU,Continuous,day/yr,Min,0,Max,365,Fish consumption period,2,FLOAT
+Variable,AQFLabel,Index2
+Label,age group #,Index1
+UDW,Continuous,L/day,Min,0,Max,10,Drinking water ingestion rate,1,FLOAT
+Label,age group #,Index1
+TDW,Continuous,day/yr,Min,0,Max,365,Drinking water ingestion period,1,FLOAT
+Label,age group #,Index1
+EVSHWR,Continuous,evt/day,Min,0,Max,10,Freqency of showering event,1,INTEGER
+Label,age group #,Index1
+TESHWR,Continuous,hr,Min,0,Max,24,Duration of showering event,1,FLOAT
+Label,age group #,Index1
+TSHWR,Continuous,day,Min,0,Max,365,Showering days,1,FLOAT
+Label,age group #,Index1
+USHIN,Continuous,L/hr,Min,0,Max,10,Ingestion rate of water while showering,1,FLOAT
+Label,age group #,Index1
+TSOIL,Continuous,day,Min,0,Max,365,Soil contact days,1,FLOAT
+Label,age group #,Index1
+USOIL,Continuous,mg/day,Min,0,Max,15000,Inadvertent soil ingestion rate,1,FLOAT
+Label,age group #,Index1
+UINH,Continuous,m^3/day,Min,0,Max,50,Air inhalation rate,1,FLOAT
+Label,age group #,Index1
+TINH,Continuous,day/yr,Min,0,Max,365,Air inhalation period,1,FLOAT
+Label,age group #,Index1
+UINHR,Continuous,m^3/day,Min,0,Max,50,Resuspended soil inhalation rate,1,FLOAT
+Label,age group #,Index1
+TINHR,Continuous,day/yr,Min,0,Max,365,Resuspended soil inhalation period,1,FLOAT
+Label,age group #,Index1
+FRINHR,Continuous,fraction,Min,0,Max,1,Fraction of a day inhalation occurs,1,FLOAT
+Label,age group #,Index1
+UINDRH,Continuous,m^3/day,Min,0,Max,50,Indoor air inhalation rate,1,FLOAT
+Label,age group #,Index1
+TINDRH,Continuous,day/yr,Min,0,Max,365,Indoor air inhalation period,1,FLOAT
+Label,age group #,Index1
+FRINDR,Continuous,fraction,Min,0,Max,1,Fraction of a day indoor inhalation occurs,1,FLOAT
+Label,age group #,Index1
+EQFRAC,Continuous,fraction,Min,0,Max,1,Radon progeny indoor equilibrium fraction,1,FLOAT
+Label,age group #,Index1
+NAGES,Not Stochastic,N/A,,,Number of age groups,0,INTEGER,,
+ANFLabel,Not Stochastic,N/A,,,Terrestrial animal product constant,1,STRING,,
+Label,Index#,Index1
+TFDLabel,Not Stochastic,N/A,,,Plant product constant,1,STRING,,
+Label,Index#,Index1
+AQFLabel,Not Stochastic,N/A,,,Aquatic animal product constant,1,STRING,,
+Label,Index#,Index1
+RNMODL,Not Stochastic,N/A,,,Use Radon Model,1,LOGICAL,,
+Label,age group #,Index1
+FRINH,Continuous,fraction,Min,0,Max,1,Fraction of a day indoor inhalation occurs,1,FLOAT
+Label,age group #,Index1
+LOWAGE,Not Stochastic,yr,Min,0,Max,100,Lower ager limit,1,FLOAT
+Label,age group #,Index1
+UPAGE,Not Stochastic,yr,Min,0,Max,100,Upper age limit,1,FLOAT
+Label,age group #,Index1

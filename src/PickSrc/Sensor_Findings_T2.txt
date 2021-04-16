@@ -1,0 +1,12 @@
+ValidFemisUserName,PointName,ClassName,SubclassName,Notes,AttrName1,AttrValue1,AttrName2,AttrValue2,AttrName3,AttrValue3,AttrName4,AttrValue4,AttrName5,AttrValue5,Lat,Long
+millard,S01,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,2.313e-16,Concentration_Units,mg/l,45.926,-119.368
+millard,S02,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,1.107e-09,Concentration_Units,mg/l,45.9171681149,-119.381858008
+millard,S03,Water_Sensor,Above_Threshold,C:\all.xls,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,0.04307,Concentration_Units,mg/l,45.9185371546,-119.372299774
+millard,S04,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,2.106e-32,Concentration_Units,mg/l,45.9201594574,-119.362860282
+millard,S05,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,0,Concentration_Units,mg/l,45.924134568,-119.35342589
+millard,S06,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,2.697e-16,Concentration_Units,mg/l,45.9269548573,-119.342770148
+millard,S07,Water_Sensor,Above_Threshold,C:\all.xls,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,2.269e-06,Concentration_Units,mg/l,45.922491387,-119.379299509
+millard,S08,Water_Sensor,Above_Threshold,C:\all.xls,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,0.06718,Concentration_Units,mg/l,45.9241766753,-119.369888804
+millard,S09,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,1.031e-32,Concentration_Units,mg/l,45.9266274617,-119.361725597
+millard,S10,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,0,Concentration_Units,mg/l,45.9300249096,-119.350178815
+millard,S11,Water_Sensor,Active_Normal,,Threshold_Limit,1.25e-06,Time,1999.703941383,Chemical,SR90,Concentration,0,Concentration_Units,mg/l,45.9317763776,-119.340276154

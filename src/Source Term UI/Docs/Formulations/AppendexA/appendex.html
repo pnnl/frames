@@ -1,0 +1,987 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win95; I) [Netscape]">
+   <title>Appendex A</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><center><font size="3"><b><u>Appendix A</font></b></u>
+
+<br>
+
+<br><b>Complete List of Source-Term Module Input Parameter</b></center>
+
+<br>
+
+<br>The following tables list the computer
+code variable names for input parameters for the source-term module. They
+also show the relationship of those variables to the variables presented
+in the main body of the report. Note that there is not a direct one-to-one
+mapping of code variable names to variables presented in the report. For
+example, one computer code variable may represent one of a number of similar
+report equation variables, depending on which type of contamination scenario
+is being simulated. Furthermore, sometimes a computer code variable is
+input with a certain (more commonly available) set of units, and then the
+code converts the value to the set of units used in the report equations.
+
+<br><center>Table A.1. Site Constant Parameters</center>
+
+<center><table BORDER WIDTH="804" >
+<tr><td VALIGN=CENTER WIDTH="15%"><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2"><center><b>Description</b></font></center></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><b><font face="verdana" size="2">Notation</font></b></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">SFDBULKD</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">g cm<sup>-3</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Dry bulk density of surface soil</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center>&szlig;<sub><font face="verdana" size="2">s</font></sub></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STAREA</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm<sup>2</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Area ofthe waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">A</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STAVAILW</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Water-holding capacity of waste zone</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">w<sub>WHC</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STAVTEMP</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><sup><font face="verdana" size="2">o</font></sup>C</center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Average air temperature at the waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">T<sub>24</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STAVWINDV</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m s<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Mean annual wind speed</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><img SRC="image9TA.JPG" height=23 width=17></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STCFACTR</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Vegetative cover factor</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>v</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STCLOUD</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Fraction of sky with cloud cover</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">c<sub>sky</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STCORRSC</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Non-erodible area correction factor</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>ne</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STCRUST</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Fraction of surface area covered with a crust layer</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>cr</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STDELTA_T&nbsp;</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Length of time step</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="Symbol">D</font><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STELEV</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Elevation of waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">h<sub>1</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STKFACTR</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">English Units<sup>(a)</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Soil erodibility factor</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">K<sub>fact</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STLAT</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">degrees</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Latitude of waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">--</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STLCDELEV</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Elevation of Local Climatalogical Data (LCD) Station</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">h<sub>0</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STLENGTH</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Length of site down erodible slope</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><font face="verdana" size="2"><center>L<sub>slope</sub></center></font></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STLOCSUR</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Surface roughness length</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">L<sub>r</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMAXTIME</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Length of run</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">--</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMAXWIND</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m s<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Maximum wind speed at site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">U<sub>max</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMINWST</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">The minimum waste fraction for which analysis performed</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">--</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMNUMPRE</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Number of monthly precipitation events</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">n<sub>pj</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMOISTC</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">The volumetric moisture content fraction of the source zone</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="Symbol">q</font><sub><font face="verdana" size="2">w</font></sub></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STMPRECIP</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Monthly precipitation amount measured at LCD</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">d<sub>pruj</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STNUMDIS</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">month<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Frequency of mechanical disturbances to site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>d</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STNUMPRCP</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Numberof days with 0.254mm precipitation</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">n<sub>p</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STOVLFLX</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Overland flux for a ponded case as fraction of total water volume.</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><img SRC="Image18.gif" height=53 width=53></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STPEI</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Thornthwaite's Precipitation-Evaporation Index</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>PE</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STPFACTR</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Erosion control practice factor</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">P<sub>fact</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STPRECIP</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">2-yr, 6-hr, precipitation event</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">P<sub>2,6</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STRHMAX</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">%</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Maximum monthly relative humidity</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><img SRC="imageSV4.JPG" height=32 width=52></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STRHMIN</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">%</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Minimum monthly relative humidity</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><img SRC="image0Q5.JPG" height=32 width=49></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STROADS</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Flag to designate type of road travel</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">Control</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STRTDIST</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">km</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Distance traveled over contaminated surface</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">L<sub>road</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STRTNUM</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">day<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Average number of vehicles traveling over surface daily</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">n<sub>v</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSAND</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">%</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Percent sand in surface soil</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">P<sub>sand</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSCSCN</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">SCS curveumber</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">n<sub>scs</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSILT</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">%</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Percentof silt on road surface</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">P<sub>silt</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSLOPE</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">%</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Slope of waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">S<sub>slope</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSSOL</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">g cm<sup>-3</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Concentration of suspended solids in surface impoundment</font></td>
+
+<td VALIGN=CNTER WIDTH="12%"><center>&szlig;<sub><font face="verdana" size="2">ss</font></sub></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STSTORMI</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Storm type index for location of waste site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">--</font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STTEMP</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><sup><font face="verdana" size="2">o</font>C</sup></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Temperature measured at LCD</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">T<sub>24</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STTHICK&nbsp;</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Thicknessof the waste zone</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">h, L<sub>x</sub>, d<sub>p</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STVEGFR</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Fraction of surface area covered with vegetation</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">f<sub>v</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STVSPEED</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">km hr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Mean vehicle speed at site</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">v<sub>veh</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STVWEIGH</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">Mg</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Mean vehicle weight</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">M<sub>veh</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STWHEELS</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Mean number of wheels per vehicle</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">n<sub>w</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STWINDHT</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m</font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Height above ground of local wind measurements</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">h<sub>in</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">STWINDV</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">m s<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Mean monthly wind speed at LCD</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center><font face="verdana" size="2">U<sub>d2</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER WIDTH="15%"><font face="verdana" size="2">WZDBULKD</font></td>
+
+<td VALIGN=CENTER WIDTH="14%"><center><font face="verdana" size="2">g cm<sup>-3</sup></font></center></td>
+
+<td VALIGN=CENTER WIDTH="59%"><font face="verdana" size="2">Dry bulk density of waste zone</font></td>
+
+<td VALIGN=CENTER WIDTH="12%"><center>&szlig;<sub><font face="verdana" size="2">s</font></sub></center></td></tr>
+</table></center>
+
+<br>
+<br>
+<br>
+
+<br><center>Table A.2. Site Series Parameters</center>
+
+<br><center><table BORDER WIDTH="780" >
+<tr><td VALIGN=CENTER><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2"><b>Description</b></font></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Notation</font></b></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STAIRSPC</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">The volumetric air content fraction of the source zone</font></td>
+
+<td VALIGN=CENTER><center><font face="Symbol">q</font><sub><font face="verdana" size="2">a</font></sub></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STAIRSPC_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for air space-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STAIRSPC_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different airspace percentages</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STCLEAN</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">cm</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">The initial thickness of the clean layer</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">z<sub>t</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STCLEAN_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for cover thickness-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STCLEAN_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different clean layer thicknesses</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STDARCY</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">cm yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Darcy infiltration rate</font></td>
+
+<td VALIGN=CENTER>center><font face="verdana" size="2">q<sub>w</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STDARCY_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for infiltration-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STDARCY_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different infiltration rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STTOTPOR</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">The total porosity fraction of the source zone</font></td>
+
+<td VALIGN=CENTER><center><font face="Symbol">q</font><sub><font face="verdana" size="2">t</font></sub></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STTOTPOR_TIME</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for porosity-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STTOTPOR_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different total porosity percentages</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWATR&nbsp;</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>cm yr<sup>-1</sup></center></font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Water erosion rate</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">E</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWATR_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for water erosion-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWATR_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different water erosion rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWIND&nbsp;</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>cm yr<sup>-1</sup></center></font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Wind erosion rate</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">S</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWIND_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for wind erosion-time pairs</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STWIND_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different wind erosion rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br><center>Table A.3. Contaminant Constant Parameters</center>
+
+<br><center><table BORDER WIDTH="780" >
+<tr><td VALIGN=CENTER><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center><b>Description</b></center></font></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Notation</font></b></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLDIFCO</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">cm<sup>2</sup> yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Grout Diffusion Coefficient for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">D<sub>g</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLHLC</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image19.gif" height=55 width=68></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Henry's Law Constant for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">H</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLKOW</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">mL g<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Octanol-water partitioning coefficient for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">K<sub>ow</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLKTYPE</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Contaminant type for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Database&nbsp;</font>
+<br><font face="verdana" size="2">Param</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLLAMBDA</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Decay/degradation constant for each contaminant</font></td>
+
+<td VALIGN=CENTER><center>&nbsp;<font face="Symbol">l</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLSPECACT</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Ci g<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Specific activity for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Database&nbsp;</font>
+<br><font face="verdana" size="2">Param</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLVAP</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">mm Hg</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Vapor Pressure for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image29.gif" height=31 width=33></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">CLWM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">g mol<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Molecular weight for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">M<sub>m</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">FSCASID</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">CAS ID for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Database&nbsp;</font>
+<br><font face="verdana" size="2">Param</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">NDS</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of daughter products for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Database&nbsp;</font>
+<br><font face="verdana" size="2">Param</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">NUMALLCON</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of all contaminants (parents plus progeny)</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">n<sub>c</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">NUMCON</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of contaminants (parents only)</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">n<sub>c</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STINVEN</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">g</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Inventory quantity for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">M<sub>io</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STORGCON&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">g cm<sup>-3</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Concentration of organic contaminants in the organic phase</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">C<sub>o</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSOL</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">g mL<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Aqueous solubility for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image28.gif" height=31 width=33></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STVOLRAT</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">fraction</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Volatilization ratio used for control of volatilization</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td></tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br><center>Table A.4. Contaminant Series Parameters</center>
+
+<center><table BORDER WIDTH="780" >
+<tr><td VALIGN=CENTER><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center><b>Description</b></center></td>
+
+<td VALIGN=CENTER><center><b>Notation</b></center></font></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STKD</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">mL g<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">K<sub>d</sub> for each contaminant</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">K<sub>d</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STKD_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Time for K<sub>d</sub>-time series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STKD_NUM&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of different K<sub>d</sub> values used</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br><center>Table A.5. Waste Form Series Parameters</center>
+
+<center><table BORDER WIDTH="780" >
+<tr><td VALIGN=CENTER><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Description</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Notation</font></b></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STGLASS&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Glass dissolution rate</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">r<sub>g</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STGLASS_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for dissolution-time series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STGLASS_NUM&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different glass dissolution rates</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>Counter</center></font></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSURFVOL&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">cm<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Surface to volume ratio of the grout monolith</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">A<sub>sg</sub>/V<sub>g</sub></font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSURFVOL_TIM&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for surface/volume-time series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSURFVOL_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">This is the number of different monolith surface to volume ratios</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>Counter</center></font></td></tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br><center>Table A.6. Pathway Series Parameters</center>
+
+<center><table BORDER WIDTH="780" >
+<tr><td VALIGN=CENTER><center><b><font face="verdana" size="2">Name</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Units</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Description</font></b></center></td>
+
+<td VALIGN=CENTER><center><b><font face="verdana" size="2">Notation</font></b></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STLEACH</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">g yr<sup>-1</sup></font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Known leaching flux rates</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image20.gif" height=58 width=83></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STLEACH_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for flux-time leaching series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STLEACH_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--&nbsp;</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of known leach loss flux rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STOVL</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>g yr<sup>-1</sup></center></font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Known overland flux rates</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image21.gif" height=58 width=80>
+<br><img SRC="Image22.gif" height=58 width=78></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STOVL_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for flux-time overland series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STOVL_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--&nbsp;</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of known overland flux rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSUSP</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>g yr<sup>-1</sup></center></font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Known wind suspension flux rates</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image23.gif" height=60 width=76></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSUSP_TIM&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for flux-time suspension series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSUSP_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--&nbsp;</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of known suspension flux rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STVOLAT</font></td>
+
+<td VALIGN=CENTER><center>g yr<sup>-1</sup></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Known volatilization flux rates</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image24.gif" height=58 width=73></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STVOLAT_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for flux-time volatilization series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STVOLAT_NUM&nbsp;</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--&nbsp;</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of different volatilization rates</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSOURCE&nbsp;</font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2"><center>g yr<sup>-1</sup></center></font></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Known flux rates for a source to the waste zone</font></td>
+
+<td VALIGN=CENTER><center><img SRC="Image25.gif" height=58 width=88></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSOURCE_TIM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">yr</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Times for flux-time source series</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">t</font></center></td></tr>
+
+<tr><td VALIGN=CENTER><font face="verdana" size="2">STSOURCE_NUM</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">--&nbsp;</font></center></td>
+
+<td VALIGN=CENTER><font face="verdana" size="2">Number of different flux rates for a source to the waste zone</font></td>
+
+<td VALIGN=CENTER><center><font face="verdana" size="2">Counter</font></center></td></tr>
+</table></center>
+
+<br>
+<hr>
+<br><sup>(a)</sup> English ton acre<sup>-1</sup> yr<sup>-1</sup> per unit
+R<sub>fact</sub> in English units
+<br>&nbsp;
+<br>&nbsp;
+
+</font>
+</body>
+</html>

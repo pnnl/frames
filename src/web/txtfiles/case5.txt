@@ -1,0 +1,69 @@
+
+<h2>Test Case 5 </h2><p>
+
+<b> Description and Rationale </b><p>
+
+
+
+
+
+         This case verifies that the FRAMES User Interface (FUI) follows Description (DES) file specifications to allow only appropriate linkages between modules to develop a scenario. Each module is required to have a DES file that specifies how many of what types of files it can read. The DES file will also specify what type of files the module generates. As an example, a section from the ‘MepAqu.des’ file is listed below along with a description of each entry.<p>
+
+
+
+<BLOCKQUOTE><B>Excerpt from MepAqu.des:</b><p>
+
+
+
+1,Read
+
+1,WFF,Infiltration,1,1,
+
+2,Write
+
+WFF,Aquifer Flux
+
+WCF,Flowing Aquifer</BLOCKQUOTE><P>
+
+
+
+Line 1: # of file types that can be read in, Read Line 2: # of input file combinations, file type, file type descriptor, minimum # of WFF files required to read,<br>
+
+           <BLOCKQUOTE> maximum # of WFF files that can be read</BLOCKQUOTE><br>
+
+Line 3: # of file types that can be written out, Write<br>
+
+Line 4: first output file type, descriptor<br>
+
+Line 5: second output file type, descriptor<bp>
+
+
+
+            As can be seen, the module should read in one and only one Water Flux File(WFF) infiltration file and can write up to two files: a WFF Aquifer Flux File and a Water Concentration File (WCF) Flowing Aquifer file. The FUI should read this information and use it to decide if the module should be listed as an applicable model or as a non-applicable model on the ‘Object General Information’ screen. <p>
+
+
+
+<b>Instructions for Performing the Test and Expected Results </b><p>
+
+
+
+            These instructions assume that the FUI is running and visible on the user’s screen.<p> Select ‘New’ from the ‘File’ menu. If a case is currently open, you will be prompted to save it before exiting. Select ‘Yes’ or ‘No’ as desired. The workspace should now be clear.<p> Insert a Source module, Vadose Zone module, Aquifer module, Surface Water module, and an Exposure module into the workspace. Ordinarily it would be necessary to add a Constituent Selection module. However, one is not required in this case. Click on the ‘File’ drag down menu and select ‘Save As’. When prompted for a file name, type in ‘fui_08.gid’. <p>Next, create a connection from the Source Term module to the  Aquifer module (Source Term _ Saturated Zone) and the Aquifer module to the Surface Water and Exposure modules (Aquifer _ Surface Water; Aquifer _ Exposure). Right click on the Source Term module and select ‘General Info’. Select the ‘MEPAS® 4.1 Computed Constituent Emissions Model’ and click ‘Ok’. <p>Next, right click on the Aquifer module and select ‘General Info’. Select the ‘MEPAS® 4.1 Saturated Zone Module’ as the model and click ‘Ok’. Because the ‘MEPAS® 4.1 Saturated Zone module’ appeared in the ‘Applicable models’ box we know that the scenario setup is allowable in the FRAMES system.<p> Specifically, in this scenario, the Saturated Zone module will be reading one WFF infiltration file and will be writing one WFF Aquifer Flux File and one WCF Flowing Aquifer File. As noted above, the MEPAS® Saturated Zone Module’s DES file indicates that this is allowable.  <p>
+
+
+
+            Next, draw a line connecting the Source Term module to the Vadose Zone module (Source Term _ Vadose Zone) and a line connecting the Vadose Zone module to the Saturated Zone module (Vadose Zone _ Saturated Zone). Right click on the Vadose Zone module and select ‘General Info’. Select the ‘MEPAS® 4.1 Vadose Zone Module’ as the model and click ‘Ok’. Next, right click on the Saturated Zone module and select ‘General Info’. Notice that the ‘MEPAS 4.1 Saturated Zone Module’ is now in the ‘Non-applicable Models’ list.<p> This is because the scenario in the workspace now indicates that the Saturated Zone model will be reading two WFF files, one from the Source Term and one from the Vadose Zone, while the ‘MEPAS® 4.1 Saturated Zone Module’ uses a DES file that specifies that it can only read one WFF file. Therefore, the MEPAS® module is no longer applicable. This indicates that the FUI is following DES file instructions relating to module connectivity. Click ‘Cancel’ to exit the window.<p>
+
+            Close this file and save the changes.<p>
+
+
+
+<b> Results</b><p>
+
+            The above instructions were followed and the results matched the expectations.
+
+
+<p>
+
+ <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"> <p>
+<a href="software.html#testing"><b>Return to the Testing outline on Software page.</a></b>

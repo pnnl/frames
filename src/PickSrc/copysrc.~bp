@@ -1,0 +1,208 @@
+# ---------------------------------------------------------------------------
+!if !$d(BCB)
+BCB = $(MAKEDIR)\..
+!endif
+
+# ---------------------------------------------------------------------------
+# IDE MANAGED SECTION
+# ---------------------------------------------------------------------------
+# The following section of the project makefile is managed by the BCB IDE.
+# It is recommended to use the IDE to change any of the values in this
+# section.
+# ---------------------------------------------------------------------------
+
+VERSION = BCB.03
+# ---------------------------------------------------------------------------
+PROJECT = copysrc.exe
+OBJFILES = copysrc.obj "..\Common Files\gid.obj" "..\Common Files\Fcsv.obj" \
+  "..\Common Files\robust.obj" "..\Common Files\Error.obj" "..\Common Files\csv.obj"
+RESFILES = copysrc.res
+RESDEPEN = $(RESFILES)
+LIBFILES = "..\Common Files\frames.lib" "..\Common Files\omfSystemIO.lib"
+LIBRARIES = vcl35.lib
+SPARELIBS = vcl35.lib
+PACKAGES = vclx35.bpi VCL35.bpi vcldb35.bpi vcldbx35.bpi dclocx35.bpi Qrpt35.bpi \
+  bcbsmp35.bpi
+DEFFILE =
+# ---------------------------------------------------------------------------
+PATHCPP = .;..\Common Files
+PATHASM = .;
+PATHPAS = .;
+PATHRC = .;
+DEBUGLIBPATH = $(BCB)\lib\debug
+RELEASELIBPATH = $(BCB)\lib\release
+# ---------------------------------------------------------------------------
+CFLAG1 = -O2 -w -a1 -k- -vi -c -w-par -w-inl -N
+CFLAG2 = -D_NO_VCL;BORLAND -I..\wrapper;"..\common files";$(BCB)\include
+CFLAG3 = -Tkh30000
+PFLAGS = -D_NO_VCL;BORLAND -U..\wrapper;"..\common files";$(BCB)\lib;$(DEBUGLIBPATH) \
+  -I..\wrapper;"..\common files";$(BCB)\include -$L- -$D- -v -JPHN -M
+AFLAGS = /i..\wrapper /i"..\common files" /i$(BCB)\include /d_NO_VCL /dBORLAND /mx /w2 /zn
+RFLAGS = -D_NO_VCL;BORLAND -i..\wrapper;"..\common files";$(BCB)\include
+LFLAGS = -L..\wrapper;"..\common files";$(BCB)\lib;$(DEBUGLIBPATH) -ap -Tpe -x -Gn -c
+IFLAGS =
+# ---------------------------------------------------------------------------
+ALLOBJ = c0x32.obj $(OBJFILES)
+ALLRES = $(RESFILES)
+ALLLIB = $(LIBFILES)  import32.lib cw32mt.lib
+# ---------------------------------------------------------------------------
+!ifdef IDEOPTIONS
+
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=5
+MinorVer=0
+Release=1
+Build=53
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=PNNL
+FileDescription=Executable (Console)
+FileVersion=5.0.1.53
+InternalName=Ecological Assessment Wrapper
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=MEPAS
+ProductVersion=5.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=..\wrapper;..\common files;$(BCB)\include
+Item1=..\common files;$(BCB)\include
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=..\wrapper;..\common files;$(BCB)\lib
+Item1=..\common files;$(BCB)\lib
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=_NO_VCL;BORLAND
+Item1=_NO_VCL
+
+[HistoryLists\hlRunParameters]
+Count=30
+Item0=c:\frames\rra c:\frames\~tmp 1 1 riv2
+Item1=c:\frames\rra c:\frames\~tmp 1 1 riv3
+Item2=c:\frames\rra c:\frames\~tmp 1 1 riv4
+Item3=c:\frames\cases\case1gw1 c:\frames\~tmp 1 1 riv12
+Item4=c:\frames\cases\case1gw1 c:\frames\~tmp 1 1 riv
+Item5=c:\framesv1\cases\weap01\weap01 c:\frames\~tmp 1 1 efx4
+Item6=c:\framesv1\cases\weap01\weap01 c:\framesv1\~tmp 1 1 efx4
+Item7=c:\framesv1\cases\weap01 c:\framesv1\~tmp 1 1 efx4
+Item8=c:\framesv1\twemtst c:\frames\~tmp 1 1 efx6
+Item9=c:\frames\twemtst c:\frames\~tmp 1 1 efx6
+Item10=c:\frames\cases\workshop\knownbbf c:\frames\~tmp 1 1 efx4
+Item11=c:\frames\cases\weap01\weap01 c:\frames\~tmp 1 1 efx4
+Item12=c:\frames\cases\knownbbf c:\frames\(tmp) 1 1 efx6
+Item13=c:\frames\cases\knownbbf c:\frames\~tmp 1 1 efx6
+Item14=c:\frames\cases\knownbbf c:\frames\~tmp 1 1 efx4
+Item15=c:\frames\cases\knownbff c:\frames\~tmp 1 1 efx4
+Item16=c:\frames\cases\twemtest\twemtst c:\frames\~tmp 1 1 efx6
+Item17=e:\frames\cases\twemtest\twemtst e:\frames\~tmp 1 1 efx6
+Item18=e:\frames\cases\twemtest\twemtest e:\frames\~tmp 1 1 efx6
+Item19=e:\frames\cases\twemtest e:\frames\~tmp 1 1 efx6
+Item20=c:\frames\weap03\weap03 c:\frames\weap03\~tmp 3 1 efx15
+Item21=c:\frames\weap01\weap01 c:\frames\weap01\~tmp 1 1 efx4
+Item22=c:\frames\weap03\weap03 c:\frames\weap03\~tmp 2 1 efx8
+Item23=c:\frames\weap03\weap03 c:\frames\weap03\~tmp 3 1 efx8
+Item24=c:\frames\weap03\weap03 c:\frames\weap03\~tmp 1 1 efx8
+Item25=c:\frames\weap03\weap03 c:\frames\weap03\~tmp 1 2 efx5
+Item26=c:\frames\moregids\ex3 c:\frames\moregids\tmp 1 1 efx4
+Item27=c:\frames\weap_01\weap01_1 c:\frames\weap_01\~tmp 1 1 efx4
+Item28=c:\frames\test\nuered3 c:\frames\test\~tmp 1 1 efx5
+Item29=c:\frames\test\weap_z1 c:\frames\test\~tmp 1 1 efx4
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=c:\frames\rra c:\frames\~tmp 1 1 riv2
+HostApplication=
+
+!endif
+
+# ---------------------------------------------------------------------------
+# MAKE SECTION
+# ---------------------------------------------------------------------------
+# This section of the project file is not used by the BCB IDE.  It is for
+# the benefit of building from the command-line using the MAKE utility.
+# ---------------------------------------------------------------------------
+
+.autodepend
+# ---------------------------------------------------------------------------
+!if !$d(BCC32)
+BCC32 = bcc32
+!endif
+
+!if !$d(DCC32)
+DCC32 = dcc32
+!endif
+
+!if !$d(TASM32)
+TASM32 = tasm32
+!endif
+
+!if !$d(LINKER)
+LINKER = ilink32
+!endif
+
+!if !$d(BRCC32)
+BRCC32 = brcc32
+!endif
+# ---------------------------------------------------------------------------
+!if $d(PATHCPP)
+.PATH.CPP = $(PATHCPP)
+.PATH.C   = $(PATHCPP)
+!endif
+
+!if $d(PATHPAS)
+.PATH.PAS = $(PATHPAS)
+!endif
+
+!if $d(PATHASM)
+.PATH.ASM = $(PATHASM)
+!endif
+
+!if $d(PATHRC)
+.PATH.RC  = $(PATHRC)
+!endif
+# ---------------------------------------------------------------------------
+$(PROJECT): $(OBJFILES) $(RESDEPEN) $(DEFFILE)
+    $(BCB)\BIN\$(LINKER) @&&!
+    $(LFLAGS) +
+    $(ALLOBJ), +
+    $(PROJECT),, +
+    $(ALLLIB), +
+    $(DEFFILE), +
+    $(ALLRES)
+!
+# ---------------------------------------------------------------------------
+.pas.hpp:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.pas.obj:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.cpp.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) $(CFLAG2) $(CFLAG3) -n$(@D) {$< }
+
+.c.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) $(CFLAG2) $(CFLAG3) -n$(@D) {$< }
+
+.asm.obj:
+    $(BCB)\BIN\$(TASM32) $(AFLAGS) $<, $@
+
+.rc.res:
+    $(BCB)\BIN\$(BRCC32) $(RFLAGS) -fo$@ $<
+# ---------------------------------------------------------------------------

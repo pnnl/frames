@@ -1,0 +1,40 @@
+C-----------------------------------------------------------------------
+C     CONIN
+C           DESCRIPTION: RADIONUCLIDE CONCENTRATIONS IN VARIOUS MEDIA
+C           USED BY: ACUTE, SETCON
+C-----------------------------------------------------------------------
+C
+C   Last Modified: 11-May-98  BAN  Update to 41X41 arrays
+C
+C-----------------------------------------------------------------------
+C   WATC(100,9)     - WATER CONCENTRATIONS OF RADIONUCLIDES, BY TIME
+C                     AND CHAIN MEMBER, BQ/L
+C   AIRCIN(9,41,41) - AIR CONCENTRATION 
+C                     DIRECTION, BQ/M3
+C   DEPDRY(9,41,41) - DRY DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+C                     DIRECTION, BQ/M3/SEC
+C   DEPWET(9,41,41) - WET DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+C                     DIRECTION, BQ/M3/SEC
+C   DEPTOT(9,41,41) - TOTAL DEPOSITION RATE OF CHAIN MEMBERS, BY DISTANCE AND
+C                     DIRECTION, BQ/M3/SEC
+C   EXTDOS(9,41,41) - EXTERNAL DOSE, PLUME, OF CHAIN MEMBERS, BY DISTANCE AND
+C                     DIRECTION, SV
+C   SOILCIN(100,9)  - SOIL CONCENTRATION OF RADIONUCLIDES, BY TIME
+C                     AND CHAIN MEMBER, BQ/KG
+C   ICROS(9)        - CROSS REFERENCE FOR INPUT CHAIN MEMBERS VERSUS
+C                     MASTER LIST CHAIN MEMBER RADIONUCLIDES
+C
+C----- Common Block Definition -----------------------------------------------
+C
+      COMMON /CONIN/ WATC(100,CHAINLEN), SOILCIN(100,CHAINLEN),
+     .        AIRCIN(CHAINLEN,41,41), DEPDRY(CHAINLEN,41,41),
+     .        DEPWET(CHAINLEN,41,41), DEPTOT(CHAINLEN,41,41),
+     .        EXTDOS(CHAINLEN,41,41),   ICROS(CHAINLEN)
+c     .        AIRCIN(CHAINLEN,10,10), DEPDRY(CHAINLEN,10,10),
+c     .        DEPWET(CHAINLEN,10,10), DEPTOT(CHAINLEN,10,10),
+c     .        EXTDOS(CHAINLEN,10,10),   ICROS(CHAINLEN)
+C
+C----- Type declarations -----------------------------------------------------
+C
+      REAL WATC, AIRCIN, DEPDRY, DEPWET, DEPTOT, EXTDOS, SOILCIN
+      INTEGER ICROS

@@ -1,0 +1,194 @@
+<a NAME="top"></a>
+<h2>Water Concentration File (WCF)</h2>
+There are currently three qualified types of the WCF, those qualifiers are: <font color="#0000FF">"Aquifer Total", "Surface Water Total" and "Surface Water Dissolved"</font>. The constituent concentrations units depend whether the constituent is a radionuclide or chemical and constituent phase measured. The concentration values are the instantaneous values at a time and location not an average. Every data set denotes another location, in most cases a downstream icon. There are NO limits on number of data sets, constituents, progeny, and time/concentration pairs. Aqueous concentrations are limited to the solubility of constituents.
+<p>
+The following outline is a description of the basic information provided in the WCF. An example WCF is included after the outline. Comparing the line by line description in the outline to the example should clarify and help locate data contained in the WCF. Lines beginning with ';' are descriptive comments only and will not appear in the actual WCF.
+<br>
+<br><B><I>For each</I></B> 'Module' producing a WCF section
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Module Name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Lines in section - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Header Lines - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Header Line'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header information - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Header Line'
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Data Sets - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Data Set'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Set name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;This is the location name or ID.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> the set is intended for a particular consuming module's use <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Data Set Name' = Consuming Module ID
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>ElseIf</I></B> the set is intended for any and all consuming modules <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Data Set Name' = "All" or user may be module defined
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Number of Data Sets' = 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valid WCF Qualifier for this data set - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<font color="#0000FF">"Aquifer Dissolved" / "Surface Water Total" / "Surface Water Dissolved"</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Constituents - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Measurements' Easting - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easting unit - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Measurements' Northing - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northing unit - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Measurements' Depth below water level - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth unit - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Constituent'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent ID - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time unit - <B>[Const STRING]</B> - "yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concentration unit - <B>[Const STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;File qualifier determines concentration units and aids in connection scheme:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Aquifer Dissolved - "pCi/mL" / "g/mL" - Dissolved mass in water per volume of water
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Surface Water Total - "pCi/mL" / "g/mL" - Total mass in water per volume of water
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Surface Water Dissolved - "pCi/mL" / "g/mL" - Dissolved mass in water per volume of water
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Time Concentration Pairs - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Progeny - <B>[const INTEGER]</B> - 0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;must be set to zero for 1.6 spec
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Time Concentration Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent Concentration - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Time Concentration Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Constituent'
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Data Set'
+<br><B><I>Next</I></B> 'Module'
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<p style="margin-top: -2; margin-bottom: -2">
+<p><a NAME="wcf_example"><B>Water Concentration File Example:</B></a>
+<p>This is a WCF example. See <a href="start.html">Getting Started</a> document and <a href="tutorial.html">Tutorial</a> for more information.
+<p><pre><font face="Verdana"><font size=2>
+&quot;aqu4&quot;,34
+3
+&quot;===========================================================&quot;
+&quot; Just an example                                                                &quot;
+&quot;===========================================================&quot;
+2
+&quot;exp5&quot;,&quot;Aquifer Dissolved&quot;,4,23450,&quot;m&quot;,2134,&quot;m&quot;,0.1,&quot;m&quot;
+&quot;Antimony&quot;,&quot;7440360&quot;,&quot;yr&quot;,&quot;g/ml&quot;,6,0
+47.04894,0
+80.67164,1.257721e-09
+114.2943,9.183684e-08
+147.917,8.655084e-07
+181.5397,3.061123e-06
+215.1624,6.216447e-06
+&quot;STRONTIU&quot;,&quot;SR90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,6,0
+320.9208,0
+382.5141,7.32552e-21
+444.1074,1.113229e-18
+505.7007,3.791756e-17
+567.2939,4.874036e-16
+628.8872,3.085442e-15
+&quot;Trichlor&quot;,&quot;79016&quot;,&quot;yr&quot;,&quot;g/ml&quot;,6,0
+8.116951,0
+21.36221,3.173306e-13
+34.60747,6.146491e-11
+47.85273,6.058579e-10
+61.09799,1.671765e-09
+74.34325,2.600424e-09
+&quot;YTTRIUM-&quot;,&quot;Y90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,6,0
+4.516459,0
+254.4285,0
+320.9208,0
+382.5141,7.327387e-21
+444.1074,1.113513e-18
+504.3407,3.711436143e-17
+&quot;exp6&quot;,&quot;Surface Water Total&quot;,4,24000,&quot;m&quot;,2250,&quot;m&quot;,5,&quot;m&quot;
+&quot;Antimony&quot;,&quot;7440360&quot;,&quot;yr&quot;,&quot;g/ml&quot;,6,0
+47.04894,0
+80.67164,1.257721e-09
+114.2943,9.183684e-08
+147.917,8.655084e-07
+181.5397,3.061123e-06
+215.1624,6.216447e-06
+&quot;STRONTIU&quot;,&quot;SR90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,6,0
+320.9208,0
+382.5141,7.32552e-21
+444.1074,1.113229e-18
+505.7007,3.791756e-17
+567.2939,4.874036e-16
+628.8872,3.085442e-15
+&quot;Trichlor&quot;,&quot;79016&quot;,&quot;yr&quot;,&quot;g/ml&quot;,6,0
+8.116951,0
+21.36221,3.173306e-13
+34.60747,6.146491e-11
+47.85273,6.058579e-10
+61.09799,1.671765e-09
+74.34325,2.600424e-09
+&quot;YTTRIUM-&quot;,&quot;Y90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,6,0
+4.516459,0
+254.4285,0
+320.9208,0
+382.5141,7.327387e-21
+444.1074,1.113513e-18
+504.3407,3.711436143e-17
+&quot;aqu6&quot;,30
+3
+&quot;===========================================================&quot;
+&quot; Just another dataset example                                                                &quot;
+&quot;===========================================================&quot;
+2
+&quot;exp3&quot;,&quot;Aquifer Dissolved&quot;,4,25000,&quot;m&quot;,5523,&quot;m&quot;,30,&quot;m&quot;
+&quot;Antimony&quot;,&quot;7440360&quot;,&quot;yr&quot;,&quot;g/ml&quot;,5,0
+47.04894,0
+80.67164,1.257721e-09
+114.2943,9.183684e-08
+147.917,8.655084e-07
+181.5397,3.061123e-06
+&quot;STRONTIU&quot;,&quot;SR90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,5,0
+320.9208,0
+382.5141,7.32552e-21
+444.1074,1.113229e-18
+505.7007,3.791756e-17
+567.2939,4.874036e-16
+&quot;Trichlor&quot;,&quot;79016&quot;,&quot;yr&quot;,&quot;g/ml&quot;,5,0
+8.116951,0
+21.36221,3.173306e-13
+34.60747,6.146491e-11
+47.85273,6.058579e-10
+61.09799,1.671765e-09
+&quot;YTTRIUM-&quot;,&quot;Y90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,5,0
+4.516459,0
+254.4285,0
+320.9208,0
+382.5141,7.327387e-21
+444.1074,1.113513e-18
+&quot;riv8&quot;,&quot;Surface Water Dissolved&quot;,4,26000,&quot;m&quot;,5560,&quot;m&quot;,10,&quot;m&quot;
+&quot;Antimony&quot;,&quot;7440360&quot;,&quot;yr&quot;,&quot;g/ml&quot;,5,0
+47.04894,0
+80.67164,1.257721e-09
+114.2943,9.183684e-08
+147.917,8.655084e-07
+181.5397,3.061123e-06
+&quot;STRONTIU&quot;,&quot;SR90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,5,0
+320.9208,0
+382.5141,7.32552e-21
+444.1074,1.113229e-18
+505.7007,3.791756e-17
+567.2939,4.874036e-16
+&quot;Trichlor&quot;,&quot;79016&quot;,&quot;yr&quot;,&quot;g/ml&quot;,5,0
+8.116951,0
+21.36221,3.173306e-13
+34.60747,6.146491e-11
+47.85273,6.058579e-10
+61.09799,1.671765e-09
+&quot;YTTRIUM-&quot;,&quot;Y90&quot;,&quot;yr&quot;,&quot;pCi/ml&quot;,5,0
+4.516459,0
+254.4285,0
+320.9208,0
+382.5141,7.327387e-21
+444.1074,1.113513e-18
+</pre>
+<B>End of example file</B>
+<br><div align="center"><a href="pdcf.html#pdcf">Go to Specifications</a> | <a href="#top">Go to Top</a></div>
+</font>

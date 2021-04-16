@@ -1,0 +1,16 @@
+C----------------------------------------------------------------------
+C 
+C     Descriptive Titles Common Block
+C     Module of GENII                        Version of 9-Nov-87 RAP
+C
+C     Modified for EDUP/GENII ACUTE component last: 29-Jul-97
+C
+C---- Common Block Definition ------------------------------------------------
+C
+      COMMON /TITL/ TITLS(50)
+C
+C----- Type Declarations -----------------------------------------------------
+C
+      CHARACTER*80 TITLS
+C
+C-----------------------------------------------------------------------

@@ -1,0 +1,92 @@
+
+  <h2>Database Parameters</h2><p>
+<DL>
+  <DT>
+
+    <b>Physical Parameters<A
+    href="physical.html"> (Detailed Description)</A></b>
+    <DD><IMG src="ball.gif">Constituent ID <BR>
+    <DD><IMG src="ball.gif">Name and Synonyms <BR>
+    <DD><IMG src="ball.gif">Constituent Type <BR>
+    <DD><IMG src="ball.gif">Molecular Weight <BR>
+    <DD><IMG src="ball.gif">Vapor Pressure <BR>
+    <DD><IMG src="ball.gif">Henry's Law Constant<BR>
+    <DD><IMG src="ball.gif">Water Solubility <BR>
+    <DD><IMG src="ball.gif">Carbon Matter Partition
+    Coefficient (Koc) <BR>
+    <DD><IMG src="ball.gif">Octanol-Water Partition
+    Coefficient (Kow) <BR>
+    <DD><IMG src="ball.gif">Aqueous Skin Permeability Constant
+    (Kp) <BR>
+    <DD><IMG src="ball.gif">Gastrointestinal Absorption
+    Factor <BR>
+    <DD><IMG src="ball.gif">Skin Absorption Fraction from Soil
+    Exposure <BR>
+    <DD><IMG src="ball.gif">Grout Diffusion
+    Coefficient<BR></DD></DT></DL>
+<DL>
+  <DT>
+  <b>Toxicity Factors <A href="tox.html"> (Detailed
+  Description)</A></b>
+  <DD><IMG src="ball.gif">Ingestion Reference Dose (RfD) <BR>
+  <DD><IMG src="ball.gif">Inhalation Reference Dose
+  (RfD)<BR></DD></DL>
+<DL>
+  <DT>
+  <b>Environmental Decay Half Times <A
+  href="decay.html">(Detailed Description)</A></b>
+  <DD><IMG src="ball.gif">Radiological Half Life <BR>
+  <DD><IMG src="ball.gif">Environmental Half Time in Air <BR>
+  <DD><IMG src="ball.gif">Environmental Half Time in Soil <BR>
+  <DD><IMG src="ball.gif">Environmental Half Time in Surface
+  Water <BR>
+  <DD><IMG src="ball.gif">Environmental Half Time in
+  Groundwater<BR></DD></DL>
+<DL>
+  <DT>
+  <b>Environmental Transfer Factors <A
+  href="transport.html"> (Detailed Description)</A></b>
+  <DD><IMG src="ball.gif">Bioaccumulation in Fin Fish <BR>
+  <DD><IMG src="ball.gif">Bioaccumulation in Shellfish <BR>
+  <DD><IMG src="ball.gif">Soil to Edible Plant Concentration
+  Ratio <BR>
+  <DD><IMG src="ball.gif">Feed to Animal Meat Transfer Factor
+  <BR>
+  <DD><IMG src="ball.gif">Feed to Milk Transfer
+Factor<BR></DD></DL>
+<DL>
+  <DT>
+  <b>Dose Factors<A href="dose.html">(Detailed
+  Description)</A></b>
+  <DD><IMG src="ball.gif">Ingestion Dose Factor<BR>
+  <DD><IMG src="ball.gif">Inhalation Dose Factor <BR>
+  <DD><IMG src="ball.gif">Air Immersion Factor <BR>
+  <DD><IMG src="ball.gif">Ground Exposure Factor <BR>
+  <DD><IMG src="ball.gif">Water Immersion Factor <BR>
+  <DD><IMG src="ball.gif">Ingestion Slope Factor <BR>
+  <DD><IMG src="ball.gif">Inhalation Slope Factor <BR>
+  <DD><IMG src="ball.gif">External Exposure Slope Factor <BR>
+  <DD><IMG src="ball.gif">Dermal Absorption Dose
+  Factor<BR></DD></DL>
+<DL>
+  <DT>
+  <b>Other Parameters</b>
+  <DD><IMG src="ball.gif">Water Purification Factor<BR>
+  <DD><IMG src="ball.gif">Atmospheric Deposition Velocity <BR>
+  <DD><IMG src="ball.gif">Atmospheric Deposition Class
+  <BR></DD></DL>
+<p>
+Source: Quality for Slope Factors and Reference Doses
+
+<p>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<a href="software.html#database">Return to Software page.</a>
+<br>
+<br><a href="home.html"><b>Introduction</b></a>
+<br><b>Database Parameters</b>
+<br><a href="physical.html"><b>Physical Parameters</b></a>
+<br><a href="dose.html"><b>Dose Factors</b></a>
+<BR><a href="decay.html"><b>Environmental Decay Half Times</b></a>
+<br><a href="transport.html"><b>Environmental Transport Factors</b></a>
+<br><a href="equation.html"><b>Parameter Estimation Equations</b></a>
+<br><a href="tox.html"><b>Toxicity Factors</b></a>

@@ -1,0 +1,210 @@
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//This auto test was created on a Windows XP operating system.
+//y=8;	//Have y=8 for XP Users unless you got the coordinates while using XP
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+//Start Test Suite
+t.StartTestSuite("CSTRM","Testing CSTRM to check the basic functions of the MEPAS 4.0 Computed Source Term Module.","c:\\frames\\docs\\");
+
+t.NewTestCase("DeleteFile","Deleting old gid File");
+	f.delete("c:\\frames\\cstrmbas.gid");
+t.TestCaseComplete();
+
+t.NewTestCase ("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec("c:\\frames\\fui.exe");
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Activate Framework window");
+if(t.TestCaseComplete()!=0)
+{
+//Due to restrictions with Frames 1.4 the icons need to be manually moved to desired locations.
+
+t.NewTestCase("OpeningBaseCase","Opening the basic build of CSTRM.");
+	a.SetKeyDelay(50);
+	a.Send("!f#o{DOWN}{ENTER}");
+	a.Sleep(500);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrm.gid");
+	a.Sleep(500);
+	a.Send("!o");
+	a.Sleep(1000);
+	t.Plan("Maximizing the window");
+	a.WinMaximize("Framework for Risk","");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+t.NewTestCase("ConnectingIcons","Connecting the constituent icon to the source icon.");	
+	a.Sleep(1000);
+	t.Plan("Connecting Constituent to Source");
+	a.MouseMove(325,95+y);
+	a.Send("{SHIFTDOWN}");
+	a.LeftClickDrag(325,95+y,400,160+y);
+	a.Send("{SHIFTUP}");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+t.NewTestCase("ConstituentData","Entering in all data for costituent icon.");
+	a.Sleep(500);
+	t.Plan("Right click, scroll down, and click the 'General Info' link."); 
+	a.RightClick(325,95+y);
+	a.Send("{DOWN}{ENTER}");
+	t.Plan("Click on the 'User Label' box");
+	a.Sleep(1000);
+	a.LeftClick(152,127+y);
+	t.Plan("Delete con1");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	t.Plan("Type 'Contaminants'");
+	a.Send("Contaminants");
+	t.Plan("Click on the 'FRAMES Default Chemical Database Selection' from the list of 'Applicable Models'");
+	a.LeftClick(120,167+y);
+	t.Plan("Click OK");
+	a.Send("{ENTER}");
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(325,95+y);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(10000);
+	t.Plan("Click on 'Search For' box.");
+	a.LeftClick(418,528+y);
+	t.Plan("Type 'Chromium VI' in 'Search For' box.");
+	a.Send("chromium VI");
+	a.Sleep(3000);
+	t.Plan("Tab over, 2 times, and click 'Add' button.");
+	a.Send("{TAB}{TAB}{ENTER}");
+	t.Plan("Use mouse and click 'File' then scroll down to 'Exit-Save Changes.'");
+	a.LeftClick(15,31+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("SourceData","'General Info' for Source Icon");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	t.Plan("Right click, scroll down, and click the 'General Info' link."); 
+	a.RightClick(400,160+y);
+	a.Send("{DOWN}{ENTER}");
+	t.Plan("Click on the 'User Label' box");
+	a.Sleep(1000);
+	a.LeftClick(165,127+y);
+	t.Plan("Delete src2");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	t.Plan("Type 'Source'");
+	a.Send("+source");
+	a.Sleep(500);
+	t.Plan("Click on the 'MEPAS 4.1 Source in Soil' from the list of 'Applicable Models' and click 'Ok' button.");
+	a.Send("{TAB}{DOWN}{DOWN}{ENTER}");
+	t.TestCaseComplete();
+t.NewTestCase("SourceUserInput","Entering in data into Source 'User Input'");
+	a.Sleep(1000);	
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(400,160+y);
+	a.Sleep(1000);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(3000);
+	t.Plan("Clicking OK button on 'About MEPAS CSTRM' description flash screen.");
+	a.Send("{ENTER}");
+	a.Sleep(2000);
+	t.Plan("Click 'Options' tab");
+	a.MouseMove(67,95+y);
+	a.LeftClick(67,95+y);
+	a.Sleep(1000);
+	t.Plan("Change 'time period of simulation--STMAXTIME' and 'residual mass for simulation--STIMINWST'");
+	a.MouseMove(437,285+y);
+	a.LeftClick(437,285+y);
+	a.Sleep(1000);
+	a.Send("{BACKSPACE}50{ENTER}{BACKSPACE}.001");
+	a.Sleep(1000);
+	t.Plan("Click 'Waste Zone' tab");
+	a.MouseMove(195,95+y);
+	a.LeftClick(195,95+y);
+	a.Sleep(1000);
+	t.Plan("Pick desirable units for data.");
+	a.MouseMove(544,236+y);
+	a.LeftClick(544,236+y);
+	a.Sleep(1000);
+	a.MouseMove(542,279+y);
+	a.LeftClick(542,279+y);
+	a.Sleep(1000);
+	a.MouseMove(544,252+y);
+	a.LeftClick(544,252+y);
+	a.Sleep(1000);
+	a.MouseMove(538,294+y);
+	a.LeftClick(538,294+y);
+	a.Sleep(1000);
+	a.Sleep(1000);
+	t.Plan("Move mouse to Value column and enter in desired data. 'STAIRSPC' will be calculated automatically.");
+	a.MouseMove(439,142+y);
+	a.LeftClick(439,142+y);
+	a.Sleep(1000);
+	a.Send("0{DOWN}1000{DOWN}1000{DOWN}1000{DOWN}{DOWN}1.5{DOWN}50{DOWN}25{DOWN}{DOWN}{DOWN}20");
+	a.Sleep(1000);
+	t.Plan("Click 'KDs' tab.");
+	a.MouseMove(225,58+y);
+	a.LeftClick(225,58+y);
+	a.Sleep(1000);
+	t.Plan("Click 'Soil Properties' button.");
+	a.MouseMove(490,131+y);
+	a.LeftClick(490,131+y);
+	a.Sleep(1000);
+	t.Plan("Select 'Loamy Sand' for soil type.");
+	a.LeftClick(470,90+y);
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}7.0{TAB}{TAB}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click 'Constituent Properties' tab");
+	a.MouseMove(312,89+y);
+	a.LeftClick(312,89+y);	
+	a.Sleep(1000);
+	t.Plan("Enter in 'water solubility--STSOL");
+	a.MouseMove(475,156+y);
+	a.LeftClick(475,156+y);	
+	a.Sleep(1000);
+	a.Send("1000000{DOWN}{DOWN}{DOWN}");
+	t.Plan("Click 'Worksheet' red button to enter in value and click 'OK' to exit out of worksheet.");
+	a.MouseMove(346,204+y);
+	a.LeftClick(346,204+y);	
+	a.Sleep(1000);
+	a.Send("{TAB}{TAB}{DELETE}1{TAB}{TAB}{TAB}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Save Changes and Exit out of 'Source Term Module Input'");
+	a.Sleep(1000);
+	a.Send("!f{ENTER}");
+	a.Sleep(2000);
+	t.Plan("Activating window box message reading 'ERROR Report for Source Term Module'");
+	a.Sleep(1000);
+	a.WinActivate("ERROR in Commit Transactions","");
+	a.Send("{ENTER}");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SaveFile","Save .gid file");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	a.Send("!f#{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(2000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrmbas.gid");
+	a.Send("!s");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+}
+if(t.TestCaseComplete()!=0)	
+{
+t.NewTestCase("CloseFUI","Close the Frames User Interface");
+  t.Plan("Click the close box on the FUI");
+  a.WinClose("Framework for Risk","");
+  t.Plan("Answer yes to the do you want to save question");
+  a.Send("y");
+  t.Assert(a.WinWaitClose("Framework for Risk","",10)==0,"Close Framework window");
+ t.TestCaseComplete();
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");
+	

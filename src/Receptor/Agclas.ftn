@@ -1,0 +1,49 @@
+!   MEPAS HAZ2: AGCLAS.FTN             Version Date: 08-03-1992
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK AGCLAS                              *
+!                                                                            *
+!  COMMON BLOCK AGCLAS CONTAINS AGRICULTURAL PRODUCTION SELECTION DATA.      *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    08/03/92 - DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!  NAGC     NUMBER OF AGRICULTURAL PRODUCTION CLASSES DEFINED.  SEVEN DEFAULT
+!           CLASSES ARE AVAILABLE AND THREE MORE MAY BE DEFINED BY THE USER.
+!
+!  AGFRAC(4,4,30)  FARM PRODUCTION INDICATORS FOR EACH FARM PRODUCT(4)
+!                  AND EACH PRODUCT CLASS (30).
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!
+!==== COMMON Block Definition ================================================
+!
+      COMMON/AGCLAS/NAGC,AGFRAC(4,4,30), CURRENT
+!        COMMON/AIRR/AIRC(16,6,6),SURC(16,6,6),XC,XB,XKM(6),ICALL
+!     1  ,CURRENT
+!
+!==== Variable Declarations ==================================================
+!
+
+

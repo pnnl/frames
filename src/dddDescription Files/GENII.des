@@ -1,0 +1,494 @@
+"mf,Version 2.1"
+"Database:Constituent:con,GENII Radionuclide Database Selection,contsel.exe GENII.mdb,,cont.ico
+"
+MODULE VERSION
+  2.10 Compiled on 1 June 2010
+
+MODULE DESCRIPTION
+GENII Radionuclide Database
+
+This module allows the user to select constituents
+of concern. The database also provides some key 
+chemical and radiological properties for other modules.
+
+See documentation.
+
+MODULE REFERENCES
+Web site:
+  http://mepas.pnl.gov:2080/FRAMESV1/
+
+VALID CONNECTIONS
+Valid Input Reads
+
+Valid Output Writes
+     con 
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999  MSIN K3-54
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Fax Number:           (509) 375-2019
+Email Address:        Bruce.Napier@pnl.gov
+URL Address:          http://mea.pnl.gov/resources/frames/envdb.asp
+"
+0,Read
+1,Write
+"con,
+150,Variables
+FUIDataBase,Not Stochastic,,,,Microsoft Access database being used,0,STRING
+Version,Not Stochastic,,,,CDBE Version,1,STRING
+Label,Site,Index1
+NumCon,Not Stochastic,,,,Number of Constituents,1,INTEGER
+Label,Site,Index1
+FSCASID,Not Stochastic,,,,The Chemical Abstracts Service Identification number,2,STRING
+Label,Site,Index1
+Label,FSCASID,Site,Index2,Index3
+FSCNAME,Not Stochastic,,,,Constituent Name,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+NDS,Not Stochastic,,,,Number of straight chain decay products,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+SSCASID,Not Stochastic,,,,Second degration product CASID,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+SSCNAME,Not Stochastic,,,,Second degration product name,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+FSFRACTION,Continuous,fraction,min,0,max,1,First dregration product fraction,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+SSFRACTION,Continuous,fraction,min,0,max,1,Second dregration product fraction,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLKTYPE,Not Stochastic,,min,0,max,1,Radionclide flag,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCHEM,Not Stochastic,,min,0,max,48,Constituent classification type,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRTYPE,Not Stochastic,,min,0,max,14,RAAS classification type,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLETYPE,Not Stochastic,,min,0,max,5,Constituent exposure type,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLPTYPE,Not Stochastic,,min,0,max,11,Periodic Table type,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLWM,Continuous,g/mole,min,1,max,50000,The molecular weight,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLMP,Continuous,degC,min,-250,max,5000,The melting point temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBP,Continuous,degC,min,-250,max,5000,The boiling point temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSOL,Continuous,mg/L,min,0,max,1000000,The water solubility,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVAP,Continuous,mm Hg,min,0,max,50000,The vapor pressure,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHLC,Continuous,atm m^3/mole,min,0,max,100,Henry's law constant,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLKOC,Continuous,mL/g,min,0,max,10000000000,The dry organic-carbon partition coefficient,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLKOW,Continuous,mL/mL,min,0,max,10000000000,The octanol water partition coefficient,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCGRT,Continuous,cm^2/sec,min,0,max,1,The diffusion coefficient in grout,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVP,Continuous,degC,min,-50,max,100,The vapor pressure temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCAIR,Continuous,cm^2/sec,min,0,max,1,The diffusion coefficient in air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCWAT,Continuous,cm^2/sec,min,0,max,1,The diffusion coefficient in water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSURT,Continuous,dyne/cm,min,0,max,10000,The surface tension,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVISC,Continuous,centipoise,min,0,max,10000,The dynamic viscosity,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHEATC,Continuous,J/kg,min,0,max,1.00E+08,The heat of combustion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHEATV,Continuous,J/kg,min,0,max,1.00E+08,The heat of vaporization,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCPFH,Continuous,(mg/kg/d)^-1,min,0,max,2000,Inhalation Cancer Potency Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRFDH,Continuous,mg/kg/day,min,0,max,100000,Inhalation Reference Dose,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFONES,Continuous,fraction,min,0,max,1,The GI absorption fraction, Soluble,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLURISKH,Continuous,risk/(ug/m^3),min,0,max,1000,Inhalation Unit Risk Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRFCH,Continuous,mg/m^3,min,0,max,5000,Inhalation Reference Concentration,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDFAD,Continuous,rem/pCi,min,0,max,1,Inhalation Dose Factor, class Day,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDFAW,Continuous,rem/pCi,min,0,max,1,Inhalation Dose Factor, class Week,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDFAY,Continuous,rem/pCi,min,0,max,1,Inhalation Dose Factor, class Year,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRDFGS,Continuous,rem/pCi,min,0,max,1,Ingestion Dose Factor, soluble,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRDFGI,Continuous,rem/pCi,min,0,max,1,Ingestion Dose Factor, insoluble,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRDFS,Continuous,rem/pCi,min,0,max,1,Dermal Absorption Dose Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDEX,Continuous,rem/hr per pCi/m^3,min,0,max,1,External Dose Factor, Air Immersion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDIMR,Continuous,rem/hr per pCi/L,min,0,max,1,External Dose Factor, Water Immersion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDSH,Continuous,rem/hr per pCi/m^2,min,0,max,1,External Dose Factor, Ground Surface,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDSH1,Continuous,rem/hr per pCi/m^3,min,0,max,1,External Dose Factor, Ground Contaminated to 1cm,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDSH5,Continuous,rem/hr per pCi/m^3,min,0,max,1,External Dose Factor, Ground Contaminated to 5cm,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDSH15,Continuous,rem/hr per pCi/m^3,min,0,max,1,External Dose Factor, Ground Contaminated to 15cm,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSFH,Continuous,risk/pCi,min,0,max,1,Inhalation Slope Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSFEX,Continuous,risk/yr per pCi/m^2,min,0,max,1,External Slope Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLABSKN,Continuous,fraction,min,0,max,1,The dermal absorption fraction from soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLKPERM,Continuous,cm/hr,min,0,max,10,The aqueous skin permeability constant,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLANDF,Continuous,m^3/L,min,0,max,10,Inhalation Volatilization Factor for Indoors,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLWPF,Continuous,fraction,min,0,max,1,The water purification factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVD,Continuous,m/sec,min,0,max,1,The atmospheric deposition velocity,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBFF,Continuous,L/kg,min,0,max,200000,Bioaccumulation in Wet Fish from Freshwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBFM,Continuous,L/kg,min,0,max,100000,Bioaccumulation in Wet Mollusk from Freshwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBFI,Continuous,L/kg,min,0,max,200000,Bioaccumulation in Wet Crustacea from Freshwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBFP,Continuous,L/kg,min,0,max,500000,Bioaccumulation in Wet Plants from Freshwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBMF,Continuous,L/kg,min,0,max,100000,Bioaccumulation in Wet Fish from Saltwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBMM,Continuous,L/kg,min,0,max,100000,Bioaccumulation in Wet Mollusk from Saltwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBMI,Continuous,L/kg,min,0,max,100000,Bioaccumulation in Wet Crustacea from Saltwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBMP,Continuous,L/kg,min,0,max,100000,Bioaccumulation in Wet Plants from Saltwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFMT,Continuous,day/kg,min,0,max,100000,Feed to Meat Transfer Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFMK,Continuous,day/L,min,0,max,100000,Feed to Milk Transfer Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFPL,Continuous,day/kg,min,0,max,100000,Feed to Poultry Transfer Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFEG,Continuous,day/kg,min,0,max,100000,Feed to Egg Transfer Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVLV,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Leafy Vegetables from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVRV,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Root Vegetables from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVCL,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Cereal from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVAF,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Animal Forage from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVAH,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Animal Hay from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVAG,Continuous,kg/kg,min,0,max,5000,Bioconcentration in dry Animal Grain from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLTHALF,Continuous,day,min,1.00E-30,,The decay half-life in Air,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLGHALF,Continuous,day,min,1.00E-30,,The decay half-life in Groundwater,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLWHALF,Continuous,day,min,1.00E-30,,The decay half-life in Surface Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSHALF,Continuous,day,min,1.00E-30,,The decay half-life in Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLOXAIR,Continuous,day,min,1.00E-30,,The oxidation half-life in Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHYDA,Continuous,day,min,1.00E-30,,The hydrolysis half-life in Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHYDW,Continuous,day,min,1.00E-30,,The hydrolysis half-life in Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLPHTA,Continuous,day,min,1.00E-30,,The photolysis half-life in Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLPHTW,Continuous,day,min,1.00E-30,,The photolysis half-life in Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBIOA,Continuous,day,min,1.00E-30,,The biodegradation half-life in Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBIOW,Continuous,day,min,1.00E-30,,The biodegradation half-life in Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBIOS,Continuous,day,min,1.00E-30,,The biodegradation half-life in Soil,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCNUM,Discrete,,min,0,max,1000,The carbon number(), or pathogen mass(g),2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLLCLAS,Not Stochastic,,,,The lung solubility class ICRP30,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCLASS,Discrete,,min,1,max,6,The atmospheric deposition class,2,INTEGER
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFONEI,Continuous,fraction,min,0,max,1,The GI absorption fraction, Insoluble,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVOV,Continuous,kg/kg,min,0,max,5000,Bioconcentration in Dry Other Vegetables from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLMFORM,Not Stochastic,,,,The molecular formula,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBVFR,Continuous,kg/kg,min,0,max,5000,Bioconcentration in Dry Fruit from Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCAT,Continuous,degC,min,-50,max,100,The reference temperature for air diffusion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCWT,Continuous,degC,min,-50,max,100,The reference temperature for water diffusion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLPCDEN,Continuous,g/mL,min,0,max,20,The pure contaminant density,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSOLT,Continuous,degC,min,-50,max,100,The water solubility temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLMV,Continuous,cm^3/mol,min,1,max,5000,The molar volume,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLMVT,Continuous,degC,min,-50,max,100,The molar volume temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLMCV,Continuous,A^3,min,1,max,5000,The molecular volume,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLTSA,Continuous,A^2,min,1,max,5000,The molecular surface area,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSURTT,Continuous,degC,min,-50,max,100,The surface tension temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVISCT,Continuous,degC,min,-50,max,100,The dynamic viscosity temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHLCT,Continuous,degC,min,-50,max,100,Henry's law constant temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLKD,Continuous,mL/g,min,0,max,10000000,The dry soil-water partition coefficient,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLVPFA,Continuous,fraction,min,0,max,1,The vapor phase fraction in air versus particulates,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLPKA,Continuous,pH,min,1,max,13,The acid dissociation constant,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDCGT,Continuous,degC,min,-50,max,100,The reference temperature for grout diffusion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLENTF,Continuous,J/kg K,min,0,max,1.00E+07,The entropy of fusion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLWOEHC,Not Stochastic,,,,The weight of evidence for human carcinogenicity,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLENTFT,Continuous,degC,min,-50,max,100,The entropy of fusion temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFR,Continuous,,min,0,max,10,The fugacity ratio,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFLASH,Continuous,degC,min,-100,max,2000,The flash point temperature,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLDIAM,Continuous,um,min,0.000001,max,10,Inhalation Dose Factor Particle Diameter,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBSAF,Continuous,kg/kg,min,0,max,1000000,Bioaccumulation in Wet Biota from Sediment,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLFPK,Continuous,day/kg,min,0,max,100000,Feed to Pork Transfer Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLAPLV,Continuous,kg/kg,min,0,max,10000000000,Bioconcentration in Dry Leafy Vegetables from Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLAPF,Continuous,kg/kg,min,0,max,10000000000,Bioconcentration in Dry Animal Forage from Air,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSHCF,Continuous,day,min,0,,Half Time in Soil, no leaching,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLBHALF,Continuous,day,min,0,,Half Time in Biota,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHRRRC,Continuous,cm^3/mole sec,min,0,max,10,Hydroxyl radical reaction rate constant,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLHEATF,Continuous,J/kg,min,0,max,1.00E+08,The heat of fusion,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLURISKG,Continuous,risk/(ug/L),min,0,max,1000,Ingestion Unit Risk Factor,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLTPHALF,Continuous,day,min,1.00E-30,,The physical loss half time in Air,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLGPHALF,Continuous,day,min,1.00E-30,,The physical loss half time in Groundwater,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLWPHALF,Continuous,day,min,1.00E-30,,The physical loss half time in Surface Water,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSPHALF,Continuous,day,min,1.00E-30,,The physical loss half time in Soil,2,FLOAT,
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRFDG,Continuous,mg/kg/day,min,0,max,2000,Ingestion Reference Dose, Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRFDGF,Continuous,mg/kg/day,min,0,max,2000,Ingestion Reference Dose, Food,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLRFDGS,Continuous,mg/kg/day,min,0,max,2000,Ingestion Reference Dose, Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSFG,Continuous,risk/pCi,min,0,max,1,Ingestion Slope Factor, Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSFGF,Continuous,risk/pCi,min,0,max,1,Ingestion Slope Factor, Food,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLSFGS,Continuous,risk/pCi,min,0,max,1,Ingestion Slope Factor, Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCPFG,Continuous,(mg/kg/d)^-1,min,0,max,2000,Ingestion Cancer Potency Factor, Water,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCPFGF,Continuous,(mg/kg/d)^-1,min,0,max,2000,Ingestion Cancer Potency Factor, Food,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+CLCPFGS,Continuous,(mg/kg/d)^-1,min,0,max,2000,Ingestion Cancer Potency Factor, Soil,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+MALGDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Marine Algae,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+MMOLDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Marine Mollusc,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+MCRUDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Marine Crustacea,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+MFISDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Marine Fish,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+FALGDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Freshwater Algae,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+FMOLDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Freshwater Mollusc,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+FCRUDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Freshwater Crustacea,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+FFISDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Freshwater Fish,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+TMAMDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Terrestrial Mammal,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+TBIRDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Terrestrial Bird,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+TEGGDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Terrestrial Egg,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+TPLADF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Terrestrial Plant,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+RMAMDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Riparian Mammal,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+RBIRDF,Continuous,rad/day per Bq/kg,min,0,max,10000,The dose factor for Riparian Bird,2,FLOAT
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3
+SOLUBIL,Not Stochastic,,,,The lung solubility class ICRP72,2,STRING
+Label,Site,Index1
+Variable,FSCNAME,Site,Index2,Index3

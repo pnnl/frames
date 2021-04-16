@@ -1,0 +1,28 @@
+
+            <h2>Software Installation</h2><p>
+
+
+            <b>For successful installation of FRAMES, it is imperative to follow all directions as specified below:</b><p>
+            <OL>
+            <LI> FRAMES must be installed on a computer with Windows<sup>TM</sup> 95 or higher.
+            <LI> Insert install CD and select "Run" option from Start Menu.
+            <LI> In Run screen, click browse button, and select your CD drive
+            <LI> Double click on (or type) "frames.msi"
+            <LI> This will lead to Windows<sup>TM</sup> Setup screen; follow prompts provided to complete installation.
+            <li> To install MEPAS, open '_MEPAS 4.1.1 Install' folder and run 'Setup.exe' after installing FRAMES.  Install to the FRAMES folder.
+            </OL>
+
+<b>OR:</b> Download directly from this website on <a href="download.html"><b>download</b></a> page.
+<p>            <b>File locations:</b>
+            <OL>
+            <LI> All program files relating to FRAMES (this includes all module and data files) must be saved under same folder. Global Input Data (GID) files can be saved in separate user defined folders.
+            <LI> name of this folder (in which all FRAMES program files are saved under) cannot have more than 8 characters, nor can it have any spaces. It is suggested that this folder simply be titled "FRAMES."
+            <LI> Thus, saving FRAMES under "Program Files" folder will not work.</OL>
+            <b>Installing other software packages:</b>
+            <OL>
+            <LI> After completing FRAMES setup install, other software packages ran within FRAMES (i.e., MEPAS®) can be installed.
+            <LI> It is important that these additional software packages be installed into FRAMES folder.  Additional software will not run correctly if saved in a different folder other than FRAMES software.
+            </OL>
+
+
+

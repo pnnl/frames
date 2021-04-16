@@ -1,0 +1,116 @@
+#
+# MKMF template makefile for executables.
+#
+FC              = f77l
+LINKER          = optlink
+PROGRAM         = latin.exe
+
+DEST            = .
+EXTHDRS         =
+FFLAGS		=
+HDRS            =
+LDFLAGS		=
+LDMAP		= nul
+LIBS		=
+MAKEFILE	= Makefile
+OBJS            = alngam.obj alnorm.obj banner.obj betain.obj binver.obj \
+                  cexist.obj cholp.obj comchr.obj corrpt.obj datrpt.obj \
+                  dcdsep.obj echo.obj errchk.obj finsep.obj firstf.obj \
+                  fname.obj gamain.obj gderr.obj ginver.obj idenc.obj \
+                  init.obj inputs.obj latin.obj length.obj margin.obj \
+                  mcorr.obj mulabt.obj opener.obj pager.obj ppnd.obj \
+                  prtdst.obj qaset.obj rdblk.obj rearng.obj review.obj \
+                  savttl.obj screen.obj sepchr.obj sgen.obj sinv.obj \
+                  smove.obj sort.obj ssort.obj stwo.obj trmino.obj \
+                  trmulo.obj u01.obj u01s1.obj univ.obj upcase.obj \
+                  usrdst.obj ustat.obj wrdata.obj xfkey.obj
+SRCS            = alngam.for alnorm.for banner.for betain.for binver.for \
+                  cexist.for cholp.for comchr.for corrpt.for datrpt.for \
+                  dcdsep.for echo.for errchk.for finsep.for firstf.for \
+                  fname.for gamain.for gderr.for ginver.for idenc.for \
+                  init.for inputs.for latin.for length.for margin.for \
+                  mcorr.for mulabt.for opener.for pager.for ppnd.for \
+                  prtdst.for qaset.for rdblk.for rearng.for review.for \
+                  savttl.for screen.for sepchr.for sgen.for sinv.for \
+                  smove.for sort.for ssort.for stwo.for trmino.for \
+                  trmulo.for u01.for u01s1.for univ.for upcase.for \
+                  usrdst.for ustat.for wrdata.for xfkey.for
+
+$(PROGRAM):     $(OBJS) $(LIBS)
+		$(LINKER) $(OBJS),$@,$(LDMAP),$(LIBS) $(LDFLAGS);
+
+clean:;		@del -f $(OBJS)
+
+depend:; 	@mkmf -f $(MAKEFILE) PROGRAM=$(PROGRAM) DEST=$(DEST)
+
+install:	$(PROGRAM)
+		@echo Installing $(PROGRAM) in $(DEST)
+		@if not $(DEST)x==.x copy $(PROGRAM) $(DEST)
+
+### OPUS MKMF:  Do not remove this line!  Automatic dependencies follow.
+
+banner.obj: FILES.ins IDENC.ins
+
+cexist.obj: CDATA.ins
+
+corrpt.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins IDENC.ins PARAMS.ins \
+         QA.ins SCREENS.ins
+
+datrpt.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins IDENC.ins PARAMS.ins \
+         QA.ins
+
+dcdsep.obj: CDATA.ins FILES.ins
+
+echo.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins IDENC.ins PARAMS.ins \
+         QA.ins
+
+errchk.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins PARAMS.ins SCREENS.ins
+
+finsep.obj: CDATA.ins
+
+firstf.obj: FILES.ins IDENC.ins SCREENS.ins SPINATTR.ins
+
+gderr.obj: SCREENS.ins SPINATTR.ins
+
+idenc.obj: IDENC.ins
+
+init.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins PARAMS.ins SCREENS.ins \
+         SPINATTR.ins
+
+inputs.obj: CDATA.ins CONTROL.ins DATA.ins DISTC.ins FILES.ins IDENC.ins \
+         PARAMS.ins SCREENS.ins
+
+latin.obj: CONTROL.ins DATA.ins PARAMS.ins SCREENS.ins
+
+margin.obj: CONTROL.ins DATA.ins FILES.ins PARAMS.ins
+
+mcorr.obj: CONTROL.ins DATA.ins PARAMS.ins
+
+opener.obj: FILES.ins IDENC.ins
+
+pager.obj: IDENC.ins
+
+prtdst.obj: CONTROL.ins DATA.ins DISTC.ins FILES.ins PARAMS.ins
+
+qaset.obj: QA.ins
+
+rdblk.obj: CDATA.ins FILES.ins
+
+rearng.obj: CONTROL.ins DATA.ins FILES.ins PARAMS.ins
+
+review.obj: FILES.ins
+
+savttl.obj: CDATA.ins
+
+screen.obj: IDENC.ins
+
+sinv.obj: DISTC.ins
+
+smove.obj: CONTROL.ins DATA.ins FILES.ins PARAMS.ins
+
+stwo.obj: IDENC.ins SCREENS.ins SPINATTR.ins
+
+univ.obj: CONTROL.ins DATA.ins FILES.ins IDENC.ins PARAMS.ins
+
+wrdata.obj: CONTROL.ins DATA.ins FILES.ins PARAMS.ins QA.ins
+

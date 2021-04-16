@@ -1,0 +1,1662 @@
+<html>
+<head>
+  <title>CHRONIC EXPOSURE MODULE </title>
+</head>
+<body  background="mepas.jpg">
+
+<hr />
+<center><h1><img src="exp.ico" height=64 width=64> CHRONIC EXPOSURE MODULE</h1></center>
+<hr />
+
+<a name="EXPOSURE_CONTROLS"></a><h2>EXPOSURE CONTROLS TAB</h2>
+
+<br />The exposure controls tab allows the user to
+define the timing of exposure calculations, select exposure pathways to be
+included, and to select the method (and provide parameter values) for evaluation
+of the leaching rate constant for surface soils.
+
+<br />
+<br /><a name=ECTEXPOS></a><u><b>EC-TEXPOS</b></u>
+<br />Units: yr
+<br />Range: 0.0
+<br />
+<br />This is the time between the start of the
+analysis (e.g. definition of source term quantities and beginning of transport)
+and the time exposure begins.
+
+<br />
+<br /><a name=ECMAXTIM></a><u><b>EC-MAXTIM</b></u>
+<br />Units: yr
+<br />Range: EC-TEXPOS - 5,000,000.0
+<br />
+<br />This is the maximum time to consider in the
+exposure analysis. It is used to determine the length of each time
+increment in the exposure analysis [= (MAXTIM - TEXPOS) / NTIMES].
+
+<br />
+<br /><a name=ECNTIMES></a><u><b>EC-NTIMES</b></u>
+<br />Units: none
+<br />Range: &gt; 0
+<br />
+<br />This parameter allows the user to define the
+number of time increments used in the exposure analysis. If the value
+entered is zero, then time increments will be set to 1 year.
+
+<br />
+<br /><a name=ECKEXPth></a><u><b>EC-KEXPTH</b>--Exposure Pathways</u>
+<br />
+<br />This screen allows the user to select
+exposure pathways to be included in the current analysis. A pathway is selected
+for inclusion in the analysis by clicking on the box in front of the pathway
+name. Boxes with an &quot;X&quot; indicate the pathways to be included.&nbsp;
+Pathways are de-selected by clicking on the &quot;X&quot; again.
+
+<br />
+<br /><a name="LEACH_RATES"></a><u><b>LEACH RATES</b></u>
+<br />
+<br />The leach rate tab allows the user to define
+the method for definition of surface soil leach rate constants, and to enter
+leach rates or related parameter values. The leach rate constant (1/yr) is used
+like a decay rate constant. A small value means there is little leaching and
+the material stays around for a long time. Enter a small value (e.g., 1.0E-06)
+to cause leaching to be ignored.
+
+<br />
+<br /><a name=ECLEACHOPTION></a><u><b>EC-LEACHOPTION</b>--Leach rate selection option</u>
+<br />
+<br />The pull-down menu box has two options:
+&quot;User provided leach rate constants&quot; and &quot;User provides soil and
+K<sub>d</sub> parameters&quot;.
+
+<br />
+<br /><a name=ECSOILLR></a><u><b>EC-SOILLR</b>--Parent and progeny surface soil leach rate constant</u>
+<br />Units: 1/yr
+<br />Range: 0 to 100.0
+<br />
+<br />Leach rate constants are entered when
+&quot;User provided leach rate constants&quot; leach option is selected.&nbsp;
+A leach rate constant should be entered for each parent and progeny in the
+inventory list. The pull-down menu box is used to select the pollutant
+for data entry. If the pollutant has progeny to consider, then an entry
+set will appear (to the right of the parent set) allowing entry of leach rate
+constants for all progeny.
+
+<br />User supplied parameters for calculation of
+the leach rate constant are as follows. Numerical values and correct units must
+be entered for each parameter when the rate constant calculation option is
+selected.
+
+<br />
+<br /><a name=ECSOILKD></a><u><b>EC-SOILKD</b>--Parent and progeny surface soil adsorption coefficient</u>
+<br />Units: mL/g
+<br />Range: greater than or equal to 0.0
+<br />
+<br />EC-SOILKD represents the equilibrium
+(partition or distribution) coefficient K<sub>d</sub> of constituent between
+top soil and moisture. Use laboratory or field-derived distribution coefficient
+(K<sub>d</sub>) values if they are available from site documents or reports of
+studies using similar soil and constituent characteristics. Typical K<sub>d</sub>
+values reported in peer review literature will be provided by the user
+interface if site-specific K<sub>d</sub>s are not available. Several additional
+data are required for the user interface to compute a K<sub>d</sub> value for
+each layer (see Section TOP SOIL PARAMETERS):
+<br />For inorganic chemicals:
+<blockquote>
+- Soil pH (if unknown, assume neutral conditions)
+<br />- Weight percent clay and iron and aluminum oxyhydroxides
+</blockquote>
+For organic chemicals:
+<blockquote>
+- Percent sand, silt, and clay and organic matter
+</blockquote>
+Theoretically, K<sub>d</sub> is defined as:
+<br />
+<center>K<sub>d</sub> = C<sub>p</sub>/C<sub>d</sub></center>
+<br />where C<sub>p</sub> is the particulate
+concentration (i.e., weight or activity of adsorbed constituent per weight of
+solid) and C<sub>d</sub> is the dissolved concentration or activity (see
+Section <a href="#WSUNITS">WS-UNITS</a>). Although the K<sub>d</sub> value of a
+constituent of concern can be determined in the laboratory or obtained from
+published literature, such values can vary considerably depending upon the
+experimental or environmental conditions (e.g., characteristics of soil and
+water) and technique used. When choosing between K<sub>d</sub> values, use the
+value which will provide the conservative results (e.g., highest risk). For
+example, a receptor that is living on or near the waste site and ingesting
+contaminated soil would have high risk with the large K<sub>d</sub> value
+because the constituent would not be readily washed off by rain and retained in
+soils for an extended period of time. On the other hand, low K<sub>d</sub>
+value would pose high risk to the offsite receptor that ingests water because the
+constituent is readily dissolved into water and is mobilized. Note that because
+of the uncertainty associated with K<sub>d</sub>, it is preferably used as a
+calibration parameter to adjust the constituent velocity.
+<br />
+<br /><b>Selecting Adsorption Coefficient</b> - The aquifer module can provide estimates of K<sub>d</sub>
+for all constituents. For inorganic constituents, typical K<sub>d</sub>
+values reported in the peer reviewed literature are provided by the user
+interface, via a lookup table, based on the soil water pH (KD-PH), percent clay
+(KD-CLAY) and percent iron and aluminum (KD-IRON). For organic
+constituents, the percent sand (KD-SAND), percent silt (KD-SILT), percent clay
+(KD-CLAY), and percent organic matter (KD-OMC) are used in an empirical
+equation to provide a K<sub>d</sub> estimate. The soil characteristics values
+are enter through a form brought up by pressing the <b>Soil-EC-Class</b> button
+<br />The dropdown box gives the user the choice to select a K<sub>d</sub> from
+<ol>
+<li>Database Value - provided by the connected chemical database module</li>
+<li>Table Lookup Value - provided by the &quot;KD_DATA.CSV&quot; file. Primarily
+ contains metals and radionuclides</li>
+<blockquote>
+K<sub>d</sub> = lookup(casid,col_index) where column index is calculated by</li>
+<blockquote>
+sum = KD-OMC + KD-CLAY + KD-IRON
+<br />If PH &gt;= 9.0 Then
+<br />&nbsp. If sum &gt;= 30.0 Then col_Index = 3
+<br />&nbsp. else If sum &gt;= 10.0 Then col_Index = 2
+<br />&nbsp. else col_Index = 1
+<br />else If PH &gt;= 5.0 Then
+<br />&nbsp. If sum &gt;= 30.0 Then col_Index = 6
+<br />&nbsp. else If sum &gt;= 10.0 Then col_Index = 5
+<br />&nbsp. else col_Index = 4
+<br />else
+<br />&nbsp. If sum &gt;= 30.0 Then col_Index = 9
+<br />&nbsp. else If sum &gt;= 10.0 Then col_Index= 8
+<br />&nbsp. else col_Index = 7
+</blockquote>
+</blockquote>
+<li>Estimated Value - calculated by the equation</li>
+<blockquote>
+K<sub>d</sub> = 0.0001 * k<sub>oc</sub> * (57.735 * KD-OMC + 2.0 * KD-CLAY + 0.4 * KD-SILT + 0.005 * KD-SAND)</li>
+<blockquote>
+</ol>
+
+<br />
+<br /><a name=ECTHICK></a><u><b>EC-THICK</b>--Surface soil thickness</u>
+<br />Units: cm
+<br />Range: 0 to 1000
+<br />
+<br />The thickness of the surface soil layer is
+the depth in which the contamination is mixed, representing an effective
+thickness for loss by leaching. For agricultural soils, the value is
+typically set to 15 cm representing the depth of the plow layer. For
+undisturbed soils a smaller value may be appropriate. If initial
+contamination of soil is represented, then the value should be based on
+information about the initial contamination depth.
+
+<br />
+<br /><a name=ECMOIST></a><u><b>EC-MOIST</b>--Surface soil moisture content</u>
+<br />Units: fraction
+<br />Range: 0. to 1.0
+<br />
+<br />The surface soil moisture content should be
+set representative of the surface soil layer at the exposure location.
+
+<br />
+<br /><a name=ECBULKD></a><u><b>EC-BULKD</b>--Surface soil bulk density</u>
+<br />Units: g/cm<sup>3</sup>
+<br />Range: 0.5 to 3.0
+<br />
+<br />The bulk density is the density of surface soil at the exposure location.
+
+<br />
+<br /><a name=ECLEACV></a><u><b>EC-LEACV</b>--Total infiltration</u>
+<br />Units: cm/yr
+<br />Range: 0 to 500
+<br />
+<br />The total infiltration rate may be evaluated
+as the total annual precipitation + irrigation rate - evapotranspiration rate.
+
+<br />
+<br />
+<a name=PROPERTIES></a>
+<h2>CONSTITUENT PROPERTIES TAB</h2>
+
+<a name=ECNAME></a><u><b>FS-CNAME</b>--Name of constituent(s) for current transport scenario</u>
+<br />
+<br />This field shows the constituents that are
+selected for the scenario. Use the arrow buttons to scroll through the
+list of constituents and enter an adsorption coefficient and water solubility
+for each one, and a degradation/decay half-life for non-radionuclides. If
+a constituent has decay products, they will be shown on the bottom part of this
+screen.
+
+<br />
+<br /><a name=ECGHALF></a><u><b>EC-GHALF</b>--Physical loss half-time in ground water</u>
+<br /><a name=ECWHALF></a><u><b>EC-WHALF</b>--Physical loss half-time in surface water</u>
+<br /><a name=ECSHALF></a><u><b>EC-SHALF</b>--Physical loss half-time in soil</u>
+<br /><a name=ECTHALF></a><u><b>EC-THALF</b>--Physical loss half-time in air</u>
+<br />Units: yr
+<br />Range: greater than 0.0
+<br />
+<br />This parameter is the half-life
+of the constituent in the respective media. For radionuclide and
+non-radionuclide constituents, this value defaults to the data in the
+constituent database, but the value can be changed to a site-specific
+value. This parameter can be used to implement other degradation rates
+(e.g., biodegradation, photo degradation, etc...) when they are converted to
+equivalent half-lives.
+
+<table border=1 cellpadding=0>
+ <tr>
+ <td colspan=5 style='background:#F0F0F0;padding:.75pt .75pt .75pt .75pt'>
+ <br />Chemical/Radionuclide
+ Air, Soil, and Water Half-Life/Half-Time Requirements in the Human Exposure
+ Module When Linked to the Atmospheric, Source-Term, Groundwater, and Surface
+ Water Transport Modules (see footnote)
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+ <td rowspan=2 style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Transport Modules
+ Providing Boundary-Condition Input to the Human Exposure Module (e.g. Atmospheric
+ = air module boundary condition to the exposure module)
+ </td>
+ <td colspan=4 style='background:lime;padding:.75pt .75pt .75pt .75pt'>
+ <br />Half-Life/Half-Time
+ Values Needed by the Human Exposure Module
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+ <td style='background:lime;padding:.75pt .75pt .75pt .75pt'>
+ <br />Air Half-Life/Half-Time needed in Human Exposure
+ Component?
+ </td>
+ <td style='background:lime;padding:.75pt .75pt .75pt .75pt'>
+ <br />Soil
+ Half-Life/Half-Time needed in Human Exposure Component?
+ </td>
+ <td style='background:lime;padding:.75pt .75pt .75pt .75pt'>
+ <br />GW
+ Half-Life/Half-Time needed in Human Exposure Component?
+ </td>
+ <td style='background:lime;padding:.75pt .75pt .75pt .75pt'>
+ <br />SW
+ Half-Life/Half-Time needed in Human Exposure Component?
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+ <td style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Atmospheric
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for plant retention from deposition prior to harvest)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for deposition to soil for crops, animal products,
+ and resuspension; in addition to leaching losses)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for food holdup, after harvesting before consumption
+ but in a closed system)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+ <td style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Soil (initial concentration)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for soil loss)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for food holdup, after harvesting before consumption
+ but in a closed system)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+ <td style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Soil (known concentrations)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for food holdup, after harvesting before consumption but
+ in a closed system)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+ <td style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Groundwater
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for irrigated plant retention prior to harvest)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for irrigation to soil for crops and animal products;
+ in addition to leaching losses)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for drinking water holdup and food holdup, after
+ harvesting before consumption but in a closed system)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />NO
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+ <td style='background:yellow;padding:.75pt .75pt .75pt .75pt'>
+ <br />Surface Water
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for irrigated plant retention prior to harvest)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for irrigation to soil for crops and animal products;
+ in addition to leaching losses)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for drinking water holdup, fish holdup, and food
+ holdup, after harvesting before consumption but in a closed system)
+ </td>
+ <td style='padding:.75pt .75pt .75pt .75pt'>
+ <br />YES (for sediments pathways, near or on shore)
+ </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+ <td colspan=5 style='padding:.75pt .75pt .75pt .75pt'>
+ <br />Footnote: For example, the GW half-life/half-time is used by
+ the Human Exposure module to represent decay or loss from closed aqueous
+ systems, such as drinking water contained within the pipes of the water
+ distribution system, or foods (crops, animal products, or fish) where the
+ material is contained (packaged) and is not subject to volatilization losses;
+ therefore, when the Human Exposure module is linked to, say, the Surface
+ Water module, the GW half-life/half-time is used by the Human Exposure module
+ to evaluate drinking water holdup, fish holdup, and food holdup. Holdup is
+ the delay between harvest and consumption for food products. For drinking
+ water, it is the delay time between entering the domestic water supply system
+ and delivery to the house where the water is consumed. For home wells, the
+ delay time would be small.
+ </td>
+ </tr>
+</table>
+
+<br />
+<br />
+<h2><a name=GROUNDWATER></a>GROUND WATER TAB</h2>
+
+The information described below must be provided
+for each ground water receptor location identified for the facility. Each
+ground water receptor location involves water usage that results in one or more
+of the following exposure routes: ingestion of drinking water from a
+contaminated well, ingestion and inhalation while showering, and ingestion of
+crops and animal products produced with contaminated well water. Irrigation
+with contaminated water is the primary route of exposure for crops and animal
+products, although animal products may also become contaminated when animals
+drink contaminated water or ingest soil contaminated by water. Ground water
+transport that results in surface water contamination and exposure is
+considered in the surface water exposure section (see Section <a
+href="#SURFACE_WATER">SURFACE WATER TAB</a>).
+
+<br />
+<br />The following steps are provided: 1) obtain
+information on domestic water usage from municipal water supply departments or
+from published municipal water reports; 2) record the sources of all
+information, including information obtained by telephone, in a reference or
+footnote. This reference should state who was contacted (with phone number),
+their position (and company), and the nature of the information obtained.
+
+<br />
+<br /><a name=EGKGDR></a><u><b>EG-KGDR</b>--Domestic Usage</u>
+<br />
+<br />This pull-down menu box allows selection of
+the domestic uses of ground water: &quot;no domestic water usage&quot;,
+&quot;shower use only&quot; or &quot;shower and drinking water&quot;.&nbsp;
+Select the desired option by clicking on the line describing the option.&nbsp;
+Domestic water use may include exposure pathways of drinking water ingestion,
+shower water ingestion, shower water dermal contact, and inhalation of volatile
+compounds during shower (or indoor inhalation).
+
+<br />
+<br /><a name=EGKGIR></a><u><b>EG-KGIR</b>--Type of irrigation use at current usage location</u>
+<br />
+<br />This pull-down menu box allows selection of
+uses for irrigation water in production of crops and animal products. The
+options to select from include:
+<blockquote>
+No farm production
+<br />Animal drinking only (no irrigation water use)
+<br />Crops and animals (feed and water)
+<br />Crops and animals (feed only, no animal drinking water)
+</blockquote>
+Animal ingestion of soil is included when
+animal feed ingestion is included. To inhibit animal soil ingestion, set
+the animal soil intake parameter to zero, for meat animals or milk
+(<a href="#ECUSLMT">EC-USMLT)</a> animals (<a href="#ECUSLMK">EC-USMLK</a>).
+
+<br />
+<br /><a name=EGDURATIONS></a><u><b>DURATIONS</b></u>
+<br />
+<br />The durations tab under the ground water tab allow
+for input of exposure duration to domestic water pathways and the holdup time
+for water transport from the water intake plant to the point of consumption.
+
+<br />
+<br /><a name=EGDGWED></a><u><b>EG-DGWED</b>--Exposure duration</u>
+<br />Units: yr
+<br />Range: 1.0 to 100
+<br />
+<br />The exposure duration is the number of years
+that individuals are exposed do domestic water use pathways. (Note: while it is
+possible to enter different exposure durations for each media/transport types,
+the same exposure durations should be used for all pathways if the MEPAS Human
+Health Impact Module is to be used. In that module, a single exposure duration
+is used for all media/transport types.)
+
+<br />
+<br /><a name=EGTWtr></a><u><b>EG-TWTR</b>--The average distribution time for the water supply
+system for the current usage location</u>
+<br />Units: day
+<br />Range: 0.0 to 100.0
+<br />Default Value: 1.0
+<br />
+<br />This parameter represents the average
+distribution time, in days, for the water supply system. The distribution time
+is the interval between the time the water is pumped from the ground and when
+it is consumed or used by the public. Use a typical value of 1.0 days if no
+value is given (<a href="#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=EGDOMESTIC></a><u><b>DOMESTIC USAGE</b></u>
+<br />Ground water Drinking Water Usage
+<br />
+<br />Only usage locations involving potentially
+contaminated ground water need to be included. Required information about the
+ground water drinking water pathway includes the number of people served by the
+supply system, whether or not water is treated, and the water distribution
+time.
+
+<br />
+<br /><a name=EGLTRTL></a><u><b>EG-LTRTL</b>--Indicates
+whether or not the domestic water supply for the current receptor location is
+treated</u>
+<br />
+<br />Click on the box if the drinking water is
+treated (&quot;x&quot; in box). If the water is not treated, the box
+should be blank. If no treatment information is available, assume no
+water treatment. If water concentrations are based on measurements of
+finished drinking water (i.e., tap water), then no water treatment should be
+indicated.
+
+<br />
+<br /><a name="EG_IRRIGATION_USAGE"></a><u><b>IRRIGATION USAGE</b></u>
+<br />Ground water Irrigation Usage
+<br />
+<br />Use of contaminated water for crop irrigation
+may result in human exposure through the ingestion of contaminated agricultural
+products. Input required on this screen is the fraction of a year that
+irrigation occurs, and the irrigation rate.
+
+<br />
+<br /><a name=EGFIRR></a><u><b>EG-FIRR</b>--Fraction
+of the year that ground water is used for irrigation</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Irrigation of crops generally does not occur
+throughout the entire year. This parameter allows the user to define the
+fraction of the year that irrigation water is applied. Use of this
+parameter should be coordinated with the irrigation rate. If the
+irrigation occurs only 6 months of the year the fraction would be set to 0.5
+and the irrigation application rate (during the 6 months) would be divided by
+0.5 (to give the annual average rate). Use for surface water and ground
+water is the same. The default is set for irrigation during the entire
+year.
+
+<br />
+<br /><a name=EGCIRR></a><u><b>EG-CIRR</b>--The irrigation rate for the current water usage location</u>
+<br />Units: L/m<sup>2</sup>/mon
+<br />Range: 0.0 to 999.9
+<br />
+<br />This parameter represents the irrigation rate
+over the irrigation period for the current water usage location. Obtain
+the average irrigation rate from county extension agents or local irrigation
+districts.
+
+<br />
+<br />
+<h2><a name="SURFACE_WATER"></a>SURFACE WATER TAB</h2>
+
+The information described in this section must
+be provided for each receptor location identified for the facility. The
+following activities are possible exposure routes resulting from usage of
+contaminated surface water: drinking water, bathing, eating fish caught in the
+water, irrigating farm products, and using waters for recreation. Data
+requirements for each of these pathways are described below.
+<br />
+<br />Information on domestic water usage can be
+obtained by calling municipal water supply departments or from published water
+supply reports. Recreational activities (and fish production) for local waters
+may be obtained from parks and recreation departments. Record the sources
+of all information, including information obtained by telephone, in a reference
+or footnote. This reference should state who was contacted (with phone number),
+their position (and company), and the nature of the information obtained.
+
+<br />
+<br /><a name=EWKSDR></a><u><b>EW-KSDR</b>--Domestic usage</u>
+<br />
+<br />This pull-down menu box allows selection of
+the domestic uses of surface water: &quot;no domestic water usage&quot;,
+&quot;shower use only&quot; or &quot;shower and drinking water&quot;.&nbsp;
+Select the desired option by clicking on the line describing the option.&nbsp;
+Domestic water use may include exposure pathways of drinking water ingestion,
+shower water ingestion, shower water dermal contact, and inhalation of volatile
+compounds during shower (or indoor inhalation).
+
+<br />
+<br /><a name=EWKSIR></a><u><b>EW-KSIR</b>--Type of irrigation use at current water usage location</u>
+<br />
+<br />This pull-down menu box allows selection of
+uses for irrigation water in production of crops and animal products. The
+options to select from include:
+<blockquote>
+No farm production
+<br />Animal drinking only (no irrigation water use)
+<br />Crops and animals (feed and water)
+<br />Crops and animals (feed only, no animal drinking water)
+</blockquote>
+Animal ingestion of soil is included when
+animal feed ingested is included.
+
+<br />
+<br /><a name=EWKSAQ></a><u><b>EW-KSAQ</b>--Aquatic food usage</u>
+<br />
+<br />There are two possible food categories in the
+aquatic-food ingestion pathway: finfish (e.g., trout, catfish) and shellfish
+(e.g., clams, mussels, crab). A usage location for aquatic food
+production may be a river, stream, reservoir, lake, or bay. The usage may
+be either commercial harvesting or sport fishing.
+
+<br />This pull-down menu box allows selection of
+aquatic food types harvested from the surface water exposure location.&nbsp;
+Available options include:
+<blockquote>
+None
+<br />Finfish
+<br />Shellfish
+<br />Both finfish and shellfish
+</blockquote>
+
+<a name=EWKSR></a><u><b>EW-KSR</b>--This parameter indicates the type of recreational surface water usage</u>
+<br />
+<br />This pull-down menu box allows selection of
+aquatic recreational activities for the surface water exposure location.&nbsp;
+Available options include:
+<blockquote>
+None
+<br />Swimming only
+<br />Boating only (applies only to radionuclides)
+<br />Shoreline activities only
+<br />All, swimming, boating, and shoreline activities
+(default value if radionuclides are included in the constituent list).
+</blockquote>
+
+<a name=EWDURATION></a><u><b>DURATION</b></u>
+<br />
+<br />This tab allows input of surface water
+exposure duration, transit time from release, and water distribution time.
+
+<br />
+<br /><a name=EWDSWED></a><u><b>EW-DSWED</b>--Exposure duration</u>
+<br />Units: yr
+<br />Range: 1.0 to 100
+<br />
+<br />This parameter is the duration of exposure to
+surface water pathways. (Note: while it is possible to enter different exposure
+durations for each media/transport types, the same exposure durations should be
+used for all pathways if the MEPAS Human Health Impact Module is to be used. In
+that module, a single exposure duration is used for all media/transport types.)
+
+<br />
+<br /><a name=EWTWtr></a><u><b>EW-TWTR</b>--The average distribution time for the water supply system</u>
+<br />Units: day
+<br />Range: 1.0 to 100
+<br />Default Value: 1.0
+<br />
+<br />This parameter represents the average
+distribution time, in days, for the water supply system. The distribution time
+is the interval between the time the water is pumped from the surface water
+body and when it is consumed or used by the public. Use a typical value of 1.0
+days if no value is given (<a href="EXP.HTM#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=EWDOMESTIC></a><u><b>DOMESTIC</b></u>
+<br />
+<br />This screen allow definition water treatment prior to domestic water use.
+
+<br />
+<br /><a name=EWLTRTL></a><u><b>EW-LTRTL</b>--Parameter indicates whether or not water is treated</u>
+<br />
+<br />Click on the box if the drinking water is
+treated (&quot;x&quot; in box). If the water is not treated, the box
+should be blank. If no treatment information is available, assume no
+water treatment. If water concentrations are based on measurements of
+finished drinking water (i.e., tap water), then no water treatment should be indicated.
+
+<br />
+<br /><a name="EW_IRRIGATION_USAGE"></a><u><b>IRRIGATION USAGE</b></u>
+<br />Surface Water Irrigation Usage
+<br />
+<br />The same type of data is required for this
+pathway as was described for the irrigation section of the ground water
+pathway. Use of contaminated surface water for irrigation may result in
+human exposure through ingestion of contaminated crops and animal
+products. Input required on this screen is the fraction of a year that
+irrigation occurs, and the irrigation rate.
+
+<br />
+<br /><a name=EWFIRR></a><u><b>EW-FIRR</b>--Fraction
+of the year that surface water is used for irrigation</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Irrigation of crops generally does not occur
+throughout the entire year. This parameter allows the user to define the
+fraction of the year that irrigation water is applied. Use of this parameter
+should be coordinated with the irrigation rate. If the irrigation occurs
+only 6 months of the year the fraction would be set to 0.5 and the irrigation
+application rate (during the 6 months) would be divided by 0.5 (to give the
+annual average rate). Use for surface water and ground water is the
+same. The default is set for irrigation during the entire year.
+
+<br />
+<br /><a name=EWCIRR></a><u><b>EW-CIRR</b>--The
+irrigation rate for the current water usage location</u>
+<br />Units: L/m<sup>2</sup>/mon
+<br />Range: 0.0 to 999.9
+<br />
+<br />Provide the average irrigation rate over the irrigation period.
+
+<br />
+<br /><a name="EW_AQUATIC_FOOD"></a><u><b>AQUATIC FOOD</b></u>
+<br />
+<br />There are two possible food categories in the
+aquatic-food ingestion pathway: finfish (e.g., trout, catfish) and shellfish
+(e.g., clams, mussels, crab). A usage location for aquatic food
+production may be a river, stream, reservoir, lake, or bay. The usage may
+be either commercial harvesting or sport fishing.
+
+<br />
+<br /><a name=EWTFSH></a><u><b>EW-TFSH</b>--This
+parameter represents the time between harvest and consumption of finfish for
+the current surface water usage location</u>
+<br />Units: day
+<br />Range: 0.0 to 999.9
+<br />Default Value: 10.0
+<br />
+<br />This parameter represents the time between
+harvest and consumption of finfish for the current surface water usage
+location. A typical value for the time delay between harvest and consumption is
+10 day (<a href="EXP.HTM#NRC1977">NRC 1977</a>). An example is presented in
+Section <a href="#EWTINV">EW-TINV</a>.
+
+<br />
+<br /><a name=EWTINV></a><u><b>EW-TINV</b>--This
+parameter represents the time between harvest and consumption of shellfish for
+the current surface water usage location</u>
+<br />Units: day
+<br />Range: 0.0 to 999.9
+<br />Default Value: 10.0
+<br />
+<br />This parameter represents the time between
+harvest and consumption of shellfish for the current surface water usage
+location. The typical value for the time delay between harvest and consumption
+is 10 day (<a href="EXP.HTM#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=EWTISSUE></a><u><b>EW-TISSUE</b>--This
+parameter is a correction factor to be applied to finfish bioaccumulation
+factors to represent concentration in edible fish as opposed to whole fish.</u>
+<br />Units: none
+<br />Range: 0.0001 to 9999.9
+<br />
+<br />This parameter modifies the bioaccumulation
+factors read from the database or estimated by MEPAS using correlation
+relationships. It should only be applied (i.e., changed from a value of
+1.0) if the data values for BAF are based on whole fish measurements and not
+edible fish tissue (e.g. muscle). When a value is given for an analysis,
+it is applied to all constituents included in the analysis.
+
+<br />
+<br /><a name=EWRECREATIONAL></a><u><b>RECREATIONAL</b></u>
+<br />
+<br />Recreational activities in surface waters may
+result in exposure to chemicals through swimming (inadvertent ingestion, dermal
+contact), shoreline (inadvertent ingestion and dermal contact with sediment),
+and exposure to radionuclides through swimming, boating, and shoreline
+activities. When radionuclides are not present in the source term, only
+swimming- and shoreline-related data need to be identified. The parameters
+described below must be defined for each surface-water usage location.
+
+<br />
+<br /><a name=EWTSS></a><u><b>EW-TSS</b>--Thickness of shoreline sediments</u>
+<br />Units: m
+<br />Range: 0.0001 to 5.0
+<br />
+<br />Material deposited from surface water onto
+shoreline sediments is assumed to be mixed in a layer of sediments. The
+thickness of this layer is represented by this parameter. The value is
+used to estimate the sediment concentration for the dermal exposure and
+sediment ingestion exposure pathways.
+
+<br />
+<br /><a name=EWRHOSS></a><u><b>EW-RHOSS</b>--Density of shoreline sediments</u>
+<br />Units: g/cm3
+<br />Range: 1.0 to 4.0
+<br />
+<br />The density of shoreline sediments is used to
+estimate the constituent concentration in sediments.
+
+<br />
+<br />
+<h2><a name=ATMOSPHERIC></a>ATMOSPHERIC TAB</h2>
+
+The release of constituents to the atmosphere
+may result in widespread exposures by inhalation of airborne material or by
+ingestion of farm products contaminated by deposition on soil or plants. A
+typical release might involve the emission of volatile compounds (vaporization)
+or wind suspension of particulate material.
+<br />
+<br />Atmospheric releases are may result in widespread
+exposures to individuals in the region and via contamination of agricultural
+products.
+<br />
+<br /><a name=EAKAIN></a><u><b>EA-KAIN</b>--Regional exposure</u>
+<br />
+<br />Regional exposure pathways include air
+inhalation, external exposure to contaminated air, external exposure to
+deposited contamination, ingestion of contaminated soil, and dermal contact
+with contaminated soil. The pull-down menu box allows selection of these
+regional pathways or skipping of regional pathways.
+
+<br />
+<br /><a name=EAKAAG></a><u><b>EA-KAAG</b>--Agricultural exposure</u>
+<br />
+<br />Agricultural exposures occur when airborne
+contamination is deposited onto plants or cropland soil and subsequently
+contaminates food crops or animal products. If any agricultural exposure
+pathways are to be included in the analysis, then the agricultural option
+should be selected from this pull-down menu.
+
+<br />
+<br /><a name=EAATED></a><u><b>EA-ATED</b>--Exposure duration</u>
+<br />Units: yr
+<br />Range: 1.0 to 100
+<br />
+<br />This parameter is the exposure duration for
+atmospheric pathways. (Note: while it is possible to enter different
+exposure durations for each media/transport types, the same exposure durations
+should be used for all pathways if the MEPAS Human Health Impact Module is to
+be used. In that module, a single exposure duration is used for all
+media/transport types.)
+
+<br />
+<br /><a name=EATAS></a><u><b>EA-TAS</b>--Thickness of soil receiving deposition</u>
+<br />Units: m
+<br />Range: 0.0001 to 5.0
+<br />
+<br />Material deposited from air onto soil is
+assumed to be mixed in a layer of soil. The thickness of this layer is
+represented by this parameter.
+
+<br />
+<br /><a name=EARHOAS></a><u><b>EA-RHOAS</b>--Density of soil receiving deposition</u>
+<br />Units: g/cm3
+<br />Range: 1.0 to 4.0
+<br />
+<br />The density of surface soils is used to estimate the constituent concentration in soil.
+
+<br />
+<br />
+<h2><a name="MEASURED_CONTAMINATION"></a>KNOWN SOIL CONTAMINATION TAB</h2>
+
+<a name=SOILMOD></a><u><b>SOIL CONCENTRATION MODEL SELECTION</b></u>
+<br />
+<br /><b>Two methods for defining the time variation in soil concentration are
+available. &quot;Use time varying soil concentrations from the SCF&quot;
+and &quot;Use initial soil concentration from the SCF to compute time
+varying soil concentrations.&quot. These methods are selected by the soil
+model parameter, SOILMOD, defined as follows.</b>
+
+<br />
+<br /><u><b>EM-SOILMOD</b>--Soil Model Selection Flag</u>
+<br />Units: none
+<br />Range: True or False
+<br />
+<br />All soil concentration data is supplied via the soil concentration file
+(extension SCF). When the time variation of soil concentration is to be
+defined by the user (and supplied via the SCF file), then the soil
+concentration usage option &quot;Use time varying soil concentrations from the
+SCF&quot; is selected (the flag is set to False) and all data provided in that
+file is read and used. In this case, no features of the MEPAS soil
+concentration model are used in the analysis.
+<br />
+<br />When the MEPAS soil model is to be used, the soil concentration usage
+option &quot;Use initial soil concentration from the SCF to compute time
+varying soil concentrations&quot; is selected (SOILMOD = True). The first
+soil concentration data point is read from the SCF file and used as the initial
+soil concentration. Variation in soil concentration with time is
+evaluated using the MEPAS soil model that includes leaching, volatilization
+loss, and radioactive decay.
+<br />
+<br />When soil concentration values are available, the
+MEPAS exposure module can be used to evaluate exposure from soil ingestion,
+soil external exposure, soil dermal contact, and inhalation of suspended
+material. The parameter needed for this analysis is the exposure duration
+to contaminated soil.
+
+<br />
+<br /><a name=EMSMED></a><u><b>EM-SMED</b>--Soil exposure duration</u>
+<br />Units: yr
+<br />Range: 1.0 to 100
+<br />
+<br />This parameter is the exposure duration for exposure to measured soil concentrations.
+(Note: while it is possible to enter different exposure durations for each
+media/transport types, the same exposure durations should be used for all
+pathways if the MEPAS Human Health Impact Module is to be used. In that
+module, a single exposure duration is used for all media/transport types.)
+
+<br />
+<br />
+<h2><a name="EXPOSURE_CUSTOMIZATION"></a>EXPOSURE MODULE CUSTOMIZATION PARAMETERS</h2>
+
+The following parameter values are available for
+modification by the user to provide customized analyses.
+
+<br />
+<br />
+<h2><a name="EC_SOIL_AND_CROP"></a>SOIL AND CROP TAB</h2>
+
+<a name=ECDEN></a><u><b>EC-DEN</b>--Agricultural areal soil density</u>
+<br />Units: kg/m<sup>2</sup>
+<br />Range: 1.0 to 2000
+<br />Default Value: 240
+<br />
+<br />The agricultural areal soil density is the
+mass of soil in the active layer (15 cm plow zone) per unit area of land.&nbsp;
+The default value is based on a soil thickness of 15 cm and a soil density of
+1.6 g/cm3 (<a href="EXP.HTM#NRC1977">NRC 1977</a>). The areal soil
+density is calculated from the thickness and density as follows.
+<br />
+<br />
+<center>Areal density (kg/m2) = 10 x Thickness (cm) x Density (g/cm3)</center>
+
+<br /><a name=ECRET></a><u><b>EC-RET</b>--Agricultural plant retention fraction of deposited activity</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.25
+<br />
+<br />Deposition of constituents to plants by air
+or irrigation water deposition results in only part of the material being
+retained on the plant surfaces. The retention fraction indicates the
+fraction of the deposition that is retained on the plants. The default
+value of 0.25 is for irrigation deposition and is used also for airborne
+deposition (<a href="EXP.HTM#NRC1977">NRC 1977</a>). The value supplied
+is used for all deposition calculations performed within a run. If
+different values are desired for irrigation and airborne deposition, then it is
+necessary to perform two analyses, one for irrigation and one for airborne
+deposition, with appropriate values set for each analysis.
+
+<br />
+<br /><a name=ECYLDLEAF></a><u><b>EC-YLDLEAF</b>--Yield of leafy vegetable crops</u>
+<br />Units: kg/m<sup>2</sup>
+<br />Range: 0.01 to 20.0
+<br />Default Value: 2.0
+<br />
+<br />The yield of a crop represents the mass of
+edible food produced in one crop growing season per unit area of soil (<a
+href="EXP.HTM#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=ECYLDVEG></a><u><b>EC-YLDVEG</b>--Yield of other vegetable crops</u>
+<br />Units: kg/m<sup>2</sup>
+<br />Range: 0.01 to 20.0
+<br />Default Value: 2.0
+<br />
+<br />The yield of a crop represents the mass of
+edible food produced in one crop growing season per unit area of soil (<a
+href="EXP.HTM#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=ECYLDMEAT></a><u><b>EC-YLDMEAT</b>--Yield of meat animal feed</u>
+<br />Units: kg/m<sup>2</sup>
+<br />Range: 0.01 to 20.0
+<br />Default Value: 0.7
+<br />
+<br />The yield of a crop represents the mass of
+edible food produced in one crop growing season per unit area of soil (<a
+href="EXP.HTM#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=ECYLDMILK></a><u><b>EC-YLDMILK</b>--Yield of milk animal feed</u>
+<br />Units: kg/m<sup>2</sup>)
+<br />Range: 0.01 to 20.0
+<br />Default Value: 0.7
+<br />
+<br />The yield of a crop represents the mass of
+edible food produced in one crop growing season per unit area of soil (<a
+href="EXP.HTM#NRC1977">NRC 1977</a>). <a name="EC_ANIMAL_INTAKE_RATES"></a>
+
+<br />
+<br />
+<h2>ANIMAL INTAKE RATES TAB</h2>
+
+<a name=ECUMT></a><u><b>EC-UMT</b>--Meat animal intake rate of feed</u>
+<br />Units: kg/day
+<br />Range: 0.0 to 200.0
+<br />Default Value: 68.0
+<br />
+<br />The intake rate of animal feed is the total daily
+ingestion rate (wet weight) by the animal of feed (contaminated and
+uncontaminated). The default values are taken from <a href="#STRENGE1986">Strenge,
+Peloquin, and Whelan (1986)</a>. Note: if this parameter is changed, it
+may be necessary to also modify the meat animal intake rate of soil as the two
+parameters are related. See parameter <a href="#ECUSLMK">EC-USLMK</a>
+below.
+
+<br />
+<br /><a name=ECUMK></a><u><b>EC-UMK</b>--Milk animal intake rate of feed</u>
+<br />Units: kg/day
+<br />Range: 0.0 to 200.0
+<br />Default Value: 55.0
+<br />
+<br />The intake rate of animal feed is the total
+daily ingestion rate (wet weight) by the animal of feed (contaminated and
+uncontaminated). The default values are taken from <a href="#STRENGE1986">Strenge,
+Peloquin, and Whelan (1986)</a>. Note: if this parameter is changed, it
+may be necessary to also modify the milk animal intake rate of soil as the two
+parameters are related. See parameter <a href="#ECUSLMT">EC-USLMT</a>
+below.
+
+<br />
+<br /><a name=ECWMT></a><u><b>EC-WMT</b>--Meat animal intake rate of water</u>
+<br />Units: L/day
+<br />Range: 0.0 to 300.0
+<br />Default Value: 60.0
+<br />
+<br />The intake rate of animal water is the total
+daily ingestion rate by the animal of water. The default values are taken
+from <a href="#STRENGE1986">Strenge, Peloquin, and Whelan (1986)</a>.
+
+<br />
+<br /><a name=ECWMK></a><u><b>EC-WMK</b>--Milk animal intake rate of water</u>
+<br />Units: L/day
+<br />Range: 0.0 to 300.0
+<br />Default Value: 50.0
+<br />
+<br />The intake rate of animal water is the total
+daily ingestion rate by the animal of water. The default values are taken
+from <a href="#STRENGE1986">Strenge, Peloquin, and Whelan (1986)</a>.
+
+<br />
+<br /><a name=ECUSLMT></a><u><b>EC-USLMT</b>--Meat animal intake rate of soil</u>
+<br />Units: kg/day
+<br />Range: 0.0 to 20.0
+<br />Default Value: 0.8
+<br />
+<br />Animals grazing or in feed lots will consume
+soil while browsing. The soil intake rate is defined to represent uptake
+of contaminated soil by animals resulting in contaminated animal
+products. The default soil intake rate is a nominal value representing
+approximately 4% of the meat and milk animal dry feed intake (<a
+href="#THORNE1984">Thorne</a><a href="#THRONE1984"> 1984</a>). The value
+is based on the default intake rates of <a href="#ECUMT">meat animal feed</a>,
+converted to a dry-weight basis assuming the feed plants are 75% water.
+
+<br />
+<br /><a name=ECUSLMK></a><u><b>EC-USLMK</b>--Milk animal intake rate of soil</u>
+<br />Units: kg/day
+<br />Range: 0.0 to 20.0
+<br />Default Value: 0.7
+<br />
+<br />Animals grazing or in feed lots will consume
+soil while browsing. The soil intake rate is defined to represent uptake
+of contaminated soil by animals resulting in contaminated animal
+products. The default soil intake rate is a nominal value representing
+approximately 4% of the meat and milk animal dry feed intake (<a
+href="#THORNE1984">Thorne 1984</a>). The value is based on the default intake
+rates of <a href="#ECUMK">milk animal feed</a>, converted to a dry-weight basis
+assuming the feed plants are 75% water.
+
+<br />
+<br />
+<h2><a name=TRANSLOCATION></a>TRANSLOCATION FACTORS TAB</h2>
+
+<a name=ECTRNLEAF></a><u><b>EC-TRNLEAF</b>--Translocation factor to edible parts of leafy vegetables</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The translocation factor is the fraction of
+material deposited onto plant surfaces (by air or water deposition) that is
+retained by the plant in edible parts of the plant. The default values
+are from <a href="#NAPIER1988">Napier et al. (1988)</a>.
+
+<br />
+<br /><a name=ECTRNVEG></a><u><b>EC-TRNVEG</b>--Translocation factor to edible parts of other vegetables</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.1
+<br />
+<br />The translocation factor is the fraction of material
+deposited onto plant surfaces (by air or water deposition) that is retained by
+the plant in edible parts of the plant. The default values are from <a
+href="#NAPIER1988">Napier et al. (1988)</a>.
+
+<br />
+<br /><a name=ECTRNMT></a><u><b>EC-TRNMT</b>--Translocation factor to edible parts of meat animal feed</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.1
+<br />
+<br />The translocation factor is the fraction of
+material deposited onto plant surfaces (by air or water deposition) that is
+retained by the plant in edible parts of the plant. For animal products
+the translocation factor is applied in estimation of the concentration in the
+plant used for animal feed. The default values are from <a
+href="#NAPIER1988">Napier et al. (1988)</a>.
+
+<br />
+<br /><a name=ECTRNMK></a><u><b>EC-TRNMK</b>--Translocation factor to edible parts of milk animal feed</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The translocation factor is the fraction of material deposited onto plant surfaces
+(by air or water deposition) that is retained by the plant in edible parts of
+the plant. For animal products the translocation factor is applied in
+estimation of the concentration in the plant used for animal feed. The
+default values are from <a href="#NAPIER1988">Napier et al. (1988)</a>.
+
+<br />
+<br />
+<h2><a name="FEED_AND_WATER"></a>FEED AND WATER CONTAMINATION TAB</h2>
+
+<a name=ECFFCMT></a><u><b>EC-FFCMT</b>--Fraction of meat animal's feed that is contaminated</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Beef animals fed contaminated feed may not
+get all of their intake from contaminated sources. The feed contamination
+fraction allow the user to represent the situation where part of the animal
+feed is uncontaminated. The default values represent all animal intake
+coming from contaminated sources.
+
+<br />
+<br /><a name=ECFFCMK></a><u><b>EC-FFCMK</b>--Fraction of milk animal's feed that is contaminated</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Milk animals fed contaminated feed may not
+get all of their intake from contaminated sources. The feed contamination
+fraction allow the user to represent the situation where part of the animal
+feed is uncontaminated. The default values represent all animal intake
+coming from contaminated sources.
+
+<br />
+<br /><a name=ECFWCMT></a><u><b>EC-FWCMT</b>--Fraction of meat animal's water that is contaminated</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Beef animals fed contaminated water may not
+get all of their intake from contaminated sources. The water
+contamination fraction allow the user to represent the situation where part of
+the animal water is uncontaminated. The default values represent all
+animal intake coming from contaminated sources.
+
+<br />
+<br /><a name=ECFWCMK></a><u><b>EC-FWCMK</b>--Fraction of milk animal's water that is contaminated</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />Milk animals fed contaminated water may not
+get all of their intake from contaminated sources. The water
+contamination fraction allow the user to represent the situation where part of
+the animal water is uncontaminated. The default values represent all
+animal intake coming from contaminated sources.
+
+<br />
+<br />
+<h2><a name="HARVEST_DELAY"></a>HARVEST DELAY TIMES TAB</h2>
+
+<a name=ECTCRPLEAF></a><u><b>EC-TCRPLEAF</b>--Leafy vegetable crop ingestion harvest delay time</u>
+<br />Units: day
+<br />Range: 0.0 to 365.0
+<br />Default Value: 1.0 days
+<br />
+<br />The holdup time for farm products is the time
+between harvesting of the food product and consumption by individuals in the
+general population. During this period, the concentration in the food
+product may change because of radioactive decay or volatile losses from the
+food. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=ECTCRPVEG></a><u><b>EC-TCRPVEG</b>--Other vegetable crop ingestion harvest delay time</u>
+<br />Units: day
+<br />Range: 0.0 to 365.0
+<br />Default Value: 60.0 days
+<br />
+<br />The holdup time for farm products is the time
+between harvesting of the food product and consumption by individuals in the
+general population. During this period, the concentration in the food
+product may change because of radioactive decay or volatile losses from the
+food. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=ECTCRPMT></a><u><b>EC-TCRPMT</b>--Meat product ingestion harvest delay time</u>
+<br />Units: day
+<br />Range: 0.0 to 365.0
+<br />Default Value: 20.0
+<br />
+<br />The holdup time for farm products is the time
+between harvesting of the food product and consumption by individuals in the
+general population. During this period, the concentration in the food
+product may change because of radioactive decay or volatile losses from the
+food. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=ECTCRPMK></a><u><b>EC-TCRPMK</b>--Milk product ingestion harvest delay time</u>
+<br />Units: day
+<br />Range: 0.0 to 365.0
+<br />Default Value: 4.0
+<br />
+<br />The holdup time for farm products is the time
+between harvesting of the food product and consumption by individuals in the
+general population. During this period, the concentration in the food
+product may change because of radioactive decay or volatile losses from the
+food. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br />
+<a name="GROWING_PERIODS"></a><h2>GROWING PERIODS TAB</h2>
+
+<a name="EG_GROUNDWATER"></a><u><b>GROUND WATER</b></u>
+
+<br />
+<br /><a name=EGTGRWLEAF></a><u><b>EG-TGRWLEAF</b>--Leafy vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example, if
+two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a
+href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EGTGRWVEG></a><u><b>EG-TGRWVEG</b>--Other vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a
+href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EGTGRWMT></a><u><b>EG-TGRWMT</b>--Meat animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC
+1977</a>.
+
+<br />
+<br /><a name=EGTGRWMK></a><u><b>EG-TGRWMK</b>--Milk animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC
+1977</a>.
+
+<br />
+<br /><a name="EWSURFACE_WATER"></a><u><b>SURFACE WATER</b></u>
+<br />
+<br /><a name=EWTGRWLEAF></a><u><b>EW-TGRWLEAF</b>--Leafy vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a
+href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EWTGRWVEG></a><u><b>EW-TGRWVEG</b>--Other vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a
+href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EWTGRWMT></a><u><b>EW-TGRWMT</b>--Meat animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC
+1977</a>.
+
+<br />
+<br /><a name=EWTGRWMK></a><u><b>EW-TGRWMK</b>--Milk animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EAATMOSPHERIC></a><u><b>ATMOSPHERIC</b></u>
+<br />
+<br /><a name=EATGRWLEAF></a><u><b>EA-TGRWLEAF</b>--Leafy vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month period,
+the growing period for one crop is 3 months and the crop growing period to use
+here is 90 days. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EATGRWVEG></a><u><b>EA-TGRWVEG</b>--Other vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EATGRWMT></a><u><b>EA-TGRWMT</b>--Meat animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EATGRWMK></a><u><b>EA-TGRWMK</b>--Milk animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name="EM_MEASURED_SOIL"></a><u><b>MEASURED SOIL</b></u>
+<br />
+<br /><a name=EMTGRWLEAF></a><u><b>EM-TGRWLEAF</b>--Leafy vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EMTGRWVEG></a><u><b>EM-TGRWVEG</b>--Other vegetable growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 60.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EMTGRWMT></a><u><b>EM-TGRWMT</b>--Meat
+animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br /><a name=EMTGRWMK></a><u><b>EM-TGRWMK</b>--Milk animal feed growing period</u>
+<br />Units: day
+<br />Range: 10.0 to 365.0
+<br />Default Value: 30.0
+<br />
+<br />The growing period for each crop represent
+the length of time necessary to grow and harvest one crop. For example,
+if two crops can be harvested (successive growing periods) during a 6 month
+period, the growing period for one crop is 3 months and the crop growing period
+to use here is 90 days. The growing period for animals represent the
+nominal time to grow one feed crop (hay for meat animals, and fresh forage for
+milk animals). The default value is taken from <a href="EXP.HTM#NRC1977">NRC 1977</a>.
+
+<br />
+<br />
+<h2><a name=RESUSPENSION></a>RESUSPENSION TAB</h2>
+
+<a name=ECCML></a><u><b>EC-CML</b>--Airborne particulate mass loading factor</u>
+<br />Units: kg/m<sup>3</sup>
+<br />Range: 0.0 to 1E-4
+<br />Default Value: 1.00E-08
+<br />
+<br />The airborne particulate mass loading factor
+is used to estimate the air concentration above contaminated soil for the
+measured soil analysis. The mass loading factor defines the mass of soil
+that is suspended in the air above the contaminated soil. This defines
+the concentration of constituents in air for the inhalation pathway. The
+default value (1.E-8 kg/m<sup>3</sup>) represents a nominal air particulate
+concentration of 10 micrograms/m<sup>3</sup>. This is based on
+recommendations of <a href="#ANSPAUGH1975">Anspaugh et al. (1975)</a> to be
+used for predictive purposes.
+
+<br />
+<br /><a name=ECRESFAC></a><u><b>EC-RESFAC</b>--Atmospheric resuspension factor</u>
+<br />Units: m<sup>-1</sup>
+<br />Range: 0.0 to 2E-4
+<br />Default Value: 1.00E-07
+<br />
+<br />Material deposited onto surface soil is
+subject to resuspension resulting in inhalation exposure of individuals.&nbsp;
+The resuspension factor relates the soil concentration to the air concentration
+above the contaminated soil.
+
+<br />
+<br />
+<h2><a name="INDOOR_AIR"></a>INDOOR AIR TAB</h2>
+
+<a name=ECANDFC></a><u><b>EC-ANDFC</b>--Andelman inhalation factor for volatile chemicals</u>
+<br />Units: L/m<sup>3</sup>
+<br />Range: 0.0 to 20.0
+<br />Default Value: 0.5
+<br />
+<br />The Andelman indoor air inhalation factor
+gives the ratio between average indoor air concentration and the concentration
+in the domestic supply water. Default values is from <a
+href="#ANDELMAN1990">Andelman (1990)</a>.
+
+<br />
+<br /><a name=ECANDFR></a><u><b>EC-ANDFR</b>--Andelman inhalation factor for Radon-222</u>
+<br />Units: L/m<sup>3</sup>
+<br />Range: 0.0 to 20.0
+<br />Default Value: 0.1
+<br />
+<br />The Andelman indoor air inhalation factor
+gives the ratio between average indoor air concentration and the concentration
+in the domestic supply water. Default values is from <a
+href="#ANDELMAN1990">Andelman (1990)</a>.
+
+<br />
+<br /><a name=ECANDFO></a><u><b>EC-ANDFO</b>--Andelman inhalation factor for other pollutants</u>
+<br />Units: L/m<sup>3</sup>
+<br />Range: 0.0 to 20.0
+<br />Default Value: 0.0
+<br />
+<br />The Andelman indoor air inhalation factor
+gives the ratio between average indoor air concentration and the concentration
+in the domestic supply water. The default value of zero represents no
+volatilization.
+
+<br />
+<br /><a name=WSUNITS></a><u><b>WS-UNITS</b>--Index of concentration units</u>
+<br />Units: none
+<br />
+<br />WS-UNITS identifies the waste-site
+concentration units associated with the measured environmental constituent
+levels in the section on initial constituent concentration.
+
+<br />
+<br />
+<center>
+<b>MEPAS Exposure Model Internal Default Values</b>
+<table border=1 cellpadding=5>
+ <tr>
+ <th width=82> <br />Parameter</th>
+ <th width=183><br />Description</th>
+ <th width=80> <br />Value</th>
+ <th width=125><br />Range</th>
+ <th width=76> <br />Units</th>
+ <th width=106><br />Reference</th>
+ </tr>
+ <tr>
+ <td>RWPF</td>
+ <td>Default water purification factor</td>
+ <td align=right>1</td>
+ <td>&nbsp;</td>
+ <td>none</td>
+ <td>no removal</td>
+ </tr>
+ <tr>
+ <td>DFLAM</td>
+ <td>Default decay rate constant</td>
+ <td align=right>1.00E-08</td>
+ <td>&nbsp;</td>
+ <td>1/day</td>
+ <td>Small value</td>
+ </tr>
+ <tr>
+ <td>none</td>
+ <td>Default maximum half life</td>
+ <td align=right>3.70E+09</td>
+ <td>&nbsp;</td>
+ <td><br />>day</td>
+ <td>Large value</td>
+ </tr>
+ <tr>
+ <td>CNST</td>
+ <td>Henry's law conversion factor: 1 / (RT) = 1 / (8.2E-5 * 310)</td>
+ <td align=right>3.93E+01</td>
+ <td>fixed value</td>
+ <td>g-mole per (m^<sup>3</sup> atm)</td>
+ <td>Based on 310 degrees Kelvin for shower water</td>
+ </tr>
+ <tr>
+ <td>ALPL</td>
+ <td>Plant weathering rate constant</td>
+ <td align=right>0.049511</td>
+ <td>fixed value (based on 14 day half time)</td>
+ <td>1/day</td>
+ <td>NRC 1997</td>
+ </tr>
+</table>
+</center>
+<br /><b>MEPAS Exposure Model Undocumented Equations</b>
+<br />
+<br /><b>Deposition Velocity for Organic Chemicals</b>
+
+<br />If the input value for the deposition velocity (<span
+class=SpellE>RVDP) is zero and the constituent is an organic chemical as
+determined by a positive value provided for the octanol-water
+partition coefficient (RKOW), then the deposition
+velocity will be estimated by the following method.
+
+<br />
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Vd = (0.436681)(1.1E-7)(0.9 + 0.1 * Kow) / [HLC*1000 + 4.8E5 (0.9 + 0.1 * Kow)]
+<br />
+<br />Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vd = deposition velocity for transfer of constituent from air to plants (m/sec)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HLC = Henry’s Law Constant for the constituent (atm m<sup>3</sup>/g-mole)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9 = fraction of plant that is water
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1 = fraction of plant that is organic mater
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.436681 = empirical constant
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1E-7 = empirical constant
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.8E5 = empirical constant
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000 = empirical constant.
+<br />
+<br />A correction factor is calculated as:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CF = 1 / (Vd * 1000)<sup>1/4</sup>
+<br />
+<br />If CF is greater than 1, then the deposition velocity is multiplied by CF.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vd = CF * Vd (from above equation)
+
+<br />
+<br /><b>Food Pathway Transfer Factors</b>
+<br />Estimation methods are used to fill in for missing (zero)
+values for food pathway transfer factors for organic chemicals.
+If a positive value is provided for the octanol-water partition
+coefficient, then an estimate for the missing food transfer
+factor will be generated. The correlations used are as follows.
+<br />
+<br />Finfish
+<br />The transfer from water to finfish is estimated using the correlation of Bintein, DeVillers, and Carcher (1993) as follows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log10 (BFF) = 0.910 Log10 (Kow) + 1.975 Log10 (6.8E-7Kow + 1) + 0.786
+<br />&nbsp;&nbsp;&nbsp;Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BFF = water-to-finfish bioaccumulation factor (L water / kg finfish)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />
+<br />Shell Fish
+<br />The transfer from water to shell fish meat is estimated using the correlation from Southworth (1978) as follows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log<sub>10</sub> (BFI) = 0.819 * Log<sub>10</sub>(CKOW) - 1.146
+<br />&nbsp;&nbsp;&nbsp;Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BFI = water-to-shell fish bioaccumulation factor (L water / kg shell fish)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />
+<br />Meat (beef)
+<br />The feed-to-meat transfer factor is estimated using the correlation from Travis and Arms (1988) as follows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log<sub>10</sub> (BMT) = -7.60 + Log<sub>10</sub>(Kow)
+<br />&nbsp;&nbsp;&nbsp;Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMT = feed-to-meat transfer factor (mg/kg meat per mg/day intake by animal)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />
+<br />Milk (cow)
+<br />The feed-to-milk transfer factor is estimated using the correlation from Travis and Arms (1988) as follows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log<sub>10</sub> (BMK) = -8.10 + Log<sub>10</sub>(Kow)
+<br />&nbsp;&nbsp;&nbsp;Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMK = feed-to-milk transfer factor (mg/L milk per mg/day intake by animal)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />
+<br />Plants
+<br />The soil-to-plant uptake factor is estimated using a correlation from Travis and Arms (1988) as follows:
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log<sub>10</sub>(BVF) = 0.986 - 0.578 * Log<sub>10</sub>(Kow)
+<br />&nbsp;&nbsp;&nbsp;Where
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BVF = soil-to-plant uptake factor (kg dry soil / kg wet plant)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow = octanol-water partition coefficient (dimensionless)
+<br />
+<br />The correlation has been modified to provide the soil-to-plant uptake factor on a wet-weigh of plant basis.
+
+<br />
+<br />
+<h2>References</h2>
+
+<a name=ANDELMAN1990></a>Andelman,
+J. B. 1990. Total Exposure to Volatile Organic Chemicals in Potable
+Water. N. M. Ram, R. F. Christman, K. G. Cantor (eds.). Lewis Publishers,
+Boca Raton, Florida.
+
+<br />
+<br /><a name=ANSPAUGH1975></a>Anspaugh, L.R., J.H.
+Shinn, P.L. Phelps, N.C. Kennedy, 1975. &quot;Resuspension
+and Redistribution of Plutonium in Soils.&quot. Health Physics.&nbsp;
+29:571-582.
+
+<br />
+<br /><a name=NAPIER1988></a>Napier, B.A., R.A.
+Peloquin, D.L. Strenge, and J.V. Ramsdell. GENII - The Hanford Environmental Radiation Dosimetry
+Software System. December 1988. PNL-6584, Vol. 1. Pacific
+Northwest Laboratory, Richland, Washington.
+
+<br />
+<br /><a name=NRC1977></a>NRC. 1977.&nbsp;
+Calculation of Annual Doses to Man from Routine Releases of Reactor Effluents
+for the Purpose of Evaluating Compliance with 10 CFR Part 50, Appendix I.&nbsp;
+Regulatory Guide 1.109, Rev. 1, US Nuclear Regulatory Commission, Washington, D.C.
+
+<br />
+<br /><a name=STRENGE1986></a>Strenge, D.L., R. A.
+Peloquin, G. Whelan. 1986. ALDTAP II - Technical Reference and User
+Guide. U. S.
+Nuclear Regulatory Commission. NUREG/CR-4013. Washington, D.C.
+
+<br />
+<br /><a name=THORNE1984></a>Thorne, M.C.&nbsp;
+1984. ECOS: Values of Parameters to be Used for Domestic Animals.&nbsp;
+ANS Report No. 372, Associated Nuclear Services, Epsom, Surrey,
+England, U.K.
+
+<hr />
+<center><a href="https://www.pnnl.gov/projects/earth/mepas"><img src="MEPHOME.GIF" ></a></center>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Run1XMod - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\Common Files" /I "..\Frames dll" /D "NDEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "DIRECTACCESS" /FD /c 
+"C:\RepSS\Frames DLL\affClass.cpp"
+"C:\RepSS\Run1xMod\AFFv2.cpp"
+"C:\RepSS\Frames DLL\atoClass.cpp"
+"C:\RepSS\Run1xMod\ATOv2.cpp"
+"C:\RepSS\Run1xMod\CONv2.cpp"
+"C:\RepSS\Common Files\csv.cpp"
+"C:\RepSS\Run1xMod\EPFv2.cpp"
+"C:\RepSS\Common Files\fcsv.cpp"
+"C:\RepSS\Common Files\gid.cpp"
+"C:\RepSS\Run1xMod\glyph.cpp"
+"C:\RepSS\Run1xMod\HIFv2.cpp"
+"C:\RepSS\Run1xMod\OSv2.cpp"
+"C:\RepSS\Run1xMod\Param.cpp"
+"C:\RepSS\Run1xMod\pugixml.cpp"
+"C:\RepSS\Run1xMod\RIFv2.cpp"
+"C:\RepSS\Common Files\robust.cpp"
+"C:\RepSS\Run1xMod\Run1XMod.cpp"
+"C:\RepSS\Frames DLL\scfClass.cpp"
+"C:\RepSS\Run1xMod\SCFv2.cpp"
+"C:\RepSS\Common Files\Series.cpp"
+"C:\RepSS\Common Files\SeriesV2.cpp"
+"C:\RepSS\Common Files\StringParser.cpp"
+"C:\RepSS\Common Files\Test.cpp"
+"C:\RepSS\Frames DLL\wcfClass.cpp"
+"C:\RepSS\Run1xMod\WCFv2.cpp"
+"C:\RepSS\Frames DLL\wffClass.cpp"
+"C:\RepSS\Run1xMod\WFFv2.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Run1XMod.pdb" /debug /machine:I386 /out:"Run1XMod.exe" 
+.\affClass.obj
+.\AFFv2.obj
+.\atoClass.obj
+.\ATOv2.obj
+.\CONv2.obj
+.\csv.obj
+.\EPFv2.obj
+.\fcsv.obj
+.\gid.obj
+.\glyph.obj
+.\HIFv2.obj
+.\OSv2.obj
+.\Param.obj
+.\pugixml.obj
+.\RIFv2.obj
+.\robust.obj
+.\Run1XMod.obj
+.\scfClass.obj
+.\SCFv2.obj
+.\Series.obj
+.\SeriesV2.obj
+.\StringParser.obj
+.\Test.obj
+.\wcfClass.obj
+.\WCFv2.obj
+.\wffClass.obj
+.\WFFv2.obj
+"..\Common Files\SystemIO.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3.tmp"
+<h3>Output Window</h3>
+Compiling...
+affClass.cpp
+AFFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+atoClass.cpp
+ATOv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+CONv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+csv.cpp
+EPFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+fcsv.cpp
+gid.cpp
+glyph.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+HIFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+OSv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+Param.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+pugixml.cpp
+RIFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+robust.cpp
+Run1XMod.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+scfClass.cpp
+SCFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+Series.cpp
+Generating Code...
+Compiling...
+SeriesV2.cpp
+C:\RepSS\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+C:\RepSS\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+StringParser.cpp
+Test.cpp
+C:\RepSS\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+C:\RepSS\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+wcfClass.cpp
+WCFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+wffClass.cpp
+WFFv2.cpp
+..\Common Files\Test.h(248) : warning C4101: 'diff' : unreferenced local variable
+..\Common Files\Test.h(242) : warning C4101: 'e' : unreferenced local variable
+Generating Code...
+Linking...
+LINK : fatal error LNK1104: cannot open file "Run1XMod.exe"
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+Run1XMod.exe - 1 error(s), 30 warning(s)
+</pre>
+</body>
+</html>

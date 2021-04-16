@@ -1,0 +1,29 @@
+
+  <h2>Environmental Decay Half Times</h2><p>
+<H3>DESCRIPTION</H3>Four environmental half times can be specified in the
+database, each for describing losses from specific media: groundwater, surface
+water, soil, and air. The environmental half time represents the time for the
+amount of a pollutant to be reduced by one half in the specific medium. Various
+processes may be responsible for the loss, depending on the chemical and medium.
+Values for environmental half time in the database are generally set to a large
+default value (9 x 10^9 days) when pollutant specific information is not
+available in the literature. For the medium soil, loss rate constants for
+volatile chemicals have been estimated using a volatilization model for old
+spills to provide a conservative (slow release) estimate of volatilization
+losses. A similar analysis has been made to estimate the environmental half time
+for volatile chemicals in surface waters. Environmental half times for
+groundwater and air are generally set to the default maximum value representing
+no losses. All values for radionuclides are set to the radiological half-life
+for the radionuclide. <BR><BR>
+<br>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<a href="software.html#database">Return to the Software page.</a>
+<br>
+<br><a href="home.html"><b>Introduction</b></a>
+<br><a href="paramete.html"><b>Database Parameters</b></a>
+<br><a href="physical.html"><b>Physical Parameters</b></a>
+<br><a href="dose.html"><b>Dose Factors</b></a>
+<BR><b>Environmental Decay Half Times</b>
+<br><a href="transport.html"><b>Environmental Transport Factors</b></a>
+<br><a href="equation.html"><b>Parameter Estimation Equations</b></a>
+<br><a href="tox.html"><b>Toxicity Factors</b></a>

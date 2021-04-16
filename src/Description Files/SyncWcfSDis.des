@@ -1,0 +1,48 @@
+"mf","Version 2.1"
+"Boundary Conditions:Sync Operators:syn","WCF Surface Water-Dissolved Temporal Operator","syncui.exe /wcfs","plus.exe /wcfs","ovlplus.ico"
+"
+MODULE VERSION
+1.0
+
+MODULE DESCRIPTION
+Synchonizes two or more WCF input sections into one WCF section with multiple locations(datasets).
+
+VALID CONNECTIONS
+Valid Input Reads
+   1 to 10 wcf Surface Water required as input
+
+Valid Output Writes
+   wcf Surface Water
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+1,"Read"
+1,"wcf","Surface Water",1,10
+1,"Write"
+"wcf","Surface Water"
+6,"Variables"
+name,Not Stochastic,N/A,,,Incoming module name,1,String
+Label,Input module#,Index1
+starttime,Not Stochastic,day,,,Start time(t0) offset,1,FLOAT
+Variable,name,Index1
+interval,Not Stochastic,day,,,Interval size,0,FLOAT
+size,Not Stochastic,N/A,,,Number of intervals,0,INTEGER
+error,Not Stochastic,percent,,,Acceptable error,0,FLOAT
+year,Not Stochastic,N/A,,,Start year,0,FLOAT

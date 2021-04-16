@@ -1,0 +1,103 @@
+<a NAME="App_D"></a><h2>QA/QC Appendix D, PNNL-11880</h2>
+		   <p><b><h1>Glossary</h1></center>
+
+		   <p>The following terms, which are listed in alphabetical
+		   order, are used in this document in ways that may not be familiar to some
+		   readers.
+		   <p><b>Baseline</b>—a system or module that has been designed,
+		   developed, and initially tested to meet a particular need, either internal
+		   to the Laboratory or for a client
+		   <p><b>Change request</b>—a written request (or a verbal request
+		   written down) by a client or other user of an environmental software system
+		   to modify that system. Changes can include enhancements or revisions to
+		   solve identified problems. Each change is tracked separately.
+		   <p><b>Change request summary</b>—summary of all activities
+		   related to a particular change in a module or system. The summary is completed
+		   by the project custodian.
+		   <p><b>Code</b>—information provided to guide a computer system
+		   through a particular process. Both modules and frameworks depend on code
+		   to function properly.
+		   <p><b>Component</b>—a piece of a software system, for example,
+		   module, module user interface, model, pre/post-processor, or framework
+		   user interface.
+		   <p><b>Design</b>—the process of determining appropriate ways
+		   of meeting client and user requirements
+		   <p><b>Development</b>—the process of implementing a design
+		   <p><b>Environmental software system</b>—a set of modules
+		   with a framework designed to analyze risk to human health or the environment
+		   through multiple environmental media
+		   <p><b>Error/bug</b>—a difficulty encountered by the user
+		   when applying the software system that hinders the application for which
+		   the system was intended
+		   <p><b>Framework</b>—mechanism for holistically linking a
+		   variety of models while ensuring compatible input and outputs and maintaining
+		   the development of testing legacy of individual components
+		   <p><b>Input</b>—data, information, or code that is needed
+		   by a module to function
+		   <p><b>Implementation</b>—the act of transferring a set of
+		   modules within a framework to a client for application at their organization
+		   <p><b>Model</b>— the set of scientific calculations that
+		   define a particular module
+		   <p><b>Modification</b>—a change to or the process of changing
+		   a baselined module or framework. Modifications can be enhancements or revisions
+		   to fix a particular problem such as an error or bug.
+		   <p><b>Module</b>—a user interface, scientific model, and
+		   possible pre/post-processors that together provide a tool for analyzing
+		   environmental phenomena, these modules may be related to a particular environmental
+		   media (water, air, soil, etc.), health risk based, statistically based,
+		   or any other set of scientific formulations used to model the environment.
+		   <p><b>Module user interface</b>—the computer screens that
+		   make it easy to collect the data necessary to run the model. Besides gathering
+		   the necessary data, the user interface often provides online help to the
+		   user, reference storage options for collected data, flexible unit inputs,
+		   and other user support functions.
+		   <p><b>Multiple media</b>—potential portions of the environment
+		   through which a human, animal, or plant might be exposed to contamination
+		   (for example, water, air, soil, etc.)
+		   <p><b>Object-oriented</b>—the practice of breaking down a
+		   system into its unique and logical components, then developing those components
+		   only once and applying them to the system. Each individual components purpose
+		   is well defined and testable.
+		   <p><b>Output</b>—data, information, or code that results
+		   from a module functioning
+		   <p><b>Package</b>—the information, documentation, print outs,
+		   diagrams, and/or electronic files that document the activities conducted
+		   under a particular project or task for a particular stage in the software
+		   development life cycle (requirements package for requirements analysis,
+		   software development package for design and development, software test
+		   package for testing, user’s guidance and training package for implementation,
+		   and change package for modifying baselined systems or modules).
+		   <p><b>Pre/post-processor</b>—additional code necessary to
+		   reconcile module input/output with output/input needs from other the system
+		   framework.
+		   <p><b>Project management plan</b>—description of the ways
+		   in which an activity will be conducted to meet client needs
+		   <p><b>Project Team </b>—the various staff assigned to develop
+		   a system or module to meet client needs
+		   <p><b>Requirements</b>—objectives, activities, constraints,
+		   and other information that specify what the client needs the new system
+		   or module to accomplish
+		   <p><b>Requirements package</b>--the information, documentation,
+		   print outs, diagrams, and/or electronic files that document the objectives,
+		   activities, constraints, and other information that specify what the client
+		   needs the new system or module to accomplish and how the client will use
+		   the system
+		   <p><b>Software development package</b>--the information,
+		   documentation, print outs, diagrams, and/or electronic files that document
+		   the methods by which client requirements will be met
+		   <p><b>Software test package</b>-- the information, documentation,
+		   print outs, diagrams, and/or electronic files that document the how the
+		   system, module, or change will be tested to ensure that it meets client
+		   requirements
+		   <p><b>Statement of work</b>—description of activities to
+		   be accomplished for a particular client and the methods by which they will
+		   be accomplished
+		   <p><b>Technology transfer</b>—the process of providing the
+		   systems or modules to the client’s organization for use by their staff
+		   <p><b>Testing</b>—the process of checking that systems or
+		   modules meet the client requirements and function within the necessary
+		   settings
+		   <p><b>User</b>—the person who will use the system or module
+to estimate risks to human health or the environment
+
+<p align=right><a href="qaqc.html"><align="right"><font color="#000080" face="Verdana" size="2">&larr;BACK TO QA/QC </font></a></p>

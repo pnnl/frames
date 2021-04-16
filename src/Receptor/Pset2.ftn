@@ -1,0 +1,56 @@
+!   MEPAS HAZ2: PSET2.FTN             Version Date: 02-Oct-1992
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK PSET2                               *
+!                                                                            *
+!  Common block PSET2 contains intake conversion factors (dose or per kg)    *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    09/20/85 (Converted to PC)                              *
+!  Last Modified:    02-Oct-92  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!     DFA(20)     Real  Inhalation dose conversion factor, rem/pCi inhaled
+!                       for radionuclides; dimensionless for chemicals
+!     DFG(20)     Real  Ingestion dose conversion factor, rem/pCi ingested
+!                       for radionuclides; dimensionless for chemicals
+!     DFS(20)     Real  Internal dose factor for intake via skin absorption,
+!                       rem/pCi
+!     DEX(20)     Real  External dose conversion factor for air submersion,
+!                       rem/pCi per sec/m3 for radionuclides.  Not used for
+!                       chemicals.
+!     DIMR(20)    Real  Water immersion dose conversion factor, rem/hr per
+!                       pCi/L for radionuclides; dimensionless for chemicals.
+!     DSH(20)     Real  External factor for standing on contaminated ground,
+!                       rem/hr per pCi/m2 for radionuclides.  Not used for
+!                       chemicals.
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!     02-Oct-92    DLS  Added dermal internal dose factors DFS(20)
+!==== COMMON Block Definition ================================================
+!
+      COMMON/PSET2/DFG(20),DFA(20),DFS(20),DIMR(20),DSH(20),DEX(20)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

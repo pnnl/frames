@@ -1,0 +1,43 @@
+"mf","Version 2.1"
+"Viewer:Viewer:vwr","SUF Text View","","view.exe suf","vwr.ico"
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This module will display, in ASCI formated text, the contents of a section in a SUF file specified by the commandline passed from FRAMES to this viewer.
+
+MODULE REFERENCES
+Other related sites:
+  https://www.pnnl.gov/projects/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 suf Sensitivity/Uncertainty required as input
+
+Valid Output Writes
+     <none>
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bonnie Hoopes
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        bonnie.hoopes@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+1,"Reads"
+1,"suf","Sensitivity/Uncertainty",1,1
+0,"Writes"
+0,"Variables"

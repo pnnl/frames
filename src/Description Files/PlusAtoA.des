@@ -1,0 +1,45 @@
+"mf","Version 2.1"
+"Boundary Conditions:Plus Operators:pls","ATO Acute Air Plus Operator","","plus.exe /ato","airplus.ico"
+"
+MODULE VERSION
+1.0
+
+MODULE DESCRIPTION
+Add two or more ATO Acute Air files
+
+VALID CONNECTIONS
+Valid Input Reads
+   2 to 5 ato Acute Air, Acute Polar Air, or Acute Cartesian Air required as input
+
+Valid Output Writes
+   ato Acute Cartesian Air
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+6,"Read"
+3,"ato","Acute Air",2,5,"ato","Acute Cartesian Air",0,5,"ato","Acute Polar Air",0,5
+3,"ato","Acute Air",0,5,"ato","Acute Cartesian Air",2,5,"ato","Acute Polar Air",0,5
+3,"ato","Acute Air",0,5,"ato","Acute Cartesian Air",0,5,"ato","Acute Polar Air",2,5
+3,"ato","Acute Air",1,5,"ato","Acute Cartesian Air",1,5,"ato","Acute Polar Air",0,5
+3,"ato","Acute Air",0,5,"ato","Acute Cartesian Air",1,5,"ato","Acute Polar Air",1,5
+3,"ato","Acute Air",1,5,"ato","Acute Cartesian Air",0,5,"ato","Acute Polar Air",1,5
+1,"Write"
+"ato","Acute Cartesian Air"
+0,"Variables"

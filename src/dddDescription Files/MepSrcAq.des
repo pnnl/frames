@@ -1,0 +1,347 @@
+"mf,Version 2.1"
+"Fate & Transport:Source:src,MEPAS 5.0 Source in an Aquifer,strmui.exe /b /aq,MepSrc.bat ,src.ico
+"
+MODULE VERSION
+  5.0 Compiled on 6/28/2007,  UI compiled on 6/28/2007
+
+MODULE DESCRIPTION
+The MEPAS Computed Source Term Release Module (CSTRM) is a 
+constantly stirred tank reactor (CSTR) model that
+assumes that the contamination is instantly
+distributed homogeneously throughout the defined
+source volume. The CSTRM assumes that the
+contaminants may be present in multiple phases
+(i.e., in aqueous solution, sorbed to solid
+particles, in vapor-filled pore space, or in a
+separate non-aqueous-phase liquid [NAPL] that is 
+immiscible with water and air).
+
+The CSTRM can be used to compute the environmental
+release rates (i.e., water infiltration, wind and
+sediment erosion) and contaminant emissions of
+radionuclides and chemicals from surface water
+impoundments, unsaturated soil (i.e., vadose zone),
+and saturated soil (i.e., aquifer) sources.
+
+CONTAMINANT LOSS MECHANISMS
+
+This version of the MEPAS CSTRM allows for loss of 
+contaminant mass from unremediated sites via the 
+following mass loss routes depending on the source 
+medium: 
+
+   - Leaching to groundwater,
+   - Overland to surface water by water erosion,
+   - Suspension by wind erosion to the atmosphere,
+   - Volatilization to the atmosphere,
+   - Decay/degradation, and 
+   - External inflow/outflow
+
+These contaminant loss routes can be used in 
+combinations or individually.  The wind/sediment
+erosion and water infiltration rates can be
+calculated by the model or they can be input
+directly by the user.
+
+MASS BALANCE AND PARTITIONING
+
+The CSTRM calculates mass balance for the different
+loss routes for each contaminant as a function
+of time.  These mass loss routes describe the
+simultaneous loss of contaminants from the source
+zone to the environmental media (i.e., vadose zone,
+saturated zone, and surface water).  The mass of each
+contaminant is recomputed and redistributed to each
+of the four phase for each time until all mass is
+gone or the defined simulation end time is reached.
+
+In the case where the simulation period terminates the
+evaluation before all the mass is release from the
+source, mass balance is preserve if the remaining mass
+at the source is taken into account. When multiple loss
+processes are assumed to occur simultaneously, the
+STRM accounts for the mass partitioning to the
+different environmental media, while maintaning mass
+balance.
+
+In some cases, the user may know the contaminant
+emissions for thr set of contaminants for one or more
+mass loss route but not for all routes.  This module
+will allow the user to enter know contaminant emissions
+for one or more mass loss route and will compute
+contaminant emissions for the other mass loss routes
+based on initial mass, environmental release rates
+and contaminant physical/chemical properties.  This
+module will maintain mass balance for these cases and
+conduct mass partitioning to the different media based
+on the user input and computed results.  In order to
+maintain mass balance, the model may not provide the
+same time-varying contaminant emission curves as
+input by the user because other losses are computed
+besides the user input losses.  User-defined masses
+will always be maintained by the model but the duration
+of the contaminant emissions may be shorter than the
+user input to maintain mass balance for the entire
+system.
+
+It should be noted that this is a semi-analytical model
+that is meant to be used in screening level or 
+preliminary assessments.  Testing has indicated that 
+it may overestimate mass released from the source by 
+as much as 4.6%.
+
+PATH DEPENDENCE
+
+This MEPAS CSTRM calculates each mass loss route
+individually and all contaminants evaluated for
+that route must have the same type of input data
+(i.e., known contaminant emissions or known initial
+mass and physical/chemical properties).  Information
+for different mass loss routes can vary for a given
+source.
+
+DECAY PRODUCTS
+
+This MEPAS CSTRM evaluates the ingrowth of progeny
+products via decay from the parent contaminants
+and are released using the same physical/chemical
+processes which govern the release of the parent
+contaminants.  The initial mass of progeny is
+assumed to be zero.
+
+MODULE REFERENCES
+A complete description of the assumptions and
+theoretical foundations used in this model can be
+found in:
+
+  Streile, G.P., K.D. Shields, J.L. Stroh,
+  L.M. Bagaasen, G. Whelan, J.P. McDonald,
+  J.G. Droppo, and J.W. Buck.  The Multimedia
+  Environmental Pollutant Assessment System
+  (MEPAS): Source-Term Release Formulations,
+  PNNL-11248, November 1996, Pacific Northwest
+  National Laboratory, Richland, WA.
+
+Other related sites:
+  http://mepas.pnl.gov/mepas
+  http://mepas.pnl.gov/FramesV1/source.stm
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     wff Aquifer
+     wcf Aquifer
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        
+URL Address:          http://mepas.pnl.gov/mepas/msrc/requirements.html
+"
+1,Read
+1,con,,1,1
+2,Write
+"wff,Aquifer"
+"wcf,Aquifer"
+124,Variables
+CVTFormat,Not Stochastic,,,,CVT format,0,STRING
+"WARNED,Not Stochastic,,,,Alerted user of known issues,0,STRING
+"STSOL,Continuous,mg/L,min,0,,Water solubility,1,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+"STMEDIA,Not Stochastic,,,,Source term media,0,STRING
+"STPOND,Not Stochastic,,,,Ponded site,0,LOGICAL
+"STINF_OP,Not Stochastic,,,,Leaching,0,LOGICAL
+"STOVL_OP,Not Stochastic,,,,Overland Surface Water,0,LOGICAL
+"STSUS_OP,Not Stochastic,,,,Suspension,0,LOGICAL
+"STVOL_OP,Not Stochastic,,,,Volatilization,0,LOGICAL
+"STSRC_OP,Not Stochastic,,,,Source/sink,0,LOGICAL
+"STDEC_OP,Not Stochastic,,,,Constituent decay,0,LOGICAL
+"STATYPE,Not Stochastic,,,,Air release type,0,STRING
+"STDELTA_T,Continuous,years,min,.1,max,100,Time interval for first 100 yrs,0,FLOAT
+"STMAXTIME,Not Stochastic,years,min,1,max,10000,Length of run,0,FLOAT
+"STMINWST,Continuous,fraction,min,0,max,1,Minimum waste fraction,0,FLOAT
+"STTEMP,Continuous,C,min,-45,max,32,Temperature measured at LCD,1,FLOAT
+Label,Month,Index2,
+"STMPRECIP,Continuous,cm,min,0,,Monthly precipitation,1,FLOAT
+Label,Month,Index2,
+"STMNUMPRE,Continuous,days,min,0,max,31,Number of monthly precipitation events,1,FLOAT
+Label,Month,Index2,
+"STWINDV,Continuous,m/s,min,0,,Mean monthly wind speed,1,FLOAT
+Label,Month,Index2,
+"STCLOUD,Continuous,tenths,min,0,max,10,Average cloudiness or mean sky cover,1,FLOAT
+Label,Month,Index2,
+"STRHMAX,Continuous,percent,min,0,max,100,Maximum monthly relative humidity,1,FLOAT
+Label,Month,Index2,
+"STRHMIN,Continuous,percent,min,0,max,100,Minimum monthly relative humidity,1,FLOAT
+Label,Month,Index2,
+"STOVLFLO,Continuous,m^3/yr,min,0,,Discharge to overland,0,FLOAT
+"STSEDLOD,Continuous,kg/yr,min,0,,Sediment load to overland pathway,0,FLOAT
+"STOVLFLX,Continuous,fraction/yr,min,0,max,1,Discharge as fraction of sw volume,,FLOAT0
+"STSTORMI,Discrete,,,,Storm type index for location of waste site,0,INTEGER
+"STPRECIP,Continuous,cm,min,0,max,12.7,2-yr, 6-hr precipitation event,0,FLOAT
+"STSLOPE,Continuous,percent,min,0,max,100,Slope of the waste site,0,FLOAT
+"STKFACTR,Continuous,,min,0.02,max,1,Soil erodibility factor,0,FLOAT
+"STCFACTR,Continuous,,min,0.01,max,1.5,Vegetative cover factor,0,FLOAT
+"STPFACTR,Continuous,,min,0.1,max,1.5,Erosion control practice factor,0,FLOAT
+"STSLENGTH,Continuous,cm,min,30.48,max,3.05E+07,Length of site down slope,0,FLOAT
+"STSBULKD,Continuous,g/cm^3,min,1,max,3,Dry bulk density of surface soil,0,FLOAT
+"STCLEAN,Continuous,cm,min,0,max,1000,Depth to top of waste zone,0,FLOAT
+"STTHICK,Continuous,cm,min,3.048,max,3.05E+06,Thickness of waste zone,0,FLOAT
+"STLENGTH,Continuous,cm,min,1,max,3.05E+07,Length of waste zone,0,FLOAT
+"STWIDTH,Continuous,cm,min,1,max,3.05E+07,Width of waste zone,0,FLOAT
+"STZBULKD,Continuous,g/cm^3,min,1,max,3,Bulk density of soil,0,FLOAT
+"STSSOL,Continuous,g/cm^3,min,1.00E-06,,,0,FLOAT
+"STEFFPOR,Continuous,fraction,min,0.001,max,1,Effective porosity,0,FLOAT
+"STMOISTC,Continuous,fraction,min,0,max,1,Moisture content,0,FLOAT
+"STTOTPOR,Continuous,fraction,min,0.001,max,1,Total porosity,0,FLOAT
+"STAIRSPC,Continuous,fraction,min,0,max,1,Volumetric air content,0,FLOAT
+"STAVTEMP,Continuous,C,min,-12,max,32,Average air temperature at the waste site,0,FLOAT
+"STAVWINDV,Continuous,m/s,min,0.45,max,22.35,Mean annual wind speed,0,FLOAT
+"STWINDHT,Continuous,m,min,0.3048,max,152.4,Height above ground of local wind measure,0,FLOAT
+"STRELHT,Continuous,m,min,0,,Source exit height,0,FLOAT
+"STSTRUCHT,Continuous,m,min,0,,Adjacent structure height,0,FLOAT
+"STEXVEL,Continuous,m/s,min,0,,Source exit velocity,0,FLOAT
+"STEXTEMP,Continuous,C,min,0,,Source exit temperature,0,FLOAT
+"STCORRSC,Discrete,,,,Fraction of non-erodible surface cover,0.INTEGER
+"STLOCSUR,Continuous,m,min,0,max,10,Surface roughness length,0,FLOAT
+"STVEGFR,Continuous,fraction,min,0,max,1,Surface area covered with vegetation,0,FLOAT
+"STCRUST,Continuous,fraction,min,0,max,1,Surface area covered with a crust layer,0,FLOAT
+"STNUMDIS,Continuous,#/month,min,0,max,31,Area-weighted disturbance frequency,0,FLOAT
+"STMAXWIND,Continuous,m/s,min,0.45,max,67,Fastest mile wind speed,0,FLOAT
+"STPEI,Continuous,,min,6,max,318,Thornwaite's Precipitation-Evaporation index,0,FLOAT
+"STNUMPRCP,Continuous,,min,0,max,365,# of days with >0.254mm precipitation,0,INTEGER
+"STROADS,Not Stochastic,,,,Is there roadway travel at the site,0,LOGICAL
+"STRTDIST,Continuous,km,min,0,max,10,Distance of roadway traveled,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STVSPEED,Continuous,km/hr,min,0,max,999,Average speed of vehicle per trip,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STVWEIGH,Continuous,ton,min,0,max,99,Average weight of vehicles,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STRTNUM,Continuous,#/day,min,0,max,9999,Average number of vehicles per day,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STSILT,Continuous,percent,min,0,max,100,Percent of silt on road surface,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STLCDELEV,Continuous,m,min,-15.24,max,3048,Elevation of LCD Station,0,FLOAT
+"STLAT,Continuous,deg,min,0,max,50,Latitute of waste site,0,FLOAT
+"STELEV,Continuous,m,min,-15.24,max,3048,Elevation of waste site,0,FLOAT
+"STSCSCN,Continuous,,min,0,max,100,SCS curve number,0,FLOAT
+"STAVAILW,Continuous,cm,min,0,max,76,Top soil water capacity,0,FLOAT
+"STINVEN,Continuous,g or Ci,min,0,,Inventory quantity,1,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+"STVOLRAT,Continuous,fraction,min,0,max,1,Fraction of baseline volatilization release,1,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+"STKD_NUM,Not Stochastic,,min,0,max,10,Number of time/equilibrium coefficients (kd) pairs,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STKD_TIM,Not Stochastic,yr,min,0,,Equilibrium coefficients (kd) time,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index4,,
+"STKD,Continuous,ml/g,min,0,,Equilibrium coefficients (kd),2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STLEACH_NUM,Not Stochastic,,min,0,max,10,Number of leaching time/flux pairs,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STLEACH_TIM,Not Stochastic,yr,min,0,,Leaching flux time,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index4,,
+"STLEACH,Continuous,g/yr,min,0,,Leaching flux rate,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STOVL_NUM,Not Stochastic,,min,0,max,10,Number of overland time/flux pairs,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STOVL_TIM,Not Stochastic,yr,min,0,,Overland flux time,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index4,,
+"STOVL,Continuous,g/yr,min,0,,Overland flux rate,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STSUSP_NUM,Not Stochastic,,min,0,max,10,Number of wind suspension time/flux pairs,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STSUSP_TIM,Not Stochastic,yr,min,0,,Wind suspension flux time,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index4,,
+"STSUSP,Continuous,g/yr,min,0,,Wind suspension flux rates,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STVOLAT_NUM,Not Stochastic,,min,0,max,10,Number of volatilization time/flux pairs,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STVOLAT_TIM,Not Stochastic,yr,min,0,,Volatilization flux time,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index4,,
+"STVOLAT,Continuous,g/yr,min,0,,Volatilization flux rate,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STSOURCE_NUM,Not Stochastic,,min,0,max,10,Number of time/flux pairs to the waste zone,1,INTEGER
+Variable,FSCNAME,Site,Index2,Index3
+"STSOURCE_TIM,Not Stochastic,yr,min,0,,Flux time to the waste zone,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,rate #,Index2,
+"STSOURCE,Continuous,g/yr,,,Flux rate to the waste zone,2,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+Label,time #,Index4,,
+"STDARCY_NUM,Not Stochastic,,min,0,max,10,Number of darcy Vadose time/rate pairs,0,INTEGER
+"STDARCY_TIM,Not Stochastic,yr,min,0,,Darcy Vadose time,1,FLOAT
+Label,rate #,Index2,
+"STDARCY,Continuous,cm/yr,min,0,,Darcy Vadose rate,1,FLOAT
+Label,time #,Index2,
+"STWATR_NUM,Not Stochastic,,min,0,max,10,Number of time/water erosion pairs,0,INTEGER
+"STWATR_TIM,Not Stochastic,yr,min,0,,Water erosion time,1,FLOAT
+Label,rate #,Index2,
+"STWATR,Continuous,cm/yr,min,0,,Water erosion rate,1,FLOAT
+Label,time #,Index2,
+"STWIND_NUM,Not Stochastic,,min,0,max,10,Number of time/wind erosion pairs,0,INTEGER
+"STWIND_TIM,Not Stochastic,yr,min,0,,Wind erosion time,1,FLOAT
+Label,rate #,Index2,
+"STWIND,Continuous,cm/yr,min,0,,Wind erosion rate,1,FLOAT
+Label,time #,Index2,
+"KDCLASS,Not Stochastic,,min,0,,Soil-texture classification,0,STRING
+"KDSAND,Not Stochastic,percent,min,0,max,100,% Sand of soil,0,FLOAT
+"KDSILT,Not Stochastic,percent,min,0,max,100,% Silt of soil,0,FLOAT
+"KDCLAY,Not Stochastic,percent,min,0,max,100,% Clay of soil,0,FLOAT
+"KDOMC,Not Stochastic,percent,min,0,max,10,% Organic matter content of soil,0,FLOAT
+"KDIRON,Not Stochastic,percent,min,0,max,99,% Iron and aluminum in the soil,0,FLOAT
+"KDPH,Not Stochastic,,min,0.1,max,14,pH of top soil,0,FLOAT
+"STCASID,Not Stochastic,,,,Chemical Abstract System Identification,1,STRING,con.FSCASID
+Variable,FSCNAME,Site,Index2,Index3
+"STGHALF,Not Stochastic,,,,Constituent half life,1,FLOAT
+Variable,FSCNAME,Site,Index2,Index3
+"STDRYSCO,Continuous,percent,min,0,max,10,Dry surface moisture content,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STSDISTB,Continuous,mm,min,.001,max,1.0,Aggregate size distribution,0,FLOAT
+"STSILTL,Continuous,g/m^2,min,0.02,max,400.0,Paved road surface silt loading,1,FLOAT
+Label,Paved/UnPaved,Index2,
+"STCLEAN_NUM,Not Stochastic,,min,0,max,10,Number of clean -need info- time pairs,0,INTEGER
+"STCLEAN_TIM,Not Stochastic,yr,min,0,,Clean -need info- time,1,FLOAT
+Label,rate #,Index2,
+"STTOTPOR_NUM,Not Stochastic,,min,0,max,10,Number of total -need info- time pairs,0,INTEGER
+"STTOTPOR_TIM,Not Stochastic,yr,min,0,,Total -need info- time,1,FLOAT
+Label,rate #,Index2,
+"STAIRSPC_NUM,Not Stochastic,,min,0,max,10,Number of air -need info- time pairs,0,INTEGER
+"STAIRSPC_TIM,Not Stochastic,yr,min,0,,Air -need info- time,1,FLOAT
+Label,rate #,Index2,
+"STSURFVOL_NUM,Not Stochastic,,min,0,max,10,Number of suface volume time pairs,0,INTEGER
+"STSURFVOL_TIM,Not Stochastic,yr,min,0,,Surface volume -need info- time,1,FLOAT
+Label,rate #,Index2,
+"STSURFVOL,Continuous,cm/yr,min,0,,Surface volume -need info- value ,1,FLOAT
+Label,time #,Index2,
+"STGLASS_NUM,Not Stochastic,,min,0,max,10,Number of glass -need info- pairs,0,INTEGER
+"STGLASS_TIM,Not Stochastic,yr,min,0,,Glass -need info- time,1,FLOAT
+Label,rate #,Index2,
+"STGLASS,Continuous,cm/yr,min,0,,Glass -need info- value ,1,FLOAT
+Label,time #,Index2,
+"STCONC,Continuous,g/g,min,0,,Concentration,0,FLOAT
+"STCONCTYPE,Continuous,g/g,min,1,max,5,Concentration type,0,INTEGER

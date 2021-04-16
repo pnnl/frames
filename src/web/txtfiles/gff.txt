@@ -1,0 +1,121 @@
+<a NAME="top"></a>
+<h2>GIS Water Flux File (GFF)</h2>
+There are currently three qualified types of the WFF, those qualifiers are: "Vadose", "Aquifer", "Surface Water". The fluxes are in pCi/yr or g/yr depending on whether the constituent is a radionuclide or chemical respectivly. The flux is a spatial average through a rectangular plane segment that is the interface between one boundary and the <B><I>Next</I></B>. These flux values are the instantaneous values at that time and location not an average. Every data set denotes another location, in most cases a downstream icon. There are NO limits on number of datasets, constituents, progeny, and time/flux pairs.
+<p>
+The following outline is a description of the basic information provided in the WFF. An example WFF is included after the outline. Comparing the line by line description in the outline to the example should clarify and help locate data contained in the WFF. Lines beginning with ';' are descriptive comments only and will not appear in the actual WFF.
+<br>
+<br><B><I>For each</I></B> 'Module' producing a WFF section
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Module Name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Lines in section - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Header Lines - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Header Line'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header information - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Header Line'
+<br>&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Number of Data Sets - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;<B><I>For each</I></B> 'Data Set'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Set name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Intended consuming module name, use any connected consuming module name.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> the set is intended for all consuming modules <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;'Data Set Name' = "All"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> 'Data Set Name' = "All" <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;"Number of Data Sets" = 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valid WFF Qualifier for this dataset - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;"Vadose" / "Aquifer" / "Surface Water"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width of flux plane in meters - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> medium is providing flux rates to the aquifer <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Width is measured transverse to the flow direction in the aquifer.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>If</I></B> vadose zone modeling only is being performed <B><I>then</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Length and width are arbitrary.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<B><I>EndIf</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;For the remaining cases width should be self-explanatory.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width units - <B>[Const STRING]</B> - "m"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Length/Height of flux plane in meters - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Length/Height unit - <B>[Const STRING]</B> - "m",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance from Water Table in meters - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;(or the upper surface of the water body in the case of
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;rivers, estuaries, etc.) to Top of Flux plane
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;"0" <B><I>If</I></B> medium is NOT providing fluxes to the quifer
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance from water table units - <B>[Const STRING]</B> - "m",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Natural Recharge Rate in meters per year - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Natural Recharge Rate unit - <B>[Const STRING]</B> - "m/yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Constituents - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Vertices for Flux Plane
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Vertice'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X, Y, Z
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Vertice'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water Flux Time unit - <B>[Const STRING]</B> - "yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water Flux unit - <B>[Const STRING]</B> - "m^3/yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Water Flux Time Pairs - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Water Flux Time Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time in years - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux in meters cubed per year - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Water Flux Time Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Constituent'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constituent ID - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time unit - <B>[Const STRING]</B> - "yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux unit - <B>[Const STRING]</B> - "pCi/yr" / "g/yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Time Flux Pairs - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Flux types - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Number of flux types should be 2 for "Surface Water" qualifier.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;For all other qualifiers the number of flux types should be 1.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Progeny - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux1 - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;adsorbed flux <B><I>If</I></B> 2 types, otherwise total mass
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux2 - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;dissolved flux <B><I>If</I></B> 2 types, otherwise omit
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Progeny'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Progeny name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Progeny ID - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time unit - <B>[Const STRING]</B> - "yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux unit - <B>[Const STRING]</B> - "pCi/yr" or "g/yr"
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Time Flux Pairs - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Flux types - <B>[INTEGER]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Number of flux types should be 2 for "Surface Water" qualifier.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;For all other qualifiers the number of flux types should be 1.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent name - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent ID - <B>[STRING]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>For each</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>A line with:</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux1 - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;adsorbed flux <B><I>If</I></B> 2 types, otherwise total mass
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flux2 - <B>[FLOAT]</B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;dissolved flux <B><I>If</I></B> 2 types, otherwise omit
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>End Line</I></B>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Time Flux Pair'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Progeny'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<B><I>Next</I></B> 'Constituent'
+<br>&nbsp;&nbsp;<B><I>Next</I></B> 'Data Set'
+<br><B><I>Next</I></B> 'Module'
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<p style="margin-top: -2; margin-bottom: -2">

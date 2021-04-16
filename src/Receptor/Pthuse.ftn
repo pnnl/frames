@@ -1,0 +1,107 @@
+!   MEPAS HAZ2: PTHUSE.FTN             Version Date: 04-Dec-1995
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK PTHUSE                              *
+!                                                                            *
+!  Common block PTHUSE CONTAINS CONSUMPTION AND USAGE RATES FOR EXPOSURE     *
+!                      PATHWAYS.                                             *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    04-Dec-1995 DLS                                         *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!  UDW     DAILY INTAKE RATE OF DRINKING WATER BY AN INDIVIDUAL, L/D
+!  URH(3)  DAILY TIME SPENT IN EACH OF SWIMMING, BOATING AND SHORLINE ACTIVITIES
+!          BY AN INDIVIDUAL, HR/D
+!  UAG(4)  DAILY INTAKE RATE OF EACH FARM PRODUCT BY AN AVERAGE INDIVIDUAL,
+!          1 - LEAFY VEG.; 2 - VEGETABLES; 3 - MEAT; 4 - MILK. KG/D OR L/D
+!  UAQ(2)  DAILY INTAKE RATE OF AQUATIC FOOD BY AN INDIVIDUAL, KG/D,
+!          1 - FISH; 2 - INVERTEBRATES (CLAMS, MUSCLES)
+!  UBR     DAILY INHALATION VENTILATION RATE BY AN INDIVIDUAL, M3/D
+!  UBW     DAILY INTAKE RATE OF DOMESTIC WATER BY INADVERTENT INGESTION DURING
+!          BATHING.  DEFAULT IS 0.01 L/D.
+!  USW     INTAKE RATE OF WATER WHILE SWIMMING, L/HR OF SWIMMING
+!  USOIL   SOIL INGESTION RATE, MG/D
+!  USED    Sediment ingestion rate, g/hr
+!  UBRES   Inhalation rate during resuspension periods (m3/d)
+!  RESFAC  Resuspension factor (m-1)
+!  CML     Dust mass loading for measured soil pathway (kg/m3)
+!  UEXT    External exposure time (hr/d)
+!  FREQ    Frequency for each pathway (fraction of days that exposure occurs).
+!  SWF     Shore width factor for external shoreline pathway (-)
+!  SBRF    Boatind external dose reduction factor
+!  SSRF    Soil external dose reduction factor
+!  SHI     Indoor shielding factor for soil external exposure
+!  FTI     Indoor time fraction for soil external exposure
+!  SHO     Outdoor shielding factor for soil external exposure
+!  FTO     Outdoor time fraction for soil external exposure
+!  UAGGW(10,4) Groundwater agricultural food intake rates
+!  UAGSW(10,4) Surface water agricultural food intake rates
+!  UAGAT(30,4) Atmospheric agricultural food intake rates
+!  UAGSL(30,4) Measured soil agricultural food intake rates
+!  USHWRG(10)  Groundwater shower frequency
+!  USHWRS(10)  Surface water shower frequency
+!  UBRSHG(10)  Groundwater shower inhalation rate
+!  UBRSHS(10)  Surface water shower inhalation rate
+!  UAQSW(10,2) Aquatic food ingestion rates
+!  UEVSHOR(10) Shoreline event frequency
+!  USLSL(30)   Measured soil, soil ingestion rate
+!  UVSLSL(30)  Measured soil, event frequency
+!  UBRESL(30)  Measured soil, resuspension inhalation rate
+!  UEXTSL(30)  Measured soil, external dose time, hr/d
+!  UEVSWIM(10) Swimming event frequency
+!  UEVBOAT(10) Boating event frequency
+!  TDIRD(10)   Direct radiation exposure time, hr/d
+!  USLAT       Atmospheric soil ingestion rate
+!  UVSLAT      Atmospheric soil event frequency
+!  UBRAT       Atmospheric air inhalation rate
+!  UBRESA      Atmospheric soil resuspension inhalation rate
+!  UEXTAT      Atmospheric external soil dose time, hr/d
+!  TAGE1       Lower limit on years for age group, default = 0
+!  TAGE2       Upper limit on years for age group, default = 70.
+!  INHALE flag to indicate method for inhalation impact analysis 0 - air conc.
+!                                                                1 - ave daily intake
+!==== Modification History ===================================================
+!
+!   Date      Who  Modification Description
+!  ---------  ---  ------------------------------------------------------
+!  05-NOV-92  DLS  Removed parameter UWB, add USOIL
+!  06-Oct-93  DLS  Added USED, UBRES, RESFAC, CML, and UEXT
+!  22-Dec-93  DLS  Added SWF
+!  30-Dec-93  DLS  Added SHI,FTI,SHO,FTO
+!  04-Dec-95  DLS  Added parameters dimensioned by receptor location
+!  25-May-99  DLS  Added TAGE1 and TAGE2
+!  26-Apr-01  DLS  Added INHALE
+!==== COMMON Block Definition ================================================
+!
+      COMMON/PTHUSE/UDW(3),UHR(3),UAG(4),UAQ(2),UBR,UBW,USW,USOIL,  &
+                    USED, UBRES, RESFAC,      UEXT, FREQ(25), SWF,  &
+                    SBRF, SSRF,  SHI,    FTI, SHO,  FTO,            &
+                    UAGGW(4), UAGSW(4), UAGAT(4), UAGSL(4),         &
+                    USHWRG,  USHWRS,  UBRSHG,  UBRSHS,              &
+                    UAQSW(2), UEVSHOR, USLSL,   UVSLSL,             &
+                    UBRESL,  UEXTSL,  UEVSWIM, UEVBOAT,             &
+                    TDIRD,                                          &
+                    USLAT, UVSLAT, UBRAT, UBRESA, UEXTAT,TAGE1,TAGE2, INHALE
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

@@ -1,0 +1,51 @@
+C   HEALTH:      DEVICE.CMN             Version Date: 5-Jun-98               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK DEVICE                              *
+C                                                                            *
+C  Common block DEVICE provides logical unit numbers for each I/O file       *
+C                                                                            *
+C  Written by:       Dennis Strenge/BA Napier                                *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    5-JUN-98  ban                                           *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/DOSRISK
+C     Referenced by modules: 
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C   NERR is logical unit for output error messages
+C   NGID is logical unit for input from GID file
+C   NHLS is logical unit for output file .HLS, listing of input
+C   NIDF is logical unit for input file FACIL.ID, for file names
+C   NRMD is logical unit for input file RMDLIB.DAT decay data
+C   NRIF is logical unit for output file .RIF, PDCF for RECEPTOR OUTPUT.  
+C   NHIF is logical unit for output HEALTH EFFECTS File
+C   NERROR is error count flag
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  8-JUN-1998      BAN  Revised for HEALTH
+C==== COMMON Block Definition ================================================
+C
+      COMMON/DEVICE/NERR,NGID,NHLS,NIDF,NRMD,NRIF,NHIF,NERROR
+C
+C==== Variable Declarations ==================================================
+C
+      INTEGER NERR,NGID,NHLS,NIDF,NRMD,NRIF,NHIF, NERROR
+C
+C---- END OF COMMON BLOCK DEVICE ---------------------------------------------
+C

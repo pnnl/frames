@@ -1,0 +1,16 @@
+frmView = 132, 174, 836, 888, C, 66, 87, 947, 826, C
+Reference = 0, 0, 0, 0, C, 110, 145, 991, 884, C
+rtfPrint = 0, 0, 0, 0, C
+dlgprint = 0, 0, 0, 0, C
+CSV_IO = 0, 0, 0, 0, C
+PARM_IO = 0, 0, 0, 0, C
+CNVRT_IO = 44, 58, 748, 772, C
+INIReader = 110, 145, 925, 867, C
+Vars = 0, 0, 0, 0, C
+DesCls = 0, 0, 0, 0, C
+DesVars = 0, 0, 0, 0, C
+FileType = 0, 0, 0, 0, C
+GidCls = 0, 0, 0, 0, C
+ModCls = 0, 0, 0, 0, C
+FuiCls = 0, 0, 0, 0, C
+Common = 88, 116, 792, 830, C

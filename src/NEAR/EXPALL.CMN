@@ -1,0 +1,14 @@
+C----------------------------------------------------------------------
+
+C     Exposure Rates Common Block
+C     Module of GENII                        Version of 2-Sep-87 RAP
+C
+C  15-Dec-2004 BAN increased lifespan to 100 years
+  
+C      COMMON /EXPALL/ EXPOST(70,9,28),UEXP(9,14)
+      COMMON /EXPALL/ EXPOST(100,9,28),UEXP(9,14)
+
+      REAL EXPOST, UEXP
+
+C-----------------------------------------------------------------------
+

@@ -1,0 +1,47 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Object={6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.4#0; comctl32.Ocx
+Form=plusUI.frm
+Form=..\Common Files\Loading.frm
+Form=..\Common Files\frmAbout.frm
+Module=PlusTypes; PlusTypes.bas
+Module=Common; ..\Common Files\Common.bas
+Module=CSV_IO; ..\Common Files\CSV_IO.BAS
+Module=PARM_IO; ..\Common Files\PARM_IO.BAS
+Module=CNVRT_IO; ..\Common Files\CNVRT_IO.BAS
+Module=FramesAPI; ..\Common Files\Frames.bas
+IconForm="PlusUI"
+Startup="PlusUI"
+HelpFile=""
+Title="Plus-SG Operator"
+ExeName32="PlusUI.exe"
+Command32="/fraction c:\framesv1\case\tst1 c:\framesv1\case\(tmp) 1 1 pls5"
+Name="PlusSG"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=7
+RevisionVer=10
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="PNNL"
+CondComp="NOREFERENCE = 1"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1

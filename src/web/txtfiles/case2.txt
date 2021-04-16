@@ -1,0 +1,49 @@
+<h2>Testing:
+Case 2&nbsp;</h2>
+<p><b><font face="Verdana"><font color="#000080"><font size=-1>Description
+and Rationale&nbsp;</font></font></font></b>
+<p><font face="Verdana"><font color="#000080"><font size=-1>This case verifies
+that the Frames User Interface (FUI) allows the user to open an existing Global Input Data
+(GID) file, edit and save the file under a different name, and delete an
+icon. The ‘GO’ button, which allows the user to run all modules with a
+yellow or green light by pressing a single button, will also be tested.
+The file that will be opened and edited is ‘fui_01.gid’. This is the GID
+file that was created in Test Case FUI_01.&nbsp;</font></font></font>
+<p><b><font face="Verdana"><font color="#000080"><font size=-1>Instructions
+for Performing the Test and Expected Results&nbsp;</font></font></font></b>
+<p><font face="Verdana"><font color="#000080"><font size=-1>These instructions
+assume that the FUI is running and visible on the user’s screen. Select
+‘Open’ from the ‘File’ menu. You will be prompted to select a GID file
+to open. Select the GID file ‘fui_01.gid’. The scenario developed in Test
+Case 1 should appear in the working space. Save the file as ‘fui_02.gid’
+by selecting ‘Save As’ from the ‘File’ menu.<p> When prompted, type in ‘fui_02.gid’
+as the new file name and click on the ‘Save’ button. Notice that the file
+name in the lower left corner changed to ‘fui_02.gid’ and also that all
+of the module signal lights (excluding the constituent selection module)
+have turned yellow.<p> This happens because when a case is ‘Saved As’ only
+the User Input data is saved. The intermediate and output results from
+the original file are not copied. The yellow lights indicate that the models
+need to be run again. To do this quickly, click on the ‘GO’ button. All
+modules should execute automatically and all signal lights should turn
+green.</font></font></font>
+<p><font face="Verdana"><font color="#000080"><font size=-1>&nbsp;Next,
+delete the Vadose Zone icon by right clicking on the Vadose Zone module
+and selecting ‘Delete’ from the popup menu. A message window will appear
+to ask you if you are sure you want to delete the module. Click ‘Yes’ and
+the Vadose Zone icon will be deleted. Note that all of the signal lights
+will turn red because the modeling scenario has been changed. Connect the
+Source Term icon directly to the Saturated Zone icon (Source Term _ Saturated
+Zone). Then choose the ‘MEPAS® 4.1 Saturated Zone Module’ as the model for
+the Saturated Zone.<p> Re-run the scenario using the ‘GO’ button again. The
+modules in this scenario need to be advanced to the yellow light stage.
+Therefore, when you click the ‘GO’ button, each model user interface will
+appear. All of the data entered in Test Case 1 has been preserved, so leave
+all settings as they are. Use the ‘File’ drag down menu to save and exit
+each user interface. After all of the model user interfaces have been brought
+up and saved, the FUI should run the scenario to completion. Again, all
+signal lights should turn to green.</font></font></font>
+<p><font face="Verdana"><font color="#000080"><font size=-1>&nbsp;Close
+the file and save the changes.</font></font></font>
+<p><font face="Verdana"><font color="#000080"><font size=-1>&nbsp;<b>Results&nbsp;</b></font></font></font>
+<p><font face="Verdana"><font color="#000080"><font size=-1>The above instructions
+were followed and the results matched the expectations.&nbsp;</font></font></font>

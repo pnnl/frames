@@ -1,0 +1,58 @@
+"mf","Version 2.1"
+"Fate & Transport:Source:src","FRAMES GIS Known Source Module","knowng.exe 0","knowng.exe 1","src.ico"
+"
+MODULE VERSION
+1.4
+
+MODULE DESCRIPTION
+This module is experimental and is used in conjunction with the GIS module.
+
+Use FRAMES Known Source to input known constituent flux and or concentrations for a source. This module assumes that the user knows all the release rates of interest.  This module can be used for contaminated surface water impoundments, unsaturated soil (i.e., vadose zone), and saturated soil (i.e., aquifer) sources.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny emission.  Therefore, this module assumes that the progeny emissions are input along with the parent emissions.
+
+MODULE REFERENCES
+Document:  FRAMES Known Source Module
+
+Authors:
+  Mitch Pelton
+  Gariann Gelston
+  Melanie Eslinger
+
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 gis Geographical Info required as input
+
+Valid Output Writes
+     gff Vadose
+
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           Minimum 4MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,"Read"
+2,"con","",1,1,"gis","Geographical Info",1,1
+1,"Write"
+"gff","Vadose"
+0,"Variables"

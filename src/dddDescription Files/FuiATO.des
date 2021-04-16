@@ -1,0 +1,111 @@
+"mf,Version 2.1"
+"Boundary Conditions:User Defined:usr,ATO Air Module,ato.exe 1,ato.exe 3,air.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+Use this module only if you know the concentrations, deposition rates and/or external dose in air.  The constituent concentrations, deposition rates, and external doses all at user provided points in time, are entered directly through the interface.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny emission.  Therefore, this module assumes that the progeny emissions are input along with the parent emissions.
+
+MODULE REFERENCES
+Document:  FRAMES ATO Air Module
+
+Authors:
+  Mitch Pelton
+  Gariann Gelston
+  Melanie Eslinger
+
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+  http://mepas.pnl.gov/FramesV1/documents/PNNL13405-knownato.pdf
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     ato Air
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,Read
+1,con,,1,1
+1,Write
+"ato,Air"
+23,Variables
+CVTFormat,Not Stochastic,,,,CVT format,0,STRING
+"fluxtypes,Not Stochastic,,,,Flux types,1,STRING
+Label,Flux index #,Index1
+"reactivefrac,Continuous,fraction,,,Reactive gas fraction,1,FLOAT
+Label,flux type #,Index1
+"reactivedensity,Continuous,g/cm^3,,,Reactive gas density,1,FLOAT
+Label,flux type #,Index1
+"radius,Continuous,um,,,Radius,1,FLOAT
+Label,flux type #,Index1
+"density,Continuous,g/cm^3,,,Density,1,FLOAT
+Label,flux type #,Index1
+"Settype,Not Stochastic,,,,Set type,0,STRING
+"showprog,Not Stochastic,,,,Show progeny,0,LOGICAL
+CASID,Not Stochastic,,,,Chemical Abstract System Identification,1,STRING,con.FSCASID
+Variable,FSCNAME,Site,Index1
+"times,Not Stochastic,yr,,,Times,2,FLOAT
+Variable,FSCNAME,Site,Index1
+Label,index # ,Index3,,
+"locname,Not Stochastic,,,,Location name,0,STRING
+"outcnt,Continuous,,,,Output count,0,INTEGER
+"gas,Not Stochastic,,,,Selection of Gas,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"particle1,Not Stochastic,,,,Selection of Particle 1,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"particle2,Not Stochastic,,,,Selection of Particle 2,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"particle3,Not Stochastic,,,,Selection of Particle 3,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"air,Not Stochastic,,,,Selection of concentration output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"ext,Not Stochastic,,,,Selection of external output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"dep,Not Stochastic,,,,Selection of depostion output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"depwet,Not Stochastic,,,,Selection of wet depostion output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"depdry,Not Stochastic,,,,Selection of dry depostion output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"deptot,Not Stochastic,,,,Selection of total depostion output,2,LOGICAL
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+"values,Continuous,,,,Deposition type[1-11]/Concentration type[12-15],4,FLOAT
+Label,location # ,Index1
+Variable,FSCNAME,Site,Index2
+Label,type # ,Index4,,
+Label,time index # ,Index5

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>RAGS Table Generator Help</title>
+</head>
+
+<body background="frames1.jpg">
+<hr>
+<h3 align="center">RAGS Table Generator Help</h2>
+<hr>
+
+<p>The RAGS Table Generator produces tables required for a RAGS analysis as prescribed by the U.S. Environmental Protection Agency (EPA) at: <a href="http://www.epa.gov/oswer/riskassessment/ragsd/tara.htm">http://www.epa.gov/oswer/riskassessment/ragsd/tara.htm</a>. They are populated to the extent that relevant and applicable data is available from the FRAMES modules.The tables are created in Excel.</p>
+
+<p>The user can choose one of three report options:</p>
+<ol>
+<li>Central Tendency (CT)</li>
+<li>Reasonable Maximum Exposure (RME)</li>
+<li>Time Varying</li>
+</ol>
+<p>If CT or RME is chosen:</p>
+<ol>
+<li>The user is responsible to ensure that assumptions associated with choosing CT or RME are specified and adhered to in the assessment.</li>
+<li>The source term and all subsequent exposure concentrations and assessment results are assumed NOT to be a function of time.</li>
+<li>Because it is assumed that the assessment results do not vary in time, the first output value is used in developing the summary tables 9 and 10.</li>
+</ol>
+<p>If Time Varying is chosen:</p>
+<ol>
+<li>The user can choose one of two criteria for De-Minimus values, which specifies how to handle leading and trailing zeroes.</li>
+  <ol style="{list-style-type:lower-alpha;}">
+  <li>All values: no exclusions</li>
+  <li>Non-zero Values: excludes all but one leading zero and excludes all zeroes after the last non-zero value. This option may modify start and end times.</li>
+  </ol>
+<li>The user can choose to report one of the possible measures, including:
+  <ol style="{list-style-type:lower-alpha;}">
+  <li>Probability of NOT exceeding measure (e.g. risk/hazard): Reports the probability of exceedence for user-defined thresholds. This is accomplished by determiing the duration of time the curve exceeds each of 100 regular intervals from minimum to maximum. Interpolation between intervals may then be used to report the user-specific probabilities.</li>
+  <li>Minimum: Reports the minimum value</li>
+  <li>Maximum: Reports the maximum value</li>
+  <li>Mean: Reports arithmetic mean - integrates values from start time to end time and divides by elapsed time.</li>
+  <li>Median: Reports the median, which is the middle of the sorted values.</li>
+  <li>Midpoint: Reports the midpoint, which is the value half-way between start and end time (unsorted).</li>
+  </ol>
+<li>Table 9 Summary of Receptor Risks and Hazards will be reported in two ways.</li>
+  <ol style="{list-style-type:lower-alpha;}">
+  <li>Based on the Sampling of Individual Time-Varying Curves, irrespective of time.</li>
+  <li>Based on the Sampling of the Time-Varying Curve, after the Time-Varying Hazard/Risk curves have been combined in time.</li>
+  </ol>
+</ol>
+<!--
+<p><b>COPC Thresholds for Table 10</b><br>
+<p>Contaminants of potential concern (COPC) are used in generating Table 10.
+<p>Carcinogenic Risk:</p>
+<p>Non-Carcinogenic Hazard Quotient:</p>
+-->
+</body>
+
+</html>

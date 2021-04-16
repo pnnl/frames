@@ -1,0 +1,43 @@
+
+
+<h2>Test Case 6 </h2><p>
+
+<b> Description and Rationale </b><p>
+
+
+
+
+
+    This case verifies that the FRAMES User Interface (FUI) has a working Sensitivity/Uncertainty module. Data will be entered to ensure that the Sensitivity/Uncertainty module icon signal lights are working properly and that the Sensitivity Uncertainty File (SUF) viewer is working properly. The file ‘fui_01.gid’ will be opened and edited. This is the Global Input Device (GID) file developed for Test Case 1.<p>
+
+
+<b>     Instructions for Performing the Test and Expected Results </b><p>
+
+
+
+            These instructions assume that the FUI is running and visible on the user’s screen. From the ‘File’ menu, select ‘Open’. When prompted which file to open, select the GID file named ‘fui_01.gid’. The scenario developed in Test Case 1 should appear in the working space. Save the file as ‘fui_06.gid’. To do this, select ‘Save As’ from the ‘File’ menu. <p>When prompted for a new file name, type in ‘fui_06.gid’ and click on the ‘Save’ button. Notice that the file name in the lower left corner changed to ‘fui_06.gid’ and also that all of the module signal lights (excluding the constituent selection module) have turned yellow. This happens because when a case is ‘Saved As’ only the User Input data is saved. The intermediate and output results from the original file were not copied. The yellow lights indicate that the models need to be run again. Leave the lights yellow in this case. To do this quickly, click on the ‘GO’ button. All modules should execute automatically and all signal lights should turn green.<p>
+
+
+
+            Insert a Sensitivity module into the workspace. Connect the Vadose Zone icon to the Sensitivity icon (Vadose Zone _ Sensitivity). Right click on the icon and select ‘General Info’. Pick the ‘MEPAS Sensitivity/Uncertainty’ model and click ‘Ok’. Notice that the signal light turned red. <p>Next, open up the user interface by right clicking on the icon and selecting ‘User Input’. On the ‘Variables’ tab, click on the first item in the list ‘Soil total porosity from Vadose1 (vad4)’. Type ‘Porosity’ in the Alias window and click ‘Add’. <p>Next, click on the ‘Parameters’ tab. On the ‘Distribution’ subtab, use the ‘Type’ list box to select ‘Uniform’. In the ‘Upper bound’ box, type ‘2.0’. In the ‘Lower bound’ box, type ‘1.3’. Next click on the ‘Outputs’ tab. Click in the ‘Number of iterations’ box and type ‘2’. Then click on the second item in bottom box, ‘Water constituent flux peak from Vadose1 (vad4) for Benzene’. In the ‘Alias’ box, type ‘PeakB’ and click the ‘Add/Change’ button.<p> Use the ‘File’ menu to save and exit. Notice that the signal light turned yellow indicating that the model is ready to run. Run the Sensitivity/Uncertainty model by right clicking on it and selecting ‘Run Model’. The model should run without error. Close down the sensitivity/uncertainty display window and you should notice the signal light has turned green.<p>
+
+
+
+            Next, right-click on the Sensitivity icon and select an SUF Chart from the View/Print Module Output sub-menu on the context menu.  Microsoft Excel should run and the contents of the SUF file created should be graphed. Close Excel without saving.<p>
+
+
+
+            Close the scenario and save changes. <p>
+
+
+
+<b>           Results </b><p>
+
+
+The above instructions were followed and the results matched the expectations
+
+<p>
+
+ <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"> <p>
+<a href="software.html#testing"><b>Return to the Testing outline on Software page.</a></b>

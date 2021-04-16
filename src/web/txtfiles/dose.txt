@@ -1,0 +1,127 @@
+
+  <h2>Dose Factors</h2><p>
+
+<b>Radiation Dosimetry Factors:</b>
+<P>Two methods are in general use for evaluation of risk from intake of
+radionuclides. The first involves use of radiation dosimetry factors to estimate
+the lifetime radiation dose from the postulated exposure scenario. The total
+lifetime radiation dose is then multiplied by a health effects conversion factor
+to obtain the human health risk endpoint (usually cancer incidence or cancer
+fatality risk). The second method for estimation of radiation risk involves use
+of slope factors provided by the EPA Health Effect Assessment Summary Tables
+(HEAST). Slope factors are provided for inhalation and ingestion intake routes,
+and for external exposure to radionuclides distributed uniformly in contaminated
+soil. The slope factors and radiation dosimetry factors are contained in the
+MEPAS database. The radiation dose factors are based on EPA Federal Guidance
+Reports (FGR) 11 and 12. The dermal absorption dose factors have been calculated
+by staff of Pacific Northwest Laboratory, using a dosimetric computer program
+similar to the program used to generate the internal dosimetry numbers of FGR
+11.</P>
+<P>The following table indicates the exposure pathways that may be evaluated
+using the slope factors and radiation dose factors. </P><PRE>
+
+                        EPA HEAST                      Radiation
+
+Exposure Pathway        Slope Factors           Dosimetry Factors
+
+Ingestion               Yes                             Yes
+
+Inhalation              Yes                             Yes
+
+Dermal Absorption       No                              Yes
+
+External - ground       Yes                             Yes
+
+External - air          No                              Yes
+
+External - water        No                              Yes
+
+</PRE>
+<P>A summary of the radiation dosimetry and slope factors follows for the
+parameters included in the MEPAS database.</P>
+<b>Inhalation Dose Factor (rem/pCi):</b>
+<p>
+The inhalation dose factor gives the
+lifetime radiation dose (effective dose equivalent) from inhalation of unit
+activity (one pCi) of a radionuclide. The dose factors include contributions
+from radiation decay chain progeny produced within the body after inhalation of
+the parent radionuclide.
+<p>
+<b>Ingestion Dose Factor (rem/pCi):</b>
+<p>
+The ingestion dose factor gives the
+lifetime radiation dose (effective dose equivalent) from ingestion of unit
+activity (one pCi) of a radionuclide. The dose factors include contributions
+from radiation decay chain progeny produced within the body after ingestion of
+the parent radionuclide.
+<p>
+<b>Dermal Absorption Dose Factor (rem/pCi):</b>
+<p>
+The dermal absorption dose
+factor gives the lifetime radiation dose (effective dose equivalent) following
+dermal absorption of unit activity (one pCi) of a radionuclide. The dose factors
+include contributions from radiation decay chain progeny produced within the
+body after absorption of the parent radionuclide. The dermal absorption dose
+factor is applied to the estimated total absorption of the radionuclide through
+the skin for dermal contact (water or soil) scenarios.
+<p>
+<b>External Radiation Dose Factor for Submersion in Contaminated Air (rem/hr
+per pCi/m^3):</b>
+<p>
+The air submersion external dose factor provides the dose rate
+for exposure to a radionuclide distributed uniformly in air. This exposure
+pathway is generally not significant compared to the inhalation pathway, except
+for noble gas radionuclides (i.e. krypton-85) which are not absorbed by the body
+during inhalation.
+<p>
+<b>External Radiation Dose Factor for Exposure to Contaminated Soil (rem/hr per
+pCi/m^2):</b>
+<p>
+The ground external dose factor provides the dose rate for
+exposure to a radionuclide from a radionuclide distributed uniformly in soil.
+The radionuclide is assumed to be in an infinite contaminated soil layer,
+although for practical purposes, a contamination depth of 1 meter represents an
+effective infinite layer (i.e., increasing the depth of contamination below 1
+meter will not increase the dose rate).
+<p>
+<b>External Radiation Dose Factor for Exposure to Contaminated Water (rem/hr
+per pCi/L):</b>
+<p>
+The water immersion external dose factor provides the dose rate
+for exposure to a radionuclide while immersed in contaminated water. The dose
+factor is used to estimate the external dose while swimming and boating (partial
+immersion).
+<p>
+<b>Inhalation Slope Factor (risk/pCi):</b>
+<p>
+The inhalation slope factor provides
+an estimate of the risk of cancer (incidence) from inhalation of a radionuclide.
+All slope factors in the MEPAS database were taken from HEAST reports. Values
+are subject to change as new HEAST reports are issued by EPA.
+<p>
+<b>Ingestion Slope Factor (risk/pCi):</b>
+<p>
+The ingestion slope factor provides
+an estimate of the risk of cancer (incidence) from ingestion of a radionuclide.
+All slope factors in the MEPAS database were taken from HEAST reports. Values
+are subject to change as new HEAST reports are issued by EPA.
+<p>
+<b>External Exposure to Soil Slope Factor (risk/yr per pCi/kg):</b>
+<p>
+The
+external exposure slope factor provides an estimate of risk per year of exposure
+from exposure to radionuclides in soil. All external slope factors in the MEPAS
+database are taken from HEAST reports. Values are subject to change as new HEAST
+reports are issued by EPA.<BR><BR>
+<br>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<a href="software.html#database">Return to the Software page.</a>
+<br>
+<br><a href="home.html"><b>Introduction</b></a>
+<br><a href="paramete.html"><b>Database Parameters</b></a>
+<br><a href="physical.html"><b>Physical Parameters</b></a>
+<br><b>Dose Factors</b>
+<BR><a href="decay.html"><b>Decay Half Times</b></a>
+<br><a href="transport.html"><b>Environmental Transport Factors</b></a>
+<br><a href="equation.html"><b>Parameter Estimation Equations</b></a>
+<br><a href="tox.html"><b>Toxicity Factors</b></a>

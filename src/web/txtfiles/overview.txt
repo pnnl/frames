@@ -1,0 +1,35 @@
+
+            <h2>FRAMES Overview</h2><P>
+
+            A software platform now exists for decision-makers and environmental modelers to link their preferred codes with others to perform appropriate assessments. This software platform, from which different codes can be linked to communicate with each other, is called Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES).<p> FRAMES aids the user in constructing a Conceptual Site Model--a site that is reconstructed on screen by choosing icons that represent the real or potential flow of contamination. This software platform is also an open-architecture, object-oriented system that provides an environmental database, providing a convenient list of relevant constituents from which the user may choose.<p>The software also allows users to choose the most appropriate codes to solve simulation requirements, and it presents graphical packages for analyzing the results. <p>
+
+  <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"><p>
+
+
+<b>How does a model get input and output?</b><br>
+FRAMES provides data file specifications that describe how all site information is stored within a framework and passed between modules. These data file specifications are only associated with the transfer of information between modules or other frameworks, not with model-specific information. <p>
+
+<b>How is it used?</b><br>
+With the WindowsTM-based plug-and-play interface, the user can build a Conceptual Site Model by means of media icons that represent the flow of contamination through the environment. Then, the user selects the simulation models to be used for analysis. FRAMES allows users to produce multiple unique analyses with one software tool. <p>
+
+<b>What information is produced? </b><br>
+FRAMES' modularization produces several types of time-varying outputs including the following:<UL>
+<LI>Constituent mass remaining at source
+<LI>Constituent fluxes from source or medium
+<LI>Atmospheric concentrations and soil deposition
+<LI>Water concentrations
+<LI>Intake or dose
+<LI>Hazard quotient or risk</UL>
+<b>How can this software platform be applied?</b><UL>
+<LI>Evaluate protectiveness for hazardous waste sites (U.S. Environmental Protection Agency)
+<LI>Support D&D license termination rule (U.S. Nuclear Regulatory Commission)
+<LI>Link codes related to both human health and ecological impacts from past and current practices at government installations (U.S. Department of Defense)
+<LI>Provide flexible environmental modeling tools for assessing human health and environmental compounds for a waste site, program, installation, and complex (U.S. Department of Energy and its contractors)
+</UL><p>
+<h3><u>MORE INFORMATION</u></h3>
+<blockquote>
+Back to <a href="index.html"><b>FRAMES Home.</a></b>
+<br>Find out what is <a href="new.html"><b>New in FRAMES 1.3.</a></b>
+<br>Additional information on FRAMES can be found by exploring this website and by reading <a href="frames_doc.pdf" target=_blank><b>Concepts of FRAMES document</a>.</b>
+</blockquote>

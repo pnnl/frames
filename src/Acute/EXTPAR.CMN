@@ -1,0 +1,15 @@
+C----------------------------------------------------------------------
+
+C     External Exposure / Inhalation Parameters Common Block
+C     Module of ENV                        Version of 5-Jul-88 RAP
+  
+      COMMON /EXTPAR/ HRPLUM, HRGRD, HRSWIM, HRBOAT, HRSHOR,
+     .                SHRTYP, SHORWI(4), INGWAT, FRCLOD,
+     .                HRINH, RINH, RINHA, RESFAC, AVALSL, XMLF, FRSIZ
+   
+      REAL HRPLUM, HRGRD, HRSWIM, HRBOAT, HRSHOR,
+     .     SHORWI, INGWAT, FRCLOD, HRINH, RINH, RINHA, 
+     .     RESFAC, AVALSL, XMLF, FRSIZ
+      INTEGER SHRTYP
+ 
+C-----------------------------------------------------------------------

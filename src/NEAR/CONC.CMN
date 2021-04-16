@@ -1,0 +1,29 @@
+C----------------------------------------------------------------------
+
+C     Concentration Common Block
+C     Module of ENV                        Version of 12-Feb-98 BAN
+  
+      COMMON /CONC/ SOLCON(9,4), SL2CON(9,6), NONAGS(9), RESSOL(9),
+     .              DSCON(9,4), DS2CON(9,6), NONAGD(9), DSRES(9),
+     .              GWCON(9), GWIRR(9), SWCON(9), 
+     .              AIRCON(9), ARPCON(9), ARFCON(9,4), ARF2CN(9,6),
+     .              AQUCON(9,4), SEDCON(9), 
+     .              PLTCON(9,4), ANMCON(9,4),
+     .              QAIR(9), QSW(9), QWAS(9),
+     .              EXPOS(9,28), PAKADD(9),
+     .              ARPXCN(9), PWTAIR(9), PWTXAR(9), 
+     .              CT0AIR(9,4), CT0AI2 (9,6), SWACUT(9),
+     .              EXTD(9), DRYDEP(9), WETDEP(9), TOTDEP(9),
+     .              RESAVG(9), SOLAVG(9,4), SL2AVG(9,6),
+     .              DSRAVG(9), DSCAVG(9,4), DS2AVG(9,6), NONDAV(9)
+
+      REAL DSCON, DS2CON, GWCON, SWCON, AIRCON, 
+     .     SOLCON, SL2CON, AQUCON, SEDCON, ARFCON, ARF2CN, ARPCON,
+     .     QAIR, QSW, QWAS, NONAGS, NONAGD, RESSOL, DSRES,
+     .     PLTCON, ANMCON, EXPOS, PAKADD, 
+     .     ARPXCN, PWTAIR, PWTXAR, CT0AIR, CT0AI2, SWACUT,
+     .     EXTD, DRYDEP, WETDEP, TOTDEP, RESAVG, SOLAVG, SL2AVG,
+     .     DSRAVG, DSCAVG, DS2AVG, NONDAV
+C
+C-----------------------------------------------------------------------
+C   AT SOME POINT MAY WANT TO CHANGE ALL "9" TO "LENCHAIN" - ban

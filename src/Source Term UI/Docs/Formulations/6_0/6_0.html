@@ -1,0 +1,137 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win95; I) [Netscape]">
+   <title>6.0 Summary and Plans for Further Development</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><center><font size="3"><u><b>6.0 Summary and Plans for Further Development</b></u></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A contaminant source-term release module has been
+developed for MEPAS. This report documents the implementation of this computer
+module for MEPAS Version 3.2 and RAAS Version 1.1. Contaminated aquifer,
+pond/surface impoundment, and vadose zone source zones can be analyzed.
+Contaminants can be present in aqueous, sorbed, vapor, or NAPL phases.
+The module calculates the simultaneous contaminant fluxes (as functions
+of time) to various loss routes (i.e., degradation/decay, leaching, wind
+suspension, water erosion, overland flow, and/or volatilization) in a manner
+that accounts for interactions between loss processes and conserves overall
+mass. The outputs of the source-term release module are linked as inputs
+to the environmental transport, and exposure/health impact modules of MEPAS.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The source-term release module can be used
+to simulate "baseline" scenarios as well as scenarios where certain remediation
+methodologies have been implemented at the site. Remediation methodologies
+that can be simulated include all methodologies that can be represented
+merely by changing the magnitude of certain model parameters, as well as
+ISV and ISS methodologies in the vadose zone (which use different theory
+implemented in the module).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Because a numerical solution scheme is
+used to solve the differential equations of contaminant loss versus time,
+certain environmental input parameters can be entered as time-varying quantities
+rather than being constrained to constants. Analytical solutions that apply
+to special cases are also presented in the report.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For certain simpler scenarios, the numerical
+solution algorithms implemented in the module have been verified through
+comparison with analytical solutions. Tests of the algorithms for calculating
+loss to different routes have been conducted through applications of the
+source-term module to specific problem scenarios. Additional testing is
+in progress.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current version of the source-term
+release module represents a consolidation and significant augmentation
+of numerous source-term release capabilities that existed in different
+modules of previous versions of MEPAS. However, it does not represent the
+ultimate source-term release capability envisioned for this component.
+The current version contains a number of idealizing assumptions and limitations.
+The remainder of this section discusses these, and describes further development
+plans envisioned for the module.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current version of the module associated
+with RAAS Version 1.1 limits the contaminants that can be analyzed to those
+that already exist in the associated RAAS contaminant property database.
+In the future, the module may be modified to allow the user to analyze
+contaminants not already in the database (without actually modifying the
+database). In this event, values of all relevant contaminant-specific properties
+would have to be supplied by the user. (The capability to edit the MEPAS
+database already exists.)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current version of the module determines
+whether a contaminant is one that may partition into a NAPL phase by using
+the database value of the modified (unitless) Henry's Law constant as a
+test metric (i.e., NAPL phase contaminant if K<sub>Hi</sub> > 10<sup>-7</sup>).
+This method makes appropriate determinations in most instances; but does
+lead to errors in cases that include nonvolatile organic compounds (e.g.,
+PCBs) or volatile radionuclides (e.g., tritium and iodine). In the future,
+the module may be modified to include a new method to make this determination,
+either using the database value of the octanol-water partition coefficient
+as a test metric or (preferably) using the chemical's category number from
+the chemical classification system currently built into the RAAS software.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current version of the module uses
+a relatively complex, yet still simplified, method of determining aqueous
+and vapor concentrations for a contaminant (at each time step) in systems
+where a NAPL phase exists. In the future, the module may be modified to
+include a full phase distribution model for this calculation (at each time
+step), which means that all volumetric fluid contents (water, air, NAPL)
+will be recalculated simultaneously with the contaminant phase partitioning.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This report presents analytical solutions
+applicable to special cases; however, they are not currently implemented
+in the module. In the future, these analytical solutions may be implemented
+so that the user can directly verify or bypass numerical outputs of the
+module.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Idealized theory for volatilization from a pond/surface
+impoundment source zone has been implemented in the module to act as a
+bounding calculation for highly volatile compounds that tended to disappear
+too quickly (with the 1-yr time step commonly used in simulations). However,
+simulated volatilization rates for these compounds still seem high. In
+the future, the module may be modified to correct this situation by either
+adding a capability to vary the length of the time step automatically during
+a simulation based on limits on the amount of mass that can be lost during
+a time step, or by implementing improved models for volatilization for
+the pond/surface impoundment source zone.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally, previous versions of MEPAS included
+the capability to analyze additional types of volatilization scenarios
+beyond what are currently implemented in the module. In the future, the
+module may be augmented to address these scenarios as well. These scenarios
+are 1) a landfill without internal gas generation, 2) a landfill with internal
+gas generation, 3) an aqueous pond/surface impoundment that contains a
+layer of contaminated sediment at the bottom (which controls the volatilization
+loss), and 4) a surface spill of liquid that is a NAPL-phase mixture.
+<br>
+</font>
+</body>
+</html>

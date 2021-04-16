@@ -1,0 +1,39 @@
+Variable Count,Description,Name,Privilege,Version,Updated,Template
+36,Mepas 4.1 Air Module,MepAIR,2,1,1,
+Dictionary Name,Dictionary Description,Dimension,DataType,PrimaryKey,Scalar,Minimum,Maximum,Measure,Unit,Stochastic,Preposition,Index 1,Index 2,Index 3,Index 4,Index 5
+AIRACLCDREF,Reference weather station  (AC-LCDREF),2,STRING,FALSE,TRUE,0,0,,N/A,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRACMIXAM,Morning mixing height  (AC-MIXAM),2,FLOAT,FALSE,TRUE,300,900,,m,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRACMIXPM,Afternoon mixing height  (AC-MIXPM),2,FLOAT,FALSE,TRUE,800,2600,,m,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRACNUMTS,Thunderstorms per year  (AC-NUMTS),2,FLOAT,FALSE,TRUE,1,150,,N/A,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRACPRENUM,Precipitation days per year  (AC-PRENUM),2,FLOAT,FALSE,TRUE,0,365,,N/A,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRACRAIN,Annual precipitation  (AC-RAIN),2,FLOAT,FALSE,TRUE,0.1,130,,in,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRAJANEMHT,Anemonometer height  (AJ-ANEMHT),2,FLOAT,FALSE,TRUE,0,999.9,,m,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRAJCALMS,Wind joint frequency calms  (AJ-CALMS),4,FLOAT,FALSE,TRUE,0,1.78e+308,,number,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph,MepAIR.xxClass,MepAIR.xxIndex
+AIRAJFDATA,Joint frequency data point,5,FLOAT,FALSE,TRUE,0,1,,number,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph,MepAIR.xxClass,MepAIR.xxGroup,MepAIR.xxDir
+AIRAJRLEN,Average roughness length  (AJ-RLEN),2,FLOAT,FALSE,TRUE,0,999.9,,cm,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRAJSTATNM,Data station  (AJ-STATNM),2,STRING,FALSE,TRUE,0,0,,N/A,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRAJWINDS,Wind speed midpoints  (AJ-WINDS),4,FLOAT,FALSE,TRUE,0,99.9,,m/s,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph,MepAIR.xxGroup,MepAIR.xxIndex
+AIRARCDIR,Index for channel direction  (AR-CDIR),2,INTEGER,FALSE,TRUE,0,2147483647,,,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARCHANL,Use wind channel modeling  (AR-CHANL),2,LOGICAL,FALSE,TRUE,0,0,,N/A,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARCHGT,Height of channel  (AR-CHGT),2,FLOAT,FALSE,TRUE,0.001,1,,km,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARCLEN,Length of channel  (AR-CLEN),2,FLOAT,FALSE,TRUE,1,30,,km,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARCSLOPE,Slope of channel  (AR-CSLOPE),2,FLOAT,FALSE,TRUE,-999.9,-0.001,,km,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARCWIDTH,Width of channel  (AR-CWIDTH),2,FLOAT,FALSE,TRUE,0.001,1,,km,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARREGSUR,Regional surface roughness lengths (AR-REGSUR),4,FLOAT,FALSE,TRUE,0,999.9,,cm,TRUE,,MepAIR.xxSite,MepAIR.xxGroup,MepAIR.xxRadius,MepAIR.xxDir
+AIRARTOPBAS,Elevation of release unit (AR-TOPBAS),2,FLOAT,FALSE,TRUE,-50,8840,,m,TRUE,,MepAIR.xxSite,MepAIR.xxGlyph
+AIRARTOPHTS,Regional distribution of terrain heights  (AR-TOPHTS),4,FLOAT,FALSE,TRUE,-50,8840,,m,TRUE,,MepAir.xxSite,MepAIR.xxGlyph,MepAIR.xxRadius,MepAIR.xxDir
+AIRARTOPTYP,Use regional topographical data  (AR-TOPTYP),2,LOGICAL,FALSE,TRUE,0,0,,N/A,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+CARELTYP,,2,INTEGER,FALSE,TRUE,0,2147483647,,N/A,FALSE,,MepAIR.xxSite,MepAir.xxGlyph
+CVTFormat,CVTFormat,2,STRING,FALSE,TRUE,0,0,,N/A,FALSE,,MepAIR.xxSite,MepAIR.xxGlyph
+xxClass,Class A to G,1,INTEGER,FALSE,FALSE,1,7,,,FALSE,
+xxDir,Direction N to NNW,1,INTEGER,FALSE,FALSE,1,16,,,FALSE,
+xxGlyph,,0,INTEGER,FALSE,TRUE,1,1,,,FALSE,
+xxGroup,Groups 1 - 6,1,INTEGER,FALSE,FALSE,1,6,,,FALSE,
+xxIndex,,0,INTEGER,FALSE,TRUE,1,2147483647,,,FALSE,
+xxRadius,Radius,1,INTEGER,FALSE,FALSE,1,4,,,FALSE,
+xxSite,,0,INTEGER,FALSE,TRUE,1,1,,,FALSE,
+xxUserUnit,xxUserUnit,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepAIR.xxUserUnitVar
+xxUserUnitVar,xxUserUnitVar,1,STRING,FALSE,FALSE,0,0,,,FALSE,
+xxVarLogFmt,xxVarLogFmt,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepAIR.xxVarname
+xxVarName,xxVarName,1,STRING,FALSE,FALSE,0,0,,,FALSE,
+xxVarUUnit,xxVarUUnit,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepAIR.xxVarname

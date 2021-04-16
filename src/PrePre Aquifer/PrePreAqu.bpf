@@ -1,0 +1,14 @@
+USEUNIT("PrePreAqu.cpp");
+USEUNIT("WFFReader.cpp");
+USEUNIT("offset.cpp");
+USEUNIT("GFFReader.cpp");
+USERES("PrePreAqu.res");
+USEUNIT("gid.cpp");
+USEUNIT("..\Common Files\robust.cpp");
+USEUNIT("..\Common Files\Line.cpp");
+USEUNIT("..\Common Files\PolyClass.cpp");
+USEUNIT("..\Common Files\csv.cpp");
+//---------------------------------------------------------------------------
+This file is used by the project manager only and should be treated like the project file
+
+main

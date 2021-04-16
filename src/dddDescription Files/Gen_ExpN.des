@@ -1,0 +1,205 @@
+"mf,Version 2.1"
+"Human Exposure & Risk:Exposure Pathways:exp,GENII V.2 NESHAPS Exposure Pathways Module,gen_expN.exe 0,gen_exp.bat ,exp.ico
+"
+MODULE VERSION
+  2.0 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+GENII V.2 NESHAPS Exposure Pathways Module
+
+The GENII NESHAPS Exposure Pathways Module may be used
+to estimate chronic concentrations in exposure media for 
+groundwater, surface water, and atmospheric 
+transport pathways.  The analysis accepts 
+concentration data for waterborne pathways,
+and annual average atmospheric transport values.  
+Deposition to soil from air or irrigation may be 
+considered prior to the start of the exposure 
+period.  The results of the analysis are written 
+in annual increments for the duration of exposure
+defined by the user.  Exposure pathways include 
+domestic water use (including irrigation of home 
+gardens), agricultural product consumption, 
+aquatic food consumption, recreational surface 
+water activities, and soil contamination pathways.  
+Losses by leaching, harvest removal, and radioactive
+decay from the surface soil are evaluated.
+
+Limitations:
+    The atmospheric transport output file (ATO) can have
+    data for a maximum of 10 time periods, 20 distances,
+    and 36 directions, or a sqaure array of up to 41x41.  
+    A maximum of 100 time points can be defined for each 
+    data set in the water concentration file (WCF).
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 wcf Aquifer required as input
+     0 to 1 wcf Surface Water required as input
+     0 to 1 ato Polar Air required as input
+     0 to 1 ato Cartesian Air required as input
+     0 to 1 ato Air required as input
+
+Valid Output Writes
+     epf Exposure Pathways
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K3-54
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnl.gov
+URL Address:          http://mepas.pnl.gov/earth
+"
+9,Read
+4,con,,1,1,wcf,Aquifer,1,1,wcf,Surface Water,0,1,ato,Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,1,1,ato,Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,0,1,ato,Air,1,1
+4,con,,1,1,wcf,Aquifer,1,1,wcf,Surface Water,0,1,ato,Polar Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,1,1,ato,Polar Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,0,1,ato,Polar Air,1,1
+4,con,,1,1,wcf,Aquifer,1,1,wcf,Surface Water,0,1,ato,Cartesian Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,1,1,ato,Cartesian Air,0,1
+4,con,,1,1,wcf,Aquifer,0,1,wcf,Surface Water,0,1,ato,Cartesian Air,1,1
+1,Write
+"epf,Exposure Pathways"
+93
+IRES,Not Stochastic,N/A,,,Type of resuspension model,0,INTEGER
+IRRSA,Not Stochastic,N/A,,,Source of animal feed irrigation,1,INTEGER
+Variable,FdFrLabel,Index1
+IRRST,Not Stochastic,N/A,,,Source of irrigation,1,INTEGER,,
+Variable,TFDLabel,Index1
+IRRSR,Not Stochastic,N/A,,,Source of residential irrigation,0,INTEGER
+LEACHOPTION,Not Stochastic,N/A,,,Type of leach rate constant,0,INTEGER
+DWSRC,Not Stochastic,N/A,,,Source of domestic water,0,INTEGER
+LOIC,Not Stochastic,yr,Min,0,Max,0,Loss of institutional control time prior to exposure,0,FLOAT
+BEFIRR,Not Stochastic,yr,Min,0,Max,0,Irrigation water deposition time prior to exposure,0,FLOAT
+BEFAIR,Not Stochastic,yr,Min,0,Max,0,Air deposition time prior to exposure,0,FLOAT
+INHAL,Not Stochastic,N/A,,,Air,0,LOGICAL
+ANFOOD,Not Stochastic,N/A,,,Animal product ingestion,0,LOGICAL
+TFOOD,Not Stochastic,N/A,,,Terrestrial food crop ingestion,0,LOGICAL
+AQFOOD,Not Stochastic,N/A,,,Aquatic food ingestion,0,LOGICAL
+RECRE,Not Stochastic,N/A,,,Recreational surface water,0,LOGICAL
+DEBUG,Not Stochastic,N/A,,,Debug testing,0,LOGICAL
+DWTRET,Not Stochastic,N/A,,,Treatment plant purification of domestic water,0,LOGICAL
+RESIRR,Not Stochastic,N/A,,,Residential irrigation,0,LOGICAL
+FINITE,Not Stochastic,N/A,,,Finite plume model,0,LOGICAL
+AIREXT,Not Stochastic,N/A,,,External air,0,LOGICAL
+ANF,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,ANFLabel,Index1
+TFD,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,TFDLabel,Index1
+AQF,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,AQFLabel,Index1
+DRINK,Not Stochastic,N/A,,,Drinking water,0,LOGICAL
+SHING,Not Stochastic,N/A,,,Inadvertent shower water,0,LOGICAL
+SWING,Not Stochastic,N/A,,,Inadvertent swimming water,0,LOGICAL
+SLING,Not Stochastic,N/A,,,Inadvertent soil,0,LOGICAL
+SHINDR,Not Stochastic,N/A,,,Indoor or showering,0,LOGICAL
+SLINH,Not Stochastic,N/A,,,Suspended or resuspended soil,0,LOGICAL
+REC,Not Stochastic,N/A,,,External pathway,1,LOGICAL
+Variable,AQFLabel,Index1
+GROUND,Not Stochastic,N/A,,,Soil external,0,LOGICAL
+ISALT,Not Stochastic,N/A,,,Aquatic foods from salt water (vesus fresh water),0,LOGICAL
+DRYSET,Not Stochastic,N/A,,,User defined dry deposition interception fraction to plants,0,LOGICAL
+WETSET,Not Stochastic,N/A,,,User defined wet deposition interception fraction to plants,0,LOGICAL
+HARVST,Not Stochastic,N/A,,,Radionuclide removal due to harvesting,0,LOGICAL
+NTKEND,Not Stochastic,yr,Min,0,Max,1000000,Duration of exposure period,0,FLOAT
+RELEND,Not Stochastic,yr,Min,0,Max,1000000,End of release period,0,FLOAT
+BEFORE,Not Stochastic,yr,Min,0,Max,1000000,Time from start to exposure,0,FLOAT
+ABSHUM,Continuous,kg/m^3,Min,0,Max,0.1,Absolute humidity, used only for tritium model,0,FLOAT
+RF1,Continuous,fraction,Min,0,Max,1,Fraction of plants roots in surface soil,0,FLOAT
+XMLF,Continuous,g/m^3,Min,0,Max,5,Mass loading factor for resuspension model,0,FLOAT
+AVALSL,Continuous,cm,Min,0.01,Max,200,Depth of top soil available for resuspension,0,FLOAT
+YELDA,Continuous,kg/m^2,Min,0.1,Max,10,Yield for animal feed,1,FLOAT
+Variable,FdFrLabel,Index1
+HLDUPA,Continuous,day,Min,0,Max,365,Time from harvest to animal ingestion,1,FLOAT
+Variable,TFDLabel,Index1
+GRWPA,Continuous,day,Min,0,Max,365,Animal feed growing period,1,FLOAT
+Variable,FdFrLabel,Index1
+STORTM,Continuous,day,Min,0,Max,356,Storage time,1,FLOAT
+Variable,FdFrLabel,Index1
+DIETFR,Continuous,fraction,Min,0,Max,1,Fraction of diet,1,FLOAT
+Variable,FdFrLabel,Index1
+YELD,Continuous,kg/m^2,Min,0.001,Max,10,Yield,1,FLOAT
+Variable,TFDLabel,Index1
+HLDUP,Continuous,day,Min,0,Max,365,Time from harvest to ingestion,1,FLOAT
+Variable,TFDLabel,Index1
+GRWP,Continuous,day,Min,0,Max,365,Growing period,1,FLOAT
+Variable,TFDLabel,Index1
+RIRRA,Continuous,in/yr,Min,0,Max,200,Animal feed irrigation rate,1,FLOAT
+Variable,FdFrLabel,Index1
+IRTIMA,Continuous,mon/yr,Min,0,Max,12,Animal feed irrigation time,1,FLOAT
+Variable,FdFRLabel,Index1
+RIRR,Continuous,in/yr,Min,0,Max,200,Irrigation rate,1,FLOAT
+Variable,TFDLabel,Index1
+IRTIMT,Continuous,mon/yr,Min,0,Max,12,Irrigation time,1,FLOAT
+Variable,TFDLabel,Index1
+HLDUP2,Continuous,day,Min,0,Max,365,Time from harvest to ingestion,1,FLOAT
+Variable,AQFLabel,Index1
+DWFACA,Continuous,fraction,Min,0,Max,1,Animal water contaminated fraction,1,FLOAT
+Variable,ANFLabel,Index1
+SSLDN,Continuous,kg/m^3,Min,0.00001,Max,3000,Surface soil density,0,FLOAT
+RIRRR,Continuous,in/yr,Min,0,Max,200,Irrigation rate for residential land,0,FLOAT
+IRTIMR,Continuous,mon/yr,Min,0,Max,12,Irrigation time for residential land,0,FLOAT
+HOLDDW,Continuous,day,Min,0,Max,365,Delay time in water distribution system,0,FLOAT
+RESFAC,Continuous,1/m,Min,0,Max,0.001,Resuspension factor,0,FLOAT
+WTIM,Continuous,d,Min,0.1,Max,100,Weathering rate constant from plants,0,FLOAT
+DEPFR1,Continuous,fraction,Min,0,Max,1,Dry deposition retention fraction to plants,0,FLOAT
+RAIN,Continuous,mm/d,Min,0.01,Max,10,Average daily rain rate,0,FLOAT
+ANDKRN,Continuous,l/m^3,Min,0,Max,10,Indoor volatilization factor for radon,0,FLOAT
+ANDKR,Continuous,l/m^3,Min,0,Max,10,Indoor volatilization factor for radionuclides,0,FLOAT
+SEDDN,Continuous,kg/m^2,Min,0,Max,5000,Shoreline sediment density,0,FLOAT
+THICK,Continuous,cm,Min,0,Max,10000,Surface soil thickness,0,FLOAT
+MOISTC,Continuous,fraction,Min,0,Max,1,Surface soil moisture content,0,FLOAT
+BULKD,Continuous,g/cm^3,Min,0.5,Max,3,Surface soil bulk density,0,FLOAT
+VLEACH,Continuous,cm/yr,Min,0,Max,500,Total infiltration rate,0,FLOAT
+DEPFR2,Continuous,fraction,Min,0,Max,1,Wet deposition retention fraction to plant surfaces,0,FLOAT
+LEAFRS,Continuous,1/m,Min,0,Max,0.001,Resuspension factor from soil to plant surfaces,0,FLOAT
+DPVRES,Continuous,m/s,Min,0,Max,0.1,Deposistion velocity from soil to plant surfaces,0,FLOAT
+SLDN,Continuous,kg/m^2,Min,0.00001,Max,3000,Surface soil areal density,0,FLOAT
+SURCM,Continuous,cm,Min,0.00001,Max,500,Surface soil layer thickness used for density,0,FLOAT
+DWATER,Continuous,L/d,Min,0.001,Max,200,Intake rate of water,1,FLOAT
+Variable,ANFLabel,Index1
+BIOMA2,Continuous,kg/m^2,Min,0.1,Max,10,Standing animal feed biomass (wet),1,FLOAT
+Variable,FdFrLabel,Index1
+CONSUM,Continuous,kg/d,Min,0.001,Max,300,Consumption rate,1,FLOAT
+Variable,FdFrLabel,Index1
+BIOMAS,Continuous,kg/m^2,Min,0.1,Max,10,Standing biomass (wet),1,FLOAT
+Variable,TFDLabel,Index1
+TRANSA,Continuous,fraction,Min,0,Max,1,Translocation factor for animal feed,1,FLOAT
+Variable,FdFrLabel,Index1
+TRANS,Continuous,fraction,Min,0,Max,1,Translocation factor,1,FLOAT
+Variable,TFDLabel,Index1
+DRYFA2,Continuous,fraction,Min,0.05,Max,0.95,Animal feed dry/wet ratio,1,FLOAT
+Variable,FdFrLabel,Index1
+DRYFAC,Continuous,fraction,Min,0.05,Max,0.95,Dry/wet ratio,1,FLOAT
+Variable,TFDLabel,Index1
+NUMCON,Not Stochastic,N/A,,,Number of constituents,0,INTEGER
+NDS,Not Stochastic,N/A,,,Progeny count,1,INTEGER
+Variable,FSCNAME,Site,Index1,
+CASID,Not Stochastic,N/A,,,Chemical Abstract System Identification,1,STRING,con.FSCASID
+Variable,FSCNAME,Site,Index1,Index2
+LEACHR,Continuous,1/yr,Min,0,Max,100,Leach rate constant,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+SOILKD,Continuous,ml/g,Min,0,Max,1000000,Soil adsorbtion coefficient,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+ANFLabel,Not Stochastic,N/A,,,Terrestrial animal product constant,1,STRING
+Label,Index#,Index1
+TFDLabel,Not Stochastic,N/A,,,Plant product constant,1,STRING
+Label,Index#,Index1
+AQFLabel,Not Stochastic,N/A,,,Aquatic animal product constant,1,STRING
+Label,Index#,Index1
+FdFrLabel,Not Stochastic,N/A,,,Feed animal constant,1,STRING
+Label,Index#,Index1

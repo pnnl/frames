@@ -1,0 +1,16 @@
+"exp3",0000000015
+1,
+Medium type - Aquifer Source aqu2
+1,
+"chronic","exp3","Aquifer", 1, 1,
+0.,"km",0.,"km"
+"Benzene","71432", 0,   5,
+0.0,"yr", 50.0,"yr",  1,
+"Water","ingestion","mg/L"
+1.124E-03,
+50.0,"yr", 50.0,"yr",  1,
+"Water","ingestion","mg/L"
+1.144E-04,
+100.0,"yr", 50.0,"yr",  0,
+150.0,"yr", 50.0,"yr",  0,
+200.0,"yr", 50.0,"yr",  0,

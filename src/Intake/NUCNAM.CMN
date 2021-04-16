@@ -1,0 +1,21 @@
+C-----------------------------------------------------------------------
+C     NUCNAM
+C           DESCRIPTION: RADIONUCLIDE NAMES IN MASTER LIST
+C           USED BY: ACTIN, AIRLIN, APATHS, BIOLIN, FILLUP, FOOLIN, GRAPH,
+C                    GRDLIN, QAPAGE, NUCTST, REPORT, SETNUC, WPATHS
+C  
+C     Module of DITTY              Last modification: 8-May-87
+C-----------------------------------------------------------------------
+C
+      CHARACTER*2 ELT
+      CHARACTER*6 AW
+C
+      COMMON /NUCNAM/ NUCTOT, AW(9), ELT(9)
+C
+C     NUCTOT        - NO. OF RADIONUCLIDES IN THE MASTER LIST.
+C     AW(9)         - 6 CHARACTER ATOMIC WEIGHT SYMBOL FOR EACH RADIO-
+C                     NUCLIDE IN THE MASTER LIST.
+C     ELT(9)        - 2 CHARACTER ELEMENT NAME FOR EACH RADIONUCLIDE
+C                     IN THE MASTER LIST.
+C
+

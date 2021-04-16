@@ -1,0 +1,27 @@
+C     MEPAS RADCON: ISV.WTN               VERSION DATE: 11-08-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: CSOURCE.FTN 
+C
+C     This include statement contains values for ISV technology glass leach   
+C     rate and volume of waste form.
+C
+C     Creation Date:     11/08/92 - JWB
+C     Last Modified:     11/08/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, LEACHV, PNTTIM
+C
+C=== Significant Parameters ==================================================
+C
+C    GLASS_LR  - LEACH RATE OF ISV GLASS FORM (G/CM2/YR)
+C    WASTE_VOL - VOLUME OF THE WASTE FORM (CM3)
+C    RAAS_CS   - CONTAMINANT i CONCENTRATION (G/G)
+C    GLASS_PNT - FLUX RATE OF CONTAMINANT i IN ISV WASTE FORM
+C
+C*****************************************************************************
+C
+      REAL*4 GLASS_LR, WASTE_VOL, RAAS_CS(30), GLASS_PNT(200,30)
+C
+      COMMON/ISV/glass_lr, waste_vol, raas_cs, glass_pnt

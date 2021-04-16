@@ -1,0 +1,376 @@
+"FUI",134
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.7
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",1,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"airName",1,1,0,0,0,0,0,"N/A","N/A","air5"
+"airLabel",1,1,0,0,0,0,0,"N/A","N/A","Air"
+"airModel",1,1,0,0,0,0,0,"N/A","N/A","GENII V.2 Air Module - Chronic Plume"
+"airDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\ChPlume.des"
+"airX",1,1,0,0,0,0,0,"km","km",0
+"airY",1,1,0,0,0,0,0,"km","km",0
+"airZ",1,1,0,0,0,0,0,"km","km",0
+"airScrX",1,1,0,0,0,0,0,"N/A","N/A",373.0061
+"airScrY",1,1,0,0,0,0,0,"N/A","N/A",412.5561
+"airModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"airSrcName",1,1,1,0,0,0,0,"N/A","N/A","usr2"
+"airType",1,1,1,0,0,0,0,"N/A","N/A","User Defined"
+"airSrcName",1,1,2,0,0,0,0,"N/A","N/A","usr3"
+"airType",1,1,2,0,0,0,0,"N/A","N/A","User Defined"
+"airSrcName",1,1,3,0,0,0,0,"N/A","N/A","usr4"
+"airType",1,1,3,0,0,0,0,"N/A","N/A","User Defined"
+"airSrcNum",1,1,0,0,0,0,0,"N/A","N/A",3
+"airTypeNum",1,1,0,0,0,0,0,"N/A","N/A",3
+"airNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"conName",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"conLabel",1,1,0,0,0,0,0,"N/A","N/A","Constituent"
+"conModel",1,1,0,0,0,0,0,"N/A","N/A","GENII Radionuclide Database Selection"
+"conDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\GENII.des"
+"conX",1,1,0,0,0,0,0,"km","km",0
+"conY",1,1,0,0,0,0,0,"km","km",0
+"conZ",1,1,0,0,0,0,0,"km","km",0
+"conScrX",1,1,0,0,0,0,0,"N/A","N/A",588.957
+"conScrY",1,1,0,0,0,0,0,"N/A","N/A",194.3199
+"conModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"conSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"usrName",1,1,0,0,0,0,0,"N/A","N/A","usr2"
+"usrLabel",1,1,0,0,0,0,0,"N/A","N/A","User_Defined"
+"usrModel",1,1,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"usrDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"usrX",1,1,0,0,0,0,0,"km","km",0
+"usrY",1,1,0,0,0,0,0,"km","km",0
+"usrZ",1,1,0,0,0,0,0,"km","km",0
+"usrScrX",1,1,0,0,0,0,0,"N/A","N/A",165.6442
+"usrScrY",1,1,0,0,0,0,0,"N/A","N/A",227.2048
+"usrModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrName",1,2,0,0,0,0,0,"N/A","N/A","usr3"
+"usrLabel",1,2,0,0,0,0,0,"N/A","N/A","User_Defined"
+"usrModel",1,2,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"usrDesPath",1,2,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"usrX",1,2,0,0,0,0,0,"km","km",0
+"usrY",1,2,0,0,0,0,0,"km","km",0
+"usrZ",1,2,0,0,0,0,0,"km","km",0
+"usrScrX",1,2,0,0,0,0,0,"N/A","N/A",154.6012
+"usrScrY",1,2,0,0,0,0,0,"N/A","N/A",455.9043
+"usrModelStat",1,2,0,0,0,0,0,"N/A","N/A",0
+"usrSrcNum",1,2,0,0,0,0,0,"N/A","N/A",0
+"usrTypeNum",1,2,0,0,0,0,0,"N/A","N/A",0
+"usrName",1,3,0,0,0,0,0,"N/A","N/A","usr4"
+"usrLabel",1,3,0,0,0,0,0,"N/A","N/A","User_Defined"
+"usrModel",1,3,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"usrDesPath",1,3,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"usrX",1,3,0,0,0,0,0,"km","km",0
+"usrY",1,3,0,0,0,0,0,"km","km",0
+"usrZ",1,3,0,0,0,0,0,"km","km",0
+"usrScrX",1,3,0,0,0,0,0,"N/A","N/A",149.6933
+"usrScrY",1,3,0,0,0,0,0,"N/A","N/A",668.1614
+"usrModelStat",1,3,0,0,0,0,0,"N/A","N/A",0
+"usrSrcNum",1,3,0,0,0,0,0,"N/A","N/A",0
+"usrTypeNum",1,3,0,0,0,0,0,"N/A","N/A",0
+"usrNum",1,0,0,0,0,0,0,"N/A","N/A",3
+"expName",1,1,0,0,0,0,0,"N/A","N/A","exp6"
+"expLabel",1,1,0,0,0,0,0,"N/A","N/A","Exposure_Pathways"
+"expModel",1,1,0,0,0,0,0,"N/A","N/A","GENII V.2 Chronic Exposure Module"
+"expDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Exp.des"
+"expX",1,1,0,0,0,0,0,"km","km",0
+"expY",1,1,0,0,0,0,0,"km","km",0
+"expZ",1,1,0,0,0,0,0,"km","km",0
+"expScrX",1,1,0,0,0,0,0,"N/A","N/A",450.3067
+"expScrY",1,1,0,0,0,0,0,"N/A","N/A",502.2422
+"expModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"expSrcName",1,1,1,0,0,0,0,"N/A","N/A","air5"
+"expType",1,1,1,0,0,0,0,"N/A","N/A","Air"
+"expSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"expTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"expNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"nesName",1,1,0,0,0,0,0,"N/A","N/A","nes9"
+"nesLabel",1,1,0,0,0,0,0,"N/A","N/A","Report_Generator"
+"nesModel",1,1,0,0,0,0,0,"N/A","N/A","GENII V.2 Air Dose Report Generator"
+"nesDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_AirReport.des"
+"nesX",1,1,0,0,0,0,0,"km","km",0
+"nesY",1,1,0,0,0,0,0,"km","km",0
+"nesZ",1,1,0,0,0,0,0,"km","km",0
+"nesScrX",1,1,0,0,0,0,0,"N/A","N/A",760.9427
+"nesScrY",1,1,0,0,0,0,0,"N/A","N/A",628.0374
+"nesModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"nesSrcName",1,1,1,0,0,0,0,"N/A","N/A","air5"
+"nesType",1,1,1,0,0,0,0,"N/A","N/A","Air"
+"nesSrcName",1,1,2,0,0,0,0,"N/A","N/A","hei8"
+"nesType",1,1,2,0,0,0,0,"N/A","N/A","Health Impacts"
+"nesSrcNum",1,1,0,0,0,0,0,"N/A","N/A",2
+"nesTypeNum",1,1,0,0,0,0,0,"N/A","N/A",2
+"nesNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"heiName",1,1,0,0,0,0,0,"N/A","N/A","hei8"
+"heiLabel",1,1,0,0,0,0,0,"N/A","N/A","Health_Impacts"
+"heiModel",1,1,0,0,0,0,0,"N/A","N/A","GENII V.2 Health Impacts Module"
+"heiDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Hei.des"
+"heiX",1,1,0,0,0,0,0,"km","km",0
+"heiY",1,1,0,0,0,0,0,"km","km",0
+"heiZ",1,1,0,0,0,0,0,"km","km",0
+"heiScrX",1,1,0,0,0,0,0,"N/A","N/A",649.0797
+"heiScrY",1,1,0,0,0,0,0,"N/A","N/A",696.5621
+"heiModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiSrcName",1,1,1,0,0,0,0,"N/A","N/A","rcp7"
+"heiType",1,1,1,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"heiSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"rcpName",1,1,0,0,0,0,0,"N/A","N/A","rcp7"
+"rcpLabel",1,1,0,0,0,0,0,"N/A","N/A","Receptor_Intakes"
+"rcpModel",1,1,0,0,0,0,0,"N/A","N/A","GENII V.2 Receptor Intake Module"
+"rcpDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Rcp.des"
+"rcpX",1,1,0,0,0,0,0,"km","km",0
+"rcpY",1,1,0,0,0,0,0,"km","km",0
+"rcpZ",1,1,0,0,0,0,0,"km","km",0
+"rcpScrX",1,1,0,0,0,0,0,"N/A","N/A",552.1472
+"rcpScrY",1,1,0,0,0,0,0,"N/A","N/A",590.4335
+"rcpModelStat",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpSrcName",1,1,1,0,0,0,0,"N/A","N/A","exp6"
+"rcpType",1,1,1,0,0,0,0,"N/A","N/A","Exposure Pathways"
+"rcpSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"CSM",240                               
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.7
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",1,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"NumMod",1,0,0,0,0,0,0,"N/A","N/A",9
+"ModId",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"ModLabel",1,1,0,0,0,0,0,"N/A","N/A","Constituent"
+"ModModel",1,1,0,0,0,0,0,"N/A","N/A","GENII Radionuclide Database Selection"
+"ModDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\GENII.des"
+"ModLocX",1,1,0,0,0,0,0,"km","km",0
+"ModLocY",1,1,0,0,0,0,0,"km","km",0
+"ModLocZ",1,1,0,0,0,0,0,"km","km",0
+"ModScrX",1,1,0,0,0,0,0,"N/A","N/A",588.957
+"ModScrY",1,1,0,0,0,0,0,"N/A","N/A",194.3199
+"ModState",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModSinkId",1,1,1,0,0,0,0,"N/A","N/A","usr2"
+"ModSinkLabel",1,1,1,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSinkType",1,1,1,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,2,0,0,0,0,"N/A","N/A","usr3"
+"ModSinkLabel",1,1,2,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSinkType",1,1,2,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,2,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,3,0,0,0,0,"N/A","N/A","usr4"
+"ModSinkLabel",1,1,3,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSinkType",1,1,3,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,3,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,4,0,0,0,0,"N/A","N/A","air5"
+"ModSinkLabel",1,1,4,0,0,0,0,"N/A","N/A","Air"
+"ModSinkType",1,1,4,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,4,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,5,0,0,0,0,"N/A","N/A","exp6"
+"ModSinkLabel",1,1,5,0,0,0,0,"N/A","N/A","Exposure_Pathways"
+"ModSinkType",1,1,5,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,5,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,6,0,0,0,0,"N/A","N/A","rcp7"
+"ModSinkLabel",1,1,6,0,0,0,0,"N/A","N/A","Receptor_Intakes"
+"ModSinkType",1,1,6,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,6,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,7,0,0,0,0,"N/A","N/A","hei8"
+"ModSinkLabel",1,1,7,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModSinkType",1,1,7,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,7,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,8,0,0,0,0,"N/A","N/A","nes9"
+"ModSinkLabel",1,1,8,0,0,0,0,"N/A","N/A","Report_Generator"
+"ModSinkType",1,1,8,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,8,0,0,0,0,"N/A","N/A",""
+"ModSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModSinkNum",1,1,0,0,0,0,0,"N/A","N/A",8
+"ModId",1,2,0,0,0,0,0,"N/A","N/A","usr2"
+"ModLabel",1,2,0,0,0,0,0,"N/A","N/A","User_Defined"
+"ModModel",1,2,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"ModDesPath",1,2,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"ModLocX",1,2,0,0,0,0,0,"km","km",0
+"ModLocY",1,2,0,0,0,0,0,"km","km",0
+"ModLocZ",1,2,0,0,0,0,0,"km","km",0
+"ModScrX",1,2,0,0,0,0,0,"N/A","N/A",165.6442
+"ModScrY",1,2,0,0,0,0,0,"N/A","N/A",227.2048
+"ModState",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,2,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,2,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,2,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,2,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,1,0,0,0,0,"N/A","N/A","air5"
+"ModSinkLabel",1,2,1,0,0,0,0,"N/A","N/A","Air"
+"ModSinkType",1,2,1,0,0,0,0,"N/A","N/A","aff"
+"ModSinkQual",1,2,1,0,0,0,0,"N/A","N/A","Air"
+"ModSrcNum",1,2,0,0,0,0,0,"N/A","N/A",1
+"ModSinkNum",1,2,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,3,0,0,0,0,0,"N/A","N/A","usr3"
+"ModLabel",1,3,0,0,0,0,0,"N/A","N/A","User_Defined"
+"ModModel",1,3,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"ModDesPath",1,3,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"ModLocX",1,3,0,0,0,0,0,"km","km",0
+"ModLocY",1,3,0,0,0,0,0,"km","km",0
+"ModLocZ",1,3,0,0,0,0,0,"km","km",0
+"ModScrX",1,3,0,0,0,0,0,"N/A","N/A",154.6012
+"ModScrY",1,3,0,0,0,0,0,"N/A","N/A",455.9043
+"ModState",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,3,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,3,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,3,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,3,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,3,1,0,0,0,0,"N/A","N/A","air5"
+"ModSinkLabel",1,3,1,0,0,0,0,"N/A","N/A","Air"
+"ModSinkType",1,3,1,0,0,0,0,"N/A","N/A","aff"
+"ModSinkQual",1,3,1,0,0,0,0,"N/A","N/A","Air"
+"ModSrcNum",1,3,0,0,0,0,0,"N/A","N/A",1
+"ModSinkNum",1,3,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,4,0,0,0,0,0,"N/A","N/A","usr4"
+"ModLabel",1,4,0,0,0,0,0,"N/A","N/A","User_Defined"
+"ModModel",1,4,0,0,0,0,0,"N/A","N/A","AFF Air Module"
+"ModDesPath",1,4,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiAFF.des"
+"ModLocX",1,4,0,0,0,0,0,"km","km",0
+"ModLocY",1,4,0,0,0,0,0,"km","km",0
+"ModLocZ",1,4,0,0,0,0,0,"km","km",0
+"ModScrX",1,4,0,0,0,0,0,"N/A","N/A",149.6933
+"ModScrY",1,4,0,0,0,0,0,"N/A","N/A",668.1614
+"ModState",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,4,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,4,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,4,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,4,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,4,1,0,0,0,0,"N/A","N/A","air5"
+"ModSinkLabel",1,4,1,0,0,0,0,"N/A","N/A","Air"
+"ModSinkType",1,4,1,0,0,0,0,"N/A","N/A","aff"
+"ModSinkQual",1,4,1,0,0,0,0,"N/A","N/A","Air"
+"ModSrcNum",1,4,0,0,0,0,0,"N/A","N/A",1
+"ModSinkNum",1,4,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,5,0,0,0,0,0,"N/A","N/A","air5"
+"ModLabel",1,5,0,0,0,0,0,"N/A","N/A","Air"
+"ModModel",1,5,0,0,0,0,0,"N/A","N/A","GENII V.2 Air Module - Chronic Plume"
+"ModDesPath",1,5,0,0,0,0,0,"N/A","N/A","\FRAMES\ChPlume.des"
+"ModLocX",1,5,0,0,0,0,0,"km","km",0
+"ModLocY",1,5,0,0,0,0,0,"km","km",0
+"ModLocZ",1,5,0,0,0,0,0,"km","km",0
+"ModScrX",1,5,0,0,0,0,0,"N/A","N/A",373.0061
+"ModScrY",1,5,0,0,0,0,0,"N/A","N/A",412.5561
+"ModState",1,5,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,5,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,5,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,5,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,5,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,5,2,0,0,0,0,"N/A","N/A","usr2"
+"ModSrcLabel",1,5,2,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSrcType",1,5,2,0,0,0,0,"N/A","N/A","aff"
+"ModSrcQual",1,5,2,0,0,0,0,"N/A","N/A","Air"
+"ModSrcId",1,5,3,0,0,0,0,"N/A","N/A","usr3"
+"ModSrcLabel",1,5,3,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSrcType",1,5,3,0,0,0,0,"N/A","N/A","aff"
+"ModSrcQual",1,5,3,0,0,0,0,"N/A","N/A","Air"
+"ModSrcId",1,5,4,0,0,0,0,"N/A","N/A","usr4"
+"ModSrcLabel",1,5,4,0,0,0,0,"N/A","N/A","User_Defined"
+"ModSrcType",1,5,4,0,0,0,0,"N/A","N/A","aff"
+"ModSrcQual",1,5,4,0,0,0,0,"N/A","N/A","Air"
+"ModSinkId",1,5,1,0,0,0,0,"N/A","N/A","exp6"
+"ModSinkLabel",1,5,1,0,0,0,0,"N/A","N/A","Exposure_Pathways"
+"ModSinkType",1,5,1,0,0,0,0,"N/A","N/A","ato"
+"ModSinkQual",1,5,1,0,0,0,0,"N/A","N/A","Polar Air"
+"ModSinkId",1,5,2,0,0,0,0,"N/A","N/A","nes9"
+"ModSinkLabel",1,5,2,0,0,0,0,"N/A","N/A","Report_Generator"
+"ModSinkType",1,5,2,0,0,0,0,"N/A","N/A","ato"
+"ModSinkQual",1,5,2,0,0,0,0,"N/A","N/A","Polar Air"
+"ModSrcNum",1,5,0,0,0,0,0,"N/A","N/A",4
+"ModSinkNum",1,5,0,0,0,0,0,"N/A","N/A",2
+"ModId",1,6,0,0,0,0,0,"N/A","N/A","exp6"
+"ModLabel",1,6,0,0,0,0,0,"N/A","N/A","Exposure_Pathways"
+"ModModel",1,6,0,0,0,0,0,"N/A","N/A","GENII V.2 Chronic Exposure Module"
+"ModDesPath",1,6,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Exp.des"
+"ModLocX",1,6,0,0,0,0,0,"km","km",0
+"ModLocY",1,6,0,0,0,0,0,"km","km",0
+"ModLocZ",1,6,0,0,0,0,0,"km","km",0
+"ModScrX",1,6,0,0,0,0,0,"N/A","N/A",450.3067
+"ModScrY",1,6,0,0,0,0,0,"N/A","N/A",502.2422
+"ModState",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,6,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,6,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,6,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,6,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,6,2,0,0,0,0,"N/A","N/A","air5"
+"ModSrcLabel",1,6,2,0,0,0,0,"N/A","N/A","Air"
+"ModSrcType",1,6,2,0,0,0,0,"N/A","N/A","ato"
+"ModSrcQual",1,6,2,0,0,0,0,"N/A","N/A","Polar Air"
+"ModSinkId",1,6,1,0,0,0,0,"N/A","N/A","rcp7"
+"ModSinkLabel",1,6,1,0,0,0,0,"N/A","N/A","Receptor_Intakes"
+"ModSinkType",1,6,1,0,0,0,0,"N/A","N/A","epf"
+"ModSinkQual",1,6,1,0,0,0,0,"N/A","N/A","Exposure Pathways"
+"ModSrcNum",1,6,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,6,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,7,0,0,0,0,0,"N/A","N/A","rcp7"
+"ModLabel",1,7,0,0,0,0,0,"N/A","N/A","Receptor_Intakes"
+"ModModel",1,7,0,0,0,0,0,"N/A","N/A","GENII V.2 Receptor Intake Module"
+"ModDesPath",1,7,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Rcp.des"
+"ModLocX",1,7,0,0,0,0,0,"km","km",0
+"ModLocY",1,7,0,0,0,0,0,"km","km",0
+"ModLocZ",1,7,0,0,0,0,0,"km","km",0
+"ModScrX",1,7,0,0,0,0,0,"N/A","N/A",552.1472
+"ModScrY",1,7,0,0,0,0,0,"N/A","N/A",590.4335
+"ModState",1,7,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,7,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,7,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,7,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,7,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,7,2,0,0,0,0,"N/A","N/A","exp6"
+"ModSrcLabel",1,7,2,0,0,0,0,"N/A","N/A","Exposure_Pathways"
+"ModSrcType",1,7,2,0,0,0,0,"N/A","N/A","epf"
+"ModSrcQual",1,7,2,0,0,0,0,"N/A","N/A","Exposure Pathways"
+"ModSinkId",1,7,1,0,0,0,0,"N/A","N/A","hei8"
+"ModSinkLabel",1,7,1,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModSinkType",1,7,1,0,0,0,0,"N/A","N/A","rif"
+"ModSinkQual",1,7,1,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcNum",1,7,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,7,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,8,0,0,0,0,0,"N/A","N/A","hei8"
+"ModLabel",1,8,0,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModModel",1,8,0,0,0,0,0,"N/A","N/A","GENII V.2 Health Impacts Module"
+"ModDesPath",1,8,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_Hei.des"
+"ModLocX",1,8,0,0,0,0,0,"km","km",0
+"ModLocY",1,8,0,0,0,0,0,"km","km",0
+"ModLocZ",1,8,0,0,0,0,0,"km","km",0
+"ModScrX",1,8,0,0,0,0,0,"N/A","N/A",649.0797
+"ModScrY",1,8,0,0,0,0,0,"N/A","N/A",696.5621
+"ModState",1,8,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,8,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,8,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,8,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,8,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,8,2,0,0,0,0,"N/A","N/A","rcp7"
+"ModSrcLabel",1,8,2,0,0,0,0,"N/A","N/A","Receptor_Intakes"
+"ModSrcType",1,8,2,0,0,0,0,"N/A","N/A","rif"
+"ModSrcQual",1,8,2,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSinkId",1,8,1,0,0,0,0,"N/A","N/A","nes9"
+"ModSinkLabel",1,8,1,0,0,0,0,"N/A","N/A","Report_Generator"
+"ModSinkType",1,8,1,0,0,0,0,"N/A","N/A","hif"
+"ModSinkQual",1,8,1,0,0,0,0,"N/A","N/A","Health Impacts"
+"ModSrcNum",1,8,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,8,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,9,0,0,0,0,0,"N/A","N/A","nes9"
+"ModLabel",1,9,0,0,0,0,0,"N/A","N/A","Report_Generator"
+"ModModel",1,9,0,0,0,0,0,"N/A","N/A","GENII V.2 Air Dose Report Generator"
+"ModDesPath",1,9,0,0,0,0,0,"N/A","N/A","\FRAMES\Gen_AirReport.des"
+"ModLocX",1,9,0,0,0,0,0,"km","km",0
+"ModLocY",1,9,0,0,0,0,0,"km","km",0
+"ModLocZ",1,9,0,0,0,0,0,"km","km",0
+"ModScrX",1,9,0,0,0,0,0,"N/A","N/A",760.9427
+"ModScrY",1,9,0,0,0,0,0,"N/A","N/A",628.0374
+"ModState",1,9,0,0,0,0,0,"N/A","N/A",0
+"ModSrcId",1,9,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,9,1,0,0,0,0,"N/A","N/A","Constituent"
+"ModSrcType",1,9,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,9,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,9,2,0,0,0,0,"N/A","N/A","air5"
+"ModSrcLabel",1,9,2,0,0,0,0,"N/A","N/A","Air"
+"ModSrcType",1,9,2,0,0,0,0,"N/A","N/A","ato"
+"ModSrcQual",1,9,2,0,0,0,0,"N/A","N/A","Polar Air"
+"ModSrcId",1,9,3,0,0,0,0,"N/A","N/A","hei8"
+"ModSrcLabel",1,9,3,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModSrcType",1,9,3,0,0,0,0,"N/A","N/A","hif"
+"ModSrcQual",1,9,3,0,0,0,0,"N/A","N/A","Health Impacts"
+"ModSrcNum",1,9,0,0,0,0,0,"N/A","N/A",3
+"ModSinkNum",1,9,0,0,0,0,0,"N/A","N/A",0

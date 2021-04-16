@@ -1,0 +1,19 @@
+C  PARAMETER DECLARATION FOR NEAR
+C
+C------ PARAMETER DESCRIPTION ------------------------------------------------
+C
+C  NAME      DESCRIPTION 
+C--------- -------------------------------------------------------------------
+C LINEMAX  Maximum number of lines that can be read in a GID file data set
+C CHAINLEN Maximum number of radionuclides in a decay chain
+C-----------------------------------------------------------------------------
+C
+      INTEGER LINEMAX
+      PARAMETER (LINEMAX = 10000)
+      INTEGER LENCHAIN
+      PARAMETER (LENCHAIN = 9)
+      INTEGER MAXPER  
+      PARAMETER (MAXPER = 70)
+C
+C---- END OF PARAMETER DECLARATION PARMTR.PAR --------------------------------
+C

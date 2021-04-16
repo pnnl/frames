@@ -1,0 +1,49 @@
+C   INTAKE:    RADON.CMN                Version Date: 13-Sept-2002               
+C   Copyright 2002 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK RADON                               *
+C                                                                            *
+C  Common block RADON contains Working Level and Working-Level-Month data    *
+C                                                                            *
+C  Written by:       Bruce Napier                                            *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    13-Sept-2002  BA Napier                                 *
+C  Last Modified:    13-Sept-2002  BAN                                       *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/INTAKE 
+C     Referenced by modules: INTAKER, EPFRIF
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C     Lradon    Logical Has a WL or WLM month result been calculated?
+C     WL(6)     Real	Working Level total
+C	  WLM(6)	Real	Working Level Month total
+C                       
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  13-Sept-2002    BAN  Initial Preparation  
+C                    
+C==== COMMON Block Definition ================================================
+C
+      COMMON/RADON/WL(6,1681), WLM(6,1681), Lradon
+C
+C==== Variable Declarations ==================================================
+C
+      REAL WL, WLM
+	  LOGICAL Lradon
+C
+C---- END OF COMMON BLOCK RADON -----------------------------------------------
+C

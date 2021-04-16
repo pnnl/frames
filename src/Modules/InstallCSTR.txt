@@ -1,0 +1,43 @@
+import FRAMES2API.*;
+import javax.swing.*;
+
+Install inst=new Install();
+
+/*
+UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+JFileChooser jfc=new JFileChooser("C:\\program files\\FRAMESV2\\");
+jfc.setDialogTitle("Select the path to the FRAMESV2 installation");
+jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+if(jfc.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) { exit(); }
+String path=jfc.getSelectedFile().getAbsolutePath()+ "\\";
+*/
+
+String path=bsh.args[0];
+System.out.println("Path is {"+path+"}");
+String DicPath=path+"\\Dictionaries\\";
+String ModPath=path+"\\Modules\\";
+String ExePath=path+"\\";
+
+inst.Start(path);
+
+System.out.println("Adding FRAMES Domain");
+inst.Domain("FRAMES",path+"Icons\\fui.ico");
+
+System.out.println("Adding 3MRA Model Groups");
+inst.ModelGroup("FRAMES","Example",path+"Icons\\src.ico");
+
+System.out.println("Adding Units");
+inst.Unit("Distance/Time","cm/yr","cm/yr",1/100.0,0.0);
+inst.Measure("Solid Volume/Mass","cm^3/g","cm^3/g");
+inst.Unit("Solid Volume/Mass","cm^3/g","cm^3/g",1.0,0.0);
+inst.End();
+
+inst.Start(path);
+System.out.println("Adding Dictionaries");
+inst.Dic(DicPath,"CSTROutput.dic");
+inst.Dic(DicPath,"CSTRInput.DIC");
+
+System.out.println("Adding Model");
+inst.Mod(ModPath,"CSTRWrapped.MOD",ExePath);
+
+inst.End();

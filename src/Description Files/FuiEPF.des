@@ -1,0 +1,79 @@
+"mf","Version 2.1"
+"Boundary Conditions:User Defined:usr","EPF Exposure Pathways Module","epf.exe 1","epf.exe 0","exp.ico"
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+Use this module only if you know the constituent concentrations in human exposure pathways.  The constituent concentrations at user provided points in time and media are entered directly through the interface.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny concentrations.  Therefore, this module assumes that the progeny emissions are input along with the parent concentrations.
+
+MODULE REFERENCES
+Document:  FRAMES Known Exposure Pathways
+
+Authors:
+  Mitch Pelton
+  Gariann Gelston
+  Melanie Eslinger
+
+Other related sites:
+  https://www.pnnl.gov/projects/earth
+
+  https://www.pnnl.gov/main/publications/external/technical_reports/PNNL-13409.pdf
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     epf Exposure Pathways
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+1,"Read"
+1,"con","",1,1
+1,"Write"
+"epf","Exposure Pathways"
+11,"Variables"
+"CVTFormat","Not Stochastic","","","","CVT format",0,STRING
+"name","Not Stochastic","","","","Name",0,STRING
+"kind","Not Stochastic","","","","Kind",0,STRING
+"locx","Continuous","km","","","X location",1,FLOAT
+"Variable","name","Index1","","","","",""
+"locy","Continuous","km","","","Y location",1,FLOAT
+"Variable","name","Index1","","","","",""
+"CASID","Not Stochastic","","","","Chemical Abstract System Identification",1,STRING,con.FSCASID
+"Variable","FSCNAME","Site","Index2","","","",""
+"dur","Not Stochastic","yr","","","Duration",1,FLOAT
+"Variable","name","Index1","","","","",""
+"route","Not Stochastic","","","","Route",0,STRING
+"path","Not Stochastic", "","","","Constituent pathway medium",0,STRING
+"conc","Continuous","Bq/kg","","","Concentration",5,FLOAT
+"Variable","name","Index1","","","","",""
+"Variable","route","Index1","Index2","Index3","Index4","",""
+"Variable","path","Index1","Index2","Index3","Index4","",""
+"Variable","FSCNAME","Site","Index2","Index3","","",""
+"Label","time index# ","Index5","","","","",""
+"time","Not Stochastic","yr","","","Time",3,FLOAT
+"Variable","name","Index1","","","","",""
+"Variable","FSCNAME","Site","Index2","Index3","","",""
+"Label","index #","Index5","","","","",""

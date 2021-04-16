@@ -1,0 +1,19 @@
+C----------------------------------------------------------------------
+C
+C     Exposure Rates Common Block
+C     Module of GENII                        Version of 2-Sep-87 RAP
+C     Modified for EDUP/GENII ACUTE component last: 29-Jul-97 DLS
+C     15-Dec-2004  BAN increased lifespan to 100 yrs (MAXPER ws undefined?!)
+C     17 APRIL 06  BAN Increased UEXP to 15
+C
+C----- Common Block Definition -----------------------------------------------
+C
+      COMMON /EXPALL/ EXPOST(100,CHAINLEN,28),UEXP(CHAINLEN,15)
+C      COMMON /EXPALL/ EXPOST(MAXPER,CHAINLEN,28),UEXP(CHAINLEN,14)
+C
+C----- Type declarations -----------------------------------------------------
+C
+      REAL EXPOST, UEXP
+C
+C-----------------------------------------------------------------------
+C

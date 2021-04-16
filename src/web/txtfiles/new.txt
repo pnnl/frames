@@ -1,0 +1,45 @@
+   <h2>New in FRAMES 1.3</h2><p>
+
+The following are lists of the most significant additions and changes made from the FRAMES version 1.2 to the FRAMES version 1.3:<p>
+<P>Additions to FRAMES 1.3:
+<UL>
+  <LI>Five new Human Health Impact (HIF) viewers including a tabular viewer that
+  sums risks/hazards for all exposure pathways, routes, and media for a starting
+  point in time, location, constituent, age group, and target organ, and can be
+  categorized by three sets of health metric:&nbsp; a) risk from carcinogenic
+  chemicals, b) hazard from noncarcinogenic chemicals, and c) risk from
+  radionuclides.
+  <LI>A Risk Assessment Guidelines for Superfund (RAGS) table generation viewer
+  that will enable FRAMES system to generate tables required for a RAGS
+  analysis as prescribed by U.S. Environmental Protection Agency (EPA).
+</LI></UL>
+<P><BR>Changes to FRAMES 1.3:
+<UL>
+  <LI>Opening and closing files - Upon first opening FRAMES software, a
+  blank screen (instead of a new .gid file) will open. This forces the user to
+  either create a new file or select a file already existing. Also, software
+  will prompt the user to save the file immediately after creating the file,
+  instead of saving it upon entering data for the Constituent Database module
+  icon.
+  <LI>Viewers - To view results, right click on the item menu for each icon and
+  choose "View/Print Module Input." The viewer is no longer an icon that needs
+  to be attached within the CSM (Conceptual Site Model).
+  <LI>Constituent Editor now allows users to modify constituent
+  properties local to a GID, or to all subsequent runs using FRAMES
+  constituent database.
+  <LI>Increased speed for file input and output.
+  <LI>Error message handling has been improved.
+  <LI>Module connectivity and status light system are more robust.
+  <LI>Backing up of scenario files has been improved.&nbsp; Original files
+  are restored when the GID is closed without saving.
+  <LI>Sensitivity/Uncertainty module is faster and now works with all
+  modules that have defined their inputs in their respective DES files, although
+  it still limited to monitoring SCF, WFF, WCF, HIF outputs. </LI></UL>
+<p>
+<h3>
+<u>MORE INFORMATION</u></h3>
+<blockquote>
+Back to <a href="index.html"><b>FRAMES Home.</a></b>
+<br>Back to <a href="overview.html"><b>FRAMES Overview.</a></b>
+<br>Additional information on FRAMES can be found by exploring this website through the toolbar on the left side of this page.
+</blockquote>

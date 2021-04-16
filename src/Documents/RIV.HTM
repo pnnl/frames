@@ -1,0 +1,217 @@
+<html>
+<head>
+  <title>SURFACE WATER MODULE</title>
+</head>
+<body  background="mepas.jpg">
+
+<hr />
+<center><h1><img src="riv.ico" height=64 width=64> SURFACE WATER MODULE</h1></center>
+<hr />
+
+<a name="DIMENSIONS"></a><h2>DIMENSIONS TAB</h2>
+
+<br /><a name="WWVELOC"></a><u><b>WW-VELOC</b>--Flow velocity at constituent entry point</u>
+<br />Units: feet per second (m/s)
+<br />Range: greater than 0.0
+<br />
+<br />The river flow velocity should be determined for the
+location where constituents from the release site enter the river.
+The river flow velocity is based on the average annual stream discharge.
+Depending on the data available, the flow velocity can be estimated in
+a number of ways. The following techniques are suggested, in order
+of preference:
+<br />
+<blockquote>
+1. Published information: If the average annual flow
+velocity has been published for the stream or river, use this value.
+<br />
+<br />2. USGS Water Resources Data Report or USACOE Stage-Discharge
+Reports, and Discharge Summary Measurement Sheets: the first step (1) is
+to locate the U.S. Geological Survey (USGS) gaging station that is closest
+to the facility and within the reach of the river of interest. The gaging
+station can be identified from the USGS Water Resources Data reports for
+the appropriate states or from stage and discharge reports for selected
+rivers published by the U.S. Army Corps of Engineers (<a href="FIG_2_25.HTM">Figure
+2.25</a>). An example map showing locations of USGS gaging stations
+is presented in <a href="FIG_2_26.HTM">Figure 2.26</a>. From these
+reports, water-discharge records are available for each of the gaging stations.
+USGS gaging stations are also available via the internet (http://water.usgs.gov/).
+<br />
+<br />The second step (2) is to obtain the average annual discharge
+from a table similar to the example shown in <a href="FIG_2_27.HTM">Figure
+2.27</a>. The average annual discharge is listed under the heading titled
+"Average Discharge" on the USGS Water Resources Data Report
+(see <a href="FIG_2_27.HTM">Figure 2.27</a>).
+USGS discharge data is also available via the internet (http://water.usgs.gov/).
+<br />
+<br />The third step (3) is to develop a relationship between
+velocity and discharge, which can be determined from data in the USGS Discharge
+Measurement Summary Sheets; i.e., Form 9-207 (<a href="FIG_2_28.HTM">Figure
+2.28</a>). Correlated pairs of discharge and mean flow velocity data
+are available from Form 9-207. Form 9-207 is associated with each
+station; it describes the width, cross-sectional area, height, and flow
+velocity for various discharges. Using data from this form and the
+other reports, velocity versus discharge, depth versus discharge, and/or
+width versus discharge can be plotted on log-log graph in a spreadsheet.
+Example plots of velocity versus discharge and width versus discharge are
+illustrated in <a href="FIG_2_29.HTM">Figure 2.29</a>. The points
+plotted may be somewhat scattered; a best-fit curve will have to be estimated.
+<br />
+<br />3. USGS Water Resources Data Report or USACOE Stage-Discharge
+Reports, and USGS 7.5' Topographic Maps: If Discharge Summary Measurement
+Sheets (i.e., Form 9-207) for a gage (within the reach of the river that
+is of interest) is unavailable, the average flow velocity can be calculated
+using an USGS Water Resources Data Report or U.S. Army Corps of Engineers
+(USACOE) Stage-Discharge Reports, field data, and/or USGS 7.5-min topographic
+maps. In this case, the average annual velocity is estimated using
+the average annual discharge, flow width, and flow depth in the following
+equation:
+<br />
+<br />
+<center>Flow Velocity = Average Annual Discharge/Flow Depth/Flow Width</center>
+<br />The average annual discharge is obtained as described
+above in Step 2. The flow width and depth can be measured during
+site visit(s) or estimated with the help of someone who has visited the
+site. If field measurements of the depth are unavailable, the depth
+can be estimated as follows. The USGS topographic maps can be used
+to locate the gaging station and estimate the bed elevation of the stream
+at that location. The USGS or USACOE reports are used to identify
+gage height versus discharge. To convert gage height to flow depth
+for flow depth-discharge plots (<a href="FIG_2_29.HTM">Figure 2.29</a>),
+use the following equation:
+<br />
+<br />
+<center>Flow Depth = Gage Elevation + Gage Height - Bed Elevation</center>
+<br />The elevation of the gage can usually be obtained from
+the USGS or USACOE report under the heading "Gage." The gage height
+is recorded for various discharges in these reports. The bed elevation
+is obtained from the USGS topographic map. The flow depths and the
+discharges can be plotted on a log-log graph which is similar to one illustrated
+in <a href="FIG_2_29.HTM">Figure 2.29</a>. The flow depth corresponding
+to the average annual discharge can be obtained from this plot.
+<br />
+<br />4. Site Inspection: If some of the recorded information
+is unavailable for the stream in question, a site visit may be required,
+or correspondence with appropriate government agencies may be appropriate.
+<br />
+<br />5. First available gaging station: If no information is
+available, use data from the first gaging station downstream.</UL>
+</blockquote>
+<a name="WWDEPTH"></a><u><b>WW-DEPTH</b>--Depth at constituent entry point</u>
+<br />Units: feet (m)
+<br />Range: greater than 0.0
+<br />
+<br />The river flow velocity should be determined for the
+location where constituents from the release site enter the river.
+An analogous procedure as that outlined in Section <a href="RIV.HTM#WWVELOC">WW-VELOC</a>
+can be used. In step (3), use flow depth from Form 9-207 and plot
+flow depth versus discharge.
+<br />
+<br /><a name="WWWIDTH"></a><u><b>WW-WIDTH</b>--Width at constituent entry point</u>
+<br />Units: feet (m)
+<br />Range: greater than 0.0
+<br />
+<br />The river flow velocity should be determined for the
+location where constituents from the release site enter the river.
+An analogous procedure as that outlined in Section <a href="RIV.HTM#WWVELOC">WW-VELOC</a>
+can be used. In step (3), use flow width from Form 9-207 and plot
+flow width versus discharge (see <a href="Fig_2_29.htm">Figure 2.29</a>).
+<br />
+<br /><a name="WWDIST"></a><u><b>WW-DIST</b>--Distance from source to location</u>
+<br />Units: feet (m)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />Identify the distance from the surface-water source to
+the downstream usage location from the USGS topographic maps. A usage
+location is where water is withdrawn from the river for domestic or agricultural
+uses or where receptors are directly exposed to river water. Usage
+locations are always assumed to be on the same side of the river as the
+constituent source entering the river. Identify the distance from
+the <u>center</u> of the source entering the river to the downstream usage
+locations. <a href="FIG_2_30.HTM">Figures 2.30</a> and <a href="FIG_2_31.HTM">2.31</a>
+present examples that illustrate WW-DIST: 1) downstream receptor (e.g.,
+water intake structure) is located near the river source or on the straight
+river, and 2) it is on the meandering river, respectively.
+<br />
+<br /><a name="WWDISCHG"></a><u><b>WW-DISCHG</b>--Average annual discharge at location</u>
+<br />Units: cubic feet per second (m<sup>3</sup>/s)
+<br />Range: greater than 0.0
+<br />
+<br />Discharge is a function of distance and may change from
+one usage location to the next. To determine the average annual discharge,
+follow the guidelines outlined in <a href="RIV.HTM#WWVELOC">WW-VELOC</a>.
+If a usage location lies between two gaging stations, interpolate linearly
+to estimate the discharge. Note that the discharge is not necessarily
+the same as that used to determine the flow velocity, river depth, or river
+width where constituents enter the river (<a href="RIV.HTM#WWVELOC">WW-VELOC</a>,
+<a href="RIV.HTM#WWDEPTH">WW-DEPTH</a>, or <a href="RIV.HTM#WWWIDTH">WW-WIDTH</a>).
+<br />
+<br /><a name="WWY"></a><u><b>WW-Y</b>--Georeferenced northing coordinate</u>
+<br />Units: meters (m)
+<br />Range: real number
+<br />
+<br />A mapable northing coordinate.  When combined with the easting coordinate,
+the coordinate pair shall represent a point on a map where the surface water
+concentrations are located. It is assume that the user will supply all
+coordinates on the same basis, such as Nad87, UTM zone 11.  This value is not
+used to compute the concentrations.
+<br />
+<br /><a name="WWY"></a><u><b>WW-X</b>--Georeferenced easting coordinate</u>
+<br />Units: meters (m)
+<br />Range: real number
+<br />
+<br />A mapable easting coordinate.  When combined with the northing, the coordinate
+pair shall represent a point on a map where the surface water concentrations are located.
+It is assume that the user will supply all coordinates on the same basis, such as Nad87,
+UTM zone 11.  This value is not used to compute the concentrations.
+<br />
+<br /><a name="WWY"></a><u><b>WW-Z</b>--Elevation</u>
+<br />Units: meters (m)
+<br />Range: real number, probably greater than zero.
+<br />
+<br />The elevation at the point represented by northing and easting coordinate pair.
+This value is not used to compute the concentrations.
+
+<br />
+<br />
+<a name="PROPERTIES"></a><h2>CONSTITUENT PROPERTIES TAB</h2>
+<a name="FSCNAME"></a><u><b>FS-CNAME</b>--Name of constituent(s) for current transport scenario</u>
+<br />
+<br />This field shows the constituents that are selected for
+the scenario. Use the arrow buttons to scroll through the list of
+constituents and enter an adsorption coefficient and water solubility for
+each one, and a degradation/decay half-life for non-radionuclides.
+If a constituent has decay products, they will be shown on the bottom part
+of this screen.
+<br />
+<br /><a name="WWSOL"></a><u><b>WW-SOL</b>--Water solubility</u>
+<br />Units: milligrams per liter (mg/l) or picocuries per milliliter (pCi/ml)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />Enter the aqueous solubility for the constituent.
+For most organic constituents, this value is available in the constituent
+database or in chemical property books. For inorganic constituents,
+this value will have to be estimated based on the geochemistry of the waste
+zone. If a value is available in the constituent database, it will
+be used as an initial default value. If a database value is not available,
+the solubility is set to 0, which is used as an indicator meaning an unknown
+solubility. The vadose zone module only uses the water solubility
+for a comparison with the concentration of constituent entering the layer.
+If that concentration exceeds the solubility, a warning message is written
+to a warning message file (<I>casename</I>.WRN). If the solubility
+is 0, this comparision is not performed.
+<br />
+<br /><a name="WWSHALF"></a><u><b>WW-SHALF</b>--Half-life in surface water</u>
+<br />Units: years
+<br />Range: greater than 0.0
+<br />
+<br />This parameter is the half-life of the constituent
+in the aquifer. For radionuclide and non-radionuclide constituents, this value defaults to
+the data in the constituent database, but the value can be changed to a site-specific value.
+This parameter can be used to implement other degradation rates (e.g., biodegradation, photo
+degradation, etc...) when they are converted to equivalent half-lives.
+
+<hr />
+<center><a href="https://www.pnnl.gov/projects/earth/mepas"><img src="MEPHOME.GIF" ></a></center>
+</body>
+</html>

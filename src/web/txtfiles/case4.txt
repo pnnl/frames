@@ -1,0 +1,42 @@
+
+<h2>Test Case 4 </h2><p>
+
+<b> Description and Rationale </b><p>
+
+
+
+
+This case verifies that the FRAMES User Interface (FUI) will produce error messages when modules do not run to completion due to a run-time error or system error. Also, the availability of on-line help will be checked. The file ‘fui_02.gid’ (the Global Input Data (GID) file developed for Test Case 2) will be opened and edited. <p>
+
+
+<b>Instructions for Performing the Test and Expected Results </b><p>
+
+         These instructions assume that the FUI is running and visible on the user’s screen. Select ‘Open’ from the ‘File’ drag down menu. When prompted to choose a GID file to open, select the file ‘fui_02.gid’. The scenario developed in Test Case 2 should appear in the working space. Save the file as ‘fui_04.gid’. To do this, go to the ‘File’ drag down menu and select ‘Save As’.<p> When prompted, type ‘fui_04.gid’ as the new file name and click on the ‘Save’ button. Notice that the file name in the lower left corner changed to ‘fui_04.gid’. Also notice that all of the module signal lights (excluding the constituent selection module) have turned yellow. This happens because when a case is ‘Saved As’ only the User Input data is saved.<p> The intermediate and output results from the original file are not copied. The yellow lights indicate that the models need to be run again. To do this quickly, click on the ‘GO’ button. All modules should execute automatically and all signal lights should turn green.<p>
+
+
+
+         First, check the on-line help option. Click on ‘Help’ at the far right end of the FUI menu bar. The program ‘NavRoad32’ should display the main FUI help page. From there you can click on any of the items in the Table of Contents to view the on-line help.<p>
+
+
+
+         Next, check that the FUI reports model errors and correctly tracks the working stage of each model via the signal light. Right click on the Exposure icon and select ‘User Input’. On the ‘Exposure Pathways’ tab uncheck the box next to one of the selected pathways. Use the ‘File’ drag down menu to save and exit. The module light should turn yellow, indicating that an input change has been made and the model needs to be re-run. Right click on the exposure icon again and select ‘Run Model’. The signal light will turn green indicating that the model was run successfully.<p>
+
+
+
+         Close the GID file and save changes.<p>
+
+
+
+<b>Results</b>
+
+
+
+         The above instructions were followed and the results matched the expectations.
+
+
+
+<p>
+
+ <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"> <p>
+<a href="software.html#testing"><b>Return to the Testing outline on Software page.</a></b>

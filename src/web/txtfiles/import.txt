@@ -1,0 +1,97 @@
+            <h2>FRAMES Module Software Development Kit
+
+</h2><p>
+
+This document is intended to serve as a starting point for module
+developers who intend to integrate a code or a set of codes into the FRAMES software platform. The software developers kit (SDK) is meant to provide model developers
+	and users with 1) a step-by-step process on how to incorporate a code into
+			FRAMES, and 2) an example of the process a module developer will&nbsp;	complete during incorporation of a module into FRAMES.&nbsp;
+A module is a modeling, import, export, or visualization component of FRAMES.&nbsp;
+<p>
+A FRAMES component serves three distinct functions 1) Get data from the 
+user through a user interface (UI), 2) Run the requested simulation,
+visualization, import, or an export typically called a model, and 3) Describe
+itself to FRAMES.&nbsp;&nbsp; Therefore to include a legacy model into
+FRAMES, three steps need to be completed.&nbsp;
+<ol>
+<li>
+Create a new or wrap the existing UI</li>
+
+<li>
+Create a new or wrap the existing model, import, export, or visualization
+program</li>
+
+<li>
+Create a description file so that FRAMES recognizes new module.</li>
+</ol>
+It is important to note that a legacy module need <b>NOT</b> match FRAMES
+specifications <b>DIRECTLY</b>.&nbsp; Many times it is simpler to write
+a separate wrapping program that converts the legacy output of the model
+into &nbsp; FRAMES specifications.&nbsp; Before a module developer can
+begin the three-step process described above they will need to determine
+which of FRAMES specifications apply to their module.&nbsp; FRAMES
+specifications contain 13 sections.&nbsp; Most sections describe a particular
+file format that needs to be read or written at time in FRAMES.&nbsp;
+The file formats used by FRAMES system are as follows:
+<ol>
+<li>
+Atmospheric Flux File (AFF)</li>
+
+<li>
+Atmospheric Transport Output (ATO)</li>
+
+<li>
+Body Burden File (BBF)</li>
+
+<li>
+Description (DES) file</li>
+
+<li>
+Exposure Pathway File (EPF)</li>
+
+<li>
+Ecological Effects File (EXF)</li>
+
+<li>
+Error (ERR) file</li>
+
+<li>
+Global Input Data (GID)</li>
+
+<li>
+Health Impacts File (HIF)</li>
+
+<li>
+Primary Data Communication FIle (PDCF)</li>
+
+<li>
+Soil Concentration File (SCF)</li>
+
+<li>
+Sensitivity Uncertainty File (SUF)</li>
+
+<li>
+Receptor Intake File (RIF)</li>
+
+<li>
+Water Flux File (WFF)</li>
+
+<li>
+Water Concentration File (WCF)</li>
+</ol>
+FRAMES handles files by using extension to recognize type of data
+it contains.&nbsp; For example, FRAMES would assume that a file named <i>MyOutput.wff</i>
+is a Water Flux File.&nbsp; These three file types (ERR, GID, and DES)
+are very important to understand because all modules in FRAMES are required
+to interact with these file types.&nbsp; process of creating DES
+file is last step in three step process of creating a FRAMES module,
+and discussion of DES file will wait for that step.&nbsp;
+
+<p>
+ <hr size="1" color="#000080" noshade align="center" width="95%">
+           <p style="margin-top: -2; margin-bottom: -2"> <p>
+<b>Introduction to SDK</b> - introduction page for Software Developer Kit.
+<br><a href="import2.html"><b>SDK 1.1-1.3</b></a> - Call Arguments, ERR file, GID file and Reading module sections in FRAMES specified files.
+<br><a href="import3.html"><b>SDK 2.0</b></a> - Example of module inclusion
+<br><a href="import4.html"><b>SDK Tools</b></a> - Software Development Tools
+<p><a href="modules.html#import">Back to Module Development page.</a>

@@ -1,0 +1,169 @@
+"mf","Version 2.1"
+"Eco Exposure & Risk:Eco Health Effects:efx","WEAP Aquatic Organism Effects","weapui.exe","weap.exe","efx.ico"
+"
+MODULE VERSION
+  5.0 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This program correlates simulated, modeled, or 
+measured ecological constituent levels 
+(e.g., concentration, body burden,dose) with 
+toxicological benchmarks and provides a 
+statistical analysis of this comparison.
+
+MODULE REFERENCES
+Document:
+  Demonstration of the Wildlife Ecological 
+  Assessment Program (WEAP)
+
+Authors:
+  Gene Whelan
+  Mitch Pelton
+  Randal Taira
+  Fred Rutz
+  Gariann Gelston
+
+Other related sites:
+  https://www.pnnl.gov/projects/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 aos Aquatic Organism required as input
+     0 to 1 ebf Aquatic Benchmarks required as input
+     0 to 5 wcf Surface Water required as input
+
+Valid Output Writes
+     exf Aquatic Organism Effects
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+2,"Read"
+3,"con","",1,1,"aos","Aquatic Organism",1,1,"wcf","Surface Water",1,5
+4,"con","",1,1,"aos","Aquatic Organism",1,1,"ebf","Aquatic Benchmarks",1,1,"wcf","Surface Water",1,5
+1,"Write"
+"exf","Aquatic Organism Effects"
+59,"Variables"
+"CVTFormat","Not Stochastic",,,,"Number format to use",0,STRING
+"locid","Not Stochastic","","","","Location ID",0,STRING
+"LCDescript","Not Stochastic","","","","Description",1,STRING
+"Label","lethal concentration option","Index1","","","","",""
+"LDDescript","Not Stochastic","","","","Description",1,STRING
+"Label","lethal dose option","Index1","","","","",""
+"EDDescript","Not Stochastic","","","","Description",1,STRING
+"Label","effective dose option # ","Index1","","","","",""
+"IPDescript","Not Stochastic","","","","Description",1,STRING
+"Label","IP option # ","Index1","","","","",""
+"Bodypart","Not Stochastic","","","","Description",1,STRING
+"Label","Body Part # ","Index1","","","","",""
+"Effect","Not Stochastic","","","","Description",1,STRING
+"Label","Effect # ","Index1","","","","",""
+"JurisdictionSSL","Not Stochastic","","","","Description",1,STRING
+"Label","Soil Screening Level Jurisdiction # ","Index1","","","","",""
+"JurisdictionTRV","Not Stochastic","","","","Toxicity reference value jurisdiction",1,STRING
+"Label","index # ","Index1","","","","",""
+"LCChem","Not Stochastic","","","","Selection",1,LOGICAL
+"Varaible","LCDescript","Index1","","","","",""
+"LDChem","Not Stochastic","","","","Selection",1,LOGICAL
+"Varaible","LDDescript","Index1","","","","",""
+"EDChem","Not Stochastic","","","","Selection ",1,LOGICAL
+"Varaible","EDDescript","Index1","","","","",""
+"IPChem","Not Stochastic","","","","Selection",1,LOGICAL
+"Varaible","IPDescript","Index1","","","","",""
+"BodypartEDChem","Not Stochastic","","","","Select effective dose",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectEDChem","Not Stochastic","","","","Select effective dose",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartIPChem","Not Stochastic","","","","Select IPChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectIPChem","Not Stochastic","","","","Select IPChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartLOEDChem","Not Stochastic","","","","Select LOEDChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectLOEDChem","Not Stochastic","","","","Select LOEDChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartNOEDChem","Not Stochastic","","","","Select NOEDChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectNOEDChem","Not Stochastic","","","","Select NOEDChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartLOECChem","Not Stochastic","","","","Select LOECChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectLOECChem","Not Stochastic","","","","Select LOECChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartNOECChem","Not Stochastic","","","","Select NOECChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectNOECChem","Not Stochastic","","","","Select NOECChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartTCChem","Not Stochastic","","","","Select TCChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectTCChem","Not Stochastic","","","","Select TCChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"BodypartTDChem","Not Stochastic","","","","Select TDChem",1,STRING
+"Variable","BodyPart","Index1","","","","",""
+"EffectTDChem","Not Stochastic","","","","Select TDChem",1,STRING
+"Variable","Effect","Index1","","","","",""
+"numtwis","Not Stochastic","","","","numtwis",0,INTEGER
+"numscfs","Not Stochastic","","","","numscfs",0,INTEGER
+"numecos","Not Stochastic","","","","numecos",0,INTEGER
+"numlocs","Not Stochastic","","","","Number of locations",0,INTEGER
+"numlife","Not Stochastic","","","","numlife",0,INTEGER
+"user","Not Stochastic","","","","user",0,STRING
+"species","Not Stochastic","","","","Species",0,STRING
+"CASID","Not Stochastic","","","","Chemical Abstract System Identification",1,STRING,con.FSCASID
+"Variable","FSCNAME","Site","Index2","","","",""
+"acutetime","Continuous","hr","","","Acute exposure duration",0,FLOAT
+"cccvalue","Continuous","g/mL","","","Chronic limit",0,FLOAT
+"numlc","Not Stochastic","","","","Number of curves",0,INTEGER
+"deslc","Not Stochastic","","","","Description of cure",0,STRING
+"lcdur","Continuous","yr","","","Duration for time #",1,FLOAT
+"Label","time index # ","Index3","","","","",""
+"lcconc","Continuous","g/mL","","","Concentration",1,FLOAT
+"Label","time index # ","Index3","","","","",""
+"numsteps","Not Stochastic","","","","Number of time vs. location pairs",0,INTEGER
+"time","Continuous","yr","","","Time",1,FLOAT
+"Label","index # ","Site","Index2","","","",""
+"value","Continuous","","","","Location index",1,FLOAT
+"Label","time index #","Site","Index2","","","",""
+"loedpart","Not Stochastic","","","","Select",1,LOGICAL
+"Label","Lowest Observable Effects Dose bodypart # ","Index1","","","","",""
+"loedeffect","Not Stochastic","","","","Select",1,LOGICAL
+"Label","Lowest Observable Effects Dose effect # ","Index1","","","","",""
+"uspecies","Not Stochastic","","","","User Species",1,STRING
+"Label","index # ","Index2","","","","",""
+"ucasid","Not Stochastic","","","","Chemical Abstract System Identification",1,STRING,con.FSCASID
+"Variable","FSCNAME","Site","Index2","","","",""
+"NumUserChem","Not Stochastic","","","","Number of user chemicals",0,INTEGER
+"UserDescript","Not Stochastic","","","","Description",2,STRING
+"Variable","FSCNAME","Site","Index2","","","",""
+"Label","sample index #","Index3","","","","",""
+"UserChem","Continuous","","","","Concentration",2,FLOAT
+"Variable","FSCNAME","Site","Index2","","","",""
+"Label","sample index #","Index3","","","","",""
+"UserChemDur","Continuous","","","","Duration",2,FLOAT
+"Variable","FSCNAME","Site","Index2","","","",""
+"Label","sample index #","Index3","","","","",""
+"edpart","Not Stochastic","","","","Select",1,LOGICAL
+"Label","Effective Dose bodypart # ","Index1","","","","",""
+"edeffect","Not Stochastic","","","","Select",1,LOGICAL
+"Label","Effective Dose effect # ","Index1","","","","",""
+"noedpart","Not Stochastic","","","","Select",1,LOGICAL
+"Label","No Observable Effects Dose bodypart # ","Index1","","","","",""
+"noedeffect","Not Stochastic","","","","Select",1,LOGICAL
+"Label","No Observable Effects Dose effect # ","Index1","","","","",""

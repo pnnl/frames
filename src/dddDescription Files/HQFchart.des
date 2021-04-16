@@ -1,0 +1,52 @@
+"mf,Version 2.1"
+"Viewer:Viewer:vwr,HQF Graphical View,,xlschart.exe hqf,vwr.ico
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+This module will display, in spreadsheet and a graphical chart, the contents of the section in an HQF file specified by the commandline passed from FRAMES to this viewer.
+
+IMPORTANT NOTE:
+  Requires Microsoft Excel to be installed.
+
+MODULE REFERENCES
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 hqf Aquatic HQ required as input
+     1 to 1 hqf Aquatic Organism HQ required as input
+     1 to 1 hqf Terrestrial HQ required as input
+     1 to 1 hqf Terrestrial Organism Intake HQ required as input
+
+Valid Output Writes
+     <none>
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bonnie Hoopes
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        bonnie.hoopes@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+4,Reads
+1,hqf,Aquatic HQ,1,1
+1,hqf,Terrestrial HQ,1,1
+1,hqf,Aquatic Organism HQ,1,1
+1,hqf,Terrestrial Organism Intake HQ,1,1
+0,Writes
+0,Variables

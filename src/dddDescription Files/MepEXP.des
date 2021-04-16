@@ -1,0 +1,196 @@
+"mf,Version 2.1"
+"Human Exposure & Risk:Exposure Pathways:exp,MEPAS 5.0 Exposure Pathways Module,exp.exe,MepExp.bat,exp.ico
+"
+MODULE VERSION
+  5.0 Compiled on 11/23/2005,  UI compiled on 6/28/2007
+
+MODULE DESCRIPTION
+The MEPAS Exposure Pathways Module can be used to
+calculate pollutant concentrations in exposure
+media resulting from contamination of air,
+groundwater, surface water, and soil. The module
+includes consideration of domestic water use,
+farm product consumption, aquatic food consumption,
+surface water recreational activities, soil contact
+exposure, and air exposures.  Both chemical and
+radioactive pollutants may be evaluated.  Indoor
+air inhalation of volatile compounds may be evaluated
+using either the MEPAS shower model or the
+EPA/Andelman indoor air model.  Transfer of activity
+through food chains is modeled using concentration
+ratios, bioaccumulation factors and transfer factors.
+Radioactive chain decay with branching is included
+in evaluation of changing media concentrations with
+time.  Buildup and leaching of constituents from
+surface soil is accounted for as a function of time.
+For waterborne contamination, exposure media
+concentrations are evaluated for one location.
+For atmospheric contamination, media concentrations
+are evaluated for each location defined in the ato file.
+
+Limitations:
+  The atmospheric transport output file (ato) can have
+  data for a maximum of 10 time periods, 20 distances,
+  and 36 directions.  A maximum of 100 time points can
+  be defined for each data set in the water concentration
+  file (wcf).
+
+MODULE REFERENCES
+  Strenge, D.L., and P.J. Chamberlain.  1995.
+  Multimedia Environmental Pollutant Assessment 
+  System (MEPAS): Exposure Pathway and Human 
+  Health Impact Assessment Models.
+  PNL-10523.  Pacific Northwest Laboratory, Richland, WA.
+
+Other related sites:
+  http://mepas.pnl.gov/mepas
+  http://mepas.pnl.gov/FramesV1/exposure.stm
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 scf Soil required as input
+     0 to 1 wcf Aquifer required as input
+     0 to 1 wcf Surface Water required as input
+     0 to 1 ato Air required as input
+     0 to 1 ato Polar Air required as input
+
+Valid Output Writes
+     epf Exposure Pathways 
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Dennis Strenge
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        dennis.strenge@pnl.gov
+URL Address:          http://mepas.pnl.gov/mepas/mexp/requirements.html
+"
+12,Read
+5,wcf,Aquifer,1,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,1,1,con,,1,1,scf,Soil,0,1,ato,Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,1,1,ato,Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Air,1,1
+5,wcf,Aquifer,1,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Polar Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,1,1,con,,1,1,scf,Soil,0,1,ato,Polar Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,1,1,ato,Polar Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Polar Air,1,1
+5,wcf,Aquifer,1,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Cartesian Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,1,1,con,,1,1,scf,Soil,0,1,ato,Cartesian Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,1,1,ato,Cartesian Air,0,1
+5,wcf,Aquifer,0,1,wcf,Surface Water,0,1,con,,1,1,scf,Soil,0,1,ato,Cartesian Air,1,1
+2,Write
+"epf,Exposure Pathways"
+"msg,Messages"
+78,Variables
+CVTFormat,Not Stochastic,,,,CVT format,0,STRING
+"KNPATH,Not Stochastic,,min,0,max,7,Pathway selection flag,0,INTEGER
+"KGDR,Not Stochastic,,min,0,max,3,Domestic Usage,0,INTEGER
+"KGIR,Not Stochastic,,min,-1,max,2,Irrigation Usage,0,INTEGER
+"KSDR,Not Stochastic,,min,0,max,3,Domestic Usage,0,INTEGER
+"KSIR,Not Stochastic,,min,-1,max,2,Irrigation Usage,0,INTEGER
+"KSAQ,Not Stochastic,,min,0,max,3,Aquatic Food Usage,0,INTEGER
+"KSR,Not Stochastic,,min,0,max,4,Recreational Usage,0,INTEGER
+"KAIN,Not Stochastic,,min,0,max,1,Regional Exposure,0,INTEGER
+"KAAG,Not Stochastic,,min,0,max,1,Agricultral Exposure,0,INTEGER
+"GWFEED,Not Stochastic,,,,Ground water used for feed irrigation,0,LOGICAL
+"GWDRINK,Not Stochastic,,,,Ground water used for drinking water,0,LOGICAL
+"SWFEED,Not Stochastic,,,,Surface water used for feed irrigation,0,LOGICAL
+"SWDRINK,Not Stochastic,,,,Surface water used for drinking water,0,LOGICAL
+"SOILMOD,Not Stochastic,,,,Soil concentration file model usage,0,LOGICAL
+"NYEARS,Not Stochastic,yr,,,Time step between computations,0,FLOAT
+"KEXPTH,Not Stochastic,,min,0,max,1,Flag,2,INTEGER
+Variable,Pathways,Index1
+Variable,media,Index2,
+"LTRTL,Not Stochastic,,,,Check if water is treated water,1,INTEGER
+Variable,media,Index1
+"LEACHOPTION,Not Stochastic,,min,0,max,1,Leachrate selection option,0,INTEGER
+"DGWED,Continuous,yr,min,1,max,100,Exposure duration,0,FLOAT
+"DSWED,Continuous,yr,min,1,max,100,Exposure duration,0,FLOAT
+"ATED,Continuous,yr,min,1,max,100,Exposure duration,0,FLOAT
+"SMED,Continuous,yr,min,1,max,100,Exposure duration,0,FLOAT
+"TWTR,Continuous,day,min,0,max,100,Water distribution time,1,FLOAT
+Variable,media,Index1
+"FIRR,Continuous,,min,0,max,1,Fraction of the year that groundwater is used for irrigation,1,FLOAT
+Variable,media,Index1
+"CIRR,Continuous,L/m^2/mon,min,0,max,999.9,Irrigation rate,1,FLOAT
+Variable,media,Index1
+"TISSUE,Continuous,,min,0.0001,max,10000,Finned fish fillet correction factor,0,FLOAT
+"TFSH,Continuous,day,min,0,max,999.9,Finfish ingestion harvest delay time,0,FLOAT
+"TINV,Continuous,day,min,0,max,999.9,Shell fish ingestion harvest delay time,0,FLOAT
+"TSS,Continuous,m,min,0.001,max,5,Thickness of shoreline sediments,0,FLOAT
+"RHOSS,Continuous,g/cm^3,min,1,max,4,Density of shoreline sediments,0,FLOAT
+"TAS,Continuous,m,min,0.001,max,5,Thickness of soil recieving deposition,0,FLOAT
+"RHOAS,Continuous,g/cm^3,min,1,max,4,Density of soil recieving deposition,0,FLOAT
+"TEXPOS,Continuous,yr,min,0,max,1000000,Time to start exposure computation,0,FLOAT
+"MAXTIM,Not Stochastic,yr,min,0,,Maximum time for reporting,0,FLOAT
+"NTIMES,Not Stochastic,,min,0,,Number of time points for evaluation,0,FLOAT
+"NUMCON,Not Stochastic,,,,Constiuent count,0,INTEGER
+"NDS,Not Stochastic,,,,Number of daughter products,1,INTEGER,con.FSCASID
+Variable,FSCNAME,Site,Index1
+CASID,Not Stochastic,,,,Chemical Abstract System Identification,1,STRING,con.FSCASID
+Variable,FSCNAME,Site,Index1,Index2
+"SOILLR,Continuous,1/yr,min,0,max,100,Leach rate constant,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"SOILKD,Continuous,ml/g,min,0,max,1000000,Soil adsorbtion coefficient,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"RET,Continuous,,min,0,max,1,Agricultural plant retension fraction of deposited activity,0,FLOAT
+"TRN,Continuous,,min,0,max,1,Tranlocation factors,1,FLOAT
+Variable,TerFood,Index1
+"FFC,Continuous,,min,0,max,1,Feed contamination fraction,1,FLOAT
+Variable,fwAnimal #,Index1
+"FWC,Continuous,,min,0,max,1,Water contamination fraction,1,FLOAT
+Variable,fwAnimal #,Index1
+"YLD,Continuous,kg/m^2,min,0.01,max,20,Feed and crop yields,1,FLOAT
+Variable,TerFood,Index1
+"USL,Continuous,kg/day,min,0,max,20,Animal soil intake rates,1,FLOAT
+Variable,fwAnimal #,Index1
+"TCRP,Continuous,day,min,0,max,365,Harvest delay times,1,FLOAT
+Variable,TerFood,Index1
+"TGRW,Continuous,day,min,10,max,365,Growing period,2,FLOAT
+Variable,TerFood,Index1
+Variable,media,Index2,
+"DEN,Continuous,kg/m^2,min,1,max,2000,Agricultural areal soil density,0,FLOAT
+"UMT,Continuous,kg/day,min,0,max,200,Meat animal intake rate of feed,0,FLOAT
+"UMK,Continuous,kg/day,min,0,max,200,Milk animal intake rate of feed,0,FLOAT
+"WMT,Continuous,L/day,min,0,max,300,Meat animal intake rate of water,0,FLOAT
+"WMK,Continuous,L/day,min,0,max,300,Milk animal intake rate of water,0,FLOAT
+"CML,Continuous,kg/m^3,min,0.000000000001,max,0.0001,Airborne particulate mass loading factor,0,FLOAT
+"RESFAC,Continuous,1/m,min,0.000000000001,max,0.0002,Atmospheric resuspension factor,0,FLOAT
+"ANDFC,Continuous,L/m^3,min,0,max,10,Andelman inhalation factor for volatile chemicals,0,FLOAT
+"ANDFR,Continuous,L/m^3,min,0,max,10,Andelman inhalation factor for radon-222,0,FLOAT
+"ANDFO,Continuous,L/m^3,min,0,max,10,Andelman inhalation factor for other pollutants,0,FLOAT
+"pathways,Not Stochastic,,,,Exposure route and path,0,STRING
+media,Not Stochastic,,,,Exposure media,0,STRING
+"terFood,Not Stochastic,,,,Terrestrial food,0,STRING
+"fwAnimal,Not Stochastic,,,,Fed and watered,0,STRING
+"ecshalf,Continuous,day,min,0,,Physical loss half-time in soil,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"ecghalf,Continuous,day,min,0,,Physical loss half-time in groundwater,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"ecthalf,Continuous,day,min,0,,Physical loss half-time in air,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"ecwhalf,Continuous,day,min,0,,Physical loss half-time in surface water,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+"ecclass,Not Stochastic,,,,USDA Soil texture classification,0,INTEGER
+"ecsand,Not Stochastic,percent,,,Percent sand in soil,0,FLOAT
+"ecsilt,Not Stochastic,percent,,,Percent silt in soil,0,FLOAT
+"ecclay,Not Stochastic,percent,,,Percent clay in soil,0,FLOAT
+"ecomc,Not Stochastic,percent,,,Percent organic matter in soil,0,FLOAT
+"eciron,Not Stochastic,percent,,,Percent iron in soil,0,FLOAT
+"ecph,Not Stochastic,pH,min,1,max,14,Soil pH,0,FLOAT
+"THICK,Continuous,cm,min,0,max,1000,Surface soil thickness,0,FLOAT
+"MOIST,Continuous,fraction,min,0,max,1,Surface soil moisture content,0,FLOAT
+"BULKD,Continuous,g/cm^3,min,0.5,max,3,Surface soil bulk density,0,FLOAT
+"LEACV,Continuous,cm/yr,min,0,max,500,Total infiltration rate,0,FLOAT

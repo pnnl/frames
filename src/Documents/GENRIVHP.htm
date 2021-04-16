@@ -1,0 +1,203 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="GENRIVHP_files/filelist.xml">
+<title>genrivhelp</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Bruce A Napier</o:Author>
+  <o:LastAuthor>Bruce A Napier</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2008-02-06T00:01:00Z</o:Created>
+  <o:LastSaved>2008-02-06T00:02:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>416</o:Words>
+  <o:Characters>2375</o:Characters>
+  <o:Company>Pacific Northwest National Laboratory</o:Company>
+  <o:Lines>19</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2786</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name=Author content="Dennis L. Strenge">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><a name=start></a>The GENII surface water component allows
+the user to define the type of water body being modeled and necessary
+parameters for the selected type.  Two types of models are included: dilution 
+models for rivers and lakes, and recirculation models for impoundments.
+The impoundment models are optional - they may be used to modify the amount
+ultimately released to the receiving river or lake.</p>
+
+<p><a name=GNSWType></a>Select the surface water type representative of the
+transport being evaluated.&nbsp; The current surface water dilution types are: acute
+river, chronic river, chronic flow dilution (river), and near-shore <span
+class=GramE>lake</span>.&nbsp; Click on the down arrow to see and select from
+the list of types. </p>
+
+<p><a name=GNSWTREL></a>Enter the duration of the release to the surface water
+body and select the correct units.&nbsp; Note that the calculated water
+concentration is assumed to be released uniformly over this period, with zero
+concentration after the end of the release. </p>
+
+<p><a name=GNSWEXPNAME></a>Select the exposure location associated with the
+surface water transport analysis.&nbsp; The locations shown are those currently
+defined and connected to this surface water transport glyph.&nbsp; If more that
+one exposure location is available (click on the down arrow to see the list of
+available locations), then information for all locations should be defined
+before saving and exiting the user interface. </p>
+
+<p><a name=GNSWTT></a>Enter the time required for transport of water from the
+source to the exposure location and select the correct units.&nbsp; Note that
+decay and progeny radionuclide <span class=SpellE>ingrowth</span> is calculated
+for this period of time and included in the calculated water concentrations at
+the exposure location. </p>
+
+<p><a name=GNSWZDEP></a>Enter the depth of the usage intake point in the
+near-shore lake environment and select the correct units.&nbsp; This parameter
+is used only for the near-shore lake model. </p>
+
+<p><a name=GNSWDSCHG></a>Enter the total volumetric discharge rate of the river
+at the exposure location and select the correct units.&nbsp; This is the
+dilution volume per time use to estimate the water concentration.&nbsp; This
+parameter is used only for the acute river model and the chronic flow dilution
+model. </p>
+
+<p><a name=GNSWVELOC></a>Enter the average flow velocity for the river or
+near-shore lake current and select the correct units.&nbsp; The models assume
+that the flow velocity is constant between the source and exposure location. </p>
+
+<p><a name=GNSWLSX></a>Enter the distance of flow between the source and the
+exposure location and the correct units.&nbsp; This parameter is used for the
+chronic river and the near-shore lake models. </p>
+
+<p><a name=GNSWOSY></a>Enter the perpendicular distance from the shoreline to
+the water intake port at the exposure location, and select the correct
+units.&nbsp; This parameter (offshore distance) is use for the chronic river
+and the near-shore lake models.&nbsp; The value entered for the offshore
+distance for the river model must be less than or equal to the value <span
+class=GramE>entered</span> for the river width. </p>
+
+<p><a name=GNSWDPTH></a>Enter the average depth of the river or near-shore lake
+flow path between the source and the exposure location, and select the correct
+units. </p>
+
+<p><a name=GNSWIDTH></a>Enter the average width of the river between the source
+and the exposure location, and select the correct units. <br>
+&nbsp; </p>
+
+<p>The impoundment models include plug-flow, fully-mixed, and partially-mixed ponds.
+The plug flow pond receives the plant effluent and in turn discharges it to a larger 
+body of receiving water.  The water does not recirculate back to the plant once it 
+is discharged.  Plug flow ponds are usually narrow and well-diked, forcing the plant 
+effluent to travel a well-defined path from the plant discharge point to the point 
+of outfall from the pond.  Note, that for a pond of this nature, the travel time t 
+from plant outfall to pond outlet is t = V / qb, where V is the volume of the pond 
+and qb is the reactor discharge rate = the pond outflow rate.<p>
+
+<p>The fully-mixed pond model simulates a closed cycle pond where full mixing occurs 
+throughout the effective volume of the pond.  Fresh make-up water is fed in to 
+replace the water lost by evaporation or outflow.  The plant effluent is assumed 
+to mix instantaneously and completely with the entire volume of the pond.  To ensure 
+fully mixed conditions, the pond water is assumed to recirculate back into the plant 
+at a much greater rate than the net flow through the pond. The pond approaches an
+equilibrium condition; the years of operation allows the user to approach this condition.<p>
+
+<p>The partially mixed pond model more closely resembles real ponds and represents 
+an intermediate scheme between the extremes of the completely mixed and plug flow 
+models.  The partially mixed pond model treats ponds where the plant pumping rate 
+and the outflow rate are of similar importance.  The model assumes that the 
+discharged effluent mixes completely with the water inflow at the instant of 
+discharge from the plant, after which the diluted plug moves through the pond without 
+mixing, with the resultant concentration affected solely by radioactive decay.  Then 
+the concentration at the plant inlet is added to the radioactivity discharged from 
+the plant as the coolant water cycles through.<p>  
+
+</div>
+
+</body>
+
+</html>

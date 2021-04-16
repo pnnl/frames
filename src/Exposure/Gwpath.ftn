@@ -1,0 +1,60 @@
+!   MEPAS HAZ2: GWPATH.FTN             Version Date: 20-Apr-1994
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK GWPATH                              *
+!                                                                            *
+!  Common block GWPATH CONTAINS GROUNDWATER TRANSPORT PATHWAY PARAMETERS     *
+!                      USED IN THE EXPOSURE ASSESSMENT CALCULATION.          *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    20-Apr-94  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!  KGDR(10)    INTEGER   INDEX FOR SELECTION OF DRINKING WATER USAGE FOR EACH
+!                        GROUNDWATER USAGE LOCATION.
+!
+!  KGIR(10)    INTEGER   INDEX FOR SELECTION OF FARM IRRIGATION FOR EACH GROUND-
+!                        WATER USAGE LOCATION.  KGIR(I) IS THE FARM PRODUCTION
+!                        CLASS INDEX DESCRIBING FARMING PRACTICE AT GROUNDWATER
+!                        USAGE LOCATION I.
+!
+!  POPGDR(10)  REAL      NUMBER OF PEOPLE SUPPLIED DRINKING WATER FOR EACH
+!                        GROUNDWATER USAGE LOCATION.
+!
+!  POPGIR(10)  REAL      NUMBER OF PEOPLE SERVED FARM PRODUCE GENERATED FROM
+!                        IRRIGATED FARMS FOR EACH GROUNDWATER USAGE LOCATION.
+!
+!  GWSIF(3,8,10) REAL    SIF factors for groundwater, 3 pollutant types,
+!                        8 exposure pathways, 10 usage locations
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!    31-AUG-92     DLS  Added body weight, exposure duration, and averaging time
+!    20-Apr-94     DLS  Re-added body weight and exposure duration
+!==== COMMON Block Definition ================================================
+!
+      COMMON/GWPATH/ KGDR,  KGIR, DGWED
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

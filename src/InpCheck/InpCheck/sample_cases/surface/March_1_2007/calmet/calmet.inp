@@ -1,0 +1,857 @@
+Static CALMET File for BWIC operations.  Do not edit.
+File is merged with BWICCALMET.inp prior to runtime to create final CALMET.inp
+Last Reviewed: 11/08/06.
+---------------- Run title (3 lines) ------------------------------------------
+
+                    CALMET MODEL CONTROL FILE
+                    --------------------------
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 0 -- Input and Output File Names
+
+
+Subgroup (a)
+------------
+Default Name  Type          File Name
+------------  ----          ---------
+GEO.DAT       input    ! GEODAT= ./makegeo/mkgbwic.dat !
+SURF.DAT      input    ! SRFDAT= surf.dat !
+CLOUD.DAT     input    * CLDDAT=            *
+PRECIP.DAT    input    * PRCDAT=            *
+MM4.DAT       input    * MM4DAT=            *
+WT.DAT        input    * WTDAT=             *
+
+CALMET.LST    output   ! METLST= ./calmet/CALbwic.lst !
+CALMET.DAT    output   ! METDAT= ./calmet/CALbwic.dat !
+PACOUT.DAT    output   * PACDAT=            *
+
+All file names will be converted to lower case if LCFILES = T
+Otherwise, if LCFILES = F, file names will be converted to UPPER CASE
+         T = lower case      ! LCFILES = T !
+         F = UPPER CASE
+
+NUMBER OF UPPER AIR & OVERWATER STATIONS:
+
+    Number of upper air stations (NUSTA)  No default     ! NUSTA= 1 !
+    Number of overwater met stations
+                                 (NOWSTA) No default     ! NOWSTA =  0  !
+
+                       !END!
+--------------------------------------------------------------------------------
+Subgroup (b)
+---------------------------------
+Upper air files (one per station)
+---------------------------------
+Default Name  Type       File Name
+------------  ----       ---------
+UP1.DAT       input     1  ! UPDAT= up1.dat !      !END!
+--------------------------------------------------------------------------------
+Subgroup (c)
+-----------------------------------------
+Overwater station files (one per station)
+-----------------------------------------
+Default Name  Type       File Name
+------------  ----       ---------
+SEA1.DAT       input     1   SEADAT=C:\tstprcs\boston\metdata\SEA1.DAT    END
+--------------------------------------------------------------------------------
+Subgroup (d)
+----------------
+Other file names
+----------------
+
+Default Name  Type       File Name
+------------  ----       ---------
+DIAG.DAT      input      * DIADAT=                  *
+PROG.DAT      input      * PRGDAT=                  *
+
+TEST.PRT      output     * TSTPRT=                  *
+TEST.OUT      output     * TSTOUT=                  *
+TEST.KIN      output     * TSTKIN=                  *
+TEST.FRD      output     * TSTFRD=                  *
+TEST.SLP      output     * TSTSLP=                  *
+
+--------------------------------------------------------------------------------
+NOTES: (1) File/path names can be up to 70 characters in length
+       (2) Subgroups (a) and (d) must have ONE 'END' (surround by
+           delimiters) at the end of the group
+       (3) Subgroups (b) and (c) must have an 'END' (surround by
+           delimiters) at the end of EACH LINE
+
+                         !END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 1 -- General run control parameters
+--------------
+
+     Starting date:   Year (IBYR) -- No default       ! IBYR= 2007 !
+                     Month (IBMO) -- No default       ! IBMO= 3 !
+                       Day (IBDY) -- No default       ! IBDY= 1 !
+                      Hour (IBHR) -- No default       ! IBHR= 5 !
+
+     Base time zone        (IBTZ) -- No default       ! IBTZ= 6 !
+        PST = 08, MST = 07
+        CST = 06, EST = 05
+
+     Length of run (hours) (IRLG) -- No default       ! IRLG= 10 !
+
+     Run type            (IRTYPE) -- Default: 1       ! IRTYPE=  1  !
+
+        0 = Computes wind fields only
+        1 = Computes wind fields and micrometeorological variables
+            (u*, w*, L, zi, etc.)
+        (IRTYPE must be 1 to run CALPUFF or CALGRID)
+
+     Compute special data fields required
+     by CALGRID (i.e., 3-D fields of W wind
+     components and temperature)
+     in additional to regular            Default: T    ! LCALGRD = T !
+     fields ? (LCALGRD)
+     (LCALGRD must be T to run CALGRID)
+
+      Flag to stop run after
+      SETUP phase (ITEST)             Default: 2       ! ITEST=  2   !
+      (Used to allow checking
+      of the model inputs, files, etc.)
+      ITEST = 1 - STOPS program after SETUP phase
+      ITEST = 2 - Continues with execution of
+                  COMPUTATIONAL phase after SETUP
+
+!END!
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 2 -- Grid control parameters
+--------------
+
+     HORIZONTAL GRID DEFINITION:
+
+            No. X grid cells (NX)      No default     ! NX= 100 !
+            No. Y grid cells (NY)      No default     ! NY= 100 !
+
+     GRID SPACING (DGRIDKM)            No default     ! DGRIDKM= 1.000000 !
+                                       Units: km
+
+     REFERENCE COORDINATES
+     of SOUTHWEST corner of grid cell (1,1)
+
+        X coordinate (XORIGKM)         No default     ! XORIGKM= 376.000000 !
+        Y coordinate (YORIGKM)         No default     ! YORIGKM= 4594.000000 !
+                                       Units: km
+        Latitude  (XLAT0)              No default     ! XLAT0= 41.488028 !
+        Longitude (XLON0)              No default     ! XLON0= 88.485398 !
+
+     UTM ZONE (IUTMZN)                 Default: 0     ! IUTMZN= 16 !
+
+     LAMBERT CONFORMAL PARAMETERS
+
+     Rotate input winds from true north to
+     map north using a Lambert conformal
+     projection? (LLCONF)              Default: F     ! LLCONF = F !
+
+     Latitude of 1st standard parallel   Default: 30.   ! XLAT1 = 35.000 !
+     Latitude of 2nd standard parallel   Default: 60.   ! XLAT2 = 45.000 !
+     (XLAT1 and XLAT2; + in NH, - in SH)
+
+        Longitude (RLON0)                Default = 90.  ! RLON0 = 74.000 !
+        (used only if LLCONF = T)
+        (Positive = W. Hemisphere;
+         Negative = E. Hemisphere)
+        Origin Latitude (RLAT0)          Default = 40.  ! RLAT0 = 40.000 !
+        (used only if IPROG > 2)
+        (Positive = N. Hemisphere;
+         Negative = S. Hemisphere)
+
+     Vertical grid definition:
+
+        No. of vertical layers (NZ)    No default     ! NZ= 10 !
+
+        Cell face heights in arbitrary
+        vertical grid (ZFACE(NZ+1))    No defaults
+                                       Units: m
+
+        ! ZFACE = 0.,20.,50.,100.,200.,360.,670.,1200.,2200.,4000.,6000. !
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 3 -- Output Options
+--------------
+
+
+    DISK OUTPUT OPTION
+
+       Save met. fields in an unformatted
+       output file ?              (LSAVE)  Default: T     ! LSAVE = T !
+       (F = Do not save, T = Save)
+
+       Type of unformatted output file:
+       (IFORMO)                            Default: 1    ! IFORMO =  1  !
+
+            1 = CALPUFF/CALGRID type file (CALMET.DAT)
+            2 = MESOPUFF-II type file     (PACOUT.DAT)
+
+
+    LINE PRINTER OUTPUT OPTIONS:
+
+       Print met. fields ?  (LPRINT)       Default: F     ! LPRINT = T !
+       (F = Do not print, T = Print)
+       (NOTE: parameters below control which
+              met. variables are printed)
+
+       Print interval
+       (IPRINF) in hours                   Default: 1     ! IPRINF =  1  !
+       (Meteorological fields are printed
+        every  6  hours)
+
+
+       Specify which layers of U, V wind component
+       to print (IUVOUT(NZ)) -- NOTE: NZ values must be entered
+       (0=Do not print, 1=Print)
+       (used only if LPRINT=T)        Defaults: NZ*0 
+       ! IUVOUT =  0, 0, 0, 0, 0, 0, 0, 0, 0, 0 !
+       -----------------------
+
+
+       Specify which levels of the W wind component to print
+       (NOTE: W defined at TOP cell face)
+       (IWOUT(NZ)) -- NOTE: NZ values must be entered
+       (0=Do not print, 1=Print)
+       (used only if LPRINT=T & LCALGRD=T)
+       -----------------------------------
+                                            Defaults: NZ*0 
+        ! IWOUT =  0, 0, 0, 0, 0, 0, 0, 0, 0, 0 !
+
+
+       Specify which levels of the 3-D temperature field to print
+       (ITOUT(NZ)) -- NOTE: NZ values must be entered
+       (0=Do not print, 1=Print)
+       (used only if LPRINT=T & LCALGRD=T)
+       -----------------------------------
+                                            Defaults: NZ*0 
+        ! ITOUT =  0, 0, 0, 0, 0, 0, 0, 0, 0, 0 !
+
+       Specify which meteorological fields
+       to print
+       (used only if LPRINT=T)             Defaults: 0 (all variables)
+       -----------------------
+
+
+         Variable            Print ?
+                         (0 = do not print,
+                          1 = print)
+         --------        ------------------
+
+      !  STABILITY  =           0           ! - PGT stability class
+      !  USTAR      =           0           ! - Friction velocity
+      !  MONIN      =           0           ! - Monin-Obukhov length
+      !  MIXHT      =           0           ! - Mixing height
+      !  WSTAR      =           0           ! - Convective velocity scale
+      !  PRECIP     =           0           ! - Precipitation rate
+      !  SENSHEAT   =           1           ! - Sensible heat flux
+      !  CONVZI     =           0           ! - Convective mixing ht.
+
+
+       Testing and debug print options for micrometeorological module
+
+          Print input meteorological data and
+          internal variables (LDB)         Default: F       ! LDB = F !
+          (F = Do not print, T = print)
+          (NOTE: this option produces large amounts of output)
+
+          First time step for which debug data
+          are printed (NN1)                Default: 1       ! NN1 =  1  !
+
+          Last time step for which debug data
+          are printed (NN2)                Default: 1       ! NN2 =  1  !
+
+
+       Testing and debug print options for wind field module
+       (all of the following print options control output to
+        wind field module's output files: TEST.PRT, TEST.OUT,
+        TEST.KIN, TEST.FRD, and TEST.SLP)
+
+          Control variable for writing the test/debug
+          wind fields to disk files (IOUTD)
+          (0=Do not write, 1=write)        Default: 0       ! IOUTD =  0  !
+
+          Number of levels, starting at the surface,
+          to print (NZPRN2)                Default: 1       ! NZPRN2 =  0  !
+
+          Print the INTERPOLATED wind components ?
+          (IPR0) (0=no, 1=yes)             Default: 0       !  IPR0 =  0  !
+
+          Print the TERRAIN ADJUSTED surface wind
+          components ?
+          (IPR1) (0=no, 1=yes)             Default: 0       !  IPR1 =  0  !
+
+          Print the SMOOTHED wind components and
+          the INITIAL DIVERGENCE fields ?
+          (IPR2) (0=no, 1=yes)             Default: 0       !  IPR2 =  0  !
+
+          Print the FINAL wind speed and direction
+          fields ?
+          (IPR3) (0=no, 1=yes)             Default: 0       !  IPR3 =  0  !
+
+          Print the FINAL DIVERGENCE fields ?
+          (IPR4) (0=no, 1=yes)             Default: 0       !  IPR4 =  0  !
+
+          Print the winds after KINEMATIC effects
+          are added ?
+          (IPR5) (0=no, 1=yes)             Default: 0       !  IPR5 =  0  !
+
+          Print the winds after the FROUDE NUMBER
+          adjustment is made ?
+          (IPR6) (0=no, 1=yes)             Default: 0       !  IPR6 =  0  !
+
+          Print the winds after SLOPE FLOWS
+          are added ?
+          (IPR7) (0=no, 1=yes)             Default: 0       !  IPR7 =  0  !
+
+          Print the FINAL wind field components ?
+          (IPR8) (0=no, 1=yes)             Default: 0       !  IPR8 =  0  !
+
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 4 -- Meteorological data options
+--------------
+
+
+    NUMBER OF SURFACE & PRECIP. METEOROLOGICAL STATIONS
+
+       Number of surface stations   (NSSTA)  No default     ! NSSTA= 48 !
+       Number of precipitation stations
+                                    (NPSTA)  No default     ! NPSTA =  0  !
+
+    CLOUD DATA OPTIONS
+       Griddid cloud fields:
+                                   (ICLOUD)  Default: 0     ! ICLOUD =  0  !
+       ICLOUD = 0 - Gridded clouds not used
+       ICLOUD = 1 - Gridded CLOUD.DAT generated as OUTPUT
+       ICLOUD = 2 - Gridded CLOUD.DAT read as INPUT
+
+    FILE FORMATS
+
+       Surface meteorological data file format
+                                   (IFORMS)  Default: 2     ! IFORMS =  2  !
+       (1 = unformatted (e.g., SMERGE output))
+       (2 = formatted   (free-formatted user input))
+
+       Precipitation data file format
+                                   (IFORMP)  Default: 2     ! IFORMP =  2  !
+       (1 = unformatted (e.g., PMERGE output))
+       (2 = formatted   (free-formatted user input))
+
+       Cloud data file format
+                                   (IFORMC)  Default: 2     ! IFORMC =  1  !
+       (1 = unformatted - CALMET unformatted output)
+       (2 = formatted   - free-formatted CALMET output or user input)
+
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 5 -- Wind Field Options and Parameters
+--------------
+
+
+    WIND FIELD MODEL OPTIONS
+       Model selection variable (IWFCOD)     Default: 1      ! IWFCOD =  1  !
+          0 = Objective analysis only
+          1 = Diagnostic wind module
+
+       Compute Froude number adjustment
+       effects ? (IFRADJ)                    Default: 1      ! IFRADJ =  1  !
+       (0 = NO, 1 = YES)
+
+       Compute kinematic effects ? (IKINE)   Default: 0      ! IKINE  =  0  !
+       (0 = NO, 1 = YES)
+
+       Use O'Brien procedure for adjustment
+       of the vertical velocity ? (IOBR)     Default: 0      ! IOBR =  0  !
+       (0 = NO, 1 = YES)
+
+       Compute slope flow effects ? (ISLOPE) Default: 1      ! ISLOPE  =  1  !
+       (0 = NO, 1 = YES)
+
+       Extrapolate surface wind observations
+       to upper layers ? (IEXTRP)            Default: -4     ! IEXTRP =  -4  !
+       (1 = no extrapolation is done,
+        2 = power law extrapolation used,
+        3 = user input multiplicative factors
+            for layers 2 - NZ used (see FEXTRP array)
+        4 = similarity theory used
+        -1, -2, -3, -4 = same as above except layer 1 data
+            at upper air stations are ignored
+
+       Extrapolate surface winds even
+       if calm? (ICALM)                      Default: 0      ! ICALM  =  0  !
+       (0 = NO, 1 = YES)
+
+       Layer-dependent biases modifying the weights of
+       surface and upper air stations (BIAS(NZ))
+         -1<=BIAS<=1
+       Negative BIAS reduces the weight of upper air stations
+         (e.g. BIAS=-0.1 reduces the weight of upper air stations
+       by 10%; BIAS= -1, reduces their weight by 100 %)
+       Positive BIAS reduces the weight of surface stations
+         (e.g. BIAS= 0.2 reduces the weight of surface stations
+       by 20%; BIAS=1 reduces their weight by 100%)
+       Zero BIAS leaves weights unchanged (1/R**2 interpolation)
+       Default: NZ*0
+                   ! BIAS =  -1.0, -1.0, -0.8, -0.6, -0.2, 0.0, 0.5, 0.7, 1.0, 1.0 !
+
+       Minimum distance from nearest upper air station
+       to surface station for which extrapolation
+       of surface winds at surface station will be allowed
+       (RMIN2: Set to -1 for IEXTRP = 4 or other situations
+        where all surface stations should be extrapolated)
+                                              Default: 4.    ! RMIN2 = 4.0 !
+
+       Use gridded prognostic wind field model
+       output fields as input to the diagnostic
+       wind field model (IPROG)              Default: 0      ! IPROG =  0  !
+       (0 = No, [IWFCOD = 0 or 1]
+        1 = Yes, use CSUMM prog. winds as Step 1 field, [IWFCOD = 0]
+        2 = Yes, use CSUMM prog. winds as initial guess field [IWFCOD = 1]
+        3 = Yes, use winds from MM4.DAT file as Step 1 field [IWFCOD = 0]
+        4 = Yes, use winds from MM4.DAT file as initial guess field [IWFCOD = 1]
+        5 = Yes, use winds from MM4.DAT file as observations [IWFCOD = 1]
+        13 = Yes, use winds from MM5.DAT file as Step 1 field [IWFCOD = 0]
+        14 = Yes, use winds from MM5.DAT file as initial guess field [IWFCOD = 1]
+        15 = Yes, use winds from MM5.DAT file as observations [IWFCOD = 1]
+
+    RADIUS OF INFLUENCE PARAMETERS
+
+       Use varying radius of influence       Default: F      ! LVARY =  T!
+       (if no stations are found within RMAX1,RMAX2,
+        or RMAX3, then the closest station will be used)
+
+       Maximum radius of influence over land
+       in the surface layer (RMAX1)          No default      ! RMAX1 = 50. !
+                                             Units: km
+       Maximum radius of influence over land
+       aloft (RMAX2)                         No default      ! RMAX2 = 500. !
+                                             Units: km
+       Maximum radius of influence over water
+       (RMAX3)                               No default      ! RMAX3 = 500. !
+                                             Units: km
+
+
+    OTHER WIND FIELD INPUT PARAMETERS
+
+       Minimum radius of influence used in
+       the wind field interpolation (RMIN)   Default: 0.1    ! RMIN = 0.1 !
+                                             Units: km
+       Radius of influence of terrain
+       features (TERRAD)                     No default      ! TERRAD = 10. !
+
+                                             Units: km
+       Relative weighting of the first
+       guess field and observations in the
+       SURFACE layer (R1)                    No default      ! R1 = 1. !
+       (R1 is the distance from an           Units: km
+       observational station at which the
+       observation and first guess field are
+       equally weighted)
+
+       Relative weighting of the first
+       guess field and observations in the
+       layers ALOFT (R2)                     No default      ! R2 = 1. !
+       (R2 is applied in the upper layers    Units: km
+       in the same manner as R1 is used in
+       the surface layer).
+
+       Relative weighting parameter of the
+       prognostic wind field data (RPROG)    No default      ! RPROG = 54. !
+       (Used only if IPROG = 1)              Units: km
+       ------------------------
+
+       Maximum acceptable divergence in the
+       divergence minimization procedure
+       (DIVLIM)                              Default: 5.E-6  ! DIVLIM= 5.0E-06 !
+
+       Maximum number of iterations in the
+       divergence min. procedure (NITER)     Default: 50     ! NITER =  50  !
+
+       Number of passes in the smoothing
+       procedure (NSMTH(NZ))
+       NOTE: NZ values must be entered
+            Default: 2,(mxnz-1)*4 ! NSMTH = 2, 2, 2, 3, 4, 8, 10, 11, 12, 12 !
+
+       Maximum number of stations used in
+       each layer for the interpolation of
+       data to a grid point (NINTR2(NZ))
+       NOTE: NZ values must be entered       Default: 99.    
+! NINTR2 = 99, 99, 99, 99, 99, 99, 99, 99, 99 !
+
+       Critical Froude number (CRITFN)       Default: 1.0    ! CRITFN = 1. !
+
+       Empirical factor controlling the
+       influence of kinematic effects
+       (ALPHA)                               Default: 0.1    ! ALPHA = 0.1 !
+
+       Multiplicative scaling factor for
+       extrapolation of surface observations
+       to upper layers (FEXTR2(NZ))          Default: NZ*0.0 
+       ! FEXTR2 = 0., 0., 0., 0., 0., 0., 0., 0., 0., 0. !
+       (Used only if IEXTRP = 3 or -3)
+
+
+    BARRIER INFORMATION
+
+       Number of barriers to interpolation
+       of the wind fields (NBAR)             Default: 0      ! NBAR =  0  !
+
+       THE FOLLOWING 4 VARIABLES ARE INCLUDED
+       ONLY IF NBAR > 0
+       NOTE: NBAR values must be entered     No defaults
+             for each variable               Units: km
+
+          X coordinate of BEGINNING
+          of each barrier (XBBAR(NBAR))      ! XBBAR = 0. !
+          Y coordinate of BEGINNING
+          of each barrier (YBBAR(NBAR))      ! YBBAR = 0. !
+
+          X coordinate of ENDING
+          of each barrier (XEBAR(NBAR))      ! XEBAR = 0. !
+          Y coordinate of ENDING
+          of each barrier (YEBAR(NBAR))      ! YEBAR = 0. !
+
+
+    DIAGNOSTIC MODULE DATA INPUT OPTIONS
+
+       Surface temperature (IDIOPT1)         Default: 0      ! IDIOPT1 =  0  !
+          0 = Compute internally from
+              hourly surface observations
+          1 = Read preprocessed values from
+              a data file (DIAG.DAT)
+
+          Surface met. station to use for
+          the surface temperature (ISURFT)   No default     ! ISURFT =   1  !
+          (Must be a value from 1 to NSSTA)
+          (Used only if IDIOPT1 = 0)
+          --------------------------
+
+       Domain-averaged temperature lapse
+       rate (IDIOPT2)                        Default: 0     ! IDIOPT2 =  0  !
+          0 = Compute internally from
+              twice-daily upper air observations
+          1 = Read hourly preprocessed values
+              from a data file (DIAG.DAT)
+
+          Upper air station to use for
+          the domain-scale lapse rate (IUPT) No default     ! IUPT   =  1  !
+          (Must be a value from 1 to NUSTA)
+          (Used only if IDIOPT2 = 0)
+          --------------------------
+
+          Depth through which the domain-scale
+          lapse rate is computed (ZUPT)      Default: 200.  ! ZUPT = 200. !
+          (Used only if IDIOPT2 = 0)         Units: meters
+          --------------------------
+
+       Domain-averaged wind components
+       (IDIOPT3)                             Default: 0     ! IDIOPT3 =  0  !
+          0 = Compute internally from
+              twice-daily upper air observations
+          1 = Read hourly preprocessed values
+              a data file (DIAG.DAT)
+
+          Upper air station to use for
+          the domain-scale winds (IUPWND)    Default: -1    ! IUPWND = -1  !
+          (Must be a value from -1 to NUSTA)
+          (Used only if IDIOPT3 = 0)
+          --------------------------
+
+          Bottom and top of layer through
+          which the domain-scale winds
+          are computed
+          (ZUPWND(1), ZUPWND(2))        Defaults: 1., 1000. ! ZUPWND= 1., 1000. !
+          (Used only if IDIOPT3 = 0)    Units: meters
+          --------------------------
+
+       Observed surface wind components
+       for wind field module (IDIOPT4)  Default: 0     ! IDIOPT4 =  0  !
+          0 = Read WS, WD from a surface
+              data file (SURF.DAT)
+          1 = Read hourly preprocessed U, V from
+              a data file (DIAG.DAT)
+
+       Observed upper air wind components
+       for wind field module (IDIOPT5)  Default: 0     ! IDIOPT5 =  0  !
+          0 = Read WS, WD from an upper
+              air data file (UP1.DAT, UP2.DAT, etc.)
+          1 = Read hourly preprocessed U, V from
+              a data file (DIAG.DAT)
+
+       LAKE BREEZE INFORMATION
+
+          Use Lake Breeze Module  (LLBREZE)
+                                           Default: F      ! LLBREZE = F !
+
+           Number of lake breeze regions (NBOX)            ! NBOX =  0  !
+
+        X Grid line 1 defining the region of interest
+                                                        ! XG1 = 0. !
+        X Grid line 2 defining the region of interest
+                                                        ! XG2 = 0. !
+        Y Grid line 1 defining the region of interest
+                                                        ! YG1 = 0. !
+        Y Grid line 2 defining the region of interest
+                                                        ! YG2 = 0. !
+
+         X Point defining the coastline (Straight line)
+                   (XBCST)  (KM)   Default: none    ! XBCST = 0. !
+
+         Y Point defining the coastline (Straight line)
+                   (YBCST)  (KM)   Default: none    ! YBCST = 0. !
+
+         X Point defining the coastline (Straight line)
+                   (XECST)  (KM)   Default: none    ! XECST = 0. !
+
+         Y Point defining the coastline (Straight line)
+                   (YECST)  (KM)   Default: none    ! YECST = 0. !
+
+
+       Number of stations in the region     Default: none ! NLB = *1 !* 
+       (Surface stations + upper air stations)
+
+       Station ID's  in the region   (METBXID(NLB))
+       (Surface stations first, then upper air stations)
+         ! METBXID = *0 !*
+
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 6 -- Mixing Height, Temperature and Precipitation Parameters
+--------------
+
+    EMPIRICAL MIXING HEIGHT CONSTANTS
+
+       Neutral, mechanical equation
+       (CONSTB)                              Default: 1.41   ! CONSTB = 1.41 !
+       Convective mixing ht. equation
+       (CONSTE)                              Default: 0.15   ! CONSTE = 0.15 !
+       Stable mixing ht. equation
+       (CONSTN)                              Default: 2400.  ! CONSTN = 2400.!
+       Overwater mixing ht. equation
+       (CONSTW)                              Default: 0.16   ! CONSTW = 0.16 !
+       Absolute value of Coriolis
+       parameter (FCORIOL)                   Default: 1.E-4  ! FCORIOL = 1.0E-04!
+                                             Units: (1/s)
+
+    SPATIAL AVERAGING OF MIXING HEIGHTS
+
+       Conduct spatial averaging
+       (IAVEZI)  (0=no, 1=yes)               Default: 1      ! IAVEZI =  1  !
+
+       Max. search radius in averaging
+       process (MNMDAV)                      Default: 1      ! MNMDAV =  1  !
+                                             Units: Grid
+                                                    cells
+       Half-angle of upwind looking cone
+       for averaging (HAFANG)                Default: 30.    ! HAFANG = 30. !
+                                             Units: deg.
+       Layer of winds used in upwind
+       averaging (ILEVZI)                    Default: 1      ! ILEVZI =  1  !
+       (must be between 1 and NZ)
+
+    OTHER MIXING HEIGHT VARIABLES
+
+       Minimum potential temperature lapse
+       rate in the stable layer above the
+       current convective mixing ht.         Default: 0.001  ! DPTMIN = 0.001 !
+       (DPTMIN)                              Units: deg. K/m
+       Depth of layer above current conv.
+       mixing height through which lapse     Default: 200.   ! DZZI = 200. !
+       rate is computed (DZZI)               Units: meters
+
+       Minimum overland mixing height        Default:  50.   ! ZIMIN = 50. !
+       (ZIMIN)                               Units: meters
+       Maximum overland mixing height        Default: 3000.  ! ZIMAX = 3000. !
+       (ZIMAX)                               Units: meters
+       Minimum overwater mixing height       Default:   50.  ! ZIMINW = 50. !
+       (ZIMINW) -- (Not used if observed     Units: meters
+       overwater mixing hts. are used)
+       Maximum overwater mixing height       Default: 3000.  ! ZIMAXW = 3000. !
+       (ZIMAXW) -- (Not used if observed     Units: meters
+       overwater mixing hts. are used)
+
+
+    TEMPERATURE PARAMETERS
+
+       Interpolation type
+       (1 = 1/R ; 2 = 1/R**2)                Default:1         ! IRAD =  1  !
+
+       Radius of influence for temperature
+       interpolation (TRADKM)                Default: 500.     ! TRADKM = 500. !
+                                             Units: km
+
+       Maximum Number of stations to include
+       in temperature interpolation (NUMTS)  Default: 5        ! NUMTS = 5  !
+
+       Conduct spatial averaging of temp-
+       eratures (IAVET)  (0=no, 1=yes)         Default: 1     ! IAVET =  1  !
+       (will use mixing ht MNMDAV,HAFANG
+        so make sure they are correct)
+
+       Default temperature gradient        Default: -.0098 ! TGDEFB = -0.0098 !
+       below the mixing height over
+       water (K/m) (TGDEFB)
+
+       Default temperature gradient        Default: -.0045 ! TGDEFA = -0.0045 !
+       above the mixing height over
+       water (K/m) (TGDEFA)
+
+       Beginning (JWAT1) and ending (JWAT2)
+       land use categories for temperature                    ! JWAT1 =  55  !
+       interpolation over water -- Make                       ! JWAT2 =  55  !
+       bigger than largest land use to disable
+
+   PRECIP INTERPOLATION PARAMETERS
+
+       Method of interpolation (NFLAGP)      Default = 2    ! NFLAGP =  3  !
+        (1=1/R,2=1/R**2,3=EXP/R**2)
+       Radius of Influence (km) (SIGMAP)     Default = 100.0  ! SIGMAP = 1. !
+        (0.0 => use half dist. btwn
+         nearest stns w & w/out
+         precip when NFLAGP = 3)
+       Minimum Precip. Rate Cutoff (mm/hr)   Default = 0.01  ! CUTP = 1. !
+        (values < CUTP = 0.0 mm/hr)
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 7 -- Surface meteorological station parameters
+--------------
+
+     SURFACE STATION VARIABLES
+     (One record per station --  12  records in all)
+
+
+             1     2
+         Name   ID            X coord.   Y coord.   Time   Anem.
+                               (km)       (km)      zone   Ht.(m)
+       ----------------------------------------------------------
+ SS1  ='ORH '   94746       263.540     4683.190    5    10  
+! SS1  ='AP012'       0        510.509     4616.643     6   10  !
+! SS2  ='AP377'       1        418.495     4691.999     6   10  !
+! SS3  ='AP878'       2        434.032     4649.728     6   10  !
+! SS4  ='AR553'       3        410.218     4675.798     6   10  !
+! SS5  ='AR613'       4        420.148     4665.028     6   10  !
+! SS6  ='AR615'       5        400.022     4607.760     6   10  !
+! SS7  ='AR616'       6        490.609     4586.999     6   10  !
+! SS8  ='AR794'       7        391.417     4577.503     6   10  !
+! SS9  ='AR820'       8        433.803     4645.588     6   10  !
+! SS10  ='AR982'       9        469.329     4588.812     6   10  !
+! SS11  ='C0066'      10        406.575     4656.866     6   10  !
+! SS12  ='C0472'      11        409.391     4636.885     6   10  !
+! SS13  ='C0571'      12        390.893     4633.757     6   10  !
+! SS14  ='C0783'      13        487.172     4585.039     6   10  !
+! SS15  ='C1253'      14        442.472     4648.622     6   10  !
+! SS16  ='C1569'      15        416.239     4687.250     6   10  !
+! SS17  ='C2113'      16        431.597     4609.822     6   10  !
+! SS18  ='C2217'      17        393.323     4653.433     6   10  !
+! SS19  ='C2405'      18        412.840     4669.612     6   10  !
+! SS20  ='C2752'      19        395.479     4687.563     6   10  !
+! SS21  ='C3175'      20        446.884     4631.521     6   10  !
+! SS22  ='C3332'      21        443.006     4616.917     6   10  !
+! SS23  ='C3407'      22        398.926     4650.907     6   10  !
+! SS24  ='C3663'      23        408.554     4628.578     6   10  !
+! SS25  ='C3778'      24        382.092     4646.325     6   10  !
+! SS26  ='C3953'      25        408.964     4670.128     6   10  !
+! SS27  ='C3954'      26        397.750     4616.776     6   10  !
+! SS28  ='C4066'      27        398.924     4642.001     6   10  !
+! SS29  ='C4517'      28        429.444     4594.187     6   10  !
+! SS30  ='C5020'      29        409.874     4636.990     6   10  !
+! SS31  ='C5095'      30        399.193     4696.549     6   10  !
+! SS32  ='C5183'      31        417.150     4591.442     6   10  !
+! SS33  ='C5235'      32        439.763     4646.668     6   10  !
+! SS34  ='C5330'      33        408.907     4624.954     6   10  !
+! SS35  ='C5387'      34        420.589     4626.735     6   10  !
+! SS36  ='KARR'      35        376.872     4625.301     6   10  !
+! SS37  ='KC09'      36        381.461     4586.940     6   10  !
+! SS38  ='KDPA'      37        396.217     4639.029     6   10  !
+! SS39  ='KIGQ'      38        455.607     4598.842     6   10  !
+! SS40  ='KJOT'      39        401.934     4596.936     6   10  !
+! SS41  ='KLOT'      40        408.829     4606.869     6   10  !
+! SS42  ='KMDW'      41        437.238     4626.089     6   10  !
+! SS43  ='KORD'      42        425.072     4647.920     6   10  !
+! SS44  ='KPWK'      43        425.215     4663.588     6   10  !
+! SS45  ='KUGN'      44        428.694     4696.404     6   10  !
+! SS46  ='KVPZ'      45        500.162     4589.053     6   10  !
+! SS47  ='UP188'      46        374.421     4639.267     6   10  !
+! SS48  ='UP256'      47        433.367     4667.492     6   10  !
+-------------------
+      1
+        Four character string for station name
+        (MUST START IN COLUMN 9)
+
+      2
+        Five digit integer for station ID
+
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 8 -- Upper air meteorological station parameters
+--------------
+
+     UPPER AIR STATION VARIABLES
+     (One record per station --  3  records in all)
+
+             1     2
+         Name    ID      X coord.   Y coord.  Time zone
+                           (km)       (km)    
+        -----------------------------------------------
+ US1  ='ALB '   14735    108.638   4741.709    5  
+! US1  ='KILX'       0        301.254     4447.016     6  !
+-------------------
+      1
+        Four character string for station name
+        (MUST START IN COLUMN 9)
+
+      2
+        Five digit integer for station ID
+
+!END!
+
+
+-------------------------------------------------------------------------------
+
+INPUT GROUP: 9 -- Precipitation station parameters
+--------------
+
+     PRECIPITATION STATION VARIABLES
+     (One record per station --  0  records in all)
+     (NOT INCLUDED IF NPSTA = 0)
+
+            1          2
+         Name   Station    X coord.  Y coord.
+                  Code       (km)      (km)
+         ------------------------------------
+
+
+-------------------
+      1
+        Four character string for station name
+        (MUST START IN COLUMN 9)
+
+      2
+        Six digit station code composed of state
+        code (first 2 digits) and station ID (last
+        4 digits)
+
+!END!

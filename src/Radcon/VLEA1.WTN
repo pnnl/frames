@@ -1,0 +1,27 @@
+C     MEPAS RADCON: VLEA1.FTN             VERSION DATE: 02-20-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: VLEA1.FTN 
+C
+C     Formally called as COMMON/VLEA1/in each subroutine, it is now an 
+C     INCLUDE 'VLEA1.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains PZS annual leach rate data.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/20/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, LEACHV, SOURCE
+C
+C=== Significant Parameters ==================================================
+C
+C    VLECH1 - computed infiltration rate
+C    FPSUM - annual leach rate
+C
+C*****************************************************************************
+C
+      REAL*4    VLECH1,FPSUM
+C
+      COMMON/VLEA1/VLECH1,FPSUM

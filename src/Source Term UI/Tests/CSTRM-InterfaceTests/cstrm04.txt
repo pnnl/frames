@@ -1,0 +1,207 @@
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//This auto test was created on a Windows XP operating system.
+//y=8;	//Have y=8 for XP Users unless you got the coordinates while using XP
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+//Start Test Suite
+t.StartTestSuite("CSTRM_04","Testing CSTRM_04 to check the basic functions of the MEPAS 4.0 Computed Source Term Module.","c:\\frames\\docs\\");
+
+t.NewTestCase("DeleteFile","Deleting old gid File");
+	f.delete("c:\\frames\\cstrm04.gid");
+t.TestCaseComplete();
+
+t.NewTestCase ("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec("c:\\frames\\fui.exe");
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Activate Framework window");
+if(t.TestCaseComplete()!=0)
+{
+//Due to restrictions with Frames 1.4 the icons need to be manually moved to desired locations.
+//This test case opens a base case that was produced from Appendix B of the CSTRM test plan.
+
+t.NewTestCase("OpeningBaseCase","Opening Base Case for CSTRM_04.");
+	a.SetKeyDelay(50);
+	a.Send("!f#o{DOWN}{ENTER}");
+	a.Sleep(5000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrmbas.gid");
+	a.Sleep(500);
+	a.Send("!o");
+	a.Sleep(1000);
+	t.Plan("Maximizing the window");
+	a.WinMaximize("Framework for Risk","");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SourceUserInput","Entering in data into Source 'User Input'");
+	a.Sleep(1000);	
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(400,160+y);
+	a.Sleep(1000);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(6000);
+	
+//Options Works
+	t.Plan("Click on 'leaching loss route--STINf_OP' and select 'compute pathway'");
+	a.MouseMove(481,172+y);
+	a.LeftClick(481,172+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'time period for simulation--STMAXTIME'and change it to 5 years.");
+	a.MouseMove(459,284+y);
+	a.LeftClick(459,284+y);
+	a.Sleep(500);
+	a.Send("5");
+	a.Sleep(1000);
+
+//Waste Zone Works
+	t.Plan("Click on 'Waste Zone' tab");
+	a.LeftClick(195,95+y);
+	t.Plan("Enter in STWINDHT");
+	a.LeftClick(412,318+y);
+	a.Send("7");
+	a.Sleep(1000);
+	
+	
+//Month Climatology Works
+	t.Plan("Click 'Monthly Climatology' tab");
+	a.MouseMove(72,64+y);
+	a.LeftClick(72,64+y);
+	a.Sleep(1000);
+	t.Plan("Change units on 'Cloudy' to tenths");
+	a.LeftClick(379,140+y);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Enter in data for the yearly grid");
+	a.MouseMove(133,189+y);
+	a.LeftClick(133,189+y);
+	a.Sleep(500);
+	a.SetKeyDelay(10);
+		a.Send("14.4{TAB}6.02{TAB}4.0{TAB}6{TAB}7{TAB}59{TAB}87{TAB}");          //JAN
+		a.Send("{TAB}14.9{TAB}7.90{TAB}4.4{TAB}6{TAB}8{TAB}57{TAB}86{TAB}");	 //FEB
+		a.Send("{TAB}17.8{TAB}7.59{TAB}4.5{TAB}6{TAB}8{TAB}55{TAB}86{TAB}");	 //MAR
+		a.Send("{TAB}20.9{TAB}5.72{TAB}4.3{TAB}5{TAB}6{TAB}54{TAB}85{TAB}"); 	 //APR
+		a.Send("{TAB}23.9{TAB}8.59{TAB}4.0{TAB}5{TAB}8{TAB}57{TAB}85{TAB}");	 //MAY
+		a.Send("{TAB}26.2{TAB}16.28{TAB}3.7{TAB}6{TAB}12{TAB}63{TAB}88{TAB}"); 	 //JUN
+		a.Send("{TAB}27.3{TAB}14.02{TAB}3.4{TAB}6{TAB}14{TAB}65{TAB}89{TAB}");   //JUL
+		a.Send("{TAB}27.2{TAB}16.10{TAB}3.2{TAB}6{TAB}14{TAB}67{TAB}90{TAB}"); 	 //AUG
+		a.Send("{TAB}26.4{TAB}16.97{TAB}3.8{TAB}6{TAB}13{TAB}67{TAB}89{TAB}"); 	 //SEP
+		a.Send("{TAB}22.9{TAB}11.73{TAB}4.2{TAB}6{TAB}11{TAB}63{TAB}86{TAB}"); 	 //OCT
+		a.Send("{TAB}18.4{TAB}6.58{TAB}3.9{TAB}5{TAB}7{TAB}60{TAB}87{TAB}"); 	 //NOV
+		a.Send("{TAB}15.3{TAB}5.59{TAB}3.8{TAB}6{TAB}7{TAB}60{TAB}87{TAB}");     //DEC	
+	a.SetKeyDelay(50);
+	a.Sleep(1000);
+	
+//Hydrology Works
+	t.Plan("Click 'Hydrology' tab");
+	a.MouseMove(571,64+y);
+	a.LeftClick(571,64+y);
+	a.Sleep(1000);
+	a.MouseMove(425,141+y);
+	a.LeftClick(425,141+y);
+	a.Sleep(1000);
+	t.Plan("Entering in data for STLCDELEV, STLAT, STELEV, STSCSCN, STAVAILW, and STNUMPRCP with proper units");
+	a.Send("28.99{ENTER}35{ENTER}28.99");//Here STLAT was changed, due to new restrictions put on latitude, original number was 61.12 deg.
+	a.Sleep(1000);
+	t.Plan("Changing the units to ft."); 
+	a.MouseMove(544,141+y);
+	a.LeftClick(544,141+y);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.MouseMove(545,172+y);
+	a.LeftClick(545,172+y);
+	a.Sleep(1000);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.MouseMove(432,202+y);
+	a.LeftClick(432,202+y);
+	a.Sleep(500);
+	a.Send("70{ENTER}2.8{ENTER}115");
+	a.Sleep(1000);
+	
+//Kd's Works
+	t.Plan("Click 'Kds' tab.");
+	a.MouseMove(225,58+y);
+	a.LeftClick(225,58+y);
+	a.Sleep(1000);
+	a.MouseMove(467,188+y);
+	a.LeftClick(467,188+y);
+	t.Plan("Enter parameter STKD value.");	
+	a.Send("0{ENTER}0");
+	a.Sleep(1000);
+	
+//Constituent Properties Works
+	t.Plan("Click 'Constituent Properties' tab");
+	a.MouseMove(312,89+y);
+	a.LeftClick(312,89+y);	
+	a.Sleep(1000);
+	t.Plan("Enter in 'water solubility--STSOL");
+	a.MouseMove(398,156+y);
+	a.LeftClick(398,156+y);	
+	a.Sleep(1000);
+	a.Send("1000000");
+	a.LeftClick(430,252+y);
+	a.Send("100000000000000000000{ENTER}{RIGHT}{UP}y{ENTER}");
+	
+	a.Sleep(1000);
+	t.Plan("Save Changes and Exit out of 'Source Term Module Input'");
+	a.Sleep(1000);
+	a.Send("!f{ENTER}");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("RunSource","Run the Source Icon");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	a.RightClick(400,160+y);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SaveFile","Save .gid file");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	a.Send("!f#{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(2000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrm04.gid");
+	a.Send("!s");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+
+t.NewTestCase("GOButton","Hitting the go button and save file w/green lights");
+	a.Sleep(2000);
+	t.Plan("Hitting the GO button");
+	a.LeftClick(140,35+y);
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+		
+}
+if(t.TestCaseComplete()!=0)
+{
+t.NewTestCase("CloseFUI","Close the Frames User Interface");
+  t.Plan("Click the close box on the FUI");
+  a.WinClose("Framework for Risk","");
+  t.Plan("Answer yes to the do you want to save question");
+  a.Send("y");
+  t.Assert(a.WinWaitClose("Framework for Risk","",10)==0,"Close Framework window");
+ t.TestCaseComplete();
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");
+	

@@ -1,0 +1,30 @@
+"usr15",14
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.5"
+"  Site Index: 1"
+"  Module Index: 1"
+"  Module Name: usr15"
+"  Created:  5/24/2004 12:28:31 PM"
+"=================================================="
+1
+"all","Surface Water",1
+"Benzene","71432","yr","g/ml",2,0
+0,30
+100,30
+"usr16",14                              
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.5"
+"  Site Index: 1"
+"  Module Index: 2"
+"  Module Name: usr16"
+"  Created:  5/24/2004 12:28:32 PM"
+"=================================================="
+1
+"all","Aquifer",1
+"Benzene","71432","yr","g/ml",2,0
+0,10
+200,10

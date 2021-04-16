@@ -1,0 +1,45 @@
+"exp3",44                               
+  1,
+  Medium type - Unknown Source usr6
+  1,
+"chronic","usr6","Soil", 1, 1,
+0.,"km",0.,"km"
+"STRONTIUM-90","SR90", 1,   3,
+     0.0,"yr", 50.0,"yr",  8,
+"Leafy vegetables","ingestion","Bq/kg"
+ 5.917E-05,
+"Other vegetables","ingestion","Bq/kg"
+ 5.917E-05,
+"Meat","ingestion","Bq/kg"
+ 1.229E-06,
+"Milk","ingestion","Bq/L"
+ 4.993E-06,
+"Soil","ingestion","Bq/kg"
+ 1.479E-04,
+"Soil","dermal","Bq/kg"
+ 1.479E-04,
+"Soil","inhalation","Bq/m^3"
+ 1.479E-12,
+"Soil","external","Bq/kg"
+ 1.479E-04,
+"Y90","Y90",  8,
+"Leafy vegetables","ingestion","Bq/kg"
+ 3.632E-07,
+"Other vegetables","ingestion","Bq/kg"
+ 3.632E-07,
+"Meat","ingestion","Bq/kg"
+ 2.194E-08,
+"Milk","ingestion","Bq/L"
+ 1.368E-09,
+"Soil","ingestion","Bq/kg"
+ 9.686E-05,
+"Soil","dermal","Bq/kg"
+ 9.686E-05,
+"Soil","inhalation","Bq/m^3"
+ 9.686E-13,
+"Soil","external","Bq/kg"
+ 9.686E-05,
+    50.0,"yr", 50.0,"yr",  0,
+"Y90","Y90",  0,
+   100.0,"yr", 50.0,"yr",  0,
+"Y90","Y90",  0,

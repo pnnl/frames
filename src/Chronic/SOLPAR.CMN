@@ -1,0 +1,28 @@
+C----------------------------------------------------------------------
+c
+C     Soil Parameters/ Biotic Transport Common Block
+C     Module of ENV                        Version of 30-Apr-87 RAP
+c
+      COMMON /SOLPAR/ LEACHR(lenchain), BTDSET, INDW, MANULR,
+     .                PACKHL, OVRBRD, BTPRE, BTNTK, TOTEXC(3),
+     .                EXCAV(6,3), EXCAMT,
+     .                YELDBT(3), AVGIRR, AVGYLD, AVGBVI(lenchain),
+     .                WASDEP, SOLING, SURCM,
+     .                RESIRR, IRRSR, IRTIMR, RIRRR,
+     .                RTAVAL(lenchain), RTENV(lenchain),
+     .                RTPACK(lenchain)
+c     COMMON /SOLPAR/ LEACHR(9), BTDSET, INDW, MANULR,
+c    .                PACKHL, OVRBRD, BTPRE, BTNTK, TOTEXC(3),
+c    .                EXCAV(6,3), EXCAMT,
+c    .                YELDBT(3), AVGIRR, AVGYLD, AVGBVI(9),
+c    .                WASDEP, SOLING, SURCM,
+c    .                RESIRR, IRRSR, IRTIMR, RIRRR,
+c    .                RTAVAL(9), RTENV(9), RTPACK(9) 
+
+      REAL LEACHR, PACKHL, OVRBRD, EXCAV, EXCAMT, YELDBT, AVGIRR, 
+     .     AVGYLD, AVGBVI, TOTEXC, MANULR, WASDEP, SOLING, SURCM,
+     .     IRTIMR, RIRRR, RTAVAL, RTENV, RTPACK
+      INTEGER BTDSET, INDW, IRRSR
+      LOGICAL BTPRE, BTNTK, RESIRR
+
+C-----------------------------------------------------------------------

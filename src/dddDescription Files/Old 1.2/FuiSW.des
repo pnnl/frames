@@ -1,0 +1,56 @@
+"mf","Version 2.1"
+"Fate & Transport:Surface Water:riv","FRAMES Known Surface Water Module","known.exe ui","known.exe model","riv.ico"
+"
+MODULE VERSION
+1.4
+
+MODULE DESCRIPTION
+Use this module only if you know the concentrations and/or fluxes in a surface water body.  The chemical concentrations/fluxes are entered directly through the interface.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny emission.  Therefore, this module assumes that the progeny emissions are input along with the parent emissions.
+
+MODULE REFERENCES
+Document:  FRAMES Known Water Module
+
+Authors:
+  Mitch Pelton
+  Gariann Gelston
+  Melanie Eslinger
+
+Other related sites:
+  http://mepas.pnl.gov/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+
+Valid Output Writes
+     wff Vadose
+     wcf Surface Water
+
+SYSTEM REQUIREMENTS
+Operating System:     WIN 95 / NT
+Processor:            Pentium
+RAM Memory:           Minimum 4MB
+Disk Space:           Minimum 4MB free disk space
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      PO Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          http://mepas.pnl.gov/FRAMESV1
+"
+1,"Read"
+1,"con","",1,1
+2,"Write"
+"wff","Vadose"
+"wcf","Surface Water"
+0,"Variables"

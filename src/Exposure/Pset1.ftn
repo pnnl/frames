@@ -1,0 +1,65 @@
+!   MEPAS HAZ2: PSET1.FTN             Version Date: 21-Nov-1995
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK PSET1                               *
+!                                                                            *
+!  Common block PSET1 contains pollutant identification and risk model       *
+!                     parameters for pollutants included in current          *
+!                     calculations.                                          *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    09/20/85 (Converted to PC)                              *
+!  Last Modified:    21-Nov-95 - DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!     NPOL        Int   Number of pollutants defined by user for run.
+!     MTYPE(20)   Int   Pollutant type: <=1 radioactive, >=2 chemical.
+!     ANAME(5,20) Char  Descriptive name, radionuclide symbol or
+!                       chemical name.  Twenty characters per pollutant.
+!     POLID(3,20) Char  Identification symbol: radionuclide symbol or
+!                       CAS No. (for chemicals).
+!     CKOW(20)    Real  Octanal-water partition coefficient (chemicals).
+!     THALF(20)   Real  Decay half-time, days.
+!     HLC(20)     Real  Henry's Law constant for each chemical (atm-m3/mol)
+!     WM(20)      Real  Molecular weight of each pollutant
+!     andf(20)    real  ?????
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!     1/30/87      DLS  Changed cancer potency factors to represent values for
+!                       inhalation and ingestion.
+!                       Changed threshold chemical factors to reference doses.
+!     2/3/87       DLS  Added Henry's Law Constant
+!     24-Aug-92    DLS  Added skin permeablily constant and EPA toxicity QA
+!                       flags for CPFs and RFDs
+!     31-AUG-92    DLS  Added IREFX
+!     02-Oct-92    DLS  Added WM, FONE, and ABSKN
+!     28-Jan-93    DLS  Comments on ICPFH etc, update to reflect new IRIS use.
+!     21-Nov-95    DLS  Change IREFX to single value for global application
+!==== COMMON Block Definition ================================================
+!
+      COMMON/PSET1/NPOL,MTYPE(20),ANAME(5,20),POLID(3,20),          &
+                   CKOW(20),THALF(20),HLC(20), WM(20), andf(20)
+!
+!==== Variable Declarations ==================================================
+!
+      CHARACTER*4 POLID, ANAME
+!
+!

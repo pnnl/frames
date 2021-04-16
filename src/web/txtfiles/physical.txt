@@ -1,0 +1,135 @@
+
+  <h2>Physical Parameters</h2><p>
+<H3>Constituent ID:</H3>This unique identifier provides absolute identification
+for a pollutant in the database. This identifier is the Chemical Abstract Service
+Registry (CAS) number for chemical pollutants and the radionuclide name for
+radionuclides. The radionuclide name is composed of the element symbol and
+atomic weight of a particular radionuclide (e.g., PU239 for the plutonium isotope
+with atomic weight of 239).
+<H3>Full Name and Common Synonyms:</H3>
+<BLOCKQUOTE>This field contains the full name of the pollutant and well known
+  synonyms, as space allows. </BLOCKQUOTE>
+<H3>Constituent Name:</H3>
+<BLOCKQUOTE>A 20-character short name is provided for use in constituent lists
+  (e.g., constituent search list). </BLOCKQUOTE>
+<H3>Type:</H3>The type parameter indicates whether pollutant is a chemical
+or radionuclide, and if a chemical, mode of toxicity (carcinogenic or
+non-carcinogenic) by inhalation and ingestion. usage of parameter is as
+follows:
+<DL>
+  <DT>
+  <DD>Type 1 = radionuclide (EPA class A carcinogen) <BR>
+  <DD>Type 2 = carcinogen by inhalation and ingestion <BR>
+  <DD>Type 3 = carcinogen by inhalation, non-carcinogen by ingestion <BR>
+  <DD>Type 4 = carcinogen by ingestion, non-carcinogen by inhalation <BR>
+  <DD>Type 5 = non-carcinogen by inhalation and ingestion <BR></DD></DL><A
+name=mw>
+<H3>Molecular Weight (g/g-mole):</H3>The molecular weight of chemicals is
+determined by a chemical formula. For radionuclides, molecular weight is
+set to atomic weight, except for special cases, such as tritium, which is
+given molecular weight of water (tritiated, HTO). The molecular weight is
+used in several models, including soil and pond volatilization models,
+applicable to organic chemicals. For mixtures, an approximate molecular weight
+is entered based on either types of chemicals in mixture or, as in
+case of gasoline, constituent that poses greatest potential for risk
+(benzene). <A name=vap>
+<H3>Vapor Pressure (mm Hg):</H3>The vapor pressure is pressure exerted by a
+material's vapor, at a given temperature, in equilibrium with pure compound
+(liquid or solid). The vapor pressure is used to estimate rate of emission
+of volatile chemicals from soil and water sources into atmosphere. Vapor
+pressures in database are generally taken at 25 °C. The Editor does not
+provide methods to estimate vapor pressure. Some of the values for vapor
+pressure have been estimated by methods based on structural information and
+boiling point of constituent. methods are indicated by references as
+follows:
+<BLOCKQUOTE>Method VP-1 (Antoine Method) - used for liquids and gases (10^-3
+  to 760 mm Hg).
+  <P>Method VP-2 (Modified Watson Method) - used for liquids and solids (10^-7
+  to 760 mm Hg).
+  <P></P></BLOCKQUOTE><A name=hlc>
+<H3>Henry's Law Constant (atm m^3/g-mole):</H3>Henry's Law Constant is
+ratio of concentration of a volatile chemical in air to concentration in
+an aqueous solution (at equilibrium). It can be used as a general indicator of
+volatility of a chemical, and to estimate amount of a volatile chemical
+available for inhalation during domestic showering. Values for Henry's Law
+Constant are reported in two forms: dimensional and non-dimensional. values
+contained in database are given in dimensional form. relationship
+between two forms is as follows:
+<BLOCKQUOTE>
+  <P><TT>H' = H / (RT)</TT></P>
+  <P>where H' = non-dimensional Henry's Law Constant<BR>H = Henry's Law
+  Constant, atm m^3/g mole<BR>R = Gas law constant, atm m^3/g mole K<BR>T =
+  absolute temperature, K.</P>
+  <P>At 20 °C, value for RT is 2.4x10^-2 atm m^3/g-mole, and conversion
+  between forms of Henry's Law Constants is given by equations:</P>
+  <P><TT>H' = 41.67 H<BR></TT>and<BR><TT>H = 0.024 H'.</TT></P></BLOCKQUOTE>
+<P>Values for Henry's Law Constants are based on measured values where possible.
+When an estimate must be relied upon, the value may be estimated as ratio of
+vapor pressure to water solubility, both values being taken at
+temperature of interest (25 °C) for gases; vapor pressure is assumed to be
+760 mm Hg.</P>
+<DL></DL><A name=sol>
+<H3>Water Solubility (mg/L):</H3>The solubility of a pollutant in water is
+expressed in units of mg/L at a temperature in range of 20 to 30 °C.
+Measured values are used where information is available. Alternatively, values
+for some chemicals are based on estimation methods, referenced as follows:
+<BLOCKQUOTE>
+  <BLOCKQUOTE>Method S-1: non-acidic compounds when 0.5 &lt; log Kow &lt;
+    8<BR>Method S-2: non-acidic compounds when -0.5 &lt; log Kow &lt;
+    0.5<BR>Method S-3: acids with -0.5 &lt; log Kow &lt;
+3.2<BR></BLOCKQUOTE></BLOCKQUOTE>The parameter Kow is octanol-water
+partition coefficient. <BR>The measured solubility values provided in
+database were generally determined under laboratory conditions without
+considering effects of complex mixtures or varying aquatic chemical or
+geochemical conditions. These values should therefore be used with caution, as
+should values determined by estimation methods.<BR>
+<DL></DL><A name=koc>
+<H3>Carbon Matter Partition Coefficient, Koc (ml/g):</H3>The carbon matter
+partition coefficient (Koc) describes partitioning of a chemical between
+aqueous phase and soil in contact with water. The carbon matter
+partition coefficient is used to estimate absorption coefficient, Kd.
+<BR>When measured values of carbon matter partition coefficient are not
+available, an estimate can be made using correlation methods. The methods are
+referenced as follows:
+<BLOCKQUOTE>Method K-1 : correlation based on water solubility,<BR>Method K-2
+  : correlation based on octanol-water partition coefficient <BR></BLOCKQUOTE><A
+name=kow>
+<H3>Octanol-Water Partition Coefficient, Kow (ml water/ml octanol):</H3>
+The octanol-water partition coefficient describes equilibrium partitioning of a
+chemical between octanol and water phases. This parameter is used to estimate,
+as necessary, bioaccumulation in aquatic foods, concentration ratios for
+transfer between soil and plants, transfer factors between animal feed and
+animal products (meat and milk), and other physical parameters as described in
+these sections. Values for many chemicals are available from literature.
+When literature values are not available, estimation methods are available (as
+commercial software) based on chemical structure. Estimation methods for Kow are
+not available in the Editor. <A name=kp>
+<H3>Skin Permeability Constant, Kp (cm/hr):</H3>The skin permeability constant
+defines rate of absorption of a pollutant through skin for exposure
+pathways involving dermal contact with aqueous solutions. Showering and swimming
+are typical exposure pathways using skin permeability constant to estimate
+dermal absorption. Values for permeability constants have been summarized by EPA
+(1992a) and many of these values have been entered into MEPAS database.
+There is also a method of estimation available in the complete Database document.<BR>
+<H3>Gastrointestinal Absorption Factor:</H3>The fraction of a pollutant absorbed
+on the passage through the human gastrointestinal system is provided in the MEPAS
+database. This parameter may be of use in comparing dermal absorption and
+ingestion exposure routes for chemicals.
+<H3>Skin Absorption Fraction from Soil:</H3>This parameter provides
+fractions of a pollutant in the soil on skin that transfers to blood during a
+typical soil contact exposure scenario. Values provided in MEPAS database
+are taken primarily from EPA compilation experimental measurements (EPA
+1992a). The default value for organic chemicals is 1.0, and default value
+for radionuclides and inorganic chemicals is 0.001.
+<p>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<a href="software.html#database">Return to Software page.</a>
+<br>
+<br><a href="home.html"><b>Introduction</b></a>
+<br><a href="paramete.html"><b>Database Parameters</b></a>
+<br><b>Physical Parameters</b>
+<br><a href="dose.html"><b>Dose Factors</b></a>
+<BR><a href="decay.html"><b>Environmental Decay Half Times</b></a>
+<br><a href="transport.html"><b>Environmental Transport Factors</b></a>
+<br><a href="equation.html"><b>Parameter Estimation Equations</b></a>
+<br><a href="tox.html"><b>Toxicity Factors</b></a>

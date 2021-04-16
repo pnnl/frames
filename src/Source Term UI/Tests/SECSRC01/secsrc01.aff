@@ -1,0 +1,60 @@
+"src2",29
+7
+================================================================================
+  MEPAS Source Term Release Module
+  Case File:
+  Module Id:
+  Run Performed:
+  Output File:
+================================================================================
+1
+All
+area
+25
+0,m2
+0,m
+0,m/s
+25,Deg C
+25,Deg C
+4
+Gas 1,0,fraction,0,g/cm^3
+Particle 1,0.3000000119,um,1.5,g/cm^3
+Particle 2,3,um,1.5,g/cm^3
+Particle 3,7.5,um,1.5,g/cm^3
+2
+Benzene,71432,yr,g/yr,2,0
+0,0,0,0,0
+100,0,0,0,0
+URANIUM-236,U236,yr,pCi/yr,2,0
+0,0,0,0,0
+100,0,0,0,0
+"src3",29                               
+7
+================================================================================
+  MEPAS Source Term Release Module
+  Case File:
+  Module Id:
+  Run Performed:
+  Output File:
+================================================================================
+1
+All
+area
+40000
+0,m2
+0,m
+0,m/s
+25,Deg C
+25,Deg C
+4
+Gas 1,0,fraction,0,g/cm^3
+Particle 1,0.3000000119,um,1.5,g/cm^3
+Particle 2,3,um,1.5,g/cm^3
+Particle 3,7.5,um,1.5,g/cm^3
+2
+Benzene,71432,yr,g/yr,2,0
+0,0,0,0,0
+173,0,0,0,0
+URANIUM-236,U236,yr,pCi/yr,2,0
+0,0,0,0,0
+144,0,0,0,0

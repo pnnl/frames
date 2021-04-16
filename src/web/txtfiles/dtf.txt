@@ -1,0 +1,133 @@
+
+<B><I>For each</I></B> 'Module' <B><I>A line with:</I></B>
+  Module Name <B>[STRING]</B>
+  Number of Lines in section - <B>[INTEGER]</B>
+  Number of Lines that follow for this module's section
+  <B><I>A line with:</I></B>
+    Number of Header Lines -<B>[INTEGER]</B>
+  <B><I>For each</I></B> 'Header Line' <B><I>A line with:</I></B>
+    Header line information -<B>[STRING]</B>
+  <B><I>Next</I></B> 'Header Line'
+  <B><I>A line with:</I></B>
+    Number of Data Sets -<B>[INTEGER]</B>
+  <B><I>For each</I></B> 'Data Set' <B><I>A line with:</I></B>
+    Name of Data Set - <B>[STRING]</B>
+    Line with:
+      Data Set type - <B>[STRING]</B> - "acute" / "chronic"
+      Co-ordinate type - <B>[STRING]</B> - "polar" / "cartesian"
+      Spatial type - <B>[STRING]</B> - "grid" / "points"
+      Number of Time Periods - <B>[INTEGER]</B>
+      Time - <B>[FLOAT]</B>
+      <B><I>If</I></B> 'Data Set type' = "acute" <B><I>then</I></B>
+        Time unit - <B>[STRING]</B> - "hr"
+      Else 'Data Set type' = "chronic"
+        Time unit - <B>[STRING]</B> - "yr"
+      <B><I>EndIf</I></B>
+      Temperature unit - <B>[STRING]</B> - "deg C"
+    Line with:
+      <B><I>If</I></B> 'Co-ordinate type' = "polar" and 'Spatial type' = "grid" <B><I>then</I></B>
+        Number of Radial Distances - <B>[INTEGER]</B>
+      <B><I>ElseIf</I></B> 'Co-ordinate type' = "cartesian" and 'Spatial type' = "grid" <B><I>then</I></B>
+        Number of x Co-ordinates - <B>[INTEGER]</B>
+      Else 'Co-ordinate type' = "cartesian" and 'Spatial type' = "points" <B><I>then</I></B>
+        Number of x,y coordinate points - <B>[INTEGER]</B>
+      <B><I>EndIf</I></B>
+      Unit of Radial Distances or x Co-ordinates - <B>[STRING]</B> - "m"
+      <B><I>If</I></B> 'Co-ordinate type' = "polar" and 'Spatial type' = "grid" <B><I>then</I></B>
+        Number of Directions - <B>[INTEGER]</B>
+      <B><I>ElseIf</I></B> 'Co-ordinate type' = "cartesian" and 'Spatial type' = "grid" <B><I>then</I></B>
+        Number of y Co-ordinates - <B>[INTEGER]</B>
+      Else 'Co-ordinate type' = "cartesian" and 'Spatial type' = "points" <B><I>then</I></B>
+        Number - <B>[INTEGER]</B> - 1
+      <B><I>EndIf</I></B>
+      <B><I>If</I></B> 'Co-ordinate type' = "polar" <B><I>then</I></B>
+        Unit of Directions - <B>[STRING]</B> - "deg"
+      Else 'Co-ordinate type' = "cartesian"
+        Unit of y Co-ordinate - <B>[STRING]</B> - "m"
+      <B><I>EndIf</I></B>
+      <B><I>If</I></B> 'Spatial type' = "grid" <B><I>then</I></B> line with:
+        All Radial Distances or x Co-ordinates - <B>[Set of FLOAT]</B>
+        <B><I>If</I></B> 'Co-ordinate type' = "polar" <B><I>then</I></B>
+          <B><I>For each</I></B> 'Direction' line with:
+            Direction - <B>[FLOAT]</B>
+          <B><I>Next</I></B> 'Direction'
+        Else 'Co-ordinate type' = "cartesian" <B><I>then</I></B> line with:
+          <B><I>For each</I></B> 'y Co-ordinate' line with:
+            y Co-ordinate - <B>[FLOAT]</B>
+          <B><I>Next</I></B> 'Direction'
+        <B><I>EndIf</I></B>
+      Else 'Spatial type' = "points"
+        <B><I>A line with:</I></B> Name of Reporting Points - (set of strings)
+        <B><I>A line with:</I></B> Values of x Co-ordinates <B><I>For each</I></B> point - <B>[Set of FLOAT]</B>
+        <B><I>A line with:</I></B> Values of y Co-ordinates <B><I>For each</I></B> point - <B>[Set of FLOAT]</B>
+      <B><I>EndIf</I></B>
+    <B><I>For each</I></B> 'Time Period' line with:
+      Time - <B>[FLOAT]</B>
+      <B><I>If</I></B> 'Data Set type' = "acute" <B><I>then</I></B>
+        Time unit - <B>[STRING]</B> - "hr"
+      Else 'Data Set type' = "chronic"
+        Time unit - <B>[STRING]</B> - "yr"
+      <B><I>EndIf</I></B>
+      Temperature unit - <B>[STRING]</B> - "deg C"
+      <B><I>If</I></B> 'Spatial type' = "grid" <B><I>then</I></B> line with:
+        All Radial Distances or x Co-ordinates - <B>[Set of FLOAT]</B>
+        <B><I>If</I></B> 'Co-ordinate type' = "polar" <B><I>then</I></B>
+          <B><I>For each</I></B> 'Direction' line with:
+            Temperature Value for the 'Radial Distance' and 'Direction' - <B>[FLOAT]</B>
+          <B><I>Next</I></B> 'Direction'
+        Else 'Co-ordinate type' = "cartesian" <B><I>then</I></B> line with:
+          <B><I>For each</I></B> 'y Co-ordinate' line with:
+            Temperature Value for the 'x,y Co-ordinate' pair - <B>[FLOAT]</B>
+          <B><I>Next</I></B> 'Direction'
+        <B><I>EndIf</I></B>
+      Else 'Spatial type' = "points"
+        <B><I>A line with:</I></B>
+          Temperature Values <B><I>For each</I></B> Reporting Point - <B>[Set of FLOAT]</B>
+      <B><I>EndIf</I></B>
+    <B><I>Next</I></B> 'Time Period'
+  <B><I>Next</I></B> 'Data Set'
+
+
+Example data set:
+
+6
+"==============================================================",
+" Air Temperature Module Version 1.00 August 8, 1996",
+" Run: ","test",
+" Run Performed:","8/8/96","10:05:23",
+" Output Filename:","test.dtf",
+"==============================================================",
+2,
+"fcm4"
+"chronic","polar","grid",3,
+4,"m",4,"deg"
+100, 200, 400, 600,
+0,90,180,270,
+1,"yr","deg C",
+1.00E-6, 1.00E-7, 1.00E-8, 1.00E-9,
+3.00E-7, 2.00E-8, 1.00E-9, 0.00E0,
+2.00E-6, 2.00E-7, 2.00E-8, 2.00E-9,
+0.00E0, 0.00E0, 0.00E0, 0.00E0,
+2,"yr","deg C",
+1.00E-6, 1.00E-7, 1.00E-8, 1.00E-9,
+3.00E-7, 2.00E-8, 1.00E-9, 0.00E0,
+2.00E-6, 2.00E-7, 2.00E-8, 2.00E-9,
+0.00E0, 0.00E0, 0.00E0, 0.00E0,
+3,"yr","deg C"
+1.00E-7, 1.00E-8, 1.00E-9, 1.00E-10,
+3.00E-8, 2.00E-9, 1.00E-10, 0.00E0,
+2.00E-7, 2.00E-8, 2.00E-9, 2.00E-10,
+0.00E0, 0.00E0, 0.00E0, 0.00E0,
+"fcm5"
+"acute","cartesian","points",3,
+4,"m",1,"m"
+"Point 1","Point 2","Point 3","Point 4",
+1000,8000,0,0
+0,8000,1000,8000,
+1,"hr","deg C"
+4.500e+01,2.500e+01,3.000e+01,0.000e+00
+2,"hr","deg C",
+2.500e-03,1.060e-06,3.470e-03,0.000e+00
+3,"hr","deg C",
+1.600e-05,9.600e-10,2.500e-05,0.000e+00
+

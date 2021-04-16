@@ -1,0 +1,90 @@
+<html><head><title>Test MEPAS Source Term CSTRM01</title></head></body>
+<h2>Test MEPAS Source Term CSTRM01</h2>
+Overall status be found in the <a href='c:\program files\framesv2\documents\MEPAS Source Term CSTRM01_status.html'>status document</a><br>
+<p><B>Automated Test for CSTRM01</B><BR><BR>PURPOSE<BR><BR>This case verifies that the CSTRM correctly calculates an infiltration and overland runoff rates based on varying monthly climatological and site data.  Climatology data was entered that described a site that on average had one adequate wet season per year.  The constituent Chromium VI was selected for this case.<BR><BR>REQUIREMENTS<BR><BR><UL><LI> Provide a module user interface (MUI) that runs under Windows95 and has a standard Windows95 look and feel.<LI> Provide a MUI that allows the user to select different units for the appropriate input parameters.<LI> Allow the user to select the environmental media and loss routes associated with the source.<LI> Allow the user to provide source characteristics associated with the environmental media and loss routes selected.<LI> Allow the user to enter constituents by mass or by concentration.<LI> Allow the user to enter required Constituent Properties.<LI> Include infiltration, wind and mechanical suspension, volatilization, overland runoff (soil erosion and water flow), and decay/degradation as contaminant mass loss route options.<LI> Compute time-varying water flow rates (infiltration and overland runoff) based on site characterization and meteorological (monthly climatology) data.<LI> Create an error (*.ERR) file in an ASCII format at the start of the module execution<LI> Provide a default value for the minimum waste fraction, which is used to determine when the model should terminate a run, that can be modified by the user as necessary.<LI> Provide an about tab to inform users of the title, version number, and general description of the module.</UL>TEST APPROACH<BR><BR>The requirements were checked through this autotest case.    ...<BR>. </p>
+<table border=1 width='100%'>
+<tr><th width='10%'>Name</th><th width='20%'>Description</th><th width='70%'>Steps</th></tr>
+<tr><td>OpenFDE</td><td>Open the 'Framework Development Environment.'</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Wait for Framework Window </li>
+<li>Activate Framework window</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>OpenSimulationEditor</td><td>Open the Simulation Editor.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Select 'Editors' from menu toolbar and select the 'Simulation Editor.'</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>CreateNewFile</td><td>Create a new file.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Select 'File' from menu toolbar and select a 'New' .sim file.</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>InsertIcons</td><td>Insert a constituent icon and source icon.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Add the constituent icon to the Global workspace.</li>
+<li>Add the source icon to the Local workspace.</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>DataConstituent</td><td>Insert data for the constituent icon.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Open the 'Module General Information' screen for the constituent icon.</li>
+<li>Select 'Environmental Default Chemical Database Selection' from the list of applicable models and rename the icon.</li>
+<li>Open the User Input screen ('FRAMES Constituent Database Editor') for the constituent icon.</li>
+<li>Select the constituent 'Chromium VI.'</li>
+<li>Select 'File' from menu toolbar and 'Save and Exit' out of the 'FRAMES Constituent Database Editor.'</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>DataSource</td><td>Insert data for the source icon.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Open the 'Module General Information' screen for the source icon.</li>
+<li>Select 'MEPAS 4.1 Source in Soil' in the list of applicable models and rename the icon.</li>
+<li>Open 'User Input' for the source icon and enter data for the 'Soure Term Module.'</li>
+<li>Click 'OK' on the description splash screen of the Source Term Module.</li>
+<li>Click the 'Options' tab and enter data.</li>
+<li>On 'leaching loss route--STINf_OP' select 'compute pathway'</li>
+<li>On 'time period for simulation--STMAXTIME' change it to 5 years.</li>
+<li>Click the 'Waste Zone' tab and enter data.</li>
+<li>Select the right units for the data.</li>
+<li>Enter the data.</li>
+<li>Click the 'Hydrology' tab and enter data.</li>
+<li>Click the 'Monthly Climatology' tab and enter data.</li>
+<li>Change units on 'Cloudy' option to tenths</li>
+<li>Enter in data for the yearly grid.</li>
+<li>Click the 'Kds' tab and enter data.</li>
+<li>Enter the 'Soil Properties' button and select loamy soil properties.</li>
+<li>Enter Kd data.</li>
+<li>Click the 'Constituent Properties' tab and enter data.</li>
+<li>Enter constituent water solubilities values, constituent inventory, and decay half life's if needed.</li>
+<li>Select 'File' from menu toolbar and 'Save Changes and Exit' out of 'Source Term Module Input.'</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>SaveFile</td><td>Save the .sim file for later use</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Select 'File' from menu toolbar and 'Save' file.</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>RunFile</td><td>Run the scenario to obtain outputs.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Click the 'GO' Button to run source module.</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>CloseSimulationEditor</td><td>Close the Simulation Editor.</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Select 'File' from menu toolbar and select 'Exit' to exit the 'Simulation Editor.'</li>
+<li>Test case complete</li>
+</ol></td>
+<tr><td>CloseFDE</td><td>Close the 'Framework Development Environment.'</td><td><ol>
+<li>Setting tracked locations for this test to 0.</li>
+<li>Captured current state of Operating System object tracking.</li>
+<li>Close Framework window</li>
+</table></body></html>

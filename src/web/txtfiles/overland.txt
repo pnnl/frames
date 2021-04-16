@@ -1,0 +1,31 @@
+
+<img src="images/icon_overland.jpg" ALT="overland" align=left><h2>Overland</h2>
+
+<p> The Overland Component of FRAMES allows the user to input overland flow chemical fluxes directly through the module user interface.  It produces WFF for infiltration and runoff.
+<p><b>TYPICALLY TAKES IN . . .</b>
+<ul>
+<li>
+<b>Input
+from user</b></li>
+<li>
+<b><a href="wff.html">WATER FLUX FILE (WFF)</b></li></a>
+<li>
+<b><a href="gid.html">GLOBAL INPUT DATA (GID)</a>
+FILE</b></li>
+
+</ul>
+<b>TYPICALLY PRODUCES . . .</b>
+<ul>
+<li>
+<b><a href="scf.html">SOIL CONCENTRATION
+FILE (SCF)</b></li></a>
+<li>
+<b><a href="wff.html">WATER FLUX FILE (WFF)</b></a></li></ul>
+<p>
+
+
+<p>
+<hr size="1" color="#000080" noshade align="center" width="95%">
+<p>
+To next Module Type: <a href="ri.html">Receptor Intake</a>
+<br>Back to <a href="software.html#model_types">Module Types</a>

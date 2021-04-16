@@ -1,0 +1,1562 @@
+<html><body>
+<p>
+Comparison of C:\Documents and Settings\h3973102\Desktop\plusold\gid.cpp and C:\Documents and Settings\h3973102\Desktop\plus\gid.cpp<br>
+10/6/2003 10:08:58 AM<br>
+Mode:&nbsp; All Lines<br>
+<table>
+<tr valign="top">
+<td><code>1</code></td><td><code>1</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>2</code></td><td><code>2</code></td><td><code>#include&nbsp;&quot;gid.h&quot;</code></td>
+</tr>
+<tr valign="top">
+<td><code>3</code></td><td><code></code></td><td><code><s><font color="red">#</font><font color="red">i</font><font color="red">n</font><font color="red">c</font><font color="red">l</font><font color="red">u</font><font color="red">d</font><font color="red">e</font>&nbsp;<font color="red">&quot;</font><font color="red">r</font><font color="red">o</font><font color="red">b</font><font color="red">u</font><font color="red">s</font><font color="red">t</font><font color="red">.</font><font color="red">h</font><font color="red">&quot;</font></s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>3</code></td><td><code><i><font color="blue">//</font><font color="blue">#</font><font color="blue">i</font><font color="blue">n</font><font color="blue">c</font><font color="blue">l</font><font color="blue">u</font><font color="blue">d</font><font color="blue">e</font>&nbsp;<font color="blue">&quot;</font><font color="blue">r</font><font color="blue">o</font><font color="blue">b</font><font color="blue">u</font><font color="blue">s</font><font color="blue">t</font><font color="blue">.</font><font color="blue">h</font><font color="blue">&quot;</font></i></code></td>
+</tr>
+<tr valign="top">
+<td><code>4</code></td><td><code>4</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>5</code></td><td><code>5</code></td><td><code>char&nbsp;Entry::temp[256];</code></td>
+</tr>
+<tr valign="top">
+<td><code>6</code></td><td><code>6</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>7</code></td><td><code>7</code></td><td><code>Entry::Entry()</code></td>
+</tr>
+<tr valign="top">
+<td><code>8</code></td><td><code>8</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>9</code></td><td><code>9</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i=0;&nbsp;i&lt;6;&nbsp;i++)</code></td>
+</tr>
+<tr valign="top">
+<td><code>10</code></td><td><code>10</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idx[i]&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>11</code></td><td><code>11</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>12</code></td><td><code>12</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usrunit&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>13</code></td><td><code>13</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modunit&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>14</code></td><td><code>14</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>15</code></td><td><code>15</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>16</code></td><td><code>16</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>17</code></td><td><code>17</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>18</code></td><td><code>18</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>19</code></td><td><code>19</code></td><td><code>Entry::~Entry()</code></td>
+</tr>
+<tr valign="top">
+<td><code>20</code></td><td><code>20</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>21</code></td><td><code>21</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value)</code></td>
+</tr>
+<tr valign="top">
+<td><code>22</code></td><td><code>22</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete[]&nbsp;value;</code></td>
+</tr>
+<tr valign="top">
+<td><code>23</code></td><td><code>23</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(usrunit)</code></td>
+</tr>
+<tr valign="top">
+<td><code>24</code></td><td><code>24</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete[]&nbsp;usrunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>25</code></td><td><code>25</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(modunit)</code></td>
+</tr>
+<tr valign="top">
+<td><code>26</code></td><td><code>26</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete[]&nbsp;modunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>27</code></td><td><code>27</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>28</code></td><td><code>28</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>29</code></td><td><code>29</code></td><td><code>Entry::Equal(long&nbsp;*index)</code></td>
+</tr>
+<tr valign="top">
+<td><code>30</code></td><td><code>30</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>31</code></td><td><code>31</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i=0;&nbsp;i&lt;6;&nbsp;i++)</code></td>
+</tr>
+<tr valign="top">
+<td><code>32</code></td><td><code>32</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(idx[i]&nbsp;!=&nbsp;index[i])</code></td>
+</tr>
+<tr valign="top">
+<td><code>33</code></td><td><code>33</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>34</code></td><td><code>34</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>35</code></td><td><code>35</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>36</code></td><td><code>36</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>37</code></td><td><code>37</code></td><td><code>void&nbsp;Entry::UsrUnitDup(char&nbsp;*val)</code></td>
+</tr>
+<tr valign="top">
+<td><code>38</code></td><td><code>38</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>39</code></td><td><code>39</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(usrunit&nbsp;!=&nbsp;NULL)&nbsp;delete&nbsp;usrunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>40</code></td><td><code>40</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usrunit&nbsp;=&nbsp;strdup(val);</code></td>
+</tr>
+<tr valign="top">
+<td><code>41</code></td><td><code>41</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>42</code></td><td><code>42</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>43</code></td><td><code>43</code></td><td><code>void&nbsp;Entry::ModUnitDup(char&nbsp;*val)</code></td>
+</tr>
+<tr valign="top">
+<td><code>44</code></td><td><code>44</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>45</code></td><td><code>45</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(modunit&nbsp;!=&nbsp;NULL)&nbsp;delete&nbsp;modunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>46</code></td><td><code>46</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modunit&nbsp;=&nbsp;strdup(val);</code></td>
+</tr>
+<tr valign="top">
+<td><code>47</code></td><td><code>47</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>48</code></td><td><code>48</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>49</code></td><td><code>49</code></td><td><code>void&nbsp;Entry::ValueDup(char&nbsp;*val)</code></td>
+</tr>
+<tr valign="top">
+<td><code>50</code></td><td><code>50</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>51</code></td><td><code>51</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(value&nbsp;!=&nbsp;NULL)&nbsp;delete&nbsp;value;</code></td>
+</tr>
+<tr valign="top">
+<td><code>52</code></td><td><code>52</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;=&nbsp;strdup(val);</code></td>
+</tr>
+<tr valign="top">
+<td><code>53</code></td><td><code>53</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>54</code></td><td><code>54</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>55</code></td><td><code>55</code></td><td><code>void&nbsp;Entry::ValueDup(long&nbsp;val)</code></td>
+</tr>
+<tr valign="top">
+<td><code>56</code></td><td><code>56</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>57</code></td><td><code>57</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(value&nbsp;!=&nbsp;NULL)&nbsp;delete&nbsp;value;</code></td>
+</tr>
+<tr valign="top">
+<td><code>58</code></td><td><code>58</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sprintf(temp,&quot;%ld&quot;,val);</code></td>
+</tr>
+<tr valign="top">
+<td><code>59</code></td><td><code>59</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;=&nbsp;strdup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>60</code></td><td><code>60</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>61</code></td><td><code>61</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>62</code></td><td><code>62</code></td><td><code>void&nbsp;Entry::ValueDup(double&nbsp;val)</code></td>
+</tr>
+<tr valign="top">
+<td><code>63</code></td><td><code>63</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>64</code></td><td><code>64</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(value&nbsp;!=&nbsp;NULL)&nbsp;delete&nbsp;value;</code></td>
+</tr>
+<tr valign="top">
+<td><code>65</code></td><td><code>65</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sprintf(temp,&quot;%lf&quot;,val);</code></td>
+</tr>
+<tr valign="top">
+<td><code>66</code></td><td><code>66</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;=&nbsp;strdup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>67</code></td><td><code>67</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>68</code></td><td><code>68</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>69</code></td><td><code>69</code></td><td><code>int&nbsp;Entry::Long()</code></td>
+</tr>
+<tr valign="top">
+<td><code>70</code></td><td><code>70</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>71</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<font color="red">r</font>ato<font color="red">l</font>(value);</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>71</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ato<font color="red">i</font>(value);</i></code></td>
+</tr>
+<tr valign="top">
+<td><code>72</code></td><td><code>72</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>73</code></td><td><code>73</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>74</code></td><td><code>74</code></td><td><code>double&nbsp;Entry::Double()</code></td>
+</tr>
+<tr valign="top">
+<td><code>75</code></td><td><code>75</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>76</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">r</font><font color="red">etu</font>r<font color="red">n</font>&nbsp;<font color="red">ra</font>to<font color="red">f</font><font color="red">(value)</font>;</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>76</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">cha</font>r&nbsp;<font color="red">*s</font>to<font color="red">pString</font>;</i></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>77</code></td><td><code><i><font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="red">return</font><font color="blue">&nbsp;</font><font color="red">strtod((value),&amp;stopString);</font></i></code></td>
+</tr>
+<tr valign="top">
+<td><code>77</code></td><td><code>78</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>78</code></td><td><code>79</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>79</code></td><td><code>80</code></td><td><code>int&nbsp;Entry::Read(icsv&nbsp;*in)</code></td>
+</tr>
+<tr valign="top">
+<td><code>80</code></td><td><code>81</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>81</code></td><td><code>82</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(in&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>82</code></td><td><code>83</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;idx[0]&nbsp;&gt;&gt;&nbsp;idx[1]&nbsp;&gt;&gt;&nbsp;idx[2]&nbsp;&gt;&gt;&nbsp;idx[3]&nbsp;&gt;&gt;&nbsp;idx[4]&nbsp;&gt;&gt;&nbsp;idx[5]&nbsp;&gt;&gt;&nbsp;reference;</code></td>
+</tr>
+<tr valign="top">
+<td><code>83</code></td><td><code>84</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;temp;</code></td>
+</tr>
+<tr valign="top">
+<td><code>84</code></td><td><code>85</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UsrUnitDup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>85</code></td><td><code>86</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;temp;</code></td>
+</tr>
+<tr valign="top">
+<td><code>86</code></td><td><code>87</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModUnitDup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>87</code></td><td><code>88</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;temp&nbsp;&gt;&gt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>88</code></td><td><code>89</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValueDup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>89</code></td><td><code>90</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>90</code></td><td><code>91</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>91</code></td><td><code>92</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>92</code></td><td><code>93</code></td><td><code>int&nbsp;Entry::Write(ocsv&nbsp;*out)</code></td>
+</tr>
+<tr valign="top">
+<td><code>93</code></td><td><code>94</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>94</code></td><td><code>95</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(out&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>95</code></td><td><code>96</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;idx[0]&nbsp;&lt;&lt;&nbsp;idx[1]&nbsp;&lt;&lt;&nbsp;idx[2]&nbsp;&lt;&lt;&nbsp;idx[3]&nbsp;&lt;&lt;&nbsp;idx[4]&nbsp;&lt;&lt;&nbsp;idx[5]</code></td>
+</tr>
+<tr valign="top">
+<td><code>96</code></td><td><code>97</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;reference&nbsp;&lt;&lt;&nbsp;usrunit&nbsp;&lt;&lt;&nbsp;modunit&nbsp;&lt;&lt;&nbsp;value&nbsp;&lt;&lt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>97</code></td><td><code>98</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>98</code></td><td><code>99</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>99</code></td><td><code>100</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>100</code></td><td><code>101</code></td><td><code>char&nbsp;Parameter::temp[256];</code></td>
+</tr>
+<tr valign="top">
+<td><code>101</code></td><td><code>102</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>102</code></td><td><code>103</code></td><td><code>Parameter::Parameter()</code></td>
+</tr>
+<tr valign="top">
+<td><code>103</code></td><td><code>104</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>104</code></td><td><code>105</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>105</code></td><td><code>106</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>106</code></td><td><code>107</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>107</code></td><td><code>108</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>108</code></td><td><code>109</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>109</code></td><td><code>110</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>110</code></td><td><code>111</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>111</code></td><td><code>112</code></td><td><code>Parameter::~Parameter()</code></td>
+</tr>
+<tr valign="top">
+<td><code>112</code></td><td><code>113</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>113</code></td><td><code>114</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*next,&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>114</code></td><td><code>115</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>115</code></td><td><code>116</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>116</code></td><td><code>117</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>117</code></td><td><code>118</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>118</code></td><td><code>119</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>119</code></td><td><code>120</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>120</code></td><td><code>121</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>121</code></td><td><code>122</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>122</code></td><td><code>123</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;already&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>123</code></td><td><code>124</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;inserted&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>124</code></td><td><code>125</code></td><td><code>int&nbsp;Parameter::AddEntry(Entry&nbsp;*e)</code></td>
+</tr>
+<tr valign="top">
+<td><code>125</code></td><td><code>126</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>126</code></td><td><code>127</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(GetEntry(e-&gt;idx)&nbsp;!=&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>127</code></td><td><code>128</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>128</code></td><td><code>129</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>129</code></td><td><code>130</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;e;</code></td>
+</tr>
+<tr valign="top">
+<td><code>130</code></td><td><code>131</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;e;</code></td>
+</tr>
+<tr valign="top">
+<td><code>131</code></td><td><code>132</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>132</code></td><td><code>133</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>133</code></td><td><code>134</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>134</code></td><td><code>135</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-&gt;prev&nbsp;=&nbsp;List-&gt;prev;</code></td>
+</tr>
+<tr valign="top">
+<td><code>135</code></td><td><code>136</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev-&gt;next&nbsp;=&nbsp;e;</code></td>
+</tr>
+<tr valign="top">
+<td><code>136</code></td><td><code>137</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;e;</code></td>
+</tr>
+<tr valign="top">
+<td><code>137</code></td><td><code>138</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>138</code></td><td><code>139</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;count++;</code></td>
+</tr>
+<tr valign="top">
+<td><code>139</code></td><td><code>140</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>140</code></td><td><code>141</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>141</code></td><td><code>142</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>142</code></td><td><code>143</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;not&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>143</code></td><td><code>144</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;deleted&nbsp;from&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>144</code></td><td><code>145</code></td><td><code>int&nbsp;Parameter::DelEntry(long&nbsp;*idx)</code></td>
+</tr>
+<tr valign="top">
+<td><code>145</code></td><td><code>146</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>146</code></td><td><code>147</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*e&nbsp;=&nbsp;GetEntry(idx);</code></td>
+</tr>
+<tr valign="top">
+<td><code>147</code></td><td><code>148</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(e&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>148</code></td><td><code>149</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;e)</code></td>
+</tr>
+<tr valign="top">
+<td><code>149</code></td><td><code>150</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>150</code></td><td><code>151</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>151</code></td><td><code>152</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-&gt;prev-&gt;next&nbsp;=&nbsp;e-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>152</code></td><td><code>153</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;count--;</code></td>
+</tr>
+<tr valign="top">
+<td><code>153</code></td><td><code>154</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>154</code></td><td><code>155</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>155</code></td><td><code>156</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>156</code></td><td><code>157</code></td><td><code>Entry&nbsp;*Parameter::GetEntry(long&nbsp;*idx)</code></td>
+</tr>
+<tr valign="top">
+<td><code>157</code></td><td><code>158</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>158</code></td><td><code>159</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>159</code></td><td><code>160</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>160</code></td><td><code>161</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>161</code></td><td><code>162</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(curr-&gt;Equal(idx))</code></td>
+</tr>
+<tr valign="top">
+<td><code>162</code></td><td><code>163</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>163</code></td><td><code>164</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>164</code></td><td><code>165</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>165</code></td><td><code>166</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>166</code></td><td><code>167</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>167</code></td><td><code>168</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>168</code></td><td><code>169</code></td><td><code>Entry&nbsp;*Parameter::FindEntry(char&nbsp;*str)</code></td>
+</tr>
+<tr valign="top">
+<td><code>169</code></td><td><code>170</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>170</code></td><td><code>171</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>171</code></td><td><code>172</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>172</code></td><td><code>173</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>173</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(strcmp<font color="red">i</font>(curr-&gt;value,str)&nbsp;==&nbsp;0)</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>174</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(str<font color="red">i</font>cmp(curr-&gt;value,str)&nbsp;==&nbsp;0)</i></code></td>
+</tr>
+<tr valign="top">
+<td><code>174</code></td><td><code>175</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>175</code></td><td><code>176</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>176</code></td><td><code>177</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>177</code></td><td><code>178</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>178</code></td><td><code>179</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>179</code></td><td><code>180</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>180</code></td><td><code>181</code></td><td><code>int&nbsp;Parameter::Read(icsv&nbsp;*in)</code></td>
+</tr>
+<tr valign="top">
+<td><code>181</code></td><td><code>182</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>182</code></td><td><code>183</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>183</code></td><td><code>184</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>184</code></td><td><code>185</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*e&nbsp;=&nbsp;new&nbsp;Entry();</code></td>
+</tr>
+<tr valign="top">
+<td><code>185</code></td><td><code>186</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-&gt;Read(in);</code></td>
+</tr>
+<tr valign="top">
+<td><code>186</code></td><td><code>187</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;AddEntry(e);</code></td>
+</tr>
+<tr valign="top">
+<td><code>187</code></td><td><code>188</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>188</code></td><td><code>189</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>189</code></td><td><code>190</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>190</code></td><td><code>191</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>191</code></td><td><code>192</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>192</code></td><td><code>193</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>193</code></td><td><code>194</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>194</code></td><td><code>195</code></td><td><code>int&nbsp;Parameter::Write(ocsv&nbsp;*out)</code></td>
+</tr>
+<tr valign="top">
+<td><code>195</code></td><td><code>196</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>196</code></td><td><code>197</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;</code></td>
+</tr>
+<tr valign="top">
+<td><code>197</code></td><td><code>198</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(out&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>198</code></td><td><code>199</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entry&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>199</code></td><td><code>200</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>200</code></td><td><code>201</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>201</code></td><td><code>202</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;name;</code></td>
+</tr>
+<tr valign="top">
+<td><code>202</code></td><td><code>203</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i=0;i&lt;6;i++)</code></td>
+</tr>
+<tr valign="top">
+<td><code>203</code></td><td><code>204</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;curr-&gt;idx[i];</code></td>
+</tr>
+<tr valign="top">
+<td><code>204</code></td><td><code>205</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;curr-&gt;reference;</code></td>
+</tr>
+<tr valign="top">
+<td><code>205</code></td><td><code>206</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;curr-&gt;usrunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>206</code></td><td><code>207</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;curr-&gt;modunit;</code></td>
+</tr>
+<tr valign="top">
+<td><code>207</code></td><td><code>208</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;curr-&gt;value;</code></td>
+</tr>
+<tr valign="top">
+<td><code>208</code></td><td><code>209</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>209</code></td><td><code>210</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>210</code></td><td><code>211</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>211</code></td><td><code>212</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>212</code></td><td><code>213</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>213</code></td><td><code>214</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>214</code></td><td><code>215</code></td><td><code>char&nbsp;Section::temp[256];</code></td>
+</tr>
+<tr valign="top">
+<td><code>215</code></td><td><code>216</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>216</code></td><td><code>217</code></td><td><code>Section::Section()</code></td>
+</tr>
+<tr valign="top">
+<td><code>217</code></td><td><code>218</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>218</code></td><td><code>219</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;count&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>219</code></td><td><code>220</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;name&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>220</code></td><td><code>221</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>221</code></td><td><code>222</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;prev&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>222</code></td><td><code>223</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;next&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>223</code></td><td><code>224</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>224</code></td><td><code>225</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>225</code></td><td><code>226</code></td><td><code>Section::~Section()</code></td>
+</tr>
+<tr valign="top">
+<td><code>226</code></td><td><code>227</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>227</code></td><td><code>228</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;*next,&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>228</code></td><td><code>229</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>229</code></td><td><code>230</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>230</code></td><td><code>231</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>231</code></td><td><code>232</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>232</code></td><td><code>233</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>233</code></td><td><code>234</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>234</code></td><td><code>235</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>235</code></td><td><code>236</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>236</code></td><td><code>237</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;already&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>237</code></td><td><code>238</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;inserted&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>238</code></td><td><code>239</code></td><td><code>int&nbsp;Section::AddParameter(Parameter&nbsp;*p)</code></td>
+</tr>
+<tr valign="top">
+<td><code>239</code></td><td><code>240</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>240</code></td><td><code>241</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(GetParameter(p-&gt;name)&nbsp;!=&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>241</code></td><td><code>242</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>242</code></td><td><code>243</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>243</code></td><td><code>244</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>244</code></td><td><code>245</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>245</code></td><td><code>246</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>246</code></td><td><code>247</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>247</code></td><td><code>248</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>248</code></td><td><code>249</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p-&gt;prev&nbsp;=&nbsp;List-&gt;prev;</code></td>
+</tr>
+<tr valign="top">
+<td><code>249</code></td><td><code>250</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev-&gt;next&nbsp;=&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>250</code></td><td><code>251</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>251</code></td><td><code>252</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>252</code></td><td><code>253</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;</code></td>
+</tr>
+<tr valign="top">
+<td><code>253</code></td><td><code>254</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>254</code></td><td><code>255</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>255</code></td><td><code>256</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>256</code></td><td><code>257</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;not&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>257</code></td><td><code>258</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;deleted&nbsp;from&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>258</code></td><td><code>259</code></td><td><code>int&nbsp;Section::DelParameter(char&nbsp;*name)</code></td>
+</tr>
+<tr valign="top">
+<td><code>259</code></td><td><code>260</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>260</code></td><td><code>261</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;*p&nbsp;=&nbsp;GetParameter(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>261</code></td><td><code>262</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(p&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>262</code></td><td><code>263</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;p)</code></td>
+</tr>
+<tr valign="top">
+<td><code>263</code></td><td><code>264</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>264</code></td><td><code>265</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>265</code></td><td><code>266</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>266</code></td><td><code>267</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(p-&gt;prev)</code></td>
+</tr>
+<tr valign="top">
+<td><code>267</code></td><td><code>268</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p-&gt;prev-&gt;next&nbsp;=&nbsp;p-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>268</code></td><td><code>269</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(p-&gt;next)</code></td>
+</tr>
+<tr valign="top">
+<td><code>269</code></td><td><code>270</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p-&gt;next-&gt;prev&nbsp;=&nbsp;p-&gt;prev;</code></td>
+</tr>
+<tr valign="top">
+<td><code>270</code></td><td><code>271</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>271</code></td><td><code>272</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>272</code></td><td><code>273</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;count--;</code></td>
+</tr>
+<tr valign="top">
+<td><code>273</code></td><td><code>274</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>274</code></td><td><code>275</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>275</code></td><td><code>276</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>276</code></td><td><code>277</code></td><td><code>Parameter&nbsp;*Section::GetParameter(char&nbsp;*name)</code></td>
+</tr>
+<tr valign="top">
+<td><code>277</code></td><td><code>278</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>278</code></td><td><code>279</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>279</code></td><td><code>280</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>280</code></td><td><code>281</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>281</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(strcmp<font color="red">i</font>(curr-&gt;name,name)&nbsp;==&nbsp;0)</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>282</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(str<font color="red">i</font>cmp(curr-&gt;name,name)&nbsp;==&nbsp;0)</i></code></td>
+</tr>
+<tr valign="top">
+<td><code>282</code></td><td><code>283</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>283</code></td><td><code>284</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>284</code></td><td><code>285</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>285</code></td><td><code>286</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>286</code></td><td><code>287</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>287</code></td><td><code>288</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>288</code></td><td><code>289</code></td><td><code>long&nbsp;Section::GetCount()</code></td>
+</tr>
+<tr valign="top">
+<td><code>289</code></td><td><code>290</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>290</code></td><td><code>291</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;long&nbsp;cnt&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>291</code></td><td><code>292</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>292</code></td><td><code>293</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>293</code></td><td><code>294</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>294</code></td><td><code>295</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt+=&nbsp;curr-&gt;count;</code></td>
+</tr>
+<tr valign="top">
+<td><code>295</code></td><td><code>296</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>296</code></td><td><code>297</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>297</code></td><td><code>298</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cnt;</code></td>
+</tr>
+<tr valign="top">
+<td><code>298</code></td><td><code>299</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>299</code></td><td><code>300</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>300</code></td><td><code>301</code></td><td><code>int&nbsp;Section::Read(icsv&nbsp;*in)</code></td>
+</tr>
+<tr valign="top">
+<td><code>301</code></td><td><code>302</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>302</code></td><td><code>303</code></td><td><code>&nbsp;&nbsp;int&nbsp;cnt&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>303</code></td><td><code>304</code></td><td><code>&nbsp;&nbsp;Parameter&nbsp;*p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>304</code></td><td><code>305</code></td><td><code></code></td>
+</tr>
+<tr valign="top">
+<td><code>305</code></td><td><code>306</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;!=&nbsp;NULL)&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>306</code></td><td><code>307</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in-&gt;setpos(fpos);</code></td>
+</tr>
+<tr valign="top">
+<td><code>307</code></td><td><code>308</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(long&nbsp;i=0;&nbsp;i&lt;count;&nbsp;i++)</code></td>
+</tr>
+<tr valign="top">
+<td><code>308</code></td><td><code>309</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>309</code></td><td><code>310</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>310</code></td><td><code>311</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>311</code></td><td><code>312</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p&nbsp;=&nbsp;new&nbsp;Parameter();</code></td>
+</tr>
+<tr valign="top">
+<td><code>312</code></td><td><code>313</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>313</code></td><td><code>314</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>314</code></td><td><code>315</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>315</code></td><td><code>316</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;cnt;</code></td>
+</tr>
+<tr valign="top">
+<td><code>316</code></td><td><code>317</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>317</code></td><td><code>318</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>318</code></td><td><code>319</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;temp;</code></td>
+</tr>
+<tr valign="top">
+<td><code>319</code></td><td><code>320</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p-&gt;name&nbsp;=&nbsp;strdup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>320</code></td><td><code>321</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!AddParameter(p))</code></td>
+</tr>
+<tr valign="top">
+<td><code>321</code></td><td><code>322</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>322</code></td><td><code>323</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;p;</code></td>
+</tr>
+<tr valign="top">
+<td><code>323</code></td><td><code>324</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p&nbsp;=&nbsp;GetParameter(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>324</code></td><td><code>325</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>325</code></td><td><code>326</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(p-&gt;Read(in))&nbsp;cnt++;</code></td>
+</tr>
+<tr valign="top">
+<td><code>326</code></td><td><code>327</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>327</code></td><td><code>328</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;cnt;</code></td>
+</tr>
+<tr valign="top">
+<td><code>328</code></td><td><code>329</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>329</code></td><td><code>330</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>330</code></td><td><code>331</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>331</code></td><td><code>332</code></td><td><code>int&nbsp;Section::Write(ocsv&nbsp;*out)</code></td>
+</tr>
+<tr valign="top">
+<td><code>332</code></td><td><code>333</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>333</code></td><td><code>334</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(out&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>334</code></td><td><code>335</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;name&nbsp;&lt;&lt;&nbsp;GetCount()&nbsp;&lt;&lt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>335</code></td><td><code>336</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*out&nbsp;&lt;&lt;&nbsp;name&nbsp;&lt;&lt;&nbsp;this-&gt;count&nbsp;&lt;&lt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>336</code></td><td><code>337</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>337</code></td><td><code>338</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>338</code></td><td><code>339</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>339</code></td><td><code>340</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr-&gt;Write(out);</code></td>
+</tr>
+<tr valign="top">
+<td><code>340</code></td><td><code>341</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>341</code></td><td><code>342</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>342</code></td><td><code>343</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>343</code></td><td><code>344</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>344</code></td><td><code>345</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>345</code></td><td><code>346</code></td><td><code>char&nbsp;GIDfile::temp[256];</code></td>
+</tr>
+<tr valign="top">
+<td><code>346</code></td><td><code>347</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>347</code></td><td><code>348</code></td><td><code>GIDfile::GIDfile(char&nbsp;*name)</code></td>
+</tr>
+<tr valign="top">
+<td><code>348</code></td><td><code>349</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>349</code></td><td><code>350</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;in&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>350</code></td><td><code>351</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;out&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>351</code></td><td><code>352</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>352</code></td><td><code>353</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;numsects&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>353</code></td><td><code>354</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;name&nbsp;=&nbsp;strdup(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>354</code></td><td><code>355</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>355</code></td><td><code>356</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>356</code></td><td><code>357</code></td><td><code>GIDfile::~GIDfile()</code></td>
+</tr>
+<tr valign="top">
+<td><code>357</code></td><td><code>358</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>358</code></td><td><code>359</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*next,&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>359</code></td><td><code>360</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>360</code></td><td><code>361</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>361</code></td><td><code>362</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>362</code></td><td><code>363</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>363</code></td><td><code>364</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>364</code></td><td><code>365</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>365</code></td><td><code>366</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(in)</code></td>
+</tr>
+<tr valign="top">
+<td><code>366</code></td><td><code>367</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;in;</code></td>
+</tr>
+<tr valign="top">
+<td><code>367</code></td><td><code>368</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(out)</code></td>
+</tr>
+<tr valign="top">
+<td><code>368</code></td><td><code>369</code></td><td><code>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;out;</code></td>
+</tr>
+<tr valign="top">
+<td><code>369</code></td><td><code>370</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>370</code></td><td><code>371</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>371</code></td><td><code>372</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;already&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>372</code></td><td><code>373</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;inserted&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>373</code></td><td><code>374</code></td><td><code>int&nbsp;GIDfile::AddSection(Section&nbsp;*s)</code></td>
+</tr>
+<tr valign="top">
+<td><code>374</code></td><td><code>375</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>375</code></td><td><code>376</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(GetSection(s-&gt;name)&nbsp;!=&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>376</code></td><td><code>377</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>377</code></td><td><code>378</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>378</code></td><td><code>379</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>379</code></td><td><code>380</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>380</code></td><td><code>381</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>381</code></td><td><code>382</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>382</code></td><td><code>383</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>383</code></td><td><code>384</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;prev&nbsp;=&nbsp;List-&gt;prev;</code></td>
+</tr>
+<tr valign="top">
+<td><code>384</code></td><td><code>385</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev-&gt;next&nbsp;=&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>385</code></td><td><code>386</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List-&gt;prev&nbsp;=&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>386</code></td><td><code>387</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>387</code></td><td><code>388</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;numsects++;</code></td>
+</tr>
+<tr valign="top">
+<td><code>388</code></td><td><code>389</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>389</code></td><td><code>390</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>390</code></td><td><code>391</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>391</code></td><td><code>392</code></td><td><code>//&nbsp;return&nbsp;0&nbsp;if&nbsp;not&nbsp;in&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>392</code></td><td><code>393</code></td><td><code>//&nbsp;return&nbsp;1&nbsp;if&nbsp;deleted&nbsp;from&nbsp;List</code></td>
+</tr>
+<tr valign="top">
+<td><code>393</code></td><td><code>394</code></td><td><code>int&nbsp;GIDfile::DelSection(char&nbsp;*name)</code></td>
+</tr>
+<tr valign="top">
+<td><code>394</code></td><td><code>395</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>395</code></td><td><code>396</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*s&nbsp;=&nbsp;GetSection(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>396</code></td><td><code>397</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(s&nbsp;==&nbsp;NULL)&nbsp;return&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>397</code></td><td><code>398</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(List&nbsp;==&nbsp;s)</code></td>
+</tr>
+<tr valign="top">
+<td><code>398</code></td><td><code>399</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;=&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>399</code></td><td><code>400</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code></td>
+</tr>
+<tr valign="top">
+<td><code>400</code></td><td><code>401</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;prev-&gt;next&nbsp;=&nbsp;s-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>401</code></td><td><code>402</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>402</code></td><td><code>403</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;</code></td>
+</tr>
+<tr valign="top">
+<td><code>403</code></td><td><code>404</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>404</code></td><td><code>405</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>405</code></td><td><code>406</code></td><td><code>Section&nbsp;*GIDfile::GetSection(char&nbsp;*name)</code></td>
+</tr>
+<tr valign="top">
+<td><code>406</code></td><td><code>407</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>407</code></td><td><code>408</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>408</code></td><td><code>409</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>409</code></td><td><code>410</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>410</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(strcmp<font color="red">i</font>(curr-&gt;name,name)&nbsp;==&nbsp;0)</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>411</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(str<font color="red">i</font>cmp(curr-&gt;name,name)&nbsp;==&nbsp;0)</i></code></td>
+</tr>
+<tr valign="top">
+<td><code>411</code></td><td><code>412</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>412</code></td><td><code>413</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr-&gt;Read(in);</code></td>
+</tr>
+<tr valign="top">
+<td><code>413</code></td><td><code>414</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>414</code></td><td><code>415</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>415</code></td><td><code>416</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>416</code></td><td><code>417</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>417</code></td><td><code>418</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>418</code></td><td><code>419</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>419</code></td><td><code>420</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>420</code></td><td><code>421</code></td><td><code>Section&nbsp;*GIDfile::GetSection(int&nbsp;index)</code></td>
+</tr>
+<tr valign="top">
+<td><code>421</code></td><td><code>422</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>422</code></td><td><code>423</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i&nbsp;=&nbsp;0;</code></td>
+</tr>
+<tr valign="top">
+<td><code>423</code></td><td><code>424</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>424</code></td><td><code>425</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>425</code></td><td><code>426</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>426</code></td><td><code>427</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(i&nbsp;==&nbsp;index)</code></td>
+</tr>
+<tr valign="top">
+<td><code>427</code></td><td><code>428</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>428</code></td><td><code>429</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr-&gt;Read(in);</code></td>
+</tr>
+<tr valign="top">
+<td><code>429</code></td><td><code>430</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;curr;</code></td>
+</tr>
+<tr valign="top">
+<td><code>430</code></td><td><code>431</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>431</code></td><td><code>432</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>432</code></td><td><code>433</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;</code></td>
+</tr>
+<tr valign="top">
+<td><code>433</code></td><td><code>434</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>434</code></td><td><code>435</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;</code></td>
+</tr>
+<tr valign="top">
+<td><code>435</code></td><td><code>436</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>436</code></td><td><code>437</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>437</code></td><td><code>438</code></td><td><code>int&nbsp;GIDfile::Read()</code></td>
+</tr>
+<tr valign="top">
+<td><code>438</code></td><td><code>439</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>439</code></td><td><code>440</code></td><td><code>&nbsp;&nbsp;int&nbsp;tcnt;</code></td>
+</tr>
+<tr valign="top">
+<td><code>440</code></td><td><code>441</code></td><td><code>&nbsp;&nbsp;Section&nbsp;*s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>441</code></td><td><code>442</code></td><td><code></code></td>
+</tr>
+<tr valign="top">
+<td><code>442</code></td><td><code>443</code></td><td><code>&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>443</code></td><td><code>444</code></td><td><code>&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>444</code></td><td><code>445</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;=&nbsp;new&nbsp;icsv(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>445</code></td><td><code>446</code></td><td><code>&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>446</code></td><td><code>447</code></td><td><code>&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>447</code></td><td><code>448</code></td><td><code>&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>448</code></td><td><code>449</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>449</code></td><td><code>450</code></td><td><code>&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>450</code></td><td><code>451</code></td><td><code>&nbsp;&nbsp;while&nbsp;(!in-&gt;eof())</code></td>
+</tr>
+<tr valign="top">
+<td><code>451</code></td><td><code>452</code></td><td><code>&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>452</code></td><td><code>453</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;*in&nbsp;&gt;&gt;&nbsp;temp&nbsp;&gt;&gt;&nbsp;tcnt&nbsp;&gt;&gt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>453</code></td><td><code>454</code></td><td><code></code></td>
+</tr>
+<tr valign="top">
+<td><code>454</code></td><td><code>455</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>455</code></td><td><code>456</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>456</code></td><td><code>457</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;=&nbsp;new&nbsp;Section();</code></td>
+</tr>
+<tr valign="top">
+<td><code>457</code></td><td><code>458</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>458</code></td><td><code>459</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>459</code></td><td><code>460</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>460</code></td><td><code>461</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>461</code></td><td><code>462</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>462</code></td><td><code>463</code></td><td><code></code></td>
+</tr>
+<tr valign="top">
+<td><code>463</code></td><td><code>464</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(tcnt&nbsp;==&nbsp;0)&nbsp;continue;</code></td>
+</tr>
+<tr valign="top">
+<td><code>464</code></td><td><code>465</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;fpos&nbsp;=&nbsp;in-&gt;getpos();</code></td>
+</tr>
+<tr valign="top">
+<td><code>465</code></td><td><code>466</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;name&nbsp;=&nbsp;strdup(temp);</code></td>
+</tr>
+<tr valign="top">
+<td><code>466</code></td><td><code>467</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;count&nbsp;=&nbsp;tcnt;</code></td>
+</tr>
+<tr valign="top">
+<td><code>467</code></td><td><code>468</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i=0;&nbsp;i&lt;tcnt;&nbsp;i++)&nbsp;*in&nbsp;&gt;&gt;&nbsp;NewLn;</code></td>
+</tr>
+<tr valign="top">
+<td><code>468</code></td><td><code>469</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!AddSection(s))&nbsp;delete&nbsp;s;</code></td>
+</tr>
+<tr valign="top">
+<td><code>469</code></td><td><code>470</code></td><td><code>&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>470</code></td><td><code>471</code></td><td><code>&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>471</code></td><td><code>472</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>472</code></td><td><code>473</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>473</code></td><td><code>474</code></td><td><code>int&nbsp;GIDfile::Write()</code></td>
+</tr>
+<tr valign="top">
+<td><code>474</code></td><td><code>475</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>475</code></td><td><code>476</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>476</code></td><td><code>477</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>477</code></td><td><code>478</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out&nbsp;=&nbsp;new&nbsp;ocsv(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>478</code></td><td><code>479</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>479</code></td><td><code>480</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>480</code></td><td><code>481</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>481</code></td><td><code>482</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr-&gt;Write(out);</code></td>
+</tr>
+<tr valign="top">
+<td><code>482</code></td><td><code>483</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>483</code></td><td><code>484</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>484</code></td><td><code>485</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>485</code></td><td><code>486</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>486</code></td><td><code>487</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>487</code></td><td><code>488</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>488</code></td><td><code>489</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>489</code></td><td><code>490</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>490</code></td><td><code>491</code></td><td><code>}</code></td>
+</tr>
+<tr valign="top">
+<td><code>491</code></td><td><code>492</code></td><td><code>//------------------------------------------------------------------------------</code></td>
+</tr>
+<tr valign="top">
+<td><code>492</code></td><td><code>493</code></td><td><code>int&nbsp;GIDfile::WriteExcept(char&nbsp;*sectname)</code></td>
+</tr>
+<tr valign="top">
+<td><code>493</code></td><td><code>494</code></td><td><code>{</code></td>
+</tr>
+<tr valign="top">
+<td><code>494</code></td><td><code>495</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td>
+</tr>
+<tr valign="top">
+<td><code>495</code></td><td><code>496</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>496</code></td><td><code>497</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out&nbsp;=&nbsp;new&nbsp;ocsv(name);</code></td>
+</tr>
+<tr valign="top">
+<td><code>497</code></td><td><code>498</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;*curr&nbsp;=&nbsp;List;</code></td>
+</tr>
+<tr valign="top">
+<td><code>498</code></td><td><code>499</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(curr!=NULL)</code></td>
+</tr>
+<tr valign="top">
+<td><code>499</code></td><td><code>500</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>500</code></td><td><code></code></td><td><code><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(strcmp<font color="red">i</font>(sectname,curr-&gt;name)!=0)</s></code></td>
+</tr>
+<tr valign="top">
+<td><code></code></td><td><code>501</code></td><td><code><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(str<font color="red">i</font>cmp(sectname,curr-&gt;name)!=0)</i></code></td>
+</tr>
+<tr valign="top">
+<td><code>501</code></td><td><code>502</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr-&gt;Write(out);</code></td>
+</tr>
+<tr valign="top">
+<td><code>502</code></td><td><code>503</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr&nbsp;=&nbsp;curr-&gt;next;</code></td>
+</tr>
+<tr valign="top">
+<td><code>503</code></td><td><code>504</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>504</code></td><td><code>505</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</code></td>
+</tr>
+<tr valign="top">
+<td><code>505</code></td><td><code>506</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>506</code></td><td><code>507</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(...)</code></td>
+</tr>
+<tr valign="top">
+<td><code>507</code></td><td><code>508</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td>
+</tr>
+<tr valign="top">
+<td><code>508</code></td><td><code>509</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</code></td>
+</tr>
+<tr valign="top">
+<td><code>509</code></td><td><code>510</code></td><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td>
+</tr>
+<tr valign="top">
+<td><code>510</code></td><td><code>511</code></td><td><code>}</code></td>
+</tr>
+</table>
+</body></html>
