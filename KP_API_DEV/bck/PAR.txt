@@ -1,6 +1,0 @@
-Comment - ParName, PAR or PAD, reachback, Modelbased, Shared
-PAR for RRA,PAR,http://engineering.arm.gov,FALSE,TRUE
-Comment-'B',zonetype = 'zone' or'county',RecomIndex = 1(Evacuate) ,2(Restrict Access),3(Mitigate), 4(No action), 7(No Recommendation)',	ModelImpactTime = 12,	ModelTipTime = 23,ModelTailTime = 34,PALT Time 
-B,zone,1,12,23,23,34,http://www.amazon.com
-F,zone,2,23,23,23,21,http://www.fandango.com
-G,zone,2,23,23,23,21,http://www.google.com

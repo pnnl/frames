@@ -1,8 +1,0 @@
-Copyright 1994 - 2001 Battelle Memorial Institute.  All Rights Reserved.
-C       Include file for MEPAS RAPSCD code
-C       JGDroppo, Pacific Nortwest National Laboratory, Richland WA USA
-c
-c        COMMON /DRYD/Z0(16,6),SURR(16,6),RDS(7),RSG(7),AVD(4,6),
-c     &  gasres,gasscv
-        COMMON /DRYD/Z0(16,6),SURR(16,6),RDS(7),RSG(7),AVD(5,6),
-     &  gasres,gasscv

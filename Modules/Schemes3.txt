@@ -1,4 +1,0 @@
-Vadose
-Inputs: Vadose, Location, ChemFlux, RadFlux, WaterFlux, ChemPhysicalProperties, ChemPartitioning, ChemDiffusionCoefficient, ChemThermodynamics, ChemExposureFactors, ChemBCF, ChemSoiltoPlantTF, ChemEnvironmentalRates, ChemAirToPlantTF, ChemToxicity, RadPhysicalProperties, RadPartitioning, RadDiffusionCoefficient, RadThermodynamics, RadExposureFactors, RadDosimetry, RadBCF, RadFeedToAnimalTF, RadSoilToPlantTF, RadEnvironmentalRates, RadToxicity, 
-Outputs: Vadose, Location, ChemFlux, RadFlux, WaterFlux, 
-

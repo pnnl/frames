@@ -1,4 +1,0 @@
-PointName,ClassName
-Test1,PotentialSource_Test1
-Test2,PotentialSource_Test1
-Test2,SensorFindings_Test1

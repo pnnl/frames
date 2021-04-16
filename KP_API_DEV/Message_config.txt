@@ -1,7 +1,0 @@
-C:\KP_API_DEV\Addpoint.txt
-C:\KP_API_DEV\Deletepoint.txt
-C:\KP_API_DEV\Addpoint.txt
-C:\KP_API_DEV\Deletepoint.txt
-C:\KP_API_DEV\Addpoint.txt
-C:\KP_API_DEV\Deletepoint.txt
-

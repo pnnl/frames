@@ -1,2 +1,0 @@
-OPTLINK @EXPOSN.LNK;
-

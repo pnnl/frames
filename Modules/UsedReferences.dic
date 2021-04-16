@@ -1,7 +1,0 @@
-Variable Count,Description,Name,Privilege,Version,Updated,Template
-4,User defined references,UsedReferences,1,0,0,
-Dictionary Name,Dictionary Description,Dimension,DataType,PrimaryKey,Scalar,Minimum,Maximum,Measure,Unit,Stochastic,Preposition,Index 1,Index 2,Index 3,Index 4
-dataset,Which dataset variable belongs in,1,STRING,FALSE,FALSE,0,0,,,FALSE,
-indices,Which indices references belong to,3,STRING,FALSE,FALSE,0,0,,,FALSE,,UsedReferences.dataset,UsedReferences.variable
-refid,The name or ID of the reference found in the references dataset,4,STRING,FALSE,FALSE,0,0,,,FALSE,,UsedReferences.dataset,UsedReferences.variable,UsedReferences.indices
-variable,Which variable indices belong to,2,STRING,FALSE,FALSE,0,0,,,FALSE,,UsedReferences.dataset

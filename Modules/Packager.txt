@@ -1,7 +1,0 @@
-import TestPackager.*;
-if (bsh.args.length==2)
-Packager.Package(bsh.args[0],bsh.args[1],null,null);
-if (bsh.args.length==3)
-Packager.Package(bsh.args[0],bsh.args[1],bsh.args[2],null);
-if (bsh.args.length==4)
-Packager.Package(bsh.args[0],bsh.args[1],bsh.args[2],bsh.args[3]);

@@ -1,6 +1,0 @@
-ValidFemisUserName,PointName,ClassName,SubclassName,Notes,AttributeName1,AttrValue1,AttrName2,AttrValue2,AttrName3,AttrValue3,AttrName4,AttrValue4,AttrName5,AttrValue5,Lat,Long 
-chitra,Test1,PotentialSource_Test1,Known,http://www.arm.gov,,,,,,,,,,,46.5667,-119.456
-chitra,Test2,PotentialSource_Test1,Estimated,http://www.google.com,,,,,,,,,,,45.998,-119.499
-chitra,Test3,SensorFindings_Test1,AirSensors,http://www.google.com,,,,,,,,,,,45.990,-119.599
-mitch,Test4,PotentialSource_Test1,Known,,Chemical,Test,Concentration,Test,ConcentUnits,Test,ExpReleaseTime,Test,,,45.992,-119.423
-mitch,Test5,PotentialSource_Test1,Estimated,http://www.arm.gov,Chemical,Test,Concentration,Test,ConcentUnits,Test,ExpReleaseTime,Test,,,45.992,-119.423

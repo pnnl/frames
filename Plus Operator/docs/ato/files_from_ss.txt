@@ -1,9 +1,0 @@
-/frames/frames dll
-  atoClass.h
-  atoClass.cpp
-/frames/common files
-  csv.h
-  csv.cpp
-/GIS Aware/PrePre Aquifer
-  gid.h
-  gid.cpp
