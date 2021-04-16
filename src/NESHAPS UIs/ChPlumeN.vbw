@@ -1,9 +1,0 @@
-frmInpChPlm = 0, 0, 0, 0, C, 66, 87, 770, 801, C
-Loading = 0, 0, 0, 0, C, 110, 145, 814, 859, C
-Reference = 0, 0, 0, 0, C, 132, 174, 836, 888, C
-FileUtil = 0, 0, 0, 0, C
-CSV_IO = 0, 0, 0, 0, C
-PARM_IO = 0, 0, 0, 0, C
-CNVRT_IO = 0, 0, 0, 0, C
-Common = 0, 0, 0, 0, C
-DataTypes = 0, 0, 0, 0, C

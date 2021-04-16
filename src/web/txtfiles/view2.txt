@@ -1,9 +1,0 @@
-
-  <h2>FRAMES 1.3 Viewers</h2><p>
-
-FRAMES 1.3 has simplified the way viewers are used.  The viewer is no longer an icon that needs to be attached within the Conceptual Site Model (CSM).  Now, to view results, right click on the item menu for each icon and choose "View/Print Module Input."
-<p>
-Each viewer within FRAMES has at least two options: graphical and text.
-<p>
-FRAMES 1.3 has added five new Human Health Impact (HIF) viewers including a tabular viewer that sums risks/hazards for all exposure pathways, routes, and media for a starting point in time, location, constituent, age group, and target organ, and can be categorized by three sets of health metric: a) risk from carcinogenic chemicals, b) hazard from noncarcinogenic chemicals, and c) risk from radionuclides.
-

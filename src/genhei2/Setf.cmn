@@ -1,6 +1,0 @@
-C  Common to transfer integers into Function SETFAC
-C
-      COMMON /SETF/ KTYPE,INTAK,IPATH,OTYPE,RTYPE
-C
-      INTEGER KTYPE, INTAK, IPATH, OTYPE, RTYPE
-

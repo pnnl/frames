@@ -1,1 +1,0 @@
-copy /b header.txt+toolbar.txt+%1.txt+footer.txt ..\%1.html

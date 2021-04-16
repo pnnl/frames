@@ -1,7 +1,0 @@
-frmRunAPlume = 0, 0, 0, 0, C, 220, 290, 924, 1004, C
-Loading = 0, 0, 0, 0, C, 264, 348, 968, 1062, C
-JulianHour = 0, 0, 0, 0, C
-CSV_IO = 0, 0, 0, 0, C
-PARM_IO = 0, 0, 0, 0, C
-Common = 0, 0, 0, 0, C
-Shared = 0, 0, 0, 0, C

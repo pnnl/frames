@@ -1,3 +1,0 @@
-*     PNL batch flag
-      logical dbatch
-      common/dcalbat/dbatch
