@@ -1,0 +1,27 @@
+VBGROUP 5.0
+Project=BatchUtil\BatchUtil.vbp
+Project=Contaminant Selection\ContSel.vbp
+Project=Description Editor\EditDes.vbp
+Project=Dummy Module\Dummy.vbp
+Project=Frames IO DLL\CH2M_Frames.vbp
+Project=Frames UI\DoAll.vbp
+Project=Frames UI\Fui.vbp
+Project=Graphical Viewer\xlsChart.vbp
+Project=ImportDes\ImportDes.vbp
+Project=ImportGID\ImportGID.vbp
+Project=Known ATO\ATO.vbp
+Project=Known BBF\BBF.vbp
+Project=Known EPF\EPF.vbp
+Project=Known RIF\RIF.vbp
+Project=Known SCF_WFF_AFF_WCF\Known.vbp
+Project=Plus Operator\plusUI.vbp
+Project=Population Risk Viewer\PopView.vbp
+Project=RAGS Tables\RAGS.vbp
+Project=SCF Import\SCFImport.vbp
+Project=Sensitivity Module\SensMod.vbp
+Project=Sensitivity UI\SensUI.vbp
+Project=Sync UI\Sync.vbp
+Project=Text Viewer\View.vbp
+Project=WrapSpec\SpecsUI.vbp
+Project=TestLauncher\TestLaucher.vbp
+StartupProject=SensitivityViewer\SensView.vbp

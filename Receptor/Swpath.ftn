@@ -1,0 +1,69 @@
+!   MEPAS HAZ2: SWPATH.FTN             Version Date: 12-Aug-97
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK SWPATH                              *
+!                                                                            *
+!  Common block SWPATH CONTAINS SURFACE WATER TRANSPORT USAGE LOCATION       *
+!                      PARAMETERS.                                           *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    12-Aug-97  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!  KSDR(10)      INTEGER INDEX FOR SELECTION OF DRINKING WATER USAGE AT
+!                EACH SURFACE WATER USAGE LOCATION.
+!
+!  KSAQ(10)      INTEGER INDEX FOR SELECTION OF AQUATIC FOOD PRODUCTION AT
+!                EACH SURFACE WATER USAGE LOCATION.  KSAQ(I) GIVES THE AQUATIC
+!                FOOD PRODUCTION CLASS DESCRIBING USAGE LOCATION I.
+!
+!  KSIR(10)      INTEGER INDEX FOR SELECTION OF FARM PRODUCTION AT EACH
+!                SURFACE WATER USAGE LOCATION.  KSIR(I) GIVES THE FARM
+!                PRODUCTION CLASS DESCRIBING USAGE LOCATION I.
+!
+!  KSR(10)       INTEGER INDEX FOR SELECTION OF RECREATIONAL ACTIVITIES AT
+!                EACH SURFACE WATER USAGE LOCATION.  KSR(I) GIVES THE
+!                RECREATIONAL USAGE CLASS FOR LOCATION I.
+!
+!  POPSW(17)     NUMBER OF PEOPLE EXPOSED TO EACH SW EXPOSURE PATHWAY
+!
+!  TRANSW(10)    TRANSIT TIME FROM RELEASE TO USAGE LOCATION, DAYS
+!
+!  SWSIF(3,17,10) Summary Intake Factors for surface water pathway
+!
+!  DSWBW(10)     Body weight for people at each usage location
+!
+!  DSWED(10)     Exposure duration for people at each usage location
+!==== Modification History ===================================================
+!
+!   Date      Who  Modification Description
+!  ---------  ---  ------------------------------------------------------
+!  26-Aug-92  DLS  Add DSWBW, DSWED, and DSWAT to common block
+!  16-Dec-93  DLS  Added SWSIF and deleted DSWBW, DSWED, and DSWAT
+!  20-Apr-94  DLS  Re-added DSWBW and DSWED
+!  12-Aug-97  DLS  Added population POPSW array
+!==== COMMON Block Definition ================================================
+!
+      COMMON/SWPATH/KSDR, KSAQ, KSIR, KSR, SWSIF(3,18), DSWBW, DSWED, POPSW(18)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

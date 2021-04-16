@@ -1,0 +1,123 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>2.4 Emission Rate Computation</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><center><b><u><font size="3">2.4 EMISSION RATE COMPUTATION</b></u></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Once the various emission factors for particle suspension have been determined,
+the emission rates for respirable particles can be calculated. For wind
+erosion, the emission rate is calculated from the relationship
+
+<br>
+
+<br><img SRC="Image18.gif" BORDER=0 height=20 width=117>
+<p align="center">(8)</p>
+
+<br>where&nbsp;&nbsp;&nbsp;&nbsp; R10 = emission rate for wind erosion (g/s)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+area = area of source contamination (m<sup>2</sup>).
+
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A climatological suspension factor, used in Cowherd et al.'s (1985) original
+formulation, corrected the dispersion values in their workbook for the
+fraction of suspension time. That factor is not needed in the MEPAS implementation
+that computes site-specific dispersion values.
+
+<br>
+
+<br>For mechanical suspension of particles from
+vehicle traffic on an unpaved contaminated surfaces, the emission rate
+is computed from
+<br>
+<br><img SRC="Image19.gif" BORDER=0 height=24 width=192>
+<p align="center">(9)</p>
+
+<br>where R10 = emission rate caused by traffic
+(g/s)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+L = distance of travel over contaminated surface (km)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+T = average number of vehicles traveling over the contaminated surface per day (number/day).
+
+<br>
+
+<br>For a paved road, the assumption is made that 1% of the road is covered with respirable material.
+
+<br>
+
+<br>&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The total emission rate is the sum of the wind-erosion and mechanical-
+disturbance emission rates. The total emission rate is used as input to
+the atmospheric dispersion, transport, and deposition model.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Subsequently, the airborne and surface pollutant concentrations resulting
+from the suspension of a specific surface contaminant, <font face="Symbol">q</font>,
+are computed using the following equations:
+<br>&nbsp;
+
+<br><img SRC="Image20.gif" BORDER=0 height=22 width=65>
+<p align="center">(10)</p>
+<br>and
+<p align="center">(11)</p>
+
+<br>S<sub><font face="Symbol">q</font></sub>=<font face="Symbol">
+aS</font><sub>s</sub>
+
+<br>
+
+<br>where&nbsp;&nbsp; C<sub><font face="Symbol">q</font></sub>
+= airborne contaminant concentration (g/m<sup>3</sup>)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C<sub>s</sub> = airborne soil concentration (g/m<sup>3</sup>)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Symbol">a</font> = mass fraction of contaminant in the suspended surface soil (g/g)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S<sub><font face="Symbol">q</font></sub> = surface concentration of deposited contaminant (g/m<sup>2</sup>)
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S<sub>s</sub> = surface concentration of deposited soil material (g/m<sup>2</sup>).
+
+
+
+
+</font>
+</body>
+</html>

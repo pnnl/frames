@@ -1,0 +1,150 @@
+<html>
+ <head>
+  <title>flow</title>
+  <style type="text/css">
+   pre
+   {
+     color: sienna;
+     background: #eeeeee;
+     margin-left: 3em;
+     margin-right: 3em;
+     border: 1px solid;
+     font: sans-serif;
+     border-color: #aaaaaa;
+   }
+  </style>
+ </head>
+ <body>
+<h4>Modifying interpolation algorithms</h4>
+<h4>How different grid types and spatial types are handled</h4>
+<p>
+An input grid format is dependent on three things:<br/><br/>
+<li>Release type.  This can be either "acute" or "chronic".</li>
+<li>Co-ordinate grid type.  This can be either "polar" or "cartesian".</li>
+<li>Spatial type.  This can be either "grid" or "points"</li>
+</p>
+<p>
+ATOs with different release types are separated by FRAMES because the
+plus operator has an acute ato plus and a chronic ato plus.  The plus
+code still performs checks to make sure that the release types are the
+same before adding them together.
+</p>
+<p>
+<h4><a name="linear_input">Linear input</a></h4>
+The ATO code knows only how to merge grids.  Therefore if the input is
+"points", ATO plus converts the points into a grid format.  First, the
+grid dimension is determined by taking the square root of the number
+of points, lets call this n.  Therefore the grid will be a n by n
+grid.  Second, the outer bounds of the points are determined.  The
+step along the x axis will be (maxX - minX) / n.  The step along the y
+axis will be (maxY - minY) / n.  Next, the points just input will be
+aligned to this grid.  See <a href="#interpolate_point">below for
+explanation of how it is aligned.
+</p>
+<h4><a name="interpolate_point">Interpolating a point on a
+grid</a></h4>
+Rather than taking a point and aligning it to a grid, the grid
+traverses each (x,y) combination, filling in interpolated values as it
+goes.  A 3-point inverse squared algorithm is used.  Whenever a grid
+needs to interpolate point (x,y), it finds the three nearest points,
+from a source, to it's point (x,y).  This source can be a linear
+input, or another grid. If one of the three nearest points is 0 units
+away, then that means the source point matches the (x,y) coordinate,
+and there is no need to interpolate.  Otherwise, each distance is
+squared and inverted, and called a weight. This weight is multiplied
+by the value at the source point, and called a weightValue.  A running
+total of weight and weight values is stored in totalWeight, and
+totalWeightValues.  The value at point (x,y) can then be determined by
+dividing the weight out of the total weight values, like such:
+value(x,y) = totalWeightValues/totalWeight.
+<h4>Internal grid format</h4>
+<p>
+ The default type of grid output, and internal storage is cartesian.
+ Because of this, any polar grids input will be treated as linear
+ input, and the polar grid will be converted to a cartesian grid.
+ This makes merging grids much easier as there is only one type of
+ grid to deal with.
+</p>
+<h4>Grids may become uniform and/or switch types</h4>
+<p>
+ Unfortunatly, using the internal grid format causes grids to become
+ uniform, and obviously, loses the old form of the grid.  In fact, the
+ only way to keep the form of a grid, is to make sure that all ATO
+ inputs to the plus operator are cartesian grid, and contain the same
+ form (ie exact x and y axis values).  In that case, they will never
+ have to be converted from polar, or interpolated to match some other
+ grids form so that they can be added.  In the most likely case that
+ this is still undesired (to always input cartesian grid), the ATO
+ plus code is set up extend functionality to maintain a grid form.  It
+ is also easily possible to change the internal grid format to polar.
+ However both these methods require developers to re-compile and
+ redistribute the ATO plus module.
+</p>
+<h4>Possible data loss</h4>
+<p>
+  Another reason all input is converted on input, is to avoid as much
+  interpolation as possible, because it causes data precision loss.
+</p>
+<h4>Interpolating time periods</h4>
+<p>
+ Interpolating time periods uses simple linear interpolation.  Lets
+ call the target time period 'z'.  z will be in between two other time
+ periods, 'a' and 'b'.  First, a and b must make sure that their grids
+ are for the same flux, have the same name, and the same moist type.
+ If not, then the grids are simply appended to z.  If they do match,
+ but their forms or the co-ordinate type do not (ie one polar, one
+ cartesian), then grid b is converted to match grid a's format.  Both
+ grids are then traversed simultaneously.  Using linear interpolation,
+ the x1 would be the time at a, x2 would be the time at b, y1 would be
+ the value at grid a (x,y), y2 would be the value at grid b (x,y) and
+ finally the target x would be the time at z.  The result would be the
+ value at grid z (x,y).
+</p>
+<h4>Adding flux types</h4>
+<p>
+ When two datasets are added/merged, it is possible they have the same
+ flux types.  These flux types may not have the same name, but the
+ same property.  In either case they are merged.  By saying this, I
+ mean that the ATO code says it's ok for grid with flux name a to
+ merge with grid with flux name b, because they hold the same
+ properties.  After merging, and writing back to file, the flux name
+ will not be preserved (because of automatic naming).
+</p>
+<p>
+ The only way current flux types will be merged is if they have the
+ exact same properties, ie density and size.  One possible solution
+ was to average the flux radius and density if the radii were within
+ 10% of each other.  But, say there were three flux types: a, b, and
+ c.  a has radius 22.5, b has radius 24, and c has radius 26.  both a
+ and b are within 10% of each other, and b and c are within 10% of
+ each other.  If you average a and b, the result will <em>not</em> be within
+ 10% of c.  But if you average b and c, the result <em>will</em> be within 10%
+ of a, which will require another average, so, there are two
+ possible outcomes:
+<pre>
+ case 1:
+     merge(a, b) = d  (with new radius of 23.25)
+     d not within 10% of c, so:
+    result flux types:
+     d (with radius of 23.25)
+     c (with radius of 26)
+ case 2:
+     merge(c, b) = d (with new radius of 25)
+     merge(d, a) = e (with new radius of 23.75)
+    result flux types:
+     e (with radius of 23.75)
+</pre>
+Since this is just a simple case with only a few flux types from a few
+ datasets, there are only a couple of variable results.  But with, say
+ 10 datasets, each having at least 5 flux types with variable
+ differences between radiuses, there could be many more possible
+ outcomes, some which might merge all the flux types to one flux type.
+</p>
+<h4>Assumptions I've made</h4>
+<p>
+  time periods are ordered, smallest to largest<br/>
+  time periods are not checked for negative values<br/>
+  grid headers are ordered, smallest to largest<br/>
+</p>
+ </body>
+</html>

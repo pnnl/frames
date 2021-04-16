@@ -1,0 +1,19 @@
+C++++ Start insert PARAMS ++++++++++++++++++++++++++++++++++++++++++++++
+C  History: Paul W. Eslinger : 01 Jul 1992
+C  Parameters:
+C    MAXN   : Maximum number of samples which can be generated
+C    MAXP   : Maximum number of stochastic variables which can be used
+C    MAXPTL : Maximum number of variables (stochastic and constant)
+C             which can be used
+C    MAXTBL : Maximum number of pairs of values that can be entered
+C             in defining all tabular statistical distributions
+C    MXPP   : Length of vector storage for symmetric matrices
+C
+      PARAMETER ( MAXN   = 500 )
+      PARAMETER ( MAXP   =  70 )
+C      PARAMETER ( MAXPTL = MAXP+40 )
+      PARAMETER ( MAXPTL = MAXP+0 )
+      PARAMETER ( MAXTBL =  500 )
+      PARAMETER ( MXPP   = MAXP*(MAXP+1)/2 )
+C
+C++++ End Insert Deck PARAMS +++++++++++++++++++++++++++++++++++++++++++

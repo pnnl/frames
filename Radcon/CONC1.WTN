@@ -1,0 +1,26 @@
+C     MEPAS RADCON: CONC1.FTN             VERSION DATE: 02-20-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: CONC1.FTN 
+C
+C     Formally called as COMMON/CONC1/in each subroutine, it is now an 
+C     INCLUDE 'CONC1.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains contaminant concentration on the sediment.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/20/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, LEACHV, INITIN, SOURCE, PNTTIM
+C
+C=== Significant Parameters ==================================================
+C
+C    CP - contaminant concentration on the sediment
+C
+C*****************************************************************************
+C
+      REAL*4    CP
+C
+      COMMON/CONC1/CP

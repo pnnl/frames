@@ -1,0 +1,33 @@
+C     MEPAS RADCON: INDEX2.FTN            VERSION DATE: 02-20-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: INDEX2.FTN 
+C
+C     Formally called as COMMON/INDEX2/in each subroutine, it is now an 
+C     INCLUDE 'INDEX1.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains control parameters for contaminant relases.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/20/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, CHECKS, CONC, CONTAM, DUMMYV, FUNCTION, INITIN,
+C                   INPUTM, LEACHV, LIMITS, MEASUR, PNTTIM, SOURCE, SIMPS, 
+C                   SSGW, SSWAP
+C
+C=== Significant Parameters ==================================================
+C
+C    IDDSW  - index for direct discharge
+C    ICONC  - index for the type of contaminant concentration
+C    IDECAY - index for the decay at source and/or environment
+C    IHW    - index for the waste in the staturated zone
+C    IUNIT  - index for the units being used for the water concentration
+C
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      INTEGER*4    IDDSW,ICONC(MAXCON),IDECAY,IHW,IUNIT
+C
+      COMMON/INDEX2/IDDSW,ICONC,IDECAY,IHW,IUNIT

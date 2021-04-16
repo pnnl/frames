@@ -1,0 +1,45 @@
+"mf","Version 2.1"
+"Viewer:Viewer:vwr","EPA Text View","","view.exe epa","vwr.ico"
+"
+MODULE VERSION
+  2.10.2 Compiled February 2017
+
+MODULE DESCRIPTION
+This module will display, in ASCI formated text, the contents of a section in an EPA file specified by the commandline passed from FRAMES to this viewer.
+
+MODULE REFERENCES
+Other related sites:
+  https://www.pnnl.gov/projects/earth
+
+VALID CONNECTIONS
+Valid Input Reads
+     0 to 1 EPA Compliance File
+  
+Valid Output Writes
+     <none>
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        Bruce.Napier@pnnl.gov
+URL Address:          http://www.usnrc-ramp.com
+"
+3,"Reads"
+1,"epa","Air Dose Compliance File",1,1
+1,"epa","Biota Dose Compliance File",1,1
+1,"epa","Surface Water Dose Compliance File",1,1
+0,"Writes"
+0,"Variables"

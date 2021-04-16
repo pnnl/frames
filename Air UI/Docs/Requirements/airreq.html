@@ -1,0 +1,342 @@
+<html>
+<head>
+<Title>Requirements for the MEPAS Saturated Zone (Aquifer) Transport Module</Title>
+</head>
+<body alink="#336666"  vlink="#A8A8A8" link="#0000ff">
+
+
+
+<br><font color="#000000" face="verdana" size="4">PNNL-SA-32278</font>
+<br><font face="verdana" size="2">Written by:  John W. Buck
+<br>
+<br>Prepared for the U.S. Department of Energy
+<br>
+<br>Pacific Northwest National Laboratory
+<br>Operated by the U.S. Department of Energy
+<br>By Battelle
+</font>
+<br>
+<br>
+<br>
+<br><font color="#000000" face="verdana" size="3"><center><b>Requirements for the MEPAS Atmospheric Transport Module</b></center></font>
+<br>
+<font color="#000000" face="verdana" size="2">
+<hr width="100%" align="center">
+<B>1.0 Introduction</B>
+<P>This document describes the requirements for the Multimedia Environmental
+Pollutant Assessment System (MEPAS) Atmospheric Transport Module. This
+module is specifically designed as an object for inclusion in the Framework
+for Risk Analysis in Multimedia Environmental Systems (FRAMES), which is
+a software platform that allows for the linking of various environmental
+modules into complete emission, transport, and exposure assessment systems
+(Whelan et al. 1997). These requirements can be used by software engineers
+and testers to ensure that this module functions properly.  Test cases will be developed from the test plan to ensure that the product meets the needs of the clients and to establish a baseline version of the module.
+
+<P><B>2.0 Purpose of the MEPAS Atmospheric Transport Module</B>
+<P>The purpose of the MEPAS Atmospheric Transport Module is to simulate
+the transport, dispersion, and deposition of chemical and radionuclide
+constituents that become airborne. Input to the module consists of 1) time-varying,
+contaminant mass fluxes to the atmosphere, 2) physical characteristics
+of the source area, 3) average annual site/regional climatological dispersion
+data, 4) site/regional topographical data, and 5) constituent properties.
+The emission information originates from a source term module and constituent
+properties originate from the Global Input Data (GID) file. All other inputs
+are entered through a Module User Interface (MUI). Output consists of regional
+patterns of time-varying, contaminant air concentrations (on an annual
+basis) near the earth's surface, and time-varying, deposition rates (on
+an annual basis) to earth's surface. The outputs may be endpoints for an
+analysis or be used as input to other modules.
+
+<P><B>3.0 Summary of Requirements for the MEPAS Atmospheric Transport Module</B>
+<P>This section provides an overall summary of the requirements for the
+MEPAS Atmospheric Transport Module and associated pre and post processors,
+along with the specific requirements for the MUI. Detailed input, output,
+and scientific requirements are described in the sections that follow.
+
+<P>The MEPAS Atmospheric Transport Module will
+
+<OL>
+<LI>input data contained in the FRAMES Atmospheric Flux File (AFF) and Global
+Input Data (GID) File as specified by the FRAMES data specifications (Whelan
+et al. 1997)</LI>
+
+<LI>be linked to a MUI that operates in Windows 95
+and has the look and feel of Windows.</LI>
+
+<LI>conduct atmospheric transport, dispersion, and deposition calculations
+for radionuclides and chemicals</LI>
+
+<LI>handle a minimum of 25 constituents per scenario</LI>
+
+<LI>calculate ground level, time-varying, air concentrations and deposition
+rates (wet and dry) by distance and direction using a joint frequency distribution
+input by the user for an area or point source</LI>
+
+<LI>output ground level, annual average, time-varying, air concentrations and deposition rates
+(wet and dry) by distance and direction into an Atmospheric Transport Output
+(ATO) file that is specified by the FRAMES data specifications (Whelan
+et al. 1997).</LI>
+</OL>
+
+<B>4.0 Input Requirements for the MEPAS Atmospheric Transport Module</B>
+
+<P>The MEPAS Atmospheric Transport Module has three sources of input to
+conduct calculations:
+
+<UL>
+<LI>the AFF, which provides source characteristics and time-varying contaminant
+emission rates</LI>
+
+<LI>the GID file, which provides contaminant properties</LI>
+
+<LI>the MUI, which provides climatology, joint frequency distribution, and
+topographical data.</LI>
+</UL>
+
+The specifications for the GID and AFF files are described in Whelan et
+al. (1997).<I></I>
+
+<P><I>AFF Inputs. </I>The AFF is a FRAMES data specification file that
+is defined as output from source modules and input to air modules. The
+AFF provides the MEPAS Atmospheric Transport Module with
+
+<OL>
+<LI>area or point source type</LI>
+
+<LI>area of source or point exit</LI>
+
+<LI>height of point source</LI>
+
+<LI>building height for point source</LI>
+
+<LI>annual average air temperature for point source</LI>
+
+<LI>exit velocity of point source</LI>
+
+<LI>exit plume temperature for point source</LI>
+
+<LI>number of flux types (particle size types)</LI>
+
+<LI>time-varying, contaminant emission rates by particle size type.</LI>
+</OL>
+
+<I>GID File Inputs. </I>The GID file is a FRAMES data specification file
+that contains all to contaminant property data for the entire set of modules
+linked under FRAMES. The GID file provides the MEPAS Atmospheric Transport
+Module with
+
+<OL>
+<LI>contaminant name and CAS ID and progeny chain</LI>
+
+<LI>contaminant deposition type (Gas1, Particle 1, Particle 2, Particle 3)</LI>
+
+<LI>contaminant first order decay/degradation half-life.</LI>
+</OL>
+
+<I>MUI Inputs. </I>The MEPAS Atmospheric Transport Module MUI is divided
+into three main data groups: 1) climatology, 2) joint frequency distribution,
+and 3) topographical data. The MUI has the following general requirements:
+
+<OL>
+<LI>The MUI will operate in Windows 95 and will have a standard Windows look
+and feel.</LI>
+
+<LI>The MUI will have on-line electronic help in HTML format and provide users
+with easy-to-understand description of all input parameters required by
+the MUI, as well as an About tab that provides the user with title, version
+number, and brief description of the model.</LI>
+
+<LI>The MUI will provide users with different units for the appropriate input
+parameters.</LI>
+
+<LI>The MUI will provide a reference field for each input parameter in the
+MUI.</LI>
+</OL>
+
+The user needs to input the following data into the MUI (some are option
+depending on user selections):
+
+<P><B>Climatology Data</B>
+
+<OL>
+<LI>reference weather station name</LI>
+
+<LI>morning mixing height</LI>
+
+<LI>afternoon mixing height</LI>
+
+<LI>annual precipitation</LI>
+
+<LI>number of precipitation days per year</LI>
+
+<LI>number of thunderstorms per year</LI>
+</OL>
+
+<B>Joint Frequency Distribution Data - </B>General Information
+
+<OL>
+<LI>data station name</LI>
+
+<LI>anemometer height</LI>
+
+<LI>average surface roughness</LI>
+
+<LI>wind speed mid points</LI>
+
+<LI>joint frequency calms for A-G stability classes</LI>
+</OL>
+
+<B>Joint Frequency Distribution Data - </B>Occurrences of wind speed, wind
+direction by stability class (A-G)
+
+<OL>
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class A</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class B</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class C</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class D</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class E</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class F</LI>
+
+<LI>#, %, or frequency of occurrence by 16 direction and 6 wind speed for stability
+class G</LI>
+</OL>
+
+<B>Topographical Data</B>
+
+<OL>
+<LI>use regional topographical data option</LI>
+
+<LI>use of wind channeling model option</LI>
+
+<LI>elevation of release</LI>
+
+<LI>regional surface roughness</LI>
+
+<LI>terrain height data (optional based on bullet 1 data)</LI>
+
+<LI>wind channeling data (optional based on bullet 2 data)</LI>
+</OL>
+
+<B>5.0 Output Requirements for the MEPAS Atmospheric Transport Module</B>
+
+<P>The MEPAS Atmospheric Transport Module is required to output its results
+to an Atmospheric Transport Output (ATO) file. The ATO is a FRAMES Air
+Transport Module output file that is specified by the FRAMES data specifications
+(Whelan et al. 1997) and may be used as input to other modules. This module
+is also required to produce a listing file (*.ALS file) that documents
+the data actually read in by the model and provides a summary of intermediate
+calculation and simulation results.
+
+<P>The MEPAS Atmospheric Transport Module outputs the following data to
+the ATO file:
+
+<OL>
+<LI>output type (acute or chronic)</LI>
+
+<LI>coordinate system type (polar or Cartesian)</LI>
+
+<LI>spatial and temporal matrix defining time series of the regional patterns
+of contaminant air concentrations by particle size type</LI>
+
+<LI>spatial and temporal matrix defining time series of the regional patterns
+of deposition rates by particle size type.</LI>
+</OL>
+
+Other output files that the MEPAS atmospheric transport module is required
+to produce are the ALS and ERR File:
+
+<OL>
+<LI>Create a listing file (*.ALS) using an ASCII format that echoes the input
+data and provides intermediate calculations and summary results.</LI>
+
+<LI>Create an Error (*.ERR) File using an ASCII format at the start of the
+module execution. If no error occurs during simulation, this file is deleted.
+If an error does occur during simulation execution, this file will contain
+information on the error that occurred.</LI>
+</OL>
+
+<B>6.0 Scientific Requirements for the Atmospheric Transport Module</B>
+
+<P>Mathematical formulations and assumptions for the MEPAS Atmospheric
+Transport Module are contained in Droppo and Buck (1996). Some of main
+computational functions of the model are
+
+<UL>
+<LI>heat-momentum plume rise formulation</LI>
+
+<LI>building wake dispersion formulation.</LI>
+
+<LI>Gaussian sector-average model for annual/seasonal atmospheric transport
+and dispersion</LI>
+
+<LI>combined surface layer similarity theory model and empirical wind-tunnel
+model for dry deposition</LI>
+
+<LI>in-plume scavenging model for wet deposition</LI>
+
+<LI>surface layer similarity theory model for wind speed adjustments with height.</LI>
+</UL>
+
+The MEPAS Atmospheric Transport Module will have the following scientific
+requirements:
+
+<OL>
+<LI>obey the Law of Mass Conservation</LI>
+
+<LI>simulate both chemicals and radionuclides</LI>
+
+<LI>simulate both particulate and gaseous constituents</LI>
+
+<LI>calculate ground level contaminant air concentrations and deposition rates
+by distance and direction using a sector-averaged Gaussian approach for
+both area and point sources</LI>
+
+<LI>calculate initial plume rise (both momentum- and buoyancy-dominated) and
+building downwash for point sources</LI>
+
+<LI>consider both wet and dry deposition</LI>
+
+<LI>account for near-source local channel (drainage) flow for sites in complex
+terrain</LI>
+
+<LI>account for a plume intersection on local terrain heights for elevated
+plumes for point sources</LI>
+
+<LI>account for variation in concentration and deposition resulting from varying
+surface roughness</LI>
+
+<LI>adjust wind speeds for changes in height between the measurement and release
+site</LI>
+</OL>
+
+The mathematical formulations documented in Droppo and Buck (1996) provide
+more detail on the requirements and design of the MEPAS Atmospheric Transport
+Module.
+
+<P><B>7.0 References</B>
+
+<P>Droppo, J. G. and J. W. Buck. 1997. <I>The Multimedia Environmental
+Pollutant Assessment System (MEPAS): Atmospheric Pathway Formulations</I>.
+PNNL-11090, Pacific Northwest National Laboratory, Richland, Washington.
+
+<P>Whelan G., K. J. Castleton, J. W. Buck, G. M. Gelston, B. L. Hoopes,
+M. A. Pelton, D. L. Strenge, and R. N. Kickert. 1997. <I>Concepts of a
+Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES)</I>.
+PNNL-11748, Pacific Northwest National Laboratory, Richland, Washington.</font>
+
+</body>
+</html>
+
+
+

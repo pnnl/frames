@@ -1,0 +1,26 @@
+C     MEPAS RADCON: INDEX7.FTN            VERSION DATE: 02-20-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: INDEX7.FTN 
+C
+C     Formally called as COMMON/INDEX7/in each subroutine, it is now an 
+C     INCLUDE 'INDEX7.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains values for decay-products.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/20/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, CONTAM, INPUTM, INTERP, MEASUR, SSGW
+C
+C=== Significant Parameters ==================================================
+C
+C    CDA - concentration for decay-products
+C
+C*****************************************************************************
+C
+      REAL*4     CDA(12),CDB(12)
+C
+      COMMON/INDEX7/CDA,CDB

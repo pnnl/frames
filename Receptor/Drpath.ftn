@@ -1,0 +1,53 @@
+!   MEPAS HAZ2: DRPATH.FTN             Version Date: 20-Dec-1993
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK DRPATH                              *
+!                                                                            *
+!  Common block DRPATH CONTAINS PARAMETERS FOR THE MEASURED DIRECT RADIATION *
+!                      EXPOSURE PATHWAY - 7                                  *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    22-Dec-93 DLS                                           *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!   POPDR(30)   Real    POPULATION EXPOSED TO MEASURED DIRECT RADIATION AT EACH
+!                       LOCAL AREA
+!
+!   DRATE(30)   Real    MEASURED DOSE RATE AT EACH LOCAL AREA
+!
+!   DRED(30)    Real    Exposure duration for each usage location (y)
+!   TEDIRD      Real    Exposure time for external exposure (hours per day)
+!   DRSIF(30)   Real    Summary Intake Factors for each location
+!   DRHALF(30)  Real    Rate constant for dose rate at each location (d-1)
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!    1-Sept-92     DLS  Added DRED to block
+!    25-Nov-92     DLS  Added TEDIRD to block
+!    20-Dec-93     DLS  Added DRSIF
+!==== COMMON Block Definition ================================================
+!
+      COMMON/DRPATH/POPDR(30),DRATE(30),TEDIRD,DRSIF(30),DRHALF(30),DRED(30)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

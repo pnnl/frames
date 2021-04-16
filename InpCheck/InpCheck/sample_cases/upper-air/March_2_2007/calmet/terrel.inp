@@ -1,0 +1,33 @@
+./terrel/TERbwic.lst
+./terrel/TERbwic.grd
+./terrel/TERbwic.dat
+./terrel/TERbwic.sav
+n
+nofile.sav
+n 0
+0.1
+nofile
+nofile
+UTM
+CORNER
+CALMET
+0
+0
+0
+0
+0
+4
+/apps/bwic/models/calmet/W100N40.DEM
+/apps/bwic/models/calmet/W100N90.DEM
+/apps/bwic/models/calmet/W140N40.DEM
+/apps/bwic/models/calmet/W140N90.DEM
+0
+0
+0
+75
+376.000000 4594.000000 16
+100 100 1.000000
+N
+0 0
+30 60
+NORMAL

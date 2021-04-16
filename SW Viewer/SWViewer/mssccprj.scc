@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[SWViewer.dsp]
+SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
+SCC_Project_Name = "$/GENII/SW Viewer/SWViewer", BCYAAAAA

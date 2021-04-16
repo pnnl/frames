@@ -1,0 +1,42 @@
+C     MEPAS RADCON: INDEX8.FTN            VERSION DATE: 08-31-1994
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: INDEX8.FTN 
+C
+C     Formally called as COMMON/INDEX8/in each subroutine, it is now an 
+C     INCLUDE 'INDEX8.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains status and flux values.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     08/31/94 - JPM
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, COMPAR, INITIN, INPUTM, MULREC, ORIGIN, SSGW
+C                   MAXTABLE
+C
+C=== Significant Parameters ==================================================
+C
+C    CONMAX - maximum concentration check
+C    FLUXMX - maximum flux
+C    ISTEDY - flag for steady-state
+C    ISSTAT - status flag
+C    ISTAT  - status flag
+C    MFLG   - status flag
+C    IMEAS  - indicator flag for the measured footnote in MAXTABLE
+C    IPEAK  - indicator flag for the peak footnote in MAXTABLE
+C    ISS    - indicator flag for the steady state footnote in MAXTABLE
+C    ITRUNC - indicator flag for the truncated footnote in MAXTABLE
+C    IZERO  - indicator flag for the zero concentration footnote in MAXTABLE
+C
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      REAL*4     CONMAX,FLUXMX
+      REAL*4     TSTRT3(MAXCON)
+      INTEGER*4  ISTEDY(MAXCON),ISSTAT(MAXCON)
+      INTEGER*4  ISTAT,MFLG,IPEAK,ISS,ITRUNC,IMEAS,IZERO
+C
+      COMMON/INDEX8/CONMAX,FLUXMX,TSTRT3,ISTEDY,ISSTAT,ISTAT,MFLG,
+     +              IPEAK,ISS,ITRUNC,IMEAS,IZERO

@@ -1,0 +1,144 @@
+"mf","Version 2.1"
+"Fate & Transport:Air:air","MEPAS 5.0 Air Module","air.exe","MepAir.bat","air.ico"
+"
+MODULE VERSION
+  5.0 Compiled on 5/8/2001,  UI compiled on 6/28/2007
+
+MODULE DESCRIPTION
+The MEPAS air module estimates constituent air 
+concentrations and deposition rates using standard 
+Gaussian dispersion models.  By using local
+climatological and site characteristics data, this air 
+module accounts for local and regional influences. 
+A complex-terrain option can account for the influence 
+of local nocturnal wind channeling near the source.  
+Typically, this air module is used to calculate 
+long-term (i.e. annual or longer) regional constituent 
+air concentrations and deposition rates.  The module 
+has relatively short run times making it useful in 
+uncertainty and sensitivity studies, or in other cases 
+where model run time is an issue.
+
+Some Key Assumptions:   
+
+  Assumes sector-average straight-line Gaussian
+  transport from source.
+
+  Considers surface area releases.  Accounts for 
+  initial transverse and lateral area dilution effects 
+
+  Considers elevated stack/vent releases including 
+  plume rise and plume impingement on terrain
+
+  Uses climatological wind-stability frequency tables.
+
+  Computes plume depletion and surface deposition by
+  wet and dry deposition. Uses dry deposition similarity
+  model that allows removal rates to vary with 
+  meteorological, surface, and constituent properties.
+  Three particle size classes are considered.
+
+  Uses a limited generic precipitation-scavenging model.
+
+  Assumes no decay or chemical reactions during time of 
+  airborne transport.
+
+  Computes concentrations at distances of 100m or greater 
+  from source center.
+
+  Assumes that the particle sizes are 7.5um for particle 1,
+  3.0um for particle  2, and 0.3um for particle 3.  
+  This model DOES NOT currently read in different 
+  particle sizes.
+
+  The local channelling and complex terrain options for 
+  this model have been turned off for this version
+  because they have not been fully tested.
+
+MODULE REFERENCES
+A detailed description of the assumptions and theoretical 
+foundations can be found in the formulation document:
+
+    Droppo, JG and JW Buck. 1996. Multimedia Environmental 
+    Pollutant Assessment System (MEPAS): Atmospheric 
+    Pathway Formulations.
+
+Other related sites:
+  https://www.pnnl.gov/projects/earth/mepas
+  https://www.pnnl.gov/source-src
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 aff Air required as input
+
+Valid Output Writes
+     ato Polar Air
+     
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwset National Laboratory
+Contact Name:         Jim Droppo
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        james.droppo@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/mepas/mair/requirements.html
+"
+1,"Read"
+2,"con","",1,1,"aff","Air",1,1
+1,"Write"
+"ato","Polar Air"
+24,"Variables"
+"CVTFormat","Not Stochastic",,,,"Number format to use",0,STRING
+"AIRACLCDREF","Not Stochastic","","","","Reference weather station (AC-LCDREF)",0,STRING
+"AIRACMIXAM","Continuous","m","Min",50,"Max",900,"Morning mixing height (AC-MIXAM)",0,FLOAT
+"AIRACMIXPM","Continuous","m","Min",50,"Max",2600,"Afternoon mixing height (AC-MIXPM)",0,FLOAT
+"AIRACRAIN","Continuous","in","Min",0.1,"Max",130,"Annual precipitation (AC-RAIN)",0,FLOAT
+"AIRACPRENUM","Continuous","","Min",0,"Max",365,"Precipitation days per year (AC-PRENUM)",0,FLOAT
+"AIRACNUMTS","Continuous","","Min",1,"Max",150,"Thunderstorms per year (AC-NUMTS)",0,FLOAT
+"AIRAJSTATNM","Not Stochastic","","","","Data station (AJ-STATNM)",0,STRING
+"AIRAJANEMHT","Continuous","m","Min",0,"Max",999.9,"Anemonometer height (AJ-ANEMHT)",0,FLOAT
+"AIRAJRLEN","Continuous","cm","Min",0,"Max",999.9,"Average roughness length (AJ-RLEN)",0,FLOAT
+"AIRAJWINDS","Continuous","m/s","Min",0,"Max",99.9,"Wind speed midpoints (AJ-WINDS)",3,FLOAT
+"Variable","SiteName","Index1","","","","",""
+"Variable","airName","Index1","Index2","","","",""
+"Label","Point #","Index1","","","","",""
+"AIRAJCALMS","Continuous","number","Min",0,"","Wind joint frequency calms  (AJ-CALMS)",3,FLOAT
+"Variable","SiteName","Index1","","","","",""
+"Variable","airName","Index1","Index2","","","",""
+"Label","Calm #","Index1","","","","",""
+"AIRAJFDATA","Not Stochastic","","Min",0,"Max",1,"Joint frequency data point",5,LOGICAL
+"Variable","SiteName","Index1","","","","",""
+"Variable","airName","Index1","Index2","","","",""
+"Label","Class #","Index3","","","","",""
+"Label","Row #","Index4","","","","",""
+"Label","Col #","Index5","","","","",""
+"AIRARTOPTYP","Not Stochastic","","","","Use regional topographical data  (AR-TOPTYP)",0,LOGICAL
+"AIRARCHANL","Not Stochastic","","","","Use wind channel modeling  (AR-CHANL)",0,LOGICAL
+"AIRARTOPBAS","Continuous","m","Min",-50,"Max",8840,"Elevation of release unit (AR-TOPBAS)",0,FLOAT
+"AIRARTOPHTS","Continuous","m","Min",-50,"Max",8840,"Regional distribution of terrain heights  (AR-TOPHTS)",4,FLOAT
+"Variable","SiteName","Index1","","","","",""
+"Variable","airName","Index1","Index2","","","",""
+"Label","Row #","Index4","","","","",""
+"Label","Col #","Index5","","","","",""
+"AIRARREGSUR","Continuous","cm","Min",0,"Max",999.9,"Regional surface roughness lengths (AR-REGSUR)",4,FLOAT
+"Variable","SiteName","Index1","","","","",""
+"Variable","airName","Index1","Index2","","","",""
+"Label","Row #","Index4","","","","",""
+"Label","Col #","Index5","","","","",""
+"AIRARCLEN","Continuous","km","Min",1,"Max",30,"Length of channel  (AR-CLEN)",0,FLOAT
+"AIRARCSLOPE","Continuous","km","Min",-999.9,"Max",-0.001,"Slope of channel  (AR-CSLOPE)",0,FLOAT
+"AIRARCHGT","Continuous","km","Min",0.001,"Max",1,"Height of channel  (AR-CHGT)",0,FLOAT
+"AIRARCWIDTH","Continuous","km","Min",0.001,"Max",1,"Width of channel  (AR-CWIDTH)",0,FLOAT
+"AIRARCDIR","Not Stochastic","","","","Index for channel direction  (AR-CDIR)",0,INTEGER
+"CARELTYP","Not Stochastic","N/A","Min",7,"Max",7,"Release type",0,INTEGER

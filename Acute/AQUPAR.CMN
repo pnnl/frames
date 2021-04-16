@@ -1,0 +1,22 @@
+C------------------------------------ Version: 29-Jul-97 --------------------
+C
+C     Aquatic Foods/ Drinking Water Parameters Common Block
+C     Module of ENV                        Version of 14-Jan-87 RAP
+C     Revised for use in EDUP/GENII ACUTE component: 29-Jul-97
+C
+C     The subroutines that use this common block must include PARMTR.PAR
+C     which provides the maximum chain length parameter, CHAINLEN
+C
+      COMMON /AQUPAR/ BIOACF(4,CHAINLEN),
+     .                HLDUP2(4),
+     .                USAG(4), TPRODQ(4), ADJETQ(4), AQUPOP,
+     .                DWUSAG, DWSRC, DWTRET, DWCLEN(CHAINLEN), DWPOP,
+     .                HOLDDW,
+     .                TCWS, ANDFAC(CHAINLEN), ANDKRN, ANDKR
+      REAL BIOACF, HLDUP2, USAG, DWUSAG, DWCLEN, DWPOP, TPRODQ, HOLDDW,
+     .     ADJETQ, AQUPOP, TCWS, ANDKR, ANDKRN, ANDFAC
+      LOGICAL DWTRET
+      INTEGER DWSRC
+C
+C----------------------------------------------------------------------------
+C

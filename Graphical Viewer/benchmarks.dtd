@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding='ISO-8859-1'?>
+
+<!ELEMENT TREECSBenchmarkInfo (Medium*)>
+<!ELEMENT Medium (Benchmark*)>
+<!ELEMENT Benchmark (#PCDATA)>
+
+<!ATTLIST TREECSBenchmarkInfo>
+
+<!ATTLIST Medium
+  type CDATA #REQUIRED
+  applicability CDATA #REQUIRED>
+
+<!ATTLIST Benchmark 
+  casname CDATA #REQUIRED
+  casrn CDATA #REQUIRED
+  unit CDATA #REQUIRED>
+

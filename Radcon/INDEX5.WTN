@@ -1,0 +1,30 @@
+C     MEPAS RADCON: INDEX5.FTN            VERSION DATE: 06-09-98
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: INDEX5.FTN 
+C
+C     Formally called as COMMON/INDEX5/in each subroutine, it is now an 
+C     INCLUDE 'INDEX5.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains values for receptors.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     06/09/98 - JPM
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, COUPLE, EXPOSR, MULREC, WUNITS
+C
+C=== Significant Parameters ==================================================
+C
+C    NUMWU  - number of waste units
+C    LOCNUM - number representing which receptor is being analyzed
+C    LOCMED - number representing the type of media at the receptor
+C    NUMFLX - number of "receptors" for which contaminant mass flux
+C             will be computed
+C
+C*****************************************************************************
+C
+      INTEGER*4    NUMWU,LOCNUM,LOCMED,NUMFLX
+C
+      COMMON/INDEX5/NUMWU,LOCNUM,LOCMED,NUMFLX

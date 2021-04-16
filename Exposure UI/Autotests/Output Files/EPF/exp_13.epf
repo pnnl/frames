@@ -1,0 +1,97 @@
+"exp3",96                               
+  1,
+  Medium type - Surface water Source usr6
+  1,
+"chronic","usr6","Surface water", 1, 1,
+0.,"km",0.,"km"
+"STRONTIUM-90","SR90", 1,   5,
+     0.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 1.607E+04,
+"Other vegetables","ingestion","Bq/kg"
+ 1.010E+04,
+"Meat","ingestion","Bq/kg"
+ 2.358E+02,
+"Milk","ingestion","Bq/L"
+ 2.122E+03,
+"Y90","Y90",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 5.607E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 6.402E+02,
+"Meat","ingestion","Bq/kg"
+ 3.036E+01,
+"Milk","ingestion","Bq/L"
+ 1.383E+01,
+    25.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.009E+04,
+"Other vegetables","ingestion","Bq/kg"
+ 1.411E+04,
+"Meat","ingestion","Bq/kg"
+ 3.192E+02,
+"Milk","ingestion","Bq/L"
+ 2.461E+03,
+"Y90","Y90",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 5.645E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 6.778E+02,
+"Meat","ingestion","Bq/kg"
+ 3.264E+01,
+"Milk","ingestion","Bq/L"
+ 1.397E+01,
+    50.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.027E+04,
+"Other vegetables","ingestion","Bq/kg"
+ 1.429E+04,
+"Meat","ingestion","Bq/kg"
+ 3.230E+02,
+"Milk","ingestion","Bq/L"
+ 2.476E+03,
+"Y90","Y90",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 5.646E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 6.795E+02,
+"Meat","ingestion","Bq/kg"
+ 3.274E+01,
+"Milk","ingestion","Bq/L"
+ 1.398E+01,
+    75.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.028E+04,
+"Other vegetables","ingestion","Bq/kg"
+ 1.430E+04,
+"Meat","ingestion","Bq/kg"
+ 3.232E+02,
+"Milk","ingestion","Bq/L"
+ 2.477E+03,
+"Y90","Y90",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 5.646E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 6.796E+02,
+"Meat","ingestion","Bq/kg"
+ 3.274E+01,
+"Milk","ingestion","Bq/L"
+ 1.398E+01,
+   100.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.204E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 4.204E+03,
+"Meat","ingestion","Bq/kg"
+ 8.734E+01,
+"Milk","ingestion","Bq/L"
+ 3.547E+02,
+"Y90","Y90",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 3.942E+01,
+"Other vegetables","ingestion","Bq/kg"
+ 3.942E+01,
+"Meat","ingestion","Bq/kg"
+ 2.381E+00,
+"Milk","ingestion","Bq/L"
+ 1.485E-01,

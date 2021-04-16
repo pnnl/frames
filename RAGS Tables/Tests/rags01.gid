@@ -1,0 +1,2156 @@
+"con1",164
+"NUMCON",1,0,0,0,0,0,0,"n/a","n/a",3
+"FSCASID",1,1,0,0,0,0,0,"n/a","n/a","7440360"
+"FSCNAME",1,1,0,0,0,0,0,"n/a","n/a","Antimony"
+"NDS",1,1,0,0,0,0,0,"n/a","n/a",0
+"FSCASID",1,2,0,0,0,0,0,"n/a","n/a","SR90"
+"FSCNAME",1,2,0,0,0,0,0,"n/a","n/a","STRONTIUM-90"
+"NDS",1,2,0,0,0,0,0,"n/a","n/a",1
+"FSCASID",1,2,1,0,0,0,0,"n/a","n/a","Y90"
+"FSCNAME",1,2,1,0,0,0,0,"n/a","n/a","YTTRIUM-90"
+"FSCASID",1,3,0,0,0,0,0,"n/a","n/a","79016"
+"FSCNAME",1,3,0,0,0,0,0,"n/a","n/a","Trichloroethylene"
+"NDS",1,3,0,0,0,0,0,"n/a","n/a",0
+"CLWM",1,1,0,0,0,0,327,"g/mole","g/mole",122.0
+"CLSOL",1,1,0,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,1,0,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,1,0,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,1,0,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,1,0,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLDCAIR",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLDCWAT",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLCPFH",1,1,0,0,0,0,0,"(mg/kg/d)^-1","(mg/kg/d)^-1",0
+"CLCPFG",1,1,0,0,0,0,0,"(mg/kg/d)^-1","(mg/kg/d)^-1",0
+"CLRFDH",1,1,0,0,0,0,516,"mg/kg/d","mg/kg/d",1.43E-04
+"CLRFDG",1,1,0,0,0,0,481,"mg/kg/d","mg/kg/d",0.0004000
+"CLABSKN",1,1,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,1,0,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,1,0,0,0,0,95,"n/a","n/a",0.8000
+"CLVD",1,1,0,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,1,0,0,0,0,402,"L/kg","L/kg",200.0
+"CLBFI",1,1,0,0,0,0,95,"L/kg","L/kg",10.00
+"CLFMT",1,1,0,0,0,0,402,"d/kg","d/kg",0.001000
+"CLFMK",1,1,0,0,0,0,402,"d/L","d/L",0.0001000
+"CLBVLV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVRV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",5.6E-4
+"CLBVCL",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",3.0E-2
+"CLBVAF",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVAH",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVAG",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",3.0E-2
+"CLTHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLGHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLWHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLSHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLCLASS",1,1,0,0,0,0,333,"n/a","n/a",3
+"CLKTYPE",1,1,0,0,0,0,0,"n/a","n/a",5
+"CLFONEI",1,1,0,0,0,0,495,"n/a","n/a",0.2
+"CLBVOV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",5.6E-4
+"CLRAAS",1,1,0,0,0,0,0,"n/a","n/a",12
+"CLBVFR",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.0E-5
+"CLPCDEN",1,1,0,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,2,0,0,0,0,390,"g/mole","g/mole",90.00
+"CLSOL",1,2,0,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,2,0,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,2,0,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,2,0,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,2,0,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,2,0,0,0,0,409,"cm^2/s","cm^2/s",5.000E-11
+"CLDFAD",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",1.30E-06
+"CLRDFGI",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",1.42E-07
+"CLRDFS",1,2,0,0,0,0,398,"rem/pCi","rem/pCi",4.100E-07
+"CLDEX",1,2,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1.00E-13
+"CLDIMR",1,2,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.94E-13
+"CLDSH",1,2,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.79E-15
+"CLSFH",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",5.94E-11
+"CLSFG",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",4.090E-11
+"CLSFEX",1,2,0,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.36E-10
+"CLABSKN",1,2,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,2,0,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,2,0,0,0,0,95,"n/a","n/a",0.2000
+"CLVD",1,2,0,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,2,0,0,0,0,402,"L/kg","L/kg",50.00
+"CLBFI",1,2,0,0,0,0,95,"L/kg","L/kg",100.0
+"CLFMT",1,2,0,0,0,0,402,"d/kg","d/kg",0.0003000
+"CLFMK",1,2,0,0,0,0,402,"d/L","d/L",0.001500
+"CLBVLV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVRV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.1E-1
+"CLBVCL",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-1
+"CLBVAF",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAH",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAG",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-1
+"CLTHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLGHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLWHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLSHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLCLASS",1,2,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,0,0,0,0,403,"n/a","n/a",0.3000
+"CLBVOV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.1E-1
+"CLRAAS",1,2,0,0,0,0,0,"n/a","n/a",14
+"CLBVFR",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.7E-1
+"CLPCDEN",1,2,0,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,2,1,0,0,0,390,"g/mole","g/mole",90.00
+"CLSOL",1,2,1,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,2,1,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,2,1,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,2,1,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,2,1,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,2,1,0,0,0,410,"cm^2/s","cm^2/s",5.000E-08
+"CLDFAD",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",8.440E-09
+"CLRDFGI",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",1.080E-08
+"CLRDFS",1,2,1,0,0,0,398,"rem/pCi","rem/pCi",4.400E-09
+"CLDEX",1,2,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.530E-12
+"CLDIMR",1,2,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",4.830E-12
+"CLDSH",1,2,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",7.090E-14
+"CLSFH",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",9.90E-12
+"CLSFG",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.50E-11
+"CLSFEX",1,2,1,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",1.82E-8
+"CLABSKN",1,2,1,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,2,1,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,2,1,0,0,0,95,"n/a","n/a",0.2000
+"CLVD",1,2,1,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,2,1,0,0,0,402,"L/kg","L/kg",25.00
+"CLBFI",1,2,1,0,0,0,95,"L/kg","L/kg",1000.
+"CLFMT",1,2,1,0,0,0,402,"d/kg","d/kg",0.0003000
+"CLFMK",1,2,1,0,0,0,402,"d/L","d/L",2.000E-05
+"CLBVLV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVRV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLBVCL",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLBVAF",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVAH",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVAG",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLTHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLGHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLWHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLSHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLCLASS",1,2,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,1,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,1,0,0,0,403,"n/a","n/a",0.0001000
+"CLBVOV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLRAAS",1,2,1,0,0,0,0,"n/a","n/a",14
+"CLBVFR",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLPCDEN",1,2,1,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,3,0,0,0,0,480,"g/mole","g/mole",131.39
+"CLSOL",1,3,0,0,0,0,480,"mg/L","mg/L",1100.
+"CLVAP",1,3,0,0,0,0,480,"mm Hg","mm Hg",69.
+"CLHLC",1,3,0,0,0,0,480,"atm m^3/mole","atm m^3/mole",9.85E-3
+"CLKOC",1,3,0,0,0,0,211,"mL/g","mL/g",126.0
+"CLKOW",1,3,0,0,0,0,480,"mL/mL","mL/mL",263.0
+"CLDCGRT",1,3,0,0,0,0,410,"cm^2/s","cm^2/s",5.000E-08
+"CLDCAIR",1,3,0,0,0,0,0,"cm^2/s","cm^2/s",8.91000428686245E-02
+"CLDCWAT",1,3,0,0,0,0,0,"cm^2/s","cm^2/s",8.43350920331618E-06
+"CLCPFH",1,3,0,0,0,0,404,"(mg/kg/d)^-1","(mg/kg/d)^-1",0.01300
+"CLCPFG",1,3,0,0,0,0,404,"(mg/kg/d)^-1","(mg/kg/d)^-1",0.01100
+"CLRFDH",1,3,0,0,0,0,0,"mg/kg/d","mg/kg/d",0
+"CLRFDG",1,3,0,0,0,0,0,"mg/kg/d","mg/kg/d",0
+"CLABSKN",1,3,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,3,0,0,0,0,397,"cm/hr","cm/hr",0.2300
+"CLWPF",1,3,0,0,0,0,329,"n/a","n/a",1.000
+"CLVD",1,3,0,0,0,0,0,"m/s","m/s",0
+"CLBFF",1,3,0,0,0,0,161,"L/kg","L/kg",11.00
+"CLBFI",1,3,0,0,0,0,0,"L/kg","L/kg",0
+"CLFMT",1,3,0,0,0,0,0,"d/kg","d/kg",0
+"CLFMK",1,3,0,0,0,0,0,"d/L","d/L",0
+"CLBVLV",1,3,0,0,0,0,0,"kg soil/kg dry","kg soil/kg dry",0
+"CLTHALF",1,3,0,0,0,0,0,"days","days",0.00E+00
+"CLGHALF",1,3,0,0,0,0,0,"days","days",0.00E+00
+"CLWHALF",1,3,0,0,0,0,329,"days","days",1.44E-01
+"CLSHALF",1,3,0,0,0,0,330,"days","days",1.94E+01
+"CLCLASS",1,3,0,0,0,0,333,"n/a","n/a",5
+"CLKTYPE",1,3,0,0,0,0,0,"n/a","n/a",2
+"CLFONEI",1,3,0,0,0,0,496,"n/a","n/a",0.9
+"CLRAAS",1,3,0,0,0,0,0,"n/a","n/a",4
+"CLPCDEN",1,3,0,0,0,0,0,"g/mL","g/mL",1.46
+"CLCHEM",1,3,0,0,0,0,0,"n/a","n/a",7
+"src2",237
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"WARNED",0,0,0,0,0,0,0,"N/A","N/A",True
+"STCASID",1,1,0,0,0,0,0,"N/A","N/A",7440360
+"STCASID",1,2,0,0,0,0,0,"N/A","N/A","SR90"
+"STCASID",1,3,0,0,0,0,0,"N/A","N/A",79016
+"STCASID",1,2,1,0,0,0,0,"N/A","N/A","Y90"
+"STMEDIA",1,0,0,0,0,0,0,"","","Soil"
+"STINF_OP",1,0,0,0,0,0,0,"","",3
+"STSUS_OP",1,0,0,0,0,0,0,"","",3
+"STVOL_OP",1,0,0,0,0,0,0,"","",0
+"STMAXTIME",1,0,0,0,0,0,0,"years","years",100
+"STDARCY_NUM",1,0,0,0,0,0,0,"","",0
+"STOVL_OP",1,0,0,0,0,0,0,"","",0
+"STSRC_OP",1,0,0,0,0,0,0,"","",0
+"STATYPE",1,0,0,0,0,0,0,"","","area"
+"STDELTA_T",1,0,0,0,0,0,0,"years","years",1
+"STMINWST",1,0,0,0,0,0,0,"fraction","fraction",0.05
+"STWATR_NUM",1,0,0,0,0,0,0,"","",2
+"STWATR",1,1,0,0,0,0,0,"cm/yr","cm/yr",0
+"STWATR_TIM",1,1,0,0,0,0,0,"yr","yr",0
+"STWATR",1,2,0,0,0,0,0,"cm/yr","cm/yr",0
+"STWATR_TIM",1,2,0,0,0,0,0,"yr","yr",100
+"STWIND_NUM",1,0,0,0,0,0,0,"","",0
+"STLEACH_NUM",1,1,0,0,0,0,0,"","",0
+"STLEACH_NUM",1,2,0,0,0,0,0,"","",0
+"STLEACH_NUM",1,3,0,0,0,0,0,"","",0
+"STOVL_NUM",1,1,0,0,0,0,0,"","",2
+"STOVL",1,1,0,1,0,0,0,"g/yr","g/yr",0
+"STOVL_TIM",1,1,0,1,0,0,0,"yr","yr",0
+"STOVL",1,1,0,2,0,0,0,"g/yr","g/yr",0
+"STOVL_TIM",1,1,0,2,0,0,0,"yr","yr",100
+"STOVL_NUM",1,2,0,0,0,0,0,"","",2
+"STOVL",1,2,0,1,0,0,0,"Ci/yr","Ci/yr",0
+"STOVL_TIM",1,2,0,1,0,0,0,"yr","yr",0
+"STOVL",1,2,0,2,0,0,0,"Ci/yr","Ci/yr",0
+"STOVL_TIM",1,2,0,2,0,0,0,"yr","yr",100
+"STOVL_NUM",1,3,0,0,0,0,0,"","",2
+"STOVL",1,3,0,1,0,0,0,"g/yr","g/yr",0
+"STOVL_TIM",1,3,0,1,0,0,0,"yr","yr",0
+"STOVL",1,3,0,2,0,0,0,"g/yr","g/yr",0
+"STOVL_TIM",1,3,0,2,0,0,0,"yr","yr",100
+"STSUSP_NUM",1,1,0,0,0,0,0,"","",0
+"STSUSP_NUM",1,2,0,0,0,0,0,"","",0
+"STSUSP_NUM",1,3,0,0,0,0,0,"","",0
+"STVOLAT_NUM",1,1,0,0,0,0,0,"","",2
+"STVOLAT",1,1,0,1,0,0,0,"g/yr","g/yr",0
+"STVOLAT_TIM",1,1,0,1,0,0,0,"yr","yr",0
+"STVOLAT",1,1,0,2,0,0,0,"g/yr","g/yr",0
+"STVOLAT_TIM",1,1,0,2,0,0,0,"yr","yr",100
+"STVOLAT_NUM",1,2,0,0,0,0,0,"","",2
+"STVOLAT",1,2,0,1,0,0,0,"Ci/yr","Ci/yr",0
+"STVOLAT_TIM",1,2,0,1,0,0,0,"yr","yr",0
+"STVOLAT",1,2,0,2,0,0,0,"Ci/yr","Ci/yr",0
+"STVOLAT_TIM",1,2,0,2,0,0,0,"yr","yr",100
+"STVOLAT_NUM",1,3,0,0,0,0,0,"","",2
+"STVOLAT",1,3,0,1,0,0,0,"g/yr","g/yr",0
+"STVOLAT_TIM",1,3,0,1,0,0,0,"yr","yr",0
+"STVOLAT",1,3,0,2,0,0,0,"g/yr","g/yr",0
+"STVOLAT_TIM",1,3,0,2,0,0,0,"yr","yr",100
+"STSOURCE_NUM",1,1,0,0,0,0,0,"","",2
+"STSOURCE",1,1,0,1,0,0,0,"g/yr","g/yr",0
+"STSOURCE_TIM",1,1,0,1,0,0,0,"yr","yr",0
+"STSOURCE",1,1,0,2,0,0,0,"g/yr","g/yr",0
+"STSOURCE_TIM",1,1,0,2,0,0,0,"yr","yr",100
+"STSOURCE_NUM",1,2,0,0,0,0,0,"","",2
+"STSOURCE",1,2,0,1,0,0,0,"Ci/yr","Ci/yr",0
+"STSOURCE_TIM",1,2,0,1,0,0,0,"yr","yr",0
+"STSOURCE",1,2,0,2,0,0,0,"Ci/yr","Ci/yr",0
+"STSOURCE_TIM",1,2,0,2,0,0,0,"yr","yr",100
+"STSOURCE_NUM",1,3,0,0,0,0,0,"","",2
+"STSOURCE",1,3,0,1,0,0,0,"g/yr","g/yr",0
+"STSOURCE_TIM",1,3,0,1,0,0,0,"yr","yr",0
+"STSOURCE",1,3,0,2,0,0,0,"g/yr","g/yr",0
+"STSOURCE_TIM",1,3,0,2,0,0,0,"yr","yr",100
+"STSOURCE_NUM",1,2,1,0,0,0,0,"","",2
+"STSOURCE",1,2,1,1,0,0,0,"Ci/yr","Ci/yr",0
+"STSOURCE_TIM",1,2,1,1,0,0,0,"yr","yr",0
+"STSOURCE",1,2,1,2,0,0,0,"Ci/yr","Ci/yr",0
+"STSOURCE_TIM",1,2,1,2,0,0,0,"yr","yr",100
+"STPOND",1,0,0,0,0,0,0,"","","no"
+"STLENGTH",1,0,0,0,0,0,0,"m","cm",1000
+"STWIDTH",1,0,0,0,0,0,0,"m","cm",1000
+"STZBULKD",1,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.65
+"STMOISTC",1,0,0,0,0,0,0,"%","fraction",0.15
+"STCLEAN",1,1,0,0,0,0,0,"m","cm",0
+"STTHICK",1,0,0,0,0,0,0,"m","cm",1500
+"STTOTPOR",1,1,0,0,0,0,0,"%","fraction",0.3
+"STAIRSPC",1,1,0,0,0,0,0,"fraction","fraction",0.15
+"STAVTEMP",1,0,0,0,0,0,0,"F","C",11.667
+"STAVWINDV",1,0,0,0,0,0,0,"mi/hr","m/s",3.576
+"STWINDHT",1,0,0,0,0,0,0,"m","m",10
+"STCLEAN_NUM",1,0,0,0,0,0,0,"","",1
+"STCLEAN_TIM",1,1,0,0,0,0,0,"","",100
+"STTOTPOR_NUM",1,0,0,0,0,0,0,"","",1
+"STTOTPOR_TIM",1,1,0,0,0,0,0,"","",100
+"STAIRSPC_NUM",1,0,0,0,0,0,0,"","",1
+"STAIRSPC_TIM",1,1,0,0,0,0,0,"","",100
+"STSURFVOL_NUM",1,0,0,0,0,0,0,"","",1
+"STSURFVOL_TIM",1,1,0,0,0,0,0,"","",100
+"STSURFVOL",1,1,0,0,0,0,0,"","",0
+"STGLASS_NUM",1,0,0,0,0,0,0,"","",1
+"STGLASS_TIM",1,1,0,0,0,0,0,"","",100
+"STGLASS",1,1,0,0,0,0,0,"","",0
+"STSBULKD",1,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.65
+"STCORRSC",1,0,0,0,0,0,0,"","",1
+"STLOCSUR",1,0,0,0,0,0,0,"cm","m",0.01
+"STVEGFR",1,0,0,0,0,0,0,"fraction","fraction",0
+"STCRUST",1,0,0,0,0,0,0,"fraction","fraction",0
+"STNUMDIS",1,0,0,0,0,0,0,"#/month","#/month",1
+"STMAXWIND",1,0,0,0,0,0,0,"mi/hr","m/s",35.763
+"STPEI",1,0,0,0,0,0,0,"","",25
+"STROADS",1,0,0,0,0,0,0,"","","none"
+"STSDISTB",1,0,0,0,0,0,0,"mm","mm",0.5
+"STLCDELEV",1,0,0,0,0,0,0,"m","m",223
+"STLAT",1,0,0,0,0,0,0,"deg","deg",46.57
+"STELEV",1,0,0,0,0,0,0,"m","m",223
+"STSCSCN",1,0,0,0,0,0,0,"","",39
+"STAVAILW",1,0,0,0,0,0,0,"cm","cm",1.1
+"STNUMPRCP",1,0,0,0,0,0,0,"","",68
+"STTEMP",1,1,0,0,0,0,0,"F","C",-1.11
+"STTEMP",1,2,0,0,0,0,0,"F","C",3.333
+"STTEMP",1,3,0,0,0,0,0,"F","C",6.667
+"STTEMP",1,4,0,0,0,0,0,"F","C",11.111
+"STTEMP",1,5,0,0,0,0,0,"F","C",16.111
+"STTEMP",1,6,0,0,0,0,0,"F","C",20.556
+"STTEMP",1,7,0,0,0,0,0,"F","C",25
+"STTEMP",1,8,0,0,0,0,0,"F","C",23.889
+"STTEMP",1,9,0,0,0,0,0,"F","C",18.889
+"STTEMP",1,10,0,0,0,0,0,"F","C",11.667
+"STTEMP",1,11,0,0,0,0,0,"F","C",4.444
+"STTEMP",1,12,0,0,0,0,0,"F","C",0.555999999999999
+"STMPRECIP",1,1,0,0,0,0,0,"in","cm",2.53999999999999
+"STMPRECIP",1,2,0,0,0,0,0,"in","cm",2.53999999999999
+"STMPRECIP",1,3,0,0,0,0,0,"in","cm",3.81
+"STMPRECIP",1,4,0,0,0,0,0,"in","cm",3.81
+"STMPRECIP",1,5,0,0,0,0,0,"in","cm",3.175
+"STMPRECIP",1,6,0,0,0,0,0,"in","cm",2.794
+"STMPRECIP",1,7,0,0,0,0,0,"in","cm",2.53999999999999
+"STMPRECIP",1,8,0,0,0,0,0,"in","cm",2.286
+"STMPRECIP",1,9,0,0,0,0,0,"in","cm",2.032
+"STMPRECIP",1,10,0,0,0,0,0,"in","cm",2.286
+"STMPRECIP",1,11,0,0,0,0,0,"in","cm",2.286
+"STMPRECIP",1,12,0,0,0,0,0,"in","cm",2.53999999999999
+"STMNUMPRE",1,1,0,0,0,0,0,"days","days",9
+"STMNUMPRE",1,2,0,0,0,0,0,"days","days",7
+"STMNUMPRE",1,3,0,0,0,0,0,"days","days",6
+"STMNUMPRE",1,4,0,0,0,0,0,"days","days",5
+"STMNUMPRE",1,5,0,0,0,0,0,"days","days",5
+"STMNUMPRE",1,6,0,0,0,0,0,"days","days",5
+"STMNUMPRE",1,7,0,0,0,0,0,"days","days",2
+"STMNUMPRE",1,8,0,0,0,0,0,"days","days",3
+"STMNUMPRE",1,9,0,0,0,0,0,"days","days",3
+"STMNUMPRE",1,10,0,0,0,0,0,"days","days",5
+"STMNUMPRE",1,11,0,0,0,0,0,"days","days",8
+"STMNUMPRE",1,12,0,0,0,0,0,"days","days",10
+"STWINDV",1,1,0,0,0,0,0,"mi/hr","m/s",2.861
+"STWINDV",1,2,0,0,0,0,0,"mi/hr","m/s",3.174
+"STWINDV",1,3,0,0,0,0,0,"mi/hr","m/s",3.8
+"STWINDV",1,4,0,0,0,0,0,"mi/hr","m/s",4.023
+"STWINDV",1,5,0,0,0,0,0,"mi/hr","m/s",3.979
+"STWINDV",1,6,0,0,0,0,0,"mi/hr","m/s",4.113
+"STWINDV",1,7,0,0,0,0,0,"mi/hr","m/s",3.889
+"STWINDV",1,8,0,0,0,0,0,"mi/hr","m/s",3.576
+"STWINDV",1,9,0,0,0,0,0,"mi/hr","m/s",3.353
+"STWINDV",1,10,0,0,0,0,0,"mi/hr","m/s",2.95
+"STWINDV",1,11,0,0,0,0,0,"mi/hr","m/s",2.727
+"STWINDV",1,12,0,0,0,0,0,"mi/hr","m/s",2.727
+"STCLOUD",1,1,0,0,0,0,0,"fraction","fraction",0.79
+"STCLOUD",1,2,0,0,0,0,0,"fraction","fraction",0.76
+"STCLOUD",1,3,0,0,0,0,0,"fraction","fraction",0.68
+"STCLOUD",1,4,0,0,0,0,0,"fraction","fraction",0.64
+"STCLOUD",1,5,0,0,0,0,0,"fraction","fraction",0.59
+"STCLOUD",1,6,0,0,0,0,0,"fraction","fraction",0.53
+"STCLOUD",1,7,0,0,0,0,0,"fraction","fraction",0.29
+"STCLOUD",1,8,0,0,0,0,0,"fraction","fraction",0.34
+"STCLOUD",1,9,0,0,0,0,0,"fraction","fraction",0.41
+"STCLOUD",1,10,0,0,0,0,0,"fraction","fraction",0.58
+"STCLOUD",1,11,0,0,0,0,0,"fraction","fraction",0.77
+"STCLOUD",1,12,0,0,0,0,0,"fraction","fraction",0.81
+"STRHMAX",1,1,0,0,0,0,0,"%","%",82
+"STRHMAX",1,2,0,0,0,0,0,"%","%",80
+"STRHMAX",1,3,0,0,0,0,0,"%","%",70
+"STRHMAX",1,4,0,0,0,0,0,"%","%",70
+"STRHMAX",1,5,0,0,0,0,0,"%","%",70
+"STRHMAX",1,6,0,0,0,0,0,"%","%",70
+"STRHMAX",1,7,0,0,0,0,0,"%","%",70
+"STRHMAX",1,8,0,0,0,0,0,"%","%",75
+"STRHMAX",1,9,0,0,0,0,0,"%","%",80
+"STRHMAX",1,10,0,0,0,0,0,"%","%",80
+"STRHMAX",1,11,0,0,0,0,0,"%","%",85
+"STRHMAX",1,12,0,0,0,0,0,"%","%",85
+"STRHMIN",1,1,0,0,0,0,0,"%","%",65
+"STRHMIN",1,2,0,0,0,0,0,"%","%",58
+"STRHMIN",1,3,0,0,0,0,0,"%","%",40
+"STRHMIN",1,4,0,0,0,0,0,"%","%",32
+"STRHMIN",1,5,0,0,0,0,0,"%","%",30
+"STRHMIN",1,6,0,0,0,0,0,"%","%",25
+"STRHMIN",1,7,0,0,0,0,0,"%","%",20
+"STRHMIN",1,8,0,0,0,0,0,"%","%",20
+"STRHMIN",1,9,0,0,0,0,0,"%","%",25
+"STRHMIN",1,10,0,0,0,0,0,"%","%",25
+"STRHMIN",1,11,0,0,0,0,0,"%","%",30
+"STRHMIN",1,12,0,0,0,0,0,"%","%",30
+"STKD_NUM",1,1,0,0,0,0,0,"","",2
+"STKD",1,1,0,1,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,1,0,1,0,0,0,"yr","yr",0
+"STKD",1,1,0,2,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,1,0,2,0,0,0,"yr","yr",100
+"STKD_NUM",1,2,0,0,0,0,0,"","",2
+"STKD",1,2,0,1,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,2,0,1,0,0,0,"yr","yr",0
+"STKD",1,2,0,2,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,2,0,2,0,0,0,"yr","yr",100
+"STKD_NUM",1,3,0,0,0,0,0,"","",2
+"STKD",1,3,0,1,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,3,0,1,0,0,0,"yr","yr",0
+"STKD",1,3,0,2,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,3,0,2,0,0,0,"yr","yr",100
+"STKD_NUM",1,2,1,0,0,0,0,"","",2
+"STKD",1,2,1,1,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,2,1,1,0,0,0,"yr","yr",0
+"STKD",1,2,1,2,0,0,0,"ml/g","ml/g",0
+"STKD_TIM",1,2,1,2,0,0,0,"yr","yr",100
+"STSOL",1,3,0,0,0,0,0,"mg/L","mg/L",1100
+"STGHALF",1,1,0,0,0,0,0,"day","day",1E+20
+"STGHALF",1,2,0,0,0,0,0,"day","day",10600
+"STGHALF",1,3,0,0,0,0,0,"day","day",1E+20
+"STGHALF",1,2,1,0,0,0,0,"day","day",2.7
+"STVOLRAT",1,1,0,0,0,0,0,"fraction","fraction",0
+"STVOLRAT",1,2,0,0,0,0,0,"fraction","fraction",0
+"STVOLRAT",1,3,0,0,0,0,0,"fraction","fraction",0
+"STSOL",1,1,0,0,0,0,0,"mg/L","mg/L",1000
+"STSOL",1,2,0,0,0,0,0,"mg/L","mg/L",1000
+"STSOL",1,2,1,0,0,0,0,"mg/L","mg/L",1000
+"STINVEN",1,1,0,0,0,0,0,"g","g",100
+"STINVEN",1,2,0,0,0,0,0,"Ci","Ci",100
+"STINVEN",1,3,0,0,0,0,0,"g","g",100
+"air9",731
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"CARELTYP",1,1,0,0,0,0,0,"N/A","N/A",7
+"AIRACMIXAM",1,1,0,0,0,0,0,"m","m",400
+"AIRACMIXPM",1,1,0,0,0,0,0,"m","m",1400
+"AIRACLCDREF",1,1,0,0,0,0,0,"N/A","N/A","Hanford Met Sation"
+"AIRACNUMTS",1,1,0,0,0,0,0,"N/A","N/A",10
+"AIRACRAIN",1,1,0,0,0,0,0,"in","in",6.3
+"AIRACPRENUM",1,1,0,0,0,0,0,"N/A","N/A",68
+"AIRAJSTATNM",1,1,0,0,0,0,0,"N/A","N/A","Hanford Met Station"
+"AIRAJANEMHT",1,1,0,0,0,0,0,"m","m",15.2
+"AIRAJRLEN",1,1,0,0,0,0,0,"cm","cm",45.5
+"AIRajwinds",1,1,1,1,0,0,0,"m/s","m/s",0.671
+"AIRajwinds",1,1,2,1,0,0,0,"m/s","m/s",2.46
+"AIRajwinds",1,1,3,1,0,0,0,"m/s","m/s",4.48
+"AIRajwinds",1,1,4,1,0,0,0,"m/s","m/s",6.94
+"AIRajwinds",1,1,5,1,0,0,0,"m/s","m/s",9.62
+"AIRajwinds",1,1,6,1,0,0,0,"m/s","m/s",12.53
+"AIRajcalms",1,1,1,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,2,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,3,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,4,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,5,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,6,1,0,0,0,"number","number",0.0000
+"AIRajcalms",1,1,7,1,0,0,0,"number","number",0.0000
+"AIRarregsur",1,1,1,1,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,2,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,3,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,4,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,5,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,6,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,7,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,1,8,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,1,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,2,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,3,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,4,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,5,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,6,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,7,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,2,8,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,1,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,2,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,3,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,4,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,5,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,6,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,7,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,3,8,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,1,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,2,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,3,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,4,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,5,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,6,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,7,0,0,0,"cm","cm",10
+"AIRarregsur",1,1,4,8,0,0,0,"cm","cm",10
+"AIRARTOPBAS",1,1,0,0,0,0,0,"m","m",0
+"AIRartoptyp",1,1,0,0,0,0,0,"N/A","N/A",False
+"AIRarchanl",1,1,0,0,0,0,0,"N/A","N/A",False
+"AIRajfdata",1,1,1,1,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,2,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,3,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,4,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,5,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,6,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,7,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,12,1,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,15,1,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,1,2,0,0,"number","number",0.00080
+"AIRajfdata",1,1,1,2,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,3,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,4,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,5,2,0,0,"number","number",0.00050
+"AIRajfdata",1,1,1,6,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,1,8,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,9,2,0,0,"number","number",0.00050
+"AIRajfdata",1,1,1,10,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,11,2,0,0,"number","number",0.00050
+"AIRajfdata",1,1,1,12,2,0,0,"number","number",0.00030
+"AIRajfdata",1,1,1,13,2,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,14,2,0,0,"number","number",0.00040
+"AIRajfdata",1,1,1,15,2,0,0,"number","number",0.00060
+"AIRajfdata",1,1,1,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,1,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,3,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,4,3,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,5,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,6,3,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,7,3,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,8,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,9,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,10,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,12,3,0,0,"number","number",0.00030
+"AIRajfdata",1,1,1,13,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,14,3,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,1,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,2,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,3,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,4,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,5,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,6,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,7,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,8,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,9,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,10,4,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,11,4,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,15,4,0,0,"number","number",0.00020
+"AIRajfdata",1,1,1,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,11,5,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,15,5,0,0,"number","number",0.00010
+"AIRajfdata",1,1,1,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,1,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,2,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,2,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,2,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,2,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,3,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,3,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,3,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,3,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,4,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,4,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,4,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,4,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,5,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,5,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,5,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,5,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,6,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,6,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,6,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,6,16,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,1,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,2,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,3,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,4,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,5,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,6,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,7,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,8,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,9,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,10,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,11,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,12,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,13,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,14,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,15,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,16,1,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,1,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,2,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,3,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,4,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,5,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,6,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,7,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,8,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,9,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,10,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,11,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,12,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,13,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,14,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,15,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,16,2,0,0,"number","number",0.00070
+"AIRajfdata",1,1,7,1,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,2,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,3,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,4,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,5,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,6,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,7,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,8,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,9,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,10,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,11,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,12,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,13,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,14,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,15,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,16,3,0,0,"number","number",0.00020
+"AIRajfdata",1,1,7,1,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,2,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,3,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,4,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,5,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,6,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,7,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,8,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,9,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,10,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,11,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,12,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,13,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,14,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,15,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,16,4,0,0,"number","number",0.00010
+"AIRajfdata",1,1,7,1,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,2,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,3,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,4,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,5,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,6,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,7,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,8,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,9,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,10,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,11,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,12,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,13,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,14,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,15,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,16,5,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,1,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,2,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,3,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,4,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,5,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,6,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,7,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,8,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,9,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,10,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,11,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,12,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,13,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,14,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,15,6,0,0,"number","number",0.00000
+"AIRajfdata",1,1,7,16,6,0,0,"number","number",0.00000
+"vad3",33
+"tfinal",0,0,0,0,0,0,0,"yr","yr",0
+"ntimes",0,0,0,0,0,0,0,"N/A","N/A",40
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"wpclass",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpsand",0,0,0,0,0,0,0,"N/A","N/A",92
+"wpsilt",0,0,0,0,0,0,6,"N/A","N/A",5
+"wpclay",0,0,0,0,0,0,2,"N/A","N/A",3
+"wpomc",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpiron",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpph",0,0,0,0,0,0,0,"N/A","N/A",7
+"wptotpor",0,0,0,0,0,0,0,"percent","percent",38
+"wpfieldc",0,0,0,0,0,0,0,"percent","percent",9
+"wpconduc",0,0,0,0,0,0,0,"cm/day","cm/day",570.24
+"wpthick",0,0,0,0,0,0,0,"ft","cm",213.36
+"wpbulk",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.64
+"wpsoilcoef",0,0,0,0,0,0,0,"N/A","N/A",4.05
+"wpldisp",0,0,0,0,0,0,0,"ft","cm",2.1336
+"vadcasid",1,0,0,0,0,0,0,"N/A","N/A",7440360
+"wasubkd",1,0,0,0,0,0,0,"ml/g","ml/g",2
+"wpsol",1,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wpghalf",1,0,0,0,0,0,0,"day","day",1E+20
+"vadcasid",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"wasubkd",2,0,0,0,0,0,0,"ml/g","ml/g",24.3
+"wprsol",2,0,0,0,0,0,0,"pCi/ml","pCi/ml",1E+20
+"wpghalf",2,0,0,0,0,0,0,"day","day",10600
+"vadcasid",2,1,0,0,0,0,0,"N/A","N/A","Y90"
+"wasubkd",2,1,0,0,0,0,0,"ml/g","ml/g",228
+"wprsol",2,1,0,0,0,0,0,"pCi/ml","pCi/ml",1E+20
+"wpghalf",2,1,0,0,0,0,0,"day","day",2.7
+"vadcasid",3,0,0,0,0,0,0,"N/A","N/A",79016
+"wasubkd",3,0,0,0,0,0,0,"ml/g","ml/g",0.106596
+"wpsol",3,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wpghalf",3,0,0,0,0,0,0,"day","day",1E+20
+"vad8",33
+"tfinal",0,0,0,0,0,0,0,"yr","yr",0
+"ntimes",0,0,0,0,0,0,0,"N/A","N/A",40
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"wpclass",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpsand",0,0,0,0,0,0,0,"N/A","N/A",91.2
+"wpsilt",0,0,0,0,0,0,0,"N/A","N/A",6.3
+"wpclay",0,0,0,0,0,0,0,"N/A","N/A",2.5
+"wpomc",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpiron",0,0,0,0,0,0,0,"N/A","N/A",0
+"wpph",0,0,0,0,0,0,0,"N/A","N/A",8.5
+"wptotpor",0,0,0,0,0,0,0,"percent","percent",38
+"wpfieldc",0,0,0,0,0,0,0,"percent","percent",9
+"wpconduc",0,0,0,0,0,0,0,"cm/day","cm/day",570.24
+"wpthick",0,0,0,0,0,0,0,"cm","cm",15.2
+"wpbulk",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.64
+"wpsoilcoef",0,0,0,0,0,0,0,"N/A","N/A",4
+"wpldisp",0,0,0,0,0,0,0,"cm","cm",0
+"vadcasid",1,0,0,0,0,0,0,"N/A","N/A",7440360
+"wasubkd",1,0,0,0,0,0,0,"ml/g","ml/g",2
+"wpsol",1,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wpghalf",1,0,0,0,0,0,0,"day","day",1E+20
+"vadcasid",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"wasubkd",2,0,0,0,0,0,0,"ml/g","ml/g",24.3
+"wprsol",2,0,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wpghalf",2,0,0,0,0,0,0,"day","day",10600
+"vadcasid",2,1,0,0,0,0,0,"N/A","N/A","Y90"
+"wasubkd",2,1,0,0,0,0,0,"ml/g","ml/g",228
+"wprsol",2,1,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wpghalf",2,1,0,0,0,0,0,"day","day",2.7
+"vadcasid",3,0,0,0,0,0,0,"N/A","N/A",79016
+"wasubkd",3,0,0,0,0,0,0,"ml/g","ml/g",0.1004976
+"wpsol",3,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wpghalf",3,0,0,0,0,0,0,"day","day",1E+20
+"aqu4",49
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"tfinal",0,0,0,0,0,0,0,"yr","yr",0
+"ntimes",0,0,0,0,0,0,0,"N/A","N/A",40
+"wzclass",0,0,0,0,0,0,0,"N/A","N/A",3
+"wzfract",0,0,0,0,0,0,0,"percent","percent",100
+"wzsand",0,0,0,0,0,0,0,"N/A","N/A",65
+"wzsilt",0,0,0,0,0,0,0,"N/A","N/A",25
+"wzclay",0,0,0,0,0,0,0,"N/A","N/A",10
+"wzomc",0,0,0,0,0,0,0,"N/A","N/A",0
+"wziron",0,0,0,0,0,0,0,"N/A","N/A",0
+"wzph",0,0,0,0,0,0,0,"N/A","N/A",7
+"wztotpor",0,0,0,0,0,0,0,"percent","percent",46
+"wzeffpor",0,0,0,0,0,0,0,"percent","percent",20
+"wzpveloc",0,0,0,0,0,0,0,"ft/day","cm/day",0.5182
+"wzthick",0,0,0,0,0,0,0,"ft","cm",1219.2
+"wzbulk",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.43
+"wzdiv",0,0,0,0,0,0,0,"N/A","N/A",1
+"wzfname",1,0,0,0,0,0,0,"N/A","N/A","riv10"
+"wzfdist",1,0,0,0,0,0,0,"m","cm",10000
+"wzfydist",1,0,0,0,0,0,0,"cm","cm",0
+"wzfaqdepth",1,0,0,0,0,0,0,"cm","cm",0
+"wzfldisp",1,0,0,0,0,0,0,"m","cm",1000
+"wzftdisp",1,0,0,0,0,0,0,"m","cm",330
+"wzfvdisp",1,0,0,0,0,0,0,"m","cm",2.5
+"wzfnum",0,0,0,0,0,0,0,"N/A","N/A", 1
+"wzcname",1,0,0,0,0,0,0,"N/A","N/A","fcm5"
+"wzcdist",1,0,0,0,0,0,0,"ft","cm",14417.0395
+"wzcydist",1,0,0,0,0,0,0,"ft","cm",0
+"wzcaqdepth",1,0,0,0,0,0,0,"ft","cm",0
+"wzcldisp",1,0,0,0,0,0,0,"ft","cm",1441.704
+"wzctdisp",1,0,0,0,0,0,0,"ft","cm",475.488
+"wzcvdisp",1,0,0,0,0,0,0,"ft","cm",3.5966
+"wzcnum",0,0,0,0,0,0,0,"N/A","N/A", 1
+"aqucasid",1,0,0,0,0,0,0,"N/A","N/A",7440360
+"wasubkd",1,0,0,0,0,0,0,"ml/g","ml/g",6
+"wzsol",1,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wzghalf",1,0,0,0,0,0,0,"day","day",1E+20
+"aqucasid",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"wasubkd",2,0,0,0,0,0,0,"ml/g","ml/g",100
+"wzrsol",2,0,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wzghalf",2,0,0,0,0,0,0,"day","day",10600
+"aqucasid",2,1,0,0,0,0,0,"N/A","N/A","Y90"
+"wasubkd",2,1,0,0,0,0,0,"ml/g","ml/g",538
+"wzrsol",2,1,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wzghalf",2,1,0,0,0,0,0,"day","day",2.7
+"aqucasid",3,0,0,0,0,0,0,"N/A","N/A",79016
+"wasubkd",3,0,0,0,0,0,0,"ml/g","ml/g",0.382095
+"wzsol",3,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wzghalf",3,0,0,0,0,0,0,"day","day",1E+20
+"riv10",24
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"tfinal",0,0,0,0,0,0,0,"yr","yr",0
+"ntimes",0,0,0,0,0,0,0,"N/A","N/A",40
+"wwveloc",0,0,0,0,0,0,0,"mi/yr","cm/day",4406.1437
+"wwdepth",0,0,0,0,0,0,0,"ft","cm",304.799999999999
+"wwwidth",0,0,0,0,0,0,0,"ft","cm",3047.9999
+"wwname",1,0,0,0,0,0,0,"N/A","N/A","fcm5"
+"wwkind",1,0,0,0,0,0,0,"N/A","N/A", 0
+"wwdist",1,0,0,0,0,0,0,"ft","cm",3047.9999
+"wwdischg",1,0,0,0,0,0,0,"cm^3/s","cm^3/day",864000000
+"wwnumflux",0,0,0,0,0,0,0,"N/A","N/A", 0
+"wwnumconc",0,0,0,0,0,0,0,"N/A","N/A", 1
+"wwcasid",1,0,0,0,0,0,0,"N/A","N/A",7440360
+"wwsol",1,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wwshalf",1,0,0,0,0,0,0,"day","day",1E+20
+"wwcasid",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"wwrsol",2,0,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wwshalf",2,0,0,0,0,0,0,"day","day",10600
+"wwcasid",2,1,0,0,0,0,0,"N/A","N/A","Y90"
+"wwrsol",2,1,0,0,0,0,0,"pCi/ml","pCi/ml",1000000
+"wwshalf",2,1,0,0,0,0,0,"day","day",2.7
+"wwcasid",3,0,0,0,0,0,0,"N/A","N/A",79016
+"wwsol",3,0,0,0,0,0,0,"mg/l","mg/l",1000000
+"wwshalf",3,0,0,0,0,0,0,"day","day",1E+20
+"fcm5",194
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"KNPATH",1,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",2,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",3,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",4,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",5,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",6,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",7,0,0,0,0,0,0,"N/A","N/A",0
+"KEXPTH",0,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",1,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",2,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",7,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",8,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",15,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,1,0,0,0,0,0,"N/A","N/A", 0
+"KGDR",0,0,0,0,0,0,0,"N/A","N/A", 0
+"KGIR",0,0,0,0,0,0,0,"N/A","N/A", 2
+"GWFEED",0,0,0,0,0,0,0,"N/A","N/A",True
+"GWDRINK",0,0,0,0,0,0,0,"N/A","N/A",True
+"DGWED",0,0,0,0,0,0,0,"yr","yr",35
+"TWTR",1,0,0,0,0,0,0,"day","day",0.5
+"FIRR",1,0,0,0,0,0,0,"N/A","N/A",1
+"CIRR",1,0,0,0,0,0,0,"L/m^2/mon","L/m^2/mon",100
+"KEXPTH",0,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",1,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",2,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",7,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",8,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",15,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,2,0,0,0,0,0,"N/A","N/A", 1
+"KSDR",0,0,0,0,0,0,0,"N/A","N/A", 1
+"KSIR",0,0,0,0,0,0,0,"N/A","N/A", 2
+"SWFEED",0,0,0,0,0,0,0,"N/A","N/A",True
+"SWDRINK",0,0,0,0,0,0,0,"N/A","N/A",True
+"DSWED",0,0,0,0,0,0,0,"yr","yr",35
+"TWTR",2,0,0,0,0,0,0,"day","day",0.5
+"LTRTL",2,0,0,0,0,0,0,"N/A","N/A", 0
+"FIRR",2,0,0,0,0,0,0,"N/A","N/A",1
+"CIRR",2,0,0,0,0,0,0,"L/m^2/mon","L/m^2/mon",100
+"KSAQ",0,0,0,0,0,0,0,"N/A","N/A", 0
+"KSR",0,0,0,0,0,0,0,"N/A","N/A", 0
+"ATED",0,0,0,0,0,0,0,"yr","yr",35
+"KEXPTH",1,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",2,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",7,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",8,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",15,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",19,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,3,0,0,0,0,0,"N/A","N/A", 0
+"KAAG",0,0,0,0,0,0,0,"N/A","N/A", 1
+"KAIN",0,0,0,0,0,0,0,"N/A","N/A", 1
+"TAS",0,0,0,0,0,0,0,"m","m",0.04
+"RHOAS",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"TEXPOS",0,0,0,0,0,0,0,"yr","yr",0
+"MAXTIM",0,0,0,0,0,0,0,"yr","yr",1000
+"NTIMES",0,0,0,0,0,0,0,"N/A","N/A",20
+"NYEARS",0,0,0,0,0,0,0,"N/A","N/A",50
+"LEACHOPTION",0,0,0,0,0,0,0,"N/A","N/A",0
+"ECCLASS",0,0,0,0,0,0,0,"N/A","N/A",0
+"ECSAND",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECSILT",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECCLAY",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECOMC",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECIRON",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECPH",0,0,0,0,0,0,0,"N/A","N/A",""
+"numchem",0,0,0,0,0,0,0,"N/A","N/A",3
+"CASID",1,0,0,0,0,0,0,"N/A","N/A",7440360
+"SOILLR",1,0,0,0,0,0,0,"1/yr","1/yr",1
+"ecghalf",1,0,0,0,0,0,0,"day","day",1000000
+"ecwhalf",1,0,0,0,0,0,0,"day","day",1E+20
+"ecthalf",1,0,0,0,0,0,0,"day","day",1E+20
+"numprog",1,0,0,0,0,0,0,"N/A","N/A",0
+"CASID",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"SOILLR",2,0,0,0,0,0,0,"1/yr","1/yr",1
+"ecghalf",2,0,0,0,0,0,0,"day","day",10600
+"ecwhalf",2,0,0,0,0,0,0,"day","day",10600
+"ecthalf",2,0,0,0,0,0,0,"day","day",10600
+"numprog",2,0,0,0,0,0,0,"N/A","N/A",1
+"CASID",2,1,0,0,0,0,0,"N/A","N/A","Y90"
+"SOILLR",2,1,0,0,0,0,0,"1/yr","1/yr",1
+"ecghalf",2,1,0,0,0,0,0,"day","day",2.7
+"ecwhalf",2,1,0,0,0,0,0,"day","day",2.7
+"ecthalf",2,1,0,0,0,0,0,"day","day",2.7
+"CASID",3,0,0,0,0,0,0,"N/A","N/A",79016
+"SOILLR",3,0,0,0,0,0,0,"1/yr","1/yr",1
+"ecghalf",3,0,0,0,0,0,0,"day","day",1E+20
+"ecwhalf",3,0,0,0,0,0,0,"day","day",0.144
+"ecthalf",3,0,0,0,0,0,0,"day","day",1E+20
+"numprog",3,0,0,0,0,0,0,"N/A","N/A",0
+"DEN",0,0,0,0,0,0,0,"kg/m^2","kg/m^2",240
+"RET",0,0,0,0,0,0,0,"N/A","N/A",0.25
+"YLD",1,0,0,0,0,0,0,"kg/m^2","kg/m^2",2
+"YLD",2,0,0,0,0,0,0,"kg/m^2","kg/m^2",2
+"YLD",3,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"YLD",4,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"UMT",0,0,0,0,0,0,0,"kg/d","kg/d",68
+"UMK",0,0,0,0,0,0,0,"kg/d","kg/d",55
+"WMT",0,0,0,0,0,0,0,"L/d","L/d",50
+"WMK",0,0,0,0,0,0,0,"L/d","L/d",60
+"USL",1,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"USL",2,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"TRN",1,0,0,0,0,0,0,"N/A","N/A",1
+"TRN",2,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",3,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",4,0,0,0,0,0,0,"N/A","N/A",1
+"FFC",1,0,0,0,0,0,0,"N/A","N/A",1
+"FFC",2,0,0,0,0,0,0,"N/A","N/A",1
+"FWC",1,0,0,0,0,0,0,"N/A","N/A",1
+"FWC",2,0,0,0,0,0,0,"N/A","N/A",1
+"TCRP",1,0,0,0,0,0,0,"day","day",2
+"TCRP",2,0,0,0,0,0,0,"day","day",60
+"TCRP",3,0,0,0,0,0,0,"day","day",20
+"TCRP",4,0,0,0,0,0,0,"day","day",4
+"TGRW",1,1,0,0,0,0,0,"day","day",60
+"TGRW",2,1,0,0,0,0,0,"day","day",60
+"TGRW",3,1,0,0,0,0,0,"day","day",30
+"TGRW",4,1,0,0,0,0,0,"day","day",30
+"TGRW",1,2,0,0,0,0,0,"day","day",60
+"TGRW",2,2,0,0,0,0,0,"day","day",60
+"TGRW",3,2,0,0,0,0,0,"day","day",30
+"TGRW",4,2,0,0,0,0,0,"day","day",30
+"TGRW",1,3,0,0,0,0,0,"day","day",60
+"TGRW",2,3,0,0,0,0,0,"day","day",60
+"TGRW",3,3,0,0,0,0,0,"day","day",30
+"TGRW",4,3,0,0,0,0,0,"day","day",30
+"TGRW",1,4,0,0,0,0,0,"day","day",60
+"TGRW",2,4,0,0,0,0,0,"day","day",60
+"TGRW",3,4,0,0,0,0,0,"day","day",30
+"TGRW",4,4,0,0,0,0,0,"day","day",30
+"TGRW",1,5,0,0,0,0,0,"day","day",60
+"TGRW",2,5,0,0,0,0,0,"day","day",60
+"TGRW",3,5,0,0,0,0,0,"day","day",30
+"TGRW",4,5,0,0,0,0,0,"day","day",30
+"CML",0,0,0,0,0,0,0,"kg/m^3","kg/m^3",0.00000001
+"RESFAC",0,0,0,0,0,0,0,"1/m","1/m",0.0000001
+"ANDFC",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.5
+"ANDFR",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.1
+"ANDFO",0,0,0,0,0,0,0,"L/m^3","L/m^3",0
+"rcp6",71
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"KEXPTH",2,0,0,0,0,0,0,"N/A","N/A",1
+"KEXPTH",11,0,0,0,0,0,0,"N/A","N/A",1
+"INHALE",0,0,0,0,0,0,0,"N/A","N/A",0
+"BODYWT",0,0,0,0,0,0,0,"kg","kg",70
+"EXPDUR",0,0,0,0,0,0,0,"yr","yr",30
+"TAGE1",0,0,0,0,0,0,0,"yr","yr",0
+"TAGE2",0,0,0,0,0,0,0,"yr","yr",70
+"UDWGW",0,0,0,0,0,0,0,"L/d","L/d",2
+"UDWSW",0,0,0,0,0,0,0,"L/d","L/d",2
+"UBR",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"UBRES",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"FREQ",18,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",19,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",24,0,0,0,0,0,0,"N/A","N/A",1
+"FTI",0,0,0,0,0,0,0,"N/A","N/A",0.83
+"SHI",0,0,0,0,0,0,0,"N/A","N/A",1
+"FTO",0,0,0,0,0,0,0,"N/A","N/A",0.17
+"SHO",0,0,0,0,0,0,0,"N/A","N/A",1
+"UEXT",0,0,0,0,0,0,0,"hr/d","hr/d",24
+"FREQ",23,0,0,0,0,0,0,"N/A","N/A",1
+"UAG",1,0,0,0,0,0,0,"kg/d","kg/d",0.021
+"UAG",2,0,0,0,0,0,0,"kg/d","kg/d",0.13
+"UAG",3,0,0,0,0,0,0,"kg/d","kg/d",0.065
+"UAG",4,0,0,0,0,0,0,"L/d","L/d",0.075
+"FREQ",4,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",5,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",6,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",7,0,0,0,0,0,0,"N/A","N/A",1
+"UAQ",1,0,0,0,0,0,0,"kg/d","kg/d",0.007
+"UAQ",2,0,0,0,0,0,0,"kg/d","kg/d",0.003
+"FREQ",8,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",9,0,0,0,0,0,0,"N/A","N/A",1
+"TESHWR",0,0,0,0,0,0,0,"hr","hr",0.167
+"EVSHWR",0,0,0,0,0,0,0,"N/A","N/A",1
+"UBRSH",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"UBW",0,0,0,0,0,0,0,"L/hr","L/hr",0.06
+"ASKIN",1,0,0,0,0,0,0,"cm^2","cm^2",20000
+"FREQ",1,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",2,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",3,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",17,0,0,0,0,0,0,"N/A","N/A",1
+"USW",0,0,0,0,0,0,0,"L/hr","L/hr",0.1
+"TESWIM",0,0,0,0,0,0,0,"hr","hr",0.5
+"EVSWIM",0,0,0,0,0,0,0,"N/A","N/A",0.066
+"ASKIN",2,0,0,0,0,0,0,"cm^2","cm^2",20000
+"FREQ",10,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",11,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",20,0,0,0,0,0,0,"N/A","N/A",1
+"TEBOAT",0,0,0,0,0,0,0,"hr","hr",0.5
+"EVBOAT",0,0,0,0,0,0,0,"N/A","N/A",0.066
+"SBRF",0,0,0,0,0,0,0,"N/A","N/A",0.5
+"FREQ",21,0,0,0,0,0,0,"N/A","N/A",1
+"TESHOR",0,0,0,0,0,0,0,"hr","hr",2
+"EVSHOR",0,0,0,0,0,0,0,"N/A","N/A",0.017
+"USED",0,0,0,0,0,0,0,"g/hr","g/hr",0.1
+"SWF",0,0,0,0,0,0,0,"N/A","N/A",0.2
+"ASKIN",4,0,0,0,0,0,0,"cm^2","cm^2",10000
+"FREQ",12,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",13,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",22,0,0,0,0,0,0,"N/A","N/A",1
+"SKINL",0,0,0,0,0,0,0,"cm","cm",0.001
+"ASKIN",3,0,0,0,0,0,0,"cm^2","cm^2",5800
+"ADHFAC",0,0,0,0,0,0,0,"mg/cm^2","mg/cm^2",1
+"EVSOIL",0,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",15,0,0,0,0,0,0,"N/A","N/A",1
+"USOIL",0,0,0,0,0,0,0,"g/d","g/d",0.1
+"FREQ",14,0,0,0,0,0,0,"N/A","N/A",1
+"TMS",0,0,0,0,0,0,0,"m","m",0.04
+"RHOMS",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"FREQ",25,0,0,0,0,0,0,"N/A","N/A",1
+"hei7",16
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"HEINC",0,0,0,0,0,0,0,"N/A","N/A",True
+"HECONINC",0,0,0,0,0,0,0,"risk/Sv","risk/Sv",0.06
+"HEFAT",0,0,0,0,0,0,0,"N/A","N/A",True
+"HECONFAT",0,0,0,0,0,0,0,"risk/Sv","risk/Sv",0.05
+"HEFSH",0,0,0,0,0,0,0,"N/A","N/A",True
+"HECONFSH",0,0,0,0,0,0,0,"risk/Sv","risk/Sv",0.073
+"HECEDE",0,0,0,0,0,0,0,"N/A","N/A",True
+"IHEAST",0,0,0,0,0,0,0,"N/A","N/A",0
+"TSOIL",0,0,0,0,0,0,0,"m","m",0.04
+"DSOIL",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"CHEMRISK",0,0,0,0,0,0,0,"N/A","N/A",True
+"CHEMHI",0,0,0,0,0,0,0,"N/A","N/A",True
+"RFDLIM",0,0,0,0,0,0,0,"N/A","N/A",0
+"CETOXT",0,0,0,0,0,0,0,"N/A","N/A",False
+"INHALE",0,0,0,0,0,0,0,"N/A","N/A",0
+"FUI",316
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.4
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",1,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"aquName",1,1,0,0,0,0,0,"N/A","N/A","aqu4"
+"aquLabel",1,1,0,0,0,0,0,"N/A","N/A","Aquifer"
+"aquModel",1,1,0,0,0,0,0,"N/A","N/A","Mepas 4.1 Saturated Zone Module"
+"aquDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepAQU.des"
+"aquX",1,1,0,0,0,0,0,"N/A","N/A",0
+"aquY",1,1,0,0,0,0,0,"N/A","N/A",0
+"aquZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"aquScrX",1,1,0,0,0,0,0,"N/A","N/A",368.5221
+"aquScrY",1,1,0,0,0,0,0,"N/A","N/A",564.0653
+"aquModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"aquSrcName",1,1,1,0,0,0,0,"N/A","N/A","vad8"
+"aquType",1,1,1,0,0,0,0,"N/A","N/A","Vadose Zone"
+"aquSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"aquTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"aquNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"heiName",1,1,0,0,0,0,0,"N/A","N/A","hei7"
+"heiLabel",1,1,0,0,0,0,0,"N/A","N/A","Health_Impacts"
+"heiModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Human Health Impact Module"
+"heiDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepHEI.des"
+"heiX",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiY",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiScrX",1,1,0,0,0,0,0,"N/A","N/A",791.7794
+"heiScrY",1,1,0,0,0,0,0,"N/A","N/A",117.1875
+"heiModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"heiSrcName",1,1,1,0,0,0,0,"N/A","N/A","rcp6"
+"heiType",1,1,1,0,0,0,0,"N/A","N/A","Receptor Intake"
+"heiSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"srcName",1,1,0,0,0,0,0,"N/A","N/A","src2"
+"srcLabel",1,1,0,0,0,0,0,"N/A","N/A","Source"
+"srcModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Computed Source Term Release Module"
+"srcDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSrc.des"
+"srcX",1,1,0,0,0,0,0,"N/A","N/A",0
+"srcY",1,1,0,0,0,0,0,"N/A","N/A",0
+"srcZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"srcScrX",1,1,0,0,0,0,0,"N/A","N/A",45.75163
+"srcScrY",1,1,0,0,0,0,0,"N/A","N/A",266.1488
+"srcModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"srcSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"srcTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"srcNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"vadName",1,1,0,0,0,0,0,"N/A","N/A","vad3"
+"vadLabel",1,1,0,0,0,0,0,"N/A","N/A","Vadoze_1"
+"vadModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Vadose Zone Module"
+"vadDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepVAD.des"
+"vadX",1,1,0,0,0,0,0,"N/A","N/A",0
+"vadY",1,1,0,0,0,0,0,"N/A","N/A",0
+"vadZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"vadScrX",1,1,0,0,0,0,0,"N/A","N/A",117.0825
+"vadScrY",1,1,0,0,0,0,0,"N/A","N/A",381.1252
+"vadModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"vadSrcName",1,1,1,0,0,0,0,"N/A","N/A","src2"
+"vadType",1,1,1,0,0,0,0,"N/A","N/A","Source"
+"vadSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"vadTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"vadName",1,2,0,0,0,0,0,"N/A","N/A","vad8"
+"vadLabel",1,2,0,0,0,0,0,"N/A","N/A","Vadoze_2"
+"vadModel",1,2,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Vadose Zone Module"
+"vadDesPath",1,2,0,0,0,0,0,"N/A","N/A","\FRAMES\MepVAD.des"
+"vadX",1,2,0,0,0,0,0,"N/A","N/A",0
+"vadY",1,2,0,0,0,0,0,"N/A","N/A",0
+"vadZ",1,2,0,0,0,0,0,"N/A","N/A",0
+"vadScrX",1,2,0,0,0,0,0,"N/A","N/A",238.0038
+"vadScrY",1,2,0,0,0,0,0,"N/A","N/A",484.5735
+"vadModelStat",1,2,0,0,0,0,0,"N/A","N/A",2
+"vadSrcName",1,2,1,0,0,0,0,"N/A","N/A","vad3"
+"vadType",1,2,1,0,0,0,0,"N/A","N/A","Vadose Zone"
+"vadSrcNum",1,2,0,0,0,0,0,"N/A","N/A",1
+"vadTypeNum",1,2,0,0,0,0,0,"N/A","N/A",1
+"vadNum",1,0,0,0,0,0,0,"N/A","N/A",2
+"expName",1,1,0,0,0,0,0,"N/A","N/A","fcm5"
+"expLabel",1,1,0,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"expModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Chronic Exposure Module"
+"expDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepEXP.des"
+"expX",1,1,0,0,0,0,0,"N/A","N/A",123
+"expY",1,1,0,0,0,0,0,"N/A","N/A",234
+"expZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"expScrX",1,1,0,0,0,0,0,"N/A","N/A",565.1359
+"expScrY",1,1,0,0,0,0,0,"N/A","N/A",379.2354
+"expModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"expSrcName",1,1,1,0,0,0,0,"N/A","N/A","air9"
+"expType",1,1,1,0,0,0,0,"N/A","N/A","Air"
+"expSrcName",1,1,2,0,0,0,0,"N/A","N/A","aqu4"
+"expType",1,1,2,0,0,0,0,"N/A","N/A","Aquifer"
+"expSrcName",1,1,3,0,0,0,0,"N/A","N/A","riv10"
+"expType",1,1,3,0,0,0,0,"N/A","N/A","Surface Water"
+"expSrcNum",1,1,0,0,0,0,0,"N/A","N/A",3
+"expTypeNum",1,1,0,0,0,0,0,"N/A","N/A",3
+"expNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"airName",1,1,0,0,0,0,0,"N/A","N/A","air9"
+"airLabel",1,1,0,0,0,0,0,"N/A","N/A","my stuff"
+"airModel",1,1,0,0,0,0,0,"N/A","N/A","Mepas 4.1 Air Module"
+"airDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepAIR.des"
+"airX",1,1,0,0,0,0,0,"N/A","N/A",0
+"airY",1,1,0,0,0,0,0,"N/A","N/A",0
+"airZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"airScrX",1,1,0,0,0,0,0,"N/A","N/A",339.6901
+"airScrY",1,1,0,0,0,0,0,"N/A","N/A",207.331
+"airModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"airSrcName",1,1,1,0,0,0,0,"N/A","N/A","src2"
+"airType",1,1,1,0,0,0,0,"N/A","N/A","Source"
+"airSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"airTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"airNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"rcpName",1,1,0,0,0,0,0,"N/A","N/A","rcp6"
+"rcpLabel",1,1,0,0,0,0,0,"N/A","N/A","Receptor_Intake"
+"rcpModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Intake Module"
+"rcpDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepRCP.des"
+"rcpX",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpY",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpScrX",1,1,0,0,0,0,0,"N/A","N/A",691.8459
+"rcpScrY",1,1,0,0,0,0,0,"N/A","N/A",253.1927
+"rcpModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"rcpSrcName",1,1,1,0,0,0,0,"N/A","N/A","fcm5"
+"rcpType",1,1,1,0,0,0,0,"N/A","N/A","Exposure Pathways"
+"rcpSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"rivName",1,1,0,0,0,0,0,"N/A","N/A","riv10"
+"rivLabel",1,1,0,0,0,0,0,"N/A","N/A","Surface_Water"
+"rivModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 River Module"
+"rivDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSW.des"
+"rivX",1,1,0,0,0,0,0,"N/A","N/A",0
+"rivY",1,1,0,0,0,0,0,"N/A","N/A",0
+"rivZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"rivScrX",1,1,0,0,0,0,0,"N/A","N/A",554.7025
+"rivScrY",1,1,0,0,0,0,0,"N/A","N/A",499.8185
+"rivModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"rivSrcName",1,1,1,0,0,0,0,"N/A","N/A","aqu4"
+"rivType",1,1,1,0,0,0,0,"N/A","N/A","Aquifer"
+"rivSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rivTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rivNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"conName",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"conLabel",1,1,0,0,0,0,0,"N/A","N/A","Contaminants"
+"conModel",1,1,0,0,0,0,0,"N/A","N/A","FRAMES Default Chemical Database Selection"
+"conDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\contsel.des"
+"conX",1,1,0,0,0,0,0,"N/A","N/A",0
+"conY",1,1,0,0,0,0,0,"N/A","N/A",0
+"conZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"conScrX",1,1,0,0,0,0,0,"N/A","N/A",112.782
+"conScrY",1,1,0,0,0,0,0,"N/A","N/A",46.96673
+"conModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"conSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"NUMCON",1,0,0,0,0,0,0,"n/a","n/a",3
+"FSCASID",1,1,0,0,0,0,0,"n/a","n/a","7440360"
+"FSCNAME",1,1,0,0,0,0,0,"n/a","n/a","Antimony"
+"NDS",1,1,0,0,0,0,0,"n/a","n/a",0
+"FSCASID",1,2,0,0,0,0,0,"n/a","n/a","SR90"
+"FSCNAME",1,2,0,0,0,0,0,"n/a","n/a","STRONTIUM-90"
+"NDS",1,2,0,0,0,0,0,"n/a","n/a",1
+"FSCASID",1,2,1,0,0,0,0,"n/a","n/a","Y90"
+"FSCNAME",1,2,1,0,0,0,0,"n/a","n/a","YTTRIUM-90"
+"FSCASID",1,3,0,0,0,0,0,"n/a","n/a","79016"
+"FSCNAME",1,3,0,0,0,0,0,"n/a","n/a","Trichloroethylene"
+"NDS",1,3,0,0,0,0,0,"n/a","n/a",0
+"CLWM",1,1,0,0,0,0,327,"g/mole","g/mole",122.0
+"CLSOL",1,1,0,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,1,0,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,1,0,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,1,0,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,1,0,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLDCAIR",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLDCWAT",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0
+"CLCPFH",1,1,0,0,0,0,0,"(mg/kg/d)^-1","(mg/kg/d)^-1",0
+"CLCPFG",1,1,0,0,0,0,0,"(mg/kg/d)^-1","(mg/kg/d)^-1",0
+"CLRFDH",1,1,0,0,0,0,516,"mg/kg/d","mg/kg/d",1.43E-04
+"CLRFDG",1,1,0,0,0,0,481,"mg/kg/d","mg/kg/d",0.0004000
+"CLABSKN",1,1,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,1,0,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,1,0,0,0,0,95,"n/a","n/a",0.8000
+"CLVD",1,1,0,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,1,0,0,0,0,402,"L/kg","L/kg",200.0
+"CLBFI",1,1,0,0,0,0,95,"L/kg","L/kg",10.00
+"CLFMT",1,1,0,0,0,0,402,"d/kg","d/kg",0.001000
+"CLFMK",1,1,0,0,0,0,402,"d/L","d/L",0.0001000
+"CLBVLV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVRV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",5.6E-4
+"CLBVCL",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",3.0E-2
+"CLBVAF",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVAH",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-4
+"CLBVAG",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",3.0E-2
+"CLTHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLGHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLWHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLSHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLCLASS",1,1,0,0,0,0,333,"n/a","n/a",3
+"CLKTYPE",1,1,0,0,0,0,0,"n/a","n/a",5
+"CLFONEI",1,1,0,0,0,0,495,"n/a","n/a",0.2
+"CLBVOV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",5.6E-4
+"CLRAAS",1,1,0,0,0,0,0,"n/a","n/a",12
+"CLBVFR",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.0E-5
+"CLPCDEN",1,1,0,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,2,0,0,0,0,390,"g/mole","g/mole",90.00
+"CLSOL",1,2,0,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,2,0,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,2,0,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,2,0,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,2,0,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,2,0,0,0,0,409,"cm^2/s","cm^2/s",5.000E-11
+"CLDFAD",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",1.30E-06
+"CLRDFGI",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",1.42E-07
+"CLRDFS",1,2,0,0,0,0,398,"rem/pCi","rem/pCi",4.100E-07
+"CLDEX",1,2,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1.00E-13
+"CLDIMR",1,2,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.94E-13
+"CLDSH",1,2,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.79E-15
+"CLSFH",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",5.94E-11
+"CLSFG",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",4.090E-11
+"CLSFEX",1,2,0,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.36E-10
+"CLABSKN",1,2,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,2,0,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,2,0,0,0,0,95,"n/a","n/a",0.2000
+"CLVD",1,2,0,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,2,0,0,0,0,402,"L/kg","L/kg",50.00
+"CLBFI",1,2,0,0,0,0,95,"L/kg","L/kg",100.0
+"CLFMT",1,2,0,0,0,0,402,"d/kg","d/kg",0.0003000
+"CLFMK",1,2,0,0,0,0,402,"d/L","d/L",0.001500
+"CLBVLV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVRV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.1E-1
+"CLBVCL",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-1
+"CLBVAF",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAH",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAG",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.3E-1
+"CLTHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLGHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLWHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLSHALF",1,2,0,0,0,0,392,"days","days",1.06E+04
+"CLCLASS",1,2,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,0,0,0,0,403,"n/a","n/a",0.3000
+"CLBVOV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",8.1E-1
+"CLRAAS",1,2,0,0,0,0,0,"n/a","n/a",14
+"CLBVFR",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.7E-1
+"CLPCDEN",1,2,0,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,2,1,0,0,0,390,"g/mole","g/mole",90.00
+"CLSOL",1,2,1,0,0,0,0,"mg/L","mg/L",0
+"CLVAP",1,2,1,0,0,0,0,"mm Hg","mm Hg",0
+"CLHLC",1,2,1,0,0,0,0,"atm m^3/mole","atm m^3/mole",0
+"CLKOC",1,2,1,0,0,0,0,"mL/g","mL/g",0
+"CLKOW",1,2,1,0,0,0,0,"mL/mL","mL/mL",0
+"CLDCGRT",1,2,1,0,0,0,410,"cm^2/s","cm^2/s",5.000E-08
+"CLDFAD",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",8.440E-09
+"CLRDFGI",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",1.080E-08
+"CLRDFS",1,2,1,0,0,0,398,"rem/pCi","rem/pCi",4.400E-09
+"CLDEX",1,2,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.530E-12
+"CLDIMR",1,2,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",4.830E-12
+"CLDSH",1,2,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",7.090E-14
+"CLSFH",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",9.90E-12
+"CLSFG",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.50E-11
+"CLSFEX",1,2,1,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",1.82E-8
+"CLABSKN",1,2,1,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,2,1,0,0,0,0,"cm/hr","cm/hr",0
+"CLWPF",1,2,1,0,0,0,95,"n/a","n/a",0.2000
+"CLVD",1,2,1,0,0,0,329,"m/s","m/s",0.001000
+"CLBFF",1,2,1,0,0,0,402,"L/kg","L/kg",25.00
+"CLBFI",1,2,1,0,0,0,95,"L/kg","L/kg",1000.
+"CLFMT",1,2,1,0,0,0,402,"d/kg","d/kg",0.0003000
+"CLFMK",1,2,1,0,0,0,402,"d/L","d/L",2.000E-05
+"CLBVLV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVRV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLBVCL",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLBVAF",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVAH",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.5E-2
+"CLBVAG",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLTHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLGHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLWHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLSHALF",1,2,1,0,0,0,392,"days","days",2.70E+00
+"CLCLASS",1,2,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,1,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,1,0,0,0,403,"n/a","n/a",0.0001000
+"CLBVOV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLRAAS",1,2,1,0,0,0,0,"n/a","n/a",14
+"CLBVFR",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",6.0E-3
+"CLPCDEN",1,2,1,0,0,0,0,"g/mL","g/mL",0
+"CLWM",1,3,0,0,0,0,480,"g/mole","g/mole",131.39
+"CLSOL",1,3,0,0,0,0,480,"mg/L","mg/L",1100.
+"CLVAP",1,3,0,0,0,0,480,"mm Hg","mm Hg",69.
+"CLHLC",1,3,0,0,0,0,480,"atm m^3/mole","atm m^3/mole",9.85E-3
+"CLKOC",1,3,0,0,0,0,211,"mL/g","mL/g",126.0
+"CLKOW",1,3,0,0,0,0,480,"mL/mL","mL/mL",263.0
+"CLDCGRT",1,3,0,0,0,0,410,"cm^2/s","cm^2/s",5.000E-08
+"CLDCAIR",1,3,0,0,0,0,0,"cm^2/s","cm^2/s",8.91000428686245E-02
+"CLDCWAT",1,3,0,0,0,0,0,"cm^2/s","cm^2/s",8.43350920331618E-06
+"CLCPFH",1,3,0,0,0,0,404,"(mg/kg/d)^-1","(mg/kg/d)^-1",0.01300
+"CLCPFG",1,3,0,0,0,0,404,"(mg/kg/d)^-1","(mg/kg/d)^-1",0.01100
+"CLRFDH",1,3,0,0,0,0,0,"mg/kg/d","mg/kg/d",0
+"CLRFDG",1,3,0,0,0,0,0,"mg/kg/d","mg/kg/d",0
+"CLABSKN",1,3,0,0,0,0,0,"fraction","fraction",0
+"CLKPERM",1,3,0,0,0,0,397,"cm/hr","cm/hr",0.2300
+"CLWPF",1,3,0,0,0,0,329,"n/a","n/a",1.000
+"CLVD",1,3,0,0,0,0,0,"m/s","m/s",0
+"CLBFF",1,3,0,0,0,0,161,"L/kg","L/kg",11.00
+"CLBFI",1,3,0,0,0,0,0,"L/kg","L/kg",0
+"CLFMT",1,3,0,0,0,0,0,"d/kg","d/kg",0
+"CLFMK",1,3,0,0,0,0,0,"d/L","d/L",0
+"CLBVLV",1,3,0,0,0,0,0,"kg soil/kg dry","kg soil/kg dry",0
+"CLTHALF",1,3,0,0,0,0,0,"days","days",0.00E+00
+"CLGHALF",1,3,0,0,0,0,0,"days","days",0.00E+00
+"CLWHALF",1,3,0,0,0,0,329,"days","days",1.44E-01
+"CLSHALF",1,3,0,0,0,0,330,"days","days",1.94E+01
+"CLCLASS",1,3,0,0,0,0,333,"n/a","n/a",5
+"CLKTYPE",1,3,0,0,0,0,0,"n/a","n/a",2
+"CLFONEI",1,3,0,0,0,0,496,"n/a","n/a",0.9
+"CLRAAS",1,3,0,0,0,0,0,"n/a","n/a",4
+"CLPCDEN",1,3,0,0,0,0,0,"g/mL","g/mL",1.46
+"CLCHEM",1,3,0,0,0,0,0,"n/a","n/a",7
+"CSM",276                               
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.4
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",0,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"NumMod",1,0,0,0,0,0,0,"N/A","N/A",10
+"ModId",1,1,0,0,0,0,0,"N/A","N/A","rcp6"
+"ModLabel",1,1,0,0,0,0,0,"N/A","N/A","Receptor_Intake"
+"ModModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Intake Module"
+"ModDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepRCP.des"
+"ModLocX",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,1,0,0,0,0,0,"N/A","N/A",691.8459
+"ModScrY",1,1,0,0,0,0,0,"N/A","N/A",253.1927
+"ModState",1,1,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,1,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,1,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,1,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,1,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,1,2,0,0,0,0,"N/A","N/A","fcm5"
+"ModSrcLabel",1,1,2,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModSrcType",1,1,2,0,0,0,0,"N/A","N/A","epf"
+"ModSrcQual",1,1,2,0,0,0,0,"N/A","N/A","Exposure Pathways Concentration"
+"ModSinkId",1,1,1,0,0,0,0,"N/A","N/A","hei7"
+"ModSinkLabel",1,1,1,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModSinkType",1,1,1,0,0,0,0,"N/A","N/A","rif"
+"ModSinkQual",1,1,1,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcNum",1,1,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,2,0,0,0,0,0,"N/A","N/A","con1"
+"ModLabel",1,2,0,0,0,0,0,"N/A","N/A","Contaminants"
+"ModModel",1,2,0,0,0,0,0,"N/A","N/A","FRAMES Default Chemical Database Selection"
+"ModDesPath",1,2,0,0,0,0,0,"N/A","N/A","\FRAMES\contsel.des"
+"ModLocX",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,2,0,0,0,0,0,"N/A","N/A",112.782
+"ModScrY",1,2,0,0,0,0,0,"N/A","N/A",46.96673
+"ModState",1,2,0,0,0,0,0,"N/A","N/A",2
+"ModSinkId",1,2,1,0,0,0,0,"N/A","N/A","rcp6"
+"ModSinkLabel",1,2,1,0,0,0,0,"N/A","N/A","Receptor_Intake"
+"ModSinkType",1,2,1,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,2,0,0,0,0,"N/A","N/A","air9"
+"ModSinkLabel",1,2,2,0,0,0,0,"N/A","N/A","my stuff"
+"ModSinkType",1,2,2,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,2,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,3,0,0,0,0,"N/A","N/A","aqu4"
+"ModSinkLabel",1,2,3,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSinkType",1,2,3,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,3,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,4,0,0,0,0,"N/A","N/A","fcm5"
+"ModSinkLabel",1,2,4,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModSinkType",1,2,4,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,4,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,5,0,0,0,0,"N/A","N/A","src2"
+"ModSinkLabel",1,2,5,0,0,0,0,"N/A","N/A","Source"
+"ModSinkType",1,2,5,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,5,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,6,0,0,0,0,"N/A","N/A","riv10"
+"ModSinkLabel",1,2,6,0,0,0,0,"N/A","N/A","Surface_Water"
+"ModSinkType",1,2,6,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,6,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,7,0,0,0,0,"N/A","N/A","vad3"
+"ModSinkLabel",1,2,7,0,0,0,0,"N/A","N/A","Vadoze_1"
+"ModSinkType",1,2,7,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,7,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,8,0,0,0,0,"N/A","N/A","vad8"
+"ModSinkLabel",1,2,8,0,0,0,0,"N/A","N/A","Vadoze_2"
+"ModSinkType",1,2,8,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,8,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,2,9,0,0,0,0,"N/A","N/A","hei7"
+"ModSinkLabel",1,2,9,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModSinkType",1,2,9,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,2,9,0,0,0,0,"N/A","N/A",""
+"ModSrcNum",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModSinkNum",1,2,0,0,0,0,0,"N/A","N/A",9
+"ModId",1,3,0,0,0,0,0,"N/A","N/A","air9"
+"ModLabel",1,3,0,0,0,0,0,"N/A","N/A","my stuff"
+"ModModel",1,3,0,0,0,0,0,"N/A","N/A","Mepas 4.1 Air Module"
+"ModDesPath",1,3,0,0,0,0,0,"N/A","N/A","\FRAMES\MepAIR.des"
+"ModLocX",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,3,0,0,0,0,0,"N/A","N/A",339.6901
+"ModScrY",1,3,0,0,0,0,0,"N/A","N/A",207.331
+"ModState",1,3,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,3,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,3,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,3,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,3,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,3,1,0,0,0,0,"N/A","N/A","fcm5"
+"ModSinkLabel",1,3,1,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModSinkType",1,3,1,0,0,0,0,"N/A","N/A","ato"
+"ModSinkQual",1,3,1,0,0,0,0,"N/A","N/A","Chronic Polar Air"
+"ModSrcId",1,3,2,0,0,0,0,"N/A","N/A","src2"
+"ModSrcLabel",1,3,2,0,0,0,0,"N/A","N/A","Source"
+"ModSrcType",1,3,2,0,0,0,0,"N/A","N/A","aff"
+"ModSrcQual",1,3,2,0,0,0,0,"N/A","N/A","Air Emission Rates"
+"ModSrcNum",1,3,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,3,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,4,0,0,0,0,0,"N/A","N/A","aqu4"
+"ModLabel",1,4,0,0,0,0,0,"N/A","N/A","Aquifer"
+"ModModel",1,4,0,0,0,0,0,"N/A","N/A","Mepas 4.1 Saturated Zone Module"
+"ModDesPath",1,4,0,0,0,0,0,"N/A","N/A","\FRAMES\MepAQU.des"
+"ModLocX",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,4,0,0,0,0,0,"N/A","N/A",368.5221
+"ModScrY",1,4,0,0,0,0,0,"N/A","N/A",564.0653
+"ModState",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,4,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,4,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,4,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,4,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,4,1,0,0,0,0,"N/A","N/A","fcm5"
+"ModSinkLabel",1,4,1,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModSinkType",1,4,1,0,0,0,0,"N/A","N/A","wcf"
+"ModSinkQual",1,4,1,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSinkId",1,4,2,0,0,0,0,"N/A","N/A","riv10"
+"ModSinkLabel",1,4,2,0,0,0,0,"N/A","N/A","Surface_Water"
+"ModSinkType",1,4,2,0,0,0,0,"N/A","N/A","wff"
+"ModSinkQual",1,4,2,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcId",1,4,2,0,0,0,0,"N/A","N/A","vad8"
+"ModSrcLabel",1,4,2,0,0,0,0,"N/A","N/A","Vadoze_2"
+"ModSrcType",1,4,2,0,0,0,0,"N/A","N/A","wff"
+"ModSrcQual",1,4,2,0,0,0,0,"N/A","N/A","Vadose"
+"ModSrcNum",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModId",1,5,0,0,0,0,0,"N/A","N/A","fcm5"
+"ModLabel",1,5,0,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModModel",1,5,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Chronic Exposure Module"
+"ModDesPath",1,5,0,0,0,0,0,"N/A","N/A","\FRAMES\MepEXP.des"
+"ModLocX",1,5,0,0,0,0,0,"N/A","N/A",123
+"ModLocY",1,5,0,0,0,0,0,"N/A","N/A",234
+"ModLocZ",1,5,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,5,0,0,0,0,0,"N/A","N/A",565.1359
+"ModScrY",1,5,0,0,0,0,0,"N/A","N/A",379.2354
+"ModState",1,5,0,0,0,0,0,"N/A","N/A",2
+"ModSinkId",1,5,1,0,0,0,0,"N/A","N/A","rcp6"
+"ModSinkLabel",1,5,1,0,0,0,0,"N/A","N/A","Receptor_Intake"
+"ModSinkType",1,5,1,0,0,0,0,"N/A","N/A","epf"
+"ModSinkQual",1,5,1,0,0,0,0,"N/A","N/A","Exposure Pathways Concentration"
+"ModSrcId",1,5,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,5,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,5,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,5,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,5,2,0,0,0,0,"N/A","N/A","air9"
+"ModSrcLabel",1,5,2,0,0,0,0,"N/A","N/A","my stuff"
+"ModSrcType",1,5,2,0,0,0,0,"N/A","N/A","ato"
+"ModSrcQual",1,5,2,0,0,0,0,"N/A","N/A","Chronic Polar Air"
+"ModSrcId",1,5,3,0,0,0,0,"N/A","N/A","aqu4"
+"ModSrcLabel",1,5,3,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcType",1,5,3,0,0,0,0,"N/A","N/A","wcf"
+"ModSrcQual",1,5,3,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcId",1,5,4,0,0,0,0,"N/A","N/A","riv10"
+"ModSrcLabel",1,5,4,0,0,0,0,"N/A","N/A","Surface_Water"
+"ModSrcType",1,5,4,0,0,0,0,"N/A","N/A","wcf"
+"ModSrcQual",1,5,4,0,0,0,0,"N/A","N/A","Surface Water"
+"ModSrcNum",1,5,0,0,0,0,0,"N/A","N/A",4
+"ModSinkNum",1,5,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,6,0,0,0,0,0,"N/A","N/A","src2"
+"ModLabel",1,6,0,0,0,0,0,"N/A","N/A","Source"
+"ModModel",1,6,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Computed Source Term Release Module"
+"ModDesPath",1,6,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSrc.des"
+"ModLocX",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,6,0,0,0,0,0,"N/A","N/A",45.75163
+"ModScrY",1,6,0,0,0,0,0,"N/A","N/A",266.1488
+"ModState",1,6,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,6,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,6,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,6,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,6,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,6,1,0,0,0,0,"N/A","N/A","air9"
+"ModSinkLabel",1,6,1,0,0,0,0,"N/A","N/A","my stuff"
+"ModSinkType",1,6,1,0,0,0,0,"N/A","N/A","aff"
+"ModSinkQual",1,6,1,0,0,0,0,"N/A","N/A","Air Emission Rates"
+"ModSinkId",1,6,2,0,0,0,0,"N/A","N/A","vad3"
+"ModSinkLabel",1,6,2,0,0,0,0,"N/A","N/A","Vadoze_1"
+"ModSinkType",1,6,2,0,0,0,0,"N/A","N/A","wff"
+"ModSinkQual",1,6,2,0,0,0,0,"N/A","N/A","Vadose"
+"ModSrcNum",1,6,0,0,0,0,0,"N/A","N/A",1
+"ModSinkNum",1,6,0,0,0,0,0,"N/A","N/A",2
+"ModId",1,7,0,0,0,0,0,"N/A","N/A","riv10"
+"ModLabel",1,7,0,0,0,0,0,"N/A","N/A","Surface_Water"
+"ModModel",1,7,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 River Module"
+"ModDesPath",1,7,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSW.des"
+"ModLocX",1,7,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,7,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,7,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,7,0,0,0,0,0,"N/A","N/A",554.7025
+"ModScrY",1,7,0,0,0,0,0,"N/A","N/A",499.8185
+"ModState",1,7,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,7,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,7,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,7,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,7,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,7,2,0,0,0,0,"N/A","N/A","aqu4"
+"ModSrcLabel",1,7,2,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcType",1,7,2,0,0,0,0,"N/A","N/A","wff"
+"ModSrcQual",1,7,2,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSinkId",1,7,1,0,0,0,0,"N/A","N/A","fcm5"
+"ModSinkLabel",1,7,1,0,0,0,0,"N/A","N/A","Groundwater_Well"
+"ModSinkType",1,7,1,0,0,0,0,"N/A","N/A","wcf"
+"ModSinkQual",1,7,1,0,0,0,0,"N/A","N/A","Surface Water"
+"ModSrcNum",1,7,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,7,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,8,0,0,0,0,0,"N/A","N/A","vad3"
+"ModLabel",1,8,0,0,0,0,0,"N/A","N/A","Vadoze_1"
+"ModModel",1,8,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Vadose Zone Module"
+"ModDesPath",1,8,0,0,0,0,0,"N/A","N/A","\FRAMES\MepVAD.des"
+"ModLocX",1,8,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,8,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,8,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,8,0,0,0,0,0,"N/A","N/A",117.0825
+"ModScrY",1,8,0,0,0,0,0,"N/A","N/A",381.1252
+"ModState",1,8,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,8,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,8,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,8,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,8,1,0,0,0,0,"N/A","N/A",""
+"ModSrcId",1,8,2,0,0,0,0,"N/A","N/A","src2"
+"ModSrcLabel",1,8,2,0,0,0,0,"N/A","N/A","Source"
+"ModSrcType",1,8,2,0,0,0,0,"N/A","N/A","wff"
+"ModSrcQual",1,8,2,0,0,0,0,"N/A","N/A","Vadose"
+"ModSinkId",1,8,1,0,0,0,0,"N/A","N/A","vad8"
+"ModSinkLabel",1,8,1,0,0,0,0,"N/A","N/A","Vadoze_2"
+"ModSinkType",1,8,1,0,0,0,0,"N/A","N/A","wff"
+"ModSinkQual",1,8,1,0,0,0,0,"N/A","N/A","Vadose"
+"ModSrcNum",1,8,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,8,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,9,0,0,0,0,0,"N/A","N/A","vad8"
+"ModLabel",1,9,0,0,0,0,0,"N/A","N/A","Vadoze_2"
+"ModModel",1,9,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Vadose Zone Module"
+"ModDesPath",1,9,0,0,0,0,0,"N/A","N/A","\FRAMES\MepVAD.des"
+"ModLocX",1,9,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,9,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,9,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,9,0,0,0,0,0,"N/A","N/A",238.0038
+"ModScrY",1,9,0,0,0,0,0,"N/A","N/A",484.5735
+"ModState",1,9,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,9,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,9,1,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,9,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,9,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,9,1,0,0,0,0,"N/A","N/A","aqu4"
+"ModSinkLabel",1,9,1,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSinkType",1,9,1,0,0,0,0,"N/A","N/A","wff"
+"ModSinkQual",1,9,1,0,0,0,0,"N/A","N/A","Vadose"
+"ModSrcId",1,9,2,0,0,0,0,"N/A","N/A","vad3"
+"ModSrcLabel",1,9,2,0,0,0,0,"N/A","N/A","Vadoze_1"
+"ModSrcType",1,9,2,0,0,0,0,"N/A","N/A","wff"
+"ModSrcQual",1,9,2,0,0,0,0,"N/A","N/A","Vadose"
+"ModSrcNum",1,9,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,9,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,10,0,0,0,0,0,"N/A","N/A","hei7"
+"ModLabel",1,10,0,0,0,0,0,"N/A","N/A","Health_Impacts"
+"ModModel",1,10,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Human Health Impact Module"
+"ModDesPath",1,10,0,0,0,0,0,"N/A","N/A","\FRAMES\MepHEI.des"
+"ModLocX",1,10,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,10,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,10,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,10,0,0,0,0,0,"N/A","N/A",791.7794
+"ModScrY",1,10,0,0,0,0,0,"N/A","N/A",117.1875
+"ModState",1,10,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,10,1,0,0,0,0,"N/A","N/A","rcp6"
+"ModSrcLabel",1,10,1,0,0,0,0,"N/A","N/A","Receptor_Intake"
+"ModSrcType",1,10,1,0,0,0,0,"N/A","N/A","rif"
+"ModSrcQual",1,10,1,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcId",1,10,2,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,10,2,0,0,0,0,"N/A","N/A","Contaminants"
+"ModSrcType",1,10,2,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,10,2,0,0,0,0,"N/A","N/A",""
+"ModSrcNum",1,10,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,10,0,0,0,0,0,"N/A","N/A",0

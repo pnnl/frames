@@ -1,0 +1,11 @@
+"aqu5",0000000010
+1
+"aqu5 has known Aquifer concentration values."
+1
+"fcm3","Aquifer",2
+"Ethyl acetate","141786","yr","g/ml",2,0
+0.0,10.0
+100.0,10.0
+"Trichloroethylene","79016","yr","g/ml",2,0
+0.0,10.0
+100.0,10.0

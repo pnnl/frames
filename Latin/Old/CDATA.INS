@@ -1,0 +1,29 @@
+C++++ Begin Insert Deck CDATA ++++++++++++++++++++++++++++++++++++++++++
+C  History: Paul W. Eslinger : 01 Jul 1992
+C  Purpose:  Variables needed by the RDBLK routines
+C  Variables:
+C    CVALUE : Vector of secondary keywords (modifiers) read from the
+C             current keyword card
+C    ILINE  : Line pointer for the input keyword file
+C    INFO   : Character variable containing the input line to be
+C             decoded by the RDBLK routines.
+C    NAME   : Name of the current keyword
+C    NCVALU : Number of secondary keywords (modifiers) contained in
+C             the current keyword card
+C    NKEYS  : Maximum number of secondary keywords (modifiers) which
+C             can be contained on a single keyword card
+C    NVALS  : Maximum number of numeric values which can be read from a
+C             single keyword card
+C    NVALUE : Number of data values read from the current keyword card
+C    VALUE  : Numeric values read from a single keyword card
+C
+      PARAMETER (NKEYS  =   50)
+      PARAMETER (NVALS  = 2501)
+      PARAMETER (LENCRD =  120)
+C
+      CHARACTER INFO*1, CVALUE*8, NAME*8
+      COMMON /CDAT1/ NAME, INFO(LENCRD), CVALUE(NKEYS)
+C
+      COMMON /CDAT2/ ILINE, NVALUE, NCVALU, VALUE(NVALS)
+C
+C++++ End Insert Deck CDATA ++++++++++++++++++++++++++++++++++++++++++++

@@ -1,0 +1,13 @@
+Variable Count,Description,Name,Privilege,Version,Updated,Template
+10,DCE dataset for maintaining state,DCE,2,2,0,
+Name,Description,Dimension,DataType,PrimaryKey,Scalar,Minimum,Maximum,Measure,Unit,Stochastic,Preposition,Index 1,Index 2,Index 3,Index 4,Index 5
+AliasedPKs,Aliased primary key values,4,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys,DCE.Databases
+AvailablePKs,List of available primary key values,4,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys,DCE.Databases
+Databases,List of databases related to primary key variable names,3,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys
+Datasets,List of dataset names,1,STRING,FALSE,FALSE,0,500,,,FALSE,
+ModuleName,,0,STRING,FALSE,TRUE,0,80,,,FALSE,
+ModuleVersion,,0,STRING,FALSE,TRUE,0,80,,,FALSE,
+PrimaryKeys,List of dataset primary key variable names,2,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets
+RelatedPKNames,List of names related to primary key variable names,4,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys,DCE.Databases
+RelatedPKValues,List of values related to primary key variable names,5,STRING,FALSE,FALSE,0,500,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys,DCE.Databases,DCE.RelatedPKNames
+SelectedPKs,,4,STRING,FALSE,FALSE,0,80,,,FALSE,,DCE.Datasets,DCE.PrimaryKeys,DCE.Databases

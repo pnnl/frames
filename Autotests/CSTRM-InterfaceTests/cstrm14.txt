@@ -1,0 +1,193 @@
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//This auto test was created on a Windows XP operating system.
+//y=8;	//Have y=8 for XP Users unless you got the coordinates while using XP
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+//Start Test Suite
+t.StartTestSuite("CSTRM_14","Testing CSTRM_14 to check the basic functions of the MEPAS 4.0 Computed Source Term Module.","c:\\frames\\docs\\");
+
+t.NewTestCase("DeleteFile","Deleting old gid File");
+	f.delete("c:\\frames\\cstrm14.gid");
+t.TestCaseComplete();
+
+t.NewTestCase ("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec("c:\\frames\\fui.exe");
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Activate Framework window");
+if(t.TestCaseComplete()!=0)
+{
+//Due to restrictions with Frames 1.4 the icons need to be manually moved to desired locations.
+//This test case opens a base case that was produced from Appendix B of the CSTRM test plan.
+
+t.NewTestCase("OpeningBaseCase","Opening Base Case for CSTRM_14.");
+	a.SetKeyDelay(50);
+	a.Send("!f#o{DOWN}{ENTER}");
+	a.Sleep(500);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrmbas.gid");
+	a.Sleep(500);
+	a.Send("!o");
+	a.Sleep(1000);
+	t.Plan("Maximizing the window");
+	a.WinMaximize("Framework for Risk","");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("ConstituentData","Selecting Chromium and Lead for constituent.");
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(325,95+y);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(10000);
+	a.Sleep(1000);
+	t.Plan("Click on 'Search For' box.");
+	a.LeftClick(418,528+y);
+	t.Plan("Type 'Lead' in 'Search For' box.");
+	a.Send("lead");
+	a.Sleep(3000);
+	a.Send("{TAB}{TAB}{ENTER}");
+	a.Sleep(1000);
+		
+	t.Plan("Use mouse and click 'File' then scroll down to 'Exit-Save Changes.'");
+	a.MouseMove(15,31+y);
+	a.LeftClick(15,31+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SourceUserInput","Entering in data into Source 'User Input'");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);	
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(400,160+y);
+	a.Sleep(1000);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(3000);
+	
+//Options Works
+	t.Plan("Click on 'leaching loss route--STINf_OP' and select 'Known Constituent Flux'");
+	a.LeftClick(480,171+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'volatilitzation loss route' and select 'Compute Pathway'");
+	a.LeftClick(480,220+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'source/sink' and select 'Known Constituent Flux'");
+	a.LeftClick(480,237+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");
+	a.Sleep(1000);	
+	t.Plan("Click on 'time period for simulation--STMAXTIME'and change it to 40 years.");
+	a.LeftClick(459,284+y);
+	a.Sleep(500);
+	a.Send("40");
+	a.Sleep(1000);
+	
+//Kd's Works
+	t.Plan("Click 'Kds' tab.");
+	a.MouseMove(225,58+y);
+	a.LeftClick(225,58+y);
+	a.Sleep(1000);
+	a.LeftClick(467,188+y);
+	a.Send("16.8{ENTER}16.8{ENTER}234{ENTER}234{ENTER}");
+	a.Sleep(1000);
+	
+//Constituent Properties Works
+	t.Plan("Click 'Constituent Properties' tab");
+	a.LeftClick(312,89+y);	
+	a.Sleep(1000);
+	t.Plan("Enter in 'water solubility--STSOL");	
+	a.LeftClick(398,156+y);	
+	a.Sleep(1000);
+	a.Send("1000000{ENTER}1000000{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}100000000000000000000{ENTER}100000000000000000000{ENTER}{RIGHT}{UP}y{ENTER}{UP}{UP}y{ENTER}");
+	t.Plan("Go into 'Worksheet' button and enter data");
+	a.LeftClick(310,222+y);
+	a.Sleep(500);
+	a.LeftClick(203,154+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}20");
+	a.LeftClick(340,56+y);
+	a.Send("{DOWN}{ENTER}{TAB}{TAB}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}20{TAB}{TAB}{TAB}{ENTER}");
+	
+//Known Media Releases Works
+	t.Plan("Click 'Known Media Releases'");
+	a.LeftClick(439,95+y);
+	a.Sleep(500);
+	a.LeftClick(467,188+y);
+	a.Send("10{ENTER}10{ENTER}");
+	a.Sleep(1000);
+	
+//Known Constituent Flux Works
+	t.Plan("Click 'Known Constituent Flux' tab");
+	a.LeftClick(566,92+y);
+	t.Plan("Enter in # of Measurements");
+	a.LeftClick(384,190+y);
+	a.Send("2{ENTER}{ENTER}2{ENTER}{ENTER}{ENTER}{ENTER}4{ENTER}{ENTER}{ENTER}{ENTER}4{ENTER}");
+	t.Plan("Enter in Value");
+	a.LeftClick(460,190+y);
+	a.Send("1.0{ENTER}1.0{ENTER}1.0{ENTER}1.0{ENTER}{ENTER}{ENTER}-2.0{ENTER}-2.0{ENTER}0.0{ENTER}0.0{ENTER}1.0{ENTER}1.0{ENTER}0.0{ENTER}0.0{ENTER}");
+	t.Plan("Enter in Year of Measurement");
+	a.LeftClick(530,190+y);
+	a.Send("0{ENTER}40{ENTER}0{ENTER}40{ENTER}{ENTER}{ENTER}1{ENTER}5{ENTER}5.1{ENTER}40{ENTER}1{ENTER}10{ENTER}10.1{ENTER}40{ENTER}");
+	
+	a.Sleep(1000);
+	t.Plan("Save Changes and Exit out of 'Source Term Module Input'");
+	a.Sleep(1000);
+	a.Send("!f{ENTER}");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("RunSource","Run the Source Icon");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	a.RightClick(400,160+y);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SaveFile","Save .gid file");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	a.Send("!f#{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(2000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrm14.gid");
+	a.Send("!s");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+
+t.NewTestCase("GOButton","Hitting the go button and save file w/green lights");
+	a.Sleep(2000);
+	t.Plan("Hitting the GO button");
+	a.LeftClick(140,35+y);
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+		
+}
+if(t.TestCaseComplete()!=0)
+{
+t.NewTestCase("CloseFUI","Close the Frames User Interface");
+  t.Plan("Click the close box on the FUI");
+  a.WinClose("Framework for Risk","");
+  a.Send("y");
+  t.Assert(a.WinWaitClose("Framework for Risk","",10)==0,"Close Framework window");
+ t.TestCaseComplete();
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");	

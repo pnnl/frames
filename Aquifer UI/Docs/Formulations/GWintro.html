@@ -1,0 +1,216 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win95; U) [Netscape]">
+   <title>PNNL-10907:  MEPAS Ground Water Pathway Formultations </title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><div align=right>PNNL-10907
+<br>UC-630</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br><font size="4"><b>Multimedia Environmental Pollutant
+<br>Assessment System (MEPAS<sup>&reg;</sup>):
+<br>Ground Water Pathway Formulations</b></font>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ul>
+<br>G. Whelan
+<br>J. P. McDonald
+<br>C. Sato<sup>(a)</sup>
+<br>
+<br>
+<br>
+<br>
+<br>June 1996
+<br>Prepared for
+<br>the U.S. Department of Energy
+<br>under Contract DE-AC06-76RLO1830
+<br>Pacific Northwest National Laboratory
+<br>Richland, Washington 99352
+<br>Copyright 1989-1996 Battelle Memorial Institute
+<br>
+<br>(a) Idaho State University, Pocatello,Idaho.
+</ul>
+
+<br>
+<br>
+<br>
+<hr>
+
+<br><center><b><font size="3">Preface</b></center></font>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The Multimedia
+Environmental Pollutant Assessment System (MEPAS) is a physics-based environmental
+analysis code integrating source-term, transport, and exposure models for
+concentration, dose, or risk endpoints. Developed by Pacific Northwest
+National Laboratory<sup>(a)</sup> for the U.S. Department of Energy, MEPAS
+is designed for site-specific assessments using readily available information.
+Endpoints are computed for chemical and radioactive pollutants. For human
+health impacts, risks are computed for radionuclide and hazardous carcinogens
+and hazard quotients for noncarcinogens. This system has wide applicability
+to environmental problems using air, ground water, surface-water, overland,
+and exposure models. MEPAS enables users to simulate release of contaminants
+from a source; the transport of contaminants through the air, ground water,
+surface water, or overland pathways; and the transfer of contaminants through
+food chains and exposure pathways to the exposed individual or population.
+Whenever available and appropriate, guidance and/or models from the U.S.
+Environmental Protection Agency, International Commission on Radiological
+Protection, and National Council on Radiation Protection and Measurements
+were used to facilitate compatibility and acceptance.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; Although based
+on relatively standard transport and exposure computation approaches, MEPAS
+uniquely integrates these approaches into a single system providing a consistent
+basis for evaluating health impacts for a large number of problems and
+sites. Implemented on a desktop computer, a user-friendly shell allows
+the user to define the problem, input the required data, and execute the
+appropriate models. This document describes the mathematical formulations
+used in the ground water component of MEPAS.
+
+<br>
+
+<hr width="80%">
+
+<br><sup>(a)</sup>Pacific
+Northwest National Laboratory is operated for the U.S. Department of Energy
+by Battelle Memorial Institute under Contract DE-AC06-76RLO 1830.&nbsp;
+
+<hr WIDTH="80%">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<br>
+
+<br><center><b><font size="3">Summary</b></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The ground
+water component of the MEPAS methodology models solute transport through
+the ground water environment (i.e., partially saturated and saturated zones).
+Specifically, this component provides estimates of ground water contaminant
+fluxes at various transporting medium interfaces (e.g., water table or
+aquifer/river interface) and contaminant concentrations at withdrawal wells.
+Contaminant fluxes at transporting medium interfaces represent boundary
+conditions for the next medium in which contaminant migration and fate
+is to be simulated (e.g., ground water contamination entering a surface-water
+environment). Contaminant concentrations at withdrawal wells provide contaminant
+levels for the exposure assessment component of MEPAS. This document describes
+the mathematical formulations for the ground water pathway.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The migration
+and fate of contaminants through the ground water environment are described
+by the three-dimensional, advective-dispersive equation for solute transport.
+The results are based on semianalytical solutions (i.e., solutions that
+require numerical integration) that are well established in the scientific
+literature. The ground water model accounts for the major mechanisms of
+constituent mobility (i.e., adsorption/desorption), persistence (i.e.,
+degradation or decay), advection, and hydrodynamic dispersion. Mobility
+is described by an equilibrium coefficient that assumes instantaneous adsorption/
+desorption between the soil matrix and the pore water. Persistence is described
+by a first-order degradation/decay coefficient. Radionuclide decay products
+are also accounted for. Advection is described by constant, unidirectional
+flow in the vertical direction in the partially saturated (vadose) zone
+and in the longitudinal direction in the saturated zone. Hydrodynamic dispersion
+is described in one dimension for the partially saturated zone and three
+dimensions for the saturated zone.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The assumptions
+listed and/or discussed in this document are itemized below for easy reference.
+Section numbers are provided where a particular assumption is discussed
+in more detail.
+
+<br>
+
+<ul>
+<li> The ground water environment is initially free of contamination.</li>
+<li> All transport media properties are homogeneous and isotropic.</li>
+<li> Flow in both the partially saturated and saturated zones is uniform.</li>
+<li> The saturated zone is of finite, constant thickness and of infinite lateral extent.</li>
+<li>The flow system is at steady state. Drawdown effects of withdrawal wells and other transient stresses on the aquifer are not considered by the semianalytical solutions.</li>
+<li> Density differences between a contaminant plume and the natural ground water are negligible.</li>
+<li> The contaminant sorption process can be described by a constant (K<sub>d</sub>) epresenting the ratio between the contaminant adsorbed to the soil matrix and the contaminant dissolved
+in solution (Section 2.0).</li>
+<li> A unit hydraulic gradient exists in the partially saturated soil beneath a waste site (Section 2.0).</li>
+<li>The moisture content in the partially saturated zone fluctuates between field capacity and saturation (Section 2.0).</li>
+<li> The soil transmission rate is the maximum possible infiltration rate for a leachate migrating through a partially saturated zone (Section 2.0).</li>
+<li> A unit hydraulic gradient and saturated conditions, as described by a saturated hydraulic conductivity, occurs beneath ponded sites (Section 2.0).</li>
+<li> If a surface-water body is part of the transport scenario, then it will be the final transporting medium, and all contaminants entering the subsurface environment will eventually
+enter the water body, except contaminants lost through degradation/decay.</li>
+<li> Contaminant diffusion through the water table does not occur once a contaminant has entered  the aquifer. Thus, contaminant spreading in the vertical direction is only downward (Section 2.4).</li>
+<li> The leachate volume infiltrating from a waste site is insignificant compared to the total flux of contaminated water at the receptor well (Section 3.3).</li>
+<li> Degradation/decay is first-order for all contaminants.</li>
+<li> Decay products have the same equilibrium coefficient as the parent, and therefore travel at the same speed as the parent (Section 3.5).</li>
+</ul>
+
+
+<br>The following assumptions are applicable to the option of using measured concentrations for evaluating health impacts (Chapter 4.0):
+
+<ul>
+<li> The monitoring and receptor wells occur along the same ground water flow streamline.</li>
+<li> The user-supplied concentration is temporally constant.</li>
+<li> Differences in concentrations at a monitoring well and a receptor well are due solely to vertical and lateral dispersion.</li>
+</ul>
+
+<br>
+<br>
+
+<hr WIDTH="100%">
+
+<br>
+
+<br><b><center><font size="3">Acknowledgments</b></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The authors
+thank Mark Rockhold and Keith Shields for their technical review of this
+document, Robert Buchanan for editorial review, and Vickie Atkinson and
+Text Processing staff for preparing the final manuscript. Thanks are also
+extended to Larry Bagaasen, John Buck, Karl Castleton, Jim Droppo, Gariann
+Gelston, Andre d&eacute; Hamer, Bonnie Hoopes, and Dennis Strenge, all
+of whom have, in some way, influenced the development of the waterborne
+codes with their technical guidance and suggestions. Appreciation also
+goes out to all the people who use MEPAS and have alerted us to potential
+problems in the code and offered suggestions for its improvement.
+
+<br>
+<br>
+<br>
+
+
+
+</body>
+</html>

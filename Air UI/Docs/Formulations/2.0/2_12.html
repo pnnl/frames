@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>2.12 Surface Impoundments With Sediment-Controlled Emissions</title>
+</head>
+<body>
+
+<font face="verdana" size="2">
+
+<br><font size="3"><center><u><b>2.12 Surface Impoundments With sediment-Controlled Emissions</b></u></center></font>
+
+<br>
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An Alternatice model that includes both sediment-to-water transfer and water-to-air transder processes in surface impoundments is implemented in the user-interface (AG=VCASE = 7) of MEPAS 3.n versions.  The Surface impoundment formulations given above are not appropriate for cases where the sediment-to-water transfer controls emission rates.  Following a method suggested by Thibodeaux<sup>(a)</sup> and later documented in Thibodeaux (1989), a model was developed using a set of mass transfer coefficents that control the diffusion of volatile chmeicals from the sediment to the water and then from the water to the air.  This method is based on experimental work done by Imodeb and Emerson (2977) and Thibodeaux and Becker (1982).  The combination of this work and the work by MacKay and Leinonen (1975) provides the basis for the MEPAS formulation for computing sediment-controlle3d gaseous emission rates from the pond or lagoon.  The atmospheric emission rates are computed using
+
+<br>
+
+<br><img src="figure39.jpg" border="0">
+<p align="center">(39)</p>
+
+<br>
+
+<br>Where
+
+<ul>
+<br>Ei = the emission rate of the constituent (g/s)
+<br>K<sub>wa</sub> = overall water-side mass-transfer coefficient at the water-air interface (cm/s)
+<br>W<sub>a</sub> = constituent concentration in sediment (g/g)
+<br>A = area of the body of water (cm<sup>2</sup>)
+<br>f<sub>sw</sub> = sediment-water interface factor (dimensionless)
+<br>Kd = partition coefficient between sediment and water concentrations(cm<sup>3</sup>/g).
+</ul>
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hwang (1991) derives Equation 39 considering the mass-transfer resistances from sediment to water and from water to air.  The emission rate is expressed in terms of the constituent concentration in the sediment.  The sediment-water interface factor contains coefficients pertinent to resistances in all the phases considered and is given by
+
+<br>
+
+<br><img src="figure40.jpg" border="0">
+<p align="center">(40)</p>
+
+<br>
+
+<br>where
+
+<ul>
+<br>f<sub>sw</sub> = sediment-water interface factor (dimensionless)
+<br>k<sub>ws</sub> = sediment-side mass-transfer coefficient at the sediment-water interface (cm/s)
+<br>h<sub>s</sub> = depth of contaminanted sediment (cm)
+<br>k<sub>r</sub> = reaction rate constant in the column of water (s<sup>-1</sup>).
+</ul>
+
+<br> The sediment-side mass-transfer coefficient can be computed using
+
+<br>
+
+<br><img src="figure41.jpg" border="0">
+<p align="center">(41)</p>
+
+<br>
+
+<br>where &nbsp;&nbsp;&nbsp;is the molecular diffusivity in water (cm<sup>2</sup>/s) and P<sub>a</sub> is the air-filled porosity of the sediment (dimensionless).
+
+<br>
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The water diffusion coefficent (D<sub>w</sub>) can be estimated using the empirical relationship (O'Connor and Muller 1980)
+
+<br>
+
+<br><img src="figure42.jpg" border="0">
+<p align="center">(42)</P>
+
+<br>
+
+<br> where MW is the molecular weight of the constituent.  The coefficient has units associated with it that give values of molecular diffusivity in cm<sup>2</sup>/s.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mass-transfer coefficient from sediment to water, k<sub>sw</sub>, as proposed by acid in a wind-water tank.  Using the results of this study, they developed the following general formula for computing k<sub>sw</sub>:
+
+<br>
+
+<br><img src="figure43.jpg" border="0">
+<p align="center">(43)</p>
+
+<br>
+
+<br>where
+
+<ul>
+<br>k<sub>sw</sub> = water-side mass-transfer coefficient at the sediment-water interface (cm/min)
+<br>9.95 x 10<sub>-4</sub> = empirical correction factor [(g/mole)<sup>1/2</sup>min/(cm)<sup>1.25</sup>]
+<br>CD = drag coefficient at the water-air interface (dimensionless)
+<br>V<sub>A</sub> = wind speed over the water at 10 meters (cm/min)
+<br>H<sub>w</sub> = average depth of the water column (cm)
+<br>d<sub>a</sub> = density of the air (g/cm<sup>3</sup>)
+<br>L = average length of the wind fetch (cm)
+<br>M = gram molecular weight of the contituent (g/mole)
+<br>d<sub>w</sub> = density of the water (g/cm<sup>3</sup>.
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The constant 9.95 x 10<sup>-4</sup> in Equation 43 is the product of empirical factors and the correction for the molecular weight of benzoic acid.  Also, wind and/or thermal forces are assumed to be sufficient for a well-mixed situation to exist in the water.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hwang (1991) simplified Equation 40 by expanding its terms and comparing the typical values of each term encountered in practical situations.  He substituted the simplified Equation 40 into Equation 39 (see Hwang 1991 for the simplification) and presented the following modified equation:
+
+<br>
+
+<br><img src="figure44.jpg" border="0">
+<p align="center">(44)</p>
+
+<br>
+
+<br>Equation 44 shows that, for certain contaminants with a high tendency to partition in the sediment, the sediment-phase controls the release rate of the constituent.
+
+</font>
+</body>
+</html>

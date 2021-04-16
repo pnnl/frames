@@ -1,0 +1,16 @@
+"fcm3",0000000015
+1,
+Medium type - Aquifer Source aqu5
+1,
+"chronic","fcm3","Aquifer", 1, 1,
+0.,"km",0.,"km"
+"Benzene","71432", 0,   3,
+0.0,"yr", 25.0,"yr",  1,
+"Leafy vegetables","ingestion","mg/kg"
+4.301E+07,
+50.0,"yr", 25.0,"yr",  1,
+"Leafy vegetables","ingestion","mg/kg"
+4.301E+07,
+100.0,"yr", 25.0,"yr",  1,
+"Leafy vegetables","ingestion","mg/kg"
+2.919E+02,

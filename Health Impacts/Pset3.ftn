@@ -1,0 +1,64 @@
+!   MEPAS HAZ2: PSET3.FTN             Version Date: 08-04-1992
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK PSET3                               *
+!                                                                            *
+!  Common block PSET3 FOR EXPOSURE PATHWAY DATA SET 3                        *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    08/04/92 - DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!  ALAM(20)   DECAY CONSTANT FOR EACH POLLUTANT IN AIR
+!
+!  SLAM(20)   DECAY CONSTANT FOR EACH POLLUTANT IN SOIL
+!
+!  WLAM(20)   DECAY CONSTANT FOR EACH POLLUTANT IN SURFACE WATER
+!
+!  GLAM(20)   DECAY CONSTANT FOR EACH POLLUTANT IN GROUNDWATER
+!
+!  BFF(20)    BIOACCUMULATION FACTOR FOR FINFISH
+!
+!  BFI(20)    BIOACCUMULATION FACTOR FOR SHELLFISH
+!
+!  BFV(20)    TRANSFER FACTOR FOR VEGETABLES
+!
+!  BMT(20)    TRANSFER FACTOR FOR MEAT, D/KG
+!
+!  BMK(20)    TRANSFER FACTOR FOR MILK, D/LITER
+!
+!  WPF(20)    WATER PURIFICATION FACTORS
+!
+!  VDEP(20)   DEPOSITION VELOCITY FOR EACH POLLUTANT, M/SEC
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!
+!==== COMMON Block Definition ================================================
+!
+      COMMON/PSET3/BFF(20),BFI(20),BFV(20),BMT(20),BMK(20),ALAM(20),&
+                   WLAM(20),GLAM(20),SLAM(20),WPF(20),VDEP(20)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

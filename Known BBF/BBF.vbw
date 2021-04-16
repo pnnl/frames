@@ -1,0 +1,9 @@
+BBF = 0, 0, 0, 0, C, 0, 0, 881, 739, C
+frmAbout = 0, 0, 0, 0, C, 44, 58, 925, 797, C
+Loading = 0, 0, 0, 0, C, 66, 87, 947, 826, C
+DataTypes = 0, 0, 0, 0, C
+PARM_IO = 0, 0, 0, 0, C
+Reference = 0, 0, 0, 0, C, 88, 116, 969, 855, C
+CSV_IO = 0, 0, 0, 0, C
+CNVRT_IO = 0, 0, 0, 0, C
+Common = 0, 0, 0, 0, C

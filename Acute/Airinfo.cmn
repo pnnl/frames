@@ -1,0 +1,50 @@
+C   EXPOS:     AIRINFO.CMN             Version Date: 11-May-98               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK AIRINFO                             *
+C                                                                            *
+C  Common block AIRINFO contains air co-ordinate points                      *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    15-May-97 (From EXINFO)                                 *
+C  Last Modified:    11-May-98  BAN                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/EXPOS  
+C     Referenced by modules: EPFDAT           
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    EXPXA(1681) REAL    x-coordinate for each atmospheric exposure grid location
+C    EXPYA(1681) REAL    y-coordinate for each atmospheric exposure grid location
+C    NTM        INT     Number of time points for exposure analysis and output
+C    ONEPOINT   LOG 
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  15-May-97       DLS  Initial Preparation                         
+C  11-May-98       BAN  Update to 41x41 grid
+C==== COMMON Block Definition ================================================
+C
+      COMMON/AIRINFO/EXPXA(1681), EXPYA(1681), NTM, NXY, ONEPOINT
+C
+C==== Variable Declarations ==================================================
+C
+      REAL EXPXA,EXPYA
+      LOGICAL ONEPOINT
+      INTEGER NTM, NXY
+C
+C---- END OF COMMON BLOCK AIRINFO --------------------------------------------
+C

@@ -1,0 +1,393 @@
+/*
+OS=XP
+This Test Is Not Resolution Specific.
+RunSpeed=Fast
+*/
+
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//XP Users
+windows="c:\\windows\\";
+
+//Have y=0 for 95,98,or 2000 Users
+/*
+windows="c:\\winnt\\";
+*/
+
+//Directory containing the .gid file for this test
+tests="c:\\program files\\frames\\tests\\exposure\\";
+
+//Make sure this matches your current FRAMES directory
+frames="c:\\program files\\frames\\";	
+
+//This is the location of the generated .html files
+documents="c:\\program files\\frames\\documents\\";
+
+// Start Test Suite
+	//f.rename(windows+"framesui.ini",windows+"framesui.ini.bak");
+	t.StartTestSuite("MEPAS Exposure 03","",documents);
+	t.NewTestCase("StartFUI","Start Frames 1.5");
+	t.Plan("Start Frames 1.5");
+	Runtime.getRuntime().exec(frames+"fui.exe");
+	a.Sleep(1000);
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Wait For Active Framework window");
+	a.WinMaximize("Framework for Risk","");
+	a.Sleep(2000);
+if(t.TestCaseComplete()!=0)
+{
+
+// It does not make sense to continue if Frames 1.5 is not running
+	f.delete(tests+"exp_04.gid");
+	a.SetKeyDelay(80);
+	
+t.NewTestCase("GID","Create Exp_04.gid");
+	t.Plan("Open File");
+	a.Send("!#f");
+	t.Plan("Select New");
+	a.Send("n");
+	a.Sleep(4000);
+	t.Plan("Enter EXP_04.gid");
+	a.Send(tests+"EXP_04.gid{ENTER}");
+	a.Sleep(1000);
+	a.Send("{ENTER}");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Icons","Add Icons to Editor");
+	t.Plan("Add Constituent Icon");
+	a.Send("{DOWN 6}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	
+	t.Plan("Add User Defined 2");
+	a.Send("{UP 4}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	
+	t.Plan("Add Exposure 3");
+	a.Send("{DOWN 16}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Icons","Arrange Icons");
+	t.Plan("Move Usr2");
+	a.Send("{TAB}{SPACE 2}");
+	a.Sleep(500);
+	a.Send("{RIGHT 15}");
+	a.Sleep(500);
+	a.Send("{DOWN 6}");
+	a.Sleep(500);
+	
+	t.Plan("Move Exp3");
+	a.Send("{SPACE}");
+	a.Sleep(500);
+	a.Send("{RIGHT 30}");
+	a.Sleep(500);
+	t.TestCaseComplete();	
+
+t.NewTestCase("Icons","Connect Icons");
+	t.Plan("Connect Con1 to Usr2");
+	a.Send("{SPACE}{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{RIGHT}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	
+	t.Plan("Connect Con1 to Exp3");
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{RIGHT}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	
+	t.Plan("Connect Usr2 to Exp3");
+	a.Send("{SPACE}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{RIGHT}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Contaminants","Add Contaminants");
+	t.Plan("Right Click Editor");
+	a.Send("{SPACE}{SPACE}{ENTER}");
+	a.Sleep(500);
+	t.Plan("Select General Info");
+	a.Send("{DOWN}{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Select Model");
+	a.Send("{DOWN}");
+	a.Sleep(1000);	
+	t.Plan("Press OK");	
+	a.Send("{ENTER}");
+	a.Sleep(1500);	
+	t.Plan("Right Click Editor");
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	t.Plan("Select User Input");
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(5000);
+	t.Plan("Add Benzene");
+	a.Send("{TAB 6}");
+	a.Sleep(500);
+	a.Send("Benzene");
+	t.Plan("Find Next... 13 Times");
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	a.Send("!n");
+	a.Sleep(500);
+	t.Plan("Add");
+	a.Send("{TAB 4}{ENTER}");
+	a.Sleep(1000);
+	a.Send("{TAB 18}");
+	a.Send("{BACKSPACE 7}");
+	t.Plan("Add Strontium-90");
+	a.Send("Strontium-90");
+	a.Send("{TAB 2}{SPACE}");
+	a.Sleep(1000);
+	t.Plan("Exit - Save Changes");
+	a.Send("!f#s");
+	a.Sleep(6000);
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");	
+	a.Sleep(2000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Source","Add Data Into Source Model");
+	t.Plan("Right Click Icon");
+	a.Send("{TAB}{SPACE}{ENTER}");
+	a.Sleep(500);
+	t.Plan("Select General Info");
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Select Model");
+	a.Send("{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(1000);
+	
+	t.Plan("Pick Exp10 Model");
+	a.Send("{SPACE}{ENTER}");
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.Send("{DOWN}{ENTER}");
+	a.Sleep(1000);
+		
+	t.Plan("Right Click Icon");
+	a.Send("{SPACE}{SPACE}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	t.Plan("Select User Input");
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(5000);
+	t.Plan("Fill Out Soil Concentration Tab");
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}");
+	a.Sleep(500);
+	a.Send("50");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}50");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}10");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}{DOWN}");
+	a.Send("0{DOWN}");
+	a.Send("25{DOWN}");
+	a.Send("50{DOWN}");
+	a.Send("75{DOWN}");
+	a.Send("100{DOWN}");
+	a.Sleep(500);
+	a.Send("{RIGHT}{UP}");
+	a.Send("10{UP}");
+	a.Send("20{UP}");
+	a.Send("30{UP}");
+	a.Send("20{UP}");
+	a.Send("10");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}");
+	a.Sleep(500);
+	a.Send("{SPACE}");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{LEFT}");
+	a.Sleep(500);
+	a.Send("0{DOWN}");
+	a.Send("25{DOWN}");
+	a.Send("50{DOWN}");
+	a.Send("75{DOWN}");
+	a.Send("100{DOWN}");
+	a.Sleep(500);
+	a.Send("{RIGHT}{UP}");
+	a.Send("10{UP}");
+	a.Send("20{UP}");
+	a.Send("30{UP}");
+	a.Send("20{UP}");
+	a.Send("10{UP}");
+	a.Sleep(500);
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(2000);
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");	
+	a.Sleep(2000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Exposure","Add Information Into Exposure Model");
+	t.Plan("Right Click Icon");
+	a.Send("{TAB}{SPACE}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("User Input");
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{DOWN}");
+	a.Sleep(500);
+	a.Send("{ENTER}");
+	a.Sleep(6000);
+	a.Send("{LEFT}");
+	a.Sleep(500);
+	a.Send("{TAB}25");
+	a.Send("{TAB}{TAB}{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Sleep(500);
+	a.Send("{TAB}{RIGHT}");
+	a.Sleep(500);
+	a.Send("{TAB}0{TAB}");
+	a.Send("{TAB}100{TAB}");
+	a.Send("{TAB}4");
+	a.Sleep(500);
+	t.Plan("Leach Rates Tab");
+	a.Send("{TAB}{RIGHT}");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}");
+	a.Send("50");
+	a.Send("{TAB}{TAB}{TAB}{TAB}{RIGHT}");
+	a.Sleep(500);
+	a.Send("{TAB}50");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}50");
+	a.Sleep(500);
+	
+	t.Plan("Fill Out Constituent Parameters Tab");
+	a.Send("{TAB}{TAB}{RIGHT}");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}");
+	a.Send("{DELETE}{DELETE}{DELETE}{DELETE}");
+	a.Send("1E20");
+	a.Sleep(500);
+	t.Plan("Half Life In Ground Water");
+	a.Send("{TAB}{TAB}{TAB}{RIGHT}");
+	a.Sleep(500);
+	a.Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}");
+	a.Sleep(500);
+	a.Send("1e20");
+	a.Sleep(500);
+	t.Plan("Next Constituent");
+	a.Send("{TAB}{TAB}{RIGHT}");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Sleep(500);
+	a.Send("!f#s");
+	a.Sleep(2000);
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");	
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("RunGID","Run The Case Scenario");
+	t.Plan("GO...");
+	a.Send("!g");
+	a.Sleep(6000);
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("CloseFramwork","Close The Framework Editor");
+	t.Plan("File - Exit");
+	a.Send("!f#x");
+	a.Sleep(1000);
+	a.Send("y");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Compare","Compare Output Files");
+	//t.Assert(f.compare("C:\\frames\\tests\\exposure\\exp_04.epf","C:\\frames\\exp\\exp_04.epf"),"Comparing epf files");
+	t.TestCaseComplete();
+	
+	//f.delete("c:\\winnt\\framesui.ini");
+	//f.rename("c:\\winnt\\framesui.ini.bak","c:\\winnt\\framesui.ini");
+	
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");

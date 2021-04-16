@@ -1,0 +1,53 @@
+C   BIOTA:     AIRINFO.CMN             Version Date: 15-May-97               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK AIRINFO                             *
+C                                                                            *
+C  Common block AIRINFO contains air co-ordinate points                      *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    15-May-97 (From EXINFO)                                 *
+C  Last Modified:    15-May-97  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/EXPOS  
+C     Referenced by modules: BTFDAT           
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    EXPXA(360) REAL    x-coordinate for each atmospheric exposure grid location
+C    EXPYA(360) REAL    y-coordinate for each atmospheric exposure grid location
+C    NTM        INT     Number of time points for exposure analysis and output
+C    NXY        INT     Number of x,y point that is nears the exposure location
+C                       defined by EXPX and EXPY.
+C    ONEPOINT   LOG     Flag to indicate if only one atmospheric point is to be
+C                       evaluated.
+C==== Modification History ===================================================
+C
+C    Date     Who  Modification Description
+C  ---------  ---  -----------------------------------------------------------
+C  15-May-97  DLS  Initial Preparation                         
+C  10-Sep-97  DLS  Added NXY and ONEPOINT
+C==== COMMON Block Definition ================================================
+C
+      COMMON/AIRINFO/EXPXA(1681), EXPYA(1681), NTM, NXY, ONEPOINT
+C
+C==== Variable Declarations ==================================================
+C
+      REAL EXPXA,EXPYA
+      INTEGER NTM, NXY
+      LOGICAL ONEPOINT
+C
+C---- END OF COMMON BLOCK AIRINFO --------------------------------------------
+C

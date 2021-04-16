@@ -1,0 +1,259 @@
+<html>
+<head>
+<title> Requirements for the MEPAS Vadose Zone Transport Module</title>
+</head>
+<body alink="#336666"  vlink="#A8A8A8" link="#0000ff">
+
+
+<font color="#000000" face="verdana" size="4">PNNL-SA-32286</font>
+<br><font face="verdana" size="2">Written by:  John P. McDonald
+<br>
+<br>Prepared for the U.S. Department of Energy
+<br>
+<br>Pacific Northwest National Laboratory
+<br>Operated by the U.S. Department of Energy
+<br>By Battelle
+</font>
+<br>
+<br>
+<br>
+<br><font color="#000000" face="verdana" size="3"><center><b>Requirements for the MEPAS Vadose Zone Transport Module</b></center></font>
+<br>
+<hr width="100%" align="center">
+<p>
+<font color="#000000" face="verdana" size="2">
+<b>1.0 Introduction</b>
+<p>This document describes the requirements for the Multimedia Environmental
+Pollutant Assessment System (MEPAS) vadose zone transport module. The module
+is designed specifically as an object for inclusion into the Framework
+for Risk Analysis in Multimedia Environmental Systems (FRAMES), which is
+a platform to link various multimedia modules into complete transport/exposure
+assessment systems (Whelan et al. 1997). These requirements can be used
+by software engineers and testers to ensure this module meets the needs
+of the clients and users.
+<p>
+<b>2.0 Purpose of the MEPAS Vadose Zone Transport Module</b>
+<p>The purpose of the MEPAS vadose zone transport module is to simulate
+the migration and fate of chemical and radionuclide constituents through
+partially saturated porous media (i.e., vadose zones). Input to the module
+consists of time-varying, contaminant mass fluxes entering the vadose zone,
+the physical characteristics of the vadose zone itself, and the constituent
+properties.&nbsp; Output consists of time-varying, contaminant mass fluxes
+exiting the vadose zone. Currently, mass fluxes entering the vadose zone
+can originate from a source term or from a previous vadose zone. The vadose
+zone’s physical characteristics are entered through a module user interface
+(MUI), and constituent properties are obtained from a constituent properties
+database. The contaminant mass fluxes exiting the vadose zone can be used
+as input to another vadose zone or to an aquifer module, or can also serve
+as the endpoint of the simulation. Contaminant concentrations in the vadose
+zone can be obtained by dividing the output contaminant mass fluxes by
+the water flux through the vadose zone.
+<p>
+<b>3.0 Summary of Requirements for the MEPAS Vadose Zone Transport Module</b>
+<p>This section provides an overall summary of the requirements for the
+MEPAS vadose zone transport module. Detailed input, output, and scientific
+requirements are described in Sections 4, 5 and 6 respectively.
+<p>The MEPAS vadose zone transport module will
+
+<ol>
+<li>simulate contaminant migration for both chemicals and radionuclides through
+partially saturated porous media (i.e., vadose zones) and provide output
+consisting of instantaneous, time-varying, contaminant mass fluxes exiting
+the vadose zone</li>
+
+<li>have no limits on the number of constituents considered in a scenario</li>
+
+<li>operate under Windows 95 and have a user-friendly MUI with a standard Windows
+look and feel</li>
+
+<li>meet the module specifications for FRAMES.</li>
+</ol>
+
+<b>4.0 Input Requirements for the MEPAS Vadose Zone Transport Module</b>
+<p>Data needed to simulate contaminant migration through a vadose zone
+vadose zone is obtained from three sources. The boundary conditions (i.e.,
+time-varying contaminant mass fluxes entering the vadose zone, infiltration
+rate, and source dimensions) are obtained from the previous module (i.e.,
+source term or vadose zone), the vadose zone’s physical characteristics
+and the contaminant’s distribution coefficient (Kd) are obtained from the
+user through the MUI. The contaminant’s chemical properties are obtained
+from a chemical property database. The boundary conditions are communicated
+to the module through the Water Flux File (WFF). The vadose zone’s physical
+characteristics are communicated from the MUI to the model through the
+Global Input Data (GID) file and the model pre-processor. The GID file
+also is used to store the contaminant chemical property data.
+<p>There are some general requirements associated with the MUI, which are
+
+<ol>
+<li>The MUI will operate in Windows 95 and will have a standard Windows look
+and feel.</li>
+
+<li>The MUI will have on-line help in an HTML format that provides users with
+an easy-to-understand description of all input parameters required by the
+MUI.</li>
+
+<li>The MUI will provide users with a choice of units for all input parameters
+having dimensions associated with them.</li>
+
+<li>The MUI will include a reference feature in which the source of the specified
+value for each input item can be referenced if the user desires.</li>
+
+<li>The MUI will show the range of values allowed for each input data item,
+when the cursor is positioned on that item, as a scrolling message at the
+bottom of the screen. When an out-of-range value is entered in a field,
+the MUI will indicate this by a red background in the input field and a
+scrolling error message in addition to the allowed range message. Data
+input values within range are shown with a green field background.</li>
+
+<li>The MUI will display the module version number, obtained from the module
+description (DES) file, in an About menu.</li>
+</ol>
+
+The following data are obtained from the WFF by the MEPAS vadose zone transport
+module. Those items listed as required are needed by the module to perform
+its computations. Other items are read and simply reported to the output
+WFF:
+
+<ol>
+<li>time-varying, instantaneous, contaminant mass (or activity) fluxes entering
+the vadose zone (required)</li>
+
+<li>width and length of the interface plane through which contaminant enters
+the vadose zone (required)</li>
+
+<li>distance from water table</li>
+
+<li>natural recharge rate</li>
+
+<li>time-varying water flux entering the vadose zone (required).</li>
+</ol>
+
+The following data are obtained from the MUI and are needed by the MEPAS
+vadose zone transport module to perform its computations:
+
+<ol>
+<li>vadose zone thickness (i.e., transport distance)</li>
+
+<li>total porosity</li>
+
+<li>field capacity</li>
+
+<li>dry bulk density</li>
+
+<li>soil type coefficient</li>
+
+<li>saturated hydraulic conductivity</li>
+
+<li>longitudinal dispersivity</li>
+
+<li>constituent distribution coefficient (Kd).</li>
+</ol>
+
+The MEPAS vadose zone transport module obtains the following data from
+the chemical property portion of the GID file:
+
+<ol>
+<li>CASID (Chemical Abstracts Service ID Number)</li>
+
+<li>decay/degradation half-life</li>
+
+<li>decay chain (for radionuclides)</li>
+
+<li>solubility limit</li>
+
+<li>carbon-matter partition coefficient (Koc) (for organics).</li>
+</ol>
+
+The MUI provides users with an estimate of the Kd for each contaminant
+based on soil property data entered by the user. The Kd values are computed
+according to Strenge and Peterson (1989). The following soil property data
+are needed for this estimate:
+
+<ol>
+<li>percentage of sand</li>
+
+<li>percentage of silt</li>
+
+<li>percentage of clay</li>
+
+<li>percentage of organic matter</li>
+
+<li>percentage of iron and aluminum</li>
+
+<li>pH of the pore water</li>
+
+<li>carbon-matter partition coefficient (obtained from the chemical database).</li>
+</ol>
+
+In addition to allowing the user to enter their own Kd values, the MUI
+provides the user with options to automatically use the estimated Kd values
+for single constituents or automatically use estimates for all constituents.
+<p>
+<b>5.0 Output Requirements for the MEPAS Vadose Zone Transport Module</b>
+<p>The MEPAS vadose zone transport module is required to output its results
+to a WFF. The module is also required to produce a list file (*.WLS file)
+that documents the data actually read in by the model and provides a summary
+of intermediate calculation results (e.g., retardation factor or decay
+constant) and the simulation results (peak flux and time of peak).
+<p>The following data are output to the WFF:
+
+<ol>
+<li>time-varying, instantaneous, contaminant mass (or activity) fluxes exiting
+the vadose zone</li>
+
+<li>width and length of the interface plane through which the contaminant exits
+the vadose zone</li>
+
+<li>distance from water table</li>
+
+<li>natural recharge rate</li>
+
+<li>time-varying water flux exiting the vadose zone.</li>
+</ol>
+
+<b>6.0 Scientific Requirements for the MEPAS Vadose Zone Transport Module</b>
+<p>This section describes the scientific requirements for the MEPAS vadose
+zone transport module. The primary scientific requirements are
+
+<ol>
+<li>obey the Law of Mass Conservation</li>
+
+<li>simulate advection in one dimension</li>
+
+<li>simulate dispersion along the flow direction</li>
+
+<li>account for the decay of radionuclides and handle the degradation of chemicals</li>
+
+<li>account for the ingrowth of progeny resulting from degradation/decay, and
+handle decay chains with up to 9 members (i.e., one parent and eight progeny)</li>
+
+<li>compute contaminant mass (or activity) fluxes exiting the vadose zone</li>
+
+<li>determine a moisture content for the vadose zone that is consistent with
+the infiltration rate of water entering the vadose zone and the vadose
+zone’s physical properties - However, if the computed moisture content
+is less than the field capacity, use the field capacity as the moisture
+content.</li>
+
+<li>account for the effect that adsorption of contaminant to soil particles
+has on travel time through the vadose zone.</li>
+</ol>
+
+The implementation of these requirements, in the form of mathematical formulations,
+are documented in Whelan et al. (1996).
+<p>
+<b>7.0 References</b>
+<p>Strenge, D. L. and S. R. Peterson. 1989. <i>Chemical Data Bases for
+the Multimedia Environmental Pollutant Assessment System (MEPAS): Version
+1</i>. PNL-7145, Pacific Northwest Laboratory, Richland, Washington.
+<p>Whelan, G., J. P. McDonald, and C. Sato. 1996. <i>Multimedia Environmental
+Pollutant Assessment System (MEPAS): Groundwater Pathway Formulations</i>.
+PNNL-10907, Pacific Northwest National Laboratory, Richland, Washington.
+<p>Whelan G., K. J. Castleton, J. W. Buck, G. M. Gelston, B. L. Hoopes,
+M. A. Pelton, D. L. Strenge, and R. N. Kickert. 1997. <i>Concepts of a
+Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES)</i>.
+PNNL-11748, Pacific Northwest National Laboratory, Richland, Washington. </font>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+"exp3",61                               
+  1,
+  Medium type - Aquifer Source usr6
+  1,
+"chronic","usr6","Aquifer", 1, 2,
+0.,"km",0.,"km"
+"CARBON-14","C14", 0,   3,
+     0.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 3.897E+02,
+"Other vegetables","ingestion","Bq/kg"
+ 3.897E+02,
+"Meat","ingestion","Bq/kg"
+ 6.998E+02,
+"Milk","ingestion","Bq/L"
+ 4.703E+02,
+    50.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 3.897E+02,
+"Other vegetables","ingestion","Bq/kg"
+ 3.897E+02,
+"Meat","ingestion","Bq/kg"
+ 6.999E+02,
+"Milk","ingestion","Bq/L"
+ 4.704E+02,
+   100.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 2.027E-02,
+"Other vegetables","ingestion","Bq/kg"
+ 2.027E-02,
+"Meat","ingestion","Bq/kg"
+ 5.405E-02,
+"Milk","ingestion","Bq/L"
+ 1.576E-02,
+"TRITIUM (elemental)","H3-EL", 0,   3,
+     0.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.568E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 5.860E+02,
+"Meat","ingestion","Bq/kg"
+ 6.973E-03,
+"Milk","ingestion","Bq/L"
+ 1.337E-02,
+    50.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 4.568E+03,
+"Other vegetables","ingestion","Bq/kg"
+ 5.861E+02,
+"Meat","ingestion","Bq/kg"
+ 6.974E-03,
+"Milk","ingestion","Bq/L"
+ 1.337E-02,
+   100.0,"yr", 25.0,"yr",  4,
+"Leafy vegetables","ingestion","Bq/kg"
+ 1.195E-01,
+"Other vegetables","ingestion","Bq/kg"
+ 1.184E-01,
+"Meat","ingestion","Bq/kg"
+ 5.747E-07,
+"Milk","ingestion","Bq/L"
+ 1.474E-07,

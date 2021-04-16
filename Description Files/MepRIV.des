@@ -1,0 +1,111 @@
+"mf","Version 2.1"
+"Fate & Transport:Surface Water:riv","MEPAS 5.0 River Module","riv.exe","MepRiv.bat","riv.ico"
+"
+MODULE VERSION
+  5.0 Compiled on 8/24/2006,  UI compiled on 6/28/2007
+
+MODULE DESCRIPTION
+The MEPAS River module simulates the movement
+of radionuclides and chemicals through
+non-tidal rivers.  The migration and fate of
+constituents through the riverine environment are
+described by the one-dimensional advective,
+one-dimensional dispersive (lateral) equation for
+solute transport.
+
+Some Key Assumptions:
+
+ 1. Flow in the river is steady and uniform in the
+    longitudinal direction.
+ 2. Constituent adsorption to sediment particles in
+    the water column or river bed is negligible, so
+    all constituents travel at the same speed as the
+    river flow.
+ 3. Constituent releases to the river are long-term
+    relative to the travel time in the river.
+    Therefore, the steady-state solution to the
+    advective-dispersive equation is used.
+ 4. The river geometry can be represented by a
+    rectangular cross-section.
+ 5. Advection dominates dispersion in the
+    longitudinal direction and constituents are
+    assumed to be fully mixed vertically, so
+    dispersion is considered only in the lateral
+    direction.
+ 6. Degradation/decay for all constituents is
+    first-order.
+
+MODULE REFERENCES
+A more complete list of key assumptions and the
+associated discussion of them can be found in the
+formulation document.
+
+  Whelan, G. and J. P. McDonald.  1996.  The
+  Multimedia Environmental Pollutant Assessment
+  System (MEPAS)(R): Riverine Pathway
+  Formulations.  PNNL-11176, Pacific Northwest
+  National Laboratory, Richland, Washington.
+
+Other related sites:
+  https://www.pnnl.gov/projects/earth/mepas
+  https://www.pnnl.gov/surface-water-riv
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 wff Aquifer required as input
+     0 to 1 wff Surface Water required as input
+
+Valid Output Writes
+     wcf Surface Water
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Gene Whelan
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        gene.whelan@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/mepas/mriv/requirements.html
+"
+2,"Read"
+2,"wff","Aquifer",1,1,"con","",1,1
+2,"wff","Surface Water",1,1,"con","",1,1
+1,"Write"
+"wcf","Surface Water"
+19,"Variables"
+"CVTFormat","Not Stochastic",,,,"Number format to use",0,STRING
+"tfinal","Not Stochastic","","","","Ending time of simulation",0,FLOAT
+"ntimes","Not Stochastic","","","","Number of time steps",0,INTEGER
+"wwveloc","Continuous","cm/day","Min",0,"","River Flow Velocity",0,FLOAT
+"wwname","Not Stochastic","","","","Usage Location",0,STRING
+"wwkind","Not Stochastic","","","","Flux or Conc",0,STRING
+"wwx","Continuous","m","","","Easting coordintate",0,FLOAT
+"wwy","Continuous","m","","","Northing coordinate",0,FLOAT
+"wwz","Continuous","m","","","Elevation",0,FLOAT
+"wwdepth","Continuous","cm","","","River Depth",0,FLOAT
+"wwwidth","Continuous","cm","Min",1.0,"Max",3.05e5,"River Width",0,FLOAT
+"wwdist","Continuous","cm","Min",0,"","Distance to closest exposure at",1,FLOAT
+"Variable","wwname","Index1","","","","",""
+"wwdischg","Continuous","cm^3/day","Min",0.0,"","Average Annual Discharge at",1,FLOAT
+"Variable","wwname","Index1","","","","",""
+"wwnumflux","Not Stochastic","","","","Number of Flux Locations",0,INTEGER
+"wwnumconc","Not Stochastic","","","","Number of Conc. Locations",0,INTEGER
+"wwcasid","Not Stochastic","","","","Chemical Abstract System Identification",1,STRING,con.FSCASID
+"Variable","FSCNAME","Site","Index1","Index2","","",""
+"wwsol","Continuous","mg/L","Min",0,"","Water solubility",1,FLOAT
+"Variable","FSCNAME","Site","Index1","Index2","","",""
+"wwrsol","Continuous","pCi/mL","Min",0,"","Water solubility",1,FLOAT
+"Variable","FSCNAME","Site","Index1","Index2","","",""
+"wwshalf","Continuous","day","Min",0,"","Half life in ground water",1,FLOAT
+"Variable","FSCNAME","Site","Index1","Index2","","",""

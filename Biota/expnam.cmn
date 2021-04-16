@@ -1,0 +1,51 @@
+C   EXPOS:     EXPNAM.CMN              Version Date: 22-May-97               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK EXPNAM                              *
+C                                                                            *
+C  Common block EXPNAM contains exposure pathway names and units for printing*
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    22-May-97                                               *
+C  Last Modified:    22-May-97  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/EXPOS  
+C     Referenced by modules: BTFDAT, BTFGRID
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C    EXPLAB(28) REAL    Exposure pathway label for each of 28 pathways          
+C    EXPRUT(28) REAL    Exposure pathway route for each of 28 pathways
+C    EXPUN(28)  REAL    Exposure pathway concentration units 
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C  22-May-97       DLS  Initial Preparation                         
+C==== COMMON Block Definition ================================================
+C
+      COMMON/EXPNAM/EXPLAB(28), EXPRUT(28),  EXPUN(28),
+     .             NEXPLAB(28), NEXPRUT(28), NEXPUN(28)
+                   
+C
+C==== Variable Declarations ==================================================
+C
+      CHARACTER*12 EXPRUT
+      CHARACTER*20 EXPLAB
+      CHARACTER*7  EXPUN
+      INTEGER NEXPLAB,NEXPRUT,NEXPUN
+C
+C---- END OF COMMON BLOCK EXPNAM ---------------------------------------------
+C

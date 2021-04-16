@@ -1,0 +1,1023 @@
+<html>
+<head>
+  <title>COMPUTED SOURCE TERM RELEASE MODULE</title>
+</head>
+<body  background="mepas.jpg">
+
+<hr />
+<center><h1><img src="src.ico" height=64 width=64> COMPUTED SOURCE TERM RELEASE MODULE</h1></center>
+<hr />
+
+<h2>OPTIONS</h2>
+
+<a name=STMEDIa></a><u><b>ST-MEDIA</b>--Medium type for the waste site</u>
+<br />Units: Dimensionless
+<br />Range: none</b>
+<br />
+<br />Selection options:
+<blockquote>
+ 1) Surface water media type is a holding pond or water filled ditch that is contaminated.
+<br />2) Soil/Vadose type is contaminated surface and/or subsurface soil.
+<br />3) Aquifer media type is a contaminated saturated zone.
+</blockquote>
+
+<a name="STINF_OP"></a><u><b>ST-INF_OP</b>--Leaching loss route (releases to groundwater transport pathway) option selection</u>
+<br />Units: Dimensionless
+<br />Range: None</b>
+<br />
+<br />Selection options:
+<blockquote>
+ 1) Turn off pathway turns off the leaching loss route for the scenario and it is not included in the mass balance and partitioning calculations
+<br />2) Known infiltration rate requires the user to input the infiltration rate(s) for the waste zone but the constituent mass flux(es) are computed by the model based on site characterization data, constituent inventory/concentration, and physical properties.
+<br />3) Known constituent flux requires the user to input the infiltration rate(s) for the waste zone and the constituent mass flux(es)
+<br />4) Compute pathway requires the model to compute the infiltration rate and constituent mass flux(es) for the waste zone based on the regions local climatology data (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>), site characterization data, constituent inventory/concentration, and physical properties.
+</blockquote>
+
+<a name="STOVL_OP"></a><u><b>ST-OVL_OP</b>--Overland runoff loss route (releases to overland/surface water transport pathway) option selection</u>
+<br />Units: Dimensionless
+<br />Range: None
+<br />
+<br />Selection Options:
+<blockquote>
+1) Turn off pathway turns off the overland runoff loss route for the scenario and it is not included in the mass balance and partitioning calculations.
+<br />2) Known water erosion rate requires the user to input the water erosion rate(s) for the waste zone but the constituent mass flux(es) are computed by the model based on site characterization data, constituent inventory/concentration, and physical properties.
+<br />3) Known constituent flux requires the user to input the water erosion rate(s) for the waste zone and the constituent mass flux(es).
+<br />4) Compute pathway requires the model to compute the water erosion rate for the waste zone based on the regions local climatology data (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>), site characterization data, constituent inventory/concentration, and physical properties.
+</blockquote>
+
+<a name="STSUS_OP"></a><u><b>ST-SUS_OP</b>--Wind suspension loss route (releases to atmospheric transport pathway) option selection</u>
+<br />Units: Dimensionless
+<br />Range: None
+<br />
+<br />Selection Options:
+<blockquote>
+1) Turn off pathway turns off the wind suspension loss route for the scenario and it is not included in the mass balance and partitioning calculations.
+<br />2) Known wind erosion rate requires the user to input the wind erosion rate(s) for the waste zone but the constituent mass flux(es) are computed by the model based on site characterization data, constituent inventory/concentration, and physical properties.
+<br />3) Known constituent flux requires the user to input the wind erosion rate(s) for the waste zone and the constituent mass flux(es).
+<br />4) Compute pathway requires the model to compute the wind erosion rate for the waste zone based on the regions local climatology data (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>), site characterization data, constituent inventory/concentration, and physical properties.
+</blockquote>
+
+<a name="STVOL_OP"></a><u><b>ST-VOL_OP</b>--Volatilization loss route (releases to atmospheric transport pathway) option selection</u>
+<br />Units: Dimensionless
+<br />Range: None
+<br />
+<br />Selection Options:
+<blockquote>
+1) Turn off pathway turns off the volatilization loss route for the scenario and it is not included in the mass balance and partitioning calculations.
+<br />2) Known constituent flux requires the user to input the constituent mass flux(es) based on volatilization for the waste zone.
+<br />3) Compute pathway requires the model to compute the constituent mass flux(es) for the waste zone based on site characterization data, constituent inventory/concentration, and physical properties.
+</blockquote>
+
+<a name="STSRC_OP"></a><u><b>ST-SRC_OP</b>--Known source/sink option selection</u>
+<br />Units: Dimensionless
+<br />Range: None
+<br />
+<br />Selection Options:
+<blockquote>
+1) Turn off pathway turns off the external source/sink loss route for the scenario and it is not included in the mass balance and partitioning calculations.
+<br /> 2) Known constituent flux requires the user to input the constituent mass flux(es) for the external sources and sinks loss route.
+</blockquote>
+
+<a name="STDELTA_T"></a><u><b>ST-DELTA_T</b>--Time interval for simulation</u>
+<br />Units: years
+<br />Range: 1.0 (currently not a user defined variable)
+<br />This parameter defines the incremental time step for the source release simulation.This value is held constant throughout the simulation. The value selected by the user can have a large impact on the shape of the constituent release curves. If a large time step is selected, like 50 years, many of the details of the curve are lost (i.e., year to year fluctuations are lost). If a small time step is selected, like 0.1 years, the run time may increase and the size of the output files could be very large. The user should select this parameter carefully in conjunction with <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a> mentioned below.
+<br />
+<br /><b>NOTE: Currently this parameter is set to 1.0 year and can not be changed by the user. Additional testing is required of this parameter to ensure proper operation with values other that 1.0 year.</b>
+
+<br />
+<br /><a name=STMAXTIME></a><u><b>ST-MAXTIME</b>--Time period for simulation</u>
+<br />Units: years
+<br />Range: 1 to 10,000.0
+<br />
+<br />This parameter defines the end time for the source release simulation.This value can not be less that the <a href="STRM.HTM#STDELTA_T">ST-DELTA_T</a>. The user should consider the value selected for <a href="STRM.HTM#STDELTA_T">ST-DELTA_T</a> before determining this parameter value based on problem, run time, and output size. Because many Environmental Impact Statement (EIS) analyses required assessment of risk out to 10,000 years, the maximum simulation period for this model is set to 10,000 years.
+
+<br />
+<br /><a name=STMINWST></a><u><b>ST-MINWST</b>--Percent of minimum mass of constituents left after simulation</u>
+<br />Units: percent (%)
+<br />Range: 0.1 to 100
+<br />
+<br />This parameter defines the minimum amount of constituent mass left after the simulation has been completed. Because the CSTRM is a numerical model, it is very difficult to reach zero mass because the equations are asymptotic (approaching zero). Therefore, the user is asked to define their error tolerance for the mass balance calculation. When the user defined ST-MINWST value is reached, the simulation is terminated. The smaller the value the longer the simulation will be. The standard value for this parameter is 10% (i.e., 90% mass balance).
+
+<br />
+<br /><h2>WASTE ZONE</h2>
+
+<a name=STCLEAN></a><u><b>ST-CLEAN</b>--Thickness of clean overburden associated with the waste site</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0 to 1000.0
+<br />Typical environmental range: 0.0 to 1000.0
+<br />
+<br />This parameter defines the depth of the clean topsoil cover over the contamination. For scenarios where the contamination is at the surface, this value is 0.0. For scenarios where the constituents are at different depths, the user must select a single representative value that best describes the problem (i.e., the closest to the surface, and average for all constituents, the deepest value). This value determines the type of volatilization model is used. Complex sites for which a representative value cannot be defined may need to be split into multiple scenarios. It should also be noted that if the source medium is 'Aquifer', this parameter is not used in calculations.
+
+<br />
+<br /><a name=STTHICK></a><u><b>ST-THICK</b>--Thickness of contaminated zone</u>
+<br />Units: centimeters (cm)
+<br />Range: 3.048 to 3.048E+06
+<br />
+<br />This parameter defines the thickness of the contaminated waste zone for the simulation.This value is based on the point where contamination starts to the bottom of the contamination.This value does not include the clean layer. The user must select a single value that best describes the problem (i.e., the closest to the surface, and average for all constituents, the deepest value).
+
+<br />
+<br /><a name=STLENGth></a><u><b>ST-LENGTH</b>--Length of the waste site</u>
+<br />Units: centimeters (cm)
+<br />Range: 1.0 to 3.048E+07
+<br />
+<br />The length of the site may be different for the groundwater and overland transport pathways at the same site if the direction of flow of the aquifer and the surface run-off do not coincide(<a href="Fig_2_6.htm">Figure 2.6</a>).This value is best obtained from a map but may also be found in site documents. The source of the data should be referenced.The length of the waste zone depends on the type of analysis the user is conducting. If the user in concerned mainly with groundwater transport, the length of the waste zone is defined in the direction of ground water flow as the constituents are transported from the site. If the user is concerned mainly with overland runoff transport pathway, the length is defined as direction from the waste zone to the surface water body of interest. If the user is more concerned about atmospheric transport pathway, the length and width of the waste zone is not as critical as the area. So the user can define the length as best appropriate for the problem. The length can be equal to, greater than, or less than, the width of the site.
+<br />
+<br />For an air emission computation, the length may be different than used for the waterborne pathway. The air emission model uses an area that is based on the product of the length and width of the site. If the shape is not rectangular, then a length and width should be entered that represents the area for air emissions at the site. The air computation assumes the emissions occur from a circular emission area, so the air computation is not sensitive to the orientation or shape of the defined rectangle.
+
+<br />
+<br /><a name=STWIDth></a><u><b>ST-WIDTH</b>--Width of the waste site</u>
+<br />Units: centimeters (cm)
+<br />Range: 1.0 to 3.048E+07
+<br />
+<br />The width of the site is the dimension perpendicular to the direction of constituent flow from the site. Once the length is defined (see <a href="Fig_2_6.htm">Figure 2.6</a>), the width is easily defined as the dimension perpendicular to the length. As with the length measurement, the orientation of the width measurement may change when several transport pathways are analyzed if the direction of constituent flow from the site is not the same in each pathway. Please fully reference the map or document used as a data source. Length and width should be defined consistent with the area of the site.
+<br />
+<br />For an air emission computation, width may be different that used for the waterborne pathway. The air emission model uses an area that is based on the product of the length and width of the site. If the shape is not rectangular, then a length and width should be entered that represents the area for air emissions at the site. The air computation assumes the emissions occur from a circular emission area, so the air computation is insensitive to the orientation or shape of the defined rectangle.
+
+<br />
+<br /><a name=STZBULKD></a><u><b>ST-ZBULKD</b>--Bulk density of the waste site</u>
+<br />Units: grams per cubic centimeter (g/cm<sup>3</sup>)
+<br />Range: 1.00 to 3.00
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />The parameter ST-ZBULKD represents the bulk density, in grams per cubic centimeter, associated with the waste zone soils, sediments, or sludge. If naturally occurring sediments are contaminated, estimate the bulk density using the SCS County Soil Survey reports and <a href="Tab_2_1.htm">Tagle 2.1</a>. The survey reports can provide the soil-textural classification; given this information, you can determine the bulk density of the soil from <a href="Tab_2_1.htm">Tagle 2.1</a>.
+<br />
+<br />If the source medium is standing surface water, then this term is defined as the mass of soil per volume of water. It can be computed by dividing the total soil mass in the source volume by the total volume of water in the source volume.
+<br />
+<br />This parameter is used to ensure that the source term flux information is given in the correct units. In terms of air emissions, ST-ZBULKD is important for the volatilization computation. The value of this parameter should be consistent with the surface soil bulk density, <a href="STRM.HTM#STSBULKD">ST-SBULKD</a> used in the particle suspension computation.
+
+<br />
+<br /><a name=STSSOL></a><u><b>ST-SSOL</b>--Suspended sediments associated with the waste site</u>
+<br />Units: fraction
+<br />Range: 0.0 to 0.1
+<br />
+<br />This parameter represents the amount of suspended solids in the surface impoundment. It is the ratio of mass of suspended solids per volume of water. This value is generally not known and a value of 0.0 should be used under these conditions (conservative - more constituent will release from the waste zone per time).
+
+<br />
+<br /><a name=STTOTPOR></a><u><b>ST-TOTPOR</b>--Total porosity of the waste site</u>
+<br />Units: fraction
+<br />Range: 0.001 to 1.0
+<br />
+<br />If total porosity is not available for the waste zone, use typical values from <a href="Tab_2_1.htm">Table 2.1</a> for the appropriate textural classification. If you are trying to choose between two categories, choose an average value. Be sure the value chosen corresponds with the bulk density identified in <a href="STRM.HTM#STZBULKD">ST-ZBULKD</a>.
+<br />
+<br />The preferred method for estimating porosity is to compute it from the bulk density of the material. If the bulk density and specific weight (specific weight is also referred to as particle density) of the material are known (from measurement or calculation), the total porosity can be calculated as
+<br />
+<br /><center>Total Porosity = 1 - (Bulk Density/Specific Weight)</center>
+<br />If the specific weight is not otherwise available, it can be approximated as 2.65 g/cm<sup>3</sup>.
+
+<br />
+<br /><a name=STMOISTC></a><u><b>ST-MOISTC</b>--Moisture content of the waste site</u>
+<br />Units: fraction
+<br />Range: 0.0 to <a href="STRM.HTM#STTOTPOR">ST-TOTPOR</a>
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />The moisture content is the percent of the volume of water contained in a soil sample to the total or bulk volume of the sample. The value of this parameter should never exceed the total porosity of the soil (% porosity in <a href="Tab_2_1.htm">Table 2.1</a>), because a saturated soil has a moisture content equal to the porosity of the soil.
+<br />
+<br />ST-MOISTC represents the moisture content by volume (expressed as a percent) associated with the waste zone soils, sediments, or sludges. If the waste zone is represented by partially saturated contaminated soils or sediments, estimate the moisture content as the field capacity of the soil. If these contaminated sediments are natural to the area, use the Soil Conservation Service (SCS) County Soil Survey reports to obtain the soil-texture classification, then <a href="Tab_2_1.htm">Table 2.1</a> to obtain the moisture content (in this case, field capacity) of the soil. If the contaminated sediments are not natural to the area, then the textural classification will have to be estimated from a site inspection or from site documentation. Again, <a href="Tab_2_1.htm">Table 2.1</a> can provide an estimate of the moisture content.
+<br />
+<br />If the waste zone is represented by saturated sediments or sludges (e.g., if they form the bottom of a pond), the moisture content can be estimated as the porosity of the material. For sediments, porosity can be estimated using soil-texture classification and <a href="Tab_2_1.htm">Table 2.1</a> as discussed above.
+<br />
+<br />The porosity identified in this section should correspond to the bulk density calculated below in Section <a href="STRM.HTM#STZBULKD">ST-ZBULKD</a>--Bulk density of the waste zone.
+<br />
+<br />An accurate estimate of ST-MOISTC is important for the volatilization computation. This parameter is not used in the particle suspension computation.
+
+<br />
+<br /><a name=STEFFPOR></a><u><b>ST-EFFPOR</b>--Effective porosity of the waste site</u>
+<br />Units: fraction
+<br />Range: 0.0 to <a href="STRM.HTM#STTOTPOR">ST-TOTPOR</a>
+<br />
+<br />The effective porosity is based on the pore space that contributes to advective flow within the aquifer. If effective porosity is not available for the waste zone, interpolate using the following: sand = 25%, silt = 15%, and clay = 10%. The value used must be less than or equal to the value for total porosity given in Section <a href="STRM.HTM#STTOTPOR">ST-TOTPOR</a> and <a href="Tab_2_1.htm">Table 2.1</a>. Be sure the value chosen is consistent with the value used in Section <a href="STRM.HTM#STDARCY">ST-DARCY</a> (Darcy velocity in the source zone).
+
+<br />
+<br /><a name=STAIRSPC></a><u><b>ST-AIRSPC</b>--Volumetric air content of the waste site</u>
+<br />Units: fraction
+<br />Range: 0.0 to <a href="STRM.HTM#STTOTPOR">ST-TOTPOR</a>
+<br />
+<br />This parameter defined the fraction of air that is contained in waste zone. This value is not a direct input to the model but is calculated based on the moisture content and bulk density of the soil input by the user. The user can modify this value by changing the moisture content or bulk density, but this is not recommended because these parameters are generally better known then the volumetric air content is.
+
+<br />
+<br /><a name=STAVTEMP></a><u><b>ST-AVTEMP</b>--Average air temperature of the waste site</u>
+<br />Units: degrees Centigrade (C)
+<br />Range: -12 to 32
+<br />
+<br />This parameter is the average (usually annual) air temperature associated with the waste zone. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>). Enter the annual atmospheric temperature, which is listed in the LCD summary. This parameter is used to compute the Henry’s Law constant for volatilization calculations.
+
+<br />
+<br /><a name=STWINDHT></a><u><b>ST-WINDHT</b>--Measurement height of annual average wind speed</u>
+<br />Units: meters (m)
+<br />Range: 0.3048 to 152.4
+<br />Typical environmental range: 3 to 15
+<br />
+<br />This parameter is the measurement height (i.e. height on a tower) for the average annual wind speed. The value of this parameter should be obtained from the source of the (<a href="STRM.HTM#STAVWINDV">ST-AVWINDV</a>) parameter value.
+<br />
+<br />One source of wind data is from an on-site or local meteorological monitoring station. Another source is a Local Climate Data (LCD) summary for the closest representative weather station data. Whatever data source is used, enter the measurement height that corresponds to the measurement time period for the selected wind value. If multiple heights are listed, then use the height that corresponds to the longest fraction of the measurement period on which the average wind speed is based.
+<br />
+<br />This parameter is used to adjust the wind speed values for the waste site for water balance and wind suspension calculations.
+
+<br />
+<br /><a name=STAVWINDV></a><u><b>ST-AVWINDV</b>--Mean annual wind speed of the waste site</u>
+<br />Units: meters per second (m/s)
+<br />Range: 0.45 to 22.35
+<br />
+<br />This parameter is the mean annual wind speed for the area associated with waste site.
+<br />
+<br />One source of this information is data from a local meteorological tower. Another source of wind data is a Local Climate Data (LCD) summary for the closest representative weather station data. This LCD summary, and other climate summaries, may be obtained for location in the United States from the National Climate Center. The long-term climate values in the LCD should be used (rather than the values from a single year). Select the climatological value listed in the LCD summary under the wind category for &quot;Normals, Means and Extremes.&quot; The value enteredshould be consistent with <a href="STRM.HTM#STWINDV">ST-WINDV</a>
+<br />
+<br />The source of these data may be the same as used in the air dispersion computation (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>).
+
+<br />
+<br />
+<h2>OVERLAND</h2>
+
+<a name=STSTORMI></a><u><b>ST-STORMI</b>--Storm type index for location of the waste site</u>
+<br />Units: Dimensionless
+<br />Range: none
+<br />
+<br />ST-STORMI is an index of the type of storm event that is characteristic of a given area. This parameter identifies the storm type for computing the rainfall erosivity factor (i.e., R factor) in the Universal Soil Loss Equation (USLE). The R-factor represents a measure of the erosive force and intensity of rain in a normal year. Select the appropriate value defined below:
+<br />Selection options:
+<blockquote>
+1) Storm Type I. Maritime climate associated with southern and central California (<a href="Fig_2_14.htm"> Figure 2.14</a>).
+<br />2) Storm Type II. Associated with a) the eastern portions of California (i.e., east of the Sierra Nevada); b) all of Idaho, Montana, Nevada, Utah, Wyoming, Arizona, and New Mexico; and c) the remaining portions of the United States not covered by Storm Types I and IA (<a href="Fig_2_14.htm">see Figure 2.14</a>).
+<br />3) Storm Type IA. Associated with coastal areas of northern California, Oregon, and Washington, and the western slopes of the Sierra Nevada mountains (see <a href="Fig_2_14.htm"> Figure 2.14</a>).
+</blockquote>
+
+<br /><a name=STPRECIP></a><u><b>ST-PRECIP</b> --2 year, 6-hr precipitation event</u>
+<br />Units: centimeters (cm)
+<br />Range: 0 to 12.7
+<br />
+<br />This parameter is the 2-yr recurrence interval, 6-hr duration precipitation event in centimeters. It is used in calculating the R-factor for use in the USLE. The U.S. Department of Commerce has developed figures for determining these values. East of the Rocky Mountains, these values can be determined from the Precipitation Frequency Atlas of the United States [National Oceanic and Atmospheric Administration (NOAA) 1973; see <a href="Fig_2_15.htm">Figure 2.15</a>].
+<br />
+<br /><a href="Fig_2_15.htm">Figure 2.15</a> (from Technical Paper No. 40, Hershfield 1961) CANNOT be used for the western United States . For the areas west of the Rocky Mountains (i.e., New Mexico, Utah, Nevada, Oregon, California, Arizona, Montana, Wyoming, Colorado, Idaho, and Washington), the NOAA published comparable information for each state in NOAA (1973).
+
+<br />
+<br /><a name=STSLOPE></a><u><b>ST-SLOPE</b>--Overland slope of the waste site</u>
+<br />Units: percent (%)
+<br />Range: 0 to 99.9
+<br />
+<br />The overland slope is the percent change in surface elevation over the length of the site. It is used in determining the slope length and steepness factor (i.e., LS factor) for use in the USLE. If it is unavailable from documentation, the overland slope can be estimated from a 7.5 min USGS topographic map. Be careful not to overestimate the overland slope.
+
+<br />
+<br /><a name=STKFACtr></a><u><b>ST-KFACTR</b>--Soil-erodibility factor</u>
+<br />Units: none
+<br />Range: 0.02 to 1.00
+<br />
+<br />The soil-erodibility factor (i.e., K factor) in the USLE can be estimated from <a href="Tab_2_1.htm"> Table 2.1</a>, based on the organic matter content of the soil. The K factor is a measure of the susceptibility of soil particles to detach and be transported by rainfall and runoff. The percentage of organic matter can be estimated from 1) documentation at the site or 2) the SCS County Soil Survey reports. If the percentage of organic matter is unknown, assume it is zero.
+
+<br />
+<br /><a name=STCFACtr></a><u><b>ST-CFACTR</b>--Vegetative-cover factor</u>
+<br />Units: none
+<br />Range: 0.01 to 1.50
+<br />
+<br />The vegetative-cover, or cropping, factor (i.e., C factor) in the USLE is based on the amount of vegetation covering the surface and the type of vegetative surface. It is defined as the ratio of soil loss from land under specified vegetative or mulch conditions to the corresponding loss from tilled, bare soil. The vegetative-cover factor can be estimated using <a href="Tab_2_4.htm">Table 2.4</a>.
+
+<br />
+<br /><a name=STPFACtr></a><u><b>ST-PFACTR</b>--Erosion control practice factor</u>
+<br />Units: none
+<br />Range: 0.1 to 1.50
+<br />
+<br />The land management practice factor (i.e., P factor) in the USLE is based on the surface condition at the site and can be estimated from <a href="Tab_2_5.htm">Table 2.5</a>. It accounts for the erosion control effectiveness of various land management practices.
+
+<br />
+<br /><a name=STSLENGth></a><u><b>ST-SLENGTH</b>--Length of down slope path to receiving surface water body</u>
+<br />Units: centimeters (cm)
+<br />Range: 30.48 to 3.048E+07
+<br />
+<br />The distance that water must flow overland (down slope) from the edge of the uppermost boundary (drainage divide) to the receiving surface water. This information should be obtained from site data or from a 7.5 min USGS topographic map.
+
+<br />
+<br />
+<h2>PARTICLE SUSPENSION</h2>
+
+<a name=STSBULKD></a><u><b>ST-SBULKD</b>--Dry bulk density of surface soil</u>
+<br />Units: grams per cubic centimeter (g/cm<sup>3</sup>)
+<br />Range: 1.00 to 3.00
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />The bulk density of the surface soil is obtained from site reports and analysis. If the bulk density of the topsoil is not available from site reports, typical values can be selected from <a href="Tab_2_1.htm">Table 2.1</a> for the appropriate soil-textural classification.
+<br />
+<br />In the surface particle suspension computation, the bulk density is used to determine the depth of soil that is lost for a given mass flux to the air. Except for special cases, the value of this parameter should be consistent with the particle density of 1.5 g/cm3 that is assumed for all particle size ranges in the particulate suspension computation.
+
+<br />
+<br /><a name=STDISTb></a><u><b>ST-SDISTB</b>--Aggregate size distribution</u>
+<br />Units = mm
+<br />Range: .001 to 1.0
+<br />
+<br />This parameter represents a mode in the distribution of particles in the surface soil.
+<br />
+<br />Guidance for a field procedure to estimate a threshold friction velocity is provided by the US EPA (EPA AP-42 Section 13.2.2 Unpaved Roads, Rev. 9/98, Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-2.pdf). The field procedure determines an aggregate size distribution which is defined as the mode of the size distribution based on using a series of sieves. The aggregate size distribution is then used to define a threshold friction velocity.
+<br />
+<br /> In cases where site inspections are not feasible, then an approximate value of this parameter may be estimated using a relationship from Droppo and Buck (1966),
+<br />
+<br /><center> ST-SDISTB = <a href="STRM.HTM#STSAND"> ST-SAND</a> * 0.016 + 0.05</center>
+
+<br /><a name=STSAND></a><u><b>ST-SAND</b>--Sand in the surface soil</u>
+<br />Units: (%)
+<br />Range: 0 to 100
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />This parameter is not a model input. The parameter can be used to estimate the aggregate size distribution (<a href="STRM.HTM#STDISTB"> ST-DISTB</a>) of the surface soil at the waste site. The sandier the site, the less wind erosion that occurs. If the percentage of sand in the surface soil is not available from site documents, a typical value This parameter is used to define the threshold velocity of the waste zone. The sandier the site, the less wind erosion that will tend to occur. If the percentage of sand in the surface soil is not available from site documents, a typical value can be selected from <a href="Tab_2_1.htm"> Table 2.1</a> for the soil classification determined in Section <a href="STRM.HTM#WTCLASS">WTCLASS</a> above.
+
+<br />
+<br /><a name=STCORRSC></a><u><b>ST-CORRSC</b>--Fraction of surface cover</u>
+<br />Units: Percent
+<br />Range: none
+<br />
+<br />Selection options:
+<blockquote>
+1) 0% &lt;= x &lt;= 1%
+<br />2) 1% &lt; x &lt;= 10%
+<br />3) 10% &lt; x &lt;= 100%
+</blockquote>
+A surface cover correction factor is estimated based on the approximate coverage of the contaminated surface by &quot;massive&quot; materials that will affect the wind flow over the surface. If there are materials such as stones or rocks that are greater than a few centimeters in diameter on the surface, then select one of the three ranges of fraction surface cover in <a href="Tab_3_5.htm">Table 3.5</a> that applies best to the waste site. Use the first range (0 to 1.0%) when such elements do not exist. Also use the first range as a default in cases where this information is not available for the waste site. (Note: do not include large surfaces such as roadways, buildings, etc. in the computation of fraction surface cover. Instead, consider an average open area on the order of 1 m<sup>2</sup> and estimate a factor for this area.) Obtain a value for the selected range from <a href="Tab_3_5.htm">Table 3.5</a> . The typical value for this parameter is 1.0.
+
+<br />
+<br /><a name=STLOCSUR></a><u><b>ST-LOCSUR</b>--Surface roughness length</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0 to 1000.0
+<br />Typical environmental range: 0.0 to 150.0
+<br />
+<br />A estimate of the average surface roughness length (z<sub>o</sub>) is required. The roughness length characterizes the size of local surface elements.
+<br />
+<br />The average roughness length for a waste site with surface contamination should reflect the local surface cover(s). <a href="Fig_3_8.htm">Figure 3.8</a> provides a summary of typical roughness lengths associated with various surface types. Using information obtained from a site inspection, facility photographs, topographic maps, land-use maps, and other sources, define a representative average roughness length for the waste site. Normally the height of the element that controls the air flow over the area should be used to define a representative roughness length. If the surface cover for a waste site is unknown, use the default value for bare soil of 1 cm.
+<br />
+<br />A single scenario to sites should not be used with a wide range of surface element heights. A wide range of surface elements (i.e., grass, shrubs, and trees) should not be represented by an intermediate value -- the particulate suspension computation should only be applied to areas where a representative roughness length can be defined. Separate scenarios should be used to analyze the component areas with different surface elements. For areas with a closely intermixed mix of non-erodable elements, you may be able to use the <a href="STRM.HTM#STCORRSC">ST-CORRSC</a> (Fraction of surface cover) parameter to correct for the mixture of elements.
+<br />
+<br />Regional roughness lengths are also input (see Section <a href="STRM.HTM#ARREGSUR">AR-REGSUR</a>). Those regional roughness lengths are often different than the waste site roughness length.
+<br />
+<br />This parameter is used to characterize the potential for wind erosion and to adjust wind speeds to a standard computation height.
+
+<br />
+<br /><a name=STVEGFR></a><u><b>ST-VEGFR</b>--Surface area covered with vegetation</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />
+<br />This parameter represents the fraction of the contaminated area that is covered with vegetation. Consider a representative open area (such a 1 m<sup>2</sup> square) and estimate the fraction for this area. This parameter can be estimated from a site inspection, photos, facility descriptions, or USGS maps. Provide a footnote on how the entry was estimated.
+<br />
+<br />The fraction of the area covered by vegetation is considered unavailable for wind erosion. This parameter has a minimum value of 0.0 which means all the area is potentially available for wind erosion. The maximum value of 1.0 will result in no wind suspension of particles from the area. Even for a site almost completely covered with vegetation it is important to use a value slightly less than 1.0 to allow some minimum level of suspension that is observed to occur over such areas. Values such as 0.8, 0.9., 995 will be appropriate depending on the coverage of the vegetation.
+<br />
+<br />If a value of 1.0 is used for this parameter, then none of the other source term parameters used for the limited or unlimited area erosion will change the resulting zero emission rate that will be computed.
+
+<br />
+<br /><a name=STCRUST></a><u><b>ST-CRUST</b>--Surface area covered with crust layer</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />
+<br />The portion of the area covered by a crust is considered as having the potential of wind erosion only if that portion of the area is physically disturbed. Such an area is said to have limited erosion potential. Although a site visit is normally required to define this parameter, the user may use a conservative value in the absence of site data (such as 0.5 if a crust is possible or 0.0 if the potential for the existence of a crust is unknown).
+<br />
+<br /> Even if an area is characterized as uncrusted, it may still have limited wind erosion potential depending on the combination of other surface properties and local wind climatology. If a small default value of this parameter is entered and the overall area only has the potential for limited wind erosion, changes in this parameter will not change the computed emission rate. However for areas with a potential for unlimited wind erosion, a small default value for this parameter may result in the emission rate being significantly overestimated.
+
+<br />
+<br /><a name=STNUMDIS></a><u><b>ST-NUMDIS</b>--Area-weighted disturbance frequency</u>
+<br />Units: number per month (#/month)
+<br />Range: 0 to 31
+<br />
+<br />This parameter is used to estimate the surface material available at the waste site for wind erosion from an area with limited erosion potential. A disturbance is an action, or actions, that result in the exposure of fresh surface material that is available for wind erosion. If the waste site is fenced off from the public and there are no other physical disturbances, this value will be very small or equal to zero. If the waste site is not fenced off and it is routinely visited by animals or people (such as an area used for grazing or a playground), an estimate is needed of the number of disturbances weighted by the area that is disturbed. If a nonzero value is entered for this parameter, the type of disturbance should be footnoted. Possible disturbances are people onsite, machinery that disturbs the surface, cattle grazing, or any other activity that can disturb the surface routinely. The number of disturbances should be area weighted for the various types of disturbances using the relationship:
+<br />
+<br /><center>ST-NUMDIS = Sum (number of days per month with disturbances * fraction of disturbed area)</center>
+<br />As an example, if 1/10 of the area is disturbed on the average on 20 days each month, then ST-NUMDIS will have a value of (20*0.1) or 0.2 area-weighted disturbances per month. The month is assumed to have a maximum of 31 days in this computation. Tbus the maximum value of ST-NUMDIS is 31 representing a complete disturbance of the entire area each day of the month.
+<br />
+<br />The minimum value of ST-NUMDIS is 0.0 and represents a situation where no suspension will occur as the result of mechanical disturbances. Most surfaces will have some minimum level of surface disturbance by some means, and the user should consider using a small value (such as .01). Such a value will allow small emission rates in release scenarios where zero rates of particulate suspension are otherwise estimated.
+<br />
+<br />Because the wind erosion from limited erosion areas depends on mechanical disturbances, the particulate suspension will be episodic in nature. The suspension module uses an approximate formulation to estimate an annual emission rates based on annual climatology. Alternative formulations for episodic-based computations are available in the current US EPA AP-42 emission guidance that are appropriate for more detailed emission estimates.
+
+<br />
+<br /><a name=STMAXWIND></a><u><b> ST-MAXWIND</b>--Fastest mile wind speed</u>
+<br />Units: meters per second (m/s)
+<br />Range: 0.45 to 67
+<br />
+<br />The fastest-mile wind speed parameter is a measure of the maximum wind speed at the waste site that is appropriate for assessing the potential for particulate suspension.
+<br />
+<br />The normal source of this information is a Local Climate Data (LCD) summary for the closest representative weather station data. This LCD summary, and other climate summaries, may be obtained for locations in the United States from the National Climate Center. The long-term climate values in the LCD should be used (rather than the values from a single year). The source of these data may be the same LCD summary as used in the air transport module (e.g. see section <a href="STRM.HTM#ACLCDREF"> AC-LCDREF</a>).
+<br />
+<br />Enter the value of wind speed listed in the LCD climate data tables for the YEAR entry under WIND/FASTEST MILE. The fastest-wind speed mile is recorded for most stations. Some stations give alternative parameters such as a peak wind speed or fastest-wind minute. The alternative reported parameter can be used to estimate the fastest-wind speed mile.
+<br />
+<br />This parameter is used only in the computation for limited erosion areas. If <a href="STRM.HTM#STNUMDIS"> ST-NUMDIS</a> (Area-weighted disturbance frequency) has a value of 0.0, the value entered for this parameter will not change the zero emission that will be computed for the limited erosion area.
+
+<br />
+<br /><a name=STPEI></a><u><b>ST-PEI</b>--Thornwaite's Precipitation-Evaporation (P-E) index</u>
+<br />Units: none
+<br />Range: 6 to 318
+<br />
+<br />This parameter represents the climatological precipitation and evaporation processes associated with the release site. For waste sites within the contiguous United States , enter the precipitation evaporation index from <a href="Fig_3_3.htm">Figure 3.3</a> of this document. Outside the contiguousUnited States , the user must obtain an equivalent value for the area of interest.
+<br />
+<br />This parameter is used to estimate the emissions from an area with limited erosion potential. If <a href="STRM.HTM#STNUMDIS"> ST-NUMDIS</a> (Area-weighted disturbance frequency) has a value of 0.0, the value entered for this parameter will not change the zero emission that will be computed for the limited erosion area.
+
+<br />
+<br /><a name=STROADS></a><u><b>ST-ROADS</b>--Type of roadway on the waste site</u>
+<br />Units: None
+<br />Range: None
+<br />
+<br />Selection options:
+<blockquote>
+1) None
+<br />2) Dirt
+<br />3) Paved
+<br />4) Both
+</blockquote>
+Select the type of roadway travel at the site if any. If there is roadway travel, then information on that travel needs to be entered. If there is no roadway travel at the site, select 'None'.
+
+<br />
+<br /><a name=STRTDIST></a><u><b>ST-RTDIST</b>--Distance of roadway traveled (on waste site)</u>
+<br />Units: kilometers (km)
+<br />Range: 0 to 10
+<br />
+<br />If there are roadways on the waste site, estimate the length of the travel through the contaminated area in meters for the type of roadway (paved or unpaved) being requested. This information can normally be obtained from a map of the waste site. Footnote the basis for your estimate.
+
+<br />
+<br /><a name=STVSPEED></a><u><b>ST-VSPEED</b>--Average speed of vehicle per trip</u>
+<br />Units: kilometers per hour (km/h)
+<br />Range: 0 to 999
+<br />Typical range: 30 to 88
+<br />
+<br />This parameter is needed only for slow vehicles on unpaved roads. If the average speed of the vechiles will be less than 24.15 km/h (15 mph), then it is important to estimate an accurate value for this parameter. The computed emission rate will not change for values of the parameter equal to, or greater than, 24.15 km/h. In such case the a default value of 24.15 km/hr may be used to represent all cases with average vehicle speeds equal to, or greater than that default value.
+
+<br />
+<br /><a name=STVWEIGH></a><u><b>ST-VWEIGH</b>--Average weight of vehicles</u>
+<br />Units: metric tons
+<br />Range: 0 to 99
+<br />Typical range: 1.8 to 38
+<br />
+<br />Estimate the average weight of vehicles in tons for the type of indicated roadway (paved or unpaved). Estimates can be made based on the type of vehicle. As a default use 2 tons for cars and small trucks and 15 tons for industrial vehicles (based on a range of 3 to 26 tons). Footnote the basis for your estimate.
+
+<br />
+<br /><a name=STRTNUM></a><u><b>ST-RTNUM</b>--Number of trips per day</u>
+<br />Units: number per day (#/day)
+<br />Range: 0 to 9999
+<br />
+<br />Estimate the number of trips made on the indicated type of road (paved or unpaved) per day. A lightly traveled road might be 50 trips per day, a moderately travel road might have 500 trips per day, and a heavily traveled road might have 5,000 trips per day. Footnote the basis for your estimate.
+
+<br />
+<br /><a name=STDRYSCO></a><u><b>ST-DRYSCO</b>-- Dry surface moisture content</u>
+<br />Units: %
+<br />Range: 0 to 10
+<br />Default: 0.2
+<br />
+<br />This parameter is used in the unpaved roadway emission computation.
+<br />
+<br />The EPA guidance for this parameter contained in The EPA AP-42. Section 13.2.2 Unpaved Roads, Rev. 9/98 (Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-2.pdf) emphasizes that the moisture content must reference dry, worst-case conditions. The EPA guidance is that in the absence of the appropriate site-specific information, the default value of 0.2 percent should be used.
+
+<br />
+<br /><a name=STSILTL></a><u><b>ST-SILTL</b>-- Paved road surface silt loading</u>
+<br />Units: g/m^2
+<br />Range: 0.02 to 400
+<br />
+<br />This parameter is used in the paved roadway emission computation.
+<br />
+<br />This module uses the EPA paved roadway formulation given in US EPA AP-42,Section 13.2.1 Rev 10/2002 (see the document at the Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-1.pdf). The following guidance is derived from that document. EPA has used recent field sampling programs to provide estimates given below of typical silt loading values for high and low average daily traffic (ADT). Two sets of default values are provided, one for normal conditions and another for worst-case conditions (such as after winter storm seasons or in areas with substantial mud/dirt trackout).
+<br />
+<br />RECOMMENDED DEFAULT SILT LOADING (g/m^2 ) VALUES FOR PUBLIC PAVED ROADS(a)(b)(c)
+<blockquote>
+High ADT roads: Normal conditions = 0.1 g/m^2; Worst-case conditions = 0.5 g/m^2
+<br />Low ADT roads: Normal conditions = 0.4 g/m^2; Worst-case conditions = 3 g/m^2
+</blockquote>
+Notes: (a) Excluding limited access roads. See discussion in EPA AP-42,Section 13.2.1 Rev 10/2002. (b) High ADT refers to roads with at least 5,000 vehicles per day. (c) Worst-case conditions represent post-winter-storm or areas with substantial mud/dirt carryout.
+<br />
+<br />The normal silt loading database used in developing these values is available as a computer data file (r13s03-1a.zip) located at the Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/related/c13s02-1.html on the World Wide Web. The EPA AP-42,Section 13.2.1 Rev 10/2002 (Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-1.pdf) contains additional guidance on the silt content including a for industrial sites (Table 13.2.1-3 Typical Silt Content and Loading Values for Paved Roads At Industrial Facilities).
+
+<br />
+<br /><a name=STSILT></a><u><b>ST-SILT</b>--Percent of silt on road surface </b></u>
+<br />Units: (%)
+<br />Range: 0 to 100
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />This parameter is used in the unpaved roadways emission computation. The EPA AP-42,Section 13.2.2 Unpaved Roads, Rev. 9/98 (Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-2.pdf) provides the following guidance for this parameter:
+<blockquote>
+Dust emissions from unpaved roads have been found to vary directly with the fraction of silt (particles smaller than 75 micrometers [µm] in diameter) in the road surface materials.1 The silt fraction is determined by measuring the proportion of loose dry surface dust that passes a 200-mesh screen, using the ASTM-C-136 method. A summary of this method is contained in Appendix C of AP-42. Table 13.2.2-1 contained in EPA AP-42,Section 13.2.2 Unpaved Roads, Rev. 9/98 (Internet URL http://www.epa.gov/ttn/chief/ap42/ch13/final/c13s02-2.pdf) summarizes measured silt values for industrial and public unpaved roads. It should be noted that the ranges of silt content vary over two orders of magnitude. Therefore, the use of data from this table can potentially introduce considerable error. Use of this data is strongly discouraged when it is feasible to obtain locally gathered data.
+<br />
+<br />Because the silt content of a rural dirt road will vary with geographic location, it should be measured for use in projecting emissions. As a conservative approximation, the silt content of the parent soil in the area can be used. Tests, however, show that road silt content is normally lower than in the surrounding parent soil, because the fines are continually removed by the vehicle traffic, leaving a higher percentage of coarse particles.
+</blockquote>
+In the absence of measured values, an value based on the parent soil can be determined from <a href="Tab_2_1.htm">Table 2.1</a> for the soil classification determined in Section <a href="STRM.HTM#WTCLASS">WTCLASS</a> above.
+
+<br />
+<br />
+<h2>HYDROLOGY</h2>
+
+<a name=STLCDELEV></a><u><b>ST-LCDELEV</b>--Elevation of LCD station</u>
+<br />Units: meters (m)
+<br />Range: -15.24 to 3048
+<br />
+<br />Elevation refers to the elevation of the reference weather station from which the LCD summary was obtained. This information is available in the LCD summary's narrative discussion of the station, in the LCD section titled &quot;Normals, Means, and Extremes,&quot; or in facility descriptions.
+
+<br />
+<br /><a name=STLAT></a><u><b>ST-LAT</b>--Latitude of waste site</u>
+<br /></b>Units: decimal degrees
+<br />Range: 0.0 to 180.0
+<br />
+<br />Latitude refers to the latitude of the waste site in decimal form. This value can be taken from a site description or determined from a map.
+
+<br />
+<br /><a name=STELEV></a><u><b>ST-ELEV</b>--Elevation of LCD station</u>
+<br />Units: meters (m)
+<br />Range: -15.24 to 3048
+<br />
+<br />Elevation refers to the elevation of the waste site. This information should be available in site descriptions.
+
+<br />
+<br /><a name=STSCSCN></a><u><b>ST-SCSCN</b>--SCS curve number</u>
+<br />Units: none
+<br />Range: 1 to 100
+<br />
+<br />Type in the SCS curve number for overland runoff for the waste site. If a value is not given in the site data, compute it following steps 1 through 6 below and explain the inputs in a footnote.
+<br />
+<blockquote>
+1. Antecedent moisture condition (AMC). Determine the AMC as I, II, or III from <a href="Fig_2_13.htm">Figure 2.13.</a> AMC I, II, and III refer to watershed soils under dry, normal, and wet moisture conditions, respectively. If the site borders two AMC classifications, use the higher index number (e.g., III rather than to II).
+<br />
+<br />2. Hydrologic soil type (textural classification)/name. Determine the hydrologic soil textural classification for the site as described in <a href="STRM.HTM#WTCLASS">WTCLASS</a> .
+<br />
+<br />3. Classification of hydrologic soil group. The classification of hydrologic soil group (A, B, C, or D) can be determined directly from SCS (1972), or from the SCS Technical Release 55, Urban Hydrology for Small Watersheds (SCS 1986).
+<blockquote>
+Group A soils have high infiltration rates and low runoff potential, even when thoroughly wetted and consist chiefly of deep, well-drained to excessively drained sands or gravels. These soils have a high rate of water transmission (i.e., percolation).
+<br />
+<br />Group B soils have moderate infiltration rates when thoroughly wetted and consist chiefly of moderately deep to deep, moderately well-drained to well-drained soils, with moderately fine to moderately coarse textures. These soils have a moderate rate of water transmission.
+<br />
+<br />Group C soils have slow infiltration rates when thoroughly wetted and consist chiefly of soils with a layer that impedes downward movement of water or soils with moderately fine to fine texture. These soils have a slow rate of water transmission.
+<br />
+<br />Group D soils have very slow infiltration rates and high runoff potential when thoroughly wetted and consist chiefly of clay soils with a high swelling potential, soils with a permanently high water table, soils with a claypan or clay layer at or near the surface, and shallow soils over nearly impervious material. These soils have a very slow rate of water transmission.
+</blockquote>
+<br />4. Soil and condition. Determine the soil and site condition in <a href="Tab_2_2.htm">Table 2.2</a> that is the most appropriate description for your site. Most waste sites tend to be bare soil. The surrounding uncontaminated area is likely to be vegetated.
+<br />
+<br />5. SCS runoff curve number for antecedent moisture condition II. Determine the SCS runoff curve number for AMC II from <a href="Tab_2_2.htm">Table 2.2</a> , as follows. For the appropriate soil and site condition (found in step 4 above), and the appropriate hydrologic soil group (A, B, C, or D from step 3 above), determine the corresponding runoff curve number. This curve number is for antecedent moisture condition II. If your AMC is I or III, adjust the curve number as described in step 6.
+<br />
+<br />If an overland segment is composed of several hydrologic soil groups, then determine the runoff curve number for each soil group. Determine a composite runoff curve number for the overland segment by weighing the individual runoff curve numbers by the percentage of the total area that soil group occupies.
+<br />
+<br />6. Adjusted SCS runoff curve number. If the AMC for your site is not II, then the runoff curve number needs to be adjusted. Use <a href="Tab_2_3.htm">Table 2.3</a> to adjust the curve number to antecedent moisture conditions I or III.
+</blockquote>
+
+<a name=STAVAILW></a><u><b>ST-AVAILW</b>--Top soil water capacity</u>
+<br />Units: centimeters (cm)
+<br />Range: 0 to 76
+<br />
+<br />The source site water capacity can be computed from the available water capacity found in the SCS County Soil Survey report under &quot;Available Water Capacity.&quot; Depths are given in inches.
+<br />
+<br />If available water capacity is not accessible from the SCS County Soil Survey report, use the value given in <a href="Tab_2_1.htm">Table 2.1</a> for the appropriate soil textural classification.
+<br />
+<br />To calculate ST-AVAILW, multiply the available water capacity number found in the soil survey report by the root-zone depth. If the root-zone depth is unknown, use the value in <a href="Tab_2_1.htm">Table 2.1</a> for the appropriate soil texture classification. Then multiply by the fraction vegetative cover (Section <a href="STRM.HTM#STVEGFR">ST-VEGFR</a> ) at the site to obtain the available water capacity. Thus
+<br />
+<br /><center>ST-AVAILW = [Available Water Capacity (in./in.)] * [Root-Zone Depth (in.)] [Fraction Vegetative Cover]</center>
+
+<br /><a name=STNUMPRCP></a><u><b>ST-NUMPRCP</b>--Number of days with 0.254 mm precipitation</u>
+<br />Units: number per year (#/yr)
+<br />Range: 0 to 365
+<br />
+<br />This parameter defines the number of days per year that accumulated more that 0.0 inches of rain. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF"> AC-LCDREF</a>). The precipitation day is defined as having at least 0.01 inch of precipitation for that day. Obtain the annual number of precipitation days from the LCD summary table (see <a href="Fig_2_33.htm"> Figure 2.33</a>). This value is found under the heading of Mean number of days: Precipitation 0.01 inch or more. The annual value is the bottom number; for example, in <a href="Fig_2_33.htm">Figure 2.33</a>, the value is 89/yr.
+
+<br />
+<br />
+<h2>MONTHLY CLIMATOLOGY</h2>
+
+<a name=STTEMP></a><u><b>ST-TEMP</b>--Mean monthly temperature</u>
+<br />Units: degrees Centigrade (C)
+<br />Range: -45 to 32
+<br />
+<br />The mean monthly temperature value for each of the 12 months of the year. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>).
+
+<br />
+<br /><a name=STMPRECIP></a><u><b>ST-MPRECIP</b>--Mean monthly precipitation</u>
+<br />Units: centimeters (cm.)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />The mean monthly precipitation value for each of the 12 months of the year. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>).
+
+<br />
+<br /><a name=STWINDV></a><u><b>ST-WINDV</b>--Mean monthly wind speed</u>
+<br />Units: meters per second (m/s)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />The mean monthly wind speed value for each of the 12 months of the year. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>).
+
+<br />
+<br /><a name=STCLOUD></a><u><b>ST-CLOUD</b>--Average cloudiness or mean sky cover</u>
+<br />Units: fraction
+<br />Range: 0.0 to 1.0
+<br />
+<br />The mean monthly cloudiness value for each of the 12 months of the year. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a>).
+
+<br />
+<br /><a name=STMNUMPRE></a><u><b>ST-MNUMPRE</b>--Mean number of days in the month where precipitation is 0.01 inches or more</u>
+<br />Units: number of days (#)
+<br />Range: greater than 0 to 31
+<br />
+<br />The LCD usually records the mean number of days when precipitation is equal to or greater than 0.01 in. If an LCD is not available or inappropriate for the region, then use the mean number of days with which there is measurable precipitation. Increasing the number of days will potentially increase the leaching rate. The mean monthly temperature value for each of the 12 months of the year. Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a> ).
+
+<br />
+<br /><a name=STRHMIN></a><u><b>ST-RHMIN</b>--Minimum relative humidity for the month</u>
+<br />Units: percent (%)
+<br />Range: 0 to 100
+<br />
+<br />Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a> column labeled “relative humidity pct” ). Use the smaller value of the set provided in the LCD summary. There are 12 ST-RHMIN values required, corresponding to the lowest mean monthly minimum relative humidity value for each of the 12 months of the year.
+
+<br />
+<br /><a name=STRHMAX></a><u><b>ST-RHMAX</b>--Maximum relative humidity for the month</u>
+<br />Units: percent (%)
+<br />Range: 0 to 100
+<br />
+<br />Source of these data is the LCD summary (see Section <a href="STRM.HTM#ACLCDREF">AC-LCDREF</a> column labeled “relative humidity pct” ). Use the largest value of the set provided in the LCD summary. There are 12 ST-RHMAX values required, corresponding to the highest mean monthly maximum relative humidity value for each of the 12 months of the year.
+
+<br />
+<br />
+<h2>Kd's</h2
+
+<a name=STKDNUM></a><u><b>ST-KD_NUM</b>--Number of Kd measurements</u>
+<br />Units: None
+<br />Range: 2 to 10
+<br />
+<br />The number of Kd values that are to be entered for that constituent.
+
+<br />
+<br /><a name=STKD></a><u><b>ST-KD</b>--Adsorption coefficients</u>
+<br />Units: milliliters per gram (mL/g)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />This parameter is the equilibrium coefficient (Kd) for the waste zone for each constituent. This parameter can vary with time. The user needs to enter the number of Kds and the values associated with the simulation time. See <a href="STRM.HTM#WASURFKD">WA-SURFKD</a> for a description of how to select of equilibrium coefficients.
+<br />
+<br /><b>Selecting Adsoption Coefficient</b> - The module can provide estimates of K<sub>d</sub> for all constituents.For inorganic constituents, typical K<sub>d</sub> values reported in the peer reviewed literature are provided by the user interface, via a lookup table, based on the soil water pH (<a href="#KDPH">KD-PH</a>), percent clay (<a href="#KDCLAY">KD-CLAY</a>) and percent iron and aluminum (<a href="#KDIRON">KD-IRON</a>).For organic constituents, the percent sand (<a href="#KDSAND">KD-SAND</a>), percent silt (<a href="#KDSILT">KD-SILT</a>), percent clay (<a href="#KDCLAY">KD-CLAY</a>), and percent organic matter (<a href="#KDOMC">KD-OMC</a>) are used in an empirical equation to provide a K<sub>d</sub> estimate.
+<br />The dropdown box gives the user the choice to select a K<sub>d</sub> from
+<ol>
+<li>Database Value - provided by the connected chemical database module
+<li>Table Lookup Value - provided by the "KD_DATA.CSV" file. Primarily contains metals and radionuclides
+<blockquote>
+K<sub>d</sub> = lookup(casid,col_index) where column index is calculated by
+<blockquote>
+sum = <a href="#KDOMC">WZ-OMC</a> + <a href="#KDCLAY">KD-CLAY</a> + <a href="#KDIRON">KD-IRON</a>
+<br />If PH >= 9.0 Then
+<br />&nbsp;&nbsp; If sum >= 30.0 Then col_Index = 3
+<br />&nbsp;&nbsp; else If sum >= 10.0 Then col_Index = 2
+<br />&nbsp;&nbsp; else Then col_Index = 1
+<br />else If PH >= 5.0 Then
+<br />&nbsp;&nbsp; If sum >= 30.0 Then col_Index = 6
+<br />&nbsp;&nbsp; else If sum >= 10.0 Then col_Index = 5
+<br />&nbsp;&nbsp; else col_Index = 4
+<br />else
+<br />&nbsp;&nbsp; If sum >= 30.0 Then col_Index = 9
+<br />&nbsp;&nbsp; else If sum >= 10.0 Then col_Index = 8
+<br />&nbsp;&nbsp; else col_Index = 7
+</blockquote>
+</blockquote>
+<li>Estimated Value - calculated by the equation</li>
+<blockquote>
+K<sub>d</sub> = 0.0001 * koc * (57.735 * <a href="#KDOMC">KD-OMC</a> + 2.0 * <a href="#KDCLAY">KD-CLAY</a> + 0.4 * <a href="#KDSILT">KD-SILT</a> + 0.005 * <a href="#KDSAND">KD-SAND</a>)
+</blockquote>
+</ol>
+
+<a name=STKDTIM></a><u><b>ST-KD_TIM</b>--Years of the measurements</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />This parameter represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STKD">ST-KD</a> occurred. <a href="STRM.HTM#STKDNUM"> ST-KD_NUM</a> values of ST-KD_TIM must be identified.
+
+<br />
+<br /><a name=STKDESTIMATE></a><u><b>ST-KD_ESTIMATE</b>--Estimate Kd value</u>
+<br />Units: milliliters per gram (mL/g)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />This parameter is an estimate of the equilibrium coefficient (Kd) for the waste zone for each constituent. An estimate is made based on site soil characteristics provided by the user. These estimates should only be used with site-specific Kd data is not available.
+
+<br />
+<br /><a name=KDCLASS></a><u><b>KDCLASS</b>--Waste zone soil textural classification</u>
+<br />Units: none
+<br />Range: none
+<br />
+<br />If the soil type is unavailable from site documents, the soil type for the site and the surrounding area can be determined from the soil maps in the back of the SCS soil survey report for the county in which the site is located. An example of an SCS soil survey table is shown in <a href="Fig_2_9.htm">Figure 2.9</a> . First locate the site on the maps in the back of the SCS county soil survey. An example map is shown in <a href="Fig_2_10.htm"> Figure 2.10</a>. The map will give a symbol for the soil type/name. The index in front of the map section gives the name associated with each symbol. An example index is shown in <a href="Fig_2_11.htm">Figure 2.11</a>. Find the soil name in the appropriate table of the SCS soil survey report (an example is shown in <a href="Fig_2_12.htm">Figure 2.12</a> ), and determine the soil textural classification from the column labeled &quot;USDA texture.&quot; Use the first textural name listed in the table for the soil of interest.
+
+<br />
+<br /><a name=KDSAND></a><u><b>KDSAND</b>--Percent sand of soil</u>
+<br />Units: percent (%)
+<br />Range: 0 to 100
+<br />Typical environmental range: see <a href="Tab_2_1.htm">Table 2.1</a>
+<br />
+<br />If the percentage of sand in the soil is not available from site documents, a typical value can be selected from <a href="Tab_2_1.htm">Table 2.1</a> for the soil classification determined in Section <a href="STRM.HTM#KDCLASS">KDCLASS</a>.
+
+<br />
+<br /><a name=KDSILT></a><u><b>KDSILT</b>--Percent silt of soil</u>
+<br />Units: percent (%)
+<br />Range: 0 to 100
+<br />
+<br />If the percentage of silt in the soil is not available from site documents, a typical value can be selected from <a href="Tab_2_1.htm">Table 2.1</a> for the soil classification determined in Section <a href="STRM.HTM#KDCLASS">KDCLASS</a>.
+
+<br />
+<br /><a name=KDCLAY></a><u><b>KDCLAY</b>--Percent clay of soil</u>
+<br /></b>Units: percent (%)
+<br />Range: 0 to 100
+<br />
+<br />If the percentage of clay in the soil is not available from site documents, a typical value can be selected from <a href="Tab_2_1.htm">Table 2.1</a> for the soil classification determined in Section <a href="STRM.HTM#KDCLASS">KDCLASS</a>.
+
+<br />
+<br /><a name=KDOMC></a><u><b>KDOMC</b>--Percent organic matter content in soil</u>
+<br />Units: percent (%)
+<br />Range: 0.00 to 99.99
+<br />
+<br />The percentage of organic matter can be estimated from 1) documentation at the site or 2) the SCS County Soil Survey reports. If the percentage of organic matter is unknown, assume it is zero.
+
+<br />
+<br /><a name=KDIRON></a><u><b>KDIRON</b>--Percent iron and aluminum in soil</u>
+<br />Units: percent (%)
+<br />Range: 0 to 99.99
+<br />
+<br />If this information is not available from site documents assume </b> <a href="STRM.HTM#STZIRON">KDIRON</a> equals zero.
+
+<br />
+<br /><a name=KDPH></a><u><b>KDPH</b>--pH of soil</u>
+<br />Units: none
+<br />Range: 0.1 to 14.0
+<br />
+<br />If pH is unavailable from site documents, use pH = 7 (i.e., neutral conditions).
+
+<br />
+<br />
+<h2>CONSTITUENT PROPERTIES</h2>
+
+<a name=STSOL></a><u><b>ST-SOL</b>--Water solubility</u>
+<br />Units: grams per milliliter (g/ml)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />The aqueous solubility limit value for the constituent.For most organic contaminates, this value is available in the constituent database or in chemical property books.For inorganic contaminates this value will have to be estimated based on the geochemistry of the waste zone. It is important to input an appropriate solubility limit because it can have a major effect on the aqueous release of constituents from the waste zone.
+
+<br />
+<br /><a name=STINVEN></a><u><b>ST-INVEN</b>--Constituent inventory</u>
+<br />Units: grams (g) or curies (Ci)
+<br />Range: greater than 0.0
+<br />
+<br />The constituent inventory is the total mass of each constituent that was in the site. This information is best obtained from site documents or historical records of constituent releases. If no records are available, the inventory may be calculated from measured constituent concentrations in the soil, surface water, and groundwater. Outlined below are examples of calculations that can be made to estimate the total inventory remaining at the site. Decay factors may be used to adjust the calculated values to reflect the inventory at the time of disposal. Please document all assumptions and calculations in a footnote, and fully reference all sources of quantitative information. A worksheet is provided to the user to enter constituent concentrations instead of inventories and than the code converts the concentrations to an inventory value. This worksheet requires the user to select the constituent of interest, the type of constituent concentration to be input, and its associated units. The work sheet provides the user with the related parameters that will be used by the code to compute the associated inventory. These parameters are not editable from this form but must be modified in the appropriate form in different areas of the MUI. Note that as the concentrations change, the inventories change and visa versa. If the user is in this screen, the code assumes that he/she does not know the inventory and it is expecting them to enter concentrations and computing inventories.
+
+<br />
+<br /><a name=STGHALF></a><u><b>ST-GHALF</b>--Constituent decay/degradation half time</u>
+<br />Units: Years
+<br />Range: Greater than 0.0
+<br />
+<br />This parameter is the estimated half-time of the constituent in the waste zone. This value defaults to the data in the constituent database. For example if the waste zone is aquifer then CLGHALF (aka the groundwater half-time) is pulled from the constutient database. If there is no value a user must enter it, a very high number indicates that the constituent is very persistent and does not decay/degrade. Something like a half-life of 10<sup>20</sup> years should be used for relativly no decay. For radionuclides, the value is read from the constituent database and set so the user can not change it, unless the database itself is changed.
+
+<br />
+<br /><a name=STVOLRAT></a><u><b>ST-VOLRAT</b>--Fraction of volatilization release</u>
+<br />Units: Fraction
+<br />Range: 0.0 to 1.0
+<br />
+<br />This parameter is used to control volatilization rate at constituent level if the volatilization rate is determined by the user to be estimated too high by the model.This occurs when the time step is very small, the simulation time is close to 0.0 years, and the constituent is very volatile.The user should have monitoring data that can be used to estimate the adjustment required to define this value. This parameter is generally set to 1.0 for most constituents and conditions.
+
+<br />
+<br />
+<h2>KNOWN MEDIA RELEASES</h2>
+
+The known erosion/flow rate parameters are entered by the user as time series. The user must provide the number of known erosion/flow rates (parameter_NUM). Then for each (parameter_NUM) time series pair the user will provide the measured value and the duration (parameter_TIM) in years.
+
+<br />
+<br /><a name=STDARCYNUM></a><u><b>ST-DARCY_NUM</b>--Number of darcy measurements</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of darcy velocity flow values that are to be entered.
+
+<br />
+<br /><a name=STDARCY></a><u><b>ST-DARCY</b>--Darcy infiltration rate</u>
+<br />Units: centimeters per year (cm/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-DARCY represents Darcy or bulk velocity through the waste zone. If no value is available from the site data, see <a href="STRM.HTM#WZPVELOC">WZ-PVELOC</a> for a complete description of how to estimate. <a href="STRM.HTM#STDARCYNUM">ST-DARCY_NUM</a> values of ST-DARCY must be identified.
+
+<br />
+<br /><a name=STDARCYTIM></a><u><b>ST-DARCY_TIM</b>--Years of the measurements</u>
+<br />Units: years (yr)
+<br />Range: 2 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-DARCY_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STDARCY">ST-DARCY</a> occurred. Time associated with a zero release (or interrupted release) must also be accounted for. <a href="STRM.HTM#STDARCYNUM">ST-DARCY_NUM</a> values of ST-DARCY_TIM must be identified.
+
+<br />
+<br /><a name=STWATRNUM></a><u><b>ST-WATR_NUM</b>--Number of water erosion measurements</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of water flow rate values that are to be entered.
+
+<br />
+<br /><a name=STWAtr></a><u><b>ST-WATR</b>--Water erosion rate.</u>
+<br />Units: centimeters per year (cm/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-WATR represents water erosion rate at the waste site (i.e., amount of soil removed over time by overland runoff). <a href="STRM.HTM#STWATRNUM">ST-WATR_NUM</a> values of ST-WATR must be identified.
+
+<br />
+<br /><a name=STWATRTIM></a><u><b>ST-WATR_TIM</b>--Year of the measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-WATR_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STWATR">ST-WATR</a> occurred. Time associated with a zero release (or interrupted release) must also be accounted for. <a href="STRM.HTM#STWATRNUM">ST-WATR_NUM</a> values of ST-WATR_TIM must be identified.
+
+<br />
+<br /><a name=STWINDNUM></a><u><b>ST-WIND_NUM</b>--Number of wind erosion measurements</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of wind erosion rate values that are to be entered.
+
+<br />
+<br /><a name=STWIND></a><u><b>ST-WIND</b>--Wind erosion rate</u>
+<br />Units: centimeters per year (cm/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-WIND represents wind erosion rate at the waste site (i.e., amount of soil removed over time by wind and mechanical suspension). <a href="STRM.HTM#STWINDNUM"> ST-WIND_NUM</a> values of ST-WIND must be identified.
+
+<br />
+<br /><a name=STWINDTIM></a><u><b>ST-WIND_TIM</b>--Year of the measurement</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-WIND_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STWIND">ST-WIND</a> occurred. Time associated with a zero release (or interrupted release) must also be accounted for. <a href="STRM.HTM#STWINDNUM">ST-WIND_NUM</a> values of ST-WIND_TIM must be identified.
+
+<br />
+<br />
+<h2>KNOWN CONSTITUENT FLUX</h2>
+
+The known constituent flux rate parameters are entered by the user as time series pairs for each constituent. The user must provide the number of known erosion/flow rates (parameter_NUM). Then for each (parameter_NUM) time series pair the user will provide the measured value and the duration (parameter_TIM) in years.
+
+<br />
+<br /><a name=STLEACHNUM></a><u><b>ST-LEACH_NUM</b>--Number of constituent mass fluxes associated with leaching</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of constituent mass fluxes associated with leaching to the ground water transport pathway. At a minimum there are two (2) fluxes (start and end).
+
+<br />
+<br /><a name=STLEACH></a><u><b>ST-LEACH</b>--Known constituent leaching flux rate(s) (vertical Darcy velocity)</u>
+<br />Units: Curies or grams per year (Ci/yr or g/yr)
+<br />Range: greater than or equal to zero
+<br />
+<br />This parameter is the constituent flux values associated with the leaching loss route of the scenario. These values are measured or computed and input by the user. If the user knows the constituent mass fluxes for all mass loss routes for all times, this model should not be used, the FRAMES User-Defined Source Module should be used in that case. This model is used if the constituent mass flux losses from one or several loss routes are known but other loss routes are unknown and the user wants to use the measured/computed data to conduct mass balance for the entire waste zone.
+
+<br />
+<br /><a name=STLEACHTIM></a><u><b>ST-LEACH_TIM</b>--Year of measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-LEACH_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STLEACH">ST-LEACH</a> occurred. Time associated with a zero flux (or interrupted flux) must also be accounted for. <a href="STRM.HTM#STLEACHNUM">ST-LEACH_NUM</a> values of ST-LEACH_TIM must be identified.
+
+<br />
+<br /><a name=STOVLNUM></a><u><b>ST-OVL_NUM</b>--Number of known constituent overland flux rates.</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of constituent mass fluxes associated with overland runoff to the surface water transport pathway. At a minimum there are two (2) fluxes (start and end).
+
+<br />
+<br /><a name=STOVL></a><u><b>ST-OVL</b>--Known constituent overland flux rates</u>
+<br />Units: grams per year (g/yr) or Curies per year (Ci/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-OVL represents the overland constituent mass flux rate. <a href="STRM.HTM#STOVLNUM"> ST-OVL_NUM</a> values of ST-OVL must be identified. This parameter is the constituent flux values associated with the overland runoff loss route of the scenario. These values are measured or computed and input by the user. If the user knows the constituent mass fluxes for all mass loss routes for all times, this model should not be used, the FRAMES User-Defined Source Module should be used in that case. This model is used if the constituent mass flux losses from one or several loss routes are known but other loss routes are unknown and the user wants to use the measured/computed data to conduct mass balance for the entire waste zone.
+
+<br />
+<br /><a name=STOVLTIM></a><u><b>ST-OVL_TIM</b>--Year of measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-OVL_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STOVL">ST-OVL</a> occurred. Time associated with a zero flux (or interrupted flux) must also be accounted for. <a href="STRM.HTM#STOVLNUM"> ST-OVL_NUM</a> values of ST-OVL_TIM must be identified.
+
+<br />
+<br /><a name=STSUSPNUM></a><u><b>ST-SUSP_NUM</b>-- Number of known constituent wind erosion flux rates.</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of constituent mass fluxes associated with suspension to the atmospheric transport pathway. At a minimum there are two (2) fluxes (start and end).
+
+<br />
+<br /><a name=STSUSP></a><u><b>ST-SUSP</b>--Known wind suspension flux rates</u>
+<br />Units: grams per year (g/yr) or Curies per year (Ci/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-SUSP represents the wind suspension constituent mass flux rate. <a href="STRM.HTM#STSUSPNUM"> ST-SUSP_NUM</a> values of ST-SUSP must be identified. This parameter is the constituent flux values associated with the wind suspension loss route of the scenario. These values are measured or computed and input by the user. If the user knows the constituent mass fluxes for all mass loss routes for all times, this model should not be used, the FRAMES User-Defined Source Module should be used in that case. This model is used if the constituent mass flux losses from one or several loss routes are known but other loss routes are unknown and the user wants to use the measured/computed data to conduct mass balance for the entire waste zone.
+
+<br />
+<br /><a name=STSUSPTIM></a><u><b>ST-SUSP_TIM</b>-- Year of measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-SUSP_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STSUSP"> ST-SUSP</a> occurred. Time associated with a zero flux (or interrupted flux) must also be accounted for. <a href="STRM.HTM#STSUSPNUM">ST-SUSP_NUM</a> values of ST-SUSP_TIM must be identified.
+
+<br />
+<br /><a name=STVOLATNUM></a><u><b>ST-VOLAT_NUM</b>-- Number of known constituent volatilization flux rates.</u>
+<br />Units: none
+<br />Range: 1 to 5
+<br />
+<br />The number of constituent mass fluxes associated with volatilization to the atmospheric transport pathway. At a minimum there are two (2) fluxes (start and end).
+
+<br />
+<br /><a name=STVOLAT></a><u><b>ST-VOLAT</b>--Known constituent volatilization flux rates</u>
+<br />Units: grams per year (g/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-VOLAT represents volatile constituent mass flux rate. <a href="STRM.HTM#STVOLATNUM"> ST-VOLAT_NUM</a> values of ST-VOLAT must be identified. This parameter is the constituent flux values associated with the volatilization loss route of the scenario. These values are measured or computed and input by the user. If the user knows the constituent mass fluxes for all mass loss routes for all times, this model should not be used, the FRAMES User-Defined Source Module should be used in that case. This model is used if the constituent mass flux losses from one or several loss routes are known but other loss routes are unknown and the user wants to use the measured/computed data to conduct mass balance for the entire waste zone.
+
+<br />
+<br /><a name=STVOLATTIM></a><u><b>ST-VOLAT_TIM</b> -- Year of measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-VOLAT_TIM represents the corresponding time for which the measured or estimated value of <a href="STRM.HTM#STVOLAT">ST-VOLAT</a> occurred. Time associated with a zero flux (or interrupted flux) must also be accounted for. <a href="STRM.HTM#STVOLATNUM">ST-VOLAT_NUM</a> values of ST-VOLAT_TIM must be identified.
+
+<br />
+<br /><a name=STSOURCENUM></a><u><b>ST-SOURCE_NUM</b>-- Number of known source/sink constituent flux rates</u>
+<br />Units: none
+<br />Range: 2 to 10
+<br />
+<br />The number of constituent mass fluxes associated with external source or sinks associated with the waste zone. These are constituent mass fluxes that are not accounted for by this source code. These could be constituents added to or removed from the waste zone annually. At a minimum there are two (2) fluxes (start and end).
+
+<br />
+<br /><a name=STSOURCE></a><u><b>ST-SOURCE</b>--Known source/sink constituent flux rates to waste zone</u>
+<br />Units: grams per year (g/yr) or Curies per year (Ci/yr)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter ST-SOURCE represents external sources of constituent influx and outflux . <a href="STRM.HTM#STSOURCENUM">ST-SOURCE_NUM</a> values of ST-SOURCE must be identified. This parameter is the constituent flux values associated with the external source or sink loss route of the scenario. These values are measured or computed and input by the user. Positive values should be used to indicate mass is being added to the source (i.e., a constituent source).Negative values should be used to indicate mass is being removed from the source (i.e., a constituent sink).
+
+<br />
+<br /><a name=STSOURCETIM></a><u><b>ST-SOURCE_TIM</b>-- Year of measurements.</u>
+<br />Units: years (yr)
+<br />Range: 0 to <a href="STRM.HTM#STMAXTIME">ST-MAXTIME</a>
+<br />
+<br />ST-SOURCE_TIM represents the corresponding time for which the measured or estimated value occurred. Time associated with a zero flux (or interrupted flux) must also be accounted for. <a href="STRM.HTM#STSOURCENUM">ST-SOURCE_NUM</a> values of ST-SOURCE_TIM must be identified.
+
+<br />
+<br /><a name=ACLCDREF></a><u><b>AC-LCDREF</b>--Name of the station referenced for LCD data</u>
+<br />Units: none
+<br />
+<br />Prior to entering data, the nearby stations with LCD summaries will need to be identified. From these stations, select the station which is most representative of the climatology of the site. Usually this will be the station located closest to the site. Enter the name of the selected station and use the data from this station to complete the entries below.
+
+<br />
+<br /><a name=WASURFKD></a><u><b>WA-SURFKD</b>--Surface adsorption coefficients</u>
+<br />Units: milliliters per gram (mL/g)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />WA-SURFKD represents the equilibrium (partition or distribution) coefficient K<sub>d</sub> of constituent between top soil and moisture. Use laboratory or field-derived distribution coefficient (K<sub>d</sub>) values if they are available from site documents or reports of studies using similar soil and constituent characteristics. Typical K<sub>d</sub> values reported in peer review literature will be provided by the user interface if site-specific K<sub>d</sub>s are not available. Several additional data are required for the user interface to compute a K<sub>d</sub> value for each layer:
+<br />
+<br />For inorganic chemicals:
+<blockquote>- Soil pH (if unknown, assume neutral conditions)
+<br />- Weight percent clay and iron and aluminum oxyhydroxides
+</blockquote>
+For organic chemicals:
+<blockquote>
+- Percent sand, silt, and clay and organic matter
+</blockquote>
+<br />Theoretically, Kd is defined as:
+<center>Kd = C<sub>p</sub>/C<sub>d</sub></center>
+<br />where C<sub>p</sub> is the particulate concentration (i.e., weight or activity of adsorbed constituent per weight of solid) and C<sub>d</sub> is the dissolved concentration or activity. Although the K<sub>d</sub> value of a constituent of concern can be determined in the laboratory or obtained from published literature, such values can vary considerably depending upon the experimental or environmental conditions (e.g., characteristics of soil and water) and technique used. When choosing between K<sub>d</sub> values, use the value which will provide the conservative results (e.g., highest risk). For example, a receptor who is living on or near the waste site and ingesting contaminated soil would have high risk with the large K<sub>d</sub> value because the constituent would not be readily washed off by rain and retained in soils for an extended period of time. On the other hand, low Kd value would pose high risk to the offsite receptor who ingests water because the constituent is readily dissolved into water and is mobilized. Note that because of the uncertainty associated with K<sub>d</sub>, it is preferably used as a calibration parameter to adjust the constituent velocity.
+
+<br />
+<br /><a name=WASUBKD></a><u><b>WA-SUBKD</b>--Subsurface adsorption coefficients</u>
+<br />Units: milliliters per gram (mL/g)
+<br />Range: greater than or equal to 0.0
+<br />
+<br />See Section <a href="STRM.HTM#WASURFKD">WA-SURFKD</a> for selection of equilibrium coefficients.
+
+<br />
+<br /><a name=WTCLASS></a><u><b>WT-CLASS</b>--Surface soil textural classification</u>
+<br />Units: none
+<br />
+<br />If the soil type is unavailable from site documents, the soil type for the site and the surrounding area can be determined from the soil maps in the back of the SCS soil survey report for the county in which the site is located. An example of an SCS soil survey table is shown in <a href="Fig_2_9.htm">Figure 2.9</a> . First locate the site on the maps in the back of the SCS county soil survey. An example map is shown in <a href="Fig_2_10.htm"> Figure 2.10</a>. The map will give a symbol for the soil type/name. The index in front of the map section gives the name associated with each symbol. An example index is shown in <a href="Fig_2_11.htm">Figure 2.11</a>. Find the soil name in the appropriate table of the SCS soil survey report (an example is shown in <a href="Fig_2_12.htm">Figure 2.12</a> ), and determine the soil textural classification from the column labeled &quot;USDA texture.&quot; Use the first textural name listed in the table for the top soil of interest.
+
+<br />
+<br /><a name=ARREGSUR></a><u><b>AR-REGSUR</b>--Regional surface roughness lengths (z<sub>o</sub>'s)</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0 to 999.9
+<br />Typical environmental range: 0 to 150
+<br />
+<br />Surface roughness lengths (z<sub>o</sub>'s) are needed for the region surrounding the facility. A z<sub>o</sub> characterizes the sizes of surface elements that can influence atmospheric dispersion processes.
+<br />
+<br />z<sub>o</sub> must be defined for eight direction sectors at four predetermined distances from the facility. A table is provided in the template for entering these values.
+<br />
+<br /><a href="Fig_3_7.htm">Figure 3.7</a> illustrates how z<sub>o</sub> affects the wind profile using three different environments. The vertical wind profile at the left in Figure 3.7 is for bare ground. The z<sub>o</sub> represents z<sub>o</sub>. For bare ground the z<sub>o</sub> is small (z<sub>o</sub> = 1 cm). The middle wind profile is for an area with residential housing. These buildings increase the surface resistance to the wind (z<sub>o</sub> = 10 cm) and reduce the wind speed. This reduction of wind speed occurs up into the boundary layer. Over a forest, the z<sub>o</sub> is 50 cm, which results in a further reduction in wind speeds in the lower portion of the boundary layer.
+<br />
+<br />Note that a z<sub>o</sub> input is required elsewhere for contaminated surface areas to compute the potential for wind erosion of the surface particles. The z<sub>o</sub> entered here for the closest annular segments may, or may not be the same as the z<sub>o</sub> for the contaminated area. Also note that the default values are not identical..
+<br />
+<br />An order-of-magnitude definition of average z<sub>o</sub> will be sufficient. The roughness values reflect major differences in surface cover. <a href="Fig_3_8.htm"> Figure 3.8</a> provides a summary of typical roughness heights associated with various types of surface. Using the information obtained in Section 1.0 along with facility photographs and other descriptive material, compute an average z<sub>o</sub>. For example, if one segment is about 50% agricultural (10 cm) and 50% low forest (50 cm), assign it a value of 30 cm.
+<br />
+<br />If the surface cover in a segment is completely unknown, enter a typical value of z<sub>o</sub> for grasslands as -10. The negative value indicates a typical value used.
+<br />
+<br />If the surface cover in a segment is predominantly water, enter a z<sub>o</sub> of 0 cm in the table. (For a zero input value, the model computes the roughness of the surface as a function of wind speed and stability.) The z<sub>o</sub> over water should only be used in cases that require a spatial averaging of z<sub>o</sub> values, i.e., for a segment containing significant fractions of both land and water surfaces. The procedure for defining z<sub>o</sub> requires that the directions and distances be overlaid on a map of the region surrounding the facility. Map(s) are needed to cover the region out, to a radius of about 75 km (approximately 50 mi). For the shortest distances, facility photographs, maps, and descriptions will be most useful in defining z<sub>o</sub>. <a href="Tab_3_3.htm"> Table 3.3</a> shows the ranges of distances to be considered for each entry. <a href="Fig_3_9.htm">Figure 3.9</a> illustrates a typical grid layout for determining the average zo for each direction and distance.
+
+<br />
+<br /><a name=WZPVELOC></a><u><b>WZ-PVELOC</b>--Darcy velocity in the saturated zone</u>
+<br />Units: feet per day (ft/day)
+<br />Range: greater than 0.0
+<br />
+<br />The parameter WZ-PVELOC represents Darcy or bulk velocity. If no value is available from the site data, Darcy velocity (Vd) can be estimated by: </b> <br />
+<br /><center>Vd = K (H<sub>1</sub> - H<sub>2</sub>)/d</center>
+<br />where K = saturated hydraulic conductivity, (ft/day) (see Section 2.4m). </b>
+<blockquote>
+(H<sub>1</sub>-H<sub>2</sub>)/d = hydraulic gradient, defined as the difference in head or hydraulic potential at two points in the aquifer, divided by the distance (d) between the two points. This can be obtained from water table or potentiometric surface maps or from well logs.
+</blockquote>
+<br />If no value is available for saturated hydraulic conductivity, additional values can be obtained from <a href="Tab_2_1.htm">Table 2.1</a> . Use the largest value in the range given.
+<br />
+<br />In contrast with Darcy velocity, pore water velocity (Vp) can be estimated as the Darcy velocity divided by the effective porosity (see Section <a href="SATURATZ.HTM#WZEFFPOR"> WZ-EFFPOR</a>):
+<br />
+<br /> <center>Vp = Vd/ne</center>
+<br />where ne is the effective porosity expressed as a fraction (see Section <a href="SATURATZ.HTM#WZEFFPOR"> WZ-EFFPOR</a>). The constituent velocity (Vc) can be estimated by:
+<br />
+<br /><center>Vc = Vp/R<sub>f</sub></center>
+<br />where R<sub>f</sub> is the retardation factor and is defined as:
+<br />
+<br /><center>Rf = 1 + (K<sub>d</sub> b/ne)</center>
+<br />where b and K<sub>d</sub> are bulk density (see Section <a href="SATURATZ.HTM#WZBULKD">WZ-BULKD</a> ) and the equilibrium (partition or distribution) coefficient (see Section <a href="ADSORPCO.HTM#WASUBKD"> WA-SUBKD</a>), respectively.
+<br />
+<br />If sampling indicates that constituents have moved from the waste site, check to ensure that the calculated constituent velocity (Vc) is consistent with the speed at which the constituent plume is traveling in the aquifer. The constituent cannot be moving faster than the water (except by diffusion) but it can move significantly slower, depending on its retardation (equilibrium coefficient, Section <a href="ADSORPCO.HTM#WASUBKA">WA-SUBKA</a>). If the calculated constituent velocity (Vc) is different from the apparent speed of the constituent plume (due to retardation), adjust the Kd value, then Darcy velocity, so the calculated constituent velocity is equal to the speed of the plume.
+
+<hr />
+<center><a href="https://www.pnnl.gov/projects/earth/mepas"><img src="MEPHOME.GIF" ></a></center>
+</body>
+</html>

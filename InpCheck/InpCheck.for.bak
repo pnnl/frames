@@ -1,0 +1,719 @@
+!=================== Start OF MODULE InpCheck =================================
+      Program InpCheck
+!==============================================================================
+
+c ===  Variable declarations 
+
+      Integer ieUnt
+      Integer icUnt
+      Integer isIUnt
+      Integer isOUnt
+      Integer i,j,len,sJul,bIdx,eIdx
+      Character ver
+      Character*80 des
+
+c ---  bwiccalmet.inp info
+      Character*250 path
+      Character*80 name
+      Real xSw
+      Real ySw
+      Integer uZone
+      Real size
+      Integer xNum
+      Integer yNum
+      Integer sYr
+      Integer sMn
+      Integer sDy
+      Integer sHr
+      Integer tZone
+      Integer sLen
+      Character topo
+      Character*80,ALLOCATABLE::datName(:)
+c ---  upper air station info
+      Integer sNum
+      character*80,ALLOCATABLE::cname(:)
+      character*20,ALLOCATABLE::clat(:), clng(:)
+      integer,ALLOCATABLE::ista(:), itz(:), anem(:)
+c ---  upper air station info
+      Integer aNum
+      character*80,ALLOCATABLE::caname(:)
+      character*20,ALLOCATABLE::calat(:), calng(:)
+      integer,ALLOCATABLE::iasta(:), iatz(:)
+
+c ---  surface station .dat info
+      Logical done,err
+      Integer yr,hr,dy,jul
+      Integer ibyr,ibjul,ibhr,ieyr,iejul,iehr,ibtz,nsta
+      Real,ALLOCATABLE::u(:,:),v(:,:)
+      Real,ALLOCATABLE::ws(:,:),wd(:,:),tempk(:,:),pres(:,:)
+      Integer,ALLOCATABLE::idsta(:),iceil(:,:),icc(:,:),irh(:,:)
+      Integer,ALLOCATABLE::iyr(:),ijul(:),ihr(:),ipcode(:,:)
+      
+c ===  Data declarations
+      DATA ver/'25-Apr-07'/
+
+c ---  File unit assignments
+      ieUnt = 1
+      icUnt = 2
+      isIUnt = 3
+      isOUnt = 4
+
+c ---  Open error log      
+      Open(UNIT=ieUnt, FILE='inpCheck.log',STATUS='replace')
+
+c ---  Open and read bwiccalmet.inp      
+      Open (UNIT=icUnt, FILE='BWICCALMET.INP',STATUS='OLD')
+      Read(icUnt,*) path,des
+      Read(icUnt,*) run,des
+      Read(icUnt,*) xSw,des
+      Read(icUnt,*) ySw,des
+      Read(icUnt,*) uZone,des
+      Read(icUnt,*) size,des
+      Read(icUnt,*) xNum,des
+      Read(icUnt,*) yNum,des
+      Read(icUnt,*) sYr,des
+      Read(icUnt,*) sMn,des
+      Read(icUnt,*) sDy,des
+      Read(icUnt,*) sHr,des
+      Read(icUnt,*) tZone,des
+      Read(icUnt,*) sLen,des
+      Read(icUnt,*) topo,des
+
+c ---  Now Read Surface station data
+      Read(icUnt,*) sNum,des      
+      Read(icUnt,70) des,des,des,des,des,des
+      ALLOCATE(cname(sNum),clat(sNum),clng(sNum))
+      ALLOCATE(ista(sNum),itz(sNum),anem(sNum))
+      Do i = 1,sNum
+        Read(icUnt,*) cname(i),ista(i),clat(i),clng(i),itz(i),anem(i)
+      End do
+
+c ---  Now Read upper air station data      
+      Read(icUnt,*) aNum,des
+      Read(icUnt,70) des,des,des,des,des,des,des
+      ALLOCATE(caname(aNum),calat(aNum),calng(aNum))
+      ALLOCATE(iasta(aNum),iatz(aNum))
+      Do i = 1,aNum
+        Read(icUnt,*) caname(i),iasta(i),calat(i),calng(i),iatz(i)
+      End do
+
+c ---  Now Read file names     
+      ALLOCATE(datName(aNum+1))
+      Read(icUnt,*) datName(1)
+      Read(icUnt,70) des,des
+      Do i = 2,aNum+1
+        Read(icUnt,*) datName(i)
+      End do
+      Close(icUnt,STATUS='KEEP')
+
+
+c ---  Calculate ending time from .inp file
+      call julday(ieUnt,sYr,sMn,sDy,sJul)
+      hr = MOD(sLen+sHr,24)
+      jul = sJul + (sLen+sHr)/24
+      if (CheckLeap(yr).EQ..TRUE.) then
+        yr = sYr + jul/366
+        jul = MOD(jul,366)
+      else
+        yr = sYr + jul/365
+        jul = MOD(jul,365)
+      end if
+c1
+      write(ieUnt,*) 'Simulation start time', sYr, sJul, sHr
+      write(ieUnt,*) 'Simulation end time', Yr, Jul, Hr
+      write(ieUnt,*) 'The simulation length ', slen
+      write(ieUnt,*) 'Done reading BWICCALMET.inp'
+      write(*,*) 'Done reading BWICCALMET.inp'
+c1
+
+c ---  Open and Read an unformatted surf.dat file     
+      err = .false.
+      Open(UNIT=isIUnt, FILE=datName(1),STATUS='OLD')
+      read(isIUnt,*) ibYr,ibJul,ibHr,ieYr,ieJul,ieHr,ibTz,nsta
+
+c ---  calculating the correct number of hours (len) for dynamic allocation
+      len = 0
+      if (ibyr.GT.ieyr .OR. ibjul.GT.365 .OR. iejul.GT.365 .OR. 
+     1    ibhr.GT.23 .OR. iehr.GT.23) then
+        write(ieUnt,*)
+	1 'Malformed surface data line 1, date info in error!'
+        err = .true.
+      end if
+
+      if (ieyr.EQ.ibyr) then 
+        len = (iejul-ibjul)*24 + (iehr-ibhr)+1
+      else    
+        len = (364-ibjul) * 24
+        if (CheckLeap(ibyr).EQ..TRUE.) then 
+          len = len+24
+        end if
+        do i=ibyr+1,ieyr-1
+          len = len + (365*24)
+          if (CheckLeap(i).EQ..TRUE.) then 
+            len = len + 24
+          end if
+        end do
+        len = iejul*24 + iehr
+      end if
+      i=len
+
+      ALLOCATE(idsta(nsta))
+      ALLOCATE(iyr(i),ijul(i),ihr(i))
+      ALLOCATE(u(i,nsta),v(i,nsta))
+      ALLOCATE(ws(i,nsta),wd(i,nsta),tempk(i,nsta),pres(i,nsta))
+      ALLOCATE(iceil(i,nsta), icc(i,nsta), irh(i,nsta), ipcode(i,nsta))
+      read(isIUnt,*)(idsta(i),i=1,nsta)
+      do i=1,len
+        read(isIUnt,*) iyr(i),ijul(i),ihr(i)
+        do j=1,nsta
+          read(isIUnt,*) ws(i,j),wd(i,j),iceil(i,j),icc(i,j),
+	1	tempk(i,j),irh(i,j),pres(i,j),ipcode(i,j)     
+        end do
+      end do
+      Close(isIUNT,STATUS='KEEP')
+
+c1
+      write(ieUnt,*) 'Surface data start time', ibYr, ibJul, ibHr
+      write(ieUnt,*) 'Surface data end time', ieYr, ieJul, ieHr
+      write(ieUnt,*) 'The calculated number of observations ', len
+      write(ieUnt,*) 'Done reading ', datName(1)
+      write(*,*) 'Done reading ', datName(1)
+c1
+
+c ---  Process the surf.dat file for errors
+
+c ---  Find start time index surf.dat file
+      bIdx = 0
+      do i=1,len
+        if (sYr.EQ.iyr(i)) then
+          if (sJul.EQ.ijul(i)) then
+            if (sHr.EQ.ihr(i)) then
+              bIdx = i 
+            end if
+          end if    
+        end if
+      end do
+
+c ---  Find end time index surf.dat file
+      eIdx = 0
+      do i=bIdx,len
+        if (yr.EQ.iyr(i)) then
+          if (jul.EQ.ijul(i)) then
+            if (hr.EQ.ihr(i)) then
+              eIdx = i 
+            end if
+          end if    
+        end if
+      end do
+c1
+      write(ieUnt,*) 'Observation indices', bIdx, eIdx
+      write(*,*) 'Observation indices', bIdx, eIdx
+c1
+
+c ---  Time seqence checks
+
+      if (iyr(1).NE.ibyr .OR. ijul(1).NE.ibjul .OR. ihr(1).NE.ibhr) then
+        write(ieUnt,*) 
+	1  'Surface data start time and first obeservation time do not match!'
+        err = .true.
+      end if
+
+      if (sLen.GT.len+2) then
+        write(ieUnt,*) 
+     1  'Surface data can not support simualtion length!'
+        err = .true.
+      end if
+
+      if (bIdx.LT.2) then
+        write(ieUnt,*) 
+     1  'Surface data can not support simualtion start time!'
+        err = .true.
+      end if
+
+      if (eIdx.EQ.0 .OR. eIdx.EQ.len) then
+        write(ieUnt,*) 
+     1  'Surface data can not support simualtion end time!'
+        err = .true.
+      end if
+
+c	a.	Ceiling Height: 100 (thousands of feet)
+c	b.	Cloud Cover: 0 (tenths)
+c	c.	Temperature: 298.0 (K)
+c	d.	Relative Humidity: 50 (%)
+c	e.	Pressure: 1013.25 (mb)
+c	f.	Wind Speed: 0 (m/s); Direction 0 (degrees)
+
+
+      call ifillvalues(nsta,len,bIdx,eIdx,iceil,100)
+      call ifillvalues(nsta,len,bIdx,eIdx,icc,0)
+      call ifillvalues(nsta,len,bIdx,eIdx,irh,50)
+c      call ifillvalues(nsta,len,bIdx,eIdx,ipcode,0)
+      call rfillvalues(nsta,len,bIdx,eIdx,tempk,298.0)
+      call rfillvalues(nsta,len,bIdx,eIdx,pres,1013.25)
+    
+c      can not just average values must first convert to u v
+c      call rfillvalues(nsta,len,bIdx,eIdx,wd,0)
+c      call rfillvalues(nsta,len,bIdx,eIdx,ws,0)
+c --- Convert to u and v components
+	do j=1,nsta
+	  do i=bIdx-1,eIdx+1
+	    if (wd(i,j).NE.9999.0) then
+            wdrad = 0.0174533 * wd(i,j)
+            u(i,j) = -ws(i,j) * sin(wdrad)
+            v(i,j) = -ws(i,j) * cos(wdrad)
+	    else
+	      u(i,j) = 9999.0
+	      v(i,j) = 9999.0
+	    end if
+        end do
+	end do
+     
+      call rfillvalues(nsta,len,bIdx,eIdx,u,0)
+      call rfillvalues(nsta,len,bIdx,eIdx,v,0)
+
+c --- Convert from u and v components
+	do j=1,nsta
+	  do i=bIdx-1,eIdx+1
+	    if (u(i,j).NE.9999.0) then
+            ws(i,j) = sqrt(u(i,j)*u(i,j) + v(i,j)*v(i,j))
+            if (ws(i,j).NE.0.0) then
+		    wd(i,j) = CalcWindDir(u(i,j),v(i,j),ws(i,j))
+            else
+	        wd(i,j) = 0
+		  end if 
+          end if
+        end do
+	end do
+c1
+      write(ieUnt,*) 'Finished Checks'
+      write(*,*) 'Finished Checks'
+c1
+      if (err.EQ..true.) then
+      end if
+
+c ---  Open and Write formatted surf.dat file     
+      Open(UNIT=isOUnt, FILE=datName,STATUS='replace')
+      write(isOUnt,70) 'SURF.DAT        2.0'
+      write(isOUnt,70) '   1'
+      write(isOUnt,70) 'Producd by InpCheck Version: ',ver
+      write(isOUnt,70) 'NONE'
+      write(isOUnt,100) ibyr,ibjul,ibhr,ieyr,iejul,iehr,ibtz,nsta
+      write(isOUnt,110) (idsta(i),i=1,nsta)
+      do i=1,len
+        write(isOUnt,120) iyr(i),ijul(i),ihr(i)
+        do j=1,nsta
+          write(isOUnt,130) ws(i,j),wd(i,j),iceil(i,j),icc(i,j),
+     1                   tempk(i,j),irh(i,j), pres(i,j),ipcode(i,j)      
+        end do
+      end do
+      Close(isOUnt)
+
+c1
+      write(ieUnt,*) 'Done writing ', datName(1)
+      write(*,*) 'Done writing ', datName(1)
+      write(*,*) 'Fin'
+c1
+
+c ---  .inp line formats
+ 70   format(a,a,a,a,a,a,a)
+ 80   format(a,i,a,a,i,i)
+c ---  Surf.dat output line formats
+ 90   format(i2.2,i4.2,i4.2,i4.2,i4.2,i4.2,i4.2,i4.2,i4.2)
+100   format(i6,i4,i4,i6,i4,i4,i5,i5)
+110   format(i8,i8,i8,i8,i8)
+120   format(i2.2,i4,i4)
+130   format(f9.3,f9.3,i5,i5,f9.3,i5,f9.3,i5)
+
+
+
+c ---  Open and Read an unformatted surf.dat file     
+      do i=k,aNum
+      err = .false.
+      Open(UNIT=isIUnt, FILE=datName(k),STATUS='OLD')      
+	read(isIUnt,140) ibYr,ibJul,ibHr,ieYr,ieJul,ieHr,pstop,jdat,ifmt
+	read(isIUnt,150) lht,ltemp,lwd,lws
+
+
+c ---  calculating the correct number of hours (len) for dynamic allocation
+      len = 0
+      if (ibyr.GT.ieyr .OR. ibjul.GT.365 .OR. iejul.GT.365 .OR. 
+     1    ibhr.GT.23 .OR. iehr.GT.23) then
+        write(ieUnt,*)
+	1 'Malformed air data line 1, date info in error!'
+        err = .true.
+      end if
+
+c ---  calculating the correct number of hours (len) for dynamic allocation
+      if (ieyr.EQ.ibyr) then 
+        len = (iejul-ibjul)*24 + (iehr-ibhr)+1
+      else    
+        len = (364-ibjul) * 24
+        if (CheckLeap(ibyr).EQ..TRUE.) then 
+          len = len+24
+        end if
+        do i=ibyr+1,ieyr-1
+          len = len + (365*24)
+          if (CheckLeap(i).EQ..TRUE.) then 
+            len = len + 24
+          end if
+        end do
+        len = iejul*24 + iehr
+      end if
+	len = len/12
+      i=len
+
+c ---  Allocate space for processing for up to fifty levels 
+	n = 51
+      ALLOCATE(itpdk(i),idsta(i),iyr(i),ijul(i),ihr(i))
+      ALLOCATE(imon(i),iday(i),ihr(i),mlev(i),istop(i))
+      ALLOCATE(u(i,n),v(i,nsta),ws(i,nsta),wd(i,n))
+      ALLOCATE(tempk(i,n),pres(i,n),ht(i,n))
+      khr = ibhr
+	kjul= ibjul
+	kyr = ibyr
+      if (CheckLeap(ibyr).EQ..TRUE.) then 
+	  yrlen = 365
+	else
+	  yrlen = 364
+	end if 
+
+	 
+      do i=1,len	  
+        read(isIUnt,160) itpdk(i), idsta(i), iyr(i), imon(i),
+	1                 iday(i), ihr(i), mlev(i), istop(i)
+        if (ihr(i).EQ.khr .and. jul.EQ.kjul .and. iyr(i).EQ.kyr)
+	    tIdx = i
+        else
+	    tIdx = 
+	  end if
+        do j=1,istop(i)
+          read(isIUnt,170) pres(i,j),ht(i,j),tempk(i,j),wd(i,j),ws(i,j)
+        end do
+	  khr = mod(khr+12,24)
+	  if (khr.EQ.0) then
+	    kjul = kjul+1
+        end if
+	  if (kjul/yrlen.EQ.1) then
+          kjul = 0
+	    yr = yr+1
+		if (CheckLeap(yr).EQ..TRUE.) then 
+		  yrlen = 365
+		else
+		  yrlen = 364
+		end if 
+	  end if
+      end do
+      Close(isIUNT,STATUS='KEEP')
+
+c ---  Open and Write formatted up(n).dat file     
+      Open(UNIT=isOUnt, FILE=datName(k),STATUS='replace')
+	write(isOUnt,140) ibYr,ibJul,ibHr,ieYr,ieJul,ieHr,pstop,jdat,ifmt
+	write(isOUnt,150) lht,ltemp,lwd,lws
+      do i=1,len
+        write(isOUnt,160) itpdk(i), idsta(i), iyr(i), imon(i),
+	1                 iday(i), ihr(i), mlev(i), istop(i)
+        do j=1,istop(i)
+          write(isOUnt,170) pres(i,j),ht(i,j),tempk(i,j),wd(i,j),ws(i,j)
+        end do
+      end do
+      Close(isOUnt)
+
+c1
+      write(ieUnt,*) 'Done writing ', datName(k)
+      write(*,*) 'Done writing ', datName(k)
+
+c --- formats for read and writing up.data files
+140	format(1x,6i5,f5.0,2i5)
+150   format(l1,1l1,l1,l1) 
+160   format(3x,i4,5x,a5,5x,4i2,t69,i2)
+170   format(3x,f6.1,'/'.f5.0,'/',f5.1,'/',i3,'/',i3)      
+
+      end do
+
+      write(*,*) 'Fin'
+
+
+
+      END
+!=================== End of Program InpCheck ==================================
+
+!=================== Start of calcwinddir ==================================
+      Real Function CalcWindDir(u, v, wspd)
+	Real u,v,wspd
+    
+      Real wdir
+	Real Rad2Deg
+	
+      Rad2Deg = 57.29577951
+
+      If (-1.0 * U .GE. 0.0) Then
+        If (.Not. (ACOS(-V / wspd) .EQ. -99999999.0)) Then
+            wdir = ACOS(-V / wspd) * rad2Deg
+        Else
+            If (V.LT.0) Then
+                wdir = 0.0
+            Else
+                wdir = 180.0
+            End If
+        End If
+      Else
+        If (.Not. (ACOS(-V / wspd) .EQ. -99999999.0)) Then
+            wdir = 360 - ACOS(-V / wspd)  * rad2Deg
+        Else
+            If (V.LT.0) Then
+                wdir = 0.0
+            Else
+                wdir = 180.0
+            End If
+        End If
+	End If
+ 
+      CalcWindDir = wdir
+	return
+      End
+
+!=================== Start of fillvalues ==================================
+      subroutine ifillvalues(nsta,len,bIdx,eIdx,val,default)
+	Integer nsta,len,bIdx,eIdx,default
+      Integer val(len,nsta)
+	
+	Integer i,j,k,n,cnt,fillcnt
+      real sum,m
+
+c ---  Fill missing end values - part 'a' in surf check write up
+c      write(*,*) 'Input for fill',nsta,len,bIdx,eIdx
+      do j=1,nsta
+        fillcnt=0
+c ---   front end values
+        do i=bIdx-1,eIdx+1
+          if (val(i,j) .NE. 9999) then
+            goto 1000
+          end if
+        end do
+1000    if (i.LT.eIdx+1) then
+          do k=bIdx-1,i-1
+            val(k,j) = val(i,j)
+c	write(*,*) 'front end fill',val(i,j),k,j
+	fillcnt = fillcnt+1
+          end do
+        else
+c ---     Fill missing values between ends - part 'c' in surf check write up 
+          do i=bIdx-1,eIdx+1
+	      cnt = 0
+            sum = 0.0
+            do k=1,nsta
+	        if (val(i,k).NE.9999) then
+                sum = sum + val(i,k)
+                cnt = cnt+1
+              end if
+            end do
+	      if (cnt.NE.0) then
+              val(i,j) = sum/cnt
+c	write(*,*) 'average fill',val(i,j),i,j,sum,cnt
+	fillcnt = fillcnt+1
+            else
+c ---     Fill missing values with default - part 'd' in surf check write up 
+	        val(i,j) = default
+c	write(*,*) 'default fill',val(i,j),i,j
+	fillcnt = fillcnt+1
+            end if
+          end do
+        end if
+
+c ---   back end values
+        do i=eIdx+1,bIdx-1,-1
+          if (val(i,j) .NE. 9999) then
+            goto 2000
+          end if
+        end do
+2000    if (i.GT.bIdx-1) then
+          do k=i+1,eIdx-1
+            val(k,j) = val(i,j)
+c	write(*,*) 'back end fill',val(k,j),k,j
+	fillcnt = fillcnt+1
+          end do
+        end if
+c ---   Fill missing end values between ends - part 'b' in surf check write up 
+        do i=bIdx-1,eIdx+1
+          if (val(i,j) .EQ. 9999) then
+            k = i+1
+            do while (val(k,j) .EQ. 9999)
+              k=k+1
+            end do
+c ---       calculate slope
+            m = (val(k,j)-val(i-1,j)) / (k-(i-1))
+c ---       fill in values
+            do n=i,k-1
+              val(i,j)=val(i-1,j)+ m*(n-(i-1))
+c	write(*,*) 'between fill', val(i,j),i,j, m
+	fillcnt = fillcnt+1
+            end do
+          end if
+        end do
+	write(*,*) 'Station done->',j, ' Filled values->',fillcnt
+      end do
+      return
+      end
+
+!=================== Start of rfillvalues ==================================
+      subroutine rfillvalues(nsta,len,bIdx,eIdx,val,default)
+	Integer nsta,len,bIdx,eIdx
+      Real val(len,nsta),default
+	
+	Integer i,j,k,n,cnt,fillcnt
+	Real sum,m
+
+c ---  Fill missing end values - part 'a' in surf check write up
+c      write(*,*) 'Inputs for rfill',nsta,len,bIdx,eIdx
+      do j=1,nsta
+        fillcnt=0
+c ---   fill front end values
+        do i=bIdx-1,eIdx+1
+          if (val(i,j) .NE. 9999.0) then
+            goto 1000
+          end if
+        end do
+1000    if (i.LT.eIdx+1) then
+          do k=bIdx-1,i-1
+            val(k,j) = val(i,j)
+c	write(*,*) 'front end fill',val(i,j),k,j
+	fillcnt = fillcnt+1
+          end do
+        else
+c ---     Fill missing values between ends - part 'c' in surf check write up 
+          do i=bIdx-1,eIdx+1
+	      cnt = 0
+            sum = 0.0
+            do k=1,nsta
+	        if (val(i,k).NE.9999.0) then
+                sum = sum + val(i,k)
+                cnt = cnt+1
+              end if
+            end do
+	      if (cnt.NE.0) then
+              val(i,j) = sum/cnt
+c	write(*,*) 'average fill',val(i,j),i,j,sum,cnt
+	fillcnt = fillcnt+1
+            else
+c ---     Fill missing values with default - part 'd' in surf check write up 
+	        val(i,j) = default
+c	write(*,*) 'default fill',val(i,j),i,j
+	fillcnt = fillcnt+1
+            end if
+          end do
+        end if
+
+c ---   back end values
+        do i=eIdx+1,bIdx-1,-1
+          if (val(i,j) .NE. 9999.0) then
+            goto 2000
+          end if
+        end do
+2000    if (i.GT.bIdx-1) then
+          do k=i+1,eIdx-1
+            val(k,j) = val(i,j)
+c	write(*,*) 'back end fill',val(k,j),k,j
+	fillcnt = fillcnt+1
+          end do
+        end if
+c ---   Fill missing end values between ends - part 'b' in surf check write up 
+        do i=bIdx-1,eIdx+1
+          if (val(i,j) .EQ. 9999.0) then
+            k = i+1
+            do while (val(k,j) .EQ. 9999)
+              k=k+1
+            end do
+c ---       calculate slope
+            m = (val(k,j)-val(i-1,j)) / (k-(i-1))
+c ---       fill in values
+            do n=i,k-1
+              val(i,j)=val(i-1,j)+ m*(n-(i-1))
+c	write(*,*) 'between fill', val(i,j),i,j, m
+	fillcnt = fillcnt+1
+            end do
+          end if
+        end do
+	write(*,*) 'Station done->',j, ' Filled values->',fillcnt
+      end do
+      return
+      end
+
+!=================== Start of function CheckLeap ==============================
+      Logical function CheckLeap(year)
+      integer year
+
+      if ((mod(year,4).eq.0).and.((mod(year,100).ne.0).or.
+     1    (mod(year,400).eq.0))) then
+        CheckLeap=.true.
+      else
+        CheckLeap=.false.
+      end if
+      return
+      end  
+
+!=================== Start of subroutine julday ===============================
+      subroutine julday(io,iyr,imo,iday,ijuldy)
+c------------------------------------------------------------------------------
+c
+c --- CALUTILS   Version: 2.1      Level: 000602                 JULDAY
+c ---            J. Scire, SRC
+c
+c --- PURPOSE:  Compute the Julian day number from the Gregorian
+c               date (month, day)
+c
+c --- UPDATE
+c ---               000602  (DGS): YYYY format for year
+c
+c --- INPUTS:
+c            IO - integer      - Unit number for list file output
+c           IYR - integer      - Year
+c           IMO - integer      - Month
+c          IDAY - integer      - Day
+c
+c --- OUTPUT:
+c          IJUL - integer      - Julian day
+c
+c --- JULDAY called by:  host subroutines
+c --- JULDAY calls:      none
+c----------------------------------------------------------------------
+c
+      integer kday(12)
+      data kday/0,31,59,90,120,151,181,212,243,273,304,334/
+c
+c --- Check for valid input data
+      ierr=0
+c --- Check for valid month
+      if(imo.lt.1.or.imo.gt.12)ierr=1
+c --- Check for valid day in 30-day months
+      if(imo.eq.4.or.imo.eq.6.or.imo.eq.9.or.imo.eq.11)then
+         if(iday.gt.30)ierr=1
+      else if(imo.eq.2)then
+         if(mod(iyr,4).eq.0)then
+c ---       February in a leap year
+            if(iday.gt.29)ierr=1
+         else
+c ---       February in a non-leap year
+            if(iday.gt.28)ierr=1
+         endif
+      else
+c ---    Check for valid day in 31-day months
+         if(iday.gt.31)ierr=1
+      endif
+c
+      if(ierr.eq.1)then
+         write(io,*)
+         write(io,*)'ERROR in SUBR. JULDAY'
+         write(io,*)'Invalid date - IYR = ',iyr,' IMO = ',
+     1    imo,' IDAY = ',iday
+         write(*,*)
+         stop 'Halted in JULDAY -- see list file.'
+      endif
+c
+c --- Compute the Julian day
+      ijuldy=kday(imo)+iday
+      if(imo.le.2)return
+      if(mod(iyr,4).EQ.0)ijuldy=ijuldy+1
+c
+      return
+      end
+

@@ -1,0 +1,153 @@
+"mf","Version 2.1"
+"Human Exposure & Risk:Exposure Pathways:exp","GENII V.2 Near Field Exposure Module","gen_nfd.exe ","gen_nfd.bat ","exp.ico"
+"
+MODULE VERSION
+  2.10.2 Compiled February 2017
+
+MODULE DESCRIPTION
+GENII Near Field Exposure Module
+
+The GENII V.2 near-field exposure module may be used to 
+estimate concentrations in exposure media for initial 
+soil contaMination pathways.  The results of the analysis 
+are written in annual increments for the duration of 
+exposure defined by the user.  Exposure pathways include 
+agricultural product consumption, and soil contaMination 
+pathways.  Losses by leaching, harvest removal, and 
+radioactive decay from the surface soil are evaluated.
+
+Limitations:
+    No use of the atmospheric transport output file (ATO) 
+    or water concentration files (WCF).
+
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     1 to 1 scf Soil required as input
+ 
+Valid Output Writes
+     epf Exposure Pathways
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K7-68
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnnl.gov
+URL Address:          http://www.usnrc-ramp.com
+"
+1,"Read"
+2,"con","",1,1,"scf","Soil",1,1
+1,"Write"
+"epf","Exposure Pathways"
+73,"Variables"
+LEACHOPTION,Not Stochastic,N/A,,,Type of leach rate constant,0,INTEGER
+IRES,Not Stochastic,N/A,,,Type of model to run,0,INTEGER
+SURSOIL,Not Stochastic,N/A,,,Surface soil source,0,STRING
+DEPSOIL,Not Stochastic,N/A,,,Deep soil source,0,STRING
+WASTPAK,Not Stochastic,N/A,,,Waste package soil source,0,STRING
+LOIC,Not Stochastic,yr,Min,0,Max,1,Loss of institutional control time prior to exposure,0,FLOAT
+ANF,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,ANFLabel,Index1
+TFD,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,TFDLabel,Index1
+AQF,Not Stochastic,N/A,,,Ingestion pathway,1,LOGICAL
+Variable,AQFLabel,Index1
+TFOOD,Not Stochastic,N/A,,,Terrestrial food crop ingestion,0,LOGICAL
+ANFOOD,Not Stochastic,N/A,,,Animal product ingestion,0,LOGICAL
+DEBUG,Not Stochastic,N/A,,,Debug testing,0,LOGICAL
+BTPRE,Not Stochastic,N/A,,,Do biotic transport prior to start of intake,0,LOGICAL
+ARID,Not Stochastic,N/A,,,Arid climate during period prior to intake,0,LOGICAL
+BIOT,Not Stochastic,N/A,,,Biotic transport from deep soil to surface soil,0,LOGICAL
+HARVST,Not Stochastic,N/A,,,Radionuclide removal due to harvesting,0,LOGICAL
+DRYSET,Not Stochastic,N/A,,,User defined dry deposition retention fraction to plants,0,LOGICAL
+SLING,Not Stochastic,N/A,,,Inadvertent soil,0,LOGICAL
+SLINH,Not Stochastic,N/A,,,Suspended or resuspended soil,0,LOGICAL
+GROUND,Not Stochastic,N/A,,,Soil external,0,LOGICAL
+SLDRML,Not Stochastic,N/A,,,Soil dermal contact,0,LOGICAL
+BEFORE,Not Stochastic,yr,Min,0,Max,1000000,Time from start to exposure,0,FLOAT
+NTKEND,Not Stochastic,yr,Min,0,Max,1000000,Duration of exposure period,0,FLOAT
+RELEND,Not Stochastic,yr,Min,0,Max,1000000,End of release period,0,FLOAT
+PACKHL,Continuous,yr,Min,0,Max,20,Waste package half life,0,FLOAT
+ABSHUM,Continuous,kg/m^3,Min,0,Max,0.1,"Absolute humidity, used only for tritium model",0,FLOAT
+YELDBT,Continuous,kg/m^2,Min,0.1,Max,20,Yearly vegetative yield (dry weight) for arid lands during optional buildup period,0,FLOAT
+THICK,Continuous,cm,Min,0,Max,10000,Surface soil thickness,0,FLOAT
+MOISTC,Continuous,fraction,Min,0,Max,1,Surface soil moisture content,0,FLOAT
+BULKD,Continuous,g/cm^3,Min,0.5,Max,3,Surface soil bulk density,0,FLOAT
+VLEACH,Continuous,cm/yr,Min,0,Max,500,Total infiltration rate,0,FLOAT
+RESFAC,Continuous,1/m,Min,0,Max,0.001,Resuspension factor,0,FLOAT
+XMLF,Continuous,g/m^3,Min,0,Max,5,Mass loading factor for resuspension model,0,FLOAT
+AVALSL,Continuous,cm,Min,0.01,Max,2,Depth of top soil available for resuspension,0,FLOAT
+SLDN,Continuous,kg/m^2,Min,0.00001,Max,3000,Surface soil areal density,0,FLOAT
+SSLDN,Continuous,kg/m^3,Min,0.00001,Max,3000,Surface soil density,0,FLOAT
+SURCM,Continuous,cm,Min,0.00001,Max,500,Surface soil layer thickness used for density,0,FLOAT
+OVRBRD,Continuous,m,Min,0,Max,20,Depth of soil overburden over waste,0,FLOAT
+WASDEP,Continuous,m,Min,0.01,Max,100,Thickness of buried waste layer,0,FLOAT
+FRSIZ,Continuous,m^2,Min,1,Max,10000,Source area for external dose modification factor,0,FLOAT
+MANULR,Continuous,fraction,Min,0,Max,1,Manual redistribution factor,0,FLOAT
+DEPFR1,Continuous,fraction,Min,0,Max,1,Dry deposition retention fraction to plants,0,FLOAT
+LEAFRS,Continuous,1/m,Min,0,Max,0.001,Resuspension factor from soil to plant surfaces,0,FLOAT
+DPVRES,Continuous,m/s,Min,0,Max,0.1,Deposition velocity from soil to plant surfaces,0,FLOAT
+WTIM,Continuous,d,Min,0.1,Max,100,Weathering rate constant from plants,0,FLOAT
+RF1,Continuous,fraction,Min,0,Max,1.001,Fraction of plants roots in surface soil,0,FLOAT
+RF2,Continuous,fraction,Min,0,Max,1,Fraction of plants roots in deep soil,0,FLOAT
+BIOMAS,Continuous,kg/m^2,Min,0.1,Max,10,Standing biomass (wet),1,FLOAT
+Variable,TFDLabel,Index1
+GRWP,Continuous,day,Min,0,Max,365,Growing period,1,FLOAT
+Variable,TFDLabel,Index1
+YELD,Continuous,kg/m^2,Min,0.001,Max,10,Yield,1,FLOAT
+Variable,TFDLabel,Index1
+TRANS,Continuous,fraction,Min,0,Max,1,Translocation factor,1,FLOAT
+Variable,TFDLabel,Index1
+DRYFAC,Continuous,fraction,Min,0.05,Max,0.95,Dry/wet ratio,1,FLOAT
+Variable,TFDLabel,Index1
+BIOMA2,Continuous,kg/m^2,Min,0.1,Max,10,Animal feed standing biomass (wet),1,FLOAT
+Variable,FdFrLabel,Index1
+CONSUM,Continuous,kg/d,Min,0.001,Max,300,Animal feed consumption rate,1,FLOAT
+Variable,FdFrLabel,Index1
+STORTM,Continuous,day,Min,0,Max,356,Storage time,1,FLOAT
+Variable,FdFrLabel,Index1
+DIETFR,Continuous,fraction,Min,0,Max,1,Fraction of diet,1,FLOAT
+Variable,FdFrLabel,Index1
+GRWPA,Continuous,day,Min,0,Max,365,Growing period for animal feed,1,FLOAT
+Variable,FdFrLabel,Index1
+YELDA,Continuous,kg/m^2,Min,0.1,Max,10,Yield for animal feed,1,FLOAT
+Variable,FdFrLabel,Index1
+TRANSA,Continuous,fraction,Min,0,Max,1,Translocation factor for animal feed,1,FLOAT
+Variable,FdFrLabel,Index1
+DRYFA2,Continuous,fraction,Min,0.05,Max,0.95,Animal feed dry/wet ratio,1,FLOAT
+Variable,FdFrLabel,Index1
+HLDUP,Continuous,day,Min,0,Max,365,Time from harvest to ingestion,1,FLOAT
+Variable,TFDLabel,Index1
+HLDUPA,Continuous,day,Min,0,Max,365,Time from harvest to animal feed ingestion,1,FLOAT
+Variable,TFDLabel,Index1
+SLCONA,Continuous,kg/d,Min,0,Max,5,Animal daily soil consumption rate,1,FLOAT
+Variable,FdFrLabel,Index1
+DEEP,Not Stochastic,N/A,,,Deep soil source flag,0,LOGICAL
+BURWAS,Not Stochastic,N/A,,,Waste package soil source flag,0,LOGICAL
+NUMCON,Not Stochastic,N/A,,,Number of constituents,0,INTEGER
+NDS,Not Stochastic,N/A,,,Progeny count,1,INTEGER
+Variable,FSCNAME,Site,Index1,
+CASID,Not Stochastic,N/A,,,Chemical Abstract System Identification,1,STRING,con.FSCASID
+Variable,FSCNAME,Site,Index1,Index2
+LEACHR,Continuous,1/yr,Min,0,Max,100,Leach rate constant,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+SOILKD,Continuous,ml/g,Min,0,Max,1000000,Soil adsorbtion coefficient,1,FLOAT
+Variable,FSCNAME,Site,Index1,Index2
+ANFLabel,Not Stochastic,N/A,,,Terrestrial animal product constant,1,STRING
+Label,Index#,Index1
+TFDLabel,Not Stochastic,N/A,,,Plant product constant,1,STRING
+Label,Index#,Index1
+FdFrLabel,Not Stochastic,N/A,,,Feed animal constant,1,STRING
+Label,Index#,Index1

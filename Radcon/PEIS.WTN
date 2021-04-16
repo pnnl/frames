@@ -1,0 +1,21 @@
+C     MEPAS RADCON: PEIS.FTN              VERSION DATE: 02-20-92
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.
+C*****************************************************************************
+C                        INCLUDE STATEMENT: PEIS.FTN
+C
+C     Creation Date:     08/11/93 - KJC
+C     Last Modified:     08/11/93 - KJC
+C
+C*****************************************************************************
+C
+C=== Referenced by: INITIN, ORIGIN
+C
+C=== Significant Parameters ==================================================
+C
+C    CP - contaminant concentration on the sediment
+C
+C*****************************************************************************
+C
+      REAL*4       ptpeak(20),ptlife(20)
+      character*12 pcasn(20)
+C

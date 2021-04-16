@@ -1,0 +1,24 @@
+Variable Count,Description,Name,Privilege,Version,Updated,Template
+21,MEPAS 4.1 Human Health Impact Module,MepHEI,2,1,1,
+Dictionary Name,Dictionary Description,Dimension,DataType,PrimaryKey,Scalar,Minimum,Maximum,Measure,Unit,Stochastic,Preposition,Index 1
+CETOXT,Use only toxicity values from IRIS or HEAST,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+CHEMHI,Calculate hazard index,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+CHEMRISK,Calculate lifetime cancer incidence,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+CVTFormat,,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+DSOIL,Density of contaminated soil/sediment layer,0,FLOAT,FALSE,TRUE,1,4,,g/cm^3,TRUE,
+HECEDE,Calculate radiation dose commitment,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+HECONFAT,Conversion factor for cancer fatalities,0,FLOAT,FALSE,TRUE,0.0001,1,,risk/Sv,TRUE,
+HECONFSH,Conversion factor for lifetime cancer and severe hereditary effects,0,FLOAT,FALSE,TRUE,0.0001,1,,risk/Sv,TRUE,
+HECONINC,Conversion factor for lifetime cancer incidence,0,FLOAT,FALSE,TRUE,0.0001,1,,risk/Sv,TRUE,
+HEFAT,Calaculate cancer fatalities,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+HEFSH,Calculate lifetime cancer && severe hereditary effects,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+HEINC,Calculate lifetime cancer incidence,0,STRING,FALSE,TRUE,0,0,,N/A,FALSE,
+IHEAST,Cancer risk evaluation method,0,INTEGER,FALSE,TRUE,0,2147483647,,N/A,FALSE,
+INHALE,Method for inhalation impact analysis,0,INTEGER,FALSE,TRUE,0,2147483647,,N/A,FALSE,
+RFDLIM,Hazard quotient threshold limit,0,FLOAT,FALSE,TRUE,0,100,,N/A,TRUE,
+TSOIL,Thickness of contaminated soil/sediment layer,0,FLOAT,FALSE,TRUE,0.001,5,,m,TRUE,
+xxUserUnit,xxUserUnit,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepHEI.xxUserUnitVar
+xxUserUnitVar,xxUserUnitVar,1,STRING,FALSE,FALSE,0,0,,,FALSE,
+xxVarLogFmt,xxVarLogFmt,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepHEI.xxVarname
+xxVarName,xxVarName,1,STRING,FALSE,FALSE,0,0,,,FALSE,
+xxVarUUnit,xxVarUUnit,1,STRING,FALSE,TRUE,0,0,,,FALSE,,MepHEI.xxVarname

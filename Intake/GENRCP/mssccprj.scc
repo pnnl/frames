@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[GENRCP.DSP]
+SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
+SCC_Project_Name = "$/GENII/Intake/GENRCP", BNUAAAAA

@@ -1,0 +1,779 @@
+/*______________________________________________________________________________
+
+   Date:       1993 - 2004
+   Company:    Pacific Northwest National Laboratories
+               Battelle Corporation
+________________________________________________________________________________
+__Modifiication  History________________________________________________________
+
+  DATE     WHO  DESCRIPTION
+______________________________________________________________________________*/
+
+#include "frames.h"
+#include "hifread.h"
+
+icsv *hIn = NULL;
+ocsv *hOut = NULL;
+int numhif = 0;
+long hifHead = 0;
+static HIFSet *hif = NULL;
+
+//------------------------------------------------------------------------------
+//class HIFCon
+HIFCon::~HIFCon()
+{
+  if (time) delete[] time;
+  time = NULL;
+  if (prog)
+  {
+    for (int i = 0; i<nProg; i++) delete prog[i];
+    delete[] prog;
+  }
+  prog = NULL;
+  nProg = 0;
+}
+
+HIFCon::HIFCon(int numTime)
+{
+   nProg = 0;
+   prog = NULL;
+   time = new fpos_t[numTime];
+   nTime = numTime;
+}
+
+HIFCon::HIFCon(icsv *hIn, int numLoc)
+{
+  int np,nt,numExp;
+  char dummy[SMALLSTRING];
+
+  nProg = 0;
+  nTime = 0;
+  prog = NULL;
+  time = NULL;
+  fpos = hIn->getpos();
+  *hIn >> name >> casid >> nProg >> nTime >> NewLn;
+
+  prog = new HIFCon*[nProg];
+  time = new fpos_t[nTime];
+
+  for (np = 0; np<nProg; np++)
+    prog[np] = new HIFCon(nTime);
+
+  for (nt = 0; nt<nTime; nt++)
+  {
+    time[nt] = hIn->getpos();
+    *hIn >> dummy >> dummy >> dummy >> dummy >> numExp >> NewLn;
+    hIn->Skip(numExp*(1+numLoc));
+    for (np = 0; np<nProg; np++)
+    {
+      prog[np]->time[nt] = hIn->getpos();
+      prog[np]->fpos = hIn->getpos();
+      *hIn >> prog[np]->name >> prog[np]->casid >> numExp >> NewLn ;
+      hIn->Skip(numExp*(1+numLoc));
+    }
+  }
+}
+
+double HIFCon::getTime(int timeIdx)
+{
+  double tmp = 0.0;
+  if (nTime<= timeIdx || timeIdx<0) return 0;
+  hIn->setpos(time[timeIdx]);
+  *hIn >> tmp;
+  return tmp;
+}
+
+int HIFCon::LoadExposuresByTime(char *cas, int timeIdx, int numLoc, expRoute **exp)
+{
+  int i;
+  int numExp;
+  char dummy[SMALLSTRING];
+  char duration[SMALLSTRING];
+  char population[SMALLSTRING];
+
+  numExp = 0;
+  hIn->setpos(time[timeIdx]);
+  *hIn >> dummy >> dummy >> duration >> dummy >> numExp >> NewLn;
+  if (rstrcmpi(casid,cas))
+    for (i = 0; i<nProg; i++)
+      if (!rstrcmpi(prog[i]->casid,cas))
+      {
+        hIn->setpos(prog[i]->time[timeIdx]);
+        *hIn >> dummy >> dummy >> numExp >> NewLn;
+        break;
+      }
+  if (numExp>0)
+  {
+    *exp = new expRoute[numExp];
+    for (i = 0; i<numExp; i++)
+    {
+      *hIn >> population >> (*exp)[i].path >> (*exp)[i].route >> (*exp)[i].measure >> (*exp)[i].unit >> NewLn;
+      hIn->Skip(numLoc);
+    }
+  }
+  return numExp;
+}
+
+//------------------------------------------------------------------------------
+//class HIFAge
+HIFAge::HIFAge(icsv *hIn, int numLoc, int numChem)
+{
+  int i;
+  char dummy[SMALLSTRING];
+
+  chem = NULL;
+  fpos = hIn->getpos();
+  *hIn >> agemin >> agemax >> dummy >> NewLn;
+  nChem = numChem;
+  chem = new HIFCon*[nChem];
+  for (i = 0; i<nChem; i++)
+    chem[i] = new HIFCon(hIn,numLoc);
+}
+
+HIFAge::~HIFAge()
+{
+  int i;
+
+  if (chem)
+  {
+    for (i = 0; i<nChem; i++)
+      delete chem[i];
+    delete[] chem;
+  }
+  chem = NULL;
+  nChem = 0;
+}
+
+//------------------------------------------------------------------------------
+//class HIFSet
+HIFSet::~HIFSet()
+{
+  int i;
+  for (i = 0; i<nCancerOrg; i++)
+    if (organC[i]) free ((char*)organC[i]);
+  delete[] organC;
+
+  for (i = 0; i<nDoseOrg; i++)
+    if (organD[i]) free ((char*)organD[i]);
+  delete[] organD;
+
+  if (x) delete[] x;
+  if (y) delete[] y;
+
+  if (rtime) delete[] rtime;
+  if (rvalue) delete[] rvalue;
+
+  if (exp) delete[] exp;
+
+  if (age)
+  {
+    for (int i = 0; i<nAge; i++) delete age[i];
+    delete[] age;
+  }
+  age = NULL;
+  nAge = 0;
+}
+
+HIFSet::HIFSet()
+{
+  nLoc = 0;
+  nAge = 0;
+  nCancerOrg = 0;
+  nDoseOrg = 0;
+  organC = NULL;
+  organD = NULL;
+  x = NULL;
+  y = NULL;
+  age = NULL;
+  nExp = 0;
+  exp = NULL;
+  nTime = 0;
+  rtime = NULL;
+  rvalue = NULL;
+}
+
+void HIFSet::read(icsv *hIn)
+{
+  int j;
+  int numChem;
+  char dummy[SMALLSTRING];
+
+  fpos = hIn->getpos();
+  *hIn >> locExp >> locType >> locMedia >> nLoc >> nAge >> numChem >> nCancerOrg >> nDoseOrg >> NewLn;
+  organC = new char*[nCancerOrg];
+  for (j = 1; j<= nCancerOrg; j++)
+  {
+    *hIn >> dummy;
+    organC[j-1] = strdup(dummy);
+  }
+  *hIn >> NewLn;
+  organD = new char*[nDoseOrg];
+  for (j = 1; j<= nDoseOrg; j++)
+  {
+    *hIn >> dummy;
+    organD[j-1] = strdup(dummy);
+  }
+  *hIn >> NewLn;
+
+  x = new double[nLoc];
+  y = new double[nLoc];
+
+  for (j = 0; j<nLoc; j++)
+    *hIn >> x[j] >> dummy >> y[j] >> NewLn;
+
+  age = new HIFAge*[nAge];
+  for (j = 0; j<nAge; j++)
+    age[j] = new HIFAge(hIn,nLoc,numChem);
+}
+
+int HIFSet::getDatasetInfo(int *numLoc, int *numAge, int *numCancerOrg, int *numDoseOrg, char *typ, char *med, char *exp)
+{
+  *numLoc = nLoc;
+  *numAge = nAge;
+  *numCancerOrg = nCancerOrg;
+  *numDoseOrg = nDoseOrg;
+  rstrcpy(typ, locType);
+  rstrcpy(med, locMedia);
+  rstrcpy(exp, locExp);
+  return 1;
+}
+
+int HIFSet::getExposurePoint(int locIdx, double *xp, double *yp)
+{
+  if (nLoc<= locIdx || locIdx<0) return 0;
+  *xp = x[locIdx];
+  *yp = y[locIdx];
+  return 1;
+}
+
+int HIFSet::getTimeCount(int ageIdx, char *parentCAS)
+{
+  int nc,j;
+  int cnt1, cnt2;
+
+  cnt1 = 0;
+  cnt2 = 0;
+  if (nAge<= ageIdx || ageIdx<0) return 0;
+  for (nc = 0; nc<age[ageIdx]->nChem; nc++)
+  {
+    if (!rstrcmpi(age[ageIdx]->chem[nc]->casid,parentCAS))
+      cnt1 = age[ageIdx]->chem[nc]->nTime;
+    for (j = 0; j<age[ageIdx]->chem[nc]->nProg; j++)
+      if (!rstrcmpi(age[ageIdx]->chem[nc]->prog[j]->casid,parentCAS))
+        cnt2 = age[ageIdx]->chem[nc]->prog[j]->nTime;
+  }
+  if (cnt2 > cnt1) return cnt2;
+  if (cnt1 >= cnt2) return cnt1;
+  return 0;
+}
+
+double HIFSet::getTime(int ageIdx, char *parentCAS, int timeIdx)
+{
+  if (nAge<= ageIdx || ageIdx<0) return 0;
+  for (int nc = 0; nc<age[ageIdx]->nChem; nc++)
+    if (!rstrcmpi(age[ageIdx]->chem[nc]->casid,parentCAS))
+      return age[ageIdx]->chem[nc]->getTime(timeIdx);
+  return 0;
+}
+
+int HIFSet::getAgeGroup(int ageIdx, double *min, double *max)
+{
+  if (nAge<= ageIdx || ageIdx<0) return 0;
+  *min = age[ageIdx]->agemin;
+  *max = age[ageIdx]->agemax;
+  return 1;
+}
+
+int HIFSet::LoadExposuresByTime(int ageIdx, char *cas, char *parentCAS, int timeIdx)
+{
+  int i;
+  if (exp != NULL)
+  {
+    delete[] exp;
+    exp = NULL;
+  }
+  nExp = 0;
+  if (nAge<= ageIdx || ageIdx<0) return 0;
+
+  for (i = 0; i<age[ageIdx]->nChem; i++)
+    if (!rstrcmpi(age[ageIdx]->chem[i]->casid,parentCAS))
+    {
+      nExp = age[ageIdx]->chem[i]->LoadExposuresByTime(cas,timeIdx,nLoc,&exp);
+      return nExp;
+    }
+  return 0;
+}
+
+void HIFSet::getExposure(int expIdx, char *path, char *route, char *measure, char *unit)
+{
+  if (exp != NULL && expIdx<nExp && expIdx>-1)
+  {
+    rstrcpy(path, exp[expIdx].path);
+    rstrcpy(route, exp[expIdx].route);
+    rstrcpy(measure, exp[expIdx].measure);
+    rstrcpy(unit, exp[expIdx].unit);
+  }
+  else
+  {
+    rstrcpy(path, "");
+    rstrcpy(route, "");
+    rstrcpy(measure,  "");
+    rstrcpy(unit, "");
+  }
+}
+
+int HIFSet::LoadTimeSeries(int locIdx, int ageIdx, int orgIdx, char *cas, char *parentCAS, char *path, char *route, char *measure, char *unit)
+{
+  double value, tot, start;
+  int nc, np, nt, ne, no;
+  int ct, ot;
+  int numProg, numExp;
+  bool found;
+
+  char dummy[SMALLSTRING];
+  char casid[SMALLSTRING];
+  char prog[SMALLSTRING];
+  char tPath[SMALLSTRING];
+  char tRoute[SMALLSTRING];
+  char tMeasure[SMALLSTRING];
+  char tUnit[SMALLSTRING];
+
+  if (rtime != NULL)  delete[] rtime;
+  if (rvalue != NULL) delete[] rvalue;
+  rtime = NULL;
+  rvalue = NULL;
+  nTime = 0;
+  if (nAge<= ageIdx || ageIdx<0) return 0;
+  if (nLoc<= locIdx || locIdx<0) return 0;
+  if (rstrcmpi(measure,"HI"))
+    if (rstrcmpi(measure,"Risk"))
+    {  if (nDoseOrg<= orgIdx || orgIdx<0) return 0; }
+    else
+    {  if (nCancerOrg<= orgIdx || orgIdx<0) return 0; }
+
+  found = false;
+  for (nc = 0; nc<age[ageIdx]->nChem; nc++)
+  {
+    hIn->setpos(age[ageIdx]->chem[nc]->fpos);
+    *hIn >> dummy >> casid >> numProg >> nTime >> NewLn;
+    if (!rstrcmpi(casid, parentCAS))
+    {
+      rvalue = new double[(int)(nTime+1)];
+      rtime = new double[(int)(nTime+1)];
+      *rvalue = 0.0;
+      *rtime = 0.0;
+      ot = 0;
+      ct = 0;
+      for (nt = 0; nt<nTime; nt++)
+      {
+        tot = 0.0;
+        *hIn >> start >> dummy >> duration >> dummy >> numExp >> NewLn;
+        if (!rstrcmpi(casid,cas))
+          for (np = 0; np<numExp; np++)
+          {
+            *hIn >> population >> tPath >> tRoute >> tMeasure >> tUnit >> NewLn;
+            if (!rstrcmpi(measure,tMeasure) && !rstrcmpi(unit,tUnit) &&
+               (!rstrcmpi(path,"all") || !rstrcmpi(path,tPath)) &&
+               (!rstrcmpi(route,"all") || !rstrcmpi(route,tRoute)))
+            {
+              found = true;
+              hIn->Skip(locIdx);
+              for (no = 0; no<= orgIdx; no++)
+                *hIn >> value;
+              tot += value;
+              hIn->Skip(nLoc-locIdx);
+            }
+            else
+              hIn->Skip(nLoc);
+          }
+        else
+          hIn->Skip(numExp*(1+nLoc));
+        for (np = 0; np<numProg; np++)
+        {
+          *hIn >> dummy >> prog >> numExp >> NewLn;
+          if (!rstrcmpi(prog, cas))
+            for (ne = 0; ne<numExp; ne++)
+            {
+              *hIn >> population >> tPath >> tRoute >> tMeasure >> tUnit >> NewLn;
+              if (!rstrcmpi(measure,tMeasure) && !rstrcmpi(unit,tUnit) &&
+                 (!rstrcmpi(path,"all") || !rstrcmpi(path,tPath)) &&
+                 (!rstrcmpi(route,"all") || !rstrcmpi(route,tRoute)))
+              {
+                found = true;
+                hIn->Skip(locIdx);
+                for (no = 0; no<= orgIdx; no++)
+                  *hIn >> value;
+                tot += value;
+                hIn->Skip(nLoc-locIdx);
+              }
+              else
+                hIn->Skip(nLoc);
+            }
+          else
+            hIn->Skip(numExp*(1+nLoc));
+        }
+        // not sure why first time must be 0.0
+        // but the next two lines below assure time[0] = 0
+        // commented out becaues we think it's not right BLH.MAP
+        // if (start != 0.0 && nt == 0) ot = 1;
+        ct = nt+ot;
+        rtime[ct] = start;
+        rvalue[ct] = tot;
+      }
+      if (found)
+        nTime = ct+1;
+      else
+        nTime = 0;
+      break;
+    }
+  }
+  return nTime;
+}
+
+int HIFSet::getTimeSeries(double *stime, double *svalue)
+{
+  int i;
+  for (i = 0; i<nTime; i++)
+  {
+    stime[i] = rtime[i];
+    svalue[i] = rvalue[i];
+  }
+  return nTime;
+}
+
+void HIFSet::getTimeAndValue(int timeIdx, double *stime, double *svalue)
+{
+  if (nTime<= timeIdx || timeIdx<0) return;
+  *stime = rtime[timeIdx];
+  *svalue = rvalue[timeIdx];
+}
+
+//------------------------------------------------------------------------------
+// HIF API ---------------------------------------------------------------------
+//------------------------------------------------------------------------------
+bool FRAMES_API hifChecksum()
+{  return (hIn->recordsCount == hIn->recordsRead); }
+
+int FRAMES_API hifOpen(char *fuiname, char *modId)
+{
+  int i;
+  char HIFName[MAXPATH];
+
+  numhif = 0;
+  sprintf(HIFName,"%s.hif",fuiname);
+  hIn = new icsv(HIFName,'\"');
+  if (!hIn->ok()) return 0;
+  if (0 != hIn->SeekSection(modId, &hifHead)) return 0;
+  *hIn >> numhif >> NewLn;
+  hif = new HIFSet[numhif];
+  for (i = 0; i<numhif; i++)
+    hif[i].read(hIn);
+  return numhif;
+}
+
+void FRAMES_API hifClose()
+{
+  if (hif) delete[] hif;
+  if (hIn) delete hIn;
+  numhif = 0;
+  hif = NULL;
+  hIn = NULL;
+}
+
+int FRAMES_API hifGetNumRunInfo()
+{
+   int num = 0;
+   if (numhif<= 0) return 0;
+   hIn->setpos(hifHead);
+   *hIn >> num >> NewLn;
+   return num;
+}
+
+int FRAMES_API hifGetRunInfo(int Idx, char *info)
+{
+   int num = hifGetNumRunInfo();
+   if (num == 0) return 0;
+   for (int i = 1; i<Idx; i++)
+     *hIn >> NewLn;
+   *hIn >> info >> NewLn;
+   return 1;
+}
+
+int FRAMES_API hifGetSetInfo(int dsIdx, int *numLoc, int *numAge, int *numCancerOrg, int *numDoseOrg, char *typ, char *med, char *dstyp)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return hif[dsIdx].getDatasetInfo(numLoc, numAge, numCancerOrg, numDoseOrg, typ, med, dstyp); }
+
+int FRAMES_API hifGetExposurePoint(int dsIdx, int locIdx, double *xp, double *yp)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return hif[dsIdx].getExposurePoint(locIdx, xp, yp); }
+
+int FRAMES_API hifGetTimeCount(int dsIdx, int ageIdx, char *parentCAS)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return (hif[dsIdx].getTimeCount(ageIdx,parentCAS)); }
+
+double FRAMES_API hifGetTime(int dsIdx, int ageIdx, char *parentCAS, int timeIdx)
+{  if (numhif<= dsIdx || dsIdx<0) return 0.0;
+   return (hif[dsIdx].getTime(ageIdx, parentCAS, timeIdx)); }
+
+int FRAMES_API hifGetAgeGroup(int dsIdx, int ageIdx, double *min, double *max)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return hif[dsIdx].getAgeGroup(ageIdx, min, max); }
+
+void FRAMES_API hifGetCancerOrgan(int dsIdx, int orgIdx, char *cstr)
+{
+  if (numhif<= dsIdx || dsIdx<0) return;
+  rstrcpy(cstr,"");
+  if (hif[dsIdx].nCancerOrg<= orgIdx || orgIdx<0) return;
+  rstrcpy(cstr,hif[dsIdx].organC[orgIdx]);
+}
+
+void FRAMES_API hifGetDoseOrgan(int dsIdx, int orgIdx, char *cstr)
+{
+  if (numhif<= dsIdx || dsIdx<0) return;
+  rstrcpy(cstr,"");
+  if (hif[dsIdx].nDoseOrg<= orgIdx || orgIdx<0) return;
+  rstrcpy(cstr,hif[dsIdx].organD[orgIdx]);
+}
+
+int FRAMES_API hifLoadRoutesAndPathwaysByTime(int dsIdx, int ageIdx, char *cas, char *parentCAS, int timeIdx)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return hif[dsIdx].LoadExposuresByTime(ageIdx, cas, parentCAS, timeIdx); }
+
+void FRAMES_API hifGetRouteAndPathway(int dsIdx, int expIdx, char *path, char *route, char *measure, char *unit)
+{  if (numhif<= dsIdx || dsIdx<0) return;
+   hif[dsIdx].getExposure(expIdx, path, route, measure, unit); }
+
+int FRAMES_API hifLoadTimeSeries(int dsIdx, int locIdx, int ageIdx, int orgIdx, char *cas, char *parentCAS, char *path, char *route, char *measure, char *unit)
+{  if (numhif<= dsIdx || dsIdx<0) return 0;
+   return hif[dsIdx].LoadTimeSeries(locIdx, ageIdx, orgIdx, cas, parentCAS, path, route, measure, unit); }
+
+void FRAMES_API hifGetTimeSeries(int dsIdx, double *stime, double *svalue)
+{  if (numhif<= dsIdx || dsIdx<0) return;
+   hif[dsIdx].getTimeSeries(stime, svalue); }
+
+void FRAMES_API hifGetTimeAndValue(int dsIdx, int timeIdx, double *stime, double *svalue)
+{  if (numhif<= dsIdx || dsIdx<0) return;
+   hif[dsIdx].getTimeAndValue(timeIdx, stime, svalue); }
+
+double FRAMES_API hifGetDuration(int dsIdx)
+{  if (numhif<= dsIdx || dsIdx<0) return 0.0;
+   return hif[dsIdx].duration; }
+
+double FRAMES_API hifGetPopulation(int dsIdx)
+{  if (numhif<= dsIdx || dsIdx<0) return 0.0;
+   return hif[dsIdx].population; }
+
+void FRAMES_API hifAggregate(char *filename, char* casList)
+{
+  char *dummy = new char[MAXPATH];
+
+  hOut = new ocsv(filename, '"', ',', _CREATE_);
+  hOut->alwaysQuote();
+  *hOut << hifGetNumRunInfo() << NewLn;
+  for (int i = 0; i < hifGetNumRunInfo(); i++)
+  {
+    hifGetRunInfo(i+1,dummy);
+    *hOut << dummy << NewLn;
+  }
+  *hOut << numhif << NewLn;
+  for (int i = 0; i<numhif; i++)
+  {
+    hif[i].convertHIF(casList);
+  }
+  delete hOut;
+  delete [] dummy;
+  hOut = NULL;
+  return;
+}
+
+void HIFSet::aggregateExposures(int ageIdx, char *cas, char *parentCas, int numTimes, bool newAggregate)
+{
+  if (newAggregate)  // delete exposures
+  {
+    for (_EXPLIST_IT it = erp.begin(); it != erp.end(); ++it)
+    {
+      expRoute *tmp = (*it).second; ;
+      if (tmp != NULL) delete tmp;
+    }
+    erp.clear();
+  }
+
+  for (int j = 0; j<numTimes; j++)
+  {
+    LoadExposuresByTime(ageIdx, cas, parentCas, j);
+    for (int m = 0; m< nExp; m++)
+    {
+      std::string key = exp[m].path;
+      key += exp[m].route;
+      key += exp[m].measure;
+      key += exp[m].unit;
+      expRoute *myexp = erp[key];
+      if (myexp == NULL)
+      {
+        expRoute *tmp = new expRoute;
+        rstrcpy(tmp->path, exp[m].path);
+        rstrcpy(tmp->route, exp[m].route);
+        rstrcpy(tmp->measure, exp[m].measure);
+        rstrcpy(tmp->unit, exp[m].unit);
+        erp[key] = tmp;
+      }
+    }
+  }
+}
+
+int HIFSet::convertHIF(char *casList)
+{
+  char *mylist = strdup(casList);
+  char *chemName;
+  int numTimes;
+
+  splitList(mylist);
+  // dataset info
+  *hOut << locExp << locType << locMedia << nLoc << nAge << (long)rList.size()
+        << nCancerOrg << nDoseOrg << NewLn;
+
+  for (int i = 0; i < nCancerOrg; i++)
+    *hOut << organC[i] << NewLn;
+  for (int i = 0; i < nDoseOrg; i++)
+    *hOut << organD[i] << NewLn;
+
+  // get max organ count
+  int maxOrg = nCancerOrg;
+  if (maxOrg < nDoseOrg) maxOrg = nDoseOrg;
+
+  // location info
+  for (int l = 0; l < nLoc; l++)
+    *hOut << x[l] << "km" << y[l] << "km" << NewLn;
+
+  for (int a = 0; a<nAge; a++)
+  {
+    // age range info
+    *hOut << age[a]->agemin << age[a]->agemax << "yr" << NewLn;
+    // loop constituents
+    for (int k = 0; k< (long)rList.size(); k++)
+    {
+      aggregateExposures(a,rList[k],rList[k],getTimeCount(a,rList[k]),true);
+      for (int i = 0; i<age[a]->nChem; i++)
+      {
+        if (!rstrcmpi(rList[k], age[a]->chem[i]->casid))
+          chemName = age[a]->chem[i]->name;
+        for (int j = 0; j<age[a]->chem[i]->nProg; j++)
+          if (!rstrcmpi(age[a]->chem[i]->prog[j]->casid,rList[k]))
+          {
+            chemName = age[a]->chem[i]->prog[j]->name;
+            aggregateExposures(a,age[a]->chem[i]->prog[j]->casid,
+                                 age[a]->chem[i]->casid,
+                                 getTimeCount(a,age[a]->chem[i]->prog[j]->casid),false);
+          }
+      }
+      numTimes = getTimeCount(a,rList[k]);
+      tempValues = new double***[nLoc];
+      for (int l = 0; l<nLoc; l++)
+      {
+        tempValues[l] = new double**[numTimes];
+        for (int t = 0; t<numTimes; t++)
+        {
+          tempValues[l][t] = new double*[erp.size()];
+          for (int m = 0; m< (long)erp.size(); m++)
+          {
+            tempValues[l][t][m] = new double[maxOrg];
+            for (int o = 0; o< maxOrg; o++)
+              tempValues[l][t][m][o] = 0.0;
+          }
+        }
+      }
+
+      //loop exposures
+      int m = 0;
+      for (_EXPLIST_IT it = erp.begin(); it != erp.end(); ++it)
+      {
+        for (int l = 0; l<nLoc; l++)
+        {
+          int ocnt = 1;
+          if (!rstrcmpi((*it).second->measure,"Risk"))          ocnt = nCancerOrg;
+          if (!rstrcmpi((*it).second->measure,"Dose"))          ocnt = nDoseOrg;
+          for (int o = 0; o<ocnt; o++)
+          {
+            int numTimes = LoadTimeSeries(l, a, o, rList[k], rList[k],
+               (*it).second->path, (*it).second->route,
+               (*it).second->measure, (*it).second->unit);
+            for (int t = 0; t<numTimes; t++)
+              tempValues[l][t][m][o] = rvalue[t];
+
+            for (int i = 0; i<age[a]->nChem; i++)
+              for (int j = 0; j<age[a]->chem[i]->nProg; j++)
+                if (!rstrcmpi(age[a]->chem[i]->prog[j]->casid,rList[k]))
+                {
+                  int numTimes = LoadTimeSeries(l, a, o, rList[k], age[a]->chem[i]->casid,
+                    (*it).second->path, (*it).second->route,
+                    (*it).second->measure, (*it).second->unit);
+                  for (int t = 0; t<numTimes; t++)
+                    tempValues[l][t][m][o] += rvalue[t];
+                }
+          }
+        }
+        m++;
+      }
+      // write constituent/chemical/progeny
+      writeConstituent(rList[k], chemName, numTimes);
+
+      for (int l = 0; l<nLoc; l++)
+      {
+        for (int t = 0; t<numTimes; t++)
+        {
+          for (int m = 0; m<(long)erp.size(); m++)
+            delete[]  tempValues[l][t][m];
+          delete[]  tempValues[l][t];
+        }
+        delete[] tempValues[l];
+      }
+      delete[] tempValues;
+    }
+  }
+
+  delete mylist;
+  return 0;
+}
+
+int HIFSet::writeConstituent(char *cas, char *name, int numTimes)
+{
+  if (rtime)
+  {
+    //write chemheader
+    //ChemName, ChemCAS, NumProg = 0, numtimes
+    *hOut << name << cas << 0 << numTimes << NewLn;
+    //loop times
+    for (int t = 0; t<numTimes; t++)
+    {
+      // load exposures for current chemical
+      *hOut << rtime[t] << "yr" << duration << "yr" << (long)erp.size() << NewLn;
+      //loop exposures
+      int m = 0;
+      for (_EXPLIST_IT it = erp.begin(); it != erp.end(); ++it)
+      {
+        //write pathname, routename, unitname
+        *hOut << population
+              << (*it).second->path
+              << (*it).second->route
+              << (*it).second->measure
+              << (*it).second->unit << NewLn;
+        //loop locations
+        for (int l = 0; l < nLoc; l++)
+        {
+          int ocnt = 1;
+          if (!rstrcmpi((*it).second->measure,"Risk"))          ocnt = nCancerOrg;
+          if (!rstrcmpi((*it).second->measure,"Dose"))          ocnt = nDoseOrg;
+          for (int o = 0; o <ocnt ; o++)
+            *hOut << tempValues[l][t][m][o];
+          *hOut << NewLn;
+        }
+        m++;
+      }
+    }
+  }
+  else
+    //ChemName, ChemCAS, NumProg = 0, numtimes = 0
+    *hOut << name << cas << 0 << numTimes << NewLn;
+
+  return 0;
+}

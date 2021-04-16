@@ -1,0 +1,47 @@
+!   AHAZX:     AIRINFO.CMN             Version Date: 15-May-97
+!   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK AIRINFO                             *
+!                                                                            *
+!  Common block AIRINFO contains air co-ordinate points                      *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    15-May-97 (From EXINFO)                                 *
+!  Last Modified:    15-May-97  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: GENII/EXPOS
+!     Referenced by modules: EPFDAT
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!    EXPXA(360) REAL    x-coordinate for each atmospheric exposure grid location
+!    EXPYA(360) REAL    y-coordinate for each atmospheric exposure grid location
+!    NTM        INT     Number of time points for exposure analysis and output
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!  15-May-97       DLS  Initial Preparation
+!==== COMMON Block Definition ================================================
+!
+      COMMON/AIRINFO/EXPXA(460), EXPYA(460), NTM
+!
+!==== Variable Declarations ==================================================
+!
+      REAL EXPXA,EXPYA
+      INTEGER NTM
+!
+!---- END OF COMMON BLOCK AIRINFO --------------------------------------------
+!

@@ -1,0 +1,16 @@
+C----------------------------------------------------------------------
+C
+C     Environmental Parameters Common Block
+C     Module of CASEIN                       Version of 21-Dec-87 RAP
+  
+      COMMON /ENVPAR/ DPVLT(100),
+     .                BVIT(4,100),
+     .                FMIT(6,100),
+     .                BIOACT(4,100),
+     .                DWCLET(100),
+     .                LEACHT(100),
+     .                GAMMAT(6,100)
+
+      REAL DPVLT, BVIT, FMIT, BIOACT, DWCLET, LEACHT, GAMMAT
+
+C-----------------------------------------------------------------------

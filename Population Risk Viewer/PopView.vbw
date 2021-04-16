@@ -1,0 +1,8 @@
+VBCommon = 0, 0, 0, 0, C
+PopViewLib = 0, 0, 0, 0, C
+PopViewMain2 = 0, 0, 0, 0, C, 264, 348, 1145, 1087, C
+CSV_IO = 0, 0, 0, 0, C
+PARM_IO = 0, 0, 0, 0, C
+FramesAPI = 22, 29, 1019, 649, C
+HIFAPI = 0, 0, 0, 0, C
+Common = 44, 58, 748, 772, C

@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[pufchron.dsp]
+SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
+SCC_Project_Name = "$/GENII/Puff/code/PufChron", ZBTAAAAA
+
+[pufchron.dsw]
+SCC_Aux_Path = "\\vboxsrv\RDSMODDEV\SourceSafe\GENII"
+SCC_Project_Name = "$/GENII/Puff/code/PufChron", ZBTAAAAA

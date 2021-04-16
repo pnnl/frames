@@ -1,0 +1,29 @@
+C     MEPAS RADCON: EXTFLUX.WTN           VERSION DATE: 02-07-93              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: EXTFLUX.WTN 
+C
+C     This include statement contains contaminant fluxes computed externally  
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/07/93 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, LEACHV, INITIN
+C
+C=== Significant Parameters ==================================================
+C
+C    INVEN    - new inventory (not used)
+C    CON_DIF  - constituent difussion coefficient (not used)
+C    CON_SOL  - constituent solubility limit (not used)
+C    EXT_FLUX - Flag for when external flux file exist (0=yes, 1=no)
+C    ISSSFL   - Flag for when to use In Situ Solidification (0=yes, 1=no)
+C    FILENM   - Name of external flux file (if EXT_FLUX or ISSSFL = 0)
+C
+C*****************************************************************************
+C
+      CHARACTER*8 FILENM
+      INTEGER*2   EXT_FLUX,isssfl
+C
+      COMMON/EXTFLUX/FILENM,EXT_FLUX,isssfl

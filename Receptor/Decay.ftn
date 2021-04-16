@@ -1,0 +1,57 @@
+!  -- DECAY.FTN                         Version Date: 07-Nov-1995
+!  This COMMON BLOCK is part of the MEPAS software package.
+!
+!  This common block contains chain decay parameters for one chain
+!
+!  Developed by:   Pacific Northwest Laboratory
+!                  Occupational & Environmental Health Protection Section
+!                  P. O. Box 999
+!                  Richland, WA 99352
+!
+!         Software Design Description:  D.L. Strenge
+!         Initial preparation: 11 DEc 90
+!         Initial testing complete:
+!
+!         Modification History:
+!    Date  Change by Summary of Modification
+!  ------- --------- ------------------------------------------------------
+!  3-Nov-95  DLS     Removed reference to Parameter NCHAIN in comments
+!  7-Nov-95  DLS     Changed maximum chain member from 9 to 20
+! --------------------------------------------------------------------------
+!
+!    Modules referencing this COMMON Block:
+!
+!        CHAIN, and PDATIN, GROUND, SRETEN
+!
+! --------------------------------------------------------------------------
+!   Definition of COMMON BLOCKS
+!
+      COMMON /DECAY/ NUC, IFRM(2,20)
+      COMMON /DECAYD/ DK(2,20), AL(20)
+!
+      DOUBLE PRECISION :: DK, AL
+      INTEGER IFRM
+      INTEGER NUC                                                       !
+!
+! --------------------------------------------------------------------------
+!
+!  Parameters in COMMON BLOCK
+!  Name (dim)       Type                     Purpose
+!  -------------   --------  --------------------------------------------
+!
+!    NUC            Integer   Number of radionuclides in the current chain
+!                             representation, maximum value is 9.
+!
+!    IFRM(2,20)     Integer   Index of the parents (if any) for each chain
+!                             member, with two (2) parents allowed for each of
+!                             nine (20) chain members.
+!
+!    DK(2,20)       Real      Fraction of each parent decays that result in
+!                             production of the chain member, with index
+!                             values corresponding to those defined for IFRM
+!                             above.
+!
+!    AL(20)         Real      Radiological decay constant for each member of
+!                             the chain, d-1.
+!
+!------------  End of file  DECAY.FTN  -----------------------------------

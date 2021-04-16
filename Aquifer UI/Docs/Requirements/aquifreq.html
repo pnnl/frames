@@ -1,0 +1,340 @@
+<html>
+<head>
+<Title>Requirements for the MEPAS Saturated Zone (Aquifer) Transport Module</Title>
+</head>
+<body alink="#336666"  vlink="#A8A8A8" link="#0000ff">
+
+
+<br><font color="#000000" face="verdana" size="4">PNNL-SA-32275</font>
+<br><font face="verdana" size="2">Written by:  John P. McDonald
+<br>
+<br>Prepared for the U.S. Department of Energy
+<br>
+<br>Pacific Northwest National Laboratory
+<br>Operated by the U.S. Department of Energy
+<br>By Battelle
+</font>
+<br>
+<br>
+<br>
+<br><font color="#000000" face="verdana" size="3"><center><b>Requirements for the MEPAS Saturated Zone (Aquifer) Transport Module</b></center></font>
+<br>
+<font color="#000000" face="verdana" size="2">
+<hr width="100%" align="center">
+
+<p><b>1.0 Introduction</b>
+<p>This document describes the requirements for the Multimedia Environmental
+Pollutant Assessment System (MEPAS) saturated zone transport module. The
+module is specifically designed as an object for inclusion in the Framework
+for Risk Analysis in Multimedia Environmental Systems (FRAMES), which is
+a platform that allows linking of various multimedia modules into complete
+source/transport/exposure assessment systems (Whelan et al., 1997). These
+requirements can be used by software engineers and testers to ensure this
+module meets the needs of the clients and users.
+<p><b>2.0 Purpose of the MEPAS Saturated Zone Transport Module</b>
+<p>The purpose of the MEPAS saturated zone transport module is to simulate
+the migration and fate of chemical and radionuclide constituents through
+saturated porous media (e.g., aquifers). Input to the module consists of
+time-varying contaminant mass (or activity) fluxes entering the aquifer,
+the physical characteristics of the aquifer itself, and the constituent
+properties. Output consists of time-varying contaminant mass fluxes exiting
+the aquifer or time-varying contaminant aqueous concentrations at a point
+within the aquifer. Currently, contaminant mass fluxes entering the aquifer
+can originate from a source term within the aquifer or from a vadose zone.
+The aquifer’s physical characteristics are entered through a module user
+interface (MUI), and constituent properties are obtained from a constituent
+property database. The output contaminant mass fluxes can be used as input
+to a river module, and contaminant aqueous concentrations can be used as
+input to an exposure module. In addition, the output contaminant mass fluxes
+or aqueous concentrations also can serve as the endpoint of the simulation.
+<p><b>3.0 Summary of Requirements for the MEPAS Saturated Zone Transport
+Module</b>
+<p>This section provides an overall summary of the requirements for the
+MEPAS saturated zone transport module. Detailed input, output, and scientific
+requirements are described in Sections 4, 5 and 6.
+<p>The MEPAS saturated zone transport module will
+<ol>
+<li>
+simulate contaminant migration for both chemicals and radionuclides through
+saturated porous media (e.g., aquifers) and provide output consisting of
+instantaneous, time-varying, contaminant mass fluxes exiting the aquifer
+or instantaneous, time-varying, contaminant aqueous concentrations at a
+point location within the aquifer</li>
+
+<li>
+have no limits on the number of constituents considered in a scenario</li>
+
+<li>
+have no restrictions on the number of point locations within the saturated
+zone at which concentrations are computed</li>
+
+<li>
+operate under Windows 95 and have a user-friendly MUI with a standard Windows
+look and feel</li>
+
+<li>
+meet the module specifications for FRAMES.</li>
+</ol>
+<b>4.0 Input Requirements for the MEPAS Saturated Zone Transport Module</b>
+<p>Data needed to simulate contaminant migration through a saturated zone
+is obtained from three sources. The boundary conditions (i.e., time-varying,
+contaminant mass fluxes entering the aquifer, water flux from the previous
+medium or source term, and source dimensions) are obtained from the previous
+module (i.e., source term or vadose zone). The aquifer’s physical characteristics
+and the constituent’s distribution coefficient (Kd) are obtained from the
+user through the MUI. Constituent chemical properties are obtained from
+a chemical property database. The boundary conditions are communicated
+to the module through the Water Flux File (WFF). The aquifer’s physical
+characteristics are communicated from the MUI to the model through the
+Global Input Data file (GID) and the model’s pre-processor. The GID file
+is also used to store the chemical property data. The specifications for
+the WFF and GID file are described in Whelan et al. (1997).
+<p>There are some general requirements associated with the MUI, which are
+<ol>
+<li>
+The MUI will operate in Windows 95 and will have a standard Windows look
+and feel.</li>
+
+<li>
+The MUI will have on-line help in an HTML format that provides users with
+an easy-to-understand description of all input parameters required by the
+MUI.</li>
+
+<li>
+The MUI will provide users with a choice of units for all input parameters
+having dimensions associated with them.</li>
+
+<li>
+The MUI will include a reference feature in which the source of the specified
+value for each input item can be referenced if the user desires.</li>
+
+<li>
+The MUI will show the range of values allowed for each input data item,
+when the cursor is positioned on that item, as a scrolling message at the
+bottom of the screen. When an out-of-range value is entered in a field,
+the MUI will indicate this by a red background in the input field and a
+scrolling error message in addition to the allowed range message. Data
+input values within range are shown with a green field background.</li>
+
+<li>
+The MUI will display the module version number, obtained from the module
+description (DES) file, in an About menu.</li>
+</ol>
+The following data are obtained from the WFF by the MEPAS saturated zone
+transport module. Those items listed as required are needed by the module
+to perform its computations. Other items are read and simply reported to
+the output WFF, in order to meet the WFF specifications:
+<ol>
+<li>
+time-varying, instantaneous solute fluxes entering the aquifer (required)</li>
+
+<li>
+width and length of the horizontal interface plane (i.e., a plane at the
+water table) through which solute enters the aquifer, if the previous medium
+is a vadose zone (required)</li>
+
+<li>
+width and height of the vertical interface plane (i.e., a plane perpendicular
+to the water table) through which solute enters the aquifer, if the previous
+medium is a saturated zone (required)</li>
+
+<li>
+distance from the water table to the top of the interface plane (should
+be zero if the previous medium is a vadose zone, otherwise is greater than
+or equal to zero if the previous medium is a saturated zone) (required)</li>
+
+<li>
+natural recharge rate</li>
+
+<li>
+time-varying, instantaneous water flux entering the aquifer (required when
+the previous medium is a vadose zone).</li>
+</ol>
+The following data are obtained from the MUI and are needed by the MEPAS
+saturated zone transport module to perform its computations:
+<ol>
+<li>
+medium thickness</li>
+
+<li>
+total porosity</li>
+
+<li>
+effective porosity</li>
+
+<li>
+dry bulk density</li>
+
+<li>
+Darcian groundwater flow velocity</li>
+
+<li>
+longitudinal dispersivity (i.e., x-dispersivity)</li>
+
+<li>
+lateral dispersivity (i.e., y-dispersivity)</li>
+
+<li>
+vertical dispersivity (i.e., z-dispersivity)</li>
+
+<li>
+longitudinal travel distance (i.e., x-coordinate) from the center of the
+source to the point at which solute concentrations are computed or to the
+plane through which solute fluxes are computed</li>
+
+<li>
+lateral distance (i.e., y-coordinate) from the center of the source to
+the point at which solute concentrations are computed</li>
+
+<li>
+vertical distance (z-coordinate) from the upper surface of the aquifer
+(e.g., water table) to the point at which concentrations are computed</li>
+
+<li>
+constituent distribution coefficient (Kd)</li>
+
+<li>
+percentage of the input contaminant mass flux that actually enters the
+aquifer</li>
+</ol>
+The MEPAS saturated zone transport module obtains the following data from
+the chemical property section of the GID file:
+<ol>
+<li>
+CASID (Chemical Abstracts Service ID Number)</li>
+
+<li>
+decay/degradation half-life</li>
+
+<li>
+decay chain (for radionuclides)</li>
+
+<li>
+solubility limit</li>
+
+<li>
+carbon-matter partition coefficient (Koc) (for organics)</li>
+</ol>
+The MUI provides users with an estimate of the Kd for each contaminant
+based on soil property data entered by the user. The Kd values are computed
+according to Strenge and Peterson (1989). The following soil property data
+are needed for this estimate:
+<ol>
+<li>
+percentage of sand</li>
+
+<li>
+percentage of silt</li>
+
+<li>
+percentage of clay</li>
+
+<li>
+percentage of organic matter</li>
+
+<li>
+percentage of iron and aluminum</li>
+
+<li>
+pH of the pore water</li>
+
+<li>
+carbon-matter partition coefficient (obtained from the chemical database)</li>
+</ol>
+In addition to allowing the user to enter their own Kd values, the MUI
+will provide the user with options to automatically use the estimated Kd
+value for single constituents or automatically use estimates for all constituents.
+<p><b>5.0 Output Requirements for the MEPAS Saturated Zone Transport Module</b>
+<p>The MEPAS saturated zone transport module is required to output its
+results to a WFF (for contaminant mass flux results) or Water Concentration
+File (WCF) (for contaminant aqueous concentration results). The module
+is also required to produce a listing file (*.WLS file) that documents
+the data actually read in by the model and provides a summary of intermediate
+calculation results (e.g., retardation factor and decay constant) and the
+simulation results (peak flux or concentration and time of peak).
+<p>The following data are output to the WFF for contaminant mass flux results:
+<ol>
+<li>
+instantaneous, time-varying, contaminant mass fluxes exiting the aquifer</li>
+
+<li>
+width and height of the vertical interface plane (i.e., a plane perpendicular
+to the water table) through which contaminant exits the aquifer</li>
+
+<li>
+distance from the water table to the top of the vertical interface plane
+through which contaminant exits the aquifer</li>
+
+<li>
+natural recharge rate</li>
+
+<li>
+time-varying, instantaneous water flux exiting the aquifer through the
+vertical interface plane</li>
+</ol>
+Data output to the WCF for contaminant aqueous concentration results includes
+instantaneous, time-varying, contaminant aqueous concentrations for each
+receptor locations in the aquifer.
+<p><b>6.0 Scientific Requirements for the MEPAS Saturated Zone Transport
+Module</b>
+<p>This section describes the scientific requirements for the MEPAS saturated
+zone transport module. The primary scientific requirements are
+<ol>
+<li>
+obey the Law of Mass Conservation</li>
+
+<li>
+simulate advection in one dimension</li>
+
+<li>
+simulate dispersion in three dimensions</li>
+
+<li>
+account for the decay of radionuclides and be able to handle the degradation
+of chemicals</li>
+
+<li>
+account for the ingrowth of progeny resulting from decay/degradation and
+be able to handle decay chains with up to nine members (i.e., one parent
+and eight progeny)</li>
+
+<li>
+compute solute fluxes exiting the aquifer when the aquifer is not the last
+transport medium in the scenario</li>
+
+<li>
+compute solute concentrations at the aquifer (downgradient) boundary when
+the aquifer is the last transport medium in the scenario</li>
+
+<li>
+account for the effect that adsorption of contaminant to soil particles
+has on travel time through the aquifer</li>
+
+<li>
+account for the effect that water flowing into the aquifer from a vadose
+zone has on contaminant aqueous concentrations in the aquifer, especially
+in proximity to the source (i.e., handle both near-field and far-field
+cases)</li>
+</ol>
+The implementation of these requirements, in the form of mathematical formulations,
+are documented in Whelan et al. (1996). However, their document is out-of-date
+with respect to the effect of inflowing water from the vadose zone. The
+current technique to handle both near-field and far-field cases is described
+only in project quality assurance documentation.
+<p><b>7.0 References</b>
+<p>Strenge, D. L., and S. R. Peterson. 1989. <i>Chemical Data Bases for
+the Multimedia Environmental Pollutant Assessment System (MEPAS): Version
+1</i>. PNL-7145, Pacific Northwest Laboratory, Richland, Washington.
+<p>Whelan, G., J. P. McDonald, and C. Sato. 1996. <i>Multimedia Environmental
+Pollutant Assessment System (MEPAS): Groundwater Pathway Formulations</i>.
+PNNL-10907, Pacific Northwest National Laboratory, Richland, Washington.
+<p>Whelan G., K. J. Castleton, J. W. Buck, G. M. Gelston, B. L. Hoopes,
+M. A. Pelton, D. L. Strenge, and R. N. Kickert. 1997. <i>Concepts of a
+Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES)</i>.
+PNNL-11748, Pacific Northwest National Laboratory, Richland, Washington.
+
+</font>
+
+</body>
+</html>
+

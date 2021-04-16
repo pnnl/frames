@@ -1,0 +1,11 @@
+C---------------------------------------- VERSION 12-Jun-97 -----------------
+c
+C     Surface Water Transport Data for a Usage Location
+C     Module of GENII                       Version of 11-Dec-86 RAP
+c     Revised: 12-Jun-1997 DL Strenge for GENII/EDUP Exposure components
+c
+      COMMON /SWPAR/ TCWS 
+
+      REAL TCWS
+C-----------------------------------------------------------------------
+

@@ -1,0 +1,89 @@
+PROJ = TESTSOL
+DEBUG = 1
+PROGTYPE = 0
+CALLER = 
+ARGS = 
+DLLS = 
+D_RCDEFINES = -d_DEBUG
+R_RCDEFINES = -dNDEBUG
+ORIGIN = F32VWB
+ORIGIN_VER = 1.00
+PROJPATH = C:\EDUP\MET\
+KNARF = 
+F32 = fl32
+F32FLAGS_D_DEXE = /WX /Zi
+F32FLAGS_R_DEXE = /Ox /D "NDEBUG"
+F32FLAGS_D_LIB = /Zi
+F32FLAGS_R_LIB = /Ox /DNDEBUG
+L32FLAGS_D_DEXE = -debug:full -machine:i386 -base:0x00010000 -subsystem:console -entry:mainCRTStartup  -debugtype:cv4
+L32FLAGS_R_DEXE = -machine:i386 -base:0x00010000 -subsystem:console -entry:mainCRTStartup
+L32FLAGS_D_DEXEUB = -machine:i386 -base:0x00010000 -subsystem:console -entry:mainCRTStartup -debug:full -debugtype:cv4
+L32FLAGS_R_DEXEUB = -machine:i386 -base:0x00010000 -subsystem:console -entry:mainCRTStartup
+LIBS_D_DEXE = libf.lib libc.lib kernel32.lib ntdll.lib
+LIBS_R_DEXE = libf.lib libc.lib kernel32.lib ntdll.lib
+LIBS_D_BEXE = libf.lib libc.lib kernel32.lib ntdll.lib
+LIBS_R_BEXE = libf.lib libc.lib kernel32.lib ntdll.lib
+RUNFLAGS = 
+OBJS_EXT = 
+LIBS_EXT = 
+!if "$(DEBUG)" == "1"
+F32FLAGS = $(F32FLAGS_D_DEXE)
+L32FLAGS = $(L32FLAGS_D_DEXE)
+LIBS = $(LIBS_D_DEXE)
+!else
+F32FLAGS = $(F32FLAGS_R_DEXE)
+L32FLAGS = $(L32FLAGS_R_DEXE)
+LIBS = $(LIBS_R_DEXE)
+!endif
+SBRS = TESTSOL.SBR \
+		SUNTIME.SBR \
+		JULIAN.SBR \
+		SOLALT.SBR
+
+
+TESTSOL_DEP = 
+
+SUNTIME_DEP = 
+
+JULIAN_DEP = 
+
+SOLALT_DEP = 
+
+all:	$(PROJ).EXE
+
+TESTSOL.OBJ:	TESTSOL.FOR $(TESTSOL_DEP)
+	$(F32) $(F32FLAGS) /c TESTSOL.FOR
+
+SUNTIME.OBJ:	SUNTIME.FOR $(SUNTIME_DEP)
+	$(F32) $(F32FLAGS) /c SUNTIME.FOR
+
+JULIAN.OBJ:	JULIAN.FOR $(JULIAN_DEP)
+	$(F32) $(F32FLAGS) /c JULIAN.FOR
+
+SOLALT.OBJ:	SOLALT.FOR $(SOLALT_DEP)
+	$(F32) $(F32FLAGS) /c SOLALT.FOR
+
+$(PROJ).EXE::	TESTSOL.OBJ SUNTIME.OBJ JULIAN.OBJ SOLALT.OBJ $(OBJS_EXT)
+	echo >NUL @<<$(PROJ).CRF
+TESTSOL.OBJ 
+SUNTIME.OBJ 
+JULIAN.OBJ 
+SOLALT.OBJ 
+$(OBJS_EXT)
+$(L32FLAGS)
+-out:$(PROJ).EXE
+$(MAPFILE)
+$(LIBS)
+
+<<
+	link32 -link @$(PROJ).CRF
+	bindmsf $(PROJ).EXE
+
+run: $(PROJ).EXE
+	$(PROJ) $(RUNFLAGS)
+
+
+$(PROJ).BSC: $(SBRS)
+	bscmake @<<
+/o$@ $(SBRS)
+<<

@@ -1,0 +1,41 @@
+C   MEPAS HAZ2: AQPATH.FTN             Version Date: 08-03-1992              
+C   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK AQPATH                              *
+C                                                                            *
+C  Common block AQPATH FOR AQUATIC PATHWAY LOCATION PARAMETERS               *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    08/03/92 - DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: MEPAS/HAZ2
+C     Referenced by modules: 
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C     Parameter 
+C     Name      Type     Parameter Description
+C     --------- ------  -----------------------------------------------------
+C     
+C==== Modification History ===================================================
+C
+C     Date         Who  Modification Description
+C     --------     ---  ------------------------------------------------------
+C     
+C==== COMMON Block Definition ================================================
+C
+      COMMON/AQPATH/TFSH(10,3),TINV(10,3)
+C
+C==== Variable Declarations ==================================================
+C
+C     None

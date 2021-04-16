@@ -1,0 +1,40 @@
+"mf","Version 2.1"
+"Boundary Conditions:Plus Operators:pls","WFF Surface Water Plus Operator","","plus.exe /wff","rivplus.ico"
+"
+MODULE VERSION
+1.0
+
+MODULE DESCRIPTION
+Merges two or more overland or surface water WFF into one WFF surface water dataset
+
+VALID CONNECTIONS
+Valid Input Reads
+   2 to 10 wff Surface Water required as input
+
+Valid Output Writes
+   wff Surface Water
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+1,"Read"
+1,"wff","Surface Water",2,10
+1,"Write"
+"wff","Surface Water"
+0,"Variables"

@@ -1,0 +1,38 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Module=BatchUtil; BatchUtil.bas
+Module=CSV_IO; ..\Common Files\CSV_IO.BAS
+Module=Common; ..\Common Files\Common.bas
+Startup="Sub Main"
+HelpFile=""
+Title="BatchUtil"
+ExeName32="BatchUtil.exe"
+Command32="splitpath c:\frames1.6\cases\suread06"
+Name="bUtilities"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=50
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="PNNL"
+CondComp="NOCONVERT = 1 : NOREFERENCE = 1"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

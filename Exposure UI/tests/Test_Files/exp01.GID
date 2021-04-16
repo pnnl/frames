@@ -1,0 +1,1142 @@
+"FUI",0000000167
+"Sites",0,0,0,0,0,0,0,"n/a","n/a",1
+"SiteName",1,0,0,0,0,0,0,"n/a","n/a","Scenario 1"
+"SiteX",1,0,0,0,0,0,0,"n/a","n/a",0
+"SiteY",1,0,0,0,0,0,0,"n/a","n/a",0
+"SiteZ",1,0,0,0,0,0,0,"n/a","n/a",0
+"NumCon",1,0,0,0,0,0,0,"n/a","n/a",1
+"FSCASID",1,1,0,0,0,0,0,"n/a","n/a","71432"
+"FSCNAME",1,1,0,0,0,0,0,"n/a","n/a","Benzene"
+"NDS",1,1,0,0,0,0,0,"n/a","n/a",0
+"CLWM",1,1,0,0,0,0,327,"g/mole","g/mole",78.00
+"CLSOL",1,1,0,0,0,0,268,"mg/L","mg/L",1750.
+"CLVAP",1,1,0,0,0,0,268,"mm Hg","mm Hg",95.20
+"CLHLC",1,1,0,0,0,0,328,"atm m^3/mole","atm m^3/mole",0.005590
+"CLKOC",1,1,0,0,0,0,210,"mL/g","mL/g",83.00
+"CLKOW",1,1,0,0,0,0,268,"mL/mL","mL/mL",132.0
+"CLDCGRT",1,1,0,0,0,0,410,"cm^2/s","cm^2/s",5.000E-08
+"CLDCAIR",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0.088
+"CLDCWAT",1,1,0,0,0,0,0,"cm^2/s","cm^2/s",0.0000098
+"CLCPFH",1,1,0,0,0,0,404,"mg/kg/d","mg/kg/d",0.02900
+"CLCPFG",1,1,0,0,0,0,404,"mg/kg/d","mg/kg/d",0.02900
+"CLRFDH",1,1,0,0,0,0,516,"mg/kg/d","mg/kg/d",0.0017
+"CLRFDG",1,1,0,0,0,0,0,"mg/kg/d","mg/kg/d",0
+"CLDFAD",1,1,0,0,0,0,343,"rem/pCi","rem/pCi",0.01430
+"CLRDFGI",1,1,0,0,0,0,343,"rem/pCi","rem/pCi",0.01430
+"CLDEX",1,1,0,0,0,0,329,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",0
+"CLDIMR",1,1,0,0,0,0,329,"rem/hr per pCi/L","rem/hr per pCi/L",0
+"CLDSH",1,1,0,0,0,0,329,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",0
+"CLABSKN",1,1,0,0,0,0,510,"fraction","fraction",0
+"CLKPERM",1,1,0,0,0,0,397,"cm/hr","cm/hr",0.1100
+"CLWPF",1,1,0,0,0,0,329,"n/a","n/a",1.000
+"CLVD",1,1,0,0,0,0,0,"m/s","m/s",0
+"CLBFF",1,1,0,0,0,0,0,"L/kg","L/kg",0
+"CLBFI",1,1,0,0,0,0,0,"L/kg","L/kg",0
+"CLFMT",1,1,0,0,0,0,0,"d/kg","d/kg",0
+"CLFMK",1,1,0,0,0,0,0,"d/L","d/L",0
+"CLBVLV",1,1,0,0,0,0,0,"kg/kg","kg/kg",0
+"CLTHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLGHALF",1,1,0,0,0,0,0,"days","days",0.00E+00
+"CLWHALF",1,1,0,0,0,0,329,"days","days",1.13E-01
+"CLSHALF",1,1,0,0,0,0,330,"days","days",1.28E+01
+"CLCLASS",1,1,0,0,0,0,333,"n/a","n/a",5
+"CLKTYPE",1,1,0,0,0,0,0,"n/a","n/a",2
+"CLFONEI",1,1,0,0,0,0,510,"n/a","n/a",0.8
+"CLRTYPE",1,1,0,0,0,0,0,"n/a","n/a",7
+"CLPCDEN",1,1,0,0,0,0,0,"g/mL","g/mL",0.877
+"ConName",1,1,0,0,0,0,0,"n/a","n/a","con1"
+"ConLabel",1,1,0,0,0,0,0,"n/a","n/a","Contaminants"
+"ConModel",1,1,0,0,0,0,0,"n/a","n/a","FRAMES Default Chemical Database Selection"
+"ConModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"ConDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\contsel.des"
+"ConScrX",1,1,0,0,0,0,0,"n/a","n/a",75
+"ConScrY",1,1,0,0,0,0,0,"n/a","n/a",15
+"ConNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"ClsNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"InNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"SrcName",1,1,0,0,0,0,0,"n/a","n/a","src11"
+"SrcLabel",1,1,0,0,0,0,0,"n/a","n/a","Source01"
+"SrcX",1,1,0,0,0,0,0,"n/a","n/a",0
+"SrcY",1,1,0,0,0,0,0,"n/a","n/a",0
+"SrcZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"SrcModel",1,1,0,0,0,0,0,"n/a","n/a","FRAMES Known Contaminant Flux or Concentrations"
+"SrcModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"SrcDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\FUISRC.DES"
+"SrcScrX",1,1,0,0,0,0,0,"n/a","n/a",200.6403
+"SrcScrY",1,1,0,0,0,0,0,"n/a","n/a",633.7523
+"SrcNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"AirName",1,1,0,0,0,0,0,"n/a","n/a","air8"
+"AirLabel",1,1,0,0,0,0,0,"n/a","n/a","Air01"
+"AirX",1,1,0,0,0,0,0,"n/a","n/a",0
+"AirY",1,1,0,0,0,0,0,"n/a","n/a",0
+"AirZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"AirModel",1,1,0,0,0,0,0,"n/a","n/a","Mepas 4.0 Air Module"
+"AirModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"AirDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\Mepair.des"
+"AirScrX",1,1,0,0,0,0,0,"n/a","n/a",397.9328
+"AirScrY",1,1,0,0,0,0,0,"n/a","n/a",181.8182
+"AirSrcName",1,1,1,0,0,0,0,"n/a","n/a","src11"
+"AirSrcNum",1,1,0,0,0,0,0,"n/a","n/a",1
+"AirNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"OvlNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"VadNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"AquName",1,1,0,0,0,0,0,"n/a","n/a","aqu5"
+"AquLabel",1,1,0,0,0,0,0,"n/a","n/a","Aqu01"
+"AquX",1,1,0,0,0,0,0,"n/a","n/a",0
+"AquY",1,1,0,0,0,0,0,"n/a","n/a",0
+"AquZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"AquModel",1,1,0,0,0,0,0,"n/a","n/a","FRAMES Known Aquifer Concentration/Flux"
+"AquModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"AquDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\Fuiaqu.des"
+"AquScrX",1,1,0,0,0,0,0,"n/a","n/a",359.1731
+"AquScrY",1,1,0,0,0,0,0,"n/a","n/a",771.5618
+"AquNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"RivName",1,1,0,0,0,0,0,"n/a","n/a","riv9"
+"RivLabel",1,1,0,0,0,0,0,"n/a","n/a","Riv01"
+"RivX",1,1,0,0,0,0,0,"n/a","n/a",0
+"RivY",1,1,0,0,0,0,0,"n/a","n/a",0
+"RivZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"RivModel",1,1,0,0,0,0,0,"n/a","n/a","FRAMES Known Surface Water Concentration/Flux"
+"RivModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"RivDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\Fuisw.des"
+"RivScrX",1,1,0,0,0,0,0,"n/a","n/a",332.9776
+"RivScrY",1,1,0,0,0,0,0,"n/a","n/a",468.5817
+"RivNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"ExpName",1,1,0,0,0,0,0,"n/a","n/a","fcm3"
+"ExpLabel",1,1,0,0,0,0,0,"n/a","n/a","Exp01"
+"ExpX",1,1,0,0,0,0,0,"n/a","n/a",10
+"ExpY",1,1,0,0,0,0,0,"n/a","n/a",10
+"ExpZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"ExpModel",1,1,0,0,0,0,0,"n/a","n/a","Mepas 4.0 Chronic Exposure Module"
+"ExpModelStat",1,1,0,0,0,0,0,"n/a","n/a",2
+"ExpDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\Mepexp.des"
+"ExpScrX",1,1,0,0,0,0,0,"n/a","n/a",497.416
+"ExpScrY",1,1,0,0,0,0,0,"n/a","n/a",477.8555
+"ExpType",1,1,1,0,0,0,0,"n/a","n/a","Source"
+"ExpSRCName",1,1,1,0,0,0,0,"n/a","n/a","src11"
+"ExpType",1,1,2,0,0,0,0,"n/a","n/a","Air"
+"ExpSRCName",1,1,2,0,0,0,0,"n/a","n/a","air8"
+"ExpType",1,1,3,0,0,0,0,"n/a","n/a","Aquifer"
+"ExpSRCName",1,1,3,0,0,0,0,"n/a","n/a","aqu5"
+"ExpType",1,1,4,0,0,0,0,"n/a","n/a","Surface Water"
+"ExpSRCName",1,1,4,0,0,0,0,"n/a","n/a","riv9"
+"ExpTypeNum",1,1,0,0,0,0,0,"n/a","n/a",4
+"ExpNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"RcpName",1,1,0,0,0,0,0,"n/a","n/a","rcp12"
+"RcpLabel",1,1,0,0,0,0,0,"n/a","n/a","Rcp01"
+"RcpX",1,1,0,0,0,0,0,"n/a","n/a",0
+"RcpY",1,1,0,0,0,0,0,"n/a","n/a",0
+"RcpZ",1,1,0,0,0,0,0,"n/a","n/a",0
+"RcpModel",1,1,0,0,0,0,0,"n/a","n/a","Mepas 4.0 Chronic Intake Module"
+"RcpModelStat",1,1,0,0,0,0,0,"n/a","n/a",0
+"RcpDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\Meprcp.des"
+"RcpScrX",1,1,0,0,0,0,0,"n/a","n/a",672.5
+"RcpScrY",1,1,0,0,0,0,0,"n/a","n/a",459.605
+"RcpSrcName",1,1,1,0,0,0,0,"n/a","n/a","fcm3"
+"RcpSrcNum",1,1,0,0,0,0,0,"n/a","n/a",1
+"RcpNum",1,0,0,0,0,0,0,"n/a","n/a",1
+"HEINum",1,0,0,0,0,0,0,"n/a","n/a",0
+"OutNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"SenNum",1,0,0,0,0,0,0,"n/a","n/a",0
+"VwrName",1,1,0,0,0,0,0,"n/a","n/a","vwr6"
+"VwrLabel",1,1,0,0,0,0,0,"n/a","n/a","EPF_viewer"
+"VwrModel",1,1,0,0,0,0,0,"n/a","n/a","EPF Viewer"
+"VwrModelStat",1,1,0,0,0,0,0,"n/a","n/a",0
+"VwrDesPath",1,1,0,0,0,0,0,"n/a","n/a","\FUI\epfvwr.des"
+"VwrScrX",1,1,0,0,0,0,0,"n/a","n/a",562.5
+"VwrScrY",1,1,0,0,0,0,0,"n/a","n/a",116.6966
+"VwrSrcName",1,1,1,0,0,0,0,"n/a","n/a","fcm3"
+"VwrSrcNum",1,1,0,0,0,0,0,"n/a","n/a",1
+"VwrName",1,2,0,0,0,0,0,"n/a","n/a","vwr7"
+"VwrLabel",1,2,0,0,0,0,0,"n/a","n/a","vwr7"
+"VwrModel",1,2,0,0,0,0,0,"n/a","n/a","WCF Viewer"
+"VwrModelStat",1,2,0,0,0,0,0,"n/a","n/a",-1
+"VwrDesPath",1,2,0,0,0,0,0,"n/a","n/a","\FUI\wcfvwr.des"
+"VwrScrX",1,2,0,0,0,0,0,"n/a","n/a",560.7235
+"VwrScrY",1,2,0,0,0,0,0,"n/a","n/a",794.8718
+"VwrSrcName",1,2,1,0,0,0,0,"n/a","n/a","aqu5"
+"VwrSrcNum",1,2,0,0,0,0,0,"n/a","n/a",1
+"VwrName",1,3,0,0,0,0,0,"n/a","n/a","vwr13"
+"VwrLabel",1,3,0,0,0,0,0,"n/a","n/a","RIF_viewer"
+"VwrModel",1,3,0,0,0,0,0,"n/a","n/a","RIF Viewer"
+"VwrModelStat",1,3,0,0,0,0,0,"n/a","n/a",0
+"VwrDesPath",1,3,0,0,0,0,0,"n/a","n/a","\FUI\RIFVWR.DES"
+"VwrScrX",1,3,0,0,0,0,0,"n/a","n/a",671.25
+"VwrScrY",1,3,0,0,0,0,0,"n/a","n/a",244.1652
+"VwrSrcName",1,3,1,0,0,0,0,"n/a","n/a","rcp12"
+"VwrSrcNum",1,3,0,0,0,0,0,"n/a","n/a",1
+"VwrNum",1,0,0,0,0,0,0,"n/a","n/a",3
+"con1",3
+"NUMCON",1,0,0,0,0,0,0,"","",1
+"FSCNAME",1,1,0,0,0,0,0,"","","Benzene"
+"FSCASID",1,1,0,0,0,0,0,"","",71432
+"aqu5",7
+"LocName",1,1,0,0,0,0,0,"N/A","N/A","fcm3"
+"LocLabel",1,1,0,0,0,0,0,"N/A","N/A","fcm3"
+"conccas",1,1,0,0,0,0,0,"yr","g/ml","71432"
+"ctime",1,1,0,1,0,0,0,"yr","yr",0.0
+"conc",1,1,0,1,0,0,0,"g/ml","g/ml",10.0
+"ctime",1,1,0,2,0,0,0,"yr","yr",200.0
+"conc",1,1,0,2,0,0,0,"g/ml","g/ml",10.0
+"fcm3",197
+"KNPATH",1,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",2,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",3,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",4,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",5,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",6,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",7,0,0,0,0,0,0,"N/A","N/A",0
+"KEXPTH",0,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",1,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",2,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",3,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",4,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",7,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",8,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",15,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,1,0,0,0,0,0,"N/A","N/A", 1
+"KGDR",0,0,0,0,0,0,0,"N/A","N/A", 2
+"KGIR",0,0,0,0,0,0,0,"N/A","N/A", 1
+"GWFEED",0,0,0,0,0,0,0,"N/A","N/A",True
+"GWDRINK",0,0,0,0,0,0,0,"N/A","N/A",True
+"DGWED",0,0,0,0,0,0,3,"yr","yr",70.0
+"TWTR",1,0,0,0,0,0,0,"day","day",0.5
+"LTRTL",1,0,0,0,0,0,0,"N/A","N/A", 1
+"FIRR",1,0,0,0,0,0,0,"N/A","N/A",1.0
+"CIRR",1,0,0,0,0,0,0,"L/m^2/mon","L/m^2/mon",100.0
+"KEXPTH",0,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",1,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",2,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",3,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",4,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",7,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",8,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",9,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",10,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",11,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",14,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",15,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",21,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",22,2,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",23,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,2,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,2,0,0,0,0,0,"N/A","N/A", 1
+"KSDR",0,0,0,0,0,0,0,"N/A","N/A", 2
+"KSIR",0,0,0,0,0,0,0,"N/A","N/A", 2
+"SWFEED",0,0,0,0,0,0,0,"N/A","N/A",True
+"SWDRINK",0,0,0,0,0,0,0,"N/A","N/A",False
+"DSWED",0,0,0,0,0,0,0,"yr","yr",40.0
+"TWTR",2,0,0,0,0,0,0,"day","day",0.5
+"LTRTL",2,0,0,0,0,0,0,"N/A","N/A", 0
+"FIRR",2,0,0,0,0,0,0,"N/A","N/A",1.0
+"CIRR",2,0,0,0,0,0,0,"L/m^2/mon","L/m^2/mon",100.0
+"KSAQ",0,0,0,0,0,0,0,"N/A","N/A", 3
+"KSR",0,0,0,0,0,0,0,"N/A","N/A", 4
+"TFSH",0,0,0,0,0,0,0,"day","day",10.0
+"TINV",0,0,0,0,0,0,0,"day","day",10.0
+"TSS",0,0,0,0,0,0,0,"m","m",0.04
+"RHOSS",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"ATED",0,0,0,0,0,0,0,"yr","yr",50.0
+"KEXPTH",1,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",2,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",7,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",8,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",15,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",16,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",19,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",20,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,3,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",24,3,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",25,3,0,0,0,0,0,"N/A","N/A", 0
+"KAAG",0,0,0,0,0,0,0,"N/A","N/A", 1
+"KAIN",0,0,0,0,0,0,0,"N/A","N/A", 1
+"TAS",0,0,0,0,0,0,0,"m","m",0.04
+"RHOAS",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"SMED",0,0,0,0,0,0,0,"yr","yr",60.0
+"KEXPTH",1,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",2,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",5,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",6,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",7,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",8,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",15,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",16,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",20,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,5,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",24,5,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,5,0,0,0,0,0,"N/A","N/A", 0
+"TEXPOS",0,0,0,0,0,0,5,"yr","yr",0
+"MAXTIM",0,0,0,0,0,0,1,"yr","yr",100
+"NTIMES",0,0,0,0,0,0,0,"N/A","N/A",2.0
+"NYEARS",0,0,0,0,0,0,5,"N/A","N/A",50
+"LEACHOPTION",0,0,0,0,0,0,0,"N/A","N/A",0
+"NUMCON",0,0,0,0,0,0,0,"N/A","N/A",1
+"CASID",1,0,0,0,0,0,0,"N/A","N/A",71432
+"SOILLR",1,0,0,0,0,0,0,"1/yr","1/yr",50.0
+"NDS",1,0,0,0,0,0,0,"N/A","N/A",0
+"DEN",0,0,0,0,0,0,0,"kg/m^2","kg/m^2",240.0
+"RET",0,0,0,0,0,0,0,"N/A","N/A",0.25
+"YLD",1,0,0,0,0,0,0,"kg/m^2","kg/m^2",2.0
+"YLD",2,0,0,0,0,0,0,"kg/m^2","kg/m^2",2.0
+"YLD",3,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"YLD",4,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"UMT",0,0,0,0,0,0,0,"kg/d","kg/d",68.0
+"UMK",0,0,0,0,0,0,0,"kg/d","kg/d",55.0
+"WMT",0,0,0,0,0,0,0,"L/d","L/d",50.0
+"WMK",0,0,0,0,0,0,0,"L/d","L/d",60.0
+"USL",1,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"USL",2,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"TRN",1,0,0,0,0,0,0,"N/A","N/A",1.0
+"TRN",2,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",3,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",4,0,0,0,0,0,0,"N/A","N/A",1.0
+"FFC",1,0,0,0,0,0,0,"N/A","N/A",1.0
+"FFC",2,0,0,0,0,0,0,"N/A","N/A",1.0
+"FWC",1,0,0,0,0,0,0,"N/A","N/A",1.0
+"FWC",2,0,0,0,0,0,0,"N/A","N/A",1.0
+"TCRP",1,0,0,0,0,0,0,"day","day",2.0
+"TCRP",2,0,0,0,0,0,0,"day","day",60.0
+"TCRP",3,0,0,0,0,0,0,"day","day",20.0
+"TCRP",4,0,0,0,0,0,0,"day","day",4.0
+"TGRW",1,1,0,0,0,0,0,"day","day",60.0
+"TGRW",2,1,0,0,0,0,0,"day","day",60.0
+"TGRW",3,1,0,0,0,0,0,"day","day",30.0
+"TGRW",4,1,0,0,0,0,0,"day","day",30.0
+"TGRW",1,2,0,0,0,0,0,"day","day",60.0
+"TGRW",2,2,0,0,0,0,0,"day","day",60.0
+"TGRW",3,2,0,0,0,0,0,"day","day",30.0
+"TGRW",4,2,0,0,0,0,0,"day","day",30.0
+"TGRW",1,3,0,0,0,0,0,"day","day",60.0
+"TGRW",2,3,0,0,0,0,0,"day","day",60.0
+"TGRW",3,3,0,0,0,0,0,"day","day",30.0
+"TGRW",4,3,0,0,0,0,0,"day","day",30.0
+"TGRW",1,4,0,0,0,0,0,"day","day",60.0
+"TGRW",2,4,0,0,0,0,0,"day","day",60.0
+"TGRW",3,4,0,0,0,0,0,"day","day",30.0
+"TGRW",4,4,0,0,0,0,0,"day","day",30.0
+"TGRW",1,5,0,0,0,0,0,"day","day",60.0
+"TGRW",2,5,0,0,0,0,0,"day","day",60.0
+"TGRW",3,5,0,0,0,0,0,"day","day",30.0
+"TGRW",4,5,0,0,0,0,0,"day","day",30.0
+"CML",0,0,0,0,0,0,0,"kg/m^3","kg/m^3",1.0E-08
+"RESFAC",0,0,0,0,0,0,0,"1/m","1/m",1.0E-07
+"ANDFC",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.5
+"ANDFR",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.1
+"ANDFO",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.0
+"air8",729
+"CARELTYP",1,1,0,0,0,0,0,"N/A","N/A",7
+"AIRACMIXAM",1,1,0,0,0,0,0,"m","m",400.0
+"AIRACMIXPM",1,1,0,0,0,0,0,"m","m",1000.0
+"AIRACLCDREF",1,1,0,0,0,0,0,"N/A","N/A","Tcase01"
+"AIRACNUMTS",1,1,0,0,0,0,0,"N/A","N/A",20
+"AIRACRAIN",1,1,0,0,0,0,0,"in","in",40.0
+"AIRACPRENUM",1,1,0,0,0,0,0,"N/A","N/A",80
+"AIRAJSTATNM",1,1,0,0,0,0,0,"N/A","N/A","Tcase01"
+"AIRAJANEMHT",1,1,0,0,0,0,0,"m","m",10.0
+"AIRAJRLEN",1,1,0,0,0,0,0,"cm","cm",3.0
+"AIRajwinds",1,1,1,1,0,0,0,"m/s","m/s",1.0
+"AIRajwinds",1,1,2,1,0,0,0,"m/s","m/s",2.0
+"AIRajwinds",1,1,3,1,0,0,0,"m/s","m/s",3.0
+"AIRajwinds",1,1,4,1,0,0,0,"m/s","m/s",4.0
+"AIRajwinds",1,1,5,1,0,0,0,"m/s","m/s",5.0
+"AIRajwinds",1,1,6,1,0,0,0,"m/s","m/s",9.0
+"AIRajcalms",1,1,1,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,2,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,3,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,4,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,5,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,6,1,0,0,0,"number","number",0
+"AIRajcalms",1,1,7,1,0,0,0,"number","number",0
+"AIRarregsur",1,1,1,1,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,2,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,3,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,4,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,5,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,6,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,7,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,1,8,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,1,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,2,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,3,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,4,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,5,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,6,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,7,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,2,8,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,1,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,2,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,3,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,4,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,5,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,6,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,7,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,3,8,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,1,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,2,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,3,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,4,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,5,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,6,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,7,0,0,0,"cm","cm",10.0
+"AIRarregsur",1,1,4,8,0,0,0,"cm","cm",10.0
+"AIRARTOPBAS",1,1,0,0,0,0,0,"m","m",50.0
+"AIRartoptyp",1,1,0,0,0,0,0,"N/A","N/A",False
+"AIRajfdata",1,1,1,1,1,0,0,"number","number",0.000170
+"AIRajfdata",1,1,1,2,1,0,0,"number","number",0.000160
+"AIRajfdata",1,1,1,3,1,0,0,"number","number",0.000180
+"AIRajfdata",1,1,1,4,1,0,0,"number","number",0.000200
+"AIRajfdata",1,1,1,5,1,0,0,"number","number",0.000190
+"AIRajfdata",1,1,1,6,1,0,0,"number","number",0.000180
+"AIRajfdata",1,1,1,7,1,0,0,"number","number",0.000150
+"AIRajfdata",1,1,1,8,1,0,0,"number","number",9.00E-05
+"AIRajfdata",1,1,1,9,1,0,0,"number","number",0.000140
+"AIRajfdata",1,1,1,10,1,0,0,"number","number",0.000130
+"AIRajfdata",1,1,1,11,1,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,1,12,1,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,13,1,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,1,14,1,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,1,15,1,0,0,"number","number",0.000220
+"AIRajfdata",1,1,1,16,1,0,0,"number","number",0.000110
+"AIRajfdata",1,1,1,1,2,0,0,"number","number",0.000810
+"AIRajfdata",1,1,1,2,2,0,0,"number","number",0.000640
+"AIRajfdata",1,1,1,3,2,0,0,"number","number",0.000600
+"AIRajfdata",1,1,1,4,2,0,0,"number","number",0.000570
+"AIRajfdata",1,1,1,5,2,0,0,"number","number",0.000460
+"AIRajfdata",1,1,1,6,2,0,0,"number","number",0.000590
+"AIRajfdata",1,1,1,7,2,0,0,"number","number",0.000710
+"AIRajfdata",1,1,1,8,2,0,0,"number","number",0.000580
+"AIRajfdata",1,1,1,9,2,0,0,"number","number",0.000520
+"AIRajfdata",1,1,1,10,2,0,0,"number","number",0.000550
+"AIRajfdata",1,1,1,11,2,0,0,"number","number",0.000470
+"AIRajfdata",1,1,1,12,2,0,0,"number","number",0.000290
+"AIRajfdata",1,1,1,13,2,0,0,"number","number",0.000240
+"AIRajfdata",1,1,1,14,2,0,0,"number","number",0.000440
+"AIRajfdata",1,1,1,15,2,0,0,"number","number",0.000600
+"AIRajfdata",1,1,1,16,2,0,0,"number","number",0.000710
+"AIRajfdata",1,1,1,1,3,0,0,"number","number",0.000150
+"AIRajfdata",1,1,1,2,3,0,0,"number","number",0.000150
+"AIRajfdata",1,1,1,3,3,0,0,"number","number",0.000100
+"AIRajfdata",1,1,1,4,3,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,5,3,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,1,6,3,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,7,3,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,8,3,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,1,9,3,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,1,10,3,0,0,"number","number",0.000100
+"AIRajfdata",1,1,1,11,3,0,0,"number","number",0.000170
+"AIRajfdata",1,1,1,12,3,0,0,"number","number",0.000280
+"AIRajfdata",1,1,1,13,3,0,0,"number","number",0.000110
+"AIRajfdata",1,1,1,14,3,0,0,"number","number",0.000100
+"AIRajfdata",1,1,1,15,3,0,0,"number","number",0.000180
+"AIRajfdata",1,1,1,16,3,0,0,"number","number",0.000180
+"AIRajfdata",1,1,1,1,4,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,1,2,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,3,4,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,4,4,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,5,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,6,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,7,4,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,1,8,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,9,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,10,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,11,4,0,0,"number","number",0.000180
+"AIRajfdata",1,1,1,12,4,0,0,"number","number",0.000100
+"AIRajfdata",1,1,1,13,4,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,1,14,4,0,0,"number","number",0.000140
+"AIRajfdata",1,1,1,15,4,0,0,"number","number",0.000230
+"AIRajfdata",1,1,1,16,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,1,1,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,2,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,3,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,4,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,5,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,8,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,9,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,10,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,11,5,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,1,12,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,1,13,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,14,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,15,5,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,1,16,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,2,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,8,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,9,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,10,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,11,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,12,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,13,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,1,14,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,15,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,1,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,1,1,0,0,"number","number",0.00390
+"AIRajfdata",1,1,2,2,1,0,0,"number","number",0.00466
+"AIRajfdata",1,1,2,3,1,0,0,"number","number",0.00353
+"AIRajfdata",1,1,2,4,1,0,0,"number","number",0.00277
+"AIRajfdata",1,1,2,5,1,0,0,"number","number",0.00249
+"AIRajfdata",1,1,2,6,1,0,0,"number","number",0.00223
+"AIRajfdata",1,1,2,7,1,0,0,"number","number",0.00182
+"AIRajfdata",1,1,2,8,1,0,0,"number","number",0.00134
+"AIRajfdata",1,1,2,9,1,0,0,"number","number",0.00131
+"AIRajfdata",1,1,2,10,1,0,0,"number","number",0.00126
+"AIRajfdata",1,1,2,11,1,0,0,"number","number",0.00129
+"AIRajfdata",1,1,2,12,1,0,0,"number","number",0.00120
+"AIRajfdata",1,1,2,13,1,0,0,"number","number",0.00151
+"AIRajfdata",1,1,2,14,1,0,0,"number","number",0.00154
+"AIRajfdata",1,1,2,15,1,0,0,"number","number",0.00244
+"AIRajfdata",1,1,2,16,1,0,0,"number","number",0.00315
+"AIRajfdata",1,1,2,1,2,0,0,"number","number",0.00903
+"AIRajfdata",1,1,2,2,2,0,0,"number","number",0.00726
+"AIRajfdata",1,1,2,3,2,0,0,"number","number",0.00584
+"AIRajfdata",1,1,2,4,2,0,0,"number","number",0.00412
+"AIRajfdata",1,1,2,5,2,0,0,"number","number",0.00418
+"AIRajfdata",1,1,2,6,2,0,0,"number","number",0.00479
+"AIRajfdata",1,1,2,7,2,0,0,"number","number",0.00421
+"AIRajfdata",1,1,2,8,2,0,0,"number","number",0.00351
+"AIRajfdata",1,1,2,9,2,0,0,"number","number",0.00289
+"AIRajfdata",1,1,2,10,2,0,0,"number","number",0.00241
+"AIRajfdata",1,1,2,11,2,0,0,"number","number",0.00301
+"AIRajfdata",1,1,2,12,2,0,0,"number","number",0.00290
+"AIRajfdata",1,1,2,13,2,0,0,"number","number",0.00301
+"AIRajfdata",1,1,2,14,2,0,0,"number","number",0.00453
+"AIRajfdata",1,1,2,15,2,0,0,"number","number",0.00863
+"AIRajfdata",1,1,2,16,2,0,0,"number","number",0.0112
+"AIRajfdata",1,1,2,1,3,0,0,"number","number",0.00203
+"AIRajfdata",1,1,2,2,3,0,0,"number","number",0.00156
+"AIRajfdata",1,1,2,3,3,0,0,"number","number",0.000860
+"AIRajfdata",1,1,2,4,3,0,0,"number","number",0.000410
+"AIRajfdata",1,1,2,5,3,0,0,"number","number",0.000250
+"AIRajfdata",1,1,2,6,3,0,0,"number","number",0.000400
+"AIRajfdata",1,1,2,7,3,0,0,"number","number",0.000610
+"AIRajfdata",1,1,2,8,3,0,0,"number","number",0.000610
+"AIRajfdata",1,1,2,9,3,0,0,"number","number",0.000590
+"AIRajfdata",1,1,2,10,3,0,0,"number","number",0.00112
+"AIRajfdata",1,1,2,11,3,0,0,"number","number",0.00227
+"AIRajfdata",1,1,2,12,3,0,0,"number","number",0.00210
+"AIRajfdata",1,1,2,13,3,0,0,"number","number",0.00147
+"AIRajfdata",1,1,2,14,3,0,0,"number","number",0.00264
+"AIRajfdata",1,1,2,15,3,0,0,"number","number",0.00621
+"AIRajfdata",1,1,2,16,3,0,0,"number","number",0.00322
+"AIRajfdata",1,1,2,1,4,0,0,"number","number",0.000120
+"AIRajfdata",1,1,2,2,4,0,0,"number","number",0.000400
+"AIRajfdata",1,1,2,3,4,0,0,"number","number",0.000230
+"AIRajfdata",1,1,2,4,4,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,2,5,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,6,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,7,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,2,8,4,0,0,"number","number",9.00E-05
+"AIRajfdata",1,1,2,9,4,0,0,"number","number",0.000130
+"AIRajfdata",1,1,2,10,4,0,0,"number","number",0.000550
+"AIRajfdata",1,1,2,11,4,0,0,"number","number",0.00129
+"AIRajfdata",1,1,2,12,4,0,0,"number","number",0.00166
+"AIRajfdata",1,1,2,13,4,0,0,"number","number",0.000780
+"AIRajfdata",1,1,2,14,4,0,0,"number","number",0.00107
+"AIRajfdata",1,1,2,15,4,0,0,"number","number",0.00199
+"AIRajfdata",1,1,2,16,4,0,0,"number","number",0.000470
+"AIRajfdata",1,1,2,1,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,2,5,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,2,3,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,2,4,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,5,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,8,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,2,9,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,2,10,5,0,0,"number","number",0.000140
+"AIRajfdata",1,1,2,11,5,0,0,"number","number",0.000530
+"AIRajfdata",1,1,2,12,5,0,0,"number","number",0.000420
+"AIRajfdata",1,1,2,13,5,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,2,14,5,0,0,"number","number",0.000100
+"AIRajfdata",1,1,2,15,5,0,0,"number","number",0.000430
+"AIRajfdata",1,1,2,16,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,2,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,2,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,2,3,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,2,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,8,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,9,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,10,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,2,11,6,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,2,12,6,0,0,"number","number",0.000190
+"AIRajfdata",1,1,2,13,6,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,2,14,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,2,15,6,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,2,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,1,1,0,0,"number","number",0.00244
+"AIRajfdata",1,1,3,2,1,0,0,"number","number",0.00239
+"AIRajfdata",1,1,3,3,1,0,0,"number","number",0.00237
+"AIRajfdata",1,1,3,4,1,0,0,"number","number",0.00195
+"AIRajfdata",1,1,3,5,1,0,0,"number","number",0.00156
+"AIRajfdata",1,1,3,6,1,0,0,"number","number",0.00146
+"AIRajfdata",1,1,3,7,1,0,0,"number","number",0.00162
+"AIRajfdata",1,1,3,8,1,0,0,"number","number",0.00109
+"AIRajfdata",1,1,3,9,1,0,0,"number","number",0.00117
+"AIRajfdata",1,1,3,10,1,0,0,"number","number",0.00105
+"AIRajfdata",1,1,3,11,1,0,0,"number","number",0.000840
+"AIRajfdata",1,1,3,12,1,0,0,"number","number",0.00111
+"AIRajfdata",1,1,3,13,1,0,0,"number","number",0.00117
+"AIRajfdata",1,1,3,14,1,0,0,"number","number",0.00162
+"AIRajfdata",1,1,3,15,1,0,0,"number","number",0.00200
+"AIRajfdata",1,1,3,16,1,0,0,"number","number",0.00262
+"AIRajfdata",1,1,3,1,2,0,0,"number","number",0.00632
+"AIRajfdata",1,1,3,2,2,0,0,"number","number",0.00477
+"AIRajfdata",1,1,3,3,2,0,0,"number","number",0.00342
+"AIRajfdata",1,1,3,4,2,0,0,"number","number",0.00286
+"AIRajfdata",1,1,3,5,2,0,0,"number","number",0.00286
+"AIRajfdata",1,1,3,6,2,0,0,"number","number",0.00312
+"AIRajfdata",1,1,3,7,2,0,0,"number","number",0.00353
+"AIRajfdata",1,1,3,8,2,0,0,"number","number",0.00258
+"AIRajfdata",1,1,3,9,2,0,0,"number","number",0.00235
+"AIRajfdata",1,1,3,10,2,0,0,"number","number",0.00223
+"AIRajfdata",1,1,3,11,2,0,0,"number","number",0.00290
+"AIRajfdata",1,1,3,12,2,0,0,"number","number",0.00282
+"AIRajfdata",1,1,3,13,2,0,0,"number","number",0.00323
+"AIRajfdata",1,1,3,14,2,0,0,"number","number",0.00601
+"AIRajfdata",1,1,3,15,2,0,0,"number","number",0.00919
+"AIRajfdata",1,1,3,16,2,0,0,"number","number",0.00805
+"AIRajfdata",1,1,3,1,3,0,0,"number","number",0.00196
+"AIRajfdata",1,1,3,2,3,0,0,"number","number",0.00204
+"AIRajfdata",1,1,3,3,3,0,0,"number","number",0.000900
+"AIRajfdata",1,1,3,4,3,0,0,"number","number",0.000540
+"AIRajfdata",1,1,3,5,3,0,0,"number","number",0.000360
+"AIRajfdata",1,1,3,6,3,0,0,"number","number",0.000500
+"AIRajfdata",1,1,3,7,3,0,0,"number","number",0.000860
+"AIRajfdata",1,1,3,8,3,0,0,"number","number",0.000750
+"AIRajfdata",1,1,3,9,3,0,0,"number","number",0.000690
+"AIRajfdata",1,1,3,10,3,0,0,"number","number",0.00152
+"AIRajfdata",1,1,3,11,3,0,0,"number","number",0.00260
+"AIRajfdata",1,1,3,12,3,0,0,"number","number",0.00353
+"AIRajfdata",1,1,3,13,3,0,0,"number","number",0.00243
+"AIRajfdata",1,1,3,14,3,0,0,"number","number",0.00527
+"AIRajfdata",1,1,3,15,3,0,0,"number","number",0.00917
+"AIRajfdata",1,1,3,16,3,0,0,"number","number",0.00334
+"AIRajfdata",1,1,3,1,4,0,0,"number","number",0.000240
+"AIRajfdata",1,1,3,2,4,0,0,"number","number",0.000480
+"AIRajfdata",1,1,3,3,4,0,0,"number","number",0.000290
+"AIRajfdata",1,1,3,4,4,0,0,"number","number",0.000150
+"AIRajfdata",1,1,3,5,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,3,6,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,7,4,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,3,8,4,0,0,"number","number",0.000150
+"AIRajfdata",1,1,3,9,4,0,0,"number","number",0.000250
+"AIRajfdata",1,1,3,10,4,0,0,"number","number",0.000470
+"AIRajfdata",1,1,3,11,4,0,0,"number","number",0.00150
+"AIRajfdata",1,1,3,12,4,0,0,"number","number",0.00184
+"AIRajfdata",1,1,3,13,4,0,0,"number","number",0.000920
+"AIRajfdata",1,1,3,14,4,0,0,"number","number",0.00111
+"AIRajfdata",1,1,3,15,4,0,0,"number","number",0.00211
+"AIRajfdata",1,1,3,16,4,0,0,"number","number",0.000570
+"AIRajfdata",1,1,3,1,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,3,2,5,0,0,"number","number",0.000150
+"AIRajfdata",1,1,3,3,5,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,3,4,5,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,3,5,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,8,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,3,9,5,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,3,10,5,0,0,"number","number",0.000150
+"AIRajfdata",1,1,3,11,5,0,0,"number","number",0.000580
+"AIRajfdata",1,1,3,12,5,0,0,"number","number",0.000360
+"AIRajfdata",1,1,3,13,5,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,3,14,5,0,0,"number","number",0.000220
+"AIRajfdata",1,1,3,15,5,0,0,"number","number",0.000690
+"AIRajfdata",1,1,3,16,5,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,3,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,2,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,8,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,3,9,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,3,10,6,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,3,11,6,0,0,"number","number",0.000100
+"AIRajfdata",1,1,3,12,6,0,0,"number","number",0.000160
+"AIRajfdata",1,1,3,13,6,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,3,14,6,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,3,15,6,0,0,"number","number",0.000120
+"AIRajfdata",1,1,3,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,1,1,0,0,"number","number",0.00126
+"AIRajfdata",1,1,4,2,1,0,0,"number","number",0.00126
+"AIRajfdata",1,1,4,3,1,0,0,"number","number",0.000990
+"AIRajfdata",1,1,4,4,1,0,0,"number","number",0.000930
+"AIRajfdata",1,1,4,5,1,0,0,"number","number",0.00110
+"AIRajfdata",1,1,4,6,1,0,0,"number","number",0.00122
+"AIRajfdata",1,1,4,7,1,0,0,"number","number",0.00114
+"AIRajfdata",1,1,4,8,1,0,0,"number","number",0.000980
+"AIRajfdata",1,1,4,9,1,0,0,"number","number",0.000750
+"AIRajfdata",1,1,4,10,1,0,0,"number","number",0.000850
+"AIRajfdata",1,1,4,11,1,0,0,"number","number",0.000940
+"AIRajfdata",1,1,4,12,1,0,0,"number","number",0.00103
+"AIRajfdata",1,1,4,13,1,0,0,"number","number",0.00121
+"AIRajfdata",1,1,4,14,1,0,0,"number","number",0.00103
+"AIRajfdata",1,1,4,15,1,0,0,"number","number",0.00120
+"AIRajfdata",1,1,4,16,1,0,0,"number","number",0.00110
+"AIRajfdata",1,1,4,1,2,0,0,"number","number",0.00410
+"AIRajfdata",1,1,4,2,2,0,0,"number","number",0.00317
+"AIRajfdata",1,1,4,3,2,0,0,"number","number",0.00240
+"AIRajfdata",1,1,4,4,2,0,0,"number","number",0.00272
+"AIRajfdata",1,1,4,5,2,0,0,"number","number",0.00336
+"AIRajfdata",1,1,4,6,2,0,0,"number","number",0.00393
+"AIRajfdata",1,1,4,7,2,0,0,"number","number",0.00476
+"AIRajfdata",1,1,4,8,2,0,0,"number","number",0.00345
+"AIRajfdata",1,1,4,9,2,0,0,"number","number",0.00322
+"AIRajfdata",1,1,4,10,2,0,0,"number","number",0.00412
+"AIRajfdata",1,1,4,11,2,0,0,"number","number",0.00539
+"AIRajfdata",1,1,4,12,2,0,0,"number","number",0.00776
+"AIRajfdata",1,1,4,13,2,0,0,"number","number",0.00977
+"AIRajfdata",1,1,4,14,2,0,0,"number","number",0.0134
+"AIRajfdata",1,1,4,15,2,0,0,"number","number",0.0117
+"AIRajfdata",1,1,4,16,2,0,0,"number","number",0.00691
+"AIRajfdata",1,1,4,1,3,0,0,"number","number",0.00182
+"AIRajfdata",1,1,4,2,3,0,0,"number","number",0.00157
+"AIRajfdata",1,1,4,3,3,0,0,"number","number",0.00131
+"AIRajfdata",1,1,4,4,3,0,0,"number","number",0.000900
+"AIRajfdata",1,1,4,5,3,0,0,"number","number",0.000840
+"AIRajfdata",1,1,4,6,3,0,0,"number","number",0.00103
+"AIRajfdata",1,1,4,7,3,0,0,"number","number",0.00258
+"AIRajfdata",1,1,4,8,3,0,0,"number","number",0.00277
+"AIRajfdata",1,1,4,9,3,0,0,"number","number",0.00243
+"AIRajfdata",1,1,4,10,3,0,0,"number","number",0.00339
+"AIRajfdata",1,1,4,11,3,0,0,"number","number",0.00673
+"AIRajfdata",1,1,4,12,3,0,0,"number","number",0.0118
+"AIRajfdata",1,1,4,13,3,0,0,"number","number",0.0124
+"AIRajfdata",1,1,4,14,3,0,0,"number","number",0.0226
+"AIRajfdata",1,1,4,15,3,0,0,"number","number",0.0205
+"AIRajfdata",1,1,4,16,3,0,0,"number","number",0.00405
+"AIRajfdata",1,1,4,1,4,0,0,"number","number",0.000610
+"AIRajfdata",1,1,4,2,4,0,0,"number","number",0.00130
+"AIRajfdata",1,1,4,3,4,0,0,"number","number",0.000860
+"AIRajfdata",1,1,4,4,4,0,0,"number","number",0.000320
+"AIRajfdata",1,1,4,5,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,4,6,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,4,7,4,0,0,"number","number",0.000260
+"AIRajfdata",1,1,4,8,4,0,0,"number","number",0.00103
+"AIRajfdata",1,1,4,9,4,0,0,"number","number",0.00134
+"AIRajfdata",1,1,4,10,4,0,0,"number","number",0.00353
+"AIRajfdata",1,1,4,11,4,0,0,"number","number",0.00736
+"AIRajfdata",1,1,4,12,4,0,0,"number","number",0.00735
+"AIRajfdata",1,1,4,13,4,0,0,"number","number",0.00420
+"AIRajfdata",1,1,4,14,4,0,0,"number","number",0.0123
+"AIRajfdata",1,1,4,15,4,0,0,"number","number",0.0141
+"AIRajfdata",1,1,4,16,4,0,0,"number","number",0.00138
+"AIRajfdata",1,1,4,1,5,0,0,"number","number",0.000200
+"AIRajfdata",1,1,4,2,5,0,0,"number","number",0.000480
+"AIRajfdata",1,1,4,3,5,0,0,"number","number",0.000190
+"AIRajfdata",1,1,4,4,5,0,0,"number","number",0.000100
+"AIRajfdata",1,1,4,5,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,4,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,8,5,0,0,"number","number",0.000130
+"AIRajfdata",1,1,4,9,5,0,0,"number","number",0.000240
+"AIRajfdata",1,1,4,10,5,0,0,"number","number",0.00150
+"AIRajfdata",1,1,4,11,5,0,0,"number","number",0.00356
+"AIRajfdata",1,1,4,12,5,0,0,"number","number",0.00193
+"AIRajfdata",1,1,4,13,5,0,0,"number","number",0.000590
+"AIRajfdata",1,1,4,14,5,0,0,"number","number",0.00278
+"AIRajfdata",1,1,4,15,5,0,0,"number","number",0.00526
+"AIRajfdata",1,1,4,16,5,0,0,"number","number",0.000110
+"AIRajfdata",1,1,4,1,6,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,4,2,6,0,0,"number","number",9.00E-05
+"AIRajfdata",1,1,4,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,4,8,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,4,9,6,0,0,"number","number",9.00E-05
+"AIRajfdata",1,1,4,10,6,0,0,"number","number",0.000500
+"AIRajfdata",1,1,4,11,6,0,0,"number","number",0.000900
+"AIRajfdata",1,1,4,12,6,0,0,"number","number",0.000430
+"AIRajfdata",1,1,4,13,6,0,0,"number","number",0.000150
+"AIRajfdata",1,1,4,14,6,0,0,"number","number",0.000170
+"AIRajfdata",1,1,4,15,6,0,0,"number","number",0.000740
+"AIRajfdata",1,1,4,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,1,1,0,0,"number","number",0.000640
+"AIRajfdata",1,1,5,2,1,0,0,"number","number",0.000500
+"AIRajfdata",1,1,5,3,1,0,0,"number","number",0.000490
+"AIRajfdata",1,1,5,4,1,0,0,"number","number",0.000410
+"AIRajfdata",1,1,5,5,1,0,0,"number","number",0.000610
+"AIRajfdata",1,1,5,6,1,0,0,"number","number",0.000880
+"AIRajfdata",1,1,5,7,1,0,0,"number","number",0.000780
+"AIRajfdata",1,1,5,8,1,0,0,"number","number",0.000840
+"AIRajfdata",1,1,5,9,1,0,0,"number","number",0.000630
+"AIRajfdata",1,1,5,10,1,0,0,"number","number",0.000770
+"AIRajfdata",1,1,5,11,1,0,0,"number","number",0.000980
+"AIRajfdata",1,1,5,12,1,0,0,"number","number",0.000810
+"AIRajfdata",1,1,5,13,1,0,0,"number","number",0.000930
+"AIRajfdata",1,1,5,14,1,0,0,"number","number",0.00110
+"AIRajfdata",1,1,5,15,1,0,0,"number","number",0.00101
+"AIRajfdata",1,1,5,16,1,0,0,"number","number",0.00105
+"AIRajfdata",1,1,5,1,2,0,0,"number","number",0.00177
+"AIRajfdata",1,1,5,2,2,0,0,"number","number",0.00112
+"AIRajfdata",1,1,5,3,2,0,0,"number","number",0.000850
+"AIRajfdata",1,1,5,4,2,0,0,"number","number",0.000950
+"AIRajfdata",1,1,5,5,2,0,0,"number","number",0.00120
+"AIRajfdata",1,1,5,6,2,0,0,"number","number",0.00191
+"AIRajfdata",1,1,5,7,2,0,0,"number","number",0.00298
+"AIRajfdata",1,1,5,8,2,0,0,"number","number",0.00272
+"AIRajfdata",1,1,5,9,2,0,0,"number","number",0.00237
+"AIRajfdata",1,1,5,10,2,0,0,"number","number",0.00301
+"AIRajfdata",1,1,5,11,2,0,0,"number","number",0.00454
+"AIRajfdata",1,1,5,12,2,0,0,"number","number",0.00913
+"AIRajfdata",1,1,5,13,2,0,0,"number","number",0.0116
+"AIRajfdata",1,1,5,14,2,0,0,"number","number",0.0148
+"AIRajfdata",1,1,5,15,2,0,0,"number","number",0.0113
+"AIRajfdata",1,1,5,16,2,0,0,"number","number",0.00480
+"AIRajfdata",1,1,5,1,3,0,0,"number","number",0.000600
+"AIRajfdata",1,1,5,2,3,0,0,"number","number",0.000330
+"AIRajfdata",1,1,5,3,3,0,0,"number","number",0.000580
+"AIRajfdata",1,1,5,4,3,0,0,"number","number",0.000220
+"AIRajfdata",1,1,5,5,3,0,0,"number","number",0.000220
+"AIRajfdata",1,1,5,6,3,0,0,"number","number",0.000410
+"AIRajfdata",1,1,5,7,3,0,0,"number","number",0.00161
+"AIRajfdata",1,1,5,8,3,0,0,"number","number",0.00145
+"AIRajfdata",1,1,5,9,3,0,0,"number","number",0.000670
+"AIRajfdata",1,1,5,10,3,0,0,"number","number",0.00140
+"AIRajfdata",1,1,5,11,3,0,0,"number","number",0.00281
+"AIRajfdata",1,1,5,12,3,0,0,"number","number",0.00668
+"AIRajfdata",1,1,5,13,3,0,0,"number","number",0.00836
+"AIRajfdata",1,1,5,14,3,0,0,"number","number",0.0163
+"AIRajfdata",1,1,5,15,3,0,0,"number","number",0.0124
+"AIRajfdata",1,1,5,16,3,0,0,"number","number",0.00219
+"AIRajfdata",1,1,5,1,4,0,0,"number","number",0.000110
+"AIRajfdata",1,1,5,2,4,0,0,"number","number",0.000210
+"AIRajfdata",1,1,5,3,4,0,0,"number","number",0.000120
+"AIRajfdata",1,1,5,4,4,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,5,5,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,5,6,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,7,4,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,5,8,4,0,0,"number","number",0.000140
+"AIRajfdata",1,1,5,9,4,0,0,"number","number",0.000260
+"AIRajfdata",1,1,5,10,4,0,0,"number","number",0.000350
+"AIRajfdata",1,1,5,11,4,0,0,"number","number",0.00117
+"AIRajfdata",1,1,5,12,4,0,0,"number","number",0.00130
+"AIRajfdata",1,1,5,13,4,0,0,"number","number",0.00100
+"AIRajfdata",1,1,5,14,4,0,0,"number","number",0.00322
+"AIRajfdata",1,1,5,15,4,0,0,"number","number",0.00313
+"AIRajfdata",1,1,5,16,4,0,0,"number","number",0.000300
+"AIRajfdata",1,1,5,1,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,5,2,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,5,3,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,4,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,5,5,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,7,5,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,5,8,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,5,9,5,0,0,"number","number",0.000100
+"AIRajfdata",1,1,5,10,5,0,0,"number","number",0.000120
+"AIRajfdata",1,1,5,11,5,0,0,"number","number",0.000230
+"AIRajfdata",1,1,5,12,5,0,0,"number","number",0.000150
+"AIRajfdata",1,1,5,13,5,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,5,14,5,0,0,"number","number",0.000560
+"AIRajfdata",1,1,5,15,5,0,0,"number","number",0.000720
+"AIRajfdata",1,1,5,16,5,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,5,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,2,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,8,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,9,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,10,6,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,5,11,6,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,5,12,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,5,13,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,14,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,5,15,6,0,0,"number","number",0.000150
+"AIRajfdata",1,1,5,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,1,1,0,0,"number","number",0.00222
+"AIRajfdata",1,1,6,2,1,0,0,"number","number",0.00161
+"AIRajfdata",1,1,6,3,1,0,0,"number","number",0.00163
+"AIRajfdata",1,1,6,4,1,0,0,"number","number",0.00158
+"AIRajfdata",1,1,6,5,1,0,0,"number","number",0.00178
+"AIRajfdata",1,1,6,6,1,0,0,"number","number",0.00251
+"AIRajfdata",1,1,6,7,1,0,0,"number","number",0.00237
+"AIRajfdata",1,1,6,8,1,0,0,"number","number",0.00181
+"AIRajfdata",1,1,6,9,1,0,0,"number","number",0.00214
+"AIRajfdata",1,1,6,10,1,0,0,"number","number",0.00188
+"AIRajfdata",1,1,6,11,1,0,0,"number","number",0.00207
+"AIRajfdata",1,1,6,12,1,0,0,"number","number",0.00253
+"AIRajfdata",1,1,6,13,1,0,0,"number","number",0.00264
+"AIRajfdata",1,1,6,14,1,0,0,"number","number",0.00339
+"AIRajfdata",1,1,6,15,1,0,0,"number","number",0.00290
+"AIRajfdata",1,1,6,16,1,0,0,"number","number",0.00265
+"AIRajfdata",1,1,6,1,2,0,0,"number","number",0.00265
+"AIRajfdata",1,1,6,2,2,0,0,"number","number",0.00191
+"AIRajfdata",1,1,6,3,2,0,0,"number","number",0.00136
+"AIRajfdata",1,1,6,4,2,0,0,"number","number",0.00141
+"AIRajfdata",1,1,6,5,2,0,0,"number","number",0.00201
+"AIRajfdata",1,1,6,6,2,0,0,"number","number",0.00311
+"AIRajfdata",1,1,6,7,2,0,0,"number","number",0.00405
+"AIRajfdata",1,1,6,8,2,0,0,"number","number",0.00388
+"AIRajfdata",1,1,6,9,2,0,0,"number","number",0.00344
+"AIRajfdata",1,1,6,10,2,0,0,"number","number",0.00387
+"AIRajfdata",1,1,6,11,2,0,0,"number","number",0.00448
+"AIRajfdata",1,1,6,12,2,0,0,"number","number",0.00939
+"AIRajfdata",1,1,6,13,2,0,0,"number","number",0.0126
+"AIRajfdata",1,1,6,14,2,0,0,"number","number",0.0148
+"AIRajfdata",1,1,6,15,2,0,0,"number","number",0.0121
+"AIRajfdata",1,1,6,16,2,0,0,"number","number",0.00572
+"AIRajfdata",1,1,6,1,3,0,0,"number","number",0.000320
+"AIRajfdata",1,1,6,2,3,0,0,"number","number",0.000270
+"AIRajfdata",1,1,6,3,3,0,0,"number","number",0.000220
+"AIRajfdata",1,1,6,4,3,0,0,"number","number",0.000110
+"AIRajfdata",1,1,6,5,3,0,0,"number","number",0.000120
+"AIRajfdata",1,1,6,6,3,0,0,"number","number",0.000240
+"AIRajfdata",1,1,6,7,3,0,0,"number","number",0.000650
+"AIRajfdata",1,1,6,8,3,0,0,"number","number",0.000880
+"AIRajfdata",1,1,6,9,3,0,0,"number","number",0.000540
+"AIRajfdata",1,1,6,10,3,0,0,"number","number",0.000710
+"AIRajfdata",1,1,6,11,3,0,0,"number","number",0.00131
+"AIRajfdata",1,1,6,12,3,0,0,"number","number",0.00356
+"AIRajfdata",1,1,6,13,3,0,0,"number","number",0.00415
+"AIRajfdata",1,1,6,14,3,0,0,"number","number",0.00792
+"AIRajfdata",1,1,6,15,3,0,0,"number","number",0.00561
+"AIRajfdata",1,1,6,16,3,0,0,"number","number",0.00112
+"AIRajfdata",1,1,6,1,4,0,0,"number","number",0.000120
+"AIRajfdata",1,1,6,2,4,0,0,"number","number",0.000100
+"AIRajfdata",1,1,6,3,4,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,6,4,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,5,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,6,6,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,6,7,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,6,8,4,0,0,"number","number",0.000120
+"AIRajfdata",1,1,6,9,4,0,0,"number","number",0.000180
+"AIRajfdata",1,1,6,10,4,0,0,"number","number",0.000360
+"AIRajfdata",1,1,6,11,4,0,0,"number","number",0.000990
+"AIRajfdata",1,1,6,12,4,0,0,"number","number",0.000780
+"AIRajfdata",1,1,6,13,4,0,0,"number","number",0.000480
+"AIRajfdata",1,1,6,14,4,0,0,"number","number",0.00188
+"AIRajfdata",1,1,6,15,4,0,0,"number","number",0.00198
+"AIRajfdata",1,1,6,16,4,0,0,"number","number",0.000150
+"AIRajfdata",1,1,6,1,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,6,2,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,6,3,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,4,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,6,5,5,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,6,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,8,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,6,9,5,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,6,10,5,0,0,"number","number",0.000190
+"AIRajfdata",1,1,6,11,5,0,0,"number","number",0.000240
+"AIRajfdata",1,1,6,12,5,0,0,"number","number",0.000150
+"AIRajfdata",1,1,6,13,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,6,14,5,0,0,"number","number",0.000240
+"AIRajfdata",1,1,6,15,5,0,0,"number","number",0.000580
+"AIRajfdata",1,1,6,16,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,6,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,2,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,8,6,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,6,9,6,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,6,10,6,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,6,11,6,0,0,"number","number",0.000120
+"AIRajfdata",1,1,6,12,6,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,6,13,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,14,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,6,15,6,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,6,16,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,1,1,0,0,"number","number",0.00197
+"AIRajfdata",1,1,7,2,1,0,0,"number","number",0.00159
+"AIRajfdata",1,1,7,3,1,0,0,"number","number",0.00143
+"AIRajfdata",1,1,7,4,1,0,0,"number","number",0.00133
+"AIRajfdata",1,1,7,5,1,0,0,"number","number",0.00154
+"AIRajfdata",1,1,7,6,1,0,0,"number","number",0.00233
+"AIRajfdata",1,1,7,7,1,0,0,"number","number",0.00268
+"AIRajfdata",1,1,7,8,1,0,0,"number","number",0.00192
+"AIRajfdata",1,1,7,9,1,0,0,"number","number",0.00181
+"AIRajfdata",1,1,7,10,1,0,0,"number","number",0.00167
+"AIRajfdata",1,1,7,11,1,0,0,"number","number",0.00181
+"AIRajfdata",1,1,7,12,1,0,0,"number","number",0.00234
+"AIRajfdata",1,1,7,13,1,0,0,"number","number",0.00232
+"AIRajfdata",1,1,7,14,1,0,0,"number","number",0.00328
+"AIRajfdata",1,1,7,15,1,0,0,"number","number",0.00305
+"AIRajfdata",1,1,7,16,1,0,0,"number","number",0.00264
+"AIRajfdata",1,1,7,1,2,0,0,"number","number",0.00141
+"AIRajfdata",1,1,7,2,2,0,0,"number","number",0.000730
+"AIRajfdata",1,1,7,3,2,0,0,"number","number",0.00103
+"AIRajfdata",1,1,7,4,2,0,0,"number","number",0.000700
+"AIRajfdata",1,1,7,5,2,0,0,"number","number",0.00108
+"AIRajfdata",1,1,7,6,2,0,0,"number","number",0.00196
+"AIRajfdata",1,1,7,7,2,0,0,"number","number",0.00274
+"AIRajfdata",1,1,7,8,2,0,0,"number","number",0.00220
+"AIRajfdata",1,1,7,9,2,0,0,"number","number",0.00192
+"AIRajfdata",1,1,7,10,2,0,0,"number","number",0.00167
+"AIRajfdata",1,1,7,11,2,0,0,"number","number",0.00297
+"AIRajfdata",1,1,7,12,2,0,0,"number","number",0.00403
+"AIRajfdata",1,1,7,13,2,0,0,"number","number",0.00531
+"AIRajfdata",1,1,7,14,2,0,0,"number","number",0.00659
+"AIRajfdata",1,1,7,15,2,0,0,"number","number",0.00537
+"AIRajfdata",1,1,7,16,2,0,0,"number","number",0.00290
+"AIRajfdata",1,1,7,1,3,0,0,"number","number",0.000160
+"AIRajfdata",1,1,7,2,3,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,7,3,3,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,4,3,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,7,5,3,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,7,6,3,0,0,"number","number",9.00E-05
+"AIRajfdata",1,1,7,7,3,0,0,"number","number",0.000250
+"AIRajfdata",1,1,7,8,3,0,0,"number","number",0.000340
+"AIRajfdata",1,1,7,9,3,0,0,"number","number",0.000180
+"AIRajfdata",1,1,7,10,3,0,0,"number","number",0.000330
+"AIRajfdata",1,1,7,11,3,0,0,"number","number",0.000560
+"AIRajfdata",1,1,7,12,3,0,0,"number","number",0.00140
+"AIRajfdata",1,1,7,13,3,0,0,"number","number",0.00160
+"AIRajfdata",1,1,7,14,3,0,0,"number","number",0.00313
+"AIRajfdata",1,1,7,15,3,0,0,"number","number",0.00247
+"AIRajfdata",1,1,7,16,3,0,0,"number","number",0.000280
+"AIRajfdata",1,1,7,1,4,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,7,2,4,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,7,3,4,0,0,"number","number",5.00E-05
+"AIRajfdata",1,1,7,4,4,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,7,5,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,6,4,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,7,4,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,8,4,0,0,"number","number",3.00E-05
+"AIRajfdata",1,1,7,9,4,0,0,"number","number",4.00E-05
+"AIRajfdata",1,1,7,10,4,0,0,"number","number",0.000210
+"AIRajfdata",1,1,7,11,4,0,0,"number","number",0.000530
+"AIRajfdata",1,1,7,12,4,0,0,"number","number",0.000390
+"AIRajfdata",1,1,7,13,4,0,0,"number","number",0.000160
+"AIRajfdata",1,1,7,14,4,0,0,"number","number",0.000820
+"AIRajfdata",1,1,7,15,4,0,0,"number","number",0.000820
+"AIRajfdata",1,1,7,16,4,0,0,"number","number",6.00E-05
+"AIRajfdata",1,1,7,1,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,2,5,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,3,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,7,4,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,5,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,6,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,7,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,8,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,9,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,7,10,5,0,0,"number","number",0.000110
+"AIRajfdata",1,1,7,11,5,0,0,"number","number",0.000140
+"AIRajfdata",1,1,7,12,5,0,0,"number","number",8.00E-05
+"AIRajfdata",1,1,7,13,5,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,14,5,0,0,"number","number",0.000100
+"AIRajfdata",1,1,7,15,5,0,0,"number","number",0.000100
+"AIRajfdata",1,1,7,16,5,0,0,"number","number",1.00E-05
+"AIRajfdata",1,1,7,1,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,2,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,3,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,4,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,5,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,6,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,7,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,8,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,9,6,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,10,6,0,0,"number","number",7.00E-05
+"AIRajfdata",1,1,7,11,6,0,0,"number","number",2.00E-05
+"AIRajfdata",1,1,7,12,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,13,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,14,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,15,6,0,0,"number","number",0.00
+"AIRajfdata",1,1,7,16,6,0,0,"number","number",0.00
+"riv9",7
+"LocName",1,1,0,0,0,0,0,"N/A","N/A","fcm3"
+"LocLabel",1,1,0,0,0,0,0,"N/A","N/A","fcm3"
+"conccas",1,1,0,0,0,0,0,"yr","g/ml","71432"
+"ctime",1,1,0,1,0,0,0,"yr","yr",0.0
+"conc",1,1,0,1,0,0,0,"g/ml","g/ml",30.0
+"ctime",1,1,0,2,0,0,0,"yr","yr",100.0
+"conc",1,1,0,2,0,0,0,"g/ml","g/ml",30.0
+"src11",25
+"progeny",0,0,0,0,0,0,0,"N/A","N/A",False
+"media",3,0,0,0,0,0,0,"N/A","N/A","Area"
+"one",3,0,0,0,0,0,0,"m^2","m^2",100.0
+"five",3,0,0,0,0,0,0,"C","C",20.0
+"six",3,0,0,0,0,0,0,"C","C",20.0
+"Fluxtypes",0,0,0,0,0,0,0,"N/A","N/A",True
+"density",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"radius",1,0,0,0,0,0,0,"um","um",0.03
+"Fluxtypes",1,0,0,0,0,0,0,"N/A","N/A",False
+"Fluxtypes",2,0,0,0,0,0,0,"N/A","N/A",False
+"Fluxtypes",3,0,0,0,0,0,0,"N/A","N/A",False
+"casid",3,1,0,0,0,0,0,"yr","g/yr",71432
+"ctime",3,1,0,1,0,0,0,"yr","yr",0.0
+"cflux",3,1,0,1,1,0,0,"g/yr","g/yr",10.0
+"ctime",3,1,0,2,0,0,0,"yr","yr",100.0
+"cflux",3,1,0,2,1,0,0,"g/yr","g/yr",10.0
+"media",4,0,0,0,0,0,0,"N/A","N/A","Vadose"
+"one",4,0,0,0,0,0,0,"m","m",50.0
+"two",4,0,0,0,0,0,0,"m","m",50.0
+"three",4,0,0,0,0,0,0,"m","m",10.0
+"casid",4,1,0,0,0,0,0,"yr","g/kg",71432
+"ctime",4,1,0,1,0,0,0,"yr","yr",0.0
+"cflux",4,1,0,1,1,0,0,"g/kg","g/kg",20.0
+"ctime",4,1,0,2,0,0,0,"yr","yr",150.0
+"cflux",4,1,0,2,1,0,0,"g/kg","g/kg",20.0

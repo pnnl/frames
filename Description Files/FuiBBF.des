@@ -1,0 +1,73 @@
+"mf","Version 2.1"
+"Boundary Conditions:User Defined:usr","BBF Eco Body Burden Module","bbf.exe 1","bbf.exe 2","ecx.ico"
+"
+MODULE VERSION
+  1.7 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+Use this module only if you know the constituent body burden concentrations for aquatic biota.  The constituent body burden concentrations at user provided points in time and media are entered directly through the interface.
+
+DECAY PRODUCTS
+This module does not compute the ingrowth of progeny because the user is assumed to know everything about the source, including progeny concentrations.  Therefore, this module assumes that the progeny emissions are input along with the parent concentrations.
+
+MODULE REFERENCES
+Document:  FRAMES Known Body Burden Module
+
+Authors:
+  Mitch Pelton
+  Fred Rutz
+
+Other related sites:
+  https://www.pnnl.gov/projects/earth
+
+  https://www.pnnl.gov/main/publications/external/technical_reports/PNNL-14077.pdf
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 ebf Aquatic Benchmarks required as input
+     0 to 1 aos Aquatic Organism required as input
+     
+Valid Output Writes
+     bbf Eco Body Burdens SUF
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+2,"Read"
+2,"con","",1,1,"ebf","Aquatic Benchmarks",1,1
+2,"con","",1,1,"aos","Aquatic Organism",1,1
+1,"Write"
+"bbf","Eco Body Burdens SUF"
+6,"Variables"
+"LocName","Not Stochastic","","","","Location name",0,STRING
+"specname","Not Stochastic","","","","Common name",0,STRING
+"specsciname","Not Stochastic","","","","Scientific name",0,STRING
+"conccas","Not Stochastic","","","","Chemical Abstract System Identification",1,STRING,con.FSCASID
+"Variable","FSCNAME","Site","Index3","","","",""
+"ctime","Not Stochastic","yr","","","Time",4,FLOAT
+"Variable","LocName","Index1","","","","",""
+"Variable","FSCNAME","Site","Index3","Index4","","",""
+"Variable","specname","Index1","Index2","","","",""
+"Label","time index # ","Index5","","","","",""
+"conc","Continuous","mg/kg","","","Concentration",4,FLOAT
+"Variable","LocName","Index1","","","","",""
+"Variable","FSCNAME","Site","Index3","Index4","","",""
+"Variable","specname","Index1","Index2","","","",""
+"Label","time index # ","Index5","","","","",""

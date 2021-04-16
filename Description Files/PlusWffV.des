@@ -1,0 +1,40 @@
+"mf","Version 2.1"
+"Boundary Conditions:Plus Operators:pls","WFF Vadose Plus Operator","","plus.exe /wff","vadplus.ico"
+"
+MODULE VERSION
+1.0
+
+MODULE DESCRIPTION
+Merges two or more WFF vadose into one WFF vadose dataset.
+
+VALID CONNECTIONS
+Valid Input Reads
+   2 to 10 wff Vadose required as input
+
+Valid Output Writes
+   wff Vadose
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Mitch Pelton
+Mailing Address:      P.O. Box 999
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     
+Fax Number:           
+Email Address:        mitch.pelton@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
+"
+1,"Read"
+1,"wff","Vadose",2,10
+1,"Write"
+"wff","Vadose"
+0,"Variables"

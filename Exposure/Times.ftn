@@ -1,0 +1,42 @@
+!   MEPAS AHAZ: TIMES.FTN             Version Date: 31-Jan-97
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK TIMES                               *
+!                                                                            *
+!  Common block TIMES contains timing parameters for the analysis            *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    31 Jan 1997                                             *
+!  Last Modified:    31-Jan-97  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/ANAZ
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!   TSTART      REAL    Time between definition of waste site concentration
+!                       and start of risk calculation, years. f
+!
+!   DELT        REAL    Duration of each time increment in the calculation,
+!                       years.
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!==== COMMON Block Definition ================================================
+!
+      COMMON /TIMES/ TSTART, DELT
+!
+!

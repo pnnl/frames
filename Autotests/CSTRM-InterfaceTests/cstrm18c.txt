@@ -1,0 +1,235 @@
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//This auto test was created on a Windows XP operating system.
+//y=8;	//Have y=8 for XP Users unless you got the coordinates while using XP
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+//Start Test Suite
+t.StartTestSuite("CSTRM_18c","Testing CSTRM_18c to check the basic functions of the MEPAS 4.0 Computed Source Term Module.","c:\\frames\\docs\\");
+
+t.NewTestCase("DeleteFile","Deleting old gid File");
+	f.delete("c:\\frames\\cstrm18c.gid");
+t.TestCaseComplete();
+
+t.NewTestCase ("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec("c:\\frames\\fui.exe");
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Activate Framework window");
+if(t.TestCaseComplete()!=0)
+{
+//Due to restrictions with Frames 1.4 the icons need to be manually moved to desired locations.
+//This test case opens a base case that was produced from Appendix B of the CSTRM test plan.
+
+t.NewTestCase("OpeningBaseCase","Opening Base Case for CSTRM_18c.");
+	a.SetKeyDelay(50);
+	a.Send("!f#o{DOWN}{ENTER}");
+	a.Sleep(5000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrmbas.gid");
+	a.Sleep(500);
+	a.Send("!o");
+	a.Sleep(1000);
+	t.Plan("Maximizing the window");
+	a.WinMaximize("Framework for Risk","");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("ConstituentData","Selecting Benzene, Tc-99, and Sr-90 for constituent.");
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(325,95+y);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(10000);
+	t.Plan("Remove Chromium VI");
+	a.LeftClick(340,302+y);
+	a.Send("{TAB}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'Search For' box.");
+	a.MouseMove(418,528+y);
+	a.LeftClick(418,528+y);
+	t.Plan("Type 'Benzene' in 'Search For' box.");
+	a.Send("benzene");
+	a.Sleep(3000);
+	t.Plan("Click Next Button");
+	a.MouseMove(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	a.LeftClick(492,524+y);
+	t.Plan("Tab over, 4 times, and click 'Add' button.");
+	a.Send("{TAB}{TAB}{TAB}{TAB}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'Search For' box.");
+	a.MouseMove(418,528+y);
+	a.LeftClick(418,528+y);
+	t.Plan("Delete Benzene");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	t.Plan("Type 'technecium-99' in 'Search For' box.");
+	a.Send("technecium-99");
+	a.Send("{TAB}{TAB}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'Search For' box.");
+	a.MouseMove(418,528+y);
+	a.LeftClick(418,528+y);
+	t.Plan("Delete technecium-99");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	t.Plan("Type 'strontium-90' in 'Search For' box.");
+	a.Send("strontium-90");	
+	a.Send("{TAB}{TAB}{ENTER}");
+	a.Sleep(500);
+	t.Plan("Use mouse and click 'File' then scroll down to 'Exit-Save Changes.'");
+	a.MouseMove(15,31+y);
+	a.LeftClick(15,31+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+t.NewTestCase("SourceData","'General Info' for Source Icon");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	t.Plan("Right click, scroll down, and click the 'General Info' link."); 
+	a.RightClick(400,160+y);
+	a.Send("{DOWN}{ENTER}");
+	t.Plan("Click on the 'User Label' box");
+	a.Sleep(1000);
+	a.LeftClick(165,127+y);
+	a.Sleep(500);
+	t.Plan("Click on the 'MEPAS 4.1 Source in Standing Surface Water' from the list of 'Applicable Models' and click 'Ok' button.");
+	a.Send("{TAB}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);	
+	t.TestCaseComplete();
+	
+t.NewTestCase("SourceUserInput","Entering in data into Source 'User Input'");
+	a.Sleep(1000);	
+	t.Plan("Right click, scroll down, and click the 'User Input' link.");
+	a.RightClick(400,160+y);
+	a.Sleep(1000);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(6000);
+
+//Options Works
+	a.Sleep(1000);
+	t.Plan("Click on 'volatilization loss route -- STVOL_OP' and select 'Compute Pathway'");
+	a.LeftClick(480,220+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	t.Plan("Click on 'time period for simulation--STMAXTIME'and change it to 250 years.");
+	a.MouseMove(459,284+y);
+	a.LeftClick(459,284+y);
+	a.Sleep(500);
+	a.Send("250");
+	a.Sleep(1000);	
+	
+//Waste Zone Works
+	t.Plan("Click 'Waste Zone' tab");
+	a.MouseMove(195,95+y);
+	a.LeftClick(195,95+y);
+	a.Sleep(1000);
+	t.Plan("Enter in bulk density and suspended sediment");
+	a.LeftClick(420,205+y);
+	a.Sleep(1000);
+	a.Send("2.65{ENTER}.1{ENTER}");
+	a.Sleep(1000);	
+	
+//Kd's Works
+	t.Plan("Click 'Kds' tab.");
+	a.MouseMove(225,58+y);
+	a.LeftClick(225,58+y);
+	a.Sleep(1000);
+	a.MouseMove(467,188+y);
+	a.LeftClick(467,188+y);
+	a.Send(".14{ENTER}.14{ENTER}24.3{ENTER}24.3{ENTER}3.0{ENTER}3.0{ENTER}228{ENTER}228{ENTER}");
+	a.Sleep(1000);
+	
+//Constituent Properties Works
+	t.Plan("Click 'Constituent Properties' tab");
+	a.MouseMove(312,89+y);
+	a.LeftClick(312,89+y);	
+	a.Sleep(1000);
+	t.Plan("Enter in 'water solubility--STSOL'and 'decay/degradation half life'");
+	a.LeftClick(398,156+y);	
+	a.Sleep(1000);
+	a.Send("1750{ENTER}1000000{ENTER}1000000{ENTER}1000000{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}{ENTER}100000000000000000000{ENTER}{RIGHT}{UP}y{ENTER}");
+	t.Plan("Go into 'Worksheet' button and enter STINVEN values for all three contaminants.");
+	a.LeftClick(311,253+y);
+	a.Sleep(500);
+	a.LeftClick(205,154+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}100");
+	a.Sleep(500);
+	a.LeftClick(340,54+y);
+	a.Send("{DOWN}{ENTER}{TAB}{TAB}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}100");
+	a.LeftClick(340,54+y);
+	a.Send("{DOWN}{ENTER}{TAB}{TAB}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}{DELETE}100");
+	t.Plan("Hit Ok button");
+	a.Send("{TAB}{TAB}{TAB}{ENTER}");
+	a.Sleep(2000);
+	
+	
+	a.Sleep(1000);
+	t.Plan("Save Changes and Exit out of 'Source Term Module Input'");
+	a.Sleep(1000);
+	a.Send("!f{ENTER}");
+	a.Sleep(2000);
+	t.TestCaseComplete();
+
+t.NewTestCase("RunSource","Run the Source Icon");
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	a.RightClick(400,160+y);
+	a.Send("{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(1000);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("SaveFile","Save .gid file");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	a.Send("!f#{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}");
+	a.Sleep(2000);
+	a.Send("{BACKSPACE}");
+	a.Send("cstrm18c.gid");
+	a.Send("!s");
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+
+t.NewTestCase("GOButton","Hitting the go button and save file w/green lights");
+	a.Sleep(2000);
+	t.Plan("Hitting the GO button");
+	a.LeftClick(140,35+y);
+	a.Sleep(2000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+		
+}
+if(t.TestCaseComplete()!=0)
+{
+t.NewTestCase("CloseFUI","Close the Frames User Interface");
+  t.Plan("Click the close box on the FUI");
+  a.WinClose("Framework for Risk","");
+  a.Send("y");
+  t.Assert(a.WinWaitClose("Framework for Risk","",10)==0,"Close Framework window");
+ t.TestCaseComplete();
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");	

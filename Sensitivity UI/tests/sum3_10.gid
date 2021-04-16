@@ -1,0 +1,1061 @@
+"con1",272
+"NUMCON",1,0,0,0,0,0,0,"n/a","n/a",2
+"FSCASID",1,1,0,0,0,0,0,"n/a","n/a","SR90"
+"FSCNAME",1,1,0,0,0,0,0,"n/a","n/a","STRONTIUM-90"
+"NDS",1,1,0,0,0,0,0,"n/a","n/a",1
+"FSCASID",1,1,1,0,0,0,0,"n/a","n/a","Y90"
+"FSCNAME",1,1,1,0,0,0,0,"n/a","n/a","YTTRIUM-90"
+"FSCASID",1,2,0,0,0,0,0,"n/a","n/a","U235"
+"FSCNAME",1,2,0,0,0,0,0,"n/a","n/a","URANIUM-235"
+"NDS",1,2,0,0,0,0,0,"n/a","n/a",5
+"FSCASID",1,2,1,0,0,0,0,"n/a","n/a","TH231"
+"FSCNAME",1,2,1,0,0,0,0,"n/a","n/a","THORIUM-231"
+"FSCASID",1,2,2,0,0,0,0,"n/a","n/a","PA231"
+"FSCNAME",1,2,2,0,0,0,0,"n/a","n/a","PROTACTINIUM-231"
+"FSCASID",1,2,3,0,0,0,0,"n/a","n/a","AC227"
+"FSCNAME",1,2,3,0,0,0,0,"n/a","n/a","ACTINIUM-227"
+"FSCASID",1,2,4,0,0,0,0,"n/a","n/a","TH227"
+"FSCNAME",1,2,4,0,0,0,0,"n/a","n/a","THORIUM-227"
+"FSCASID",1,2,5,0,0,0,0,"n/a","n/a","RA223"
+"FSCNAME",1,2,5,0,0,0,0,"n/a","n/a","RADIUM-223"
+"CLWM",1,1,0,0,0,0,390,"g/mole","g/mole",90
+"CLDCGRT",1,1,0,0,0,0,409,"cm^2/s","cm^2/s",5E-11
+"CLDFAD",1,1,0,0,0,0,392,"rem/pCi","rem/pCi",0.0000013
+"CLRDFGI",1,1,0,0,0,0,392,"rem/pCi","rem/pCi",0.000000142
+"CLRDFS",1,1,0,0,0,0,398,"rem/pCi","rem/pCi",0.00000041
+"CLDEX",1,1,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1E-13
+"CLDIMR",1,1,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.94E-13
+"CLDSH",1,1,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.79E-15
+"CLSFH",1,1,0,0,0,0,460,"risk/pCi","risk/pCi",5.94E-11
+"CLSFG",1,1,0,0,0,0,460,"risk/pCi","risk/pCi",4.09E-11
+"CLSFEX",1,1,0,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.36E-10
+"CLWPF",1,1,0,0,0,0,95,"n/a","n/a",0.2
+"CLVD",1,1,0,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,1,0,0,0,0,402,"L/kg","L/kg",50
+"CLBFI",1,1,0,0,0,0,95,"L/kg","L/kg",100
+"CLFMT",1,1,0,0,0,0,402,"d/kg","d/kg",0.0003
+"CLFMK",1,1,0,0,0,0,402,"d/L","d/L",0.0015
+"CLBVLV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVRV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.81
+"CLBVCL",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.13
+"CLBVAF",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAH",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAG",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.13
+"CLTHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLGHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLWHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLSHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLCLASS",1,1,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,1,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,1,0,0,0,0,403,"n/a","n/a",0.3
+"CLBVOV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.81
+"CLBVFR",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.17
+"CLWM",1,1,1,0,0,0,390,"g/mole","g/mole",90
+"CLDCGRT",1,1,1,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,1,1,0,0,0,392,"rem/pCi","rem/pCi",8.44E-09
+"CLRDFGI",1,1,1,0,0,0,392,"rem/pCi","rem/pCi",1.08E-08
+"CLRDFS",1,1,1,0,0,0,398,"rem/pCi","rem/pCi",4.4E-09
+"CLDEX",1,1,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.53E-12
+"CLDIMR",1,1,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",4.83E-12
+"CLDSH",1,1,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",7.09E-14
+"CLSFH",1,1,1,0,0,0,460,"risk/pCi","risk/pCi",9.9E-12
+"CLSFG",1,1,1,0,0,0,460,"risk/pCi","risk/pCi",1.5E-11
+"CLSFEX",1,1,1,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",1.82E-08
+"CLWPF",1,1,1,0,0,0,95,"n/a","n/a",0.2
+"CLVD",1,1,1,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,1,1,0,0,0,402,"L/kg","L/kg",25
+"CLBFI",1,1,1,0,0,0,95,"L/kg","L/kg",1000
+"CLFMT",1,1,1,0,0,0,402,"d/kg","d/kg",0.0003
+"CLFMK",1,1,1,0,0,0,402,"d/L","d/L",0.00002
+"CLBVLV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVRV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVCL",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVAF",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVAH",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVAG",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLTHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLGHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLWHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLSHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLCLASS",1,1,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,1,1,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,1,1,0,0,0,403,"n/a","n/a",0.0001
+"CLBVOV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVFR",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLWM",1,2,0,0,0,0,390,"g/mole","g/mole",235
+"CLDCGRT",1,2,0,0,0,0,409,"cm^2/s","cm^2/s",1E-11
+"CLDFAD",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",0.000123
+"CLRDFGI",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",0.000000266
+"CLRDFS",1,2,0,0,0,0,398,"rem/pCi","rem/pCi",0.0000056
+"CLDEX",1,2,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",9.59E-11
+"CLDIMR",1,2,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",2.11E-10
+"CLDSH",1,2,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",1.97E-12
+"CLSFH",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",0.000000013
+"CLSFG",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",4.52E-11
+"CLSFEX",1,2,0,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000263
+"CLWPF",1,2,0,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,0,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,0,0,0,0,402,"L/kg","L/kg",50
+"CLBFI",1,2,0,0,0,0,95,"L/kg","L/kg",60
+"CLFMT",1,2,0,0,0,0,402,"d/kg","d/kg",0.0002
+"CLFMK",1,2,0,0,0,0,402,"d/L","d/L",0.0006
+"CLBVLV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVRV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.014
+"CLBVCL",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0013
+"CLBVAF",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVAH",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVAG",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0013
+"CLTHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLGHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLWHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLSHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLCLASS",1,2,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,0,0,0,0,403,"n/a","n/a",0.05
+"CLBVOV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.014
+"CLBVFR",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.004
+"CLWM",1,2,1,0,0,0,327,"g/mole","g/mole",231
+"CLDFAD",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",8.77E-10
+"CLRDFGI",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",1.35E-09
+"CLRDFS",1,2,1,0,0,0,398,"rem/pCi","rem/pCi",6.8E-10
+"CLDEX",1,2,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",6.94E-12
+"CLDIMR",1,2,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.57E-11
+"CLDSH",1,2,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",2.47E-13
+"CLSFH",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.1E-12
+"CLSFG",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.79E-12
+"CLSFEX",1,2,1,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",2.09E-09
+"CLVD",1,2,1,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,1,0,0,0,402,"L/kg","L/kg",100
+"CLBFI",1,2,1,0,0,0,95,"L/kg","L/kg",500
+"CLFMT",1,2,1,0,0,0,402,"d/kg","d/kg",0.000006
+"CLFMK",1,2,1,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVRV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAH",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAG",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLGHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLWHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLSHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLCLASS",1,2,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,1,0,0,0,0,"n/a","n/a",1
+"CLBVOV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,2,0,0,0,390,"g/mole","g/mole",231
+"CLDCGRT",1,2,2,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,2,2,0,0,0,392,"rem/pCi","rem/pCi",0.00128
+"CLRDFGI",1,2,2,0,0,0,392,"rem/pCi","rem/pCi",0.0000106
+"CLRDFS",1,2,2,0,0,0,398,"rem/pCi","rem/pCi",0.011
+"CLDEX",1,2,2,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.3E-11
+"CLDIMR",1,2,2,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",5.04E-11
+"CLDSH",1,2,2,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",5.43E-13
+"CLSFH",1,2,2,0,0,0,460,"risk/pCi","risk/pCi",2.42E-08
+"CLSFG",1,2,2,0,0,0,460,"risk/pCi","risk/pCi",1.49E-10
+"CLSFEX",1,2,2,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",2.71E-08
+"CLWPF",1,2,2,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,2,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,2,0,0,0,402,"L/kg","L/kg",11
+"CLBFI",1,2,2,0,0,0,152,"L/kg","L/kg",110
+"CLFMT",1,2,2,0,0,0,402,"d/kg","d/kg",0.00001
+"CLFMK",1,2,2,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVRV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVAH",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVAG",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLGHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLWHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLSHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLCLASS",1,2,2,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,2,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,2,0,0,0,403,"n/a","n/a",0.001
+"CLBVOV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,3,0,0,0,390,"g/mole","g/mole",227
+"CLDCGRT",1,2,3,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,2,3,0,0,0,392,"rem/pCi","rem/pCi",0.0067
+"CLRDFGI",1,2,3,0,0,0,392,"rem/pCi","rem/pCi",0.000014
+"CLRDFS",1,2,3,0,0,0,398,"rem/pCi","rem/pCi",0.014
+"CLDEX",1,2,3,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",7.3E-14
+"CLDIMR",1,2,3,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.7E-13
+"CLDSH",1,2,3,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",2.5E-15
+"CLSFH",1,2,3,0,0,0,460,"risk/pCi","risk/pCi",7.08E-08
+"CLSFG",1,2,3,0,0,0,460,"risk/pCi","risk/pCi",3.52E-10
+"CLSFEX",1,2,3,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.99E-10
+"CLWPF",1,2,3,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,3,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,3,0,0,0,402,"L/kg","L/kg",25
+"CLBFI",1,2,3,0,0,0,95,"L/kg","L/kg",1000
+"CLFMT",1,2,3,0,0,0,402,"d/kg","d/kg",0.000025
+"CLFMK",1,2,3,0,0,0,402,"d/L","d/L",0.00002
+"CLBVLV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVRV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVCL",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVAF",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVAH",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVAG",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLTHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLGHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLWHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLSHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLCLASS",1,2,3,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,3,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,3,0,0,0,403,"n/a","n/a",0.001
+"CLBVOV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVFR",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLWM",1,2,4,0,0,0,390,"g/mole","g/mole",227
+"CLDCGRT",1,2,4,0,0,0,413,"cm^2/s","cm^2/s",1E-12
+"CLDFAD",1,2,4,0,0,0,392,"rem/pCi","rem/pCi",0.0000162
+"CLRDFGI",1,2,4,0,0,0,392,"rem/pCi","rem/pCi",3.81E-08
+"CLRDFS",1,2,4,0,0,0,398,"rem/pCi","rem/pCi",0.000057
+"CLDEX",1,2,4,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",6.51E-11
+"CLDIMR",1,2,4,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.43E-10
+"CLDSH",1,2,4,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",1.38E-12
+"CLSFH",1,2,4,0,0,0,460,"risk/pCi","risk/pCi",4.31E-09
+"CLSFG",1,2,4,0,0,0,460,"risk/pCi","risk/pCi",4.04E-11
+"CLSFEX",1,2,4,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000174
+"CLWPF",1,2,4,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,4,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,4,0,0,0,402,"L/kg","L/kg",100
+"CLBFI",1,2,4,0,0,0,95,"L/kg","L/kg",500
+"CLFMT",1,2,4,0,0,0,402,"d/kg","d/kg",0.000006
+"CLFMK",1,2,4,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVRV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAH",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAG",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLGHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLWHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLSHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLCLASS",1,2,4,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,4,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,4,0,0,0,403,"n/a","n/a",0.0002
+"CLBVOV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,5,0,0,0,390,"g/mole","g/mole",223
+"CLDCGRT",1,2,5,0,0,0,412,"cm^2/s","cm^2/s",5E-11
+"CLDFAD",1,2,5,0,0,0,392,"rem/pCi","rem/pCi",0.00000785
+"CLRDFGI",1,2,5,0,0,0,392,"rem/pCi","rem/pCi",0.00000066
+"CLRDFS",1,2,5,0,0,0,398,"rem/pCi","rem/pCi",0.000001
+"CLDEX",1,2,5,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1.82E-10
+"CLDIMR",1,2,5,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",3.98E-10
+"CLDSH",1,2,5,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.78E-12
+"CLSFH",1,2,5,0,0,0,460,"risk/pCi","risk/pCi",3.61E-09
+"CLSFG",1,2,5,0,0,0,460,"risk/pCi","risk/pCi",2.34E-10
+"CLSFEX",1,2,5,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000765
+"CLWPF",1,2,5,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,5,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,5,0,0,0,402,"L/kg","L/kg",70
+"CLBFI",1,2,5,0,0,0,95,"L/kg","L/kg",250
+"CLFMT",1,2,5,0,0,0,402,"d/kg","d/kg",0.00025
+"CLFMK",1,2,5,0,0,0,402,"d/L","d/L",0.00045
+"CLBVLV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVRV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0032
+"CLBVCL",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0012
+"CLBVAF",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVAH",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVAG",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0012
+"CLTHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLGHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLWHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLSHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLCLASS",1,2,5,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,5,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,5,0,0,0,403,"n/a","n/a",0.2
+"CLBVOV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0032
+"CLBVFR",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0061
+"usr7",24
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"progeny",0,0,0,0,0,0,0,"N/A","N/A",False
+"media",1,0,0,0,0,0,0,"N/A","N/A","Aquifer"
+"dataset",1,0,0,0,0,0,0,"N/A","N/A","wcf:Aquifer"
+"casid",1,1,0,0,0,0,0,"yr","pCi/ml","SR90"
+"ctime",1,1,0,1,0,0,0,"yr","yr",0
+"cval",1,1,0,1,1,0,0,"pCi/ml","pCi/ml",5
+"ctime",1,1,0,2,0,0,0,"yr","yr",30
+"cval",1,1,0,2,1,0,0,"pCi/ml","pCi/ml",10
+"ctime",1,1,0,3,0,0,0,"yr","yr",60
+"cval",1,1,0,3,1,0,0,"pCi/ml","pCi/ml",15
+"casid",1,1,1,0,0,0,0,"yr","pCi/ml","Y90"
+"casid",1,2,0,0,0,0,0,"yr","pCi/ml","U235"
+"ctime",1,2,0,1,0,0,0,"yr","yr",0
+"cval",1,2,0,1,1,0,0,"pCi/ml","pCi/ml",1
+"ctime",1,2,0,2,0,0,0,"yr","yr",30
+"cval",1,2,0,2,1,0,0,"pCi/ml","pCi/ml",2
+"ctime",1,2,0,3,0,0,0,"yr","yr",60
+"cval",1,2,0,3,1,0,0,"pCi/ml","pCi/ml",3
+"casid",1,2,1,0,0,0,0,"yr","pCi/ml","TH231"
+"casid",1,2,2,0,0,0,0,"yr","pCi/ml","PA231"
+"casid",1,2,3,0,0,0,0,"yr","pCi/ml","AC227"
+"casid",1,2,4,0,0,0,0,"yr","pCi/ml","TH227"
+"casid",1,2,5,0,0,0,0,"yr","pCi/ml","RA223"
+"exp8",123
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"KNPATH",1,0,0,0,0,0,0,"N/A","N/A",1
+"KNPATH",2,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",3,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",4,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",5,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",6,0,0,0,0,0,0,"N/A","N/A",0
+"KNPATH",7,0,0,0,0,0,0,"N/A","N/A",0
+"KEXPTH",0,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",1,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",2,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",3,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",4,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",5,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",6,1,0,0,0,0,0,"N/A","N/A", 1
+"KEXPTH",7,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",8,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",9,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",10,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",11,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",12,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",13,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",14,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",15,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",16,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",17,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",18,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",19,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",20,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",21,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",22,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",23,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",24,1,0,0,0,0,0,"N/A","N/A", 0
+"KEXPTH",25,1,0,0,0,0,0,"N/A","N/A", 0
+"KGDR",0,0,0,0,0,0,0,"N/A","N/A", 3
+"KGIR",0,0,0,0,0,0,0,"N/A","N/A", 1
+"GWFEED",0,0,0,0,0,0,0,"N/A","N/A",True
+"GWDRINK",0,0,0,0,0,0,0,"N/A","N/A",True
+"DGWED",0,0,0,0,0,0,0,"yr","yr",30
+"TWTR",1,0,0,0,0,0,0,"day","day",0.5
+"LTRTL",1,0,0,0,0,0,0,"N/A","N/A", 0
+"FIRR",1,0,0,0,0,0,0,"N/A","N/A",1
+"CIRR",1,0,0,0,0,0,0,"L/m^2/mon","L/m^2/mon",100
+"TEXPOS",0,0,0,0,0,0,0,"yr","yr",0
+"MAXTIM",0,0,0,0,0,0,0,"yr","yr",120
+"NTIMES",0,0,0,0,0,0,0,"N/A","N/A",4
+"NYEARS",0,0,0,0,0,0,0,"N/A","N/A",30
+"LEACHOPTION",0,0,0,0,0,0,0,"N/A","N/A",0
+"NUMCON",0,0,0,0,0,0,0,"N/A","N/A",2
+"CASID",1,0,0,0,0,0,0,"N/A","N/A","SR90"
+"SOILLR",1,0,0,0,0,0,0,"1/yr","1/yr",100
+"NDS",1,0,0,0,0,0,0,"N/A","N/A",1
+"CASID",1,1,0,0,0,0,0,"N/A","N/A","Y90"
+"SOILLR",1,1,0,0,0,0,0,"1/yr","1/yr",100
+"CASID",2,0,0,0,0,0,0,"N/A","N/A","U235"
+"SOILLR",2,0,0,0,0,0,0,"1/yr","1/yr",100
+"NDS",2,0,0,0,0,0,0,"N/A","N/A",5
+"CASID",2,1,0,0,0,0,0,"N/A","N/A","TH231"
+"SOILLR",2,1,0,0,0,0,0,"1/yr","1/yr",100
+"CASID",2,2,0,0,0,0,0,"N/A","N/A","PA231"
+"SOILLR",2,2,0,0,0,0,0,"1/yr","1/yr",100
+"CASID",2,3,0,0,0,0,0,"N/A","N/A","AC227"
+"SOILLR",2,3,0,0,0,0,0,"1/yr","1/yr",100
+"CASID",2,4,0,0,0,0,0,"N/A","N/A","TH227"
+"SOILLR",2,4,0,0,0,0,0,"1/yr","1/yr",100
+"CASID",2,5,0,0,0,0,0,"N/A","N/A","RA223"
+"SOILLR",2,5,0,0,0,0,0,"1/yr","1/yr",100
+"ECCLASS",0,0,0,0,0,0,0,"N/A","N/A",0
+"ECSAND",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECSILT",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECCLAY",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECOMC",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECIRON",0,0,0,0,0,0,0,"N/A","N/A",""
+"ECPH",0,0,0,0,0,0,0,"N/A","N/A",""
+"DEN",0,0,0,0,0,0,0,"kg/m^2","kg/m^2",240
+"RET",0,0,0,0,0,0,0,"N/A","N/A",0.25
+"YLD",1,0,0,0,0,0,0,"kg/m^2","kg/m^2",2
+"YLD",2,0,0,0,0,0,0,"kg/m^2","kg/m^2",2
+"YLD",3,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"YLD",4,0,0,0,0,0,0,"kg/m^2","kg/m^2",0.7
+"UMT",0,0,0,0,0,0,0,"kg/d","kg/d",68
+"UMK",0,0,0,0,0,0,0,"kg/d","kg/d",55
+"WMT",0,0,0,0,0,0,0,"L/d","L/d",50
+"WMK",0,0,0,0,0,0,0,"L/d","L/d",60
+"USL",1,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"USL",2,0,0,0,0,0,0,"kg/d","kg/d",0.5
+"TRN",1,0,0,0,0,0,0,"N/A","N/A",1
+"TRN",2,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",3,0,0,0,0,0,0,"N/A","N/A",0.1
+"TRN",4,0,0,0,0,0,0,"N/A","N/A",1
+"FFC",1,0,0,0,0,0,0,"N/A","N/A",1
+"FFC",2,0,0,0,0,0,0,"N/A","N/A",1
+"FWC",1,0,0,0,0,0,0,"N/A","N/A",1
+"FWC",2,0,0,0,0,0,0,"N/A","N/A",1
+"TCRP",1,0,0,0,0,0,0,"day","day",2
+"TCRP",2,0,0,0,0,0,0,"day","day",60
+"TCRP",3,0,0,0,0,0,0,"day","day",20
+"TCRP",4,0,0,0,0,0,0,"day","day",4
+"TGRW",1,1,0,0,0,0,0,"day","day",60
+"TGRW",2,1,0,0,0,0,0,"day","day",60
+"TGRW",3,1,0,0,0,0,0,"day","day",30
+"TGRW",4,1,0,0,0,0,0,"day","day",30
+"TGRW",1,2,0,0,0,0,0,"day","day",60
+"TGRW",2,2,0,0,0,0,0,"day","day",60
+"TGRW",3,2,0,0,0,0,0,"day","day",30
+"TGRW",4,2,0,0,0,0,0,"day","day",30
+"TGRW",1,3,0,0,0,0,0,"day","day",60
+"TGRW",2,3,0,0,0,0,0,"day","day",60
+"TGRW",3,3,0,0,0,0,0,"day","day",30
+"TGRW",4,3,0,0,0,0,0,"day","day",30
+"TGRW",1,4,0,0,0,0,0,"day","day",60
+"TGRW",2,4,0,0,0,0,0,"day","day",60
+"TGRW",3,4,0,0,0,0,0,"day","day",30
+"TGRW",4,4,0,0,0,0,0,"day","day",30
+"TGRW",1,5,0,0,0,0,0,"day","day",60
+"TGRW",2,5,0,0,0,0,0,"day","day",60
+"TGRW",3,5,0,0,0,0,0,"day","day",30
+"TGRW",4,5,0,0,0,0,0,"day","day",30
+"CML",0,0,0,0,0,0,0,"kg/m^3","kg/m^3",0.00000001
+"RESFAC",0,0,0,0,0,0,0,"1/m","1/m",0.0000001
+"ANDFC",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.5
+"ANDFR",0,0,0,0,0,0,0,"L/m^3","L/m^3",0.1
+"ANDFO",0,0,0,0,0,0,0,"L/m^3","L/m^3",0
+"hei4",12
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"HEINC",0,0,0,0,0,0,0,"N/A","N/A",True
+"HECONINC",0,0,0,0,0,0,0,"risk/Sv","risk/Sv",0.06
+"HECEDE",0,0,0,0,0,0,0,"N/A","N/A",True
+"HEFAT",0,0,0,0,0,0,0,"N/A","N/A",False
+"HEFSH",0,0,0,0,0,0,0,"N/A","N/A",False
+"IHEAST",0,0,0,0,0,0,0,"N/A","N/A",1
+"CHEMRISK",0,0,0,0,0,0,0,"N/A","N/A",True
+"CHEMHI",0,0,0,0,0,0,0,"N/A","N/A",True
+"RFDLIM",0,0,0,0,0,0,0,"N/A","N/A",0
+"CETOXT",0,0,0,0,0,0,0,"N/A","N/A",False
+"INHALE",0,0,0,0,0,0,0,"N/A","N/A",0
+"rcp5",71
+"CVTFormat",0,0,0,0,0,0,0,"N/A","N/A","General Number"
+"KEXPTH",2,0,0,0,0,0,0,"N/A","N/A",1
+"KEXPTH",11,0,0,0,0,0,0,"N/A","N/A",1
+"INHALE",0,0,0,0,0,0,0,"N/A","N/A",0
+"BODYWT",0,0,0,0,0,0,0,"kg","kg",70
+"EXPDUR",0,0,0,0,0,0,0,"yr","yr",30
+"TAGE1",0,0,0,0,0,0,0,"yr","yr",0
+"TAGE2",0,0,0,0,0,0,0,"yr","yr",70
+"UDWGW",0,0,0,0,0,0,0,"L/d","L/d",0.36
+"UDWSW",0,0,0,0,0,0,0,"L/d","L/d",2
+"UBR",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"UBRES",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"FREQ",18,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",19,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",24,0,0,0,0,0,0,"N/A","N/A",1
+"FTI",0,0,0,0,0,0,0,"N/A","N/A",0.83
+"SHI",0,0,0,0,0,0,0,"N/A","N/A",1
+"FTO",0,0,0,0,0,0,0,"N/A","N/A",0.17
+"SHO",0,0,0,0,0,0,0,"N/A","N/A",1
+"UEXT",0,0,0,0,0,0,0,"hr/d","hr/d",24
+"FREQ",23,0,0,0,0,0,0,"N/A","N/A",1
+"UAG",1,0,0,0,0,0,0,"kg/d","kg/d",0.021
+"UAG",2,0,0,0,0,0,0,"kg/d","kg/d",0.13
+"UAG",3,0,0,0,0,0,0,"kg/d","kg/d",0.065
+"UAG",4,0,0,0,0,0,0,"L/d","L/d",0.075
+"FREQ",4,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",5,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",6,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",7,0,0,0,0,0,0,"N/A","N/A",1
+"UAQ",1,0,0,0,0,0,0,"kg/d","kg/d",0.0065
+"UAQ",2,0,0,0,0,0,0,"kg/d","kg/d",0.0027
+"FREQ",8,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",9,0,0,0,0,0,0,"N/A","N/A",1
+"TESHWR",0,0,0,0,0,0,0,"hr","hr",0.167
+"EVSHWR",0,0,0,0,0,0,0,"N/A","N/A",1
+"UBRSH",0,0,0,0,0,0,0,"m^3/d","m^3/d",20
+"UBW",0,0,0,0,0,0,0,"L/hr","L/hr",0.06
+"ASKIN",1,0,0,0,0,0,0,"cm^2","cm^2",20000
+"FREQ",1,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",2,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",3,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",17,0,0,0,0,0,0,"N/A","N/A",1
+"USW",0,0,0,0,0,0,0,"L/hr","L/hr",0.1
+"TESWIM",0,0,0,0,0,0,0,"hr","hr",0.5
+"EVSWIM",0,0,0,0,0,0,0,"N/A","N/A",0.066
+"ASKIN",2,0,0,0,0,0,0,"cm^2","cm^2",20000
+"FREQ",10,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",11,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",20,0,0,0,0,0,0,"N/A","N/A",1
+"TEBOAT",0,0,0,0,0,0,0,"hr","hr",0.5
+"EVBOAT",0,0,0,0,0,0,0,"N/A","N/A",0.066
+"SBRF",0,0,0,0,0,0,0,"N/A","N/A",0.5
+"FREQ",21,0,0,0,0,0,0,"N/A","N/A",1
+"TESHOR",0,0,0,0,0,0,0,"hr","hr",2
+"EVSHOR",0,0,0,0,0,0,0,"N/A","N/A",0.017
+"USED",0,0,0,0,0,0,0,"g/hr","g/hr",0.1
+"SWF",0,0,0,0,0,0,0,"N/A","N/A",0.2
+"ASKIN",4,0,0,0,0,0,0,"cm^2","cm^2",10000
+"FREQ",12,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",13,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",22,0,0,0,0,0,0,"N/A","N/A",1
+"SKINL",0,0,0,0,0,0,0,"cm","cm",0.001
+"ASKIN",3,0,0,0,0,0,0,"cm^2","cm^2",5800
+"ADHFAC",0,0,0,0,0,0,0,"mg/cm^2","mg/cm^2",1
+"EVSOIL",0,0,0,0,0,0,0,"N/A","N/A",1
+"FREQ",15,0,0,0,0,0,0,"N/A","N/A",1
+"USOIL",0,0,0,0,0,0,0,"g/d","g/d",0.1
+"FREQ",14,0,0,0,0,0,0,"N/A","N/A",1
+"TMS",0,0,0,0,0,0,0,"m","m",0.04
+"RHOMS",0,0,0,0,0,0,0,"g/cm^3","g/cm^3",1.5
+"FREQ",25,0,0,0,0,0,0,"N/A","N/A",1
+"sen2",40
+"suSeed",0,0,0,0,0,0,0,"N/A","N/A",11301
+"suName",1,0,0,0,0,0,0,"N/A","N/A","UDWGW"
+"suAlias",1,0,0,0,0,0,0,"N/A","N/A","GwDrink"
+"suDes",1,0,0,0,0,0,0,"N/A","N/A","Goundwater ingestion rate from rcp5"
+"suFmt",1,0,0,0,0,0,0,"N/A","N/A",""
+"suMod",1,0,0,0,0,0,0,"N/A","N/A","rcp5"
+"suDistrib",1,0,0,0,0,0,0,"N/A","N/A","Uniform"
+"suIndex1",1,0,0,0,0,0,0,"N/A","N/A",0
+"suIndex2",1,0,0,0,0,0,0,"N/A","N/A",0
+"suIndex3",1,0,0,0,0,0,0,"N/A","N/A",0
+"suIndex4",1,0,0,0,0,0,0,"N/A","N/A",0
+"suIndex5",1,0,0,0,0,0,0,"N/A","N/A",0
+"suIndex6",1,0,0,0,0,0,0,"N/A","N/A",0
+"suBase",1,0,0,0,0,0,0,"N/A","N/A",0
+"suEqu",1,0,0,0,0,0,0,"N/A","N/A",""
+"suCorNum",1,0,0,0,0,0,0,"N/A","N/A",0
+"suUpper",1,0,0,0,0,0,0,"L/d","L/d",4
+"suLower",1,0,0,0,0,0,0,"L/d","L/d",0.1
+"suMean",1,0,0,0,0,0,0,"L/d","L/d",3
+"suStd",1,0,0,0,0,0,0,"L/d","L/d",0
+"suScale",1,0,0,0,0,0,0,"N/A","N/A",0
+"suShift",1,0,0,0,0,0,0,"L/d","L/d",0
+"suMode",1,0,0,0,0,0,0,"L/d","L/d",0
+"suVarNum",0,0,0,0,0,0,0,"N/A","N/A",1
+"suIter",0,0,0,0,0,0,0,"N/A","N/A",3
+"suOutAlias",1,0,0,0,0,0,0,"N/A","N/A","DoseAll"
+"suOutDes",1,0,0,0,0,0,0,"N/A","N/A","Cumulative dose peak from hei4 for all"
+"suOutType",1,0,0,0,0,0,0,"N/A","N/A","Cumulative dose"
+"suOutContam",1,0,0,0,0,0,0,"N/A","N/A","all"
+"suOutSource",1,0,0,0,0,0,0,"N/A","N/A","hei4"
+"suOutTime",1,0,0,0,0,0,0,"N/A","N/A","peak"
+"suOutNumYear",1,0,0,0,0,0,0,"N/A","N/A",0
+"suOutAlias",2,0,0,0,0,0,0,"N/A","N/A","can"
+"suOutDes",2,0,0,0,0,0,0,"N/A","N/A","Cancer incidence peak from hei4 for STRONTIUM-90"
+"suOutType",2,0,0,0,0,0,0,"N/A","N/A","Cancer incidence"
+"suOutContam",2,0,0,0,0,0,0,"N/A","N/A","SR90"
+"suOutSource",2,0,0,0,0,0,0,"N/A","N/A","hei4"
+"suOutTime",2,0,0,0,0,0,0,"N/A","N/A","peak"
+"suOutNumYear",2,0,0,0,0,0,0,"N/A","N/A",0
+"suOutNum",0,0,0,0,0,0,0,"N/A","N/A",2
+"FUI",363
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.4
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",1,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"heiName",1,1,0,0,0,0,0,"N/A","N/A","hei4"
+"heiLabel",1,1,0,0,0,0,0,"N/A","N/A","hei4"
+"heiModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Human Health Impact Module"
+"heiDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepHEI.des"
+"heiX",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiY",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"heiScrX",1,1,0,0,0,0,0,"N/A","N/A",508.4645
+"heiScrY",1,1,0,0,0,0,0,"N/A","N/A",326.8914
+"heiModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"heiSrcName",1,1,1,0,0,0,0,"N/A","N/A","rcp5"
+"heiType",1,1,1,0,0,0,0,"N/A","N/A","Receptor Intake"
+"heiSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"heiNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"senName",1,1,0,0,0,0,0,"N/A","N/A","sen2"
+"senLabel",1,1,0,0,0,0,0,"N/A","N/A","sen2"
+"senModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS Sensitivity/Uncertainty"
+"senDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSENS.des"
+"senX",1,1,0,0,0,0,0,"N/A","N/A",0
+"senY",1,1,0,0,0,0,0,"N/A","N/A",0
+"senZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"senScrX",1,1,0,0,0,0,0,"N/A","N/A",405.1084
+"senScrY",1,1,0,0,0,0,0,"N/A","N/A",77.71381
+"senModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"senSrcName",1,1,1,0,0,0,0,"N/A","N/A","hei4"
+"senType",1,1,1,0,0,0,0,"N/A","N/A","Health Impacts"
+"senSrcName",1,1,2,0,0,0,0,"N/A","N/A","rcp5"
+"senType",1,1,2,0,0,0,0,"N/A","N/A","Receptor Intake"
+"senSrcNum",1,1,0,0,0,0,0,"N/A","N/A",2
+"senTypeNum",1,1,0,0,0,0,0,"N/A","N/A",2
+"senNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"expName",1,1,0,0,0,0,0,"N/A","N/A","exp8"
+"expLabel",1,1,0,0,0,0,0,"N/A","N/A","exp8"
+"expModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Chronic Exposure Module"
+"expDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepEXP.des"
+"expX",1,1,0,0,0,0,0,"N/A","N/A",0
+"expY",1,1,0,0,0,0,0,"N/A","N/A",0
+"expZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"expScrX",1,1,0,0,0,0,0,"N/A","N/A",125.9281
+"expScrY",1,1,0,0,0,0,0,"N/A","N/A",307.1546
+"expModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"expSrcName",1,1,1,0,0,0,0,"N/A","N/A","usr7"
+"expType",1,1,1,0,0,0,0,"N/A","N/A","User Defined"
+"expSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"expTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"expNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"usrName",1,1,0,0,0,0,0,"N/A","N/A","usr7"
+"usrLabel",1,1,0,0,0,0,0,"N/A","N/A","usr7"
+"usrModel",1,1,0,0,0,0,0,"N/A","N/A","WCF Aquifer Module"
+"usrDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiWCFAqu.des"
+"usrX",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrY",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrScrX",1,1,0,0,0,0,0,"N/A","N/A",43.95604
+"usrScrY",1,1,0,0,0,0,0,"N/A","N/A",157.8947
+"usrModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"usrSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"usrNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"rcpName",1,1,0,0,0,0,0,"N/A","N/A","rcp5"
+"rcpLabel",1,1,0,0,0,0,0,"N/A","N/A","rcp5"
+"rcpModel",1,1,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Intake Module"
+"rcpDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\MepRCP.des"
+"rcpX",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpY",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"rcpScrX",1,1,0,0,0,0,0,"N/A","N/A",291.0603
+"rcpScrY",1,1,0,0,0,0,0,"N/A","N/A",321.9572
+"rcpModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"rcpSrcName",1,1,1,0,0,0,0,"N/A","N/A","exp8"
+"rcpType",1,1,1,0,0,0,0,"N/A","N/A","Exposure Pathways"
+"rcpSrcNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpTypeNum",1,1,0,0,0,0,0,"N/A","N/A",1
+"rcpNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"conName",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"conLabel",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"conModel",1,1,0,0,0,0,0,"N/A","N/A","FRAMES Default Chemical Database Selection"
+"conDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\contsel.des"
+"conX",1,1,0,0,0,0,0,"N/A","N/A",0
+"conY",1,1,0,0,0,0,0,"N/A","N/A",0
+"conZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"conScrX",1,1,0,0,0,0,0,"N/A","N/A",218.5922
+"conScrY",1,1,0,0,0,0,0,"N/A","N/A",44.40789
+"conModelStat",1,1,0,0,0,0,0,"N/A","N/A",2
+"conSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conTypeNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"conNum",1,0,0,0,0,0,0,"N/A","N/A",1
+"NUMCON",1,0,0,0,0,0,0,"n/a","n/a",2
+"FSCASID",1,1,0,0,0,0,0,"n/a","n/a","SR90"
+"FSCNAME",1,1,0,0,0,0,0,"n/a","n/a","STRONTIUM-90"
+"NDS",1,1,0,0,0,0,0,"n/a","n/a",1
+"FSCASID",1,1,1,0,0,0,0,"n/a","n/a","Y90"
+"FSCNAME",1,1,1,0,0,0,0,"n/a","n/a","YTTRIUM-90"
+"FSCASID",1,2,0,0,0,0,0,"n/a","n/a","U235"
+"FSCNAME",1,2,0,0,0,0,0,"n/a","n/a","URANIUM-235"
+"NDS",1,2,0,0,0,0,0,"n/a","n/a",5
+"FSCASID",1,2,1,0,0,0,0,"n/a","n/a","TH231"
+"FSCNAME",1,2,1,0,0,0,0,"n/a","n/a","THORIUM-231"
+"FSCASID",1,2,2,0,0,0,0,"n/a","n/a","PA231"
+"FSCNAME",1,2,2,0,0,0,0,"n/a","n/a","PROTACTINIUM-231"
+"FSCASID",1,2,3,0,0,0,0,"n/a","n/a","AC227"
+"FSCNAME",1,2,3,0,0,0,0,"n/a","n/a","ACTINIUM-227"
+"FSCASID",1,2,4,0,0,0,0,"n/a","n/a","TH227"
+"FSCNAME",1,2,4,0,0,0,0,"n/a","n/a","THORIUM-227"
+"FSCASID",1,2,5,0,0,0,0,"n/a","n/a","RA223"
+"FSCNAME",1,2,5,0,0,0,0,"n/a","n/a","RADIUM-223"
+"CLWM",1,1,0,0,0,0,390,"g/mole","g/mole",90
+"CLDCGRT",1,1,0,0,0,0,409,"cm^2/s","cm^2/s",5E-11
+"CLDFAD",1,1,0,0,0,0,392,"rem/pCi","rem/pCi",0.0000013
+"CLRDFGI",1,1,0,0,0,0,392,"rem/pCi","rem/pCi",0.000000142
+"CLRDFS",1,1,0,0,0,0,398,"rem/pCi","rem/pCi",0.00000041
+"CLDEX",1,1,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1E-13
+"CLDIMR",1,1,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.94E-13
+"CLDSH",1,1,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.79E-15
+"CLSFH",1,1,0,0,0,0,460,"risk/pCi","risk/pCi",5.94E-11
+"CLSFG",1,1,0,0,0,0,460,"risk/pCi","risk/pCi",4.09E-11
+"CLSFEX",1,1,0,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.36E-10
+"CLWPF",1,1,0,0,0,0,95,"n/a","n/a",0.2
+"CLVD",1,1,0,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,1,0,0,0,0,402,"L/kg","L/kg",50
+"CLBFI",1,1,0,0,0,0,95,"L/kg","L/kg",100
+"CLFMT",1,1,0,0,0,0,402,"d/kg","d/kg",0.0003
+"CLFMK",1,1,0,0,0,0,402,"d/L","d/L",0.0015
+"CLBVLV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVRV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.81
+"CLBVCL",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.13
+"CLBVAF",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAH",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",1.6
+"CLBVAG",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.13
+"CLTHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLGHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLWHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLSHALF",1,1,0,0,0,0,392,"days","days",10600
+"CLCLASS",1,1,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,1,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,1,0,0,0,0,403,"n/a","n/a",0.3
+"CLBVOV",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.81
+"CLBVFR",1,1,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.17
+"CLWM",1,1,1,0,0,0,390,"g/mole","g/mole",90
+"CLDCGRT",1,1,1,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,1,1,0,0,0,392,"rem/pCi","rem/pCi",8.44E-09
+"CLRDFGI",1,1,1,0,0,0,392,"rem/pCi","rem/pCi",1.08E-08
+"CLRDFS",1,1,1,0,0,0,398,"rem/pCi","rem/pCi",4.4E-09
+"CLDEX",1,1,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.53E-12
+"CLDIMR",1,1,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",4.83E-12
+"CLDSH",1,1,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",7.09E-14
+"CLSFH",1,1,1,0,0,0,460,"risk/pCi","risk/pCi",9.9E-12
+"CLSFG",1,1,1,0,0,0,460,"risk/pCi","risk/pCi",1.5E-11
+"CLSFEX",1,1,1,0,0,0,459,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",1.82E-08
+"CLWPF",1,1,1,0,0,0,95,"n/a","n/a",0.2
+"CLVD",1,1,1,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,1,1,0,0,0,402,"L/kg","L/kg",25
+"CLBFI",1,1,1,0,0,0,95,"L/kg","L/kg",1000
+"CLFMT",1,1,1,0,0,0,402,"d/kg","d/kg",0.0003
+"CLFMK",1,1,1,0,0,0,402,"d/L","d/L",0.00002
+"CLBVLV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVRV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVCL",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVAF",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVAH",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.015
+"CLBVAG",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLTHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLGHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLWHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLSHALF",1,1,1,0,0,0,392,"days","days",2.7
+"CLCLASS",1,1,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,1,1,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,1,1,0,0,0,403,"n/a","n/a",0.0001
+"CLBVOV",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLBVFR",1,1,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.006
+"CLWM",1,2,0,0,0,0,390,"g/mole","g/mole",235
+"CLDCGRT",1,2,0,0,0,0,409,"cm^2/s","cm^2/s",1E-11
+"CLDFAD",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",0.000123
+"CLRDFGI",1,2,0,0,0,0,392,"rem/pCi","rem/pCi",0.000000266
+"CLRDFS",1,2,0,0,0,0,398,"rem/pCi","rem/pCi",0.0000056
+"CLDEX",1,2,0,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",9.59E-11
+"CLDIMR",1,2,0,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",2.11E-10
+"CLDSH",1,2,0,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",1.97E-12
+"CLSFH",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",0.000000013
+"CLSFG",1,2,0,0,0,0,460,"risk/pCi","risk/pCi",4.52E-11
+"CLSFEX",1,2,0,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000263
+"CLWPF",1,2,0,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,0,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,0,0,0,0,402,"L/kg","L/kg",50
+"CLBFI",1,2,0,0,0,0,95,"L/kg","L/kg",60
+"CLFMT",1,2,0,0,0,0,402,"d/kg","d/kg",0.0002
+"CLFMK",1,2,0,0,0,0,402,"d/L","d/L",0.0006
+"CLBVLV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVRV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.014
+"CLBVCL",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0013
+"CLBVAF",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVAH",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.017
+"CLBVAG",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0013
+"CLTHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLGHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLWHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLSHALF",1,2,0,0,0,0,392,"days","days",2.57E+11
+"CLCLASS",1,2,0,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,0,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,0,0,0,0,403,"n/a","n/a",0.05
+"CLBVOV",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.014
+"CLBVFR",1,2,0,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.004
+"CLWM",1,2,1,0,0,0,327,"g/mole","g/mole",231
+"CLDFAD",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",8.77E-10
+"CLRDFGI",1,2,1,0,0,0,392,"rem/pCi","rem/pCi",1.35E-09
+"CLRDFS",1,2,1,0,0,0,398,"rem/pCi","rem/pCi",6.8E-10
+"CLDEX",1,2,1,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",6.94E-12
+"CLDIMR",1,2,1,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.57E-11
+"CLDSH",1,2,1,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",2.47E-13
+"CLSFH",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.1E-12
+"CLSFG",1,2,1,0,0,0,460,"risk/pCi","risk/pCi",1.79E-12
+"CLSFEX",1,2,1,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",2.09E-09
+"CLVD",1,2,1,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,1,0,0,0,402,"L/kg","L/kg",100
+"CLBFI",1,2,1,0,0,0,95,"L/kg","L/kg",500
+"CLFMT",1,2,1,0,0,0,402,"d/kg","d/kg",0.000006
+"CLFMK",1,2,1,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVRV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAH",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAG",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLGHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLWHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLSHALF",1,2,1,0,0,0,392,"days","days",1.06
+"CLCLASS",1,2,1,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,1,0,0,0,0,"n/a","n/a",1
+"CLBVOV",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,1,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,2,0,0,0,390,"g/mole","g/mole",231
+"CLDCGRT",1,2,2,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,2,2,0,0,0,392,"rem/pCi","rem/pCi",0.00128
+"CLRDFGI",1,2,2,0,0,0,392,"rem/pCi","rem/pCi",0.0000106
+"CLRDFS",1,2,2,0,0,0,398,"rem/pCi","rem/pCi",0.011
+"CLDEX",1,2,2,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",2.3E-11
+"CLDIMR",1,2,2,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",5.04E-11
+"CLDSH",1,2,2,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",5.43E-13
+"CLSFH",1,2,2,0,0,0,460,"risk/pCi","risk/pCi",2.42E-08
+"CLSFG",1,2,2,0,0,0,460,"risk/pCi","risk/pCi",1.49E-10
+"CLSFEX",1,2,2,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",2.71E-08
+"CLWPF",1,2,2,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,2,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,2,0,0,0,402,"L/kg","L/kg",11
+"CLBFI",1,2,2,0,0,0,152,"L/kg","L/kg",110
+"CLFMT",1,2,2,0,0,0,402,"d/kg","d/kg",0.00001
+"CLFMK",1,2,2,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVRV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVAH",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0025
+"CLBVAG",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLGHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLWHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLSHALF",1,2,2,0,0,0,392,"days","days",12000000
+"CLCLASS",1,2,2,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,2,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,2,0,0,0,403,"n/a","n/a",0.001
+"CLBVOV",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,2,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,3,0,0,0,390,"g/mole","g/mole",227
+"CLDCGRT",1,2,3,0,0,0,410,"cm^2/s","cm^2/s",0.00000005
+"CLDFAD",1,2,3,0,0,0,392,"rem/pCi","rem/pCi",0.0067
+"CLRDFGI",1,2,3,0,0,0,392,"rem/pCi","rem/pCi",0.000014
+"CLRDFS",1,2,3,0,0,0,398,"rem/pCi","rem/pCi",0.014
+"CLDEX",1,2,3,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",7.3E-14
+"CLDIMR",1,2,3,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.7E-13
+"CLDSH",1,2,3,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",2.5E-15
+"CLSFH",1,2,3,0,0,0,460,"risk/pCi","risk/pCi",7.08E-08
+"CLSFG",1,2,3,0,0,0,460,"risk/pCi","risk/pCi",3.52E-10
+"CLSFEX",1,2,3,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",5.99E-10
+"CLWPF",1,2,3,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,3,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,3,0,0,0,402,"L/kg","L/kg",25
+"CLBFI",1,2,3,0,0,0,95,"L/kg","L/kg",1000
+"CLFMT",1,2,3,0,0,0,402,"d/kg","d/kg",0.000025
+"CLFMK",1,2,3,0,0,0,402,"d/L","d/L",0.00002
+"CLBVLV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVRV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVCL",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVAF",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVAH",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0035
+"CLBVAG",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLTHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLGHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLWHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLSHALF",1,2,3,0,0,0,95,"days","days",7950
+"CLCLASS",1,2,3,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,3,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,3,0,0,0,403,"n/a","n/a",0.001
+"CLBVOV",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLBVFR",1,2,3,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00035
+"CLWM",1,2,4,0,0,0,390,"g/mole","g/mole",227
+"CLDCGRT",1,2,4,0,0,0,413,"cm^2/s","cm^2/s",1E-12
+"CLDFAD",1,2,4,0,0,0,392,"rem/pCi","rem/pCi",0.0000162
+"CLRDFGI",1,2,4,0,0,0,392,"rem/pCi","rem/pCi",3.81E-08
+"CLRDFS",1,2,4,0,0,0,398,"rem/pCi","rem/pCi",0.000057
+"CLDEX",1,2,4,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",6.51E-11
+"CLDIMR",1,2,4,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",1.43E-10
+"CLDSH",1,2,4,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",1.38E-12
+"CLSFH",1,2,4,0,0,0,460,"risk/pCi","risk/pCi",4.31E-09
+"CLSFG",1,2,4,0,0,0,460,"risk/pCi","risk/pCi",4.04E-11
+"CLSFEX",1,2,4,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000174
+"CLWPF",1,2,4,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,4,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,4,0,0,0,402,"L/kg","L/kg",100
+"CLBFI",1,2,4,0,0,0,95,"L/kg","L/kg",500
+"CLFMT",1,2,4,0,0,0,402,"d/kg","d/kg",0.000006
+"CLFMK",1,2,4,0,0,0,402,"d/L","d/L",0.000005
+"CLBVLV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVRV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVCL",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVAF",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAH",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0066
+"CLBVAG",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLTHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLGHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLWHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLSHALF",1,2,4,0,0,0,392,"days","days",18.7
+"CLCLASS",1,2,4,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,4,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,4,0,0,0,403,"n/a","n/a",0.0002
+"CLBVOV",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLBVFR",1,2,4,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.00025
+"CLWM",1,2,5,0,0,0,390,"g/mole","g/mole",223
+"CLDCGRT",1,2,5,0,0,0,412,"cm^2/s","cm^2/s",5E-11
+"CLDFAD",1,2,5,0,0,0,392,"rem/pCi","rem/pCi",0.00000785
+"CLRDFGI",1,2,5,0,0,0,392,"rem/pCi","rem/pCi",0.00000066
+"CLRDFS",1,2,5,0,0,0,398,"rem/pCi","rem/pCi",0.000001
+"CLDEX",1,2,5,0,0,0,392,"rem/hr per pCi/m^3","rem/hr per pCi/m^3",1.82E-10
+"CLDIMR",1,2,5,0,0,0,392,"rem/hr per pCi/L","rem/hr per pCi/L",3.98E-10
+"CLDSH",1,2,5,0,0,0,392,"rem/hr per pCi/m^2","rem/hr per pCi/m^2",3.78E-12
+"CLSFH",1,2,5,0,0,0,460,"risk/pCi","risk/pCi",3.61E-09
+"CLSFG",1,2,5,0,0,0,460,"risk/pCi","risk/pCi",2.34E-10
+"CLSFEX",1,2,5,0,0,0,460,"risk/yr per pCi/m^2","risk/yr per pCi/m^2",0.000000765
+"CLWPF",1,2,5,0,0,0,95,"n/a","n/a",0.7
+"CLVD",1,2,5,0,0,0,329,"m/s","m/s",0.001
+"CLBFF",1,2,5,0,0,0,402,"L/kg","L/kg",70
+"CLBFI",1,2,5,0,0,0,95,"L/kg","L/kg",250
+"CLFMT",1,2,5,0,0,0,402,"d/kg","d/kg",0.00025
+"CLFMK",1,2,5,0,0,0,402,"d/L","d/L",0.00045
+"CLBVLV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVRV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0032
+"CLBVCL",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0012
+"CLBVAF",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVAH",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.075
+"CLBVAG",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0012
+"CLTHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLGHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLWHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLSHALF",1,2,5,0,0,0,392,"days","days",11.4
+"CLCLASS",1,2,5,0,0,0,333,"n/a","n/a",1
+"CLKTYPE",1,2,5,0,0,0,0,"n/a","n/a",1
+"CLFONEI",1,2,5,0,0,0,403,"n/a","n/a",0.2
+"CLBVOV",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0032
+"CLBVFR",1,2,5,0,0,0,402,"kg soil/kg dry","kg soil/kg dry",0.0061
+"CSM",148                               
+"Version",0,0,0,0,0,0,0,"N/A","N/A",1.4
+"Sites",0,0,0,0,0,0,0,"N/A","N/A",1
+"SiteName",0,0,0,0,0,0,0,"N/A","N/A","Site 1"
+"NumMod",1,0,0,0,0,0,0,"N/A","N/A",6
+"ModId",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"ModLabel",1,1,0,0,0,0,0,"N/A","N/A","con1"
+"ModModel",1,1,0,0,0,0,0,"N/A","N/A","FRAMES Default Chemical Database Selection"
+"ModDesPath",1,1,0,0,0,0,0,"N/A","N/A","\FRAMES\contsel.des"
+"ModLocX",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,1,0,0,0,0,0,"N/A","N/A",218.5922
+"ModScrY",1,1,0,0,0,0,0,"N/A","N/A",44.40789
+"ModState",1,1,0,0,0,0,0,"N/A","N/A",2
+"ModSinkId",1,1,1,0,0,0,0,"N/A","N/A","hei4"
+"ModSinkLabel",1,1,1,0,0,0,0,"N/A","N/A","hei4"
+"ModSinkType",1,1,1,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSinkLabel",1,1,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSinkType",1,1,2,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,2,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,3,0,0,0,0,"N/A","N/A","usr7"
+"ModSinkLabel",1,1,3,0,0,0,0,"N/A","N/A","usr7"
+"ModSinkType",1,1,3,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,3,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,1,4,0,0,0,0,"N/A","N/A","exp8"
+"ModSinkLabel",1,1,4,0,0,0,0,"N/A","N/A","exp8"
+"ModSinkType",1,1,4,0,0,0,0,"N/A","N/A","con"
+"ModSinkQual",1,1,4,0,0,0,0,"N/A","N/A",""
+"ModSrcNum",1,1,0,0,0,0,0,"N/A","N/A",0
+"ModSinkNum",1,1,0,0,0,0,0,"N/A","N/A",4
+"ModId",1,2,0,0,0,0,0,"N/A","N/A","sen2"
+"ModLabel",1,2,0,0,0,0,0,"N/A","N/A","sen2"
+"ModModel",1,2,0,0,0,0,0,"N/A","N/A","MEPAS Sensitivity/Uncertainty"
+"ModDesPath",1,2,0,0,0,0,0,"N/A","N/A","\FRAMES\MepSENS.des"
+"ModLocX",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,2,0,0,0,0,0,"N/A","N/A",405.1084
+"ModScrY",1,2,0,0,0,0,0,"N/A","N/A",77.71381
+"ModState",1,2,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,2,1,0,0,0,0,"N/A","N/A","hei4"
+"ModSrcLabel",1,2,1,0,0,0,0,"N/A","N/A","hei4"
+"ModSrcType",1,2,1,0,0,0,0,"N/A","N/A","hif"
+"ModSrcQual",1,2,1,0,0,0,0,"N/A","N/A","Health Impacts"
+"ModSrcId",1,2,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSrcLabel",1,2,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSrcType",1,2,2,0,0,0,0,"N/A","N/A","rif"
+"ModSrcQual",1,2,2,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcNum",1,2,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,2,0,0,0,0,0,"N/A","N/A",0
+"ModId",1,3,0,0,0,0,0,"N/A","N/A","hei4"
+"ModLabel",1,3,0,0,0,0,0,"N/A","N/A","hei4"
+"ModModel",1,3,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Human Health Impact Module"
+"ModDesPath",1,3,0,0,0,0,0,"N/A","N/A","\FRAMES\MepHEI.des"
+"ModLocX",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,3,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,3,0,0,0,0,0,"N/A","N/A",508.4645
+"ModScrY",1,3,0,0,0,0,0,"N/A","N/A",326.8914
+"ModState",1,3,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,3,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,3,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcType",1,3,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,3,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,3,1,0,0,0,0,"N/A","N/A","sen2"
+"ModSinkLabel",1,3,1,0,0,0,0,"N/A","N/A","sen2"
+"ModSinkType",1,3,1,0,0,0,0,"N/A","N/A","hif"
+"ModSinkQual",1,3,1,0,0,0,0,"N/A","N/A","Health Impacts"
+"ModSrcId",1,3,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSrcLabel",1,3,2,0,0,0,0,"N/A","N/A","rcp5"
+"ModSrcType",1,3,2,0,0,0,0,"N/A","N/A","rif"
+"ModSrcQual",1,3,2,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcNum",1,3,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,3,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,4,0,0,0,0,0,"N/A","N/A","rcp5"
+"ModLabel",1,4,0,0,0,0,0,"N/A","N/A","rcp5"
+"ModModel",1,4,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Intake Module"
+"ModDesPath",1,4,0,0,0,0,0,"N/A","N/A","\FRAMES\MepRCP.des"
+"ModLocX",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,4,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,4,0,0,0,0,0,"N/A","N/A",291.0603
+"ModScrY",1,4,0,0,0,0,0,"N/A","N/A",321.9572
+"ModState",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,4,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,4,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcType",1,4,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,4,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,4,1,0,0,0,0,"N/A","N/A","sen2"
+"ModSinkLabel",1,4,1,0,0,0,0,"N/A","N/A","sen2"
+"ModSinkType",1,4,1,0,0,0,0,"N/A","N/A","rif"
+"ModSinkQual",1,4,1,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSinkId",1,4,2,0,0,0,0,"N/A","N/A","hei4"
+"ModSinkLabel",1,4,2,0,0,0,0,"N/A","N/A","hei4"
+"ModSinkType",1,4,2,0,0,0,0,"N/A","N/A","rif"
+"ModSinkQual",1,4,2,0,0,0,0,"N/A","N/A","Receptor Intakes"
+"ModSrcId",1,4,2,0,0,0,0,"N/A","N/A","exp8"
+"ModSrcLabel",1,4,2,0,0,0,0,"N/A","N/A","exp8"
+"ModSrcType",1,4,2,0,0,0,0,"N/A","N/A","epf"
+"ModSrcQual",1,4,2,0,0,0,0,"N/A","N/A","Exposure Pathways Concentration"
+"ModSrcNum",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,4,0,0,0,0,0,"N/A","N/A",2
+"ModId",1,5,0,0,0,0,0,"N/A","N/A","usr7"
+"ModLabel",1,5,0,0,0,0,0,"N/A","N/A","usr7"
+"ModModel",1,5,0,0,0,0,0,"N/A","N/A","WCF Aquifer Module"
+"ModDesPath",1,5,0,0,0,0,0,"N/A","N/A","\FRAMES\FuiWCFAqu.des"
+"ModLocX",1,5,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,5,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,5,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,5,0,0,0,0,0,"N/A","N/A",43.95604
+"ModScrY",1,5,0,0,0,0,0,"N/A","N/A",157.8947
+"ModState",1,5,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,5,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,5,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcType",1,5,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,5,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,5,1,0,0,0,0,"N/A","N/A","exp8"
+"ModSinkLabel",1,5,1,0,0,0,0,"N/A","N/A","exp8"
+"ModSinkType",1,5,1,0,0,0,0,"N/A","N/A","wcf"
+"ModSinkQual",1,5,1,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcNum",1,5,0,0,0,0,0,"N/A","N/A",1
+"ModSinkNum",1,5,0,0,0,0,0,"N/A","N/A",1
+"ModId",1,6,0,0,0,0,0,"N/A","N/A","exp8"
+"ModLabel",1,6,0,0,0,0,0,"N/A","N/A","exp8"
+"ModModel",1,6,0,0,0,0,0,"N/A","N/A","MEPAS 4.1 Chronic Exposure Module"
+"ModDesPath",1,6,0,0,0,0,0,"N/A","N/A","\FRAMES\MepEXP.des"
+"ModLocX",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModLocY",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModLocZ",1,6,0,0,0,0,0,"N/A","N/A",0
+"ModScrX",1,6,0,0,0,0,0,"N/A","N/A",125.9281
+"ModScrY",1,6,0,0,0,0,0,"N/A","N/A",307.1546
+"ModState",1,6,0,0,0,0,0,"N/A","N/A",2
+"ModSrcId",1,6,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcLabel",1,6,1,0,0,0,0,"N/A","N/A","con1"
+"ModSrcType",1,6,1,0,0,0,0,"N/A","N/A","con"
+"ModSrcQual",1,6,1,0,0,0,0,"N/A","N/A",""
+"ModSinkId",1,6,1,0,0,0,0,"N/A","N/A","rcp5"
+"ModSinkLabel",1,6,1,0,0,0,0,"N/A","N/A","rcp5"
+"ModSinkType",1,6,1,0,0,0,0,"N/A","N/A","epf"
+"ModSinkQual",1,6,1,0,0,0,0,"N/A","N/A","Exposure Pathways Concentration"
+"ModSrcId",1,6,2,0,0,0,0,"N/A","N/A","usr7"
+"ModSrcLabel",1,6,2,0,0,0,0,"N/A","N/A","usr7"
+"ModSrcType",1,6,2,0,0,0,0,"N/A","N/A","wcf"
+"ModSrcQual",1,6,2,0,0,0,0,"N/A","N/A","Aquifer"
+"ModSrcNum",1,6,0,0,0,0,0,"N/A","N/A",2
+"ModSinkNum",1,6,0,0,0,0,0,"N/A","N/A",1

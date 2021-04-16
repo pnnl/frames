@@ -1,0 +1,22 @@
+"aqu3",0000000021
+******************************************************************************
+Modeling Parent Contaminant Number   1 for Scenario Number   1
+******************************************************************************
+
+Modeling Medium #             1
+Medium Type (MED)          =  4
+Source Configuration       =  6
+Source Term Discharge Type =  2
+SATURATED ZONE AT A RIVER
+
+
+******************************************************************************
+Modeling Parent Contaminant Number   2 for Scenario Number   1
+******************************************************************************
+
+Modeling Medium #             1
+Medium Type (MED)          =  4
+Source Configuration       =  6
+Source Term Discharge Type =  2
+SATURATED ZONE AT A RIVER
+

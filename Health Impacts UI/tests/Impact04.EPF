@@ -1,0 +1,99 @@
+"fcm3",0000000098
+1,
+Medium type - Soil Source src11
+1,
+"chronic","fcm3","Soil", 1, 4,
+0.,"km",0.,"km"
+"Benzene","71432", 0,   3,
+0.0,"yr", 50.0,"yr",  7,
+"Leafy vegetables","ingestion","mg/kg"
+1.650E+00,
+"Other vegetables","ingestion","mg/kg"
+1.650E+00,
+"Meat","ingestion","mg/kg"
+3.769E-04,
+"Milk","ingestion","mg/L "
+9.668E-05,
+"Soil","ingestion","mg/kg "
+2.866E+00,
+"Soil","dermal","mg/kg "
+2.866E+00,
+"Soil","inhalation","mg/m3 "
+2.866E-08,
+50.0,"yr", 50.0,"yr",  0,
+100.0,"yr", 50.0,"yr",  0,
+"Beryllium","7440417", 0,   3,
+0.0,"yr", 50.0,"yr",  7,
+"Leafy vegetables","ingestion","mg/kg"
+1.880E-03,
+"Other vegetables","ingestion","mg/kg"
+1.880E-03,
+"Meat","ingestion","mg/kg"
+1.702E-03,
+"Milk","ingestion","mg/L "
+4.207E-06,
+"Soil","ingestion","mg/kg "
+4.000E+00,
+"Soil","dermal","mg/kg "
+4.000E+00,
+"Soil","inhalation","mg/m3 "
+4.000E-08,
+50.0,"yr", 50.0,"yr",  0,
+100.0,"yr", 50.0,"yr",  0,
+"DELTA-BHC","319868", 0,   3,
+0.0,"yr", 50.0,"yr",  7,
+"Leafy vegetables","ingestion","mg/kg"
+1.568E-01,
+"Other vegetables","ingestion","mg/kg"
+1.568E-01,
+"Meat","ingestion","mg/kg"
+2.101E-01,
+"Milk","ingestion","mg/L "
+2.666E-02,
+"Soil","ingestion","mg/kg "
+4.000E+00,
+"Soil","dermal","mg/kg "
+4.000E+00,
+"Soil","inhalation","mg/m3 "
+4.000E-08,
+50.0,"yr", 50.0,"yr",  0,
+100.0,"yr", 50.0,"yr",  0,
+"STRONTIUM-90","SR90", 1,   3,
+0.0,"yr", 50.0,"yr",  8,
+"Leafy vegetables","ingestion","Bq/kg"
+3.003E-05,
+"Other vegetables","ingestion","Bq/kg"
+2.991E-05,
+"Meat","ingestion","Bq/kg"
+6.340E-07,
+"Milk","ingestion","Bq/L "
+2.588E-06,
+"Soil","ingestion","Bq/kg"
+1.479E-04,
+"Soil","dermal","Bq/kg"
+1.479E-04,
+"Soil","inhalation","Bq/m3"
+1.479E-12,
+"Soil","external","Bq/kg  "
+1.479E-04,
+"Y90","Y90",  8,
+"Leafy vegetables","ingestion","Bq/kg"
+1.453E-07,
+"Other vegetables","ingestion","Bq/kg"
+1.447E-07,
+"Meat","ingestion","Bq/kg"
+1.747E-08,
+"Milk","ingestion","Bq/L "
+1.128E-09,
+"Soil","ingestion","Bq/kg"
+9.686E-05,
+"Soil","dermal","Bq/kg"
+9.686E-05,
+"Soil","inhalation","Bq/m3"
+9.686E-13,
+"Soil","external","Bq/kg  "
+9.686E-05,
+50.0,"yr", 50.0,"yr",  0,
+"Y90","Y90",  0,
+100.0,"yr", 50.0,"yr",  0,
+"Y90","Y90",  0,

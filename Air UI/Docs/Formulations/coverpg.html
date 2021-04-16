@@ -1,0 +1,246 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win95; U) [Netscape]">
+   <title>Atmospheric Pathway Formulations</title>
+</head>
+<body>
+
+<font face="verdana" size="2">
+
+<div align=right>PNNL-11080
+<br>UC-602, 630</div>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size="3">THE MULTIMEDIA ENVIRONMENTAL
+POLLUTANT
+<br>&nbsp;ASSESSMENT SYSTEM (MEPAS):
+<br>&nbsp;ATMOSPHERIC PATHWAY FORMULATIONS</font>
+<p>&nbsp;J. G. Droppo
+<br>&nbsp;J. W. Buck
+<br>&nbsp;
+<p>March 1996
+<br>&nbsp;
+<p>Prepare for
+<br>the U.S. Department of Energy
+<br>under Contract DE-AC06-76RLO 1830
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>Pacific Northwest National Laboratory
+<br>Richland, Washington 99352
+<br>Copyright 1989-1996 Battelle
+Memorial Institute
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+<br>
+
+<br><b><u>PREFACE</u></b></center>
+
+<br>&nbsp;&nbsp;&nbsp; This report is one of a
+series of reports that document the mathematical models in the Multimedia
+Environmental Pollutant Assessment System (MEPAS). Developed by Pacific
+Northwest National Laboratory<sup>(a)</sup> for the U.S. Department of
+Energy, MEPAS is an integrated impact assessment software implementation
+of physics-based fate and transport models in air, soil, and water media.
+Outputs are estimates of exposures and health risk assessments for radioactive
+and hazardous pollutants.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; Each of the MEPAS formulation
+documents covers a major MEPAS component such as atmospheric, vadose zone,
+groundwater, surface water, overland, and exposure/health impact assessment.
+Other MEPAS documentation reports cover the sensitivity/uncertainty formulations
+and the database parameter constituent property estimation methods. The
+MEPAS atmospheric component is documented in this report.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; MEPAS simulates the release
+of contaminants from a source, transport through the air, groundwater,
+surface water, or overland pathways, and transfer through food chains and
+exposure pathways to the exposed individual or population. For human health
+impacts, risks are computed for carcinogens and hazard quotients for noncarcinogens.
+MEPAS is implemented on a desktop computer with a user-friendly interface
+that allows the user to define the problem, input the required data, and
+execute the appropriate models for both deterministic and probabilistic
+analyses.
+
+<br>
+
+<br>(a) Pacific Northwest National Laboratory
+is operated for the U.S. Department of Energy by Battelle Memorial Institute
+under Contract&nbsp;&nbsp;&nbsp;&nbsp; DE-AC06-76RLO 1830.
+
+<br>
+<br>
+<br>
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+<br>
+
+<br><center><b><u>SUMMARY</u></b></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The Multimedia Environmental
+Pollutant Assessment System (MEPAS) is an integrated software implementation
+of physics-based fate and transport models for health and environmental
+risk assessments of both radioactive and hazardous pollutants. This atmospheric
+component report is one of a series of formulation reports that document
+the MEPAS mathematical models.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; MEPAS is a "multimedia"
+model; pollutant transport is modeled within, through, and between multiple
+media (air, soil, groundwater, and surface water). The estimated concentrations
+in the various media are used to compute exposures and impacts to the environment,
+to maximum individuals, and to populations.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The MEPAS atmospheric component
+for the air media documented in this report includes models for emission
+from a source to the air, initial plume rise and dispersion, airborne pollutant
+transport and dispersion, and deposition to soils and crops. The material
+in this report is documentation for MEPAS Versions 3.0 and 3.1 and the
+MEPAS version used in the Remedial Action Assessment System (RAAS) Version
+1.0.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The atmospheric component
+of MEPAS uses a series of climatological models for modeling the releases
+from point and area sources. In MEPAS, emission estimation models are provided
+as an alternative method for cases where the emission rates are unknown
+or cannot be back-calculated from environmental monitoring data. MEPAS
+has seven volatilization models for estimating gaseous vapor emissions
+from various types of sources and a particle suspension model for estimating
+soil-bound pollutant emissions. Plume rise models are included for stack
+releases. A sector-average Gaussian model using standard dispersion rates
+is used for the atmospheric transport. Both wet and dry deposition are
+computed. An important enhancement is that the wind speed, dispersion,
+and deposition models account for the influence of local surface roughness.
+This feature allows the model to account for local roughness influences
+along a wind trajectory ranging from smooth over-water to rough forest
+cover. A complex-terrain nocturnal flow option allows for the near-source
+channeling of airborne releases.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The major products from
+these atmospheric component models include 1) contaminant emission rates,
+2) regional patterns of long-term air concentrations and deposition rates
+normalized by emission rates, 3) near-release short-term acute air concentrations
+normalized by emission rates, 4) long-term deposition rates for selected
+types of surfaces, and 5) regional patterns of ambient pollutant concentrations.
+These output products from the atmospheric component are linked as input
+to other components as part of the integrated MEPAS exposure and impact
+evaluation software.
+<br>
+<br>
+<br>
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+<br>
+
+<br><center><b><u>ACKNOWLEDGMENTS</u></b></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The development of this multimedia
+contaminant environmental exposure and risk assessment methodology over
+the past decade required input from a wide spectrum of engineering and
+scientific technologies. The original MEPAS concept was developed by G.
+Whelan and B. L. Steelman. They were joined by K. A. Higley, D. L. Strenge,
+B. L. Hoopes, and the authors of this volume to form the initial MEPAS
+development team.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; The development of the
+air component of MEPAS involved a number of staff. D. L. Strenge, and B.
+L. Hoopes helped in the initial design and integration with other components.
+C. D. Whiteman provided input on processes in complex terrain. S. Hwang,
+J. L. Stroh, and G. P. Streile provided inputs on volatilization models.
+C. J. Fosmire helped in the implementation of the formulations presented
+in this document.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; We also wish to acknowledge
+L. J. Thibodeaux for his helpful suggestions and lecture notes relative
+to the modeling of volatilization from ponds.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; We also acknowledge valuable
+inputs from the following review efforts: U.S. Department of Energy's (DOE)
+Environment Survey MEPAS External Peer Review Panel, U.S. Environmental
+Protection Agency's Review of Hazard Ranking Systems, Health and Welfare
+Canada's Review of Multimedia Models, Hanford Single Shell Tanks Review
+Panel conducted by the National Academy of Sciences, DOE's Environmental
+Restoration Priority System External Review Panel, the DOE Programmatic
+Environmental Impact Statement External Review Panel, and U.S. Department
+of Defense's Review of Risk Prioritization Methodologies conducted by the
+National Academy of Sciences.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; Thanks go to R. J. Aiken
+of the DOE's Office of Environment, Safety, and Health for his support
+in the early stages of development. Special thanks also go to T. P. Longo,
+F. W. Baxter, P. V. Strider, K. J. Kelkenburg, P. M. Beam, and W. Wisenbaker
+Jr. of the DOE Office of Environmental Management for their long-term vision
+in supporting continued development and application efforts. These efforts
+were conducted for the DOE under contract DE-AC06-76RLO 1830.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp; Special thanks also go
+to the Pacific Northwest National Laboratory's editing and word processing
+staff who made the many review drafts and this final document possible.
+Their hard work, patience, and professionalism in producing versions on
+very tight schedules is particularity appreciated.
+
+<br>
+
+</font>
+</body>
+</html>

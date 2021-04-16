@@ -1,0 +1,15 @@
+VBGROUP 5.0
+StartupProject=Air UI\air.vbp
+Project=Aquifer UI\aqu.vbp
+Project=Eco Benchmarks\Ecobenchmarks.vbp
+Project=Exposure UI\exp.vbp
+Project=Health Impacts UI\hei.vbp
+Project=JFDGenerator\JFDGenerator.vbp
+Project=PickSrc\picksrc.vbp
+Project=Receptor UI\rcp.vbp
+Project=River UI\riv.vbp
+Project=Source Term UI\Strmui.vbp
+Project=GTvad\GTvad.vbp
+Project=RAvad\RAvad.vbp
+Project=Vadose UI\vad.vbp
+Project=Weap UI\weap.vbp

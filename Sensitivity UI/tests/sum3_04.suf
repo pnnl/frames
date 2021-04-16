@@ -1,0 +1,17 @@
+"sen4",16                               
+2
+"Sensitivity/Uncertainty Module for FRAMES"
+"Beta Test version"
+4,1
+"KdSat","Soil equilibrium coefficient, Benzene from aqu2"
+"BulkD","Bulk density of soil from src5"
+"TPor","Total porosity from src5"
+"KdSrc","Equilibrium coefficients (kd), Benzene, time # 1 from src5"
+"peak","Water concentration peak from aqu2 for Benzene [exp3.Aquifer]"
+5
+"realizations","KdSat","BulkD","TPor","KdSrc","peak peak time","peak"
+1,"3.6480E+00","1.52892","4.2305E-01","1.6526E+00",100.14,1.023261e-09
+2,"1.2261E+01","1.3926","4.7449E-01","6.4210E+00",100.2875,9.551924e-10
+3,"1.5423E+01","1.43341","4.5909E-01","5.8805E+00",101.062,1.002278e-09
+4,"7.9443E+00","1.99224","2.4821E-01","2.5979E+00",100.4773,1.196359e-09
+5,"1.9872E+01","1.67064","3.6957E-01","8.3115E+00",100.0291,5.941925e-10

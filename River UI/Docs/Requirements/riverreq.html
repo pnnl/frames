@@ -1,0 +1,221 @@
+<html>
+<head>
+<Title>Requirements for the MEPAS Surface Water (Non-Tidal River) Transport Module</Title>
+</head>
+<body alink="#336666"  vlink="#A8A8A8" link="#0000ff">
+
+
+
+<br><font color="#000000" face="verdana" size="4">PNNL-SA-32276</font>
+<br><font face="verdana" size="2">Written by:  John P. McDonald
+<br>
+<br>Prepared for the U.S. Department of Energy
+<br>
+<br>Pacific Northwest National Laboratory
+<br>Operated by the U.S. Department of Energy
+<br>By Battelle
+</font>
+<br>
+<br>
+<br>
+<br><font color="#000000" face="verdana" size="3"><center><b>Requirements for the MEPAS Surface Water (Non-Tidal River) Transport Module</b></center></font>
+<br>
+<hr width="100%" align="center">
+<p>
+<font color="#000000" face="verdana" size="2"><p>
+<b>1.0 Introduction</b>
+<p>This document describes the requirements for the Multimedia Environmental
+Pollutant Assessment System (MEPAS) surface water transport module. The
+module is specifically designed for inclusion in the Framework for Risk
+Analysis in Multimedia Environmental Systems (FRAMES), which is a platform
+that allows the linking of various multimedia modules into complete source/transport/exposure
+assessment systems (Whelan et al. 1997). These requirements can be used
+by oftware engineers and testers to ensure this module meets the needs
+of the clients and users.
+<p>
+<b>2.0 Purpose of the MEPAS Surface Water Transport Module</b>
+<p>The purpose of the MEPAS surface water transport module is to simulate
+the migration and fate of chemical and radionuclide constituents through
+non-tidal rivers. Input to the module consists of time-varying contaminant
+mass fluxes entering the river, the physical characteristics of the river
+itself, and the constituent properties. Output consists of time-varying,
+contaminant aqueous concentrations at a point location along the same shoreline
+from which the contaminant entered the river. Currently, contaminant mass
+fluxes entering the river can originate from contaminated soil via overland
+runoff, discharge of a groundwater plume from an aquifer, or direct discharge
+into the river itself. The river’s physical characteristics are entered
+through a module user interface (MUI), and constituent properties are obtained
+from a constituent properties database. Contaminant aqueous concentrations
+can be used as input to an exposure module. The surface water transport
+module is designed to allow for linking to subsequent media (e.g., another
+river section or a wetland), should these features become a requirement
+for a later version of FRAMES. In addition, the output contaminant aqueous
+concentrations can also serve as the endpoint of the simulation.
+<p>
+<b>3.0 Summary of Requirements for the MEPAS Surface Water Transport
+Module</b>
+<p>This section provides an overall summary of the requirements for the
+MEPAS surface water transport module. Detailed input, output, and scientific
+requirements are described in Sections 4, 5 and 6 respectively.
+<p>The MEPAS surface water transport module will
+
+<ol>
+<li>simulate contaminant migration for both chemicals and radionuclides through
+non-tidal rivers and provide output consisting of instantaneous, time-varying,
+contaminant aqueous concentrations at a point location along the same shoreline
+from which contaminants entered the river</li>
+
+<li>have no limits on the number of constituents considered in a scenario</li>
+
+<li>have no restrictions on the number of point locations along the river shoreline
+at which concentrations are computed</li>
+
+<li>operate under Windows 95 and have a user-friendly MUI with a standard Windows
+look and feel.</li>
+
+<li>meet the module specifications for FRAMES (described in Whelan et al. 1997).</li>
+</ol>
+
+<b>4.0 Input Requirements for the MEPAS Surface Water Transport Module</b>
+<p>Data needed to simulate contaminant migration through a non-tidal river
+is obtained from three sources. The boundary conditions (i.e., time-varying,
+contaminant mass fluxes entering the river and source dimensions) are obtained
+from the previous module (i.e., source term or aquifer), the river’s physical
+characteristics are obtained from the user through the MUI, and constituent
+chemical properties are obtained from a chemical property database. The
+boundary conditions are communicated to the module through the Water Flux
+File (WFF). The river’s physical characteristics are communicated from
+the MUI to the model through the Global Input Data (GID) file. The GID
+file is also used to store the chemical property data. The specifications
+for the WFF and GID file are described in Whelan et al. (1997).
+<p>There are some general requirements associated with the MUI, which are
+
+<ol>
+<li>The MUI will operate in Windows 95 and will have a standard Windows look
+and feel.</li>
+
+<li>The MUI will have on-line help in an HTML format that provides users with
+an easy-to-understand description of all input parameters required by the
+MUI.</li>
+
+<li>The MUI will provide users with a choice of units for all input parameters
+having dimensions associated with them.</li>
+
+<li>The MUI will include a reference feature in which the source of the specified
+value for each input item can be referenced if the user desires.</li>
+
+<li>The MUI will show the range of values allowed for each input data item,
+when the cursor is positioned on that item, as a scrolling message at the
+bottom of the screen. When an out-of-range value is entered in a field,
+the MUI will indicate this by a red background in the input field and a
+scrolling error message in addition to the allowed range message. Data
+input values within range are shown with a green field background.</li>
+
+<li>The MUI will display the module version number, obtained from the module
+description (DES) file, in an "About" menu.</li>
+</ol>
+
+The following data are obtained from the WFF by the MEPAS surface water
+transport module. Those items listed as required are needed by the module
+to perform its computations. Other items are read in along with the required
+data. Because the WFF is a sequential text file, the module will read through
+unneeded data:
+
+<ol>
+<li>time-varying, instantaneous, contaminant mass fluxes entering the river
+(required)</li>
+
+<li>width and height of the vertical rectangular area (i.e., a vertical plane
+along the river shoreline) through which contaminant enters the river (only
+the width is required)</li>
+
+<li>distance from the water table (or river surface) to the top of the rectangular
+area</li>
+
+<li>natural recharge rate</li>
+
+<li>time-varying, instantaneous water flux entering the river</li>
+</ol>
+
+The following data are obtained from the MUI and are needed by the MEPAS
+surface water transport module to perform its computations:
+
+<ol>
+<li>river width</li>
+
+<li>river depth (i.e., thickness of water column)</li>
+
+<li>river flow velocity</li>
+
+<li>longitudinal travel distance (i.e., x-coordinate) from the center of the
+source to the point at which contaminant aqueous concentrations are computed</li>
+
+<li>river discharge at the receptor location.</li>
+</ol>
+
+The MEPAS surface water transport module obtains the following data from
+the chemical property portion of the GID file:
+
+<ol>
+<li>CASID</li>
+
+<li>degradation/decay half-life</li>
+
+<li>decay chain (for radionuclides)</li>
+
+<li>solubility limit.</li>
+</ol>
+
+<b>5.0 Output Requirements for the MEPAS Surface Water Transport Module</b>
+<p>The MEPAS surface water transport module is required to output its results
+to a Water Concentration File (WCF) for contaminant aqueous concentration
+results. The module also is required to produce a list file (*.WLS file)
+that documents the data actually read in by the model and provide a summary
+of intermediate calculation results (e.g., decay constant and lateral dispersion
+coefficient) and the simulation results (peak concentration and time of
+peak).
+<p>The data output to the WCF for contaminant aqueous concentration results
+includes instantaneous, time-varying, contaminant aqueous concentrations
+for each receptor location along the shoreline.
+<p>
+<b>6.0 Scientific Requirements for the MEPAS Surface Water Transport
+Module</b>
+<p>This section lists the scientific requirements for the MEPAS surface
+water transport module. The primary scientific requirements are
+
+<ol>
+<li>obey the Law of Mass Conservation</li>
+
+<li>simulate advection in one dimension</li>
+
+<li>simulate dispersion in one dimension (lateral or y-direction)</li>
+
+<li>account for the decay of radionuclides, and be able to handle the degradation
+of chemicals</li>
+
+<li>account for the ingrowth of progeny resulting from degradation/decay, and
+be able to handle decay chains with up to 9 members (i.e., one parent and
+eight progeny)</li>
+
+<li>compute contaminant aqueous concentrations at the river (downgradient)boundary</li>
+
+<li>consider the effect that inflowing tributary or groundwater (or the withdrawl
+of clean water from the river) between the source and receptor has on receptor
+concentrations.</li>
+</ol>
+
+The implementation of these requirements, in the form of mathematical formulations,
+is documented in Whelan et al. (1996).
+<p>
+<b>7.0 References</b>
+<p>Whelan, G., J. P. McDonald, and C. Sato. 1996. <i>Multimedia Environmental
+Pollutant Assessment System (MEPAS): Groundwater Pathway Formulations</i>.
+PNNL-10907, Pacific Northwest National Laboratory, Richland, Washington.
+<p>Whelan G., K. J. Castleton, J. W. Buck, G. M. Gelston, B. L. Hoopes,
+M. A. Pelton, D. L. Strenge, and R. N. Kickert. 1997. <i>Concepts of a
+Framework for Risk Analysis in Multimedia Environmental Systems (FRAMES)</i>.
+PNNL-11748, Pacific Northwest National Laboratory, Richland, Washington.</font>
+
+</body>
+</html>
+

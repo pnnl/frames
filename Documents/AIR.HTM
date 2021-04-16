@@ -1,0 +1,540 @@
+<html>
+<head>
+  <title>ATMOSPHERIC TRANSPORT MODULE</title>
+</head>
+<body  background="mepas.jpg">
+
+<hr />
+<center><h1><img src="air.ico" height=64 width=64> ATMOSPHERIC TRANSPORT MODULE</h1></center>
+<hr />
+
+<b>NOTE: Local meteorological data are required by the MEPAS air dispersion model
+to compute patterns of air and soil concentrations. Those data should be
+from the nearest meteorological observation station that will have weather
+conditions that are most representative of the area to be modeled.
+In United States, the Environmental Data Service, NOAA, National Climatic
+Center (NCC) in Asheville, North Carolina is the major supplier of such data.
+Alternatively other agencies and organizations supply summaries of meteorological data.</b>
+
+<br />
+<br />
+<h2>CLIMATOLOGY TAB</h2>
+
+<a name="ACLCDREF"></a><u><b>AC-LCDREF</b>--Reference weather station</u>
+<br />Units: none
+<br />
+<br />An annual summary of the Local Climatological Data (LCD)
+for the nearest representative national weather service station should
+be obtained. They are published by the Environmental Data Service,
+NOAA, National Climatic Center (NCC) in Asheville, North Carolina.
+Example LCD summaries are provided as <a href="FIG_2_32.HTM">Figures 2.32</a>,
+<a href="FIG_2_33.HTM">2.33</a>, and <a href="FIG_2_34.HTM">2.34</a>.
+The specific form of the LCD summary may differ from these examples, but
+all of the information should be found under equivalent headings.
+<br />
+<br />In the United States, NOAA has assigned a five digit “Surface Station Number”
+to each location where meteorological surface observations are available.
+Enter the “Surface Station Number” or other appropriate identifier.
+<br />
+<br />Note: If “Joint Frequency Data (JFD)” is loaded later from a file,
+the identifier will be set to the JFD station name and may be need
+to be reset if the LCD data are not from the same station as the
+JFD come from a different station.
+<br />
+<br /><a name="ACMIXAM"></a><u><b>AC-MIXAM</b>--Morning mixing height</u>
+<br />Units: meters (m)
+<br />Range: 50 to 900
+<br />
+<br />Enter the morning mixing height from site documents,
+if available. Otherwise, use <a href="FIG_3_1.HTM">Figure 3.1</a>
+to estimate this value for sites in the contiguous United States.
+Multiply the average morning mixing height for the facility from <a href="FIG_3_1.HTM">Figure
+3.1</a> by 100 and enter the value on the worksheet. A common range
+of values is from 300 to 900 m.
+<br />
+<br /><a name="ACMIXPM"></a><u><b>AC-MIXPM</b>--Afternoon mixing height</u>
+<br />Units: meters (m)
+<br />Range: 50 to 2600
+<br />
+<br />Enter the afternoon mixing height from site documents,
+if available. Otherwise, use <a href="FIG_3_2.HTM">Figure 3.2</a>
+to estimate this value for sites in the contiguous United States.
+Multiply the average morning mixing height for the facility from <a href="FIG_3_2.HTM">Figure
+3.2</a> by 100 and enter the value on the worksheet. A common range
+of values is from 1,000 to 2,600 m.
+<br />
+<br /><a name="ACRAIN"></a><u><b>AC-RAIN</b>--Annual precipitation</u>
+<br />Units: inches (in.)
+<br />Range: 0.1 to 130.0
+<br />
+<br />Source of these data is the LCD summary (see Section
+<a href="#ACLCDREF">AC-LCDREF</a>). Use the section entitled "Normals,
+Means, and Extremes" to obtain the average annual total, water equivalent
+precipitation.
+<br />
+<br /><a name="ACPRENUM"></a><u><b>AC-PRENUM</b>--Precipitation days per year</u>
+<br />Units: number per year (#/yr)
+<br />Range: 0 to 365
+<br />
+<br />Source of these data is the LCD summary (see Section
+<a href="#ACLCDREF">AC-LCDREF</a>). A precipitation day is defined
+as a day having at least 0.01 inch of precipitation. Obtain the annual
+number of precipitation days from the LCD summary table (see <a href="FIG_2_33.HTM">Figure
+2.33</a>). This value is found under the heading of "Mean number
+of days: Precipitation 0.01 inches or more."
+<br />
+<br /><a name="ACNUMTS"></a><u><b>AC-NUMTS</b>--Thunderstorms per year</u>
+<br />Units: number per year (#/yr)
+<br />Range: 1 to 150
+<br />
+<br />Source of these data is the LCD summary (see Section
+<a href="#ACLCDREF">AC-LCDREF</a>). Enter the number of days per
+year having thunderstorms as listed in the LCD. This parameter is
+defined as the number of days that thunder was heard at the station in
+1 year.
+
+<br />
+<br />
+<h2>JOINT FREQUENCY DATA TAB</h2>
+
+<a name="AJFD"></a>Wind joint frequency data consist of tables of values
+that give the relative frequencies of various wind conditions. A
+joint frequency table for various wind speed groups, wind direction sectors,
+and atmospheric stability classes (based on Pasquill stability categories)
+is needed to represent the region surrounding the facility. These
+data are used to characterize the annual patterns of atmospheric transport
+and dispersion processes for the facility.
+<br />
+<br />A sample wind joint frequency summary is provided in
+<a href="TAB_3_1.HTM">Table 3.1</a> (for wind stability classes A through
+E). This sample summary illustrates one format for a joint frequency
+distribution. Other formats can be equally useful although the parameters
+may be listed in a different order. Also, the frequency values in
+these tables may be expressed in a number of ways; e.g., as fractions,
+percentages, or number of occurrences. <a href="TAB_3_1.HTM">Table
+3.1</a> illustrates frequency values as number of occurrences. The
+following provides guidance on the selection of data and subsequent entry
+into the template table.
+<br />
+<br /><a href="FIG_3_5.HTM">Figure 3.5</a> illustrates the number
+of occurrences of winds for 16 wind directions. The diagram is based
+on information obtained at the National Weather Service station in Providence,
+R.I. The plot represents the total number of occurrences (for all
+wind-speed classes and wind-direction sectors) for stability class E.
+These data correspond to the fifth page of <a href="TAB_3_1.HTM">Table
+3.1</a> under the column "Total."
+<br />
+<br />There are normally two sources of these data. The first
+source is joint frequency summaries from special meteorological stations
+located at or in the immediate area of the facility. Facility environmental
+statements, safety analysis documents, RCRA Part B Permit Applications,
+and similar publications often contain such data when available.
+The second source is STAR PROGRAM summaries from the National Climatic
+Data Center (NCDC) in Asheville, North Carolina, which is operated by the
+National Oceanic and Atmospheric Administration (NOAA's) Environmental
+Data Service (<a href="FIG_3_6.HTM">Figure 3.6</a>). The facility
+documents may also contain summaries from this source.
+<br />
+<br />If the summaries are not found in the facility documents,
+contact the NCDC concerning the summaries that are available or that could
+be generated for this facility. The NCDC can provide a listing of
+the locations for which summaries have been generated, and summaries can
+be obtained for the cost of copying. In addition, the NCDC can generate
+new summaries for first-order weather stations for a modest fee.
+<br />
+<br />Normally, the preferred data summary is from the station
+closest to the facility. Special considerations such as data quality
+or local influences on atmospheric transport and dispersion, may dictate
+the selection of a summary from some station other than the closest.
+In such a case, note the source of information and the reason.
+<br />
+<br />When otherwise equivalent summaries are available for
+multiple measurement heights, use the data from the height closest to the
+releast height of constituents.
+<br />
+<br />If summaries are available over different time periods,
+give preference to the summary based on the longer time period (i.e., a
+5-year summary is preferable to a 1-year summary). The minimum time
+period for a summary is 1 year, and all observations each day at a station
+should be taken into account.
+<br />
+<br />There are two situations in which it may be appropriate
+to attach more than one summary for the facility:
+<blockquote>
+1. The release sites are geographically separated,
+and joint frequency summaries are available for the different locations.
+<br />2. The release sites are in complex terrain, and the local
+winds are expected to be significantly different from the regional winds.
+</blockquote>
+<a name="AJSTATNM"></a><u><b>AJ-STATNM</b>--Data station</u>
+<br />Units: none
+<br />
+<br />Enter a name that describes the location at which the
+joint frequency data were taken. Use a descriptive name to designate
+the location where onsite data were taken. For the NCDC data, enter
+the name of the climatic station (normally the name of a nearby city).
+Also enter the name of the state in which the station is located.
+Document the source of the joint frequency summary data.
+<br />
+<br /><a name="AJANEMHT"></a><u><b>AJ-ANEMHT</b>--Anemometer height</u>
+<br />Units: meters (m)
+<br />Range: 0.0 to 999.9
+<br />Typical environmental range: 3 to 15
+<br />
+<br />The height at which the winds were measured for the joint
+frequency distribution can normally be obtained either from the source
+of the joint frequency data (i.e., facility documentation for onsite data)
+or from the last page of the LCD summary for NCDC data. The typical
+value for joint frequency anemometer height is 3 m. This parameter
+is critical only for data sets obtained from towers; 3 m will be adequate
+for most near-surface data.
+<br />
+<br /><a name="AJRLEN"></a><u><b>AJ-RLEN</b>--Average roughness length</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0 to 999.9
+<br />Typical environmental range: 0 to 150
+<br />
+<br />Estimate an average roughness length for the area surrounding
+the weather station used for the wind joint frequency summary. The
+typical value for roughness length is 10 cm.
+<br />
+<br /><a name="AJWINDS"></a><u><b>AJ-WINDS(6)</b>--Wind speed midpoints</u>
+<br />Units: meters per second (m/s)
+<br />Range: 0.00 to 99.99
+<br />Typical environmental range: 1.0 to 10.0
+<br />
+<br />Midpoint wind speed values of the six wind-speed categories
+are needed. If ranges of wind speeds are given in the summaries,
+enter the ranges in the template and compute the midpoint by averaging
+the two range values. If the midpoints are given in the summary, enter
+these in the "Reported Midpoint" column (and ignore the "Range" columns).
+If the category has no defined range as in the last category shown in <a href="TAB_3_2.HTM">Table
+3.2</a> (>21 KTS), use the defining value as the midpoint.
+<br />
+<br />Combination of the values in the data tables is required
+for more than six wind-speed groups. If combination is required,
+combine the wind-speed categories so that the coverage of the range of
+wind-speed conditions is as even as possible. The frequency of occurrence
+of conditions within wind-speed groups will provide some guidance as to
+which adjacent groups to combine--groups already having high frequencies
+are generally left separate, and groups with relatively low frequencies
+are combined.
+<br />
+<br />If fewer than six wind-speed groups are encountered, enter
+the information for all available wind-speed groups. Enter a value
+of 0 for the undefined wind-speed group midpoints.
+<br />
+<br /><a name="AJCALMS"></a><u><b>AJ-CALMS</b>--Wind joint frequency calms</u>
+<br />Units: number, percent, or fraction
+<br />
+<br />Enter total frequencies of calm conditions and the units.
+If no value is given for calms, enter a value of zero. The units
+selected also determine the units for all the joint frequency data in the
+stability class tabs (Class A through Class G).
+<br />
+<br /><a name="AJJFNAME"></a><u>Import Joint Frequency Data</u>
+<br />Units: none
+<br />
+<br />If you wish to use joint frequency
+data in an externally created joint-frequency data file, click on the "Import
+Joint Frequency Data" button and select the file containing the data.
+ An externally prepared data file should be given an extension of ".JFD" and have the
+following format. The first line of the file is used to define two
+variables, ORD and FRM, which are numeric and character variables, respectively.
+FORTRAN formats are used to specify data input formats. This file
+has the following structure:
+<br />
+<br />
+<table border=1>
+<tr>
+<th><u>Line Number</u>
+<th><u>Contents</u>
+<th><u>Format of Data</u>
+<tr>
+<td>1
+<td>ORD, FRM
+<td>FORMAT(I1,A30)
+<tr>
+<td>2 to (N+1)
+<td>N Lines of Joint Frequency Date
+<td>FRM from Line 1
+<tr>
+<td>N+2 to N+3
+<td>2 Lines of Calm Frequency Data
+<td>FRM from Line 1
+<tr>
+<td>N+4
+<td>Wind Speed Mid-Points (m/s)
+<td>FRM from Line 1
+</table>
+
+<br />
+<br />where ORD is always equal to 6. FRM is the FORTRAN
+expression enclosed in parenthesis for reading
+subsequent data. A typical format to enter fractions of
+occurrences has the form of (F10.6). ORD equal to "6." indicates a
+structure of six columns (wind-speed categories) per line and 16
+lines (wind direction clockwise starting with North) per stability
+class block. Alternative options for the value of ORD are no
+longer supported. The joint frequency data are listed as blocks of
+data for each stability class starting with the most unstable case
+(A stability) and ending with the most stable case (G stability).
+<br />
+<br />The next two lines of the file contain
+frequency of calm conditions for each stability class.
+The last line contains the mid-points of the wind speed groups
+used in generating the joint frequency table.
+The following is an example JFD file:
+
+<pre>
+6(6F10.6) ,24157,"SPOKANE               ","WA", -8,"N",47.63,"W",117.53, 721, 6.4, 10., 1.0000,111,111,111,111,120.
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .079269   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .054879   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .006098   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000   .000000   .000000   .000000   .000000   .000000
+   .000000
+   .771666  2.057776  3.858330  6.331618  9.343415 12.709790
+</pre>
+
+<br />
+<br /><a name="AJFDATA"></a><u>Joint Frequency Data</u>
+<br />Units: number, percent or fraction of observations
+<br />
+<br />Input the data in the joint frequency table using the
+same units as was specified for <a href="#AJCALMS">AJ-CALMS</a>.
+The following guidelines should be used:
+<blockquote>
+1. Entries are limited to five significant digits including
+the decimal point. The use and placement of the decimal point depends
+on the form of the data:
+<ul>
+<li> Fractions of total time (table sum will equal 1.0)
+are entered as thousandths; e.g., 0.0013, 0.0232, 0.0000.</li>
+<li> Percentages of total time (table sum will equal 100.)
+are entered as hundredths of percent; e.g., 00.13, 02.32, and 00.00.</li>
+<li> Number of occurrences [table sum is 8760 for one
+non-leap year of hourly observations (24 x 365)] are
+expressed as whole numbers; e.g., 11.,2.,0., and so on.</li>
+</ul>
+<br />2. If frequencies are reported for an "unknown" or other
+undefined category, the entries may be ignored. The model will automatically
+adjust the input table to account for missing values. Data sets from
+which more than 15% is missing should normally not be used.
+<br />
+<br />3. The table allows seven stability categories to be input.
+If only the first six stability categories are provided, enter the available
+data along with zeros for the seventh stability class. If some other
+combination of six or fewer stability categories are encountered, enter
+the data in the appropriate sections of the table with zeros entered for
+missing data. If only wind direction and wind-speed information are
+available, enter those data in the fourth stability category (D).
+<br />
+<br />4. The table has room for up to six wind-speed groups,
+as defined in <a href="#AJWINDS">AJ-WINDS</a>. If fewer than six
+groups are encountered, enter zeros for the frequencies in the undefined groups.
+<br />
+<br />5. Do not record summary, total, and average values in the table.
+</blockquote>
+
+<br />
+<h2>TOPOGRAPHICAL DATA TAB</h2>
+
+<a name="ARTOPTYP"></a><u><b>AR-TOPTYP</b>--Use regional topographical data</u>
+<br />Units: none
+<br />
+<br />AR-TOPTYP indicates whether or not
+terrain heights will be needed for input. If this option is checked, the
+influence of the local terrain will be considered. This option should
+only be used in cases with an elevated plume released from a point source
+and non-flat terrain occurs for distances within a 25 km radius of the
+source. For a point source release, checking this box will result
+in activation of the "Terrain Heights" tab, which requires entry of the
+regional distribution of terrain heights (<a href="#ARTOPHTS">AR-TOPHTS</a>)used
+to evaluate the intersection of elevated plumes with terrain. For
+other cases (with a ground level release and/or flat terrain), this option
+should not be used.
+<br />
+<br /><a name="ARTOPBAS"></a><u><b>AR-TOPBAS</b>--Elevation of release site</u>
+<br />Units: meters (m)
+<br />Range: -50 to 8840
+<br />
+<br />The elevation of the release site corresponding to inputs
+of <a href="#ARTOPHTS">AR-TOPHTS</a> is required if the "Use regional topographical
+data" box is checked. The source of this data is a topographic map.
+<br />
+<br /><a name="ARREGSUR"></a><u><b>AR-REGSUR</b>--Regional surface roughness lengths (z<sub>o</sub>'s)</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0 to 999.9
+<br />Typical environmental range: 0 to 150
+<br />
+<br />Roughness lengths (z<sub>o</sub>'s) are needed for the
+region surrounding the facility. A roughness length characterizes
+the sizes of surface elements that can influence atmospheric dispersion
+processes. Roughness lengths must be defined
+for eight direction sectors at four predetermined distances from the facility.
+<br />
+<br /><a href="FIG_3_7.HTM">Figure 3.7</a> illustrates how surface
+roughness affects the wind profile using three different environments.
+The vertical wind profile at the left in Figure 3.7 is for bare ground.
+The z<sub>o</sub> represents surface roughness. For bare ground the
+z<sub>o</sub> is small (z<sub>o</sub> = 1 cm). The middle wind profile
+is for an area with residential housing. These buildings increase
+the surface resistance to the wind (z<sub>o</sub> = 10 cm) and reduce the
+wind speed. This reduction of wind speed occurs up into the boundary
+layer. Over a forest, the z<sub>o</sub> is 50 cm, which results in
+a further reduction in wind speeds in the lower portion of the boundary
+layer.
+<br />
+<br />An order-of-magnitude definition of average roughness
+lengths will be sufficient. The roughness values reflect major differences
+in surface cover. <a href="FIG_3_8.HTM">Figure 3.8</a> provides a
+summary of typical roughness heights associated with various types of surface.
+Using the information obtained in Section 1.0 along with facility photographs
+and other descriptive material, compute an average roughness length.
+For example, if one segment is about 50% agricultural (10 cm) and 50% low
+forest (50 cm), assign it a value of 30 cm. If
+the surface cover in a segment is completely unknown, enter a typical value
+for grasslands as 10.
+<br />
+<br />If the surface cover in a segment is predominantly water,
+enter a surface roughness of 0 cm in the table. For a zero input
+value, the model computes the roughness of the surface as a function of
+wind speed and stability. The roughness over water should only be
+used in cases that require a spatial averaging of roughness values, i.e.,
+for a segment containing significant fractions of both land and water surfaces.
+The procedure for defining roughness lengths requires that the directions
+and distances be overlaid on a map of the region surrounding the facility.
+Map(s) are needed to cover the region out to a radius of about 75 km (approximately
+50 mi). For the shortest distances, facility photographs, maps, and descriptions
+will be most useful in defining roughness lengths. <a href="TAB_3_3.HTM">Table
+3.3</a> shows the ranges of distances to be considered for each entry.
+<a href="FIG_3_9.HTM">Figure 3.9</a> illustrates a typical grid layout
+for determining the average roughness length for each direction and distance.
+<br />
+<br /><a name="ARTOPHTS"></a><u><b>AR-TOPHTS</b>--Regional distribution of terrain heights</u>
+<br />Units: meters (m)
+<br />Range: -50 to 8840
+<br />
+<br />The source of these data is a topographic map. A
+circular grid with a 25-km radius centered on the release site is plotted
+or overlain on the topographic map(s). This circular grid is defined
+by dividing the area into 16 direction sectors (N, NNE, NE, etc.).
+Each of these sectors is divided into annular segments by circles with
+radii of 3, 10, and 25 km. For the thus-defined annular segments,
+the maximum height of the topography for each segment is found by inspection
+and entered as the terrain height value relative to the AR-TOPBAS value. There should be 64 terrain
+height values entered.
+
+<hr />
+<center><a href="https://www.pnnl.gov/projects/earth/mepas"><img src="MEPHOME.GIF" ></a></center>
+</body>
+</html>

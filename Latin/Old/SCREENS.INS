@@ -1,0 +1,12 @@
+C++++ Start insert SCREENS +++++++++++++++++++++++++++++++++++++++++++++
+C  History: Paul W. Eslinger : 01 Jul 1992
+C    IMAGE  : Array to hold a screen image
+C
+      INTEGER*4 IMAGE
+      COMMON /SCRENN/ IMAGE(1024), LERR,
+     *                ICMNU, ICDEF, ICBLB, ICOPT, ICTIT, ICNOR
+C
+      CHARACTER*78 CERR, CTITLE
+      PARAMETER (MXERR=22)
+      COMMON /SCRENC/ CERR(MXERR), CTITLE
+C++++ End insert SCREENS +++++++++++++++++++++++++++++++++++++++++++++++

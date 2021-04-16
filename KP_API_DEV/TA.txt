@@ -1,0 +1,4 @@
+category-userdefined, shape -polygon, stName, stPolygonalData, modelcaseid = 0, reachback component, langle, dDist, ldir, dlat, dlon, locationtype, isolationraidus
+userdefined|polygon|TestChitra|Polygon?1?5?0304250.96,5083747.95?0311362.67,5081166.30?0309657.81,5076197.84?0303763.86,5076051.71?0304250.96,5083747.95|0|http://www.arm.gov|0|0|0|0|0||0|
+
+ 

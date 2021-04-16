@@ -1,0 +1,11 @@
+"aqu5",0000000010
+1
+"aqu5 has known Aquifer concentration values."
+1
+"fcm3","Aquifer",2
+"CARBON-14","C14","yr","pCi/ml",2,0
+0.0,10.0
+100.0,10.0
+"TRITIUM (as tritiated water, HTO)","H3","yr","pCi/ml",2,0
+0.0,10.0
+100.0,10.0

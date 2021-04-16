@@ -1,0 +1,55 @@
+"exp4",54                               
+  1,
+  Medium type - Aquifer Source aqu3
+  1,
+"chronic","aqu3","Aquifer", 1, 2,
+0.,"km",0.,"km"
+"STRONTIU","SR90", 1,   9,
+     0.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 3.581E-08,
+"Y90","Y90",  0,
+     5.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 1.299E-07,
+"Y90","Y90",  0,
+    10.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 2.667E-08,
+"Y90","Y90",  0,
+    15.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 1.788E-09,
+"Y90","Y90",  0,
+    20.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 1.044E-10,
+"Y90","Y90",  0,
+    25.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 6.070E-12,
+"Y90","Y90",  0,
+    30.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 3.580E-13,
+"Y90","Y90",  0,
+    35.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 1.610E-14,
+"Y90","Y90",  0,
+    40.0,"yr",  5.0,"yr",  0,
+"Y90","Y90",  0,
+"YTTRIUM-","Y90", 0,   9,
+     0.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 4.880E-07,
+     5.0,"yr",  5.0,"yr",  1,
+"Water","ingestion","Bq/L"
+ 2.381E-09,
+    10.0,"yr",  5.0,"yr",  0,
+    15.0,"yr",  5.0,"yr",  0,
+    20.0,"yr",  5.0,"yr",  0,
+    25.0,"yr",  5.0,"yr",  0,
+    30.0,"yr",  5.0,"yr",  0,
+    35.0,"yr",  5.0,"yr",  0,
+    40.0,"yr",  5.0,"yr",  0,

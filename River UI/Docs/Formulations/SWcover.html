@@ -1,0 +1,372 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win95; U) [Netscape]">
+   <title>PNNL-11176</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+
+<br>
+<br>
+<br>
+<div align=right>PNNL-11176
+<br>UC-630</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br><font size="4"><b>The Multimedia Environmental Pollutant
+<br>Assessment System (MEPAS)<sup>&reg;</sup>:
+<br>Riverine Pathway Formulations</b></font>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ul>
+<br>G. Whelan
+<br>J. P. McDonald
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>November 1996
+
+<br>
+<br>
+<br>
+<br>
+
+<br>Prepared for the U.S. Department of Energy
+<br>under Contract DE-AC06-76RLO 1830
+
+<br>
+<br>
+<br>
+<br>
+
+<br>Pacific Northwest National Laboratory
+<br>Richland, Washington 99352
+<br>Copyright 1989-1996 Battelle Memorial Institute
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+
+<br><font size="3"><center><b><u>Preface</u></b></center></font>
+
+<br>
+
+<br> The Multimedia Environmental Pollutant
+Assessment System (MEPAS) is a physics-based environmental analysis code
+integrating source-term, transport, and exposure models for concentration,
+dose, or risk endpoints. Developed by Pacific Northwest National Laboratory<sup>(a)</sup>
+for the U.S. Department of Energy, MEPAS is designed for site-specific
+assessments using readily available information. Endpoints are computed
+for chemical and radioactive pollutants. For human health impacts, risks
+are computed for radioactive and hazardous carcinogens and hazard quotients
+for noncarcinogens. This system has wide applicability to environmental
+problems using air, groundwater, surface-water, overland, and exposure
+models. MEPAS enables users to simulate release of contaminants from a
+source; transport of contaminants through the air, groundwater, surface-water,
+or overland pathways; and transfer of contaminants through food chains
+and exposure pathways to the exposed individual or population. Whenever
+available and appropriate, guidance and/or models from the U.S. Environmental
+Protection Agency, International Commission on Radiological Protection,
+and National Council on Radiation Protection and Measurements were used
+to facilitate compatibility and acceptance.
+
+<br>
+
+<br> Although based on relatively standard
+transport and exposure computation approaches, MEPAS uniquely integrates
+these approaches into a single system providing a consistent basis for
+evaluating health impacts for a large number of problems and sites. Implemented
+on a desktop computer, a user-friendly platform allows the user to define
+the problem, input the required data, and execute the appropriate models.
+This document describes the mathematical formulations used in the surface-water
+component of MEPAS.
+
+<br>
+
+<center>
+<hr WIDTH="90%">
+<br>(a) Pacific Northwest National Laboratory is operated
+for the U.S. Department of Energy by Battelle Memorial Institute under
+Contract DE-AC06-76RLO 1830
+<br>
+<br>
+<hr WIDTH="90%">
+</center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<br><font size="3"><center><u><b>Summary</b></u></center></font>
+
+<br>
+
+<br> This report describes the mathematical
+formulations used for contaminant fate and transport in the riverine pathway
+of the Multimedia Environmental Pollutant Assessment System (MEPAS). Of
+the many types of surface-water bodies (e.g., nontidal rivers, estuaries,
+lakes, open coasts, reservoirs, impoundments, etc.) in which contaminant
+fate and transport could be simulated, only a nontidal river model is currently
+incorporated into MEPAS. Nontidal rivers refer to freshwater bodies with
+unidirectional flow in definable channels. Because the MEPAS methodology
+is compositely coupled, other surface-water models can be added when deemed
+necessary.
+
+<br>
+
+<br> The surface-water component of MEPAS
+provides estimates of contaminant concentrations in a river at locations
+downstream from a release point. The computed contaminant concentrations
+are used by the exposure assessment component of MEPAS to calculate dose
+and the resulting health effects to the surrounding population. Potential
+exposure of humans to contaminants via rivers can be associated with ingestion
+(e.g., drinking contaminated water), inhalation of volatile pollutants
+(e.g., showering), dermal contact to chemicals (e.g., swimming), or external
+dose from radionuclides (e.g., swimming).
+
+<br>
+
+<br> Because annual-average contaminant
+releases to a river in the MEPAS methodology are relatively long term compared
+to typical contaminant travel times in a river, the migration and fate
+of contaminants through the riverine pathway are described by the steady-state,
+two-dimensional advective-dispersive equation for solute transport. The
+results are based on an analytical solution that is well established in
+the scientific literature. The surface-water equation accounts for the
+major mechanisms of constituent persistence (i.e., degradation/decay),
+advection, and hydrodynamic dispersion. Persistence is described by a first-order
+degradation/decay coefficient. Radionuclide decay products are also accounted
+for. Advection is described by constant unidirectional flow in the longitudinal
+direction. Hydrodynamic dispersion is accounted for in the lateral direction.
+The processes associated with adsorption/desorption between the water column
+and suspended and bed sediments are not addressed. Neglecting these processes
+should, in most cases, represent a conservative assumption with regard
+to water column contaminant concentrations.
+
+<br>
+
+<br> Contamination can enter the riverine
+environment in one of three ways. The groundwater pathway can supply transient
+contaminant fluxes along the stream bank adjacent to the aquifer. Overland
+runoff can supply nonpoint-source contaminant fluxes from the land adjacent
+to the stream. Finally, the surface-water component of MEPAS allows direct
+discharges to the stream.
+
+<br>
+
+<br>The assumptions listed and/or discussed in this document
+are itemized below for easy reference. Section numbers are provided where
+a particular assumption is discussed in more detail.
+
+<ul>
+<li>Flow is steady and uniform in the longitudinal direction.</li>
+<li>The effects of contaminant adsorption to or desorption from
+sediment particles suspended in the water column or in the river bed are
+negligible; therefore, all contaminants travel at the same speed as the
+river flow.</li>
+<li>Contaminant releases to the riverine pathway are assumed
+to be long term relative to the travel time in the river. Therefore, a
+steady-state solution to the advective-dispersive equation is applicable
+for describing contaminant transport (Section 2.0).</li>
+<li>The river geometry can be represented by a rectangular cross-section.</li>
+<li>A line source along the stream bank can be approximated as
+a point source located at the center of the line source; therefore, only
+the point source equation is used in MEPAS (Section 2.1).</li>
+<li>Advection dominates dispersion in the longitudinal direction,
+and the contaminant plume is assumed to be fully mixed over the depth of
+the river; therefore, dispersion is only considered in the lateral direction.</li>
+<li>An appropriate lateral dispersion coefficient can be estimated
+based on the flow velocity and depth of the river (Section 2.5).</li>
+<li>Degradation/decay for all contaminants is first-order.</li>
+<li>The single concentration value specified by the user for
+the measured concentrations option is assumed to be temporally constant.</li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+
+<br><font size="3"><center><b><u>Acknowledgments</u></b></center></font>
+
+<br>
+
+<br> The authors thank Keith Shields for his technical review
+of this document, Robert Buchanan for editorial review, and Vickie Atkinson
+for helping to prepare the manuscript. Thanks are also extended to Larry
+Bagaasen, John Buck, Karl Castleton, Jim Droppo, Gariann Gelston, Andre
+d&eacute; Hamer, Bonnie Hoopes, Chikashi Sato, Dennis Strenge, and Monique
+Van der Aa, all of whom have, in some way, influenced the development of
+the waterborne codes with their technical guidance and suggestions. Appreciation
+also goes out to all the people who use MEPAS and have alerted us to potential
+problems in the code and offered suggestions for its improvement.
+
+<br>
+<br>
+<br>
+<br>
+
+<hr WIDTH="100%">
+
+<br>
+<br>
+
+<br><font size="3"><center><u><b>1.0 Introduction</b></u></font></center>
+
+<br>
+
+<br> This report describes the mathematical
+formulations used for contaminant fate and transport in the riverine pathway
+of the Multimedia Environmental Pollutant Assessment System (MEPAS). It
+is one in a series of reports that collectively describe the components
+of MEPAS. Other volumes address the following topics:
+
+<ul>
+<li>Source-Term Release (Streile et al. in press) - presents
+the mathematical formulations for simulating the release of contaminants
+from a source term to the atmospheric and waterborne transport pathways.</li>
+<li>Ground Water Pathway (Whelan et al. 1996) - presents the
+mathematical formulations for contaminant fate and transport in the groundwater
+pathway of MEPAS.</li>
+<li>Atmospheric Pathway (Droppo and Buck 1996) - presents the
+mathematical formulations for contaminant fate and transport in the atmospheric
+pathway of MEPAS.</li>
+<li>Exposure Pathway and Human Health Impact Assessment Models
+(Strenge and Chamberlain 1995) - describes the methods used by MEPAS to
+compute dose and human health impacts to selected individuals and populations
+caused by exposure to pollutants.</li>
+</ul>
+
+<br> The surface-water component of MEPAS provides
+estimates of contaminant concentrations in a river at locations downstream
+from a release point. The computed contaminant concentrations are used
+by the exposure assessment component of MEPAS to calculate dose and the
+resulting health effects to the exposed population. Potential exposure
+of humans to contaminants via rivers can be associated with ingestion (e.g.,
+drinking contaminated water), inhalation of volatile pollutants (e.g.,
+showering), dermal contact to chemicals (e.g., swimming), or external dose
+from radionuclides (e.g., swimming). A schematic diagram illustrating the
+riverine pathway is presented in Figure 1.1.
+
+<br>
+
+<br> Because contaminant releases to a river
+in the MEPAS methodology are generally of long duration relative to the
+travel time from the point of release to a receptor, the migration and
+fate of contaminants through the riverine pathway are described by the
+steady-state, two-dimensional advective-dispersive equation for solute
+transport. The results are based on an analytical solution that is well
+established in the scientific literature. The surface-water equation accounts
+for the major mechanisms of constituent persistence (i.e., degradation/decay),
+advection, and hydrodynamic dispersion. Persistence is described by a first-order
+degradation/decay coefficient. Radionuclide decay products are also accounted
+for. Advection is described by constant unidirectional flow in the longitudinal
+direction. Hydrodynamic dispersion is accounted for in the lateral direction.
+The processes associated with adsorption/desorption between the water column
+and suspended and bed sediments are not addressed. Neglecting these processes
+should, in most cases, represent a conservative assumption with regard
+to water column contaminant concentrations.
+
+<br>
+
+<br><img SRC="Fig1_1.gif" height=414 width=538>
+
+<br>
+
+<br> Contamination can enter the riverine pathway in one of
+three ways. The groundwater pathway can supply transient contaminant fluxes
+along the stream bank adjacent to the aquifer. Overland runoff can supply
+nonpoint-source contaminant fluxes from the land adjacent to the stream.
+Finally, contaminants can be discharged directly to the river.
+
+<br>
+
+<br>The specific topics addressed in Chapter 2.0 of this report are as follows:
+
+<ul>
+<li>Advective-Dispersive Equation - The advective-dispersive
+equation describes solute migration in the riverine environment. The form
+of the equation used is briefly discussed.</li>
+<li>Contaminant Concentration Equation - The solution to the
+advective-dispersive equation used in the riverine component is presented.
+The solution describes contaminant concentrations.</li>
+<li>Multiple River Receptors - The technique employed to estimate
+concentrations for more than one river receptor is presented.</li>
+<li>Mixing Length - A lateral mixing length is defined, which
+describes the lateral distance in which the migrating solute plume can
+be considered to be fully mixed, and is used in the multiple river receptor
+estimation technique. The time for the contaminant to travel from the waste
+site through the river to a receptor of concern as well as the lateral
+dispersion coefficient are also described. Both are used in determining
+mixing lengths.</li>
+</ul>
+
+<br> The specific topics addressed in Chapter 3.0 of this report
+are as follows:
+
+<ul>
+<li>Contaminant Degradation/Decay - The technique for computing
+the degradation of chemicals and/or the decay of radionuclides is described,
+as well as the algorithms used to assess degradation/decay at the source
+of contamination only, in the environment only, or both.</li>
+<li>Surface Water Mass Balance at the Source - This section briefly
+describes the features included in the MEPAS methodology to ensure that
+mass is conserved in the analysis.</li>
+<li>Measured Concentrations in the Riverine Environment - This
+section describes the option within the methodology of using measured environmental
+contaminant levels in the assessment of health impacts to downstream sensitive
+receptors, as opposed to performing transport calculations to estimate
+these environmental concentrations.</li>
+</ul>
+
+<br>Chapter 4.0 provides a listing of the equation notations
+found throughout the report.
+
+</font>
+</body>
+</html>

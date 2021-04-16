@@ -1,0 +1,177 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>8.3 Local Climatological Plum Channeling</title>
+</head>
+<body>
+
+<font face="verdana" size="2">
+
+<br><cetner><font size="3"><u><b>8.3 LOCAL CLIMATOLOGICAL PLUME CHANNELING</u></b></font></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+importance of local circulations on exposures is a function of the size
+of the plume relative to the scale of the local circulations. Initially
+the plume is smaller than the local circulation, and the entire plume trajectory
+will be determined by the local circulation. As the plume travels, the
+dimensions of the plume increase and the local circulations become progressively
+less important in computing exposures.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The trajectories of ground-level releases will be affected by local wind
+channeling. The trajectories of elevated releases will be affected except
+in cases where the height of the plume is not within the local circulation.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Depending on the local topographical conditions, the trajectories in the
+immediate vicinity of the release can be important for the computation
+of both maximum individual and total exposures. The consideration of local
+channeling is most important in cases where the exposures to people will
+be significantly changed. In the absence of local populations, the local
+channeling may still be needed if predicted air concentrations are being
+evaluated.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The frequency of occurrence of winds in the direction of the downslope
+flow from the release point are assumed to be enhanced by the local channeling
+effects. Downslope winds driven by nocturnal cooling are assumed to occur
+mainly under stable atmospheric conditions. The winds are progressively
+coupled back into the regional winds either when the plume has dispersed
+to the height of the channel or at the end of the channel.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Upslope winds are driven by the tendency of warmer air to rise, whereby
+downslope winds are driven by the tendency of cooler air to fall. The natural
+warming and cooling processes at the surface make the overlying air layer
+unstable and stable, respectively. Hence the upslope winds tend to have
+fast dispersion rates and downwind winds tend to have slow dispersion rates.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The MEPAS atmospheric component computes total exposure to people in the
+region surrounding the release. This total exposure is the sum of a matrix
+of stable, neutral, and unstable conditions. The MEPAS local channeling
+module accounts for the channeling under the slow dispersion (stable) conditions.
+For neutral and unstable conditions, no special formulations are used to
+account for channeling.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+All stable conditions (Pasquill categories E, F, and G) are assumed to
+be nocturnal drainage conditions for the site. The winds for these stable
+conditions are assumed to flow in the downslope direction with a nominal
+initial wind speed of 2.0 m/s at 1-m height, which is consistent with typical
+wind observations in complex terrain (Orgill 1981).
+
+<br>
+
+<br>&nbsp;Within the channel, the air concentrations for stable conditions are computed using
+
+<br>
+
+<br><img SRC="Image98.gif" height=22 width=97 align=LEFT>
+<p align="center">(81)</p>
+
+<br>
+
+<br>where
+
+<ul>
+<br>Q = emission rate (g/s)
+<br>C = air concentration (g/m<sup>3</sup>)
+<br>Y = the horizontal dispersion width (m)
+<br>u = wind velocity (m/s).
+</ul>
+
+<br>&nbsp;
+
+<ul>The other term in the equation, <font face="Symbol">s</font><sub>z</sub>,
+is as defined in Equation 45. Once the plume becomes as deep as the channel,
+it is assumed to start dispersing out of the channel. The plume is approximated
+using a sector average "release" of material with initial dispersion equal
+to the depth of the channel. An initial width equal to the channel width
+is used. The coordinates of this "release" are centered at the point where
+the vertical dispersion parameter,<font face="Symbol">s</font><sub>z</sub>,
+has increased to the depth of the channel.</ul>
+
+<br>
+
+<br><img src="figure8_1.jpg" border="0">
+<br><center>Figure 8.1 illustrates the channeling model for the case where the plume reaches the end of the channel before dispersing out of the channel. A release within the channel occurs at radius
+= 0, which travels in the downslope direction of the channel, T.</center>
+
+<br>
+
+<br>Between r = 0 and r = L, the dispersion width is defined as follows:
+
+<br>
+
+<br>Y =<font face="Symbol">s</font><img SRC="Image99.gif" height=13 width=10>when
+ <font face="Symbol">s</font><img SRC="Image99.gif" height=13 width=10>
+<br>Y = W = <font face="Symbol">s</font><img SRC="Image100.gif" height=13 width=10>when
+W = <font face="Symbol">s</font><img SRC="Image101.gif" height=13 width=10>or
+W &lt; <font face="Symbol">s</font><img SRC="Image102.gif" height=10 width=7>
+<p align="center">(82)</p>
+
+<br>where <font face="Symbol">s</font><sub>y =</sub> lateral dispersion parameter (m).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+To simulate the transition in flows at the end of the channel and avoid
+an abrupt concentration change between the channeled flow and the regional
+climatological dispersion, a linear interpolation is made between channel
+and regional concentrations for the direction, T, over the distance, D.
+This transition distance is assumed to be equal to the channel width, W.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This channeling module is designed to improve the performance of the atmospheric
+component by accounting for the gross aspects of local channeling in the
+computation of long-term average exposures. The channeling module provides
+for directed local plume movement under nocturnal conditions with limited
+dispersion. Given the complex atmospheric processes found in complex terrain,
+this module only provides for first-order effects that directly influence
+the initial movement of the release. If significant wind channeling
+<br>Top View
+<br><sub>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+</sub>&ordm;
+<br>&Auml;&Acirc;&Auml;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&frac14;
+<br>&sup3; Actual&sup3;Release DOWNSLOPE Offset&sup3;Release
+<br>W ---O--- CHANNEL --> ---O---
+<br>&sup3; &sup3; (0,T) DIRECTION, T &sup3; (L+D,T)
+<br>&Auml;&Aacute;&Auml;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&Iacute;&raquo;
+<br>////////////////////////////////////////////
+&ordm;
+<br>&sup3;&lt;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;
+L &Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;&Auml;>&sup3;&lt;&Auml;&Auml;D&Auml;&Auml;>&sup3;
+
+<br>
+
+<br><center>FIGURE 8.1 Schematic of Climatological Nocturnal Wind Channeling Component</center>
+
+<br>
+
+<br>is expected in the immediate vicinity of the release, this module provides a means of accounting for the local channeling
+effects.
+
+
+</font>
+</body>
+</html>

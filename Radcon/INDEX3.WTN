@@ -1,0 +1,37 @@
+C     MEPAS RADCON: INDEX3.FTN            VERSION DATE: 02-20-92              
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.     
+C*****************************************************************************
+C                        INCLUDE STATEMENT: INDEX3.FTN 
+C
+C     Formally called as COMMON/INDEX3/in each subroutine, it is now an 
+C     INCLUDE 'INDEX3.FTN'.  Each common block in RADCON was converted to an
+C     INCLUDE statement to allow for easier changes to subroutines.  This 
+C     include statement contains important parameters to run water code.
+C
+C     Creation Date:     02/20/92 - JWB
+C     Last Modified:     02/20/92 - JWB
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, COMPAR, CONTAM, COUPLE, DECAY, DUMMYV, FAOPET,
+C                   FUNCTION, INITIN, INPUTM, INTERP, LEACH1, LEACHG, LEACHV,
+C                   LIMITS, MASS, MEASUR, MULREC, ORIGIN, PNTTIM, SCENAR, 
+C                   SIMPS, SOURCE, SSGW, SSWAP, S_TERM, STWL, WETLND, WLINIT,
+C                   WLIST, YZAVE
+C
+C=== Significant Parameters ==================================================
+C
+C    NPRINT - index for extra print statements
+C    NUM    - number of contaminant flux input
+C    NMED   - number of media for the run
+C    NUMSCE - number of transport scenarios
+C    NUMCON - number of constituents
+C    NTIMES - number of time steps
+C
+C*****************************************************************************
+C
+c      INCLUDE 'MAXIMUM.WTN'
+      INTEGER*4    NPRINT,NUM(MAXCON),NMED,NUMSCE,NUMCON,NTIMES
+C
+      COMMON/INDEX3/NPRINT,NUM,NMED,NUMSCE,NUMCON,NTIMES
+

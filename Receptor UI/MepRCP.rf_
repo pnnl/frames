@@ -1,0 +1,89 @@
+10
+1,EPA 1991,"EPA, 1991, Standard Default Exposure Factors, OSWER Directive 9285.6-03, U.S. Environmental Protection Agency, Washington, D.C.",
+2,EPA 1992,"EPA.  Dermal Exposure Assessment: Principles and Applications.  USEPA/600/8-91/011B.  U.S. Environmental Protection Agency, Office of Research and Development, Washington, D.C.",
+3,EPA 1997 Vol I,"EPA 1997.  Exposure Factors Handbook Volume I: General Factors.  EPA/600/P-95/002Fa, August 1997.  U.S. Environmental Protection Agency, Office of Research and Development, Washington, D.C.",
+4,EPA 1997 Vol II,"EPA 1997.  Exposure Factors Handbook Volume II: Food Ingestion Factors.  EPA/600/P-95/002Fb, August 1997.  U.S. Environmental Protection Agency, Office of Research and Development, Washington, D.C.",
+5,EPA 1997 Vol III,"EPA 1997.  Exposure Factors Handbook Volume III: Activity Factors.  EPA/600/P-95/002Fc, August 1997.  U.S. Environmental Protection Agency, Office of Research and Development, Washington, D.C.",
+6,Kennedy & Strenge 1992,"Kennedy, W. E. and D. L. Strenge.  1992.  Residual Radioactive Contamination From Decommissioning: Technical Basis for Translating Contamination Levels to Annual Total Effective Dosei Equivalent.  Final Report.  NUREG/CR-5512.  U.S. Nuclear Regulatory Commission, Washington, D.C.",
+7,NRC 1977,"NRC.  1977.  Calculation of Annual Doses to Man from Routine Releases of Reactor Effluents for the Purpose of Evaluating Compliance with 10 CFR Part 50, Appendix I.  Regulatory Guide 1.109, Rev. 1, US Nuclear Regulatory Commission, Washington, D.C.",
+8,Strenge et al 1986,"Strenge, D.L., R. A. Peloquin, G. Whelan.  1986.  ALDTAP II - Technical Reference and User Guide.  U. S. Nucliear Regulatory Commission. NUREG/CR-4013.  Washington, D.C.",
+9,Maximum Value,The maximum possible value.  Representing 100% occurrence over time of the exposure pathway.  We recommend that the user verify that it is appropriate for the current analysis and update if necessary.,
+10,Nominal Value,A representative value.  We recommend that the user verify that it is valid  and appropriate for the current analysis and update if necessary,
+67
+IC-ADHFAC,2,1,mg/cm^2
+IC-ADHSED,2,1,mg/cm^2
+IC-ASKINDM,3,20000,cm^2
+IC-ASKINSL,3,"5,000",cm^2
+IC-ASKINSO,3,5000,cm^2
+IC-ASKINSW,3,20000,cm^2
+IC-BODYWT,1,70,kg
+IC-EVBOAT,8,0.066,event/day
+IC-EVSHOR,7,0.0017,event/day
+IC-EVSHWR,5,1,event/day
+IC-EVSOIL,10,1,event/day
+IC-EVSWIM,5,0.033,event/day
+IC-EXPDUR,0,,yr
+IC-FREQBOAT,9,1,fraction
+IC-FREQEXT,9,1,fraction
+IC-FREQFIN,9,1,fraction
+IC-FREQING,9,1,fraction
+IC-FREQINH,9,1,fraction
+IC-FREQLEAF,1,1,fraction
+IC-FREQMK,1,1,fraction
+IC-FREQMT,1,1,fraction
+IC-FREQSHDER,9,1,fraction
+IC-FREQSHEXT,9,1,fraction
+IC-FREQSHING,9,1,fraction
+IC-FREQSHL,9,1,fraction
+IC-FREQSL,9,1,fraction
+IC-FREQSLDER,9,1,fraction
+IC-FREQSLEXT,9,1,fraction
+IC-FREQSLING,9,1,fraction
+IC-FREQSRDER,9,1,fraction
+IC-FREQSRING,9,1,fraction
+IC-FREQSRINH,9,1,fraction
+IC-FREQSWDER,9,1,
+IC-FREQSWEXT,9,1,
+IC-FREQSWING,9,1,
+IC-FREQVEG,1,1,fraction
+IC-FTI,5,0.875,fraction
+IC-FTO,5,0.125,fraction
+IC-RHOMS,10,1.5,g/cm^3
+IC-SBRF,8,0.5,fraction
+IC-SHI,6,0.33,fraction
+IC-SHO,6,1,fraction
+IC-SKINL,2,0.001,cm^2
+IC-SWF,7,0.2,fraction
+IC-TAGE1,1,0,yr
+IC-TAGE2,1,70,yr
+IC-TEBOAT,8,0.5,hr
+IC-TESHOR,7,2,hr
+IC-TESHWR,5,0.167,hr
+IC-TESWIM,5,1,hr/event
+IC-TMS,10,0.04,m
+IC-UAGLEAF,4,0.125,kg/day
+IC-UAGMK,4,0.56,L/day
+IC-UAGMT,4,0.147,kg/day
+IC-UAGVEG,4,0.157,kg/day
+IC-UAQFIN,3,0.00407,kg/day
+IC-UAQSHL,3,0.00251,kg/day
+IC-UBR,3,15.2,m^3/day
+IC-UBRES,3,15.2,m^3/day
+IC-UBRSH,3,15.2,m^3/day
+IC-UBW,10,0.06,L/hr
+IC-UEXT,9,24,hr
+IC-USED,10,0.1,g/hr
+IC-USOIL,3,0.05,g/day
+IC-USW,10,0.1,L/hr
+IG-UDWGW,3,1.4,L/day
+IW-UDWSW,3,1.4,L/day
+
+
+
+
+
+
+
+
+
+

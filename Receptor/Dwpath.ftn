@@ -1,0 +1,47 @@
+!   MEPAS HAZ2: DWPATH.FTN             Version Date: 08-03-1992
+!   Copyright 1989, 1992 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK DWPATH                              *
+!                                                                            *
+!  Common block DWPATH Data for drinking water pathway                       *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    09/23/85 (Converted to PC)                              *
+!  Last Modified:    08/03/92 - DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!     variable    CHAR  nnnnnnnnnnnnnnnnnnnnnn
+!     LTRTL(10,3) Int   Flag for water treatment for each usage location:
+!                         <= 0, no treatment; >0 treatment using WPF (PSET3)
+!     TWAT(10,3)  Real  Holdup time between water intake plant and
+!                         consumption point, days.
+!
+!==== Modification History ===================================================
+!
+!     Date         Who  Modification Description
+!     --------     ---  ------------------------------------------------------
+!
+!==== COMMON Block Definition ================================================
+!
+      COMMON/DWPATH/TWAT(3),LTRTL(3)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!

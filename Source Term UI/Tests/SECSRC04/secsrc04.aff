@@ -1,0 +1,71 @@
+"src5",37
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.5"
+"  Site Index: 1"
+"  Module Index: 2"
+"  Module Name: src5"
+"  Created:  4/6/2004 2:51:19 PM"
+"=================================================="
+1
+"all"
+"Area"
+50,"m^2"
+0,"m"
+0,"m"
+0,"m/s"
+25,"C"
+25,"C"
+2
+"Gas 1",0.3,"fraction",0.3,"g/cm^3",
+"Particle 1",7.5,"um",1.5,"g/cm^3",
+2
+"PCB (General Classification)","1336363","yr","g/yr",4,0
+0,0,0
+40,50,0
+50,20,0
+50.1,0,0
+"STRONTIUM-90","SR90","yr","pCi/yr",4,1
+0,0,0
+40,0,50000000000000
+50,0,20000000000000
+50.1,0,0
+"YTTRIUM-90","Y90","yr","pCi/yr",4,"STRONTIUM-90","SR90"
+0,0,0
+40,0,15000000000000
+50,0,1000000000000
+50.1,0,0
+"src4",32                               
+7
+================================================================================
+  MEPAS Source Term Release Module
+  Case File:
+  Module Id:
+  Run Performed:
+  Output File:
+================================================================================
+1
+All
+area
+20000
+0,m2
+0,m
+0,m/s
+25,Deg C
+25,Deg C
+4
+Gas 1,0,fraction,0,g/cm^3
+Particle 1,0.3000000119,um,1.5,g/cm^3
+Particle 2,3,um,1.5,g/cm^3
+Particle 3,7.5,um,1.5,g/cm^3
+2
+PCB (General Classification),1336363,yr,g/yr,2,0
+0,0,0,0,0
+85,0,0,0,0
+STRONTIUM-90,SR90,yr,pCi/yr,2,1
+0,0,0,0,0
+104,0,0,0,0
+YTTRIUM-90,Y90,yr,pCi/yr,2,STRONTIUM-90,SR90
+0,0,0,0,0
+105,0,0,0,0

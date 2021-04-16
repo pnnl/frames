@@ -1,0 +1,476 @@
+/*
+OS=2000
+Res=1600x1200
+RunSpeed=Fast
+*/
+
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+impacts="c:\\frames\\impacts\\";
+frames="c:\\frames\\";
+tests="c:\\frames\\autotest\\impacts\\";
+//windows="c:\\windows\\"; 	//For 95,98,or XP Users
+windows="c:\\winnt\\";	//For 2000 Users
+
+//y=8;	//Have y=8 for XP Users
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+// Start Test Suite
+	//f.rename(windows+"framesui.ini",windows+"framesui.ini.bak");
+	t.StartTestSuite("MEPAS Health Impacts03","","c:\\program files\\framesv2\\documents\\");
+	t.NewTestCase("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec(frames+"fui.exe");
+	a.Sleep(1000);
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Wait For Active Framework window");
+	a.WinMaximize("Framework for Risk","");
+if(t.TestCaseComplete()!=0)
+{
+
+	//a.SetKeyDelay(80);
+	f.delete(tests+"Impact03a.gid");
+	f.delete(tests+"Impact03b.gid");
+t.NewTestCase("OpenCase","Open Impact03e.gid");
+	t.Plan("File - Open");
+	a.Send("!f#o");
+	a.Sleep(500);
+	a.Send(tests+"Impact03e.gid");
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	t.TestCaseComplete();	
+	
+t.NewTestCase("Save As...","File Save As...");
+	a.Send("!f#a");
+	a.Sleep(500);
+	a.Send(tests+"Impact03a.gid");
+	a.Send("{ENTER}");
+	a.Sleep(1500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Icons","Connect Icons");
+	t.Plan("Connect Surface Water to Exposure");
+	a.Send("{SHIFTDOWN}");
+	a.LeftClickDrag(430,315+y,640,215+y);
+	a.Sleep(500);
+	a.Send("{SHIFTUP}");
+	t.Plan("Connect Exposure to Intake");
+	a.Send("{SHIFTDOWN}");
+	a.LeftClickDrag(640,215+y,885,215+y);
+	a.Sleep(500);
+	a.Send("{SHIFTUP}");
+	t.Plan("Connect Intake to Health Impacts");
+	a.Send("{SHIFTDOWN}");
+	a.LeftClickDrag(885,215+y,1115,215+y);
+	a.Sleep(500);
+	a.Send("{SHIFTUP}");
+	t.Plan("Connect Constituent to All");
+	a.Send("{SHIFTDOWN}");
+	a.LeftClickDrag(295,75+y,430,315+y); //Surface Water
+	a.Sleep(500);
+	a.LeftClickDrag(295,75+y,640,215+y); //Exposure
+	a.Sleep(500);
+	a.LeftClickDrag(295,75+y,885,215+y); //Intake
+	a.Sleep(500);
+	a.LeftClickDrag(295,75+y,1115,215+y); //Health Impacts
+	a.Send("{SHIFTUP}");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Models","Select Models");
+	t.Plan("Constituent");
+	a.RightClick(295,75+y);
+	a.Send("{DOWN}{ENTER}"); //General Info
+	a.Send("{DOWN}{ENTER}"); //Model
+	a.Sleep(500);
+	
+	t.Plan("Aquifer");
+	a.RightClick(430,315+y);
+	a.Send("{DOWN}{ENTER}"); //General Info
+	a.Send("{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}"); //Known Surface Water
+	a.Sleep(500);
+
+	t.Plan("Exposure");
+	a.RightClick(640,215+y);
+	a.Send("{DOWN}{ENTER}"); //General Info
+	a.Send("{DOWN}{ENTER}"); //MEPAS Chronic Exposure
+	a.Sleep(500);
+	
+	t.Plan("Intake");
+	a.RightClick(885,215+y);
+	a.Send("{DOWN}{ENTER}"); //General Info
+	a.Send("{DOWN}{ENTER}"); //MEPAS Intake Module
+	a.Sleep(500);
+	
+	t.Plan("Health Impacts");
+	a.RightClick(1115,215+y);
+	a.Send("{DOWN}{ENTER}"); //General Info
+	a.Send("{DOWN}{ENTER}"); //MEPAS Health Impacts
+	a.Sleep(500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Contaminants","Add Contaminants");
+	t.Plan("Right Click Icon");
+	a.RightClick(295,75+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(3000);
+	a.LeftClick(450,635+y);
+	a.Send("Benzene");
+	a.Send("!n!n!n!n!n!n!n!n!n!n!n!n!n");
+	t.Plan("Add Benzene");
+	a.LeftClick(200,320+y);
+	a.Sleep(500);
+	
+	a.LeftClick(450,635+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Beryllium");
+	t.Plan("Add Beryllium");
+	a.LeftClick(200,320+y);
+	a.Sleep(500);
+	
+	a.LeftClick(450,635+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("DELTA-BHC");
+	t.Plan("Add DELTA-BHC");
+	a.LeftClick(200,320+y);
+	a.Sleep(500);
+	
+	a.LeftClick(450,635+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Strontium-90");
+	t.Plan("Add Strontium-90");
+	a.LeftClick(200,320+y);
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(1000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Surface Water","Add Data Into Surface Water");
+	t.Plan("Right Click Icon");
+	a.RightClick(430,315+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("FRAMES","");
+	a.LeftClick(90,215+y); //Table
+	
+	t.Plan("Fill Out Aquifer Table");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("100");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("10");
+	a.Send("{UP}");
+	a.Send("10");
+	a.Sleep(500);
+	
+	t.Plan("Next Contaminant");
+	a.LeftClick(295,145+y);
+	a.LeftClick(90,215+y); //Table
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("100");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("10");
+	a.Send("{UP}");
+	a.Send("10");
+	a.Sleep(500);
+	
+	t.Plan("Next Contaminant");
+	a.LeftClick(295,145+y);
+	a.LeftClick(90,215+y); //Table
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("100");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("10");
+	a.Send("{UP}");
+	a.Send("10");
+	a.Sleep(500);
+	
+	t.Plan("Next Contaminant");
+	a.LeftClick(295,145+y);
+	a.LeftClick(90,215+y); //Table
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("100");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("10");
+	a.Send("{UP}");
+	a.Send("10");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Exposure","Add Data Into Exposure");
+	t.Plan("Right Click Icon");
+	a.RightClick(640,215+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("MEPAS","");
+	
+	t.Plan("Fill Out Ground Water Tab");
+	a.LeftClick(45,65+y);
+	a.Send("{TAB}");
+	a.Send("50");
+	a.Send("{TAB}{TAB}"); //Pathways
+	a.Send("{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");	
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{DOWN}{DOWN}"); //Indoor - Air
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");	
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+	a.Send("{TAB}{SPACE}");
+		
+		t.Plan("Fill Out Water Usage Subtab");
+		a.LeftClick(145,165+y);
+		a.Send("{TAB}{TAB}{SPACE}");
+		a.Send("{TAB}{DELETE}{DELETE}{DELETE}");
+		a.Send("0.5");
+		a.Send("{TAB}{DELETE}{DELETE}{DELETE}");
+		a.Send("150");
+		a.Send("{TAB}{TAB}{TAB}{TAB}{SPACE}");
+		a.Sleep(500);
+		
+		t.Plan("Fill Out Recreational Subtab");
+		a.LeftClick(235,165+y);
+		a.Send("{TAB}{DELETE}{DELETE}");
+		a.Send("3"); //EW-TFSH
+		a.Send("{TAB}{TAB}{DELETE}{DELETE}");
+		a.Send("5"); //EW-TINV
+		a.Send("{TAB}{TAB}{DELETE}{DELETE}{DELETE}{DELETE}");
+		a.Send("1"); //EW-TSS
+		a.Sleep(500);
+	
+	t.Plan("Fill Out Exposure Controls Tab");
+	a.LeftClick(155,65+y);
+	a.Send("{TAB}");
+	a.Send("0");
+	a.Send("{TAB}{TAB}");
+	a.Send("100");
+	a.Send("{TAB}{TAB}");
+	a.Send("2");
+	a.Sleep(500);
+	
+	t.Plan("Fill Out Leach Rates Tab");
+	a.LeftClick(275,65+y);
+	a.Send("{TAB}{TAB}{TAB}");
+	a.Send("50");
+	a.Sleep(500);
+	
+		t.Plan("Next Contamiant");
+		a.LeftClick(215,210+y);
+		a.Send("{RIGHT}{ENTER}");
+		a.Send("50");
+		
+		t.Plan("Next Contamiant");
+		a.LeftClick(215,210+y);
+		a.Send("{RIGHT}{ENTER}");
+		a.Send("50");
+		
+		t.Plan("Next Contamiant");
+		a.LeftClick(215,210+y);
+		a.Send("{RIGHT}{ENTER}");
+		a.Send("50");
+		a.Send("{TAB}{TAB}{TAB}");
+		a.Send("50");
+		a.Sleep(500);
+	
+	t.Plan("Fill Out Constituent Parameters Tab");
+	a.LeftClick(390,65+y);
+	a.Sleep(500);
+	a.LeftClick(565,135+y);
+	a.LeftClick(565,135+y);
+	a.LeftClick(565,135+y);
+	a.Sleep(500);
+	a.LeftClick(295,135+y);
+	a.Sleep(500);
+	a.LeftClick(365,175+y);
+	a.Sleep(500);
+	a.Send("1e20");
+	a.Sleep(500);
+	a.LeftClick(295,135+y);
+	a.Sleep(500);
+	a.LeftClick(365,175+y);
+	a.Sleep(500);
+	a.Send("1e20");
+	a.Sleep(500);	
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Intake","Add Data Into Intake Model");
+	t.Plan("Right Click Icon");
+	a.RightClick(885,215+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("MEPAS","");
+	t.Plan("At This Point It Should Be Filled With Default Data");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Health Impacts","Add Data Into Health Impacts Model");
+	t.Plan("Right Click Icon");
+	a.RightClick(1115,215+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("MEPAS","");
+	t.Plan("Fill Out Chemical Tab");
+	a.LeftClick(40,65+y);
+	a.Sleep(500);
+	t.Plan("This Tab Should Be Filled With Default Data");
+	t.Plan("Fill Out Radionuclide Tab");
+	a.LeftClick(115,65+y);
+	a.Send("{TAB}{TAB}{TAB}{TAB}");
+	a.Send("{SPACE}");
+	a.Send("{TAB}{TAB}{TAB}");
+	a.Send("{SPACE}");
+	a.Send("{TAB}{TAB}{TAB}");
+	a.Send("{SPACE}");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Run","Run GID");
+	t.Plan("GO...");
+	a.Send("!g");
+	a.Sleep(6000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Save File and Close","Save After Run and Close");
+	t.Plan("File - Save");
+	a.Send("!f#s");
+	a.Sleep(500);
+	
+	//t.Assert(f.compare(tests+"impact03a.hif",impacts+"impact03a.hif"),"Comparing hif files");
+	//t.Assert(f.compare(tests+"impact03a.rif",impacts+"impact03a.rif"),"Comparing rif files");
+	
+t.NewTestCase("Save As...","File Save As...");
+	a.Send("!f#a");
+	a.Sleep(500);
+	a.Send(tests+"Impact03b.gid");
+	a.Send("{ENTER}");
+	a.Sleep(1500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Intake","Change Data In Intake Model");
+	t.Plan("Right Click Icon");
+	a.RightClick(885,215+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("MEPAS","");
+	t.Plan("Change Exposure Duration");
+	a.LeftClick(410,115+y);
+	a.Send("{DELETE}");
+	a.Send("5");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1500);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Change Exposure Data","Change Exposure Data for Impacts2b");
+	t.Plan("Right Click Icon");
+	a.RightClick(640,215+y);
+	a.Send("{DOWN}{DOWN}{ENTER}"); //User Input
+	a.Sleep(2000);
+	a.WinActivate("MEPAS","");
+	a.Sleep(500);
+	
+	t.Plan("Ground Water Tab");
+	a.LeftClick(55,65+y);
+	
+	t.Plan("Change Pathways");
+	a.LeftClick(68,250+y);
+	a.LeftClick(68,270+y);
+	a.LeftClick(68,320+y);
+	a.LeftClick(68,340+y);
+	a.LeftClick(68,360+y);
+	a.LeftClick(68,380+y);
+	a.LeftClick(268,250+y);
+	a.LeftClick(268,270+y);
+	a.LeftClick(268,290+y);
+	a.LeftClick(268,310+y);
+	a.LeftClick(284,380+y);
+	a.LeftClick(449,250+y);
+	a.LeftClick(449,270+y);
+	a.LeftClick(449,290+y);
+	a.LeftClick(449,360+y);
+	a.LeftClick(449,380+y);
+	a.LeftClick(449,400+y);
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(500);
+	a.WinActivate("Framework for Risk","");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+
+t.NewTestCase("Run","Run GID");
+	t.Plan("GO...");
+	a.Send("!g");
+	a.Sleep(4000);
+	a.WinActivate("Framework for Risk","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Save File and Close","Save After Run and Close");
+	t.Plan("File - Save");
+	a.Send("!f#s");
+	a.Sleep(500);
+	
+	//t.Assert(f.compare(tests+"impact03b.hif",impacts+"impact03b.hif"),"Comparing hif files");
+	//t.Assert(f.compare(tests+"impact03b.rif",impacts+"impact03b.rif"),"Comparing rif files");
+
+	t.Plan("Close Framework");
+	a.Send("!{F4}");
+	t.TestCaseComplete();
+	
+//f.delete(windows+"framesui.ini");
+//f.rename(windows+"framesui.ini.bak",windows+"framesui.ini");
+
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");

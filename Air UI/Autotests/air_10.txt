@@ -1,0 +1,491 @@
+/*
+OS=2000
+Res=1024x768
+RunSpeed=FAST
+*/
+
+import FRAMES2API.*;
+import HiddenSoft.*;
+import java.io.*;
+
+a =new AutoIt();
+f =new FileTools();
+t =new Testing();
+
+//y=8;	//Have y=8 for XP Users
+y=0;	//Have y=0 for 95,98,or 2000 Users
+
+tests="c:\\frames\\tests\\air\\";
+
+// Start Test Suite
+	t.StartTestSuite("Air 10","","c:\\program files\\framesv2\\documents\\");
+	t.NewTestCase("StartFUI","Start Frames 1.4");
+	t.Plan("Start Frames 1.4");
+	Runtime.getRuntime().exec("c:\\frames\\fui.exe");
+	a.Sleep(2000);
+	t.Assert(a.WinWait("Framework","",5)==0,"Wait for Framework window");
+	t.Plan("Activate Framework Window");
+	a.WinActivate("Framework for Risk","");
+	t.Assert(a.WinWaitActive("Framework","",5)==0,"Wait For Active Framework window");
+	a.WinMaximize("Framework for Risk","");
+	a.Sleep(1000);
+if(t.TestCaseComplete()!=0)
+{
+
+//It does not make sense to continue if Frames 1.4 is not running
+	f.delete(tests+"air_10.gid");	
+	//a.SetKeyDelay(80);
+	
+t.NewTestCase("OpenGID","Open Air_01e.gid");
+	t.Plan("Open File");
+	a.Send("!#f");
+	t.Plan("Select Open");
+	a.Send("o");
+	a.Sleep(4000);
+	t.Plan("Enter Air_01e.gid");
+	a.Send(tests+"Air_01e.gid{ENTER}");
+	a.Sleep(1000);
+	t.TestCaseComplete();
+	
+t.NewTestCase("Icons","Connect Icons");
+	a.Send("{SHIFTDOWN}");
+	t.Plan("Connect Source to Air");
+	a.LeftClickDrag(375,155+y,375,275+y);
+	a.Sleep(500);
+	
+	t.Plan("Connect Constituent to All");
+	a.LeftClickDrag(250,63+y,375,155+y);	//Source
+	a.Sleep(500);
+	a.LeftClickDrag(250,63+y,375,275+y);	//Air
+	a.Sleep(500);
+	a.Send("{SHIFTUP}");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Models","Select Models");
+	t.Plan("Right Click Con");
+	a.RightClick(250,63+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");		//General Info
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");		//Defaul Con Model
+	a.Sleep(500);
+	a.WinActivate("Framework","");
+	
+	t.Plan("Right Click Source");
+	a.RightClick(375,155+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");		//General Info
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}");	//Know Source Model
+	a.Sleep(500);
+	a.WinActivate("Framework","");
+	
+	t.Plan("Right Click Air");
+	a.RightClick(375,275+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");		//General Info
+	a.Sleep(500);
+	a.Send("{DOWN}{ENTER}");		//MEPAS Air
+	a.Sleep(500);
+	a.WinActivate("Framework","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Constituents","Add Constituents");
+	a.RightClick(250,63+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");		//User Input
+	a.Sleep(5000);
+	
+	a.LeftClick(420,515+y);
+	a.Send("Tritium");
+	a.Send("!n");
+	t.Plan("Add Tritium");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Uranium-234");
+	t.Plan("Add Uranium-234");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Thorium-230");
+	t.Plan("Add Thorium-230");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Methylene Chloride");
+	t.Plan("Add Methylene Chloride");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("1,1,1,2-Tetrachloroethane");
+	t.Plan("Add 1,1,1,2-Tetrachloroethane");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Benzyl Alcohol");
+	t.Plan("Add Benzyl Alcohol");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	a.LeftClick(420,515+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("Aluminum Fluoride");
+	t.Plan("Add Aluminum Fluoride");
+	a.LeftClick(150,265+y);
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(1000);
+	a.WinActivate("Framework","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Source","Add Data Into Source");
+	a.RightClick(375,155+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");		//User Input
+	a.Sleep(3000);
+	a.WinActivate("FRAMES","");
+	a.LeftClick(335,120+y);
+	a.Send("28.274");
+	a.Send("{TAB}{TAB}");
+	a.Send("60");
+	a.Send("{TAB}{TAB}");
+	a.Send("0");
+	a.Send("{TAB}{TAB}");
+	a.Send("0");
+	a.Send("{TAB}{TAB}");
+	a.Send("20");
+	a.Send("{TAB}{TAB}");
+	a.Send("20");
+	
+	a.LeftClick(500,90+y);			//Flux Types
+	a.Sleep(500);
+	a.LeftClick(30,45+y);
+	a.Sleep(500);
+	a.LeftClick(230,125+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("0.03");
+	a.Sleep(500);
+	a.LeftClick(30,175+y);
+	a.Sleep(500);	
+	a.LeftClick(30,245+y);
+	a.Sleep(500);
+	a.Send("{TAB}{DELETE}{DELETE}{DELETE}");
+	a.Send("10");
+	a.Sleep(500);
+	a.LeftClick(465,135+y);
+	
+	a.LeftClick(70,360+y);			//Spreadsheet
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("1000");
+	a.Send("{UP}");
+	a.Send("1000");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{RIGHT}{RIGHT}{RIGHT}{UP}");
+	a.Send("1000");
+	a.Send("{UP}");
+	a.Send("1000");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	a.Send("{LEFT}{LEFT}{LEFT}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("1000");
+	a.Send("{UP}");
+	a.Send("1000");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	//a.Send("{LEFT}{LEFT}{LEFT}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("1000");
+	a.Send("{UP}");
+	a.Send("1000");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	//a.Send("{LEFT}{LEFT}{LEFT}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{RIGHT}{RIGHT}{UP}");
+	a.Send("1e12");
+	a.Send("{UP}");
+	a.Send("1e12");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	a.Send("{LEFT}{LEFT}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{UP}");
+	a.Send("1e12");
+	a.Send("{UP}");
+	a.Send("1e12");
+	
+	a.LeftClick(235,300+y);			//Next Constituent
+	a.LeftClick(70,360+y);
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("1");
+	a.Send("{DOWN}{RIGHT}{RIGHT}{UP}");
+	a.Send("1e12");
+	a.Send("{UP}");
+	a.Send("1e12");
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(1000);
+	a.WinActivate("Framework","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Air","Add Data Into Air");
+	a.RightClick(375,275+y);
+	a.Sleep(500);
+	a.Send("{DOWN}{DOWN}{ENTER}");		//User Input
+	a.Sleep(3000);
+	a.WinActivate("MEPAS","");
+	
+	t.Plan("Climatology Tab");
+	a.Send("Hanford");
+	a.Send("{TAB}");
+	a.Send("400");
+	a.Send("{TAB}{TAB}");
+	a.Send("1400");
+	a.Send("{TAB}{TAB}");
+	a.Send("6.2");
+	a.Send("{TAB}{TAB}");
+	a.Send("63");
+	a.Send("{TAB}");
+	a.Send("10");
+	a.Sleep(500);
+	
+	t.Plan("JFD Tab");
+	a.LeftClick(130,50+y);
+	a.Send("{TAB}");
+	a.Send("Hanford");
+	a.Send("{TAB}");
+	a.Send("2");
+	a.Send("{TAB}{TAB}");
+	a.Send("10");
+	a.Send("{TAB}{TAB}");
+	a.Send("1");
+	a.Send("{DOWN}");
+	a.Send("1.5");
+	a.Send("{DOWN}");
+	a.Send("3");
+	a.Send("{DOWN}");
+	a.Send("5");
+	a.Send("{DOWN}");
+	a.Send("7");
+	a.Send("{DOWN}");
+	a.Send("10");
+	a.Send("{TAB}{TAB}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	a.Send("{DOWN}");
+	a.Send("0");
+	
+	t.Plan("Import JFD");
+	a.Send("{TAB}{TAB}{SPACE}");
+	a.Sleep(3000);
+	a.Send("blank.jfd");
+	a.Send("{ENTER}");
+	a.Sleep(500);
+	a.Send("{SPACE}");
+	a.WinActivate("MEPAS","");
+	
+	t.Plan("Class A");
+	a.LeftClick(90,85+y);
+	a.Sleep(500);
+	a.LeftClick(130,330+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("1.0");
+	
+	t.Plan("Class F");
+	a.LeftClick(335,85+y);
+	a.Sleep(500);
+	a.LeftClick(260,205+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("1.0");
+	
+	t.Plan("Topographical Data");
+	a.LeftClick(235,50+y);
+	a.Sleep(500);
+	a.LeftClick(160,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(225,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(290,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(355,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(420,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(290,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(355,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.LeftClick(420,305+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("50.0");
+	a.Sleep(500);
+	a.LeftClick(75,350+y);
+	a.LeftClick(75,350+y);
+	a.LeftClick(75,350+y);
+	a.Sleep(500);
+	a.LeftClick(160,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(225,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(290,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(355,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(420,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(290,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(355,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.LeftClick(420,320+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("5.0");
+	a.Sleep(500);
+	a.LeftClick(75,350+y);
+	a.LeftClick(75,350+y);
+	a.LeftClick(75,350+y);
+	a.Sleep(500);
+	a.LeftClick(160,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(225,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(290,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(355,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(420,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(445,350+y);
+	a.LeftClick(290,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(355,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.LeftClick(420,335+y);
+	a.Send("{BACKSPACE}{BACKSPACE}{BACKSPACE}{BACKSPACE}");
+	a.Send("20.0");
+	a.Sleep(500);
+	
+	t.Plan("File - Save and Exit");
+	a.Send("!f#s");
+	a.Sleep(1000);
+	a.WinActivate("Framework","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Save","Save GID");
+	a.Send("!f#a");
+	a.Sleep(1000);
+	a.Send(tests+"air_10.gid");
+	a.Send("{ENTER}");
+	a.WinActivate("Framework","");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Run","Run GID");
+	a.Send("!g");
+	a.Sleep(5000);
+	a.WinActivate("Framework","");
+	a.Send("!f#s");
+	t.TestCaseComplete();
+
+t.NewTestCase("Compare","Compare Files");
+	t.Assert(f.compare("c:\\frames\\tests\\air\\air_10.aff","c:\\frames\\air\\air_10.aff"),"Comparing .aff Files");
+	t.Assert(f.compare("c:\\frames\\tests\\air\\air_10.ato","c:\\frames\\air\\air_10.ato"),"Comparing .ato Files");
+	t.TestCaseComplete();
+	
+t.NewTestCase("Close","Close Framework");
+	a.Send("!{F4}");
+	t.TestCaseComplete();
+	
+	
+}
+if (t.TestSuiteComplete()==0) System.err.println("Test Failed");
+else System.out.println("Success");

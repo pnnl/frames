@@ -1,0 +1,103 @@
+[Root]
+Most Recent Package=KP_API
+
+
+[Package|KP_API|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\KP_API_DEV
+
+[Package|KP_API|Configure DAO ISAMs]
+Applicable=No
+
+[Package|KP_API|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|KP_API|Files Found]
+kp_api.ini=C:\KP_API_DEV\kp_api.ini
+
+[Package|KP_API|Files Released]
+
+[Package|KP_API|Missing Dependency Information]
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+C:\WINNT\system32\fnotif32.dll=
+C:\WINNT\system32\femis32.dll=
+C:\WINNT\system32\fnotif32x.dll=
+
+[Package|KP_API|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+
+[Package|KP_API|Files Added]
+kp_api.ini=
+
+[Package|KP_API|Files Removed]
+
+[Package|KP_API|Files In Project]
+C:\WINNT\system32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\femis32.dll=Yes
+C:\WINNT\system32\fnotif32.dll=Yes
+C:\Program Files\Common Files\System\ado\msado25.tlb=Yes
+C:\WINNT\system32\scrrun.dll=Yes
+C:\WINNT\system32\msvcrt.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\KP_API_DEV\kp_api.dll=Yes
+C:\WINNT\system32\fnotif32x.dll=Yes
+C:\KP_API_DEV\kp_api.ini=Yes
+
+[Package|KP_API|Configure Registry Files]
+Applicable=No
+
+[Package|KP_API|Configure Remote Servers]
+Applicable=No
+
+[Package|KP_API|Install Locations]
+C:\PowerGrid\KnownPoint\KP_API.dll=$(AppPath)
+C:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\femis32.dll=$(WinSysPath)
+C:\WINNT\system32\fnotif32.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\PowerGrid\KnownPoint\KP_API.INI=$(AppPath)
+C:\KP_API_DEV\kp_api.dll=$(AppPath)
+C:\WINNT\system32\fnotif32x.dll=$(WinSysPath)
+C:\KP_API_DEV\kp_api.ini=$(AppPath)
+
+[Package|KP_API|Configure Shared Files]
+Applicable=Yes
+C:\PowerGrid\KnownPoint\KP_API.dll=No
+C:\PowerGrid\KnownPoint\KP_API.INI=No
+C:\KP_API_DEV\kp_api.dll=No
+C:\KP_API_DEV\kp_api.ini=No
+
+[Package|KP_API|Distribution]
+Type=single
+Size=
+Title=KP_API
+
+[Package|KP_API|Package]
+PackageFolder=C:\KP_API_DEV
+ProjectFolder=C:\KP_API_DEV
+ServerSideCab=
+File1=C:\KP_API_DEV\setup.exe
+File2=C:\KP_API_DEV\Setup.Lst
+File3=C:\KP_API_DEV\kp_api.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

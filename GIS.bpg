@@ -1,0 +1,27 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PreVadoseG PrePreAqu PreAquiferG PostVadoseG
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PreVadoseG: Pre VadoseG\PreVadoseG.bpr
+  $(MAKE)
+
+PostVadoseG: Post VadoseG\PostVadoseG.bpr
+  $(MAKE)
+
+PrePreAqu: PrePre Aquifer\PrePreAqu.bpr
+  $(MAKE)
+
+PreAquiferG: Pre AquiferG\PreAquiferG.bpr
+  $(MAKE)

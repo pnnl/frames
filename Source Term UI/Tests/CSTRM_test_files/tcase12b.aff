@@ -1,0 +1,34 @@
+"src2",33                               
+7
+================================================================================
+  Source Term Release Module Version: Framework PoP  January 1997  
+  Run:
+  Site:
+  Run Performed:
+  Output Filename:
+================================================================================
+1
+All
+area
+100
+0,m2
+0,m
+0,m/s
+25,Deg C
+25,Deg C
+2
+Gas 1,0,fraction,0,g/cm^3
+Particle 1,7.5,um,1.5,g/cm^3
+3
+Benzene,71432,yr,g/yr,2,0
+0,0,0
+102,0,0
+STRONTIUM-90,SR90,yr,pCi/yr,2,1
+0,0,0
+101,0,0
+YTTRIUM-90,Y90,yr,pCi/yr,2,STRONTIUM-90,SR90
+0,0,0
+102,0,0
+TECHNETIUM-99,TC99,yr,pCi/yr,2,0
+0,0,0
+101,0,0

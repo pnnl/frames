@@ -1,0 +1,78 @@
+"src2",77                               
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.4"
+"  Site Index: 1"
+"  Module Index: 1"
+"  Module Name: src2"
+"  Created:  11/20/2003 1:03:45 PM"
+"=================================================="
+1
+"all","Aquifer",150,"m",3.05,"m",0,"m",0,"m/yr",21
+"yr","m^3/yr",2
+0,9320
+10000,9320
+"1,2 DICHLOROETHYLENE","156605","yr","g/yr",2,1,0
+0,1
+1,1
+"Acetone","67641","yr","g/yr",2,1,0
+0,1
+1,1
+"AMERICIUM-241","AM241","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Aroclor 1221","11104282","yr","g/yr",2,1,0
+0,1
+1,1
+"Benzo(a)pyrene","50328","yr","g/yr",2,1,0
+0,1
+1,1
+"CESIUM-137+D","CS137","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Chlorobenzene","108907","yr","g/yr",2,1,0
+0,1
+1,1
+"Chromium VI","7440473","yr","g/yr",2,1,0
+0,1
+1,1
+"Ethylene glycol","107211","yr","g/yr",2,1,0
+0,1
+1,1
+"Hexachlorobenzene","118741","yr","g/yr",2,1,0
+0,1
+1,1
+"IODINE-129","I129","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Mercury","7439976","yr","g/yr",2,1,0
+0,1
+1,1
+"Naphthalene","91203","yr","g/yr",2,1,0
+0,1
+1,1
+"PLUTONIUM-240","PU240","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Pyrene","129000","yr","g/yr",2,1,0
+0,1
+1,1
+"Selenium","7782492","yr","g/yr",2,1,0
+0,1
+1,1
+"TECHNECIUM-99","TC99","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Toluene","108883","yr","g/yr",2,1,0
+0,1
+1,1
+"URANIUM-238","U238","yr","pCi/yr",2,1,0
+0,1
+1,1
+"Vinyl chloride","75014","yr","g/yr",2,1,0
+0,1
+1,1
+"Xylene","1330207","yr","g/yr",2,1,0
+0,1
+1,1

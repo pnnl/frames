@@ -1,0 +1,1128 @@
+<html>
+<head>
+  <title>HUMAN INTAKE MODULE </title>
+</head>
+<body background="mepas.jpg">
+
+<hr />
+<center><h1><img src="rcp.ico" height=64 width=64> HUMAN INTAKE MODULE</h1></center>
+<hr />
+
+<a name=GENERAL></a><h2>GENERAL</h2>
+
+<a name=ICBODYWT></a><u><b>IC-BODYWT</b>--The average body weight of individuals for the current exposure location</u>
+<br />Units: kilograms
+<br />Range: between 1 and 100
+<br />
+<br />Enter the average body weight for the current exposure location. The MEPAS
+user interface will prompt the user to enter the data for each location for the
+current transport type. The default value for this parameter is 70 kg
+representing the standard man calculation (<a href="#EPA1991">EPA 1991</a>). To
+simulate exposure of a child, this parameter can be set to a smaller value, such
+as 10 kg. If younger age groups are to be simulated, care must be taken to also
+adjust other age dependent parameters, including inhalation rate, exposure
+duration and food, water, and soil ingestion rates.
+
+<br />
+<br /><a name=ICEXPDUR></a><u><b>IC-EXPDUR</b>--Exposure duration for individuals at the current usage location</u>
+<br />Units: years
+<br />Range: between 1 and 100
+<br />
+<br />Enter the exposure duration for individuals being described for the current
+usage location. As an example of the use of the two parameters defined in this screen,
+consider the estimation of risk from soil ingestion to a young child for the
+period of 1 to 6 years of age (inclusive) for measured soil concentrations. The
+exposure duration is 6 years and the average weight for this age is 15 kg. The
+parameters are set as follows:
+<br /><center>IC-BODYWT = 15 kg, IC-EXPDUR = 6 yrs</center>
+<br />A soil ingestion rate of 200 mg/d or 0.2 g/d is recommended by EPA for this
+age group. The soil ingestion rate is set in the 'Customize' screen on the
+'soil' tab, parameter 'soil ingestion rate'. Use of these parameter values will
+provide an estimate of risk to young children for soil ingestion of
+chemicals. Note that the International Commission on Radiological
+Protection (ICRP) dose factors and EPA slope factors are primarily based on
+exposure to adults and thus can not be used to estimate risk to young children
+from exposure to radionuclides.
+
+<br />
+<br /><a name=ICDERM></a><u><b>IC-DERM</b>--Water dermal absorption model</u>
+<br />
+<br />This pull-down menu box allows selection of the method to estimate intake by
+dermal absorption. Two methods are available: the EPA dermal absorption
+model or the linear model. The EPA dermal absorption model may be used
+for organic chemicals that have a value defined for octanol-water partition
+coefficient. If no value is available for octanol-water partition
+coefficient, then the linear model is used. The linear model is also used
+for all inorganic chemicals and radionuclides, no matter which option is
+selected here.
+
+<br />
+<br /><a name=IGUDWGW></a><a name=GROUNDWATER></a><u><b>IG-UDWGW</b>--Drinking water ingestion rate of ground water</u>
+<br />Units: liters per day (L/d)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 1.4
+<br />
+<br />The daily water ingestion by the exposed individual represents the water
+intake from all used of domestic water. The intake includes drinking
+water, use of water in cooking, and use of water to prepare beverages (coffee,
+tea, reconstituted juices, etc.). The default value is based on
+recommendations of the (<a href="#EPA1997_V1">EPA 1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=IWUDWSW></a><u><b>IW-UDWSW</b>--Drinking water ingestion rate of surface water</u>
+<br />Units: liters per day (L/d)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 1.4
+<br />
+<br />The daily water ingestion by the exposed individual represents the water
+intake from all uses of domestic water. The intake includes drinking
+water, use of water in cooking, and use of water to prepare beverages (coffee,
+tea, reconstituted juices, etc.). The default value is based on
+recommendations of the (<a href="#EPA1997_V1">EPA 1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICTAGE1></a><u><b>IC-TAGE1</b>--Age of receptor at start of exposure</u>
+<br />Units: yr
+<br />Range: 0.0 to 100
+<br />Default Value: 0 (<a href="#EPA1991">EPA 1991</a>)
+<br />
+<br />The parameters TAGE1 and TAGE2 are used to specify the age range of the
+exposed individual. TAGE1 being the lower age range limit and TAGE2 being
+the upper age range limit. This is useful if an assessment is being
+performed to address the impacts to a specific age group. For example, if
+an industrial usage scenario is being modeled, the user may want to specify
+that only 25 to 55 year olds will be exposed. In this case, TAGE1 would
+be 25 and TAGE2 would be 55.
+
+<br />
+<br /><a name=ICTAGE2></a><u><b>IC-TAGE2</b>--Age of receptor at end of exposure</u>
+<br />Units: yr
+<br />Range: TAGE1 + 1 to 100
+<br />Default Value: 70 (<a href="#EPA1991">EPA 1991</a>)
+<br />
+<br />The parameters TAGE1 and TAGE2 are used to specify the age range of the
+exposed individual. TAGE1 being the lower age range limit and TAGE2 being
+the upper age range limit. This is useful if an assessment is being
+performed to address the impacts to a specific age group. For example, if
+an industrial usage scenario is being modeled, the user may want to specify
+that only 25 to 55 year olds will be exposed. In this case, TAGE1 would
+be 25 and TAGE2 would be 55.
+
+<br />
+<br /><a name=HEINHAL></a><u><b>HE-INHAL</b>--Selection Index for Inhalation Impact Analysis</u>
+<br />Units: none
+<br />Range: &quot;average daily intake&quot; or &quot;air concentration&quot;
+<br />Default Value: &quot;air concentration&quot;
+<br />
+<br />The parameter INHAL is used to select the method for evaluation of human
+impacts from inhalation exposure pathways. There are two options: average
+daily intake or air concentration. When average daily intake is selected
+the health impacts are to be based on the average daily intake rate (mg/kg/day)
+and either the inhalation slope factor for carcinogenic chemicals or the
+inhalation reference dose for other chemicals. When &quot;air
+concentration&quot; is selected, the health impacts are to be based on the air
+concentration (mg/m^3) at the exposure location and either the inhalation unit
+risk factor or the inhalation reference concentration. Use of this
+parameter must be coordinated with the model selected under the health impacts
+component. When the MEPAS components are used for both the receptor and
+impacts analysis, non-zero results for chemicals will only be obtained for
+inhalation if the selection flags agree (i.e., both &quot;average daily
+intake&quot; or both &quot;air concentration&quot;.
+
+<br />
+<br /><a name="INTAKE_MODULE_CUSTOMIZATION"></a><h2>INTAKE MODULE CUSTOMIZATION</h2>
+The parameters available under this option allow modification of additional
+intake parameters that are normally represented by default values.
+
+<br /><a name="AIR_INHALATION"></a><h2>AIR EXPOSURE TAB</h2>
+
+<a name=ICUbr></a><u><b>IC-UBR</b>--Inhalation rate for general exposure to contaminated air</u>
+<br />Units: cubic meters per day (m<sup>3</sup>/d)
+<br />Range: 0.0 to 50.0 m<sup>3</sup>/d
+<br />Default Value: 15.2 m<sup>3</sup>/d
+<br />
+<br />The inhalation rate is the daily average rate of air intake and is used to
+estimate inhalation intake of pollutants from the air inhalation exposure
+pathway. The default value is recommended by (<a href="#EPA1997_V1">EPA (1997) Vol.1</a>).
+
+<br />
+<br /><a name=ICUBRES></a><u><b>IC-UBRES</b>--Inhalation rate for resuspension pathway</u>
+<br />Units: cubic meters per day (m<sup>3</sup>/d)
+<br />Range: 0.0 to 50.0 m<sup>3</sup>/d
+<br />Default Value: 15.2 m<sup>3</sup>/d
+<br />
+<br />The individuals exposed to airborne resuspended contamination are exposed
+when they inhale particulate materials. The inhalation rate gives the
+daily average intake rate for exposure to this pathway. The default value
+represents the average daily inhalation rate recommended by (<a href="#EPA1997_V1">EPA
+(1997) Vol.1</a>).
+
+<br />
+<br /><a name=ICFREQINH></a><u><b>IC-FREQINH</b>--Annual frequency factor for air inhalation</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is present at the exposure location 350 days in a year (<a href="#EPA1991">EPA
+1991</a>), the annual factor would be calculated as 350/365.25 = 0.9582.&nbsp;
+The default value is set to 1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQSL></a><u><b>IC-FREQSL</b>--Annual frequency factor for soil resuspension inhalation</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is present at the exposure location and inhales resuspended soil 180 days in a
+year, the annual factor would be calculated as 180/365.25 = 0.4928. The
+default values are set to 1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQEXT></a><u><b>IC-FREQEXT</b>--Annual frequency factor for air external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is present and subject to air exposure 350 days in a year (<a href="#EPA1991">EPA
+1991</a>), the annual factor would be calculated as 350/365.25 = 0.9582.&nbsp;
+The default values are set to 1 (exposure every day during a year).
+
+<br />
+<br /><a name="EXTERNAL_GROUND"></a><h2>EXTERNAL GROUND DOSE TAB</h2>
+The shielding factors and time fractions for indoor and outdoor activities
+are used to estimate the external dose from ground contamination. This
+allows the user to apply appropriate shielding corrections for the type of
+dwelling under consideration. The shielding factor is multiplied by the
+unshielded dose rate to obtain the dose rate for the activity (indoors or
+outdoors). The time fractions indicate the relative amount of time the
+individual spends indoors and outdoors. The default value for shielding
+factor outdoors (1.0) represents no reduction in dose rate.
+
+<br />
+<br /><a name=ICFTI></a><u><b>IC-FTI</b>--Fraction of time spent indoors</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.875
+<br />Limitation:&nbsp; IC-FTI + <a href="#ICFTO">IC-FTO</a> &lt;= 1.0
+<br />
+<br />This parameter is the fraction of time that the exposed individual spends
+indoors on a daily average (<a href="#EPA1997_V3">EPA 1997 (Vol.3)</a>).
+
+<br />
+<br /><a name=ICSHI></a><u><b>IC-SHI</b>--Shielding factor for indoor exposure</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.33
+<br />
+<br />This parameter is the shielding factor for external contamination to ground
+for time spent indoors (<a href="#KENNEDY1992">Kennedy and Strenge, 1992</a>).
+
+<br />
+<br /><a name=ICFTO></a><u><b>IC-FTO</b>--Fraction of time spent outdoors</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.125
+<br />Limitation:&nbsp; <a href="#ICFTI">IC-FTI</a> + IC-FTO &lt;= 1.0
+<br />
+<br />This parameter is the fraction of time that the exposed individual spends
+outdoors on a daily average (<a href="#EPA1997_V3">EPA 1997 (Vol.3)</a>).
+
+<br />
+<br /><a name=ICSHO></a><u><b>IC-SHO</b>--Shielding factor for outdoors</u>
+<br />Units: none
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />This parameter is the shielding factor for external contamination to ground
+for time spent outdoors (<a href="#KENNEDY1992">Kennedy and Strenge, 1992</a>).
+
+<br />
+<br /><a name=ICUEXT></a><u><b>IC-UEXT</b>--Daily exposure time to external radiation for atmospheric and measured soil pathways</u>
+<br />Units: hours per day (hr/d)
+<br />Range: 0.0 to 24.0
+<br />Default Value: 24.0
+<br />
+<br />This parameter gives the hours per day that the individual is subject to
+exposure to radiation from an airborne plume and from contamination in
+soils. The default value represents continuous exposure.
+
+<br />
+<br /><a name=ICFREQSLEXT></a><u><b>IC-FREQSLEXT</b>--Annual frequency factor for soil external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is present at the exposure location 180 days in a year, the annual factor would
+be calculated as 180/365.25 = 0.4982. The default values are set to 1
+(exposure every day during a year).
+
+<br />
+<br /><a name="TERRESTRIAL_FOOD"></a><h2>TERRESTRIAL FOOD TAB</h2>
+
+<a name=ICUAGLEAF></a><u><b>IC-UAGLEAF</b>--Ingestion rate of leafy vegetables</u>
+<br />Units: kilograms per day (kg/d)
+<br />Range: 0.0 to 5.0 kg/d
+<br />Default Value: 0.125 kg/d
+<br />
+<br />The ingestion rate of farm products is the annual average rate at which the
+exposed individual consumes contaminated foods of each type. Default
+values for ingestion rates are taken as 25% of the values recommended by
+(<a href="#EPA1997_V2">EPA 1997 (Vol.2)</a>). The
+reduction (25%) is applied to account for only a fourth of the individual's
+intake coming from the contaminated source. The remainder is purchased
+from markets and is assumed to be uncontaminated.
+
+<br />
+<br /><a name=ICUAGVEG></a><u><b>IC-UAGVEG</b>--Ingestion rate of other vegetables</u>
+<br />Units: kilograms per day (kg/d)
+<br />Range: 0.0 to 5.0 kg/d
+<br />Default Value: 0.157 kg/d
+<br />
+<br />The ingestion rate of farm products is the annual average rate at which the
+exposed individual consumes contaminated foods of each type. Default
+values for ingestion rates are taken as 25% of the values recommended by
+(<a href="#EPA1997_V2">EPA 1997 (Vol.2)</a>). The
+reduction (25%) is applied to account for only a fourth of the individuals
+intake coming from the contaminated source. The remainder is purchases
+from markets and is assumed to be uncontaminated.
+
+<br />
+<br /><a name=ICUAGMT></a><u><b>IC-UAGMT</b>--Ingestion rate of meat</u>
+<br />Units: kilograms per day (kg/d)
+<br />Range: 0.0 to 5.0 kg/d
+<br />Default Value: 0.147 kg/d
+<br />
+<br />The ingestion rate of farm products is the annual average rate at which the
+exposed individual consumes contaminated foods of each type. Default
+value is from (<a href="#EPA1997_V2">EPA 1997 (Vol.2)</a>).
+
+<br />
+<br /><a name=ICUAGMK></a><u><b>IC-UAGMK</b>--Ingestion rate of milk</u>
+<br />Units: liters per day (L/d)
+<br />Range: 0.0 to 4.0 L/d
+<br />Default Value: 0.560<b> </b>L/d
+<br />
+<br />The ingestion rate of farm products is the annual average rate at which the
+exposed individual consumes contaminated foods of each type. Default
+value is from (<a href="#EPA1997_V2">EPA 1997 (Vol.2)</a>).
+
+<br />
+<br /><a name=ICFREQLEAF></a><u><b>IC-FREQLEAF</b>--Annual frequency factor for ingestion of leafy vegetables</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+consumes leafy vegetables at the average rate 350 days in a year, the annual
+factor would be calculated as 350/365.25 = 0.9582. The default values are
+set to 1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQVEG></a><u><b>IC-FREQVEG</b>--Annual frequency factor for ingestion of other vegetables</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+consumes other vegetables at the average rate for 350 days in a year, the
+annual factor would be calculated as 350/365.25 = 0.9582. The default
+values are set to 1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQMT></a><u><b>IC-FREQMT</b>--Annual frequency factor for ingestion of meat</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+consumes meat at the average rate for 350 days in a year, the annual factor
+would be calculated as 350/365.25 = 0.9582. The default values are set to
+1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQMK></a><u><b>IC-FREQMK</b>--Annual frequency factor for ingestion of milk</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+milk at the average rate for 350 days in a year, the annual factor would be
+calculated as 350/365.25 = 0.9582. The default values are set to 1
+(exposure every day during a year).
+
+<br />
+<br /><a name="DOMESTIC_USE"></a><h2>DOMESTIC USE TAB</h2>
+This screen allow the user to modify several parameter related to domestic
+water use.
+
+<br />
+<br /><a name=ICTESHWR></a><u><b>IC-TESHWR</b>--Duration of one shower event</u>
+<br />Units: hours per shower (hr/shower)
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.167
+<br />
+<br />The shower dermal contact, shower inadvertent ingestion, and MEPAS shower
+inhalation model require the duration of each shower. The default shower
+exposure duration is set to 0.167 hours (10 minutes) based on recommendations
+of (<a href="#EPA1997_V3">EPA 1997 (Vol.3)</a>).
+
+<br />
+<br /><a name=ICEVSHWR></a><u><b>IC-EVSHWR</b>--Frequency of showering</u>
+<br />Units: showers per day (showers/d)
+<br />Range: 0.0 to 5.0
+<br />Default Value: 1.0
+<br />
+<br />The shower frequency is the number of shower exposure events assumed to
+occur each day for the exposed individual. The default value is set to
+one shower per day based on recommendations of (<a href="#EPA1997_V3">EPA 1997 (Vol.3)</a>).&nbsp;
+The product of shower frequency and shower duration must not be greater than 24 hours.
+
+<br />
+<br /><a name=ICUBRSH></a><u><b>IC-UBRSH</b>--Inhalation rate while showering</u>
+<br />Units: cubic meters per day (m<sup>3</sup>/d)
+<br />Range: 0.0 to 50.0
+<br />Default Value: 15.2
+<br />
+<br />The inhalation rate while showering is used to estimate inhalation intake
+from volatile pollutants released from domestic water. The inhalation
+rate represents the rate of inhalation during a shower (when the MEPAS shower
+inhalation model is selected) or the daily intake of indoor air (when the
+EPA/Andelman model is selected). The default value <span class=grame>of
+20 m<sup>3</sup>/d is appropriate when the MEPAS shower model is selected
+representing an average inhalation rate for a day (<a href="#EPA1991">EPA 1991</a>).&nbsp;
+The inhalation only occurs during the time the individual is in the
+shower. When the EPA indoor air model is selected, a value of 15 m<sup>3</sup>/d
+is recommended by (<a href="#EPA1997_V1">EPA (1997) Vol.1</a>) for use. <o:p></o:p>
+
+<br />
+<br /><a name=ICUBW></a><u><b>IC-UBW</b>--Water ingestion while showing</u>
+<br />Units: liters per hour (L/hr)
+<br />Range: 0.0 to 1.0
+<br />
+<br />While showering an individual may inadvertently ingest some water. The
+intake rate represents a nominal rate of inadvertent ingestion.
+
+<br />
+<br /><a name=ICASKINDM></a><u><b>IC-ASKINDM</b>--Area of skin exposed while showering</u>
+<br />Units: square centimeters (cm<sup>2</sup>)
+<br />Range: 0.0 to 40,000.0
+<br />Default Value: 20,000.0
+<br />
+<br />The area of the skin exposed is required for several exposure
+pathways. The area exposed while showering and swimming usually is
+defined to represent the entire area of the body. The area for exposure
+to soil usually represent the area of the hands and arms. Default values
+for these parameters are based on suggested values from (<a href="#EPA1997_V1">EPA
+1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICFREQING></a><u><b>IC-FREQING</b>--Annual frequency factor for drinking water ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+drinks water at the exposure location 350 days in a year, the annual factor
+would be calculated as 350/365.25 = 0.9582. The default values are set to
+1 (exposure every day during a year).
+
+<br />
+<br /><a name=ICFREQSRDER></a><u><b>IC-FREQSRDER</b>--Annual frequency factor for shower dermal contact</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+showers 350 days in a year, the annual factor would be calculated as 350/365.25
+= 0.9582. The use of these factors must be coordinated with the specific
+pathway frequency parameters (e.g. EVSHWR and shower exposure frequency).&nbsp;
+The specific pathway frequency parameters are generally used to represent the
+number exposure events during a day in which exposure occurs. For example
+if an individual showers 2 times in each of the 350 days of exposure, the
+shower frequency factor (EVSHWR) would be set to 2. Note, however, that
+the default values are set to 1 (exposure every day during a year) and the
+specific pathway frequency parameters are set to the fraction of days the
+exposure occurs. Which ever representation is used for the two sets of
+parameters, the user must be careful to coordinate their use so double
+accounting does not occur.
+
+<br />
+<br /><a name=ICFREQSRING></a><u><b>IC-FREQSRING</b>--Annual frequency factor for shower water ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+showers 350 days in a year, the annual factor would be calculated as 350/365.25
+= 0.9582. The use of these factors must be coordinated with the specific
+pathway frequency parameters (e.g. EVSHWR and shower exposure frequency).&nbsp;
+The specific pathway frequency parameters are generally used to represent the
+number exposure events during a day in which exposure occurs. For example
+if an individual showers 2 times in each of the 350 days of exposure, the
+shower frequency factor (EVSHWR) would be set to 2. Note, however, that
+the default values are set to 1 (exposure every day during a year) and the
+specific pathway frequency parameters are set to the fraction of days the exposure
+occurs. Which ever representation is used for the two sets of parameters,
+the user must be careful to coordinate their use so double accounting does not
+occur.
+
+<br />
+<br /><a name=ICFREQSRINH></a><u><b>IC-FREQSRINH</b>--Annual frequency factor for shower or indoor air inhalation</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+showers 350 days in a year, the annual factor would be calculated as 350/365.25
+= 0.9582. The use of these factors must be coordinated with the specific
+pathway frequency parameters (e.g. EVSHWR and shower exposure frequency).&nbsp;
+The specific pathway frequency parameters are generally used to represent the
+number exposure events during a day in which exposure occurs. For example
+if an individual showers 2 times in each of the 350 days of exposure, the
+shower frequency factor (EVSHWR) would be set to 2. Note, however, that
+the default values are set to 1 (exposure every day during a year) and the
+specific pathway frequency parameters are set to the fraction of days the
+exposure occurs. Which ever representation is used for the two sets of
+parameters, the user must be careful to coordinate their use so double
+accounting does not occur.
+
+<br />
+<br /><a name=SWIMMING></a><h2>SWIMMING TAB</h2>
+This screen allows the user to modify parameters related to swimming
+exposure pathways (water ingestion, dermal contact, and external exposure).
+
+<br />
+<br /><a name=ICUSW></a><u><b>IC-USW</b>--Water ingestion rate while swimming</u>
+<br />Units: liters per hour (L/hr)
+<br />Range: 0.0 to 1.0
+<br />
+<br />Individuals swimming are subject to inadvertently ingest small amounts of
+water. The ingestion is defined as the amount ingested per hour of
+swimming activity. The total intake (per swimming event) is calculated by
+MEPAS as the product of the ingestion rate and the swimming exposure duration.
+
+<br />
+<br /><a name=ICTESWIM></a><u><b>IC-TESWIM</b>--Duration of a swimming event</u>
+<br />Units: hours per event (hr/event)
+<br />Range: 0.0 to 24.0
+<br />Default Value: 1.0
+<br />
+<br />Individuals involved in swimming are potentially exposed from dermal contact
+with the water, inadvertent ingestion of water while swimming, and by external
+exposure to radionuclides in the water. These pathway require an estimate
+of the duration of contact with the water. The default value, when
+multiplied by the annual average default swimming frequency gives a daily
+average exposure time of 0.033 hr. This value is equivalent to the
+recommended annual average exposure time of 12 hours (<a href="#EPA1997_V3">EPA
+1997 (Vol.3)</a>).
+
+<br />
+<br /><a name=ICEVSWIM></a><u><b>IC-EVSWIM</b>--Frequency of swimming</u>
+<br />Units: events per day (events/d)
+<br />Range: 0.0 to 5.0
+<br />Default Value: 0.033
+<br />
+<br />The swimming frequency gives the number of swimming events per day for the
+exposed individual. The value used for this parameter must be coordinated
+with the value use for the annual factor. The default value is set to
+0.066 to give an annual average exposure time of 12 hours as recommended by (<a
+href="#EPA1997_V3">EPA 1997 (Vol.3)</a>). If the annual factor is used to indicate
+the fraction of days in which swimming occurs, the swimming frequency should be
+set to 1. The product of frequency of swimming and swimming event
+duration must not be greater than 24 hours.
+
+<br />
+<br /><a name=ICASKINSW></a><u><b>IC-ASKINSW</b>--Area of skin exposed while swimming</u>
+<br />Units: square centimeters (cm<sup>2</sup>)
+<br />Range: 0.0 to 40,000.0
+<br />Default Value: 20,000.0
+<br />
+<br />The area of the skin exposed is required for the dermal contact while
+swimming exposure pathways. The area exposed while swimming usually is
+defined to represent the entire area of the body. Default values for
+these parameters are based on suggested values from (<a href="#EPA1997_V1">EPA
+1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICFREQSWING></a><u><b>IC-FREQSWING</b>--Annual frequency factor for swimming ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+swims during 7 days in a year, the annual factor would be calculated as
+7/365.25 = 0.0192. The use of these factors must be coordinated with the
+specific pathway frequency parameters (e.g. EVSWIM, swimming exposure
+frequency). The specific pathway frequency parameters are generally used
+to represent the number exposure events during a day in which exposure
+occurs. For example if an individual swims 2 times in each of the 7 days
+of exposure, the swimming frequency factor (EVSWIM) would be set to 2.&nbsp;
+Note, however, that the default values are set to 1 (exposure every day during
+a year) and the specific pathway frequency parameters are set to the fraction
+of days the exposure occurs. Which ever representation is used for the
+two sets of parameters, the user must be careful to coordinate their use so
+double accounting does not occur.
+
+<br />
+<br /><a name=ICFREQSWDER></a><u><b>IC-FREQSWDER</b>--Annual frequency factor for swimming dermal contact</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+swims during 7 days in a year, the annual factor would be calculated as
+7/365.25 = 0.0192. The use of these factors must be coordinated with the
+specific pathway frequency parameters (e.g. EVSWIM, swimming exposure frequency).&nbsp;
+The specific pathway frequency parameters are generally used to represent the
+number exposure events during a day in which exposure occurs. For example
+if an individual swims 2 times in each of the 7 days of exposure, the swimming
+frequency factor (EVSWIM) would be set to 2. Note, however, that the
+default values are set to 1 (exposure every day during a year) and the specific
+pathway frequency parameters are set to the fraction of days the exposure
+occurs. Which ever representation is used for the two sets of parameters,
+the user must be careful to coordinate their use so double accounting does not
+occur.
+
+<br />
+<br /><a name=ICFREQSWEXT></a><u><b>IC-FREQSWEXT</b>--Annual frequency factor for swimming external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+swims during 7 days in a year, the annual factor would be calculated as
+7/365.25 = 0.0192. The use of these factors must be coordinated with the
+specific pathway frequency parameters (e.g. EVSWIM, swimming exposure
+frequency). The specific pathway frequency parameters are generally used
+to represent the number exposure events during a day in which exposure occurs.&nbsp;
+For example if an individual swims 2 times in each of the 7 days of exposure,
+the swimming frequency factor (EVSWIM) would be set to 2. Note, however,
+that the default values are set to 1 (exposure every day during a year) and the
+specific pathway frequency parameters are set to the fraction of days the
+exposure occurs. Whichever representation is used for the two sets of
+parameters, the user must be careful to coordinate their use so double
+accounting does not occur.
+
+<br />
+<br /><a name=BOATING></a><h2>BOATING TAB</h2>
+This screen allows the user to modify parameters associated with external
+exposure while boating.
+
+<br />
+<br /><a name=ICTEBOAT></a><u><b>IC-TEBOAT</b>--Time spent in one boating event</u>
+<br />Units: hours per event (hr/event)
+<br />Range: 0.0 to 24.0
+<br />Default Value: 0.5
+<br />
+<br />The time spent boating is used to estimate the external radiation dose
+received while boating on contaminated surface waters. The time
+represents the average time spent on the water per boating event, and usually
+is set to the total time during a day in which boating occurs. The default
+time of 0.5 hours, when multiplied by the default boating frequency gives an
+average annual daily exposure time of 0.0033 hours/day (12 hours/year)
+consistent with recommendations of the Nuclear Regulatory Commission (<a
+href="#STRENGE1986">Strenge, Peloquin, and Whelan (1986)</a>).
+
+<br />
+<br /><a name=ICEVBOAT></a><u><b>IC-EVBOAT</b>--Frequency of boating event</u>
+<br />Units: events per day (events/d)
+<br />Range: 0.0 to 5.0
+<br />Default Value: 0.066
+<br />
+<br />The boating frequency is the number of events per day in which the
+individual is involved in boating events. The definition of this
+parameter must be coordinated with the annual frequency for boating. The
+default boating frequency is set to give a total annual boating exposure time
+of 12 hours (see the help screen for TEBOAT) as recommended by the Nuclear
+Regulatory Commission (<a href="#STRENGE1986">Strenge, Peloquin, and Whelan
+(1986)</a>). Also, the number of boating events per day multiplied by the
+time spent boating (per event) must not be greater than 24 hours.
+
+<br />
+<br /><a name=ICSBRF></a><u><b>IC-SBRF</b>--Boating geometry factor for external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.5
+<br />
+<br />Individual boating are exposed to penetrating radiation from contamination
+in the water. The dose is estimated using water immersion external dose
+conversion factors. Because the individuals in a boat are above the
+water, and not in the water, the dose received will be approximately half of
+that estimated using the immersion factors. The default value of 0.5 is
+as recommended by (<a href="#NRC1977">NRC 1977</a>), (<a href="#STRENGE1986">Strenge,
+Peloquin, and Whelan (1986)</a>), and (<a href="#STRENGE1986">Napier et al.
+(1988)</a>).
+
+<br />
+<br /><a name=ICFREQBOAT></a><u><b>IC-FREQBOAT</b>--Annual frequency factor for boating external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+boats during 7 days in a year, the annual factor would be calculated as
+7/365.25 = 0.0192. The use of these factors must be coordinated with the
+specific pathway frequency parameters (e.g. EVBOAT, boating exposure
+frequency). The specific pathway frequency parameters are generally used
+to represent the number exposure events during a day in which exposure
+occurs. For example if an individual boats 2 times in each of the 7 days
+of exposure, the boating frequency factor (EVBOAT) would be set to 2.&nbsp;
+Note, however, that the default values are set to 1 (exposure every day during
+a year) and the specific pathway frequency parameters are set to the fraction
+of days the exposure occurs. Which ever representation is used for the
+two sets of parameters, the user must be careful to coordinate their use so
+double accounting does not occur.
+
+<br />
+<br /><a name=SHORELINE></a><h2>SHORELINE TAB</h2>
+This screen allows the user to modify parameters related to shoreline
+exposure pathways (sediment ingestion, dermal contact with sediment, and
+external exposure to sediment).
+
+<br />
+<br /><a name=ICTESHOR></a><u><b>IC-TESHOR</b>--Duration of a shoreline exposure event</u>
+<br />Units: hours per event (hr/event)
+<br />Range: 0.0 to 24.0
+<br />Default Value: 2.0
+<br />
+<br />Individuals involved in shoreline activities are potentially exposed from
+dermal contact with the sediment, inadvertent ingestion of sediment, and by
+external exposure to radionuclides in the sediment. These pathways
+require an estimate of the time spent on the shoreline. The default
+value, when multiplied by the annual average default shoreline frequency gives
+a daily average exposure time of 0.033 hr. This value is equivalent to
+the recommended annual average exposure time of 12 hours (<a href="#NRC1977">NRC
+1977</a>).
+
+<br />
+<br /><a name=ICEVSHOR></a><u><b>IC-EVSHOR</b>--Frequency of a shoreline exposure event</u>
+<br />Units: events per day (events/d)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 0.017
+<br />
+<br />The shoreline frequency gives the number of shoreline events per day for the
+exposed individual. The value used for this parameter must be coordinated
+with the value use for the annual factor. The default value is set to
+0.017 to give an annual average exposure time of 12 hours as recommended by (<a
+href="#NRC1977">NRC 1977</a>). If the annual factor is used to indicate
+the fraction of days in which shoreline use occurs, the shoreline frequency
+should be set to 1. The product of shoreline frequency and event duration
+must not be greater than 24 hours.
+
+<br />
+<br /><a name=ICUSED></a><u><b>IC-USED</b>--Shoreline sediment ingestion rate</u>
+<br />Units: grams per hour (g/hr)
+<br />Range: 0.0 to 10.0
+<br />
+<br />Individuals who participate in shoreline recreational activities may
+inadvertently ingest shoreline sediments. The sediment ingestion rate
+gives the hourly rate at which sediments are ingested.
+
+<br />
+<br /><a name=ICSWF></a><u><b>IC-SWF</b>--Shore width factor for shoreline external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 0.2
+<br />
+<br />The shore width factor is used as an adjustment to the external dose factors
+for ground contamination by radioactive materials. The external dose
+factors represent exposure to large areas of contamination (essentially
+infinite in extent considering the range of penetrating radiation in
+air). The shoreline geometry represents a situation that is less than
+infinite. The correction factor is intended to account for this
+difference in geometry. The default value is suggested by the Nuclear
+Regulatory Commission (<a href="#NRC1977">NRC 1977</a>).
+
+<br />
+<br /><a name=ICASKINSL></a><u><b>IC-ASKINSL</b>--Area of skin exposed during shoreline sediment contact</u>
+<br />Units: square centimeters (cm<sup>2</sup>)
+<br />Range: 0.0 to 40,000.0
+<br />Default Value: 5,000.0
+<br />
+<br />The dermal contact exposure pathway for shoreline sediments requires an
+estimate of area of skin that comes in contact with sediments. The
+default value represents approximately half of the total surface area of the
+skin (<a href="#EPA1997_V1">EPA 1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICADHSED></a><u><b>IC-ADHSED</b>--Sediment adherence factor for sediment contact events</u>
+<br />Units: milligrams per square centimeter (mg/cm<sup>2</sup>)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 1.0
+<br />
+<br />The estimate of pollutant absorption resulting from contact with sediment
+requires an estimate of the average mass of sediment on the skin (for the area of
+skin that has been in contact with sediment). The default value is based on
+recommendation of (<a href="#EPA1992">EPA 1992</a>).
+
+<br />
+<br /><a name=ICFREQSHDER></a><u><b>IC-FREQSHDER</b>--Annual frequency factor for shoreline dermal contact</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is involved with shoreline activities during 7 days in a year, the annual
+factor would be calculated as 7/365.25 = 0.0192. The use of these factors
+must be coordinated with the specific pathway frequency parameters (e.g.
+EVSHOR, shoreline exposure frequency). The specific pathway frequency
+parameters are generally used to represent the number exposure events during a
+day in which exposure occurs. For example if an individual visits the
+shoreline 2 times in each of the 7 days of exposure, the shoreline frequency
+factor (EVSHOR) would be set to 2. Note, however, that the default values
+are set to 1 (exposure every day during a year) and the specific pathway
+frequency parameters are set to the fraction of days the exposure occurs.&nbsp;
+Which ever representation is used for the two sets of parameters, the user must
+be careful to coordinate their use so double accounting does not occur.
+
+<br />
+<br /><a name=ICFREQSHING></a><u><b>IC-FREQSHING</b>--Annual frequency factor for shoreline sediment ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is involved with shoreline activities during 7 days in a year, the annual
+factor would be calculated as 7/365.25 = 0.0192. The use of these factors
+must be coordinated with the specific pathway frequency parameters (e.g.
+EVSHOR, shoreline exposure frequency). The specific pathway frequency
+parameters are generally used to represent the number exposure events during a
+day in which exposure occurs. For example if an individual visits the
+shoreline 2 times in each of the 7 days of exposure, the shoreline frequency
+factor (EVSHOR) would be set to 2. Note, however, that the default values
+are set to 1 (exposure every day during a year) and the specific pathway
+frequency parameters are set to the fraction of days the exposure occurs.&nbsp;
+Which ever representation is used for the two sets of parameters, the user must
+be careful to coordinate their use so double accounting does not occur.
+
+<br />
+<br /><a name=ICFREQSHEXT></a><u><b>IC-FREQSHEXT</b>--Annual frequency factor for shoreline external exposure</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+is involved with shoreline activities during 7 days in a year, the annual
+factor would be calculated as 7/365.25 = 0.0192. The use of these factors
+must be coordinated with the specific pathway frequency parameters (e.g.
+EVSHOR, shoreline exposure frequency). The specific pathway frequency
+parameters are generally used to represent the number exposure events during a
+day in which exposure occurs. For example if an individual visits the
+shoreline 2 times in each of the 7 days of exposure, the shoreline frequency
+factor (EVSHOR) would be set to 2. Note, however, that the default values
+are set to 1 (exposure every day during a year) and the specific pathway
+frequency parameters are set to the fraction of days the exposure occurs.&nbsp;
+Which ever representation is used for the two sets of parameters, the user must
+be careful to coordinate their use so double accounting does not occur.
+
+<br />
+<br /><a name=SOIL></a><h2>SOIL TAB</h2>
+
+<a name=ICSKINL></a><u><b>IC-SKINL</b>--Thickness of skin layer, for dermal models</u>
+<br />Units: centimeters (cm)
+<br />Range: 0.0001 to 0.01 cm
+<br />Default Value: 0.001 cm
+<br />
+<br />The thickness of the skin is used when the EPA dermal exposure model is used
+(<a href="#EPA1992">EPA 1992</a>). A value should be provided if the
+default value does not represent the skin of the exposed individual.
+
+<br />
+<br /><a name=ICASKINSO></a><u><b>IC-ASKINSO</b>--Area of skin exposed to soil</u>
+<br />Units: square centimeters (cm<sup>2</sup>)
+<br />Range: 0.0 to 40,000.0
+<br />Default Value: 5,000
+<br />
+<br />The area of the skin exposed is required for several exposure
+pathways. The area exposed while showering and swimming usually is
+defined to represent the entire area of the body. The area for exposure
+to soil usually represents the area of the hands and arms. Default values
+for these parameters are based on suggested values from (<a href="#EPA1997_V1">EPA
+1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICADHFAC></a><u><b>IC-ADHFAC</b>--Soil adherence factor for soil contact events</u>
+<br />Units: milligrams per square centimeter (mg/cm<sup>2</sup>)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 1.0
+<br />
+<br />The estimate of pollutant absorption resulting from contact with soil
+requires an estimate of the average mass of soil on the skin (for the area of
+skin that has been in contact with soil). The default value is based on
+recommendation of (<a href="#EPA1992">EPA 1992</a>).
+
+<br />
+<br /><a name=ICEVSOIL></a><u><b>IC-EVSOIL</b>--Frequency of soil dermal contact events</u>
+<br />Units: events per day (events/d)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 1.0
+<br />
+<br />The soil dermal exposure frequency represents the number of soil contact
+events that occur on days in which contact occurs. The default value
+represents one exposure per day. The default absorption fractions are
+based on the soil remaining in contact with skin for about 12 hours. A
+practical maximum for the soil dermal exposure frequency would be 2 per day.
+
+<br />
+<br /><a name=ICFREQSLDER></a><u><b>IC-FREQSLDER</b>--Annual frequency factor for soil dermal contact</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+comes in contact with soil during 180 days in a year, the annual factor would
+be calculated as 180/365.25 = 0.4928. The use of these factors must be
+coordinated with the specific pathway frequency parameters (e.g. EVSOIL, soil
+exposure frequency). The specific pathway frequency parameters are
+generally used to represent the number exposure events during a day in which
+exposure occurs. For example if an individual has two soil contact events
+in each of the 180 days of exposure, the soil frequency factor (EVSOIL) would
+be set to 2. Note, however, that the default values are set to 1
+(exposure every day during a year) and the specific pathway frequency
+parameters are set to the fraction of days the exposure occurs. Which
+ever representation is used for the two sets of parameters, the user must be
+careful to coordinate their use so double accounting does not occur.
+
+<br />
+<br /><a name=ICUSOIL></a><u><b>IC-USOIL</b>--Soil ingestion rate</u>
+<br />Units: grams per day (g/d)
+<br />Range: 0.0 to 10.0
+<br />Default Value: 0.05
+<br />
+<br />Individuals daily come in contact with soil and house dust and inadvertently
+ingest some of the soil. The value provided here is used for all soil
+ingestion calculations, unless a different value is provided for the specific
+user location. The default soil intake is recommended for adults by <a
+href="#EPA1997_V1">EPA 1997 (Vol.1)</a>.
+
+<br />
+<br /><a name=ICFREQSLING></a><u><b>IC-FREQSLING</b>--Annual frequency factor for soil ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+comes in contact with soil during 180 days in a year, the annual factor would
+be calculated as 180/365.25 = 0.4928. The use of these factors must be
+coordinated with the specific pathway frequency parameters (e.g. EVSOIL, soil
+exposure frequency). The specific pathway frequency parameters are
+generally used to represent the number exposure events during a day in which
+exposure occurs. For example if an individual has two soil contact events
+in each of the 180 days of exposure, the soil frequency factor (EVSOIL) would
+be set to 2. Note, however, that the default values are set to 1
+(exposure every day during a year) and the specific pathway frequency
+parameters are set to the fraction of days the exposure occurs. Which
+ever representation is used for the two sets of parameters, the user must be
+careful to coordinate their use so double accounting does not occur.
+
+<br />
+<br /><a name=ICTMS></a><u><b>IC-TMS</b>--Thickness of measured soil contamination layer</u>
+<br />Units: meters (m)
+<br />Range: 0.0 to 5.0
+<br />
+<br />The thickness of the measured soil layer is used to estimate the external
+radiation dose from radionuclides in the soil. This parameter should
+represent the thickness of the measured contamination layer.
+
+<br />
+<br /><a name=ICRHOMS></a><u><b>IC-RHOMS</b>--Density of measured soil contamination layer</u>
+<br />Units: grams per cubic centimeter (g/cm<sup>3</sup>)
+<br />Range: 0.0 to 4.0 g/cm<sup>3</sup>
+<br />
+<br />The density of surface soils is used to estimate the external radiation dose
+from radionuclides in the soil.
+
+<br />
+<br /><a name="AQUATIC_FOOD"></a><h2>AQUATIC FOOD TAB</h2>
+This screen allows the user to modify parameters for the fin fish and
+shellfish ingestion exposure pathways.
+
+<br />
+<br /><a name=ICUAQFIN></a><u><b>IC-UAQFIN</b>--Ingestion rate of fin fish</u>
+<br />Units: kilograms per day (kg/d)
+<br />Range: 0.0 to 5.0 kg/d
+<br />Default Value: 0.00407 kg/d
+<br />
+<br />The aquatic food pathways require an estimate of the average daily ingestion
+rate of fish and shellfish. The default value for fish (fin fish)
+ingestion rate is based (<a href="#EPA1997_V1">EPA 1997 (Vol.1)</a>).
+
+<br />
+<br /><a name=ICUAQSHL></a><u><b>IC-UAQSHL</b>--Ingestion rate of shellfish</u>
+<br />Units: kilograms per day (kg/d)
+<br />Range: 0.0 to 5.0 kg/d
+<br />Default Value: 0.00251 kg/d
+<br />
+<br />The aquatic food pathways require an estimate of the average daily ingestion
+rate of fish and shellfish.&nbsp;&nbsp;&nbsp; The default shellfish ingestion
+rate is based on recommendations of (<a href="#EPA1997_V1">EPA 1997 (Vol.1)</a>)
+representing an age-averaged intake rate.
+
+<br />
+<br /><a name=ICFREQFIN></a><u><b>IC-FREQFIN</b>--Annual frequency factor for finned fish ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+consumes finfish during 7 days in a year, the annual factor would be calculated
+as 7/365.25 = 0.0192. The default value is set to 1 (exposure every day
+during a year).
+
+<br />
+<br /><a name=ICFREQSHL></a><u><b>IC-FREQSHL</b>--Annual frequency factor for shellfish ingestion</u>
+<br />Units: dimensionless
+<br />Range: 0.0 to 1.0
+<br />Default Value: 1.0
+<br />
+<br />The exposure pathway annual factors represent the fraction of days in a year
+that exposure occurs to each exposure pathway. For example, if a person
+consumes shellfish during 7 days in a year, the annual factor would be calculated
+as 7/365.25 = 0.0192. The default values are set to 1 (exposure every day
+during a year).
+
+<br />
+<br /><b>MEPAS Receptor Intake Model Internal Default Values</b>
+
+<table b border=1 cellpadding=5>
+ <tr>
+ <th>Parameter</th>
+ <th>Description</th>
+ <th>Value</th>
+ <th>Range</th>
+ <th>Units</th>
+ <th>Reference</td>
+ </tr>
+ <tr>
+ <td>SBRF</td>
+ <td>Boating geometry correction factor</td>
+ <td>0.5</td>
+ <td>fixed</td>
+ <td>fraction</td>
+ <td>Strenge et al 1986</td>
+ </tr>
+</table>
+
+<br />
+<h2>MEPAS Receptor Intake Model Undocumented Equations</h2>
+
+
+<b>Skin Permeability Constant Estimation</b>
+<br />
+<br />A positive value for skin permeability constant is always generated at run
+time by the MEPAS Receptor Intake module.
+The method used depends on the type of constituent.  For organic chemicals, the correlation is
+from the EPA handbook on Dermal Exposure Assessment: Principles and
+Applications (1992).  A constituent is
+determined to be organic and use of the correlation method is considered
+appropriate if input values for molecular weight and Kow are both
+positive.  If these conditions are met,
+then the following correlation is used.
+<br />
+<br />Pk = -2.72 + 0.71* Log10(Kow) - 0.0061 * MW
+<br />
+<br />Where
+<br />&nbsp;&nbsp;&nbsp; Pk = skinpermeability constant (cm/hr)
+<br />&nbsp;&nbsp;&nbsp; Kow = octanol-water partition coefficient(dimensionless)
+<br />&nbsp;&nbsp;&nbsp; MW = molecularweight of the constituent.
+<br />
+<br />If the constituent is not organic, and the above conditionson Kow and
+molecular weight are not met, then the skin permeability is set to0.001 cm/hr
+(EPA 1992).
+
+<br />
+<br /><b>Indoor Air Model Parameters</b>
+<br />
+<br />The EPA indoor air model used water to indoor air transferfactors for
+volatile chemicals (ANDFC), radon (ANDFR), and all other chemicalsand
+radionuclides (ANDFO).   These
+threeparameters are supplied by the user in the MEPAS Exposure user
+interface.  The values are applied using
+the followingsteps.
+
+<ol start=1 type=1>
+ <li>Theindoor air factor for a constituent is set to zero. </li>
+ <li>If apositive value was supplied for ANDFO, then the indoor air factor is setto ANDFO.</li>
+ <li>If theconstituent is a chemical (KTYPE&gt;1), and the Henry’s Law Constant(RHLC) is greater than
+ 1.E-5 and the molecular weight (RWM) is less than200, then the indoor air
+ factor is set to the value provided for volatilechemicals (ANDFC).</li>
+ <li>If theconstituent is Rn222, set the indoor air factor to ANDFR.</li>
+</ol>
+
+<br />
+<h2>References</h2>
+
+<a name=EPA1991></a>EPA, 1991, Standard DefaultExposure Factors, OSWER
+Directive 9285.6-03, U.S.Environmental Protection Agency,Washington, D.C.
+
+<br />
+<br /><a name=EPA1992></a>EPA.1992. Dermal Exposure Assessment: Principles and
+Applications.USEPA/600/8-91/011B.U.S.Environmental Protection Agency, Office of
+Research and Development,Washington, D.C.
+
+<br />
+<br /><a name=EPA1997_V1></a>EPA 1997 (Vol.1).Exposure Factors Handbook Volume I: General
+Factors.EPA/600/P-95/002Fa, August1997.U.S.Environmental Protection Agency,
+Office of Research and Development,<st1:place Washington_x002c_ D.C.>
+
+<br />
+<br /><a name=EPA1997_V2></a>EPA 1997 (Vol.2).Exposure Factors Handbook Volume II: Food
+Ingestion Factors.EPA/600/P-95/002Fb, August1997.U.S.Environmental Protection Agency,
+Office of Research and Development,<st1:place Washington_x002c_ D.C.>
+
+<br />
+<br /><a name=EPA1997_V3></a>EPA 1997 (Vol.3).Exposure Factors Handbook Volume III: Activity
+Factors.EPA/600/P-95/002Fc, August1997.U.S.Environmental Protection Agency,
+Office of Research and Development,<st1:place Washington_x002c_ D.C.>
+
+<br />
+<br /><a name=KENNEDY1992></a>Kennedy, W. E. and D.L. Strenge.1992.Residual
+Radioactive Contamination From Decommissioning: Technical Basis for Translating
+Contamination Levels to Annual Total Effective Dose Equivalent.Final
+Report. NUREG/CR-5512.U.S. Nuclear Regulatory Commission, Washington,<st1:State D.C.>
+
+<br />
+<br /><a name=NAPIER1988></a>Napier, B. A., R. A.Peloquin, D. L. Strenge, and J.
+V. Ramsdell.1988.GENII - The<st1:City Hanford Environmental Radiation Dosimetry Software System._x0026_nbsp_x003b_ Volume _x0031_: Conceptual Representation>
+
+<br />
+<br /><a name=NRC1977></a>NRC.1977.Calculation of Annual Doses to Man from Routine
+Releases of Reactor Effluents for the Purpose of Evaluating Compliance with 10
+CFR Part 50, Appendix I.Regulatory Guide 1.109, U.S.Nuclear Regulatory
+Commission, Washington,D.C.
+
+<br />
+<br /><a name=STRENGE1986></a>Strenge, D.L., R. A.Peloquin, G. Whelan.1986.ALDTAP
+II - Technical Reference and UserGuide.U. S.Nuclear Regulatory Commission.
+NUREG/CR-4013.Washington, D.C.
+
+<hr />
+<center><a href="https://www.pnnl.gov/projects/earth/mepas"><img src="MEPHOME.GIF" ></a></center>
+</body>
+</html>

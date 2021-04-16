@@ -1,0 +1,53 @@
+import FRAMES2API.*;
+import javax.swing.*;
+
+Install inst=new Install();
+
+/*
+UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+JFileChooser jfc=new JFileChooser("C:\\program files\\FRAMESV2\\");
+jfc.setDialogTitle("Select the path to the FRAMESV2 installation");
+jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+if(jfc.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) { exit(); }
+String path=jfc.getSelectedFile().getAbsolutePath()+ "\\";
+*/
+
+String path=bsh.args[0];
+System.out.println("Path is {"+path+"}");
+String DicPath=path+"\\Dictionaries\\";
+String ModPath=path+"\\Modules\\";
+String ExePath=path+"\\";
+
+inst.Start(path);
+
+System.out.println("Adding FRAMES Domain");
+inst.Domain("FRAMES",path+"Icons\\fui.ico");
+
+System.out.println("Adding Domain Database Group");
+inst.DatabaseGroup("FRAMES","Selectors",path+"Icons\\chk.ico");
+inst.DatabaseGroup("FRAMES","Aquatic Data",path+"Icons\\ebf.ico");
+inst.DatabaseSubGroup("FRAMES","Aquatic Data","Toxicity Reference Values",path+"Icons\\ebf.ico");
+inst.DatabaseGroup("FRAMES","Terrestrial Data",path+"Icons\\env.ico");
+inst.DatabaseSubGroup("FRAMES","Terrestrial Data","Soil Screening Limits",path+"Icons\\env.ico");
+inst.DatabaseSubGroup("FRAMES","Terrestrial Data","Toxicity Reference Values",path+"Icons\\env.ico");
+
+System.out.println("Adding Dictionaries");
+inst.Dic(DicPath,"ChemList.dic");
+inst.Dic(DicPath,"AquaticOrganism.dic");
+inst.Dic(DicPath,"TerrestrialOrganism.dic");
+inst.Dic(DicPath,"ChemAquaticTRV.dic");
+inst.Dic(DicPath,"ChemSSL.dic");
+inst.Dic(DicPath,"CHemTerrestrialTRV.dic");
+inst.Dic(DicPath,"DCE.dic");
+
+System.out.println("Adding Database modules");
+inst.Mod(ModPath,"TTD.MOD",ExePath);
+inst.Mod(ModPath,"Chemical Selector.MOD",ExePath);
+inst.Mod(ModPath,"ERED.MOD",ExePath);
+inst.Mod(ModPath,"Aquatic Benchmarks.MOD",ExePath);
+inst.Mod(ModPath,"Aquatic Organism Selector.MOD",ExePath);
+inst.Mod(ModPath,"Soil Screening Limit.MOD",ExePath);
+inst.Mod(ModPath,"Terrestrial Benchmarks.MOD",ExePath);
+inst.Mod(ModPath,"Terrestrial Organism Selector.MOD",ExePath);
+
+inst.End();

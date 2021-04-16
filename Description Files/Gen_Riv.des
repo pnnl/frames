@@ -1,0 +1,85 @@
+"mf","Version 2.1"
+"Fate & Transport:Surface Water:riv","GENII V.2 Surface Water Module","gen_riv.exe ","gen_riv.bat ","riv.ico"
+"
+MODULE VERSION
+   2.10.2 Compiled February 2017
+
+MODULE DESCRIPTION
+GENII Surface Water Module
+
+The GENII V.2 surface water module may be used to estimate 
+radionuclide water concentrations downstream from a point 
+release.  Models are included to describe acute or chronic 
+releases to rivers or lake environments.  The output from 
+the model is represented as a step function over the
+defined release period, with the concentration being the 
+average for the release period.
+
+Limitations:
+    Radionuclides only
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 1 con required as input
+     0 to 1 wff Aquifer required as input
+     0 to 1 wff Surface Water required as input
+
+Valid Output Writes
+     wcf Aquifer
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Bruce Napier
+Mailing Address:      P.O. Box 999 MS K7-68
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 375-3896
+Email Address:        bruce.napier@pnnl.gov
+URL Address:          http://www.usnrc-ramp.com
+"
+2,"Read"
+2,"con","",1,1,"wff","Aquifer",1,1
+2,"con","",1,1,"wff","Surface Water",1,1
+1,"Write"
+"wcf","Surface Water"
+19,"Variables"
+"GNIPond","NOT STOCHASTIC","N/A","Min",0,"Max",3,"Type of impoudment",0,INTEGER
+"GNSWTYPE","NOT STOCHASTIC","N/A","Min",0,"Max",3,"Type of release and body of water",0,INTEGER
+"GNSWRELTYPE","NOT STOCHASTIC","N/A","","","Type of release",0, STRING
+"GNSWWATERTYPE","NOT STOCHASTIC","N/A","","","Type of water body",0,STRING
+"GNSWTREL","NOT STOCHASTIC","yr","Min",0.01,"Max",1000000,"Duration of the release to the surface water",0,FLOAT
+"GNSWEXPNUM","NOT STOCHASTIC","N/A","","","Number of exposure locations",0,INTEGER
+"GNSWEXPNAME","NOT STOCHASTIC","N/A","","","Name",1,STRING
+"Label","exposure location #","Index1","","","","",""
+"GNSWTT","CONTINUOUS","hr","Min",0,"Max",10000,"Travel time in surface water",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWDSCHG","CONTINUOUS","m^3/sec","Min",0.1,"Max",50000,"Total volumetric flow rate of river",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWVELOC","CONTINUOUS","m/s","Min",0.1,"Max",10,"Average long-shore flow velocity",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWLSX","CONTINUOUS","m","Min",0.0001,"Max",5000000,"Downstream distance",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWOSY","CONTINUOUS","m","Min",0,"Max",10000,"Offshore distance to water intake",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWDPTH","CONTINUOUS","m","Min",0.1,"Max",100,"Constant river flow depth",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWIDTH","CONTINUOUS","m","Min",0.1,"Max",10000,"Constant river width",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNSWZDEP","CONTINUOUS","m","Min",0,"Max",100,"Depth of the usage intake in the water body",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNPONDVOL","CONTINUOUS","m^3","Min",0,"Max",10000000000,"Impoundment effective volume",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNPONDOUT","CONTINUOUS","m^3/sec","Min",0,"Max",1000000,"Impoundment outflow rate",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNPONDYRS","CONTINUOUS","yr","Min",0,"Max",1000000,"Impoundment years of prior operation",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""
+"GNPONDDIS","CONTINUOUS","m^3/sec","Min",0,"Max",1000000,"Plant discharge rate into impoundment",1,FLOAT
+"Variable","GNSWEXPNAME","Index1","","","","",""

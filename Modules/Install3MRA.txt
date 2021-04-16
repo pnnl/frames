@@ -1,0 +1,124 @@
+import FRAMES2API.*;
+import javax.swing.*;
+
+Install inst=new Install();
+
+/*
+UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+JFileChooser jfc=new JFileChooser("C:\\program files\\FRAMESV2\\");
+jfc.setDialogTitle("Select the path to the FRAMESV2 installation");
+jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+if(jfc.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) { exit(); }
+String path=jfc.getSelectedFile().getAbsolutePath()+ "\\";
+*/
+
+String path=bsh.args[0];
+System.out.println("Path is {"+path+"}");
+String MMMRADicPath=path+"\\3MRA Dictionaries\\";
+String MMMRAModPath=path+"\\3MRA Modules\\";
+String MMMRAUIPath=path+"\\";
+String MMMRAExePath=path+"\\3MRA Modules\\";
+String MMMRAIconPath=path+"\\Icons\\";
+String Domain="3MRA";
+
+inst.Start(path);
+
+//******Add domain palette
+System.out.println("*********Adding Domain Palette");
+inst.Domain(Domain,MMMRAIconPath+"hwir.ico");
+
+System.out.println("*********Adding Domain Database Group");
+inst.DatabaseGroup(Domain,"Chemical Properties",MMMRAIconPath+"cont.ico");
+
+System.out.println("*********Adding Domain Model Groups");
+inst.ModelGroup(Domain,"Geography",MMMRAIconPath+"gis.ico");
+inst.ModelGroup(Domain,"Eco Exposure and Risk",MMMRAIconPath+"efx.ico");
+inst.ModelGroup(Domain,"Food Web",MMMRAIconPath+"eco.ico");
+inst.ModelGroup(Domain,"Human Exposure and Risk",MMMRAIconPath+"hei.ico");
+inst.ModelGroup(Domain,"Source",MMMRAIconPath+"src.ico");
+inst.ModelGroup(Domain,"Transport",MMMRAIconPath+"rain.ico");
+
+
+//****** Add dictionaries, if any dependencies exist they must be added in order,
+System.out.println("*********Adding System dictionaries");
+inst.Dic(MMMRADicPath,"hdSSF.dic");
+inst.Dic(MMMRADicPath,"hdGRF.dic");
+inst.Dic(MMMRADicPath,"slSSF.dic");
+inst.Dic(MMMRADicPath,"slGRF.dic");
+inst.Unit("Time/Mass","d/kg","d/kg",1000.0,0.0);
+inst.Dic(MMMRADicPath,"cpSSF.dic");
+
+System.out.println("*********Adding source ssf and grf dictionaries");
+inst.Dic(MMMRADicPath,"atSSF.dic");
+inst.Dic(MMMRADicPath,"laSSF.dic");
+inst.Dic(MMMRADicPath,"lfssf.dic");
+inst.Dic(MMMRADicPath,"siSSF.dic");
+inst.Dic(MMMRADicPath,"wpSSF.dic");
+inst.Dic(MMMRADicPath,"srgrf.dic");
+
+System.out.println("*********Adding transport modules ssf and grf dictionaries");
+inst.Dic(MMMRADicPath,"vzSSF.dic");
+inst.Dic(MMMRADicPath,"vzGRF.dic");
+inst.Dic(MMMRADicPath,"aqSSF.dic");
+inst.Dic(MMMRADicPath,"aqGRF.dic");
+inst.Dic(MMMRADicPath,"arSSF.dic");
+inst.Dic(MMMRADicPath,"arGRF.dic");
+inst.Dic(MMMRADicPath,"wsSSF.dic");
+inst.Dic(MMMRADicPath,"wsGRF.dic");
+inst.Dic(MMMRADicPath,"swSSF.dic");
+inst.Dic(MMMRADicPath,"swGRF.dic");
+inst.Dic(MMMRADicPath,"afSSF.dic");
+inst.Dic(MMMRADicPath,"afGRF.dic");
+inst.Dic(MMMRADicPath,"tfSSF.dic");
+inst.Dic(MMMRADicPath,"tfGRF.dic");
+inst.Dic(MMMRADicPath,"ffSSF.dic");
+inst.Dic(MMMRADicPath,"ffGRF.dic");
+
+System.out.println("*********Adding Eco Exposure and Risk modules ssf and grf dictionaries");
+inst.Dic(MMMRADicPath,"eeSSF.dic");
+inst.Dic(MMMRADicPath,"eeGRF.dic");
+inst.Dic(MMMRADicPath,"erSSF.dic");
+inst.Dic(MMMRADicPath,"erGRF.dic");
+
+System.out.println("*********Adding Human Exposure and Risk modules ssf and grf dictionaries");
+inst.Dic(MMMRADicPath,"heSSF.dic");
+inst.Dic(MMMRADicPath,"heGRF.dic");
+inst.Dic(MMMRADicPath,"hrSSF.dic");
+inst.Dic(MMMRADicPath,"hrGRF.dic");
+
+//******Add modules
+System.out.println("*********Adding System Modules");
+inst.Mod(MMMRAModPath,"3MRA Site Importer.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+
+System.out.println("*********Adding Database Modules");
+inst.Mod(MMMRAModPath,"Site Layout.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Chemical Properties.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+//inst.Mod(MMMRAModPath,"Distribution Statistics.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+//inst.Mod(MMMRAModPath,"National Based.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+//inst.Mod(MMMRAModPath,"Regional Based.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+//inst.Mod(MMMRAModPath,"Site Based.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+
+System.out.println("*********Adding Model Modules");
+inst.Mod(MMMRAModPath,"Aerated Tanks.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Air.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Aquatic Food Web.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Aquifer.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Eco Exposure.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Eco Risk.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Farm Food Chain.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Human Exposure.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Human Risk.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Land Application Unit.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Landfill.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Suface Impoundment.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Surface Water.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Terrestrial Food Web.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Vadose Zone.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Waste Pile.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+inst.Mod(MMMRAModPath,"Watershed.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+
+System.out.println("*********Adding Viewer Modules");
+//inst.Mod(MMMRAModPath,"ELP I.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+//inst.Mod(MMMRAModPath,"ELP II.MOD",MMMRAExePath,MMMRAUIPath,MMMRAIconPath);
+
+inst.End();

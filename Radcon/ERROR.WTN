@@ -1,0 +1,25 @@
+C     MEPAS RADCON: ERROR.WTN           VERSION DATE: 01-27-94
+C     Copyright 1989 by battelle Memorial Institute. All rights reserved.
+C*****************************************************************************
+C                        INCLUDE STATEMENT: Error.WTN
+C
+C     This include statement contains contaminant fluxes computed externally
+C
+C     Creation Date:     01/27/94 - KJC
+C     Last Modified:     01/27/94 - KJC
+C
+C*****************************************************************************
+C
+C=== Referenced by: RADCOND, LEACHV, INITIN, SIMPS,SQUANK,FUN,CONTAM,CHECKS
+C                   Inputm,Conc,Source,Limits,Limit1,MulRec,Measure
+C                   SSGW,PNTTim,SSWAP
+C
+C=== Significant Parameters ==================================================
+C
+C     ERRORSIG if .FALSE. no error has occurred else exit
+C
+C*****************************************************************************
+C
+      LOGICAL ERRORSIG
+C
+      COMMON ERRORSIG

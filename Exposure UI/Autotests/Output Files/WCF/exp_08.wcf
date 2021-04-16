@@ -1,0 +1,18 @@
+"usr5",17                               
+8
+"=================================================="
+"  FRAMES User Defined Module"
+"  Version 1.5"
+"  Site Index: 1"
+"  Module Index: 1"
+"  Module Name: usr5"
+"  Created:  5/20/2004 3:13:50 PM"
+"=================================================="
+1
+"all","Surface Water",2
+"CARBON-14","C14","yr","pCi/ml",2,0
+0,10
+100,10
+"TRITIUM (elemental)","H3-EL","yr","pCi/ml",2,0
+0,10
+100,10

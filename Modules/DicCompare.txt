@@ -1,0 +1,112 @@
+import FRAMES2API.*;
+import java.util.*;
+SystemDev sd=new SystemDev();
+int pid;
+
+if (bsh.args.length<3) {
+  System.out.println("Usage Runscript DicCompare.txt <dic1.dic> <dic2.dic> <output.html> ");
+  System.out.println("Where: ");
+  System.out.println("  <dic1.dic> and <dic2.dic> are Fully qualified paths to dictionaries");
+  System.out.println("  <output.html> is the fully qualified path to the html file to create ");
+  exit(0);
+}
+else {
+  PrintStream ps=new PrintStream(new FileOutputStream(bsh.args[2]));
+  ps.println("<html><head><title>Comparison of "+bsh.args[0]+" and "+bsh.args[1]+"</title></head><body bgcolor='lightblue'>");
+  ps.println("<h1>Comparison of "+bsh.args[0]+" and "+bsh.args[1]+"</h1>");  
+  pid=sd.OpenINI("c:\\framesv2");
+  if (pid<0) {
+    ps.println("<font color=red>Error getting a valid pid</font>");  
+    exit(0);
+  } 
+  SystemDev.ByReferenceString brs=new SystemDev.ByReferenceString();
+  SystemDev.ByReferenceInteger bri=new SystemDev.ByReferenceInteger();
+  String dic1=bsh.args[0];
+  ps.println("<b>Reading "+bsh.args[0]+"</b><br/>");
+  sd.AddOpenDictionary(pid,bsh.args[0],brs);
+  String dicName1=brs.value;
+  sd.GetDicDescription(pid,dicName1,brs);
+  String dicDes1=brs.value;
+  sd.GetDicPrivilege(pid,dicName1,bri);
+  int dicPriv1=bri.value;
+  sd.GetDicVersion(pid,dicName1,bri);
+  int dicVer1=bri.value;
+  sd.GetVarCount(pid,dicName1,bri);
+  int varCount1=bri.value;
+  Hashtable vars1=new Hashtable();
+  for (int i=0;i<varCount1;i++) {
+    sd.GetVarName(pid,dicName1,i+1,brs);
+    Variable var=new Variable(pid,sd,dicName1,brs.value);
+    vars1.put(brs.value,var);
+  }
+  ps.println(sd.DelDictionary(pid,dicName1));
+
+  String dic2=bsh.args[1];
+  ps.println("<b>Reading "+bsh.args[1]+"</b><br/>");
+  sd.AddOpenDictionary(pid,bsh.args[1],brs);
+  String dicName2=brs.value;
+  sd.GetDicDescription(pid,dicName2,brs);
+  String dicDes2=brs.value;
+  sd.GetDicPrivilege(pid,dicName2,bri);
+  int dicPriv2=bri.value;
+  sd.GetDicVersion(pid,dicName2,bri);
+  int dicVer2=bri.value;
+  sd.GetVarCount(pid,dicName2,bri);
+  int varCount2=bri.value;
+  Hashtable vars2=new Hashtable();
+  for (int i=0;i<varCount2;i++) {
+    sd.GetVarName(pid,dicName2,i+1,brs);
+    Variable var=new Variable(pid,sd,dicName2,brs.value);
+    vars2.put(brs.value,var);
+  }
+  sd.DelDictionary(pid,dicName2);
+
+  ps.println("<b>Performing comparison </b><br/>");
+  if (dicName1.equals(dicName2))
+    ps.println("<font color=green>Both have name "+dicName1+"</font>");
+  else 
+    ps.println("<font color=red>Dictionary names do not match "+dicName1+" vs "+dicName2+"</font>");
+  ps.println("<br/>");
+  if (dicDes1.equals(dicDes2))
+    ps.println("<font color=green>Both have description name "+dicDes1+"</font>");
+  else 
+    ps.println("<font color=yellow>Dictionary descriptions do not match "+dicDes1+" vs "+dicDes2+"</font>");
+  ps.println("<br/>");
+  if (dicPriv1==dicPriv2)
+    ps.println("<font color=green>Both have privilege"+dicPriv1+"</font>");
+  else 
+    ps.println("<font color=red>Dictionary privilege do not match "+dicPriv1+" vs "+dicPriv2+"</font>");
+  ps.println("<br/>");
+  if (dicVer1==dicVer2)
+    ps.println("<font color=green>Both have version "+dicVer1+"</font>");
+  else 
+    ps.println("<font color=red>Dictionary version do not match "+dicVer1+" vs "+dicVer2+"</font>");
+  ps.println("<br/>");
+  if (varCount1==varCount2)
+    ps.println("<font color=green>Both have "+varCount1+" variables</font>");
+  else 
+    ps.println("<font color=red>Dictionary variable counts do not match "+varCount1+" vs "+varCount2+"</font>");
+  ps.println("<br/>");
+  ps.println("<b>Comparing variables</b><br/>");
+  Enumeration e=vars1.keys();
+  while (e.hasMoreElements()) {
+    String varname=(String)e.nextElement();
+    Variable var1=vars1.get(varname);
+    if (vars2.get(varname)!=null) {
+      ps.println("<font color=green>Both have "+var+"</font><br/>");
+      Variable var2=vars2.get(varname);
+      var1.Compare(ps,var2);
+      vars2.remove(varname);
+    } else {
+      ps.println("<font color=red>"+dic1+" has "+var+" but "+dic2+" does not</font><br/>");
+    }
+  }  
+  Enumeration e=vars2.keys();
+  while (e.hasMoreElements()) {
+    String var=(String)e.nextElement();
+    ps.println("<font color=red>"+dic2+" has "+var+" but "+dic1+" does not</font>");
+    ps.println("<br/>"); 
+  }
+  ps.println("</body></html>");
+  ps.close();
+}

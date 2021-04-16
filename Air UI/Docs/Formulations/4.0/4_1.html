@@ -1,0 +1,394 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>4.1 Atmospheri Pathway Model</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><center><font size="3"><b><u>4.1 ATMOSPHERIC PATHWAY MODEL</u></b></center></font>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+standard straight-line, sector-averaged Gaussian model was selected as
+the basis of the atmospheric pathway model. Such a model meets the MEPAS
+objective of assessing long-term, average risk from the various inactive
+waste sites. This model provides a consistent framework for computing average
+exposures, and incorporates the major factors that control the initial
+dilution, transport and dispersion, and deposition of various contaminants.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The sector-averaged atmospheric model is particularly applicable in MEPAS
+because it allows direct incorporation of long-term site data. The sector-averaged
+model computes long-term, average exposures by a weighted summation of
+exposures. These exposures are for a matrix of cases covering the range
+of combinations of atmospheric stability, wind speed, and wind direction.
+This model uses climatological data representing average long-term conditions
+used to define the frequency of occurrence of each case in the computation
+of an average long-term exposure.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The atmospheric model is not expected to be applicable to all sites. The
+sector-averaged Gaussian model applies best to sites located on a uniform,
+flat plane, and is used only as an approximation for sites located on other
+types of terrain.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Although sites in complex terrain or on a coastline have atmospheric influences
+that are quite different than sites located on a flat, uniform plane, the
+use of a straight-line Gaussian model can provide reasonable exposure estimates
+to the first major terrain feature. As the regional influences become more
+important at greater distances, the straight-line Gaussian model becomes
+less accurate.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Information on the MEPAS complex terrain module is included in Section
+8.0 of this document. More detailed models for plumes in complex-terrain
+may be appropriate for use at sites with complex terrain. The MEPAS atmospheric
+model allows the use of alternative concentration computation codes, if
+they are found to be essential for a specific site.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Applying the sector-averaged model to sites in complex terrain needs careful
+attention to ensure that the estimate of risk is reasonable. A wind summary
+that reflects the transport to the receptors of interest should be selected.
+For example, if risks to the regional population are needed, then a wind
+summary typical of the regional transport should be selected. The danger
+is that an onsite wind summaries can be dominated by local wind influences
+and not be appropriate for a regional evaluation.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The Gaussian diffusion equation used for the concentrations of a contaminant
+in a plume downwind of a continuous point-source release is a standard
+formulation for atmospheric modeling (see Slade 1968; Bowers et al. 1979):
+
+<br>
+
+<br><img SRC="imageI4U.JPG" BORDER=0 height=53 width=284>
+<p align="center">(47)</p>
+
+<br>where&nbsp;
+
+<ul>
+<br>C<sub>k</sub> = time-averaged value of concentration for contaminant form k (g/m<sup>3</sup>)
+<br>Q<sub>k</sub> = amount of material released from a point source of a contaminant form k (g/s)
+<br>k = index on elemental contaminant form (k=1, . . . p; p = number of forms representing [p-1] ranges of particle sizes, and a gaseous state)
+<br>x,y,z = positions in a Cartesian coordinate system that are oriented such
+that the x-axis is in the direction of the mean horizontal wind vector,
+the y-axis is cross wind, and the z-axis is vertical height above local
+ground level (m)
+<br>&oacute;<sub>y</sub> = standard deviation of the distribution of material in a plume in the y-direction (m)
+<br>&oacute;<sub>y</sub> = standard deviation of the distribution of material in a plume in the z-direction (m)
+<br><img SRC="image727.JPG" height=19 width=16>&nbsp;&nbsp;&nbsp; = average value wind speed in the x-direction at the height of the plume centerline (m/s)
+<br>H = effective height of release over local ground level (m)
+<br>f(z,H,&oacute;<sub>z</sub>) = functional relationship for the vertical variation of plume concentrations (dimensionless).
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The function f in Equation 47 has the form of a sum of exponential terms
+representing the Gaussian dispersion from the actual plume as well from
+virtual plumes. The use of virtual plumes is a means of accounting for
+the physical limit onGaussian vertical dispersion encountered at the ground
+and at the mixing-height inversion layer. The use of the virtualplumes
+are important in avoiding a computational loss of mass by dispersion out
+of the real layer in which the plume exits. The material mathematically
+"lost" by dispersion of the actual plume through these layers is "recovered"
+by adding the contributions of virtual plumes. The virtual plumes are thus
+a means of accounting for plume reflections and multiple reflections at
+the ground surface and at the mixing height. The form of the function f
+is based on a discussion by Ramsdell et al. (1983). The vertical exponential
+term is approximated with a sum of exponentials
+
+<br>
+
+<br><img SRC="image05Q.JPG" height=171 width=327>
+<p align="center">(48)</p>
+
+<br>where h is the height of the mixing height (m).
+
+<br>
+
+<br>As a practical matter, the summation can be
+truncated after a few terms on either side of zero. In MEPAS, the range
+of -4 to +4 is sufficient to assure that the computational mass losses
+are very small at all distances.
+
+<br>
+
+<br>The crosswind-integrated concentration from
+a continuous source is obtained by integrating Equation 46 with respect
+to the crosswind distance (y) from<img SRC="imageF2H.JPG" height=16 width=101>
+
+<br>
+
+<br><img SRC="imageJMT.JPG" height=51 width=191>
+<p align="center">(49)</p>
+
+<br>where CWI = crosswind-integrated concentration (i.e., perpendicular to wind direction) (g/m<sup>2</sup>).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The frequency of combinations of wind speeds, wind directions, and diffusion
+rates can be summarized in terms of a speed, direction, and stability joint
+frequency table. The average concentration is computed by multiplying the
+integrated concentration formula (Equation 49) by the frequency of a given
+set of conditions divided by the width of the sector at the distance of
+interest. The sector-averaged concentration for one set of wind speed,
+direction, and stability conditions is given by
+
+<br>
+
+<br><img SRC="imagePM2.JPG" height=76 width=391>
+<p align="center">(50)</center>
+
+<br>&nbsp;
+
+<br>where
+
+<ul>
+<br>C<sub>ijk</sub>(x,z) = sector-averaged atmospheric concentrations for wind speed, i; stability condition, j; and contaminant form, k (g/m<sup>3</sup>); for the downwind distance x and height z above local ground level
+<br>i = index on wind speed (i=1, . . . m; m = number of wind speed classes)
+<br>j = index on stability conditions (j=1, . . . n; n = number of stability condition
+<br>R<sub>k</sub>(x) = deposition and/or decay plume source depletion fraction,
+which varies as a function of the position x of the plume for contaminant form k (dimensionless)
+<br>u<sub>i</sub> = wind speed central value for wind speed interval class i (m/s)
+<br>&oacute;<sub>zj</sub> = standard deviation of concentration in vertical for stability class j (m)
+<br>n = number of wind direction sectors (n = 16) (dimensionless)
+<br><img SRC="image07E.JPG" height=42 width=49>= sector width.
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The indexed variables are defined in terms of central values for each atmospheric
+frequency class (i.e., a set of wind speed, wind direction, and stability
+conditions). The removal of the contaminant from the atmospheric plume,
+by various depletion processes, is computed using
+
+<br>
+
+<br><img SRC="image67Q.JPG" height=23 width=103>
+<p align="center">(51)</p>
+
+<br>where fractional losses are defined as
+
+<ul>
+<br>r = radioactive decay term (dimensionless)
+<br>c = chemical decay term (dimensionless)
+<br>d = dry-deposition term (dimensionless)
+<br>w = wet-deposition term (dimensionless).
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+average air concentration near the earth's surface is input to the inhalation
+component of the health assessment. The average air concentration, C(x,z)
+(g/m<sup>3</sup>), at ground level (z = 0) for a population located at
+a distance and direction from the waste site is computed as the sum of
+the concentrations over the i, j, and k indices, given by
+
+<br>
+
+<br><img SRC="imageA8G.JPG" height=51 width=207>
+<p align="center">(52)</p>
+
+<br>where&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+f<sub>ij</sub> = climatological fractional frequency of occurrence of the
+wind speed (i) and stability class (j)&nbsp; conditions within the specified
+direction (dimensionless).
+
+<br>&nbsp;
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The table of frequencies of occurrence of the f<sub>ij</sub> values is
+referred to as a joint-frequency summary. These data are available as summaries
+referred to as "STAR data" from the National Climatic Data Center, Asheville,
+North Carolina.
+
+<br>
+
+<br>The local surface roughness is characterized by a surface roughness length. Table 4.1 (and Figure 2.1) show examples of the magnitude of this parameter for various surface covers. The
+surface roughness lengths in the region surrounding the release are used
+to account directly for local influences in both dispersion and dry-deposition
+computations.
+
+<br>
+
+<br><center>TABLE 4.1. Typical Surface Roughness Lengths</center>
+
+<center><table BORDER CELLSPACING=2 WIDTH="368" >
+<tr><td VALIGN=TOP WIDTH="37%"><center>Surfaces</center></td>
+
+<td VALIGN=TOP WIDTH="30%"><center>Roughness<br>Length (cm)</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Snow, sea, desert</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>0.005 - 0.03</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Lawn</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>0.1</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Grass (5 cm)</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>1 - 2</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Grass (tall)</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>4 - 9</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Mature root crops</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>14</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Low forest</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>50</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">High forest</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>100</center></td></tr>
+
+<tr><td VALIGN=TOP WIDTH="37%">Urban area</td>
+
+<td VALIGN=TOP WIDTH="30%"><center>100</center></td></tr>
+</table></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The central wind speed, u<sub>i</sub>, in a wind-speed category is not
+necessarily applicable to the movement of an atmospheric plume in a region
+of interest. The wind speed needs to be adjusted for differences in height
+and local surface roughness. The atmospheric component of MEPAS uses relationships
+from atmospheric surface layer similarity theory given by Paulson (1970),
+Businger et al. (1971), and Hanna et al. (1982) to compute an equivalent
+central wind speed at plume height for each wind speed category. To provide
+a height adjustment of the wind speed as a continuous function of the local
+surface roughness, these relationships are used in preference to less general
+power-law approximations (Irwin et al. 1985).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For neutral atmospheric conditions, the following expression is used to
+calculate the wind variation with height (Paulson 1970):
+
+<br>
+
+<br><img SRC="imageKT1.JPG" height=48 width=105>
+<p align="center">(53)</p>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For unstable atmospheric conditions, the following expression is used to
+calculate the wind variation with height (Paulson 1970):
+
+<br>
+
+<br><img SRC="imageEPJ.JPG" height=155 width=419>
+<p align="center">(54)</p>
+
+<br>where&nbsp;&nbsp;&nbsp;
+
+<ul>
+<br>u&nbsp;<sup><u> </u></sup>= average wind speed (m/s)
+<br>u<sub>*</sub> = friction velocity (m/s)
+<br>z = height over land/water surface (m)
+<br>z<sub>o</sub> = roughness length of surface (m)
+<br><font face="Symbol">f</font><sub>m</sub>= wind-gradient parameter (dimensionless).
+</ul>
+
+<br>In MEPAS, the sum of the last three terms
+is approximated using a literature-derived central value of 0.458.
+
+<br>
+
+<br>For stable conditions, the following expression
+is used to calculate the wind variation with height (Hanna et al. 1982):
+
+<br>
+
+<br><img SRC="imageLTF.JPG" height=53 width=177>
+<p align="center">(55)</p>
+
+<br>where L is the Monin-Obukhov length (m), a
+scaling length of atmospheric turbulence. Equations 54 and 55 are integrated
+forms of relationships derived from field studies by Businger et al. (1971).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+To use Equations 52, 53, and 54 for determining the wind variation with
+height, the roughness length, friction velocity, and Monin-Obukhov length
+must be known or calculated.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Empirical relationships are used in the MEPAS atmospheric model to estimate
+the friction velocity (u*) over water surfaces. These friction velocity
+relationships were taken from drag coefficient relationships reported in
+Large and Pond (1981) by substituting for the friction velocity using C<sub>D</sub>
+= u<sup>2</sup><sub>*</sub> /u<sub>s</sub>:
+
+<br>
+
+<br><img SRC="image2A8.JPG" height=51 width=377>
+<p align="center">(56)</p>
+
+<br>where u<sub>x</sub> = wind speed at the 10-m height.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The roughness length is an input parameter for overland surfaces. Charnock's
+relationship for the roughness length (z<sub>o</sub>), as described by
+Joffre (1985), is used for overwater surfaces:
+
+<br>
+
+<br><img SRC="imageAKM.JPG" height=68 width=72>
+<p align="center">(57)</p>
+
+<br>where
+
+<ul>
+<br>g = acceleration of gravity (m/s<sup>2</sup>)
+
+<br>m = coefficient (= 0.0144; recommended by Garratt [1977]).
+</ul>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+Monin-Obukhov length is a function of atmospheric stability and is related
+to the Pasquill stability class and roughness length using the relationship
+of Golder (1972).
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Using the approach
+of computing appropriate wind speeds for the underlying surface allows
+the wind speeds to vary as a function of distance downwind of the release.
+The plume speed is computed at a height of the approximate vertical center
+of mass of the plume at each downwind distance. This speed is used to compute
+a travel time for each computation interval. The total travel time divided
+by the distance traveled defines an average plume speed for use in Equation
+50.
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

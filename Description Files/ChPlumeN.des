@@ -1,0 +1,85 @@
+"mf","Version 2.1"
+"Fate & Transport:Air:air","GENII V.2 NESHAPS Air Module - Chronic Plume","chplumeN.exe","runcplum.bat","air.ico"
+"
+MODULE VERSION
+  2.0 Compiled on 6/1/2006
+
+MODULE DESCRIPTION
+GENII Air Module 1.0 - NESHAPS Chronic Plume
+
+The GENII NESHAPS air module, Chronic Plume, provides estimates
+of potential ambient air concentration, dry and wet 
+deposition rates, and cloud shine dose. The atmospheric
+and surface depositions are computed using standard 
+Gaussian dispersion models.  The model can handle point
+and area sources along with multiple sources that do not
+need to be located at the center of the grid. The model
+can use either hourly meteorological data or wind and 
+stability measurments summarized in a joint frequency 
+distribution.
+
+Limitations:
+  Only designed for radionuclides 
+  - does not do chemicals.
+  Release rates are assumed to be constant over the year.
+  Calculates Annual (or longer) impacts
+
+MODULE REFERENCES
+GENII Manual Section 5
+
+VALID CONNECTIONS
+Valid Input Reads
+     1 to 5 aff Air required as input
+     1 to 1 con required as input
+
+Valid Output Writes
+     ato Polar Air
+
+SYSTEM REQUIREMENTS
+Operating System:     Windows
+Processor:            Pentium+
+RAM Memory:           32MB
+Disk Space:           1MB free
+
+POINT OF CONTACT
+Company Name:         Pacific Northwest National Laboratory
+Contact Name:         Van Ramsdell
+Mailing Address:      P.O. Box 999 MS K9-30
+City:                 Richland
+State:                WA
+Zip Code:             99352
+Country:              USA
+Telephone Number:     (509) 372-6316
+Fax Number:           (509) 372-6168
+Email Address:        Van.Ramsdell@pnl.gov
+URL Address:          https://www.pnnl.gov/projects/earth
+"
+1,"Read"
+2,"aff","Air",1,5,"con","",1,1
+1,"Write"
+"ato","Polar Air"
+24,"Variables"
+"ARMINWIND","Not Stochastic","m/s","Min",0,"Max",2,"Maximum wind speed for 'calm'",0,FLOAT
+"ARMINRISESPD","Not Stochastic","m/s","Min",0,"Max",99.99,"Minimum wind speed during plume rise",0,FLOAT
+"ARMINSIGYSHIFT","Not Stochastic","m","Min",0,"Max",1000000,"Sigma to shift to semi-infinite cloud shine",0,FLOAT
+"ARTRANSRESIST","Not Stochastic","s/m","Min",0,"Max",1000000,"Transfer resistance",0,FLOAT
+"ARSIGPARM","Not Stochastic","","","","Sigma Parameterization Usage",0,INTEGER
+"ARRADVAL","Not Stochastic","m","Min",1E-20,"Max",1000000,"Radial Distance",0,FLOAT
+"ARNUMRECRING","Not Stochastic","","","","Sectors in radial grid",0,INTEGER
+"ARSRCNUMB","Not Stochastic","","","","Source Number",0,INTEGER
+"ARSRCNAME","Not Stochastic","","","","Source Name",0,STRING
+"ARSRCDORISEFLAG","Not Stochastic","","","","Do Plume Rise",0,INTEGER
+"ARSRCDODISPFLAG","Not Stochastic","","","","Use Enhanced Dispersion",0,INTEGER
+"ARISCFLAG","Not Stochastic","","","","Dispersion",0,INTEGER
+"ARISCWAKEFLAG","Not Stochastic","","","","Building Wakes",0,INTEGER
+"ARLOWBOUNDFLAG","Not Stochastic","","","","Use Lower Bound",0,INTEGER
+"ARBIDFLAG","Not Stochastic","","","","Buoyance Induced Dispersion",0,INTEGER
+"ARBLDHGT","Not Stochastic","","Min",1E-20,"","Building Height",0,FLOAT
+"ARBLDWDTH","Not Stochastic","","Min",1E-20,"","Building Width",0,FlOAT
+"ARHGHWNDCORFLAG","Not Stochastic","","","","High Wind Correction",0,INTEGER
+"ARLOWWNDCORFLAG","Not Stochastic","","","","Low Wind Correction",0,INTEGER
+"ARBLDAREA","Not Stochastic","m2","Min",1E-20,"","Building Area",0,FLOAT
+"ARMETFILE","Not Stochastic","","","","Path and Name of Meteorological Data File",0,STRING
+"ARCLDSHNLIB","Not Stochastic","","","","Path and Name of Cloud Shine Library",0,STRING
+"ARCALMDISTFLAG","Not Stochastic","","","","Use user's supplied calm wind distribution",0,INTEGER 
+"ARCALMDIST","Not Stochastic","fraction","Min",0,"Max",1,"Calm Wind Distribution",0,FLOAT

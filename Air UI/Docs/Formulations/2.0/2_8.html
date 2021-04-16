@@ -1,0 +1,146 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>2.8 Landfills with Internal Gas Generation</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<font face="verdana" size="2">
+
+<br><font size="3"><center><b><u>2.8 LANDFILLS WITH INTERNAL GAS GENERATION</font></u></b></center>
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EPA's (1988, 1990) model for computing volatilization rates from "landfills
+with internal gas generation" is implemented in the user-interface (AG-VCASE
+= 2) of MEPAS 3.n versions. Landfills with biodegradable organic waste
+material content can generate internal gas which can greatly enhance the
+emission rates of all gases. A landfill with a combination of municipal
+and industrial waste disposed of in trenches, for example, can generate
+volatile gases that sweep out organic vapors when it emerges from the codisposed
+waste materials. Thibodeaux (1981) developed the following equations for
+estimating enhanced gaseous emission rates from gas-generating landfills;
+Hwang (1982) presented a procedure for estimating emission rates using
+these equations:
+
+<br>
+
+<br><img SRC="Image29.gif" height=92 width=225 align=LEFT>
+<p align="center">(24)</p>
+
+<br>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br>where
+
+<ul>
+<br>Ei = emission rate of constituent i (g/s)
+<br>C<sub>i</sub><sup>*</sup> = concentration of constituent i in the soil
+pore spaces (g/cm<sup>3</sup>)
+<br>C<sub>io</sub> = concentration of constituent i at the soil-air interface
+(g/cm<sup>3</sup>)
+<br>V<sub>y</sub> = mean landfill gas velocity (cm/s)
+<br>A = area of landfill (cm<sup>2</sup>)
+<br>d<sub>sc</sub> = depth of the cover material (cm)
+<br>t = tortuosity (square root of 3 [= 1.73] for spherical particles)
+<br><font face="Symbol">e</font> = porosity of the cover material to be determined by <font face="Symbol">e</font>= 1.73 P<sub>a</sub><sup>10/3</sup>/P<sub>t</sub><sup>2</sup>.
+<br>Because the value for C<sub>io</sub> is not known, Hwang (1982) indicated that Equation 24 should be solved simultaneously with
+</ul>
+
+<br>
+
+<br><img SRC="Image30.gif" height=41 width=265 align=LEFT>
+<p align="center">(25)</p>
+
+<br>
+
+<br>&nbsp;
+
+<br>where
+
+<ul>
+<br>k<sub>g,i</sub> = gas-phase mass-transfer coefficient of component i (cm/s)
+<br>C<sub>ioo</sub> = concentration of component i in the air far away from
+the soil-air interface (g/cm<sup>3</sup>); normally equal to zero.
+<br>Equations 24 and 25 can be solved simultaneously
+to get an expression for C<sub>io</sub> that can be used in Equation 24
+to estimate the emission rate. The resulting expression is
+</ul>
+
+<br>
+
+<br>&nbsp;
+
+<br>
+
+<br><img SRC="Image31.gif" height=97 width=330 align=LEFT>
+<p align="center">(26)</p>
+
+<br>
+
+<br>
+
+<br>&nbsp;
+
+<br>
+<br>
+
+<br>The soil-air interface concentration calculated
+from Equation 26 needs to be substituted in Equation 24 to estimate the
+emission rate from a landfill.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The terms in Equation 24 can be simplified if the internal gas generation
+dominates the gas transport processes. The first term in the right hand
+side of the equation represents the emissions associated with diffusion
+of the pollutant through the soil pores. The second term represents the
+convective transport term. Thibodeaux (1981) provided the range of convective
+velocity of gas being emitted from municipal landfills: 7.29 x 10<sup>-4</sup>
+cm/s to 3.04 x 10<sup>-3</sup> cm/s, with an average velocity of 1.63 x
+10<sup>-3</sup> cm/s for all the landfills cited.
+
+<br>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The magnitude of the terms in Equation 24 can be examined using some typical
+values of experimental data obtained from municipal landfills and radioactive
+waste sites. At a typical sweep gas velocity of 1.63 x 10<sup>-3</sup>
+cm/s for experimental municipal landfills, the second term (convective
+term) dominates and the first term can be neglected. On the other hand,
+for the range of the sweep gas velocity expected in the radioactive waste
+site (4.44 x 10<sup>-7</sup> to 1.27 x 10<sup>-5</sup> cm/s), the first
+term (diffusive term) in Equation 24 dominates. In this latter case, the
+second term in Equation 24 can be neglected. When this simplification is
+made, Equation 24 reduces to Equation 16. Hence, Equation 24 can be simplified
+for use in estimating the emission rate when the internal gas generation
+is significant. With significant internal generation, Equation 24 can be
+reduced to
+
+<br>
+
+<br>&nbsp;
+<br><img SRC="Image32.gif" BORDER=0 height=45 width=92>
+<p align="center">(27)</p>
+
+<br>The C<sub>i</sub><sup>*</sup> is equivalent
+to C<sub>si</sub> in Equation 23 when a waste mixture is disposed of in
+a landfill and can be evaluated using this equation. The actual concentration
+of constituent, in the soil space, C<sub>i</sub><sup>*</sup>, is a quantity
+that is not often measured, and as a result, is not expected to always
+be known. As a conservative approach, the saturated vapor concentration
+of the constituent, Csi, may be used as defined in Equation 22 instead
+of C<sub>i</sub><sup>*</sup>.
+
+
+</font>
+</body>
+</html>

@@ -1,0 +1,53 @@
+!   MEPAS HAZ2: SLPATH.FTN             Version Date: 12-Aug-97
+!   Copyright 1989 by Battelle Memorial Institute.  All rights reserved.
+!*****************************************************************************
+!                                                                            *
+!                           COMMON BLOCK SLPATH                              *
+!                                                                            *
+!  Common block SLPATH CONTAINS PARAMETERS FOR THE LOCAL SOIL INTAKE         *
+!                      PATHWAY - 5                                           *
+!                                                                            *
+!  Written by:       Dennis Strenge                                          *
+!                    Battelle Pacific Northwest Laboratories                 *
+!                    P.O. Box 999                                            *
+!                    Richland, WA 99352                                      *
+!                                                                            *
+!  Creation Date:    01/19/89 (Converted to PC)                              *
+!  Last Modified:    12-Aug-97  DLS                                          *
+!                                                                            *
+!*****************************************************************************
+!
+!==== Modular Organization ===================================================
+!
+!     Module of: MEPAS/HAZ2
+!     Referenced by modules:
+!
+!==== Significant Parameter Designation and Description ======================
+!
+!     Parameter
+!     Name      Type     Parameter Description
+!     --------- ------  -----------------------------------------------------
+!   POPSOL(10)   Real   POPULATION EXPOSED TO EACH LOCAL SOIL AREA
+!   SLCON(20,10) Real   SOIL CONCENTRATION FOR 20 POLLUTANTS
+!                       AND 10 USAGE LOCATIONS.
+!   SLSIF(3,8,10)  Real   Summary Intake Factors for measured soil pathways
+!                      1 - Soil ing., 2 - soil derm,. 3 - soil resus, 4 - soil
+!                      external, 5-8 agr prod.
+!==== Modification History ===================================================
+!
+!   Date      Who  Modification Description
+!  ---------  ---  ------------------------------------------------------
+!  27-Aug-92  DLS  Added body weight, exposure duration, averaging time
+!                  and ingestion rate.
+!  20-Dec-93  DLS  Added SLSIF array
+!  20-Dec-93  DLS  Deleted SMAT, SMUS, and SMBW from common
+!  10-Oct-94  DLS  Changed 2nd dimension of SLSIF to 8 (ag paths)
+!  12-Aug-97  DLS  Added population array POPMS
+!==== COMMON Block Definition ================================================
+!
+      COMMON/SLPATH/ SLCON, SLSIF(3,8), SMED, POPMS(8)
+!
+!==== Variable Declarations ==================================================
+!
+!     None
+!
