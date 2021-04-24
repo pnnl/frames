@@ -48,8 +48,8 @@ formulation document.
   Northwest National Laboratory, Richland, Washington.
 
 Other related sites:
-  http://mepas.pnl.gov/earth
-  http://mepas.pnl.gov/FRAMESV1
+  https://www.pnnl.gov/projects/earth
+  https://www.pnnl.gov/vadose-zone-vad
 
 VALID CONNECTIONS
 Valid Input Reads
@@ -77,7 +77,7 @@ Country:              USA
 Telephone Number:     
 Fax Number:           
 Email Address:        gene.whelan@pnl.gov
-URL Address:          http://mepas.pnl.gov/earth/req/vadosreq.htm
+URL Address:          https://www.pnnl.gov/projects/earth/mepas
 "
 1,"Read"
 3,"con","",1,1,"gis","Geographical Info",1,1,"gff","Vadose",1,1

@@ -21,7 +21,7 @@ Authors:
   Melanie Eslinger
 
 Other related sites:
-  http://mepas.pnl.gov/earth
+  https://www.pnnl.gov/projects/earth
 
 VALID CONNECTIONS
 Valid Input Reads
@@ -49,7 +49,7 @@ Country:              USA
 Telephone Number:     
 Fax Number:           
 Email Address:        mitch.pelton@pnl.gov
-URL Address:          http://mepas.pnl.gov/FRAMESV1
+URL Address:          https://www.pnnl.gov/projects/earth/frames-v1
 "
 1,"Read"
 2,"con","",1,1,"gis","Geographical Info",1,1

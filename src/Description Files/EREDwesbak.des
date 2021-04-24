@@ -19,7 +19,7 @@ its tissues.
 MODULE REFERENCES
 This file provided for backward compatibility
 Web Site:
-  http://www.wes.army.mil/el/ered
+  https://treecs.el.erdc.dren.mil
 
 VALID CONNECTIONS
 Valid Input Reads
@@ -44,7 +44,7 @@ Country:              USA
 Telephone Number:     (601) 634-2489
 Fax Number:           (601) 634-3120
 Email Address:        lutzc@wes.army.mil
-URL Address:          http://www.wes.army.mil/el/ered
+URL Address:          https://www.erdc.usace.army.mil
 "
 1,"Read"
 1,"con","",1,1
