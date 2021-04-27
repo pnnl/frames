@@ -34,11 +34,11 @@ Begin VB.Form frmCDBE
    ScaleWidth      =   655
    StartUpPosition =   2  'CenterScreen
    Begin TabDlg.SSTab SSTab1 
-      Height          =   8292
+      Height          =   8295
       Left            =   0
       TabIndex        =   0
       Top             =   0
-      Width           =   9816
+      Width           =   9810
       _ExtentX        =   17304
       _ExtentY        =   14631
       _Version        =   393216
@@ -1079,7 +1079,7 @@ Begin VB.Form frmCDBE
             ForeColor       =   -2147483630
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Tahoma"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1257,12 +1257,14 @@ Begin VB.Form frmCDBE
          BeginProperty Panel1 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
             AutoSize        =   1
             Object.Width           =   9313
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
          BeginProperty Panel2 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
             Object.Width           =   7937
             MinWidth        =   7937
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
@@ -1277,10 +1279,22 @@ Begin VB.Form frmCDBE
          Strikethrough   =   0   'False
       EndProperty
    End
+   Begin VB.TextBox Text2 
+      Alignment       =   2  'Center
+      BackColor       =   &H00E0E0E0&
+      ForeColor       =   &H000000C0&
+      Height          =   3135
+      Left            =   840
+      MultiLine       =   -1  'True
+      TabIndex        =   67
+      Text            =   "CDBE.frx":06B3
+      Top             =   2400
+      Width           =   8175
+   End
    Begin VB.Image Image1 
-      Height          =   8760
+      Height          =   8400
       Left            =   0
-      Picture         =   "CDBE.frx":06B3
+      Picture         =   "CDBE.frx":093F
       Stretch         =   -1  'True
       Top             =   0
       Width           =   9840
@@ -1390,19 +1404,19 @@ End Sub
 'File menu click events
 '=================================================================
 Private Sub mnuFile_Click()
-Dim Ok As Boolean
+Dim OK As Boolean
 
-  Ok = (Len(DBName) = 0)
-  mnuNew.Enabled = Ok
-  mnuOpen.Enabled = Ok
-  mnuClose.Enabled = Not Ok
-  mnuSave.Enabled = Not Ok
-  mnuSaveAs.Enabled = Not Ok
-  mnuExitSave.Enabled = Not Ok
-  mnuRestoreDB.Enabled = Not Ok
-  mnuRestoreGID.Enabled = Not Ok
-  mnuPrint.Enabled = Not Ok
-  mnuPrintSetup.Enabled = Not Ok
+  OK = (Len(DBName) = 0)
+  mnuNew.Enabled = OK
+  mnuOpen.Enabled = OK
+  mnuClose.Enabled = Not OK
+  mnuSave.Enabled = Not OK
+  mnuSaveAs.Enabled = Not OK
+  mnuExitSave.Enabled = Not OK
+  mnuRestoreDB.Enabled = Not OK
+  mnuRestoreGID.Enabled = Not OK
+  mnuPrint.Enabled = Not OK
+  mnuPrintSetup.Enabled = Not OK
 End Sub
 
 Private Sub mnuNew_Click()
@@ -1589,7 +1603,7 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
   End Select
 End Sub
 
-Private Sub Form_Load()
+Private Sub Form_load()
 Dim fle As parmfile
 On Error GoTo ErrorHandler
 

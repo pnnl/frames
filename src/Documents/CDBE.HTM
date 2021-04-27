@@ -1,1437 +1,1776 @@
 <html>
-<head>
- <title>Text for the CDBE Help File</title>
-</head>
-
-<body background="frames1.jpg">
-<hr width="100%">
-<a name=Top></a><center><h1>CHEMICAL DATABASE EDITOR (CDBE)</h1></center>
-<hr width="100%">
-
-The FRAMES chemical database editor (CDBE) allows the user to view parameters
-in the database, select constituents for an analysis, and maintain values in
-the database by editing values for current constituents, adding new
-constituents, and saving multiple versions of a database for specific
-applications.&nbsp; The parameters in the database are described in this help
-file.&nbsp; The information provided includes the parameter name as used on the
-screen, the units for the parameter, the valid range for the parameter, and a
-description of the parameter.&nbsp; <b>References</b> cited are included at the end
-of this file.
-
-<hr align=left width="30%"><a name=Selection><b>Selecting Constituents for Analysis</b> </a>
-
-<hr align=left width="30%"><a name=Identification><b>Constituent Identification</b> </a>
-
-<hr align=left width="30%"><a name=References></a><b>Selecting and Updating References</b>
-
-<hr align=left width="30%"><a name=Print></a><b>Printing Constituent Properties or References</b>
-
-<hr align=left width="30%"><a name=Create></a><b>Database Operations</b>
-
-<hr align=left width="30%"><a name=Estimate><b>Estimating Property Values</b> </a><br>
-The CDBE contains several correlation relationships that the user can employ to
-provide estimates for property values.&nbsp; These relationships are defined in
-this section, and are the same as those previously provided in MMEDE (with
-exceptions noted).&nbsp; The estimation methods, screen layout, and save
-options in CDBE should be the same as or extensions of the method in MMEDE.
-
-<p>Water Solubility <br>
-&nbsp;&nbsp;&nbsp;Method S-1, for non-acids and 0.5&lt; log Kow &lt; 8 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -1.1123 (log Kow) + 0.686 -
-0.0099 (mp - 25) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mp = Melting Point (ºC)
-
-<p>&nbsp;&nbsp;&nbsp;Method S-2, for non-acids and -0.5 &lt; log Kow &lt; 0.5 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -1.034 (log Kow) + 0.455 -
-0.0099 (mp - 25)
-
-<p>&nbsp;&nbsp;&nbsp;Method S-3, for acids <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -0.65 (log Kow) + 0.0279 -
-0.0099 (mp - 25)
-
-<p>&nbsp;&nbsp;&nbsp;Lyman Method 2-3 (Lyman et al 1982) based on assorted
-chemicals, mostly pesticides <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -0.922 (log Kow) + 4.184
-
-<p>&nbsp;&nbsp;&nbsp;Henry's Law Constant (HLC) - atm m<sup>3</sup>/mole <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HLC = (vap) ( mw) / (760 S) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vap = vapor pressure (mm Hg) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mw = molecular weight (g/mole) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S = solubility in water (mg/L)
-
-<p>&nbsp;&nbsp;&nbsp;Carbon Matter Partition Coefficient (Koc) - ml/g <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesticides, based on solubility: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
--0.55 (log S) + 3.64 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S =
-solubility (mg/L)
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aromatics, base on Kow: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
-(log Kow) - 0.21 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow =
-octanol-water partition coefficient
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Various organic chemicals for Kow
-between 0.001 and 4x10<sup>6</sup>: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
-0.544 (log Kow) + 1.377
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aromatics (Lyman, et al.&nbsp; 1982) for
-Kow between 100 and 4x10<sup>6</sup>: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
-0.937 (log Kow) - 0.006
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S-triazines (Lyman, et al.&nbsp; 1982)
-for Kow between 150 and 2x10<sup>5</sup>: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
-0.94 (log Kow) + 0.02
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesticides (Lyman, et al.&nbsp; 1982)
-for Kow between 0.003 and 4x10<sup>5</sup>: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
-1.029 (log Kow) - 0.18
-
-<p>&nbsp;&nbsp;&nbsp;Permeability Constant (Kp) from EPA (1992), cm/h: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log Kp = -2.72 + 0.71 (log Kow) -
-0.0061 (mw)
-
-<p>&nbsp;&nbsp;&nbsp;Environmental Transfer Factors (ETF): <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shellfish bioconcentration: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log BCS =
-0.819 (log Kow) - 1.146
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animal feed to meat transfer
-factor (FMT), d/kg: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log FMT =
--7.6 + log Kow
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animal feed to milk transfer
-factor (FMK), d/L: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log FMK =
--8.1 + log Kow
-
-<p>&nbsp;&nbsp;&nbsp; Soil to plant concentration ratio (CR), mg/kg dry plant
-per mg/kg dry soil <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log CR = 1.588 -
-0.578 (log Kow)
-
-<p>&nbsp;&nbsp;&nbsp;Bioaccumulation in Fish <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method of Devilliers, J., S.&nbsp; Bintein,
-and D.&nbsp; Domine (1996): <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log BCF =
-0.91 (log Kow) - 1.975 {log(6.8x10<sup>-7</sup> * Kow + 1)} - 0.786
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-2 of Lyman et al.&nbsp; 1982: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
-0.76 (log Kow) - 0.23
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-3 of Lyman et al.&nbsp; 1982: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
-2.791 - 0.564 (log S)
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-4 of Lyman et al.&nbsp; 1982: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
-1.119 (log Koc) - 1.579
-
-<hr align=left width="30%"><a name=Properties></a><b>Constituent Properties</b> <br>
-The constituent properties menu item opens the window used to add or change
-values for specific properties for constituents.&nbsp; The description of
-constituent properties below follows the outline used in the Cosntituent
-Properties table where parameters are grouped by type (e.g.&nbsp; thermodynamic
-properties).&nbsp; This window also allows entry of references for each value.
-
-<hr>
-<h2>Constituent Identification Parameters</h3>
-
-<p>This set of parameters, tied to constituent id screen, includes
-identification keys, constituent names, and other indexes that identify the
-chemical type, molecular formula, and property classes.
-
-<hr align=left width="30%"><a name=FSCASID></a><b>CAS# or Radionuclide Symbol</b> (FSCASID) <br>
-Units: NA (8-character string) <br>
-Range: NA
-
-<p>Each constituent is identified by a unique identification symbol.&nbsp; For
-chemicals, the Chemical Abstract Service (CAS) identification number is used,
-if one has been assigned.&nbsp; If none is available then a semi-descriptive name is
-defined.&nbsp; For radionuclides, the identification symbol is the element
-symbol (one or two characters) and the atomic weight of the isotope.&nbsp; For
-example, plutonium isotope of atomic weight 238 is represented as Pu238.
-
-<hr align=left width="30%"><a name=FSCNAME></a><b>Constituent Name</b> (FSCNAME) <br>
-Units: NA (40-character string) <br>
-Range: NA
-
-<p>This field provides a text description of the constituent to better identify
-chemicals.&nbsp; Up to 40 characters can be used to describe the
-chemical.&nbsp; This field can be used in output reports by modules running
-under FRAMES to provided identifiable chemical names.
-
-<hr align=left width="30%"><a name=CLKTYPE></a><b>Radionuclide flag</b> (CLKTYPE) <br>
-Units: NA <br>
-Range: 0 to 1 (see below for a description of constituent
-types)
-
-<p>The radionuclide flag indicates whether the constituent is a radionuclide or not.  The classes are defined as follows:
-
-<p>Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description
-
-<br>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical
-<br>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclide
-
-
-<hr align=left width="30%"><a name=CLRTYPE></a><b>RAAS Classification Type</b> (CLRTYPE) <br>
-Units: NA <br>
-Range: 0 to 14 (see below for a description of constituent
-types)
-
-<p>The RASS classification type is an index to indicate the general class of
-chemicals for the current constituent, as defined and used for the RAAS software <b>(Bagaasen
-et al.&nbsp; 1996)</b>.The classes are defined as follows:
-
-<p>Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description
-
-<br>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined
-<br>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Halogenated non-polar aromatics
-<br>&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCB's, Halogenated Dioxins, Furans
-<br>&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Halogenated Polar Aromatics
-<br>&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Halogenated Aliphatics
-<br>&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Halogenated Compounds
-<br>&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nitrated Aromatics and Aliphatics
-<br>&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Heterocyclics, Non-Halogenated Aromatics
-<br>&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Polynuclear Aromatics and Heterocyclics
-<br>&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Polar Non-Halogenated Compounds
-<br>&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Non-Polar Organics
-<br>&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-Volatile Metals
-<br>&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Volatile Metals
-<br>&nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Inorganics
-<br>&nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclides
-
-<hr align=left width="30%"><a name=CLETYPE></a><b>Constituent Exposure Type</b> (CLETYPE) <br>
-Units: NA <br>
-Range: 0 to 5 (see below for a description of constituent category types)
-
-<p>The constituent exposure type is an index to indicate the general exposure class of the
-current constituent.&nbsp;  The classes are defined as follows:
-
-<p>Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description
-
-<br>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined
-<br>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclide, carcinogenic exposure
-<br>&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, carcinogenic inhalation and ingestion
-<br>&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, carcinogenic inhalation, noncarcinogenic ingestion
-<br>&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, non-carcinogenic inhalation and ingestion
-<br>&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, non-carcinogenic inhalation, carcinogenic ingestion Compounds
-
-<hr align=left width="30%"><a name=CLCHEM></a><b>Constituent Classification Type</b> (CLCHEM) <br>
-Units: NA (integer index) <br>
-Range: 0 to 48 (current maximum)
-
-<p>This index provides a representative organic chemical class for the
-chemical.&nbsp; The parameter can be used to select property estimation
-methods, or be used by programs running under the FRAMES user interface as
-needed to properly represent release, transport, and health impacts for the
-chemical.&nbsp; The class should be set to 0 (Undefined) for non-organic chemicals
-and radionuclides.&nbsp; The classes are defined as follows:
-
-<p>Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description
-
-<br>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined
-<br>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acid anhydrides
-<br>&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alcohols
-<br>&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aldehydes
-<br>&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aliphatic amines
-<br>&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkanes
-<br>&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkenes and alkynes
-<br>&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkyl halides
-<br>&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkyl-N-phenylcarbamates
-<br>&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amides
-<br>&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic amines
-<br>&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic compounds (heterocyclic)
-<br>&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic compounds (multi-heterocyclic)
-<br>&nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (halogenated monocyclic)
-<br>&nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (monocyclic)
-<br>&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (polycyclic)
-<br>&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (nitro compounds)
-<br>&nbsp;&nbsp;17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carbamates
-<br>&nbsp;&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carbamoyl oximes
-<br>&nbsp;&nbsp;19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carboxylic acids
-<br>&nbsp;&nbsp;20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chlorinated insecticides/herbicides
-<br>&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cycloaliphatic compounds
-<br>&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cycloaliphatic compounds (halogenated)
-<br>&nbsp;&nbsp;23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; diisocyanates
-<br>&nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dinitroanilines
-<br>&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; epoxides
-<br>&nbsp;&nbsp;26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; esters
-<br>&nbsp;&nbsp;27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ethers
-<br>&nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; glycols
-<br>&nbsp;&nbsp;29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; halobenzenes
-<br>&nbsp;&nbsp;30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hydrazines and related compounds
-<br>&nbsp;&nbsp;31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imides
-<br>&nbsp;&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ketones
-<br>&nbsp;&nbsp;33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nitriles
-<br>&nbsp;&nbsp;34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N-nitroso compounds
-<br>&nbsp;&nbsp;35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N-substituted alkanes
-<br>&nbsp;&nbsp;36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; organotins
-<br>&nbsp;&nbsp;37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCBs (halogenated biphenyls)
-<br>&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCDDs and PCDFs
-<br>&nbsp;&nbsp;39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phenols
-<br>&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phenylureas, substituted
-<br>&nbsp;&nbsp;41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phosphorus containing insecticides
-<br>&nbsp;&nbsp;42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phosphate esters
-<br>&nbsp;&nbsp;43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S-substituted alkanes and thiols
-<br>&nbsp;&nbsp;44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sulfonic acids
-<br>&nbsp;&nbsp;45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; terpenes
-<br>&nbsp;&nbsp;46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thiocarbamates
-<br>&nbsp;&nbsp;47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; triazines
-<br>&nbsp;&nbsp;48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ureas and uracils
-
-<hr>
-<h2>PHYSICAL PROPERTIES</h3>
-
-<p>Parameters in this group describe basic physical properties for the
-constituent.
-
-<hr align=left width="30%"><a name=CLCNUM></a><b>Carbon Number</b> (CLCNUM) <br>
-Units: NA (integer value) <br>
-Range: 0 to 1000
-
-<p>This parameter is simply the number of carbon atoms in the molecular structure
-of the chemical.&nbsp; For constituents represented as mixtures of compounds
-(e.g.&nbsp; petroleum products) an effective carbon number may be defined as an
-average value for the chemicals in the mixture.
-
-<hr align=left width="30%"><a name=CLMFORM></a><b>Molecular Formula</b> (CLMFORM) <br>
-Units: NA (255-character string) <br>
-Range: NA
-
-<p>The molecular formula is intended to allow entry of chemical structure in the
-SMILES notation.&nbsp; This notation has been used by software developers to
-provide estimates of physical properties (e.g.&nbsp; Kow).&nbsp; The molecular
-formula is not used by the current version of CDBE.
-
-<hr align=left width="30%"><a name=CLWM></a><b>Molecular Weight</b> (CLWM) <br>
-Units: g/mol <br>
-Range: 1 to 50,000
-
-<p>This is the molecular weight of the chemical; the number of grams of one mole
-of the chemical.&nbsp; For radionuclides the molecular weight is usually entered as
-the atomic weight.
-
-<hr align=left width="30%"><a name=CLSOL></a><b>Water Solubility</b> (CLSOL) <br>
-Units: mg/L <br>
-Range: 0 to 1E6
-
-<p>The amount of a chemical (mg) that will dissolve in 1 L water at the
-temperature indicated by &quot;Water Solubility Temperature&quot;.&nbsp; For totally
-miscible compounds, a value of 1E6 is suggested to indicate that there is no
-solubility limit.&nbsp; Sources for water solubility include <b>Mackay et al.&nbsp; (1992)</b>
-and <b>Howard and Meylan (1997)</b>.
-
-<hr align=left width="30%"><a name=CLSOLT></a><b>Water Solubility Temperature</b> (CLSOLT) <br>
-Units: deg C <br>
-Range&nbsp;&nbsp;&nbsp; -50 to 100
-
-<p>The water solubility temperature is the temperature corresponding the to &quot;Water
-Solubility&quot; value.&nbsp; For consistency with other parameters in the database,
-water solubility is usually defined at 25ºC.
-
-<hr align=left width="30%"><a name=CLVAP></a><b>Vapor Pressure</b> (CLVAP) <br>
-Units: mm Hg <br>
-Range: 0 to 5000
-
-<p>The vapor pressure of a chemical is the pressure exerted by its vapor, at a
-given temperature, in equilibrium with the pure compound (liquid or
-solid).&nbsp; The vapor pressure is used to define the volatility of the
-chemical.&nbsp; Most inorganic solid compounds will have a value of zero.&nbsp;
-Gases generally have a value of at least 760 mm Hg (1 atmosphere).&nbsp;
-Because vapor pressure is temperature dependent, the temperature at which the
-value is defined should be entered in the field &quot;Vapor Pressure Temperature&quot;.
-Sources for water solubility include <b>Mackay et al.&nbsp; (1992)</b> and <b>Howard
-and Meylan (1997)</b>.
-
-<hr align=left width="30%"><a name=CLVPT></a><b>Vapor Pressure Temperature</b> (CLVPT) <br>
-Units: deg.&nbsp; C <br>
-Range: -50 to 100
-
-<p>The vapor pressure temperature is the temperature corresponding to the &quot;Vapor
-Pressure&quot; value.&nbsp; For consistency with other parameters in the database,
-vapor pressure is usually defined at 25ºC.
-
-<hr align=left width="30%"><a name=CLPCDEN></a><b>Pure Constituent Density</b> (CLPCDEN) <br>
-Units: g/ml <br>
-Range: 0 to 20
-
-<p>This parameter provides the density of the pure substance at ambient
-conditions.&nbsp; It is generally used for chemicals that are liquids under
-environmental conditions.
-
-<hr align=left width="30%"><a name=CLMV></a><b>Molar Volume</b> (CLMV) <br>
-Units: cm<sup>3</sup>/mol <br>
-Range: 0 to 5000
-
-<p>The molar volume is the volume occupied by 1 g-mole of a chemical at 1
-atmosphere pressure at the temperature defined by &quot;Molar Volume
-Temperature&quot;.&nbsp; For an ideal gas, the molar volume at 0ºC is 2.2414x10<sup>4</sup>
-cm<sup>3</sup>/mol.&nbsp; Some sources refer to this parameter as the molecular
-volume.&nbsp; However, in this database, the molecular volume is defined as the
-volume of one molecule (see Molecular Volume).
-
-<hr align=left width="30%"><a name=CLMVT></a><b>Molar Volume Temperature</b> (CLMVT) <br>
-Units: deg.&nbsp; C <br>
-Range: -50 to 100
-
-<p>The molar volume temperature is the temperature corresponding to the molar
-volume value.
-
-<hr align=left width="30%"><a name=CLMCV></a><b>Molecular Volume</b> (CLMCV) <br>
-Units: Å<sup>3</sup> <br>
-Range: 1 to 5000
-
-<p>The molecular volume is defined as the volume of one molecule of the chemical,
-expressed in Angstrom units.&nbsp; See also Molar Volume.
-
-<hr align=left width="30%"><a name=CLTSA></a><b>Total Surface Area</b> (CLTSA) <br>
-Units: Å<sup>2</sup> <br>
-Range: 1 to 5000 <br>
-The total surface area is the area of one molecule of the chemical, expressed
-in Angstrom units.
-
-<hr align=left width="30%"><a name=CLSURT></a><b>Surface Tension</b> (CLSURT) <br>
-Units: dyne/cm <br>
-Range: 0 to 10,000
-
-<p>Surface tension is a measure of the tension between two fluids in contact, due
-to molecular forces.
-
-<hr align=left width="30%"><a name=CLSURTT></a><b>Surface Tension</b> <b>Temperature</b> (CLSURTT) <br>
-Units: degree Celsius <br>
-Range: -50 to 100
-
-<p>The surface tension temperature is the temperature corresponding to the surface
-tension value.
-
-<hr align=left width="30%"><a name=CLVISC></a><b>Dynamic Viscosity</b> (CLVISC) <br>
-Units: centipoise <br>
-Range: 0 to 10,000
-
-<p>The dynamic viscosity (absolute viscosity) is a measure of the resistance to
-change of form of a substance.&nbsp; Although defined primarily for fluids
-(liquids and vapors) some solids also show a gradual change is shape under
-applied force.&nbsp; Dynamic viscosity is related to kinematic viscosity as
-follows:
-
-<p>Dynamic Viscosity (centipoise) = Kinematic Viscosity (centistokes) x density
-(g/cm<sup>3</sup>)
-
-<hr align=left width="30%"><a name=CLVISCT></a><b>Dynamic Viscosity Temperature</b> (CLVISCT) <br>
-Units: deg.&nbsp; C <br>
-Range: -50 to 100
-
-<p>The dynamic viscosity temperature is the temperature corresponding to the
-dynamic viscosity value.
-
-<hr>
-<h2>PARTITION COEFFICIENTS</h3>
-
-<p>Parameters used to evaluate the distribution between media in the
-environment are included in this group.
-
-<hr align=left width="30%"><a name=CLHLC></a><b>Henry's Law Constant</b> (CLHLC) <br>
-Units: atm-m<sup>3</sup>/mol <br>
-Range: 0 to 100
-
-<p>The Henry's Law constant defines the partitioning of a compound between air and
-water phases.&nbsp; The Henry's Law Constant is often expressed in
-non-dimensional units, related to the dimensional form as follows:
-
-<p>HLC (non-dimensional) = HLC (atm-m<sup>3</sup>/mol) x R T
-
-<p>where T is the temperature (ºK) and R is the gas law constant (8.2056x10<sup>-5</sup>
-atm-m<sup>3</sup>/mol ºK).&nbsp; Sources for Henry's Law Constant values
-include <b>Mackay et al.&nbsp; (1992)</b> and <b>Howard and Meylan (1997)</b>.
-
-<hr align=left width="30%"><a name=CLHLCT></a><b>Henry's Law Constant Temperature</b> (CLHLCT) <br>
-Units: deg.&nbsp; C <br>
-Range: -50 to 100
-
-<p>The Henry's Law Constant temperature is the temperature corresponding to the
-Henry's Law Constant value.
-
-<hr align=left width="30%"><a name=CLKOC></a><b>Carbon Matter Partition Coefficient</b> (CLKOC) <br>
-Units: ml/g <br>
-Range: 0 to 10<sup>10</sup>
-
-<p>The carbon matter partition coefficient describes the partitioning of a
-chemical between the aqueous phase and organic material, such as that present
-in soil.
-
-<hr align=left width="30%"><a name=CLKOW></a><b>Octanol-Water Partition Coefficient</b> (CLKOW) <br>
-Units: ml water/ml octonal <br>
-Range: 0 to 10<sup>10</sup>
-
-<p>The octanol-water partition coefficient describes the partitioning of a
-chemical between the water and n-octanol phases in a two-phase system.&nbsp; Sources
-for octanol-water partition coefficient values include <b>Mackay et al.&nbsp; (1992)</b>
-and <b>Howard and Meylan (1997)</b>.
-
-<hr align=left width="30%"><a name=CLKD></a><b>Soil-Water Partition Coefficient</b> (CLKD) <br>
-Units: ml water/g soil <br>
-Range: 0 to 10<sup>7</sup>
-
-<p>The soil-water partition coefficient is used to indicate the distribution of a
-chemical between water and soil, and represents the ratio of constituent
-concentrations in soil to soil water.&nbsp; The parameter is also called the
-adsorption coefficient.
-
-<hr align=left width="30%"><a name=CLPKA></a><b>Acid Dissociation Constant</b> (CLPKA) <br>
-Units: pH units <br>
-Range: 1 to 13
-
-<p>The acid dissociation constant is the pH at which 50% of a chemical is in the
-dissociated form.&nbsp; This parameter may be important for chemicals that
-dissociate at pH levels found in the environment.&nbsp; Typical chemical classes
-where dissociation occurs include amines, carboxylic acids, phenols,
-phosphates, and sulfonic acids.&nbsp; A source for this parameter is <b>Howard
-and Meylan (1997)</b>.
-
-<hr align=left width="30%"><a name=CLVPFA></a><b>Vapor Phase Fraction in Air</b> (CLVPFA) <br>
-Units: none <br>
-Range: 0 to 1.0
-
-<p>This parameter gives the fraction of a chemical that is in the air phase (as
-opposed to particulate phase) at ambient conditions.&nbsp; For metals the
-fraction should be set to 0.
-
-<hr>
-<h2>DIFFUSION COEFFICIENTS</h3>
-
-<p>This group includes diffusion coefficients for air, water, and grout and the
-associated temperatures at which the values are defined.
-
-<hr align=left width="30%"><a name=CLDCAIR></a><b>Diffusion Coefficient in Air</b> (CLDCAIR) <br>
-Units: cm<sup>2</sup>/s <br>
-Range: 0 to 1.0
-
-<p>The air diffusion coefficient (or diffusivity) defines the rate of mass
-transfer of a chemical through air based on diffusion.&nbsp; Values can be estimated
-using the following equation <b>(EPA 1997b)</b>:
-
-<p>Da = 1.9 / MW<sup>2/3</sup>
-
-<p>where MW is molecular weight.
-
-<hr align=left width="30%"><a name=CLDCAT></a><b>Reference Temperature for Diffusion Coefficient in Air</b>
-(CLDCAT) <br>
-Units: deg C <br>
-Range: -50 to 100
-
-<p>This is the temperature at which the air diffusion coefficient is defined.
-
-<hr align=left width="30%"><a name=CLDCWAT></a><b>Diffusion Coefficient in Water</b> (CLDCWAT) <br>
-Units: cm<sup>2</sup>/s <br>
-Range: 0 to 1.0
-
-<p>The water diffusion coefficient (or diffusivity) defines the rate of mass
-transfer of a chemical through water based on diffusion.&nbsp; Values can be
-estimated using the following equation <b>(EPA 1997b)</b>:
-
-<p>Dw = 2.2x10<sup>-5</sup> / MW<sup>2/3</sup>
-
-<p>where MW is molecular weight.
-
-<hr align=left width="30%"><a name=CLDCWT></a><b>Reference Temperature for Diffusion Coefficient in
-Water</b> (CLDCWT) <br>
-Units: deg C <br>
-Range: -50 to 100
-
-<p>This is the temperature at which the air diffusion coefficient is defined.
-
-<hr align=left width="30%"><a name=CLDCGRT></a><b>Diffusion Coefficient in Grout</b> (CLDCGRT) <br>
-Units: cm<sup>2</sup>/s <br>
-Range: 0 to 1.0
-
-<p>This is the diffusion coefficient (or diffusivity) of a chemical for diffusion
-through grout.
-
-<hr align=left width="30%"><a name=CLDCGT></a><b>Reference Temperature for Diffusion Coefficient in
-Grout</b> (CLDCGT) <br>
-Units: deg C <br>
-Range: -50 to 100
-
-<p>This is the temperature at which the grout diffusion coefficient is defined.
-
-<hr>
-<h2>THERMODYNAMIC PROPERTIES</h3>
-
-<p>Properties related to a chemical's thermodynamic behavior are included in
-this group.
-
-<hr align=left width="30%"><a name=CLMP></a><b>Melting Point</b> (CLMP) <br>
-Units: deg C <br>
-Range: -250 to 5000
-
-<p>The melting point is the temperature at which a chemical changes from the solid
-phase to the liquid phase under ambient pressure.
-
-<hr align=left width="30%"><a name=CLBP></a><b>Boiling Point</b> (CLBP) <br>
-Units: deg C <br>
-Range: -250 to 5000
-
-<p>The boiling point is the temperature at which a chemical changes from the
-liquid phase to the vapor phase under ambient pressure.
-
-<hr align=left width="30%"><a name=CLHEATC></a><b>Heat of Combustion</b> (CLHEATC) <br>
-Units: J/kg <br>
-Range: 0 to 1E8
-
-<p>This is the amount of heat evolved by the combustion of 1 kg of a chemical.
-
-<hr align=left width="30%"><a name=CLHEATV></a><b>Heat of Vaporization </b>(CLHEATV) <br>
-Units: J/kg <br>
-Range: 0 to 1E8
-
-<p>This is the amount of heat necessary to change 1 kg of a chemical from the
-liquid phase to the vapor phase.
-
-<hr align=left width="30%"><a name=CLHEATF></a><b>Heat of Fusion&nbsp; </b>(CLHEATF) <br>
-Units: J/kg <br>
-Range: 0 to 1E8
-
-<p>This is the amount of heat necessary to change 1 kg of a chemical from the
-solid phase to the liquid phase.
-
-<hr align=left width="30%"><a name=CLENTF></a><b>Entropy of Fusion</b> (CLENTF) <br>
-Units: J/kg deg K <br>
-Range: 0 to 1E7
-
-<p>This is the amount of entropy lost on conversion of 1 kg of a chemical from the
-liquid to solid phase.
-
-<hr align=left width="30%"><a name=CLENTFT></a><b>Temperature of Entropy of Fusion</b> (CLENTFT) <br>
-Units: deg C <br>
-Range: -50 to 100
-
-<p>This is the temperature at which the Entropy of Fusion is defined.
-
-<hr align=left width="30%"><a name=CLFR></a><b>Fugacity Ratio</b> (CLFR) <br>
-Units: none <br>
-Range: 0 to 1.0
-
-<p>The fugacity ratio is defined for chemicals that are solid at ambient
-temperatures.&nbsp; The fugacity ratio is evaluated as follows when Tm &gt; T:
-
-<p>FR = exp{6.97 * (1 - Tm/T)}
-
-<p>where Tm is the melting point and T is the ambient temperature.&nbsp; If Tm
-is not greater than T, then FR is set to1.0.&nbsp; See <b>Mackay et al.&nbsp; (1992)</b>
-for a discussion on evaluation and use of the fugacity ratio.
-
-<hr align=left width="30%"><a name=CLFLASH></a><b>Flash Point</b> (CLFLASH) <br>
-Units: deg C <br>
-Range: -100 to 2000
-
-<p>The flash point is the lowest temperature at which a liquid can form an
-ignitable mixture in air near the surface of the liquid.
-
-<hr>
-<h2>TOXICITY FACTORS</h3>
-
-<hr align=left width="30%"><a name=CLWOEHC></a><b>Weight-of-Evidence for Human Carcinogenicity</b>
-(CLWOEHC) <br>
-Units: NA (character string parameter) <br>
-Range: See table below for valid values.
-
-<p>This index is an EPA scale to indicate the likelihood that the chemical causes
-cancer in humans.&nbsp; The following categories are used to define this
-parameter.
-
-<p>Index Value Description
-<br>A&nbsp;&nbsp;&nbsp;&nbsp; Human Carcinogen
-<br>B1&nbsp;&nbsp;&nbsp; Probable human carcinogen - limited human data available
-<br>B2&nbsp;&nbsp;&nbsp; Probable human carcinogen - sufficient data in animals and inadequate or no data in humans
-<br>C&nbsp;&nbsp;&nbsp;&nbsp; Possible human carcinogen
-<br>D&nbsp;&nbsp;&nbsp;&nbsp; Not classifiable as a human carcinogen
-<br>E&nbsp;&nbsp;&nbsp;&nbsp; Evidence of non-carcinogenicity
-
-<hr align=left width="30%"><a name=CLCPFH></a><b>Inhalation Cancer Potency Factor</b> (CLCPFH) <br>
-Units: risk per (mg/kg/d) <br>
-Range: 0 to 2000
-
-<p>The inhalation cancer potency factor (or slope factor) relates the average
-daily intake rate (via inhalation) to the risk of developing cancer.&nbsp; It
-is used to convert the estimated average daily intake of a chemical to an
-estimate of cancer incidence.
-
-<hr align=left width="30%"><a name=CLURISKH></a><b>Inhalation Unit Risk Factor&nbsp;&nbsp;</b>
-(CLURISKH) <br>
-Units: mg/m<sup>3</sup> <br>
-Range: 0 to 1000
-
-<p>The inhalation unit risk factor is the cancer risk resulting from lifetime
-inhalation of air at a concentration 1 mg/m<sup>3</sup>of the chemical.
-
-<hr align=left width="30%"><a name=CLRFDH></a><b>Inhalation Reference Dose</b> (CLRFDH) <br>
-Units: mg/kg/d <br>
-Range: 0 to 2000
-
-<p>The reference dose is the daily exposure to a human population that is likely
-to be without an appreciable risk of deleterious effects during a lifetime.
-
-<hr align=left width="30%"><a name=CLRFCH></a><b>Inhalation Reference Concentration</b> (CLRFCH) <br>
-Units: mg/m<sup>3</sup> <br>
-Range: 0 to 5000
-
-<p>The inhalation reference concentration is the air concentration that is likely
-to be without an appreciable risk of deleterious effects during a lifetime, for
-exposure of a human population.
-
-<hr align=left width="30%"><a name=CLCPFG></a><b>Ingestion Cancer Potency Factor - Water Intake</b>(CLCPFG)
-<br>
-Units: risk per (mg/kg/d) <br>
-Range: 0 to 2000
-
-<p>The ingestion cancer potency factor (or slope factor) relates the average daily
-intake rate (via ingestion in water) to the risk of developing cancer.&nbsp; It
-is used to convert the estimated average daily intake of a chemical to an
-estimate of cancer incidence.
-
-<hr align=left width="30%"><a name=CLCPFGF></a><b>Ingestion Cancer Potency Factor - Food Intake</b>(CLCPFGF)
-<br>
-Units: risk per (mg/kg/d) <br>
-Range: 0 to 2000
-
-<p>The ingestion cancer potency factor (or slope factor) relates the average daily
-intake rate (via ingestion in food) to the risk of developing cancer.&nbsp; It
-is used to convert the estimated average daily intake of a chemical to an
-estimate of cancer incidence.
-
-<hr align=left width="30%"><a name=CLCPFGS></a><b>Ingestion Cancer Potency Factor - Soil Intake</b>
-(CLCPFGS) <br>
-Units: risk per (mg/kg/d) <br>
-Range: 0 to 2000
-
-<p>The ingestion cancer potency factor (or slope factor) relates the average daily
-intake rate (via ingestion in soil) to the risk of developing cancer.&nbsp; It
-is used to convert the estimated average daily intake of a chemical to an
-estimate of cancer incidence.
-
-<hr align=left width="30%"><a name=CLURISKG></a><b>Ingestion Unit Risk Factor</b> (CLURISKG) <br>
-Units: risk per mg/L <br>
-Range: 0 to 1000
-
-<p>The ingestion unit risk factor is the cancer risk resulting from lifetime
-ingestion of water at a concentration of 1 mg/L of the chemical.
-
-<hr align=left width="30%"><a name=CLRFDG></a><b>Ingestion Reference Dose - Water Intake </b>(CLRFDG) <br>
-Units: mg/kg/d <br>
-Range: 0 to 2000
-
-<p>The reference dose is the daily exposure from water ingestion to a human
-population that is likely to be without an appreciable risk of deleterious
-effects during a lifetime.
-
-<hr align=left width="30%"><a name=CLRFDGF></a><b>Ingestion Reference Dose - Food Intake </b>(CLRFDGF) <br>
-Units: mg/kg/d <br>
-Range: 0 to 2000
-
-<p>The reference dose is the daily exposure from food ingestion to a human
-population that is likely to be without an appreciable risk of deleterious
-effects during a lifetime.
-
-<hr align=left width="30%"><a name=CLRFDGS></a><b>Ingestion Reference Dose - Soil Intake</b> (CLRFDGS) <br>
-Units: mg/kg/d <br>
-Range: 0 to 2000
-
-<p>The reference dose is the daily exposure from soil ingestion to a human
-population that is likely to be without an appreciable risk of deleterious
-effects during a lifetime.
-
-<hr>
-<h2>EXPOSURE FACTORS</h3>
-
-<p>This group includes parameter used to estimate exposure and intake from
-contact with constituents.
-
-<hr align=left width="30%"><a name=CLFONEI></a><b>GI Absorption Fraction (insoluble)</b> (CLFONEI) <br>
-Units: none (fraction) <br>
-Range: 0 to 1.0
-
-<p>The GI absorption fraction is the fraction of a substance absorbed during
-passage through the gastrointestinal tract following ingestion.&nbsp; This value is
-used for estimation of the equivalent oral intake of chemicals from dermal
-contact with chemicals.&nbsp; The estimated dermal intake is divided by the GI
-Absorption Fraction to give the equivalent oral intake.&nbsp; The health
-impacts from the equivalent oral intake are evaluated using the oral toxicitly
-values (reference dose or slope factor).
-
-<hr align=left width="30%"><a name=CLFONES></a><b>GI Absorption Fraction (soluble)</b> (CLFONES) <br>
-Units: none (fraction) <br>
-Range: 0 to 1.0
-
-<p>The GI absorption fraction is the fraction of a substance absorbed during
-passage through the gastrointestinal tract following ingestion.&nbsp; This value is
-used for estimation of the equivalent oral intake of chemicals from dermal
-contact with chemicals.&nbsp; The estimated dermal intake is divided by the GI
-Absorption Fraction to give the equivalent oral intake.&nbsp; The health
-impacts from the equivalent oral intake are evaluated using the oral toxicitly
-values (reference dose or slope factor).
-
-<hr align=left width="30%"><a name=CLABSKN></a><b>Dermal Absorption Fraction from Soil</b> (CLABSKN) <br>
-Units: none (fraction) <br>
-Range: 0 to 1.0
-
-<p>This parameter gives the fraction of a chemical (present on the skin) that is absorbed
-into the blood during an exposure situation involving soil contact with the
-skin.
-
-<hr align=left width="30%"><a name=CLPERM></a><b>Aqueous Skin Permeability</b> (CLPERM) <br>
-Units: cm/hr <br>
-Range: 0 to 10
-
-<p>The skin permeability constant gives the rate of absorption of a chemical on
-the skin to the blood.&nbsp; It is used to evaluate the transfer of a chemical
-into the blood for situations involving contact with aqueous solutions of a
-chemical.
-
-<hr align=left width="30%"><a name=CLANDF></a><b>Volatilization Factor for Indoor Inhalation</b>
-(CLANDF) <br>
-Units: L/m<sup>3</sup> <br>
-Range: 0 to 10
-
-<p>The indoor air volatilization factor describes the transfer of volatile
-constituents from domestic water use to indoor air.&nbsp; The factor is generally
-based on EPA recommendations based on work of <b>Andelman (1990)</b> and is
-sometimes referred to as the Andelman volatilization factor.
-
-<hr align=left width="30%"><a name=CLWPF></a><b>Water Purification Factor</b> (CLWPF) <br>
-Units: none&nbsp; (fraction) <br>
-Range: 0 to 1.0
-
-<p>The water purification factor is the fraction of a substance that remains in
-the domestic water supply after processing through a water treatment
-plant.&nbsp; A value of 1.0 indicates no removal of the chemical during water
-purification.
-
-<hr>
-<h2>RADIATION DOSIMETRY FACTORS</h3>
-
-<p>The following parameters are used to evaluate radiation doses and risk from
-exposure to radionuclides.&nbsp; These parameters are defined only for radioactive
-substances.
-
-<hr align=left width="30%"><a name=CLDFAD></a><b>Inhalation Dose Factor, Class D</b> (CLDFAD) <br>
-Units: rem/pCi <br>
-Range: 0 to 1.0
-
-<p>This inhalation dose factor is the radiation dose conversion factor for
-inhalation of a the radionuclide that has properties represented by class D
-material.&nbsp; Class D material is cleared rapidly from lung compartments with
-retention times on the order of days.
-
-<hr align=left width="30%"><a name=CLDFAW></a><b>Inhalation Dose Factor, Class W</b> (CLDFAW) <br>
-Units: rem/pCi <br>
-Range: 0 to 1.0
-
-<p>This inhalation dose factor is the radiation dose conversion factor for
-inhalation of a radionuclide that has properties represented by class W
-material.&nbsp; Class W material is cleared moderately rapidly from lung
-compartments with retention times on the order of weeks.
-
-<hr align=left width="30%"><a name=CLDFAY></a><b>Inhalation Dose Factor, Class Y</b> (CLDFAY) <br>
-Units: rem/pCi <br>
-Range: 0 to 1.0
-
-<p>This inhalation dose factor is the radiation dose conversion factor for
-inhalation of a the radionuclide that has properties represented by class Y
-material.&nbsp; Class Y material is retained in lung compartments with
-retention times on the order of years.
-
-<hr align=left width="30%"><a name=CLDIAM></a><b>Particle Diameter for Inhalation Dose Factors</b>
-(CLDIAM) <br>
-Units: micrometers <br>
-Range: 0.01 to 10.
-
-<p>The inhalation dose factors are defined for a specific particle size at the
-point of inhalation.&nbsp; The default value for particle size is 1 &micro;m.&nbsp;
-If a different value for particle size is desired, it is the user's
-responsibility to ensure that the inhalation dose factors are changed to
-represent the new particle size.
-
-<hr align=left width="30%"><a name=CLLCLAS></a><b>Lung Solubility Class</b> (CLLCLAS) <br>
-Units: NA (1-character string) <br>
-Range: D, W, or Y
-
-<p>Three inhalation dose factors are available in the database (see above
-parameters).&nbsp; The value entered for the lung solubility class can be used
-by health impact components to select from the dose factors available in the database.
-
-<hr align=left width="30%"><a name=CLRDFGS></a><b>Ingestion Dose Factor, Soluble</b> (CLRDFGS) <br>
-Units: rem/pCi <br>
-Range: 0 to 1.0
-
-<p>The ingestion dose factor is defined for radionuclides only, and is the
-radiation dose conversion factor for ingestion of the radionuclide.&nbsp; Some
-radionuclides may be represented by soluble and insoluble forms.&nbsp; This
-parameter is for the more soluble forms of the compounds of the radionuclide.
-
-<hr align=left width="30%"><a name=CLRDFGI></a><b>Ingestion Dose Factor, Insoluble</b> (CLRDFGI) <br>
-Units: rem/pCi <br>
-Range: 0 to 1
-
-<p>The ingestion dose factor is defined for radionuclides only, and is the
-radiation dose conversion factor for ingestion of the radionuclide.&nbsp; Some
-radionuclides may be represented by soluble and insoluble forms.&nbsp; This
-parameter is for the less soluble forms of the compounds of the radionuclide.
-
-<hr align=left width="30%"><a name=CLRDFS></a><b>Dermal Absorption Dose Factor</b> (CLRDFS) <br>
-Units: rem/pCi <br>
-Range:&nbsp;&nbsp;&nbsp;&nbsp; 0 to 1.0
-
-<p>The dermal dose factor is defined for radionuclides only, and is the radiation
-dose conversion factor for intake of the radionuclide through the skin.
-
-<hr align=left width="30%"><a name=CLDEX></a><b>External Dose Factor, Air Immersion</b> (CLDEX) <br>
-Units: rem/hr per pCi/m<sup>3</sup> <br>
-Range: 0 to 1.0
-
-<p>The external dose factor for air immersion is the dose rate received by an
-individual standing in a large cloud or plume of contaminated air having a
-radionuclide concentration of 1 pCi per cubic meter.
-
-<hr align=left width="30%"><a name=CLDIMR></a><b>External Dose Factor, Water Immersion</b> (CLDIMR) <br>
-Units: rem/hr per pCi/L <br>
-Range: 0 to 1.0
-
-<p>The water immersion, external dose factor is the dose rate received by an
-individual immersed in water (e.g.&nbsp; swimming) having a radionuclide
-concentration of 1 pCi per L.
-
-<hr align=left width="30%"><a name=CLDSH></a><b>External Dose Factor, Ground Surface</b> (CLDSH) <br>
-Units: rem/hr per pCi/m<sup>2</sup> <br>
-Range: 0 to 1.0
-
-<p>The ground surface, external dose factor is the dose rate received by an individual
-standing on a large area of soil with uniform contamination at the soil surface
-at a concentration of 1 pCi per square meter.
-
-<hr align=left width="30%"><a name=CLDSH1></a><b>External Dose Factor, Ground Contamination to 1 cm</b>
-(CLDSH1) <br>
-Units: rem/hr per pCi/m<sup>3</sup> <br>
-Range: 0 to 1.0
-
-<p>This dose factor is the dose rate received by an individual standing on a large
-area of soil contaminated uniformly to a depth of 1 cm at a concentration of 1
-pCi per cubic meter.
-
-<hr align=left width="30%"><a name=CLDSH5></a><b>External Dose Factor, Ground Contamination to 5 cm</b>
-(CLDSH5) <br>
-Units: rem/hr per pCi/m<sup>3</sup> <br>
-Range: 0 to 1.0
-
-<p>This dose factor is the dose rate received by an individual standing on a large
-area of soil contaminated uniformly to a depth of 5 cm at a concentration of 1
-pCi per cubic meter.
-
-<hr align=left width="30%"><a name=CLDSH15></a><b>External Dose Factor, Ground Contamination to 15 cm</b>
-(CLDSH15) <br>
-Units: rem/hr per pCi/m<sup>3</sup> <br>
-Range: 0 to 1.0
-
-<p>This dose factor is the dose rate received by an individual standing on a large
-area of soil contaminated uniformly to a depth of 15 cm at a concentration of 1
-pCi per cubic meter.
-
-<hr align=left width="30%"><a name=CLSFH></a><b>Inhalation Slope Factor</b> (CLSFH) <br>
-Units: risk per pCi <br>
-Range: 0 to 1.0
-
-<p>The inhalation slope factor is the risk of cancer incidence from inhalation of
-1 pCi of a radionuclide.
-
-<hr align=left width="30%"><a name=CLSFG></a><b>Ingestion Slope Factor - Water Intake</b> (CLSFG) <br>
-Units: risk per pCi <br>
-Range: 0 to 1.0
-
-<p>The ingestion slope factor is the risk of cancer incidence from ingestion of 1
-pCi of a radionuclide in water.
-
-<hr align=left width="30%"><a name=CLSFGF></a><b>Ingestion Slope Factor - Food Intake</b> (CLSFGF) <br>
-Units: risk per pCi <br>
-Range: 0 to 1.0
-
-<p>The ingestion slope factor is the risk of cancer incidence from ingestion of 1
-pCi of a radionuclide in food.
-
-<hr align=left width="30%"><a name=CLSFGS></a><b>Ingestion Slope Factor - Soil Intake</b> (CLSFGS) <br>
-Units: risk per pCi <br>
-Range: 0 to 1.0
-
-<p>The ingestion slope factor is the risk of cancer incidence from ingestion of 1 pCi
-of a radionuclide in soil.
-
-<hr align=left width="30%"><a name=CLSFEX></a><b>External Exposure Slope Factor for Soil Contamination</b>
-(CLSFEX) <br>
-Units: risk/yr per pCi/g soil <br>
-Range: 0 to 1.0
-
-<p>The external exposure slope factor for soil is the rate of risk accumulation,
-for exposure to contaminated soil at a concentration of 1 pCi per gram of
-soil.&nbsp; The soil contamination is assumed to be infinitely deep (i.e., a
-few meters).&nbsp; Values for this parameter are available in the EPA HEAST
-publication <b>(EPA 1997a)</b>.
-
-<hr>
-<h2>AQUATIC FOOD TRANSFER FACTORS</h3>
-
-<p>This group includes parameters that describe the transfer of constituents
-from aquatic media to aquatic foods.
-
-<hr align=left width="30%"><a name=CLBCF></a><b>Bioconcentration Factor in Fish</b> (CLBCF) <br>
-Units: kg dissolved/kgFW fish <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in fish to the
-chemical concentration in the water to which the fish is exposed.&nbsp; The
-bioconcentration factor accounts for uptake by the fish of the chemical from
-water, but not from uptake from sediments passing across the gills, or from
-consumption of foods.&nbsp; This factor is generally used for organic chemicals
-that have a Kow of less than 4.0 and metals, implying these chemicals do not
-bioaccumulate.
-
-<hr align=left width="30%"><a name=CLBFF></a><b>Bioaccumulation in Freshwater Fish</b> (CLBFF) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a freshwater fish
-to the chemical concentration in the water to which the fish is exposed.&nbsp;
-The bioaccumulation factor generally accounts for uptake by the fish of the
-chemical from water, sediments passing across the gills, and from consumption
-of various foods.&nbsp; This parameter is generally used for organic chemicals
-having a Kow greater than 4.0 that are expected to be taken up by the fish from
-sediments and foods, and to bioaccumulate.
-
-<hr align=left width="30%"><a name=CLBFM></a><b>Bioaccumulation in Freshwater Mollusk</b> (CLBFM) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a freshwater
-mollusk to the chemical concentration in the water to which the mollusk is
-exposed.
-
-<hr align=left width="30%"><a name=CLBFI></a><b>Bioaccumulation in Freshwater Crustacea</b> (CLBFI) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a freshwater
-crustacean to the chemical concentration in the water to which the crustacean is
-exposed.
-
-<hr align=left width="30%"><a name=CLBFP></a><b>Bioaccumulation in Freshwater Plants</b> (CLBFP) <br>
-Units:L water/kg wet food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in freshwater aquatic
-plants to the chemical concentration in the water to which the plants are
-exposed.
-
-<hr align=left width="30%"><a name=CLBMF></a><b>Bioaccumulation in Saltwater Fish</b> (CLBMF) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a saltwater fish
-to the chemical concentration in the water to which the fish is exposed.&nbsp;
-The bioaccumulation factor generally accounts for uptake by the fish of the
-chemical from water, sediments passing across the gills, and from consumption
-of various foods.
-
-<hr align=left width="30%"><a name=CLBMM></a><b>Bioaccumulation in Saltwater Mollusk</b> (CLBMM) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a saltwater
-mollusk to the chemical concentration in the water to which the mollusk is
-exposed.
-
-<hr align=left width="30%"><a name=CLBMI></a><b>Bioaccumulation in Saltwater Crustacea</b> (CLBMI) <br>
-Units: L water/kg food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in a saltwater
-crustacean to the chemical concentration in the water to which the crustacean
-is exposed.
-
-<hr align=left width="30%"><a name=CLBMP></a><b>Bioaccumulation in Saltwater Plants</b> (CLBMP) <br>
-Units: L water/kg wet food <br>
-Range: 0 to 100,000
-
-<p>This parameter is the ratio of the chemical concentration in saltwater aquatic
-plants to the chemical concentration in the water to which the plants are
-exposed.
-
-<hr align=left width="30%"><a name=CLBSAF></a><b>Biota-Sediment Accumulation Factor</b> (CLBSAF) <br>
-Units:&nbsp;&nbsp;&nbsp;&nbsp; mg/kg fish lipid per mg/kg sediment <br>
-Range: 0 to 100,000
-
-<p>This parameter is defined specifically for lipophilic chemicals to relate
-chemical concentration in bottom sediments to chemical concentration in fish
-lipid material.&nbsp; This parameter should be used in place of the
-bioaccumulation factor for fish for chemicals like PCDDs, PCDFs, and PCBs.
-
-<hr>
-<h2>ANIMAL TRANSFER FACTORS</h3>
-
-<p>This group includes parameters that describe the transfer of constituents
-from water, feed, and soil to animal product foods.
-
-<hr align=left width="30%"><a name=CLFMT></a><b>Feed-to-Meat Transfer Factor</b> (CLFMT) <br>
-Units: d/kg <br>
-Range: 0 to 5000
-
-<p>The feed-to-meat transfer factor is the ratio of chemical concentration in
-fresh meat tissue to the daily intake of the chemical by the animal.&nbsp; This
-factor is generally based on beef as the meat animal.&nbsp; Other parameters
-are available to specify pork and poultry transfer.
-
-<hr align=left width="30%"><a name=CLFPK></a><b>Feed-to-Pork Transfer Factor</b> (CLFPK) <br>
-Units: d/kg <br>
-Range: 0 to 100,000
-
-<p>The feed-to-pork transfer factor is the ratio of chemical concentration in fresh
-beef tissue to the daily intake of the chemical by the animal.
-
-<hr align=left width="30%"><a name=CLFMK></a><b>Feed-to-Cow Milk Transfer Factor</b> (CLFMK) <br>
-Units: d/L <br>
-Range: 0 to 100,000
-
-<p>The feed-to-milk transfer factor is the ratio of chemical concentration in milk
-to the daily intake of the chemical by the milk animal.
-
-<hr align=left width="30%"><a name=CLFPL></a><b>Feed-to-Poultry Transfer Factor</b> (CLFPL) <br>
-Units: d/kg <br>
-Range: 0 to 100,000
-
-<p>The feed-to-poultry transfer factor is the ratio of chemical concentration in
-fresh poultry tissue to the daily intake of the chemical by the poultry animal.
-<br>
-
-<hr align=left width="30%"><a name=CLFEG></a><b>Feed-to-Egg Transfer Factor</b> (CLFEG) <br>
-Units: d/kg <br>
-Range: 0 to 100,000
-
-<p>The feed-to-egg transfer factor is the ratio of chemical concentration in eggs
-to the daily intake of the chemical by the egg-laying fowl.
-
-<hr>
-<h2>PLANT TRANSFER FACTORS</h3>
-
-<p>This group includes parameters that describe the transfer of constituents
-from air and soil to plant foods.
-
-<hr align=left width="30%"><a name=CLBVLV></a><b>Soil-to-Plant Concentration Ratio for Leafy Vegetables</b>
-(CLBVLV) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-leafy vegetables to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVRV></a><b>Soil-to-Plant Concentration Ratio for Root Vegetables</b>
-(CLBVRV) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-root vegetables to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVOV></a><b>Soil-to-Plant Concentration Ratio for Other Vegetables</b>
-(CLBVOV) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-other vegetables to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVFR></a><b>Soil-to-Plant Concentration Ratio for Fruit</b>
-(CLBVFR) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-fruit to the soil chemical concentration (dry soil).&nbsp; The soil-to-plant
-concentration ratio accounts for the uptake from soil and transport through
-roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVCL></a><b>Soil-to-Plant Concentration Ratio for Cereal</b>
-(CLBVCL) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-cereal plants to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVAF></a><b>Soil-to-Plant Concentration Ratio for Animal Forage</b>
-(CLBVAF) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-animal forage plants to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVAH></a><b>Soil-to-Plant Concentration Ratio for Hay</b> (CLBVAH)
-<br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-hay crops to the soil chemical concentration (dry soil).&nbsp; The
-soil-to-plant concentration ratio accounts for the uptake from soil and
-transport through roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLBVAG></a><b>Soil-to-Plant Concentration Ratio for Grain</b>
-(CLBVAG) <br>
-Units: kg soil per kg dry plant <br>
-Range: 0 to 5000
-
-<p>This parameter is the ratio of plant chemical concentration (dry weight) for
-grains to the soil chemical concentration (dry soil).&nbsp; The soil-to-plant
-concentration ratio accounts for the uptake from soil and transport through
-roots to the edible plant parts.
-
-<hr align=left width="30%"><a name=CLRCF></a><b>Root Concentration Factor</b> (CLRCF) <br>
-Units: L soil water per kg dry plant <br>
-Range: 0 to 10<sup>6</sup>
-
-<p>The root concentration factor relates chemical concentration in the plant to
-chemical concentration in soil water.&nbsp; This parameter represents an
-alternate method for evaluation of uptake to root crops and may be useful when
-the soil-to-plant concentration ratio is not available.
-
-<hr align=left width="30%"><a name=CLAPLV></a><b>Air-to-Plant Transfer Factor for Leafy Vegetables</b>
-(CLAPLV) <br>
-Units: kg air per kg dry plant <br>
-Range: 0 to 10<sup>10</sup>
-
-<p>This parameter is the ratio of plant chemical concentration to chemical air
-concentration in which the plant is exposed.&nbsp; It is used to estimate
-transfer from air to above ground leafy vegetable plant parts.
-
-<hr align=left width="30%"><a name=CLAPF></a><b>Air-to-Plant Transfer Factor for forage</b> (CLAPF) <br>
-Units: mg/kg dry weight plant per mg/kg air <br>
-Range: 0 to 10<sup>10</sup>
-
-<p>This parameter is the ratio of plant chemical concentration to chemical air
-concentration in which the plant is exposed.&nbsp; It is used to estimate
-transfer from air to above ground forage and hay plant parts.
-
-<hr>
-<h2>ENVIRONMENTAL RATE PARAMETERS</h3>
-
-<p>This group includes parameters that describe environmental rate processes, including
-loss rates from media, biodegradation, oxidation, hydrolysis, photolysis, and
-reaction rates.
-
-<hr align=left width="30%"><a name=CLTPHALF></a><b>Physical Loss Half Time in Air</b> (CLTPHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe the net loss rate of a
-chemical during air transport.
-
-<hr align=left width="30%"><a name=CLGPHALF></a><b>Physical Loss Half Time in Groundwater</b> (CLGPHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe the net loss rate of a
-chemical during water transport.
-
-<hr align=left width="30%"><a name=CLWPHALF></a><b>Physical Loss Half Time in Surface Water</b> (CLSPHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe the net loss rate of a
-chemical during surface water transport.
-
-<hr align=left width="30%"><a name=CLSPHALF></a><b>Physical Loss Half Time in Soil</b> (CLSPHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe the net loss rate of a
-chemical in soil.
-
-<hr align=left width="30%"><a name=CLTHALF></a><b>Half Time in Air</b> (CLTHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during air transport.
-
-<hr align=left width="30%"><a name=CLGHALF></a><b>Half Time in Groundwater</b> (CLGHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during water transport.
-
-<hr align=left width="30%"><a name=CLWHALF></a><b>Half Time in Surface Water</b> (CLWHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during surface water transport.
-
-<hr align=left width="30%"><a name=CLSHALF></a><b>Half Time in Soil</b> (CLSHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) in soil.
-
-<hr align=left width="30%"><a name=CLSHCF></a><b>Half Time in Soil, no leaching</b> (CLSHCF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter is used to describe the loss rate of a chemical from soil,
-excluding losses due to leaching from the soil.
-
-<hr align=left width="30%"><a name=CLBHALF></a><b>Half Time in Biota</b> (CLBHALF) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This is a general loss parameter used to describe the net loss rate of a
-chemical from biotic organism.
-
-<hr align=left width="30%"><a name=CLOXAIR></a><b>Oxidation Half Time in Air</b> (CLOXAIR) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter is used to describe the loss rate of a chemical from air
-resulting from oxidation of the chemical during air transport.
-
-<hr align=left width="30%"><a name=CLHYDA></a><b>Hydrolysis Half Time in Air</b> (CLHYDA) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter is used to describe the loss rate of a chemical from air
-resulting from hydrolysis of the chemical during air transport.
-
-<hr align=left width="30%"><a name=CLHYDW></a><b>Hydrolysis Half Time in Water</b> (CLHYDW) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter is used to describe the loss rate of a chemical from air
-resulting from hydrolysis of the chemical during water transport.
-
-<hr align=left width="30%"><a name=CLPHTA></a><b>Photolysis Half Time in Air</b> (CLPHTA) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter used to describe the loss rate of a chemical from air
-resulting from photolysis of the chemical during air transport.
-
-<hr align=left width="30%"><a name=CLPHTW></a><b>Photolysis Half Time in Water</b> (CLPHTW) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter used to describe the loss rate of a chemical from water
-resulting from photolysis of the chemical during water transport.
-
-<hr align=left width="30%"><a name=CLBIOA></a><b>Biodegradation Half Time in Air</b> (CLBIOA) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter used to describe the loss rate of a chemical from air
-resulting from biodegradation of the chemical in air.
-
-<hr align=left width="30%"><a name=CLBIOW></a><b>Biodegradation Half Time in Water</b> (CLBIOW) <br>
-Units:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; days <br>
-Range: &gt; 0
-
-<p>This loss parameter used to describe the loss rate of a chemical from water
-resulting from biodegradation of the chemical in water.
-
-<hr align=left width="30%"><a name=CLBIOS></a><b>Biodegradation Half Time in Soil</b> (CLBIOS) <br>
-Units: days <br>
-Range: &gt; 0
-
-<p>This loss parameter used to describe the loss rate of a chemical from soil
-resulting from biodegradation of the chemical in soil.
-
-<hr align=left width="30%"><a name=CLHRRRC></a><b>Hydroxyl Radical Reaction Rate Constant</b> (CLHRRRC)
-<br>
-Units: cm<sup>3</sup>/mole sec <br>
-Range: 0 to 10
-
-<p>The hydroxyl radical reaction rate constant is the gas phase reaction rate of a
-chemical with OH radicals in the atmosphere.&nbsp; This parameter is useful for
-estimation of photo-chemically induced degradation of organic chemicals in the
-vapor phase.
-
-<hr align=left width="30%"><a name=CLVD></a><b>Deposition Velocity</b> (CLVD) <br>
-Units: m/sec <br>
-Range: 0 to 1.0
-
-<p>The deposition velocity is the rate of deposition of particulate matter from
-air to the ground.&nbsp; For chemicals that exist partly in the vapor phase in
-air, effective deposition velocity values may be defined.
-
-<hr align=left width="30%"><a name=CLCLASS></a><b>Atmospheric Deposition Class</b> (CLCLASS) <br>
-Units:&nbsp; none <br>
-Range: 1 to 6 (integer value)
-
-<p>The atmospheric deposition class is used to describe the characteristics of the
-chemical for evaluation of losses during atmospheric transport.&nbsp; The
-current classes are as follows:
-
-<p>Class Description <br>
-1&nbsp;&nbsp;&nbsp; particles, radius = 7.5 micron <br>
-2&nbsp;&nbsp;&nbsp; particles, radius = 3.0 micron <br>
-3&nbsp;&nbsp;&nbsp; particles, radius = 0.3 micron (default for inorganic chemicals and
-radionuclides) <br>
-4&nbsp;&nbsp;&nbsp; depositing gas, surface resistance of reactive gas <br>
-5&nbsp;&nbsp;&nbsp; non-depositing gas (e.g.&nbsp; volatile organic chemicals) <br>
-6&nbsp;&nbsp;&nbsp; gas behaving as a particle (same deposition rate as class 3), absorbed
-on particulate material.
-
-<hr>
-<h2>References</h2>
-
-<p>Andelman, J.&nbsp; B.&nbsp; 1990.&nbsp; Total Exposure to Volatile Organic
-Chemicals in Potable Water.&nbsp; N.&nbsp; M.&nbsp; Ram, R.&nbsp; F.&nbsp; Christman, K.&nbsp; G.&nbsp; Cantor
-(eds.).&nbsp; Lewis Publishers, Boca Raton, Florida.
-
-<p>Bagaasen, LA, JL Bryant, JW Buck, and MK White.&nbsp; 1996.&nbsp; &quot;Remedial
-Action Assessment System (RAAS) - Version 1.1 Tutorial Cases.&quot;&nbsp; PNL-8233,
-Rev.&nbsp; 1, Pacific Northwest National Laboratory, Richland, Washington
-
-<p>Devilliers, J., S.&nbsp; Bintein, and D.&nbsp; Domine.&nbsp; 1996.&nbsp;
-&quot;Comparison of BCF Models Based on Log P&quot;.&nbsp; Chemosphere.&nbsp; 3:(6)
-1047-1065.
-
-<p>EPA.&nbsp; 1997a.&nbsp; Health Effects Assessment Summary Tables: FY 1997
-Update.&nbsp; EPA-540-R-97-036.&nbsp; Office of Research and Development,
-United States Environmental Protection Agency.&nbsp; Washington, DC.
-
-<p>EPA.&nbsp; 1997b.&nbsp; Mercury Study Report to Congress.&nbsp; Volume III: Fate
-and Transport of Mercury in the Environment.&nbsp; Office of Air Quality
-Planning and Standards and Office of Research and Development.&nbsp; EPA-452/R-97-005.&nbsp;
-US Environmental Protection Agency, Washington, DC.
-
-<p>Howard, P.&nbsp; H.&nbsp; and W.&nbsp; M.&nbsp; Meylan.&nbsp; 1997.&nbsp; Handbook of Physical
-Properties of Organic Chemicals.&nbsp; Lewis Publishers, Boca Raton, Florida.
-
-<p>Mackay, D., W.&nbsp; Y.&nbsp; Shiu, and K.&nbsp; C.&nbsp; Ma.&nbsp; 1992.&nbsp; Illustrated Handbook
-of Physical-Chemical Properties and Environmental Fate for Organic Chemicals.
-Lewis Publishers, Boca Raton, Florida.
-
-<hr>
-<center><A HREF="https://www.pnnl.gov/projects/earth/mepas">FRAMES Homepage</A></center>
-</body>
+  <head>
+    <title>Text for the CDBE Help File</title>
+  </head>
+
+  <body background="frames1.jpg">
+    <hr width="100%">
+    <a name=Top>
+    <h1 align="center"><img src="con.ico" height=64 width=64> CHEMICAL DATABASE EDITOR (CDBE)</h1>
+    </a>
+    <hr width="100%">
+
+    The FRAMES chemical database editor (CDBE) allows the user to view parameters
+    in the database, select constituents for an analysis, and maintain values in
+    the database by editing values for current constituents, adding new
+    constituents, and saving multiple versions of a database for specific
+    applications.&nbsp; The parameters in the database are described in this help
+    file.&nbsp; The information provided includes the parameter name as used on the
+    screen, the units for the parameter, the valid range for the parameter, and a
+    description of the parameter.&nbsp; <b>References</b> cited are included at the end
+    of this file.
+
+    <h2 align="left" width="30%"><a name=Create><b>Database Operations</b></a></h2>
+    <b>Creating a new FRAMES constituent database.</b>
+    <ol>
+      <li>Using Windows Explorer, navigate to the FRAMES directory where FRAMES and all of its associated program files are located.
+      <li>Find the program Consel.exe and double click on it. A screen entitled 'FRAMES Constituent Database Editor' will appear.
+      <li>In the menu bar, click 'File', and then click 'New'. A dialog box entitled 'Create New Constituent Database' will appear.
+        Note: If the dialog does NOT open in the FRAMES directory, we recommend you can navigate to the FRAMES directory and place the file there.
+      <li>In the 'File name' box type in your file name: 'my_cdb' and click 'Open'. The .mdb extension will be appended to the file name: my_cdb.mdb.
+        A message box entitled 'FRAMES Constituent Database' asking whether or not you would like to crearte a FRAMES desction file.
+        <ul>
+          <li>Clicking 'Yes' allows you use your database in FRAMES, by creating a description file for use in FRAMES and in the stand-alone mode.
+          <li>Clicking 'No' will create the desciption file, in the stand-alone mode only, NOT through the FRAMES GUI.
+          </li>
+        </ul>
+      <li>After clicking 'Yes' or 'No' the interface opens up and diplays two tabs, 'Select Constituents of Concern' and 'Edit Constituents Properties', for input.
+      <li>Make changes
+      <li>In the menu bar, click 'File', and then click 'Save and Exit'
+      </li>
+    </ol>
+
+    <b>Copy and Creating a using existing FRAMES constituent database.</b>
+    <ol>
+      <li>Using Windows Explorer, navigate to the FRAMES directory where FRAMES and all of its associated program files are located.
+      <li>Find the program Consel.exe and double click on it. A screen entitled 'FRAMES Constituent Database Editor' will appear.
+      <li>In the menu bar, click 'File', and then click 'Open'. A dialog box entitled 'Open Existing Constituent Database' will appear.
+        Note: If the dialog does NOT open in the FRAMES directory, you can navigate to the FRAMES directory and find the .mdb files there.
+      <li>In the dialog, find the file 'FUI.mdb' and double click. The interface opens up and displays two tabs, 'Select Constituents of Concern' or 'Edit Constituents Properties', for input.
+      <li>In the menu bar click 'File', and then click 'Save As'. A dialog box entitled 'Save As Constituent Database' will appear.
+        Note: If the dialog does NOT open in the FRAMES directory, we recommend you can navigate to the FRAMES directory and place the file there.
+      <li>In the 'File name' box type in your file name: 'my_cdb' and click 'Open'. The .mdb extension will be appended to the file name: my_cdb.mdb.
+        A message box entitled 'FRAMES Constituent Database' asking whether or not you would like to crearte a FRAMES desction file.
+        <ul>
+          <li>Clicking 'Yes' allows you use your database in FRAMES, by creating a description file for use in FRAMES and in the stand-alone mode.
+          <li>Clicking 'No' will create the desciption file, in the stand-alone mode only, NOT through the FRAMES GUI.
+        </ul>
+      <li>After clicking 'Yes' or 'No' the interface save everything to the new file, opens up and displays two tabs, 'Select Constituents of Concern' or 'Edit Constituents Properties', for input.
+      <li>Make changes
+      <li>In the menu bar, click 'File', and then click 'Save and Exit'
+      </li>
+    </ol>
+
+    <hr align="left" width="30%">
+    <a name=Selection><b>Selecting Constituents for Analysis</b></a>
+
+    <hr align="left" width="30%">
+    <a name=Identification><b>Constituent Identification</b></a>
+
+    <hr align="left" width="30%">
+    <a name=References><b>Selecting and Updating References</b></a>
+
+    <hr align="left" width="30%">
+    <a name=Print><b>Printing Constituent Properties or References</b></a>
+
+    <hr>
+    <h2><a name=Estimate><b>Estimating Property Values</b> </a></h2>
+    The CDBE contains several correlation relationships that the user can employ to
+    provide estimates for property values.&nbsp; These relationships are defined in
+    this section, and are the same as those previously provided in MMEDE (with
+    exceptions noted).&nbsp; The estimation methods, screen layout, and save
+    options in CDBE should be the same as or extensions of the method in MMEDE.
+
+    <p>
+      Water Solubility<br>
+      &nbsp;&nbsp;&nbsp;Method S-1, for non-acids and 0.5&lt; log Kow &lt; 8<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -1.1123 (log Kow) + 0.686 -
+      0.0099 (mp - 25)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mp = Melting Point (&deg;C)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Method S-2, for non-acids and -0.5 &lt; log Kow &lt; 0.5<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -1.034 (log Kow) + 0.455 -
+      0.0099 (mp - 25)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Method S-3, for acids<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -0.65 (log Kow) + 0.0279 -
+      0.0099 (mp - 25)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Lyman Method 2-3 (Lyman et al 1982) based on assorted
+      chemicals, mostly pesticides<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log S = -0.922 (log Kow) + 4.184
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Henry's Law Constant (HLC) - atm m<sup>3</sup>/mole<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HLC = (vap) ( mw) / (760 S)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vap = vapor pressure (mm Hg)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mw = molecular weight (g/mole)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S = solubility in water (mg/L)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Carbon Matter Partition Coefficient (Koc) - ml/g<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesticides, based on solubility:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      -0.55 (log S) + 3.64<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S =
+      solubility (mg/L)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aromatics, base on Kow:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      (log Kow) - 0.21<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kow =
+      octanol-water partition coefficient
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Various organic chemicals for Kow
+      between 0.001 and 4x10<sup>6</sup>:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      0.544 (log Kow) + 1.377
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aromatics (Lyman, et al.&nbsp; 1982) for
+      Kow between 100 and 4x10<sup>6</sup>:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      0.937 (log Kow) - 0.006
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S-triazines (Lyman, et al.&nbsp; 1982)
+      for Kow between 150 and 2x10<sup>5</sup>:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      0.94 (log Kow) + 0.02
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesticides (Lyman, et al.&nbsp; 1982)
+      for Kow between 0.003 and 4x10<sup>5</sup>:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log Koc =
+      1.029 (log Kow) - 0.18
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Permeability Constant (Kp) from EPA (1992), cm/h:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log Kp = -2.72 + 0.71 (log Kow) -
+      0.0061 (mw)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Environmental Transfer Factors (ETF):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shellfish bioconcentration:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log BCS =
+      0.819 (log Kow) - 1.146
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animal feed to meat transfer
+      factor (FMT), d/kg:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log FMT =
+      -7.6 + log Kow
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animal feed to milk transfer
+      factor (FMK), d/L:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log FMK =
+      -8.1 + log Kow
+
+    <p>
+      &nbsp;&nbsp;&nbsp; Soil to plant concentration ratio (CR), mg/kg dry plant
+      per mg/kg dry soil<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log CR = 1.588 -
+      0.578 (log Kow)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;Bioaccumulation in Fish<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method of Devilliers, J., S.&nbsp; Bintein,
+      and D.&nbsp; Domine (1996):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log BCF =
+      0.91 (log Kow) - 1.975 {log(6.8x10<sup>-7</sup> * Kow + 1)} - 0.786
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-2 of Lyman et al.&nbsp; 1982:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
+      0.76 (log Kow) - 0.23
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-3 of Lyman et al.&nbsp; 1982:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
+      2.791 - 0.564 (log S)
+
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method 5-4 of Lyman et al.&nbsp; 1982:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log BCF =
+      1.119 (log Koc) - 1.579
+
+      <hr>
+      <h2><a name=Properties><b>Constituent Properties</b></a></h2>
+      The constituent properties menu item opens the window used to add or change
+      values for specific properties for constituents.&nbsp; The description of
+      constituent properties below follows the outline used in the Cosntituent
+      Properties table where parameters are grouped by type (e.g.&nbsp; thermodynamic
+      properties).&nbsp; This window also allows entry of references for each value.
+
+      <h3>Constituent Identification Parameters</h3>
+
+    <p>
+      This set of parameters, tied to constituent id screen, includes
+      identification keys, constituent names, and other indexes that identify the
+      chemical type, molecular formula, and property classes.
+
+      <hr align="left" width="30%">
+      <a name=FSCASID><b>CAS# or Radionuclide Symbol</b> (FSCASID)</a><br>
+      Units: NA (8-character string)<br>
+      Range: NA
+
+    <p>
+      Each constituent is identified by a unique identification symbol.&nbsp; For
+      chemicals, the Chemical Abstract Service (CAS) identification number is used,
+      if one has been assigned.&nbsp; If none is available then a semi-descriptive name is
+      defined.&nbsp; For radionuclides, the identification symbol is the element
+      symbol (one or two characters) and the atomic weight of the isotope.&nbsp; For
+      example, plutonium isotope of atomic weight 238 is represented as Pu238.
+
+      <hr align="left" width="30%">
+      <a name=FSCNAME><b>Constituent Name</b> (FSCNAME)</a><br>
+      Units: NA (40-character string)<br>
+      Range: NA
+
+    <p>
+      This field provides a text description of the constituent to better identify
+      chemicals.&nbsp; Up to 40 characters can be used to describe the
+      chemical.&nbsp; This field can be used in output reports by modules running
+      under FRAMES to provided identifiable chemical names.
+
+      <hr align="left" width="30%">
+      <a name=CLKTYPE><b>Radionuclide flag</b> (CLKTYPE)</a><br>
+      Units: NA<br>
+      Range: 0 to 1 (see below for a description of constituent
+      types)
+
+    <p>
+      The radionuclide flag indicates whether the constituent is a radionuclide or not.  The classes are defined as follows:
+
+    <p>
+      Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description<br>
+      &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical<br>
+      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclide
+      <hr align="left" width="30%">
+      <a name=CLRTYPE><b>RAAS Classification Type</b> (CLRTYPE)</a><br>
+      Units: NA<br>
+      Range: 0 to 14 (see below for a description of constituent
+      types)
+
+    <p>
+      The RASS classification type is an index to indicate the general class of
+      chemicals for the current constituent, as defined and used for the RAAS software <b>(Bagaasen
+      et al.&nbsp; 1996)</b>.The classes are defined as follows:
+
+    <p>
+      Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description<br>
+      &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined<br>
+      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Halogenated non-polar aromatics<br>
+      &nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCB's, Halogenated Dioxins, Furans<br>
+      &nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Halogenated Polar Aromatics<br>
+      &nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Halogenated Aliphatics<br>
+      &nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Halogenated Compounds<br>
+      &nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nitrated Aromatics and Aliphatics<br>
+      &nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Heterocyclics, Non-Halogenated Aromatics<br>
+      &nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Polynuclear Aromatics and Heterocyclics<br>
+      &nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Polar Non-Halogenated Compounds<br>
+      &nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Non-Polar Organics<br>
+      &nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-Volatile Metals<br>
+      &nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Volatile Metals<br>
+      &nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Inorganics<br>
+      &nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclides
+      <hr align="left" width="30%">
+      <a name=CLETYPE><b>Constituent Exposure Type</b> (CLETYPE)</a><br>
+      Units: NA<br>
+      Range: 0 to 5 (see below for a description of constituent category types)
+
+    <p>
+      The constituent exposure type is an index to indicate the general exposure class of the
+      current constituent.&nbsp;  The classes are defined as follows:
+
+    <p>
+      Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description<br>
+      &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined<br>
+      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radionuclide, carcinogenic exposure<br>
+      &nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, carcinogenic inhalation and ingestion<br>
+      &nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, carcinogenic inhalation, noncarcinogenic ingestion<br>
+      &nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, non-carcinogenic inhalation and ingestion<br>
+      &nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemical, non-carcinogenic inhalation, carcinogenic ingestion Compounds
+      <hr align="left" width="30%">
+      <a name=CLCHEM><b>Constituent Classification Type</b> (CLCHEM)</a><br>
+      Units: NA (integer index)<br>
+      Range: 0 to 48 (current maximum)
+
+    <p>
+      This index provides a representative organic chemical class for the
+      chemical.&nbsp; The parameter can be used to select property estimation
+      methods, or be used by programs running under the FRAMES user interface as
+      needed to properly represent release, transport, and health impacts for the
+      chemical.&nbsp; The class should be set to 0 (Undefined) for non-organic chemicals
+      and radionuclides.&nbsp; The classes are defined as follows:
+
+    <p>
+      Index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description<br>
+      &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undefined<br>
+      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acid anhydrides<br>
+      &nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alcohols<br>
+      &nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aldehydes<br>
+      &nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aliphatic amines<br>
+      &nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkanes<br>
+      &nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkenes and alkynes<br>
+      &nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkyl halides<br>
+      &nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alkyl-N-phenylcarbamates<br>
+      &nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amides<br>
+      &nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic amines<br>
+      &nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic compounds (heterocyclic)<br>
+      &nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic compounds (multi-heterocyclic)<br>
+      &nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (halogenated monocyclic)<br>
+      &nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (monocyclic)<br>
+      &nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (polycyclic)<br>
+      &nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aromatic hydrocarbons (nitro compounds)<br>
+      &nbsp;&nbsp;17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carbamates<br>
+      &nbsp;&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carbamoyl oximes<br>
+      &nbsp;&nbsp;19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; carboxylic acids<br>
+      &nbsp;&nbsp;20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chlorinated insecticides/herbicides<br>
+      &nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cycloaliphatic compounds<br>
+      &nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cycloaliphatic compounds (halogenated)<br>
+      &nbsp;&nbsp;23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; diisocyanates<br>
+      &nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dinitroanilines<br>
+      &nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; epoxides<br>
+      &nbsp;&nbsp;26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; esters<br>
+      &nbsp;&nbsp;27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ethers<br>
+      &nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; glycols<br>
+      &nbsp;&nbsp;29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; halobenzenes<br>
+      &nbsp;&nbsp;30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hydrazines and related compounds<br>
+      &nbsp;&nbsp;31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imides<br>
+      &nbsp;&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ketones<br>
+      &nbsp;&nbsp;33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nitriles<br>
+      &nbsp;&nbsp;34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N-nitroso compounds<br>
+      &nbsp;&nbsp;35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N-substituted alkanes<br>
+      &nbsp;&nbsp;36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; organotins<br>
+      &nbsp;&nbsp;37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCBs (halogenated biphenyls)<br>
+      &nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCDDs and PCDFs<br>
+      &nbsp;&nbsp;39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phenols<br>
+      &nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phenylureas, substituted<br>
+      &nbsp;&nbsp;41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phosphorus containing insecticides<br>
+      &nbsp;&nbsp;42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phosphate esters<br>
+      &nbsp;&nbsp;43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S-substituted alkanes and thiols<br>
+      &nbsp;&nbsp;44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sulfonic acids<br>
+      &nbsp;&nbsp;45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; terpenes<br>
+      &nbsp;&nbsp;46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thiocarbamates<br>
+      &nbsp;&nbsp;47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; triazines<br>
+      &nbsp;&nbsp;48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ureas and uracils
+
+      <hr>
+      <h3>PHYSICAL PROPERTIES</h3>
+
+    <p>
+      Parameters in this group describe basic physical properties for the
+      constituent.
+
+      <hr align="left" width="30%">
+      <a name=CLCNUM><b>Carbon Number</b> (CLCNUM)</a><br>
+      Units: NA (integer value)<br>
+      Range: 0 to 1000
+
+    <p>
+      This parameter is simply the number of carbon atoms in the molecular structure
+      of the chemical.&nbsp; For constituents represented as mixtures of compounds
+      (e.g.&nbsp; petroleum products) an effective carbon number may be defined as an
+      average value for the chemicals in the mixture.
+
+      <hr align="left" width="30%">
+      <a name=CLMFORM><b>Molecular Formula</b> (CLMFORM)</a><br>
+      Units: NA (255-character string)<br>
+      Range: NA
+
+    <p>
+      The molecular formula is intended to allow entry of chemical structure in the
+      SMILES notation.&nbsp; This notation has been used by software developers to
+      provide estimates of physical properties (e.g.&nbsp; Kow).&nbsp; The molecular
+      formula is not used by the current version of CDBE.
+
+      <hr align="left" width="30%">
+      <a name=CLWM><b>Molecular Weight</b> (CLWM)</a><br>
+      Units: g/mol<br>
+      Range: 1 to 50,000
+
+    <p>
+      This is the molecular weight of the chemical; the number of grams of one mole
+      of the chemical.&nbsp; For radionuclides the molecular weight is usually entered as
+      the atomic weight.
+
+      <hr align="left" width="30%">
+      <a name=CLSOL><b>Water Solubility</b> (CLSOL)</a><br>
+      Units: mg/L<br>
+      Range: 0 to 1E6
+
+    <p>
+      The amount of a chemical (mg) that will dissolve in 1 L water at the
+      temperature indicated by &quot;Water&nbsp;Solubility&nbsp;Temperature&quot;.&nbsp; For totally
+      miscible compounds, a value of 1E6 is suggested to indicate that there is no
+      solubility limit.&nbsp; Sources for water solubility include <b>Mackay et al.&nbsp; (1992)</b>
+      and <b>Howard and Meylan (1997)</b>.
+
+      <hr align="left" width="30%">
+      <a name=CLSOLT><b>Water Solubility Temperature</b> (CLSOLT)</a><br>
+      Units: deg C<br>
+      Range&nbsp;&nbsp;&nbsp; -50 to 100
+
+    <p>
+      The water solubility temperature is the temperature corresponding the to &quot;Water&nbsp;Solubility&quot; 
+      value.&nbsp; For consistency with other parameters in the database,
+      water solubility is usually defined at 25&deg; C.
+
+      <hr align="left" width="30%">
+      <a name=CLVAP><b>Vapor Pressure</b> (CLVAP)</a><br>
+      Units: mm Hg<br>
+      Range: 0 to 5000
+
+    <p>
+      The vapor pressure of a chemical is the pressure exerted by its vapor, at a
+      given temperature, in equilibrium with the pure compound (liquid or
+      solid).&nbsp; The vapor pressure is used to define the volatility of the
+      chemical.&nbsp; Most inorganic solid compounds will have a value of zero.&nbsp;
+      Gases generally have a value of at least 760 mm Hg (1 atmosphere).&nbsp;
+      Because vapor pressure is temperature dependent, the temperature at which the
+      value is defined should be entered in the field &quot;Vapor&nbsp;Pressure&nbsp;Temperature&quot; .
+      Sources for water solubility include <b>Mackay et al.&nbsp; (1992)</b> and <b>Howard
+      and Meylan (1997)</b>.
+
+      <hr align="left" width="30%">
+      <a name=CLVPT><b>Vapor Pressure Temperature</b> (CLVPT)</a><br>
+      Units: deg.&nbsp; C<br>
+      Range: -50 to 100
+
+    <p>
+      The vapor pressure temperature is the temperature corresponding to the &quot;Vapor&nbsp;Pressure&quot; 
+      value.&nbsp; For consistency with other parameters in the database,
+      vapor pressure is usually defined at 25&deg; C.
+
+      <hr align="left" width="30%">
+      <a name=CLPCDEN><b>Pure Constituent Density</b> (CLPCDEN)</a><br>
+      Units: g/ml<br>
+      Range: 0 to 20
+
+    <p>
+      This parameter provides the density of the pure substance at ambient
+      conditions.&nbsp; It is generally used for chemicals that are liquids under
+      environmental conditions.
+
+      <hr align="left" width="30%">
+      <a name=CLMV><b>Molar Volume</b> (CLMV)</a><br>
+      Units: cm<sup>3</sup>/mol<br>
+      Range: 0 to 5000
+
+    <p>
+      The molar volume is the volume occupied by 1 g-mole of a chemical at 1
+      atmosphere pressure at the temperature defined by &quot;Molar&nbsp;Volume&nbsp;Temperature&quot;.&nbsp; 
+      For an ideal gas, the molar volume at 0&deg; C is 2.2414x10<sup>4</sup>
+      cm<sup>3</sup>/mol.&nbsp; Some sources refer to this parameter as the molecular
+      volume.&nbsp; However, in this database, the molecular volume is defined as the
+      volume of one molecule (see Molecular Volume).
+
+      <hr align="left" width="30%">
+      <a name=CLMVT><b>Molar Volume Temperature</b> (CLMVT)</a><br>
+      Units: deg.&nbsp; C<br>
+      Range: -50 to 100
+
+    <p>
+      The molar volume temperature is the temperature corresponding to the molar
+      volume value.
+
+      <hr align="left" width="30%">
+      <a name=CLMCV><b>Molecular Volume</b> (CLMCV)</a><br>
+      Units: â„«<sup>3</sup><br>
+      Range: 1 to 5000
+
+    <p>
+      The molecular volume is defined as the volume of one molecule of the chemical,
+      expressed in Angstrom units.&nbsp; See also Molar Volume.
+
+      <hr align="left" width="30%">
+      <a name=CLTSA><b>Total Surface Area</b> (CLTSA)</a><br>
+      Units: â„«<sup>2</sup><br>
+      Range: 1 to 5000<br>
+      The total surface area is the area of one molecule of the chemical, expressed
+      in Angstrom units.
+
+      <hr align="left" width="30%">
+      <a name=CLSURT><b>Surface Tension</b> (CLSURT)</a><br>
+      Units: dyne/cm<br>
+      Range: 0 to 10,000
+
+    <p>
+      Surface tension is a measure of the tension between two fluids in contact, due
+      to molecular forces.
+
+      <hr align="left" width="30%">
+      <a name=CLSURTT><b>Surface Tension</b><b>Temperature</b> (CLSURTT)</a><br>
+      Units: degree Celsius<br>
+      Range: -50 to 100
+
+    <p>
+      The surface tension temperature is the temperature corresponding to the surface
+      tension value.
+
+      <hr align="left" width="30%">
+      <a name=CLVISC><b>Dynamic Viscosity</b> (CLVISC)</a><br>
+      Units: centipoise<br>
+      Range: 0 to 10,000
+
+    <p>
+      The dynamic viscosity (absolute viscosity) is a measure of the resistance to
+      change of form of a substance.&nbsp; Although defined primarily for fluids
+      (liquids and vapors) some solids also show a gradual change is shape under
+      applied force.&nbsp; Dynamic viscosity is related to kinematic viscosity as
+      follows:
+
+    <p>
+      Dynamic Viscosity (centipoise) = Kinematic Viscosity (centistokes) x density
+      (g/cm<sup>3</sup>)
+
+      <hr align="left" width="30%">
+      <a name=CLVISCT><b>Dynamic Viscosity Temperature</b> (CLVISCT)</a><br>
+      Units: deg.&nbsp; C<br>
+      Range: -50 to 100
+
+    <p>
+      The dynamic viscosity temperature is the temperature corresponding to the
+      dynamic viscosity value.
+
+      <hr>
+      <h3>PARTITION COEFFICIENTS</h3>
+
+    <p>
+      Parameters used to evaluate the distribution between media in the
+      environment are included in this group.
+
+      <hr align="left" width="30%">
+      <a name=CLHLC><b>Henry's Law Constant</b> (CLHLC)</a><br>
+      Units: atm-m<sup>3</sup>/mol<br>
+      Range: 0 to 100
+
+    <p>
+      The Henry's Law constant defines the partitioning of a compound between air and
+      water phases.&nbsp; The Henry's Law Constant is often expressed in
+      non-dimensional units, related to the dimensional form as follows:
+
+    <p>
+      HLC (non-dimensional) = HLC (atm-m<sup>3</sup>/mol) x R T
+
+    <p>
+      where T is the temperature (&deg; K) and R is the gas law constant (8.2056x10<sup>-5</sup>
+      atm-m<sup>3</sup>/mol &deg;K).&nbsp; Sources for Henry's Law Constant values
+      include <b>Mackay et al.&nbsp; (1992)</b> and <b>Howard and Meylan (1997)</b>.
+
+      <hr align="left" width="30%">
+      <a name=CLHLCT><b>Henry's Law Constant Temperature</b> (CLHLCT)</a><br>
+      Units: deg.&nbsp; C<br>
+      Range: -50 to 100
+
+    <p>
+      The Henry's Law Constant temperature is the temperature corresponding to the
+      Henry's Law Constant value.
+
+      <hr align="left" width="30%">
+      <a name=CLKOC><b>Carbon Matter Partition Coefficient</b> (CLKOC)</a><br>
+      Units: ml/g<br>
+      Range: 0 to 10<sup>10</sup>
+
+    <p>
+      The carbon matter partition coefficient describes the partitioning of a
+      chemical between the aqueous phase and organic material, such as that present
+      in soil.
+
+      <hr align="left" width="30%">
+      <a name=CLKOW><b>Octanol-Water Partition Coefficient</b> (CLKOW)</a><br>
+      Units: ml water/ml octonal<br>
+      Range: 0 to 10<sup>10</sup>
+
+    <p>
+      The octanol-water partition coefficient describes the partitioning of a
+      chemical between the water and n-octanol phases in a two-phase system.&nbsp; Sources
+      for octanol-water partition coefficient values include <b>Mackay et al.&nbsp; (1992)</b>
+      and <b>Howard and Meylan (1997)</b>.
+
+      <hr align="left" width="30%">
+      <a name=CLKD><b>Soil-Water Partition Coefficient</b> (CLKD)</a><br>
+      Units: ml water/g soil<br>
+      Range: 0 to 10<sup>7</sup>
+
+    <p>
+      The soil-water partition coefficient is used to indicate the distribution of a
+      chemical between water and soil, and represents the ratio of constituent
+      concentrations in soil to soil water.&nbsp; The parameter is also called the
+      adsorption coefficient.
+
+      <hr align="left" width="30%">
+      <a name=CLPKA><b>Acid Dissociation Constant</b> (CLPKA)</a><br>
+      Units: pH units<br>
+      Range: 1 to 13
+
+    <p>
+      The acid dissociation constant is the pH at which 50% of a chemical is in the
+      dissociated form.&nbsp; This parameter may be important for chemicals that
+      dissociate at pH levels found in the environment.&nbsp; Typical chemical classes
+      where dissociation occurs include amines, carboxylic acids, phenols,
+      phosphates, and sulfonic acids.&nbsp; A source for this parameter is <b>Howard
+      and Meylan (1997)</b>.
+
+      <hr align="left" width="30%">
+      <a name=CLVPFA><b>Vapor Phase Fraction in Air</b> (CLVPFA)</a><br>
+      Units: none<br>
+      Range: 0 to 1.0
+
+    <p>
+      This parameter gives the fraction of a chemical that is in the air phase (as
+      opposed to particulate phase) at ambient conditions.&nbsp; For metals the
+      fraction should be set to 0.
+
+      <hr>
+      <h3>DIFFUSION COEFFICIENTS</h3>
+
+    <p>
+      This group includes diffusion coefficients for air, water, and grout and the
+      associated temperatures at which the values are defined.
+
+      <hr align="left" width="30%">
+      <a name=CLDCAIR><b>Diffusion Coefficient in Air</b> (CLDCAIR)</a><br>
+      Units: cm<sup>2</sup>/s<br>
+      Range: 0 to 1.0
+
+    <p>
+      The air diffusion coefficient (or diffusivity) defines the rate of mass
+      transfer of a chemical through air based on diffusion.&nbsp; Values can be estimated
+      using the following equation <b>(EPA 1997b)</b>:
+
+    <p>
+      Da = 1.9 / MW<sup>2/3</sup>
+
+    <p>
+      where MW is molecular weight.
+
+      <hr align="left" width="30%">
+      <a name=CLDCAT><b>Reference Temperature for Diffusion Coefficient in Air</b>
+      (CLDCAT)</a><br>
+      Units: deg C<br>
+      Range: -50 to 100
+
+    <p>
+      This is the temperature at which the air diffusion coefficient is defined.
+
+      <hr align="left" width="30%">
+      <a name=CLDCWAT><b>Diffusion Coefficient in Water</b> (CLDCWAT)</a><br>
+      Units: cm<sup>2</sup>/s<br>
+      Range: 0 to 1.0
+
+    <p>
+      The water diffusion coefficient (or diffusivity) defines the rate of mass
+      transfer of a chemical through water based on diffusion.&nbsp; Values can be
+      estimated using the following equation <b>(EPA 1997b)</b>:
+
+    <p>
+      Dw = 2.2x10<sup>-5</sup> / MW<sup>2/3</sup>
+
+    <p>
+      where MW is molecular weight.
+
+      <hr align="left" width="30%">
+      <a name=CLDCWT><b>Reference Temperature for Diffusion Coefficient in
+      Water</b> (CLDCWT)</a><br>
+      Units: deg C<br>
+      Range: -50 to 100
+
+    <p>
+      This is the temperature at which the air diffusion coefficient is defined.
+
+      <hr align="left" width="30%">
+      <a name=CLDCGRT><b>Diffusion Coefficient in Grout</b> (CLDCGRT)</a><br>
+      Units: cm<sup>2</sup>/s<br>
+      Range: 0 to 1.0
+
+    <p>
+      This is the diffusion coefficient (or diffusivity) of a chemical for diffusion
+      through grout.
+
+      <hr align="left" width="30%">
+      <a name=CLDCGT><b>Reference Temperature for Diffusion Coefficient in
+      Grout</b> (CLDCGT)</a><br>
+      Units: deg C<br>
+      Range: -50 to 100
+
+    <p>
+      This is the temperature at which the grout diffusion coefficient is defined.
+
+      <hr>
+      <h3>THERMODYNAMIC PROPERTIES</h3>
+
+    <p>
+      Properties related to a chemical's thermodynamic behavior are included in
+      this group.
+
+      <hr align="left" width="30%">
+      <a name=CLMP><b>Melting Point</b> (CLMP)</a><br>
+      Units: deg C<br>
+      Range: -250 to 5000
+
+    <p>
+      The melting point is the temperature at which a chemical changes from the solid
+      phase to the liquid phase under ambient pressure.
+
+      <hr align="left" width="30%">
+      <a name=CLBP><b>Boiling Point</b> (CLBP)</a><br>
+      Units: deg C<br>
+      Range: -250 to 5000
+
+    <p>
+      The boiling point is the temperature at which a chemical changes from the
+      liquid phase to the vapor phase under ambient pressure.
+
+      <hr align="left" width="30%">
+      <a name=CLHEATC><b>Heat of Combustion</b> (CLHEATC)</a><br>
+      Units: J/kg<br>
+      Range: 0 to 1E8
+
+    <p>
+      This is the amount of heat evolved by the combustion of 1 kg of a chemical.
+
+      <hr align="left" width="30%">
+      <a name=CLHEATV><b>Heat of Vaporization </b>(CLHEATV)</a><br>
+      Units: J/kg<br>
+      Range: 0 to 1E8
+
+    <p>
+      This is the amount of heat necessary to change 1 kg of a chemical from the
+      liquid phase to the vapor phase.
+
+      <hr align="left" width="30%">
+      <a name=CLHEATF><b>Heat of Fusion&nbsp; </b>(CLHEATF)</a><br>
+      Units: J/kg<br>
+      Range: 0 to 1E8
+
+    <p>
+      This is the amount of heat necessary to change 1 kg of a chemical from the
+      solid phase to the liquid phase.
+
+      <hr align="left" width="30%">
+      <a name=CLENTF><b>Entropy of Fusion</b> (CLENTF)</a><br>
+      Units: J/kg deg K<br>
+      Range: 0 to 1E7
+
+    <p>
+      This is the amount of entropy lost on conversion of 1 kg of a chemical from the
+      liquid to solid phase.
+
+      <hr align="left" width="30%">
+      <a name=CLENTFT><b>Temperature of Entropy of Fusion</b> (CLENTFT)</a><br>
+      Units: deg C<br>
+      Range: -50 to 100
+
+    <p>
+      This is the temperature at which the Entropy of Fusion is defined.
+
+      <hr align="left" width="30%">
+      <a name=CLFR><b>Fugacity Ratio</b> (CLFR)</a><br>
+      Units: none<br>
+      Range: 0 to 1.0
+
+    <p>
+      The fugacity ratio is defined for chemicals that are solid at ambient
+      temperatures.&nbsp; The fugacity ratio is evaluated as follows when Tm &gt; T:
+
+    <p>
+      FR = exp{6.97 * (1 - Tm/T)}
+
+    <p>
+      where Tm is the melting point and T is the ambient temperature.&nbsp; If Tm
+      is not greater than T, then FR is set to1.0.&nbsp; See <b>Mackay et al.&nbsp; (1992)</b>
+      for a discussion on evaluation and use of the fugacity ratio.
+
+      <hr align="left" width="30%">
+      <a name=CLFLASH><b>Flash Point</b> (CLFLASH)</a><br>
+      Units: deg C<br>
+      Range: -100 to 2000
+
+    <p>
+      The flash point is the lowest temperature at which a liquid can form an
+      ignitable mixture in air near the surface of the liquid.
+
+      <hr>
+      <h3>TOXICITY FACTORS</h3>
+
+      <hr align="left" width="30%">
+      <a name=CLWOEHC><b>Weight-of-Evidence for Human Carcinogenicity</b>
+      (CLWOEHC)</a><br>
+      Units: NA (character string parameter)<br>
+      Range: See table below for valid values.
+
+    <p>
+      This index is an EPA scale to indicate the likelihood that the chemical causes
+      cancer in humans.&nbsp; The following categories are used to define this
+      parameter.
+
+    <p>
+      Index Value Description<br>
+      A&nbsp;&nbsp;&nbsp;&nbsp; Human Carcinogen<br>
+      B1&nbsp;&nbsp;&nbsp; Probable human carcinogen - limited human data available<br>
+      B2&nbsp;&nbsp;&nbsp; Probable human carcinogen - sufficient data in animals and inadequate or no data in humans<br>
+      C&nbsp;&nbsp;&nbsp;&nbsp; Possible human carcinogen<br>
+      D&nbsp;&nbsp;&nbsp;&nbsp; Not classifiable as a human carcinogen<br>
+      E&nbsp;&nbsp;&nbsp;&nbsp; Evidence of non-carcinogenicity
+
+      <hr align="left" width="30%">
+      <a name=CLCPFH><b>Inhalation Cancer Potency Factor</b> (CLCPFH)</a><br>
+      Units: risk per (mg/kg/d)<br>
+      Range: 0 to 2000
+
+    <p>
+      The inhalation cancer potency factor (or slope factor) relates the average
+      daily intake rate (via inhalation) to the risk of developing cancer.&nbsp; It
+      is used to convert the estimated average daily intake of a chemical to an
+      estimate of cancer incidence.
+
+      <hr align="left" width="30%">
+      <a name=CLURISKH><b>Inhalation Unit Risk Factor&nbsp;&nbsp;</b>
+      (CLURISKH)</a><br>
+      Units: mg/m<sup>3</sup><br>
+      Range: 0 to 1000
+
+    <p>
+      The inhalation unit risk factor is the cancer risk resulting from lifetime
+      inhalation of air at a concentration 1 mg/m<sup>3</sup>of the chemical.
+
+      <hr align="left" width="30%">
+      <a name=CLRFDH><b>Inhalation Reference Dose</b> (CLRFDH)</a><br>
+      Units: mg/kg/d<br>
+      Range: 0 to 2000
+
+    <p>
+      The reference dose is the daily exposure to a human population that is likely
+      to be without an appreciable risk of deleterious effects during a lifetime.
+
+      <hr align="left" width="30%">
+      <a name=CLRFCH><b>Inhalation Reference Concentration</b> (CLRFCH)</a><br>
+      Units: mg/m<sup>3</sup><br>
+      Range: 0 to 5000
+
+    <p>
+      The inhalation reference concentration is the air concentration that is likely
+      to be without an appreciable risk of deleterious effects during a lifetime, for
+      exposure of a human population.
+
+      <hr align="left" width="30%">
+      <a name=CLCPFG><b>Ingestion Cancer Potency Factor - Water Intake</b>(CLCPFG)</a><br>
+      Units: risk per (mg/kg/d)<br>
+      Range: 0 to 2000
+
+    <p>
+      The ingestion cancer potency factor (or slope factor) relates the average daily
+      intake rate (via ingestion in water) to the risk of developing cancer.&nbsp; It
+      is used to convert the estimated average daily intake of a chemical to an
+      estimate of cancer incidence.
+
+      <hr align="left" width="30%">
+      <a name=CLCPFGF><b>Ingestion Cancer Potency Factor - Food Intake</b>(CLCPFGF)</a><br>
+      Units: risk per (mg/kg/d)<br>
+      Range: 0 to 2000
+
+    <p>
+      The ingestion cancer potency factor (or slope factor) relates the average daily
+      intake rate (via ingestion in food) to the risk of developing cancer.&nbsp; It
+      is used to convert the estimated average daily intake of a chemical to an
+      estimate of cancer incidence.
+
+      <hr align="left" width="30%">
+      <a name=CLCPFGS><b>Ingestion Cancer Potency Factor - Soil Intake</b>
+      (CLCPFGS)</a><br>
+      Units: risk per (mg/kg/d)<br>
+      Range: 0 to 2000
+
+    <p>
+      The ingestion cancer potency factor (or slope factor) relates the average daily
+      intake rate (via ingestion in soil) to the risk of developing cancer.&nbsp; It
+      is used to convert the estimated average daily intake of a chemical to an
+      estimate of cancer incidence.
+
+      <hr align="left" width="30%">
+      <a name=CLURISKG><b>Ingestion Unit Risk Factor</b> (CLURISKG)</a><br>
+      Units: risk per mg/L<br>
+      Range: 0 to 1000
+
+    <p>
+      The ingestion unit risk factor is the cancer risk resulting from lifetime
+      ingestion of water at a concentration of 1 mg/L of the chemical.
+
+      <hr align="left" width="30%">
+      <a name=CLRFDG><b>Ingestion Reference Dose - Water Intake </b>(CLRFDG)</a><br>
+      Units: mg/kg/d<br>
+      Range: 0 to 2000
+
+    <p>
+      The reference dose is the daily exposure from water ingestion to a human
+      population that is likely to be without an appreciable risk of deleterious
+      effects during a lifetime.
+
+      <hr align="left" width="30%">
+      <a name=CLRFDGF><b>Ingestion Reference Dose - Food Intake </b>(CLRFDGF)</a><br>
+      Units: mg/kg/d<br>
+      Range: 0 to 2000
+
+    <p>
+      The reference dose is the daily exposure from food ingestion to a human
+      population that is likely to be without an appreciable risk of deleterious
+      effects during a lifetime.
+
+      <hr align="left" width="30%">
+      <a name=CLRFDGS><b>Ingestion Reference Dose - Soil Intake</b> (CLRFDGS)</a><br>
+      Units: mg/kg/d<br>
+      Range: 0 to 2000
+
+    <p>
+      The reference dose is the daily exposure from soil ingestion to a human
+      population that is likely to be without an appreciable risk of deleterious
+      effects during a lifetime.
+
+      <hr>
+      <h3>EXPOSURE FACTORS</h3>
+
+    <p>
+      This group includes parameter used to estimate exposure and intake from
+      contact with constituents.
+
+      <hr align="left" width="30%">
+      <a name=CLFONEI><b>GI Absorption Fraction (insoluble)</b> (CLFONEI)</a><br>
+      Units: none (fraction)<br>
+      Range: 0 to 1.0
+
+    <p>
+      The GI absorption fraction is the fraction of a substance absorbed during
+      passage through the gastrointestinal tract following ingestion.&nbsp; This value is
+      used for estimation of the equivalent oral intake of chemicals from dermal
+      contact with chemicals.&nbsp; The estimated dermal intake is divided by the GI
+      Absorption Fraction to give the equivalent oral intake.&nbsp; The health
+      impacts from the equivalent oral intake are evaluated using the oral toxicitly
+      values (reference dose or slope factor).
+
+      <hr align="left" width="30%">
+      <a name=CLFONES><b>GI Absorption Fraction (soluble)</b> (CLFONES)</a><br>
+      Units: none (fraction)<br>
+      Range: 0 to 1.0
+
+    <p>
+      The GI absorption fraction is the fraction of a substance absorbed during
+      passage through the gastrointestinal tract following ingestion.&nbsp; This value is
+      used for estimation of the equivalent oral intake of chemicals from dermal
+      contact with chemicals.&nbsp; The estimated dermal intake is divided by the GI
+      Absorption Fraction to give the equivalent oral intake.&nbsp; The health
+      impacts from the equivalent oral intake are evaluated using the oral toxicitly
+      values (reference dose or slope factor).
+
+      <hr align="left" width="30%">
+      <a name=CLABSKN><b>Dermal Absorption Fraction from Soil</b> (CLABSKN)</a><br>
+      Units: none (fraction)<br>
+      Range: 0 to 1.0
+
+    <p>
+      This parameter gives the fraction of a chemical (present on the skin) that is absorbed
+      into the blood during an exposure situation involving soil contact with the
+      skin.
+
+      <hr align="left" width="30%">
+      <a name=CLPERM><b>Aqueous Skin Permeability</b> (CLPERM)</a><br>
+      Units: cm/hr<br>
+      Range: 0 to 10
+
+    <p>
+      The skin permeability constant gives the rate of absorption of a chemical on
+      the skin to the blood.&nbsp; It is used to evaluate the transfer of a chemical
+      into the blood for situations involving contact with aqueous solutions of a
+      chemical.
+
+      <hr align="left" width="30%">
+      <a name=CLANDF><b>Volatilization Factor for Indoor Inhalation</b>
+      (CLANDF)</a><br>
+      Units: L/m<sup>3</sup><br>
+      Range: 0 to 10
+
+    <p>
+      The indoor air volatilization factor describes the transfer of volatile
+      constituents from domestic water use to indoor air.&nbsp; The factor is generally
+      based on EPA recommendations based on work of <b>Andelman (1990)</b> and is
+      sometimes referred to as the Andelman volatilization factor.
+
+      <hr align="left" width="30%">
+      <a name=CLWPF><b>Water Purification Factor</b> (CLWPF)</a><br>
+      Units: none&nbsp; (fraction)<br>
+      Range: 0 to 1.0
+
+    <p>
+      The water purification factor is the fraction of a substance that remains in
+      the domestic water supply after processing through a water treatment
+      plant.&nbsp; A value of 1.0 indicates no removal of the chemical during water
+      purification.
+
+      <hr>
+      <h3>RADIATION DOSIMETRY FACTORS</h3>
+
+    <p>
+      The following parameters are used to evaluate radiation doses and risk from
+      exposure to radionuclides.&nbsp; These parameters are defined only for radioactive
+      substances.
+
+      <hr align="left" width="30%">
+      <a name=CLDFAD><b>Inhalation Dose Factor, Class D</b> (CLDFAD)</a><br>
+      Units: rem/pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      This inhalation dose factor is the radiation dose conversion factor for
+      inhalation of a the radionuclide that has properties represented by class D
+      material.&nbsp; Class D material is cleared rapidly from lung compartments with
+      retention times on the order of days.
+
+      <hr align="left" width="30%">
+      <a name=CLDFAW><b>Inhalation Dose Factor, Class W</b> (CLDFAW)</a><br>
+      Units: rem/pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      This inhalation dose factor is the radiation dose conversion factor for
+      inhalation of a radionuclide that has properties represented by class W
+      material.&nbsp; Class W material is cleared moderately rapidly from lung
+      compartments with retention times on the order of weeks.
+
+      <hr align="left" width="30%">
+      <a name=CLDFAY><b>Inhalation Dose Factor, Class Y</b> (CLDFAY)</a><br>
+      Units: rem/pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      This inhalation dose factor is the radiation dose conversion factor for
+      inhalation of a the radionuclide that has properties represented by class Y
+      material.&nbsp; Class Y material is retained in lung compartments with
+      retention times on the order of years.
+
+      <hr align="left" width="30%">
+      <a name=CLDIAM><b>Particle Diameter for Inhalation Dose Factors</b>
+      (CLDIAM)</a><br>
+      Units: micrometers<br>
+      Range: 0.01 to 10.
+
+    <p>
+      The inhalation dose factors are defined for a specific particle size at the
+      point of inhalation.&nbsp; The default value for particle size is 1 &micro;m.&nbsp;
+      If a different value for particle size is desired, it is the user's
+      responsibility to ensure that the inhalation dose factors are changed to
+      represent the new particle size.
+
+      <hr align="left" width="30%">
+      <a name=CLLCLAS><b>Lung Solubility Class</b> (CLLCLAS)</a><br>
+      Units: NA (1-character string)<br>
+      Range: D, W, or Y
+
+    <p>
+      Three inhalation dose factors are available in the database (see above
+      parameters).&nbsp; The value entered for the lung solubility class can be used
+      by health impact components to select from the dose factors available in the database.
+
+      <hr align="left" width="30%">
+      <a name=CLRDFGS><b>Ingestion Dose Factor, Soluble</b> (CLRDFGS)</a><br>
+      Units: rem/pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      The ingestion dose factor is defined for radionuclides only, and is the
+      radiation dose conversion factor for ingestion of the radionuclide.&nbsp; Some
+      radionuclides may be represented by soluble and insoluble forms.&nbsp; This
+      parameter is for the more soluble forms of the compounds of the radionuclide.
+
+      <hr align="left" width="30%">
+      <a name=CLRDFGI><b>Ingestion Dose Factor, Insoluble</b> (CLRDFGI)</a><br>
+      Units: rem/pCi<br>
+      Range: 0 to 1
+
+    <p>
+      The ingestion dose factor is defined for radionuclides only, and is the
+      radiation dose conversion factor for ingestion of the radionuclide.&nbsp; Some
+      radionuclides may be represented by soluble and insoluble forms.&nbsp; This
+      parameter is for the less soluble forms of the compounds of the radionuclide.
+
+      <hr align="left" width="30%">
+      <a name=CLRDFS><b>Dermal Absorption Dose Factor</b> (CLRDFS)</a><br>
+      Units: rem/pCi<br>
+      Range:&nbsp;&nbsp;&nbsp;&nbsp; 0 to 1.0
+
+    <p>
+      The dermal dose factor is defined for radionuclides only, and is the radiation
+      dose conversion factor for intake of the radionuclide through the skin.
+
+      <hr align="left" width="30%">
+      <a name=CLDEX><b>External Dose Factor, Air Immersion</b> (CLDEX)</a><br>
+      Units: rem/hr per pCi/m<sup>3</sup><br>
+      Range: 0 to 1.0
+
+    <p>
+      The external dose factor for air immersion is the dose rate received by an
+      individual standing in a large cloud or plume of contaminated air having a
+      radionuclide concentration of 1 pCi per cubic meter.
+
+      <hr align="left" width="30%">
+      <a name=CLDIMR><b>External Dose Factor, Water Immersion</b> (CLDIMR)</a><br>
+      Units: rem/hr per pCi/L<br>
+      Range: 0 to 1.0
+
+    <p>
+      The water immersion, external dose factor is the dose rate received by an
+      individual immersed in water (e.g.&nbsp; swimming) having a radionuclide
+      concentration of 1 pCi per L.
+
+      <hr align="left" width="30%">
+      <a name=CLDSH><b>External Dose Factor, Ground Surface</b> (CLDSH)</a><br>
+      Units: rem/hr per pCi/m<sup>2</sup><br>
+      Range: 0 to 1.0
+
+    <p>
+      The ground surface, external dose factor is the dose rate received by an individual
+      standing on a large area of soil with uniform contamination at the soil surface
+      at a concentration of 1 pCi per square meter.
+
+      <hr align="left" width="30%">
+      <a name=CLDSH1><b>External Dose Factor, Ground Contamination to 1 cm</b>
+      (CLDSH1)</a><br>
+      Units: rem/hr per pCi/m<sup>3</sup><br>
+      Range: 0 to 1.0
+
+    <p>
+      This dose factor is the dose rate received by an individual standing on a large
+      area of soil contaminated uniformly to a depth of 1 cm at a concentration of 1
+      pCi per cubic meter.
+
+      <hr align="left" width="30%">
+      <a name=CLDSH5><b>External Dose Factor, Ground Contamination to 5 cm</b>
+      (CLDSH5)</a><br>
+      Units: rem/hr per pCi/m<sup>3</sup><br>
+      Range: 0 to 1.0
+
+    <p>
+      This dose factor is the dose rate received by an individual standing on a large
+      area of soil contaminated uniformly to a depth of 5 cm at a concentration of 1
+      pCi per cubic meter.
+
+      <hr align="left" width="30%">
+      <a name=CLDSH15><b>External Dose Factor, Ground Contamination to 15 cm</b>
+      (CLDSH15)</a><br>
+      Units: rem/hr per pCi/m<sup>3</sup><br>
+      Range: 0 to 1.0
+
+    <p>
+      This dose factor is the dose rate received by an individual standing on a large
+      area of soil contaminated uniformly to a depth of 15 cm at a concentration of 1
+      pCi per cubic meter.
+
+      <hr align="left" width="30%">
+      <a name=CLSFH><b>Inhalation Slope Factor</b> (CLSFH)</a><br>
+      Units: risk per pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      The inhalation slope factor is the risk of cancer incidence from inhalation of
+      1 pCi of a radionuclide.
+
+      <hr align="left" width="30%">
+      <a name=CLSFG><b>Ingestion Slope Factor - Water Intake</b> (CLSFG)</a><br>
+      Units: risk per pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      The ingestion slope factor is the risk of cancer incidence from ingestion of 1
+      pCi of a radionuclide in water.
+
+      <hr align="left" width="30%">
+      <a name=CLSFGF><b>Ingestion Slope Factor - Food Intake</b> (CLSFGF)</a><br>
+      Units: risk per pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      The ingestion slope factor is the risk of cancer incidence from ingestion of 1
+      pCi of a radionuclide in food.
+
+      <hr align="left" width="30%">
+      <a name=CLSFGS><b>Ingestion Slope Factor - Soil Intake</b> (CLSFGS)</a><br>
+      Units: risk per pCi<br>
+      Range: 0 to 1.0
+
+    <p>
+      The ingestion slope factor is the risk of cancer incidence from ingestion of 1 pCi
+      of a radionuclide in soil.
+
+      <hr align="left" width="30%">
+      <a name=CLSFEX><b>External Exposure Slope Factor for Soil Contamination</b>
+      (CLSFEX)</a><br>
+      Units: risk/yr per pCi/g soil<br>
+      Range: 0 to 1.0
+
+    <p>
+      The external exposure slope factor for soil is the rate of risk accumulation,
+      for exposure to contaminated soil at a concentration of 1 pCi per gram of
+      soil.&nbsp; The soil contamination is assumed to be infinitely deep (i.e., a
+      few meters).&nbsp; Values for this parameter are available in the EPA HEAST
+      publication <b>(EPA 1997a)</b>.
+
+      <hr>
+      <h3>AQUATIC FOOD TRANSFER FACTORS</h3>
+
+    <p>
+      This group includes parameters that describe the transfer of constituents
+      from aquatic media to aquatic foods.
+
+      <hr align="left" width="30%">
+      <a name=CLBCF><b>Bioconcentration Factor in Fish</b> (CLBCF)</a><br>
+      Units: kg dissolved/kgFW fish<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in fish to the
+      chemical concentration in the water to which the fish is exposed.&nbsp; The
+      bioconcentration factor accounts for uptake by the fish of the chemical from
+      water, but not from uptake from sediments passing across the gills, or from
+      consumption of foods.&nbsp; This factor is generally used for organic chemicals
+      that have a Kow of less than 4.0 and metals, implying these chemicals do not
+      bioaccumulate.
+
+      <hr align="left" width="30%">
+      <a name=CLBFF><b>Bioaccumulation in Freshwater Fish</b> (CLBFF)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a freshwater fish
+      to the chemical concentration in the water to which the fish is exposed.&nbsp;
+      The bioaccumulation factor generally accounts for uptake by the fish of the
+      chemical from water, sediments passing across the gills, and from consumption
+      of various foods.&nbsp; This parameter is generally used for organic chemicals
+      having a Kow greater than 4.0 that are expected to be taken up by the fish from
+      sediments and foods, and to bioaccumulate.
+
+      <hr align="left" width="30%">
+      <a name=CLBFM><b>Bioaccumulation in Freshwater Mollusk</b> (CLBFM)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a freshwater
+      mollusk to the chemical concentration in the water to which the mollusk is
+      exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBFI><b>Bioaccumulation in Freshwater Crustacea</b> (CLBFI)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a freshwater
+      crustacean to the chemical concentration in the water to which the crustacean is
+      exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBFP><b>Bioaccumulation in Freshwater Plants</b> (CLBFP)</a><br>
+      Units:L water/kg wet food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in freshwater aquatic
+      plants to the chemical concentration in the water to which the plants are
+      exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBMF><b>Bioaccumulation in Saltwater Fish</b> (CLBMF)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a saltwater fish
+      to the chemical concentration in the water to which the fish is exposed.&nbsp;
+      The bioaccumulation factor generally accounts for uptake by the fish of the
+      chemical from water, sediments passing across the gills, and from consumption
+      of various foods.
+
+      <hr align="left" width="30%">
+      <a name=CLBMM><b>Bioaccumulation in Saltwater Mollusk</b> (CLBMM)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a saltwater
+      mollusk to the chemical concentration in the water to which the mollusk is
+      exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBMI><b>Bioaccumulation in Saltwater Crustacea</b> (CLBMI)</a><br>
+      Units: L water/kg food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in a saltwater
+      crustacean to the chemical concentration in the water to which the crustacean
+      is exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBMP><b>Bioaccumulation in Saltwater Plants</b> (CLBMP)</a><br>
+      Units: L water/kg wet food<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is the ratio of the chemical concentration in saltwater aquatic
+      plants to the chemical concentration in the water to which the plants are
+      exposed.
+
+      <hr align="left" width="30%">
+      <a name=CLBSAF><b>Biota-Sediment Accumulation Factor</b> (CLBSAF)</a><br>
+      Units:&nbsp;&nbsp;&nbsp;&nbsp; mg/kg fish lipid per mg/kg sediment<br>
+      Range: 0 to 100,000
+
+    <p>
+      This parameter is defined specifically for lipophilic chemicals to relate
+      chemical concentration in bottom sediments to chemical concentration in fish
+      lipid material.&nbsp; This parameter should be used in place of the
+      bioaccumulation factor for fish for chemicals like PCDDs, PCDFs, and PCBs.
+
+      <hr>
+      <h3>ANIMAL TRANSFER FACTORS</h3>
+
+    <p>
+      This group includes parameters that describe the transfer of constituents
+      from water, feed, and soil to animal product foods.
+
+      <hr align="left" width="30%">
+      <a name=CLFMT><b>Feed-to-Meat Transfer Factor</b> (CLFMT)</a><br>
+      Units: d/kg<br>
+      Range: 0 to 5000
+
+    <p>
+      The feed-to-meat transfer factor is the ratio of chemical concentration in
+      fresh meat tissue to the daily intake of the chemical by the animal.&nbsp; This
+      factor is generally based on beef as the meat animal.&nbsp; Other parameters
+      are available to specify pork and poultry transfer.
+
+      <hr align="left" width="30%">
+      <a name=CLFPK><b>Feed-to-Pork Transfer Factor</b> (CLFPK)</a><br>
+      Units: d/kg<br>
+      Range: 0 to 100,000
+
+    <p>
+      The feed-to-pork transfer factor is the ratio of chemical concentration in fresh
+      beef tissue to the daily intake of the chemical by the animal.
+
+      <hr align="left" width="30%">
+      <a name=CLFMK><b>Feed-to-Cow Milk Transfer Factor</b> (CLFMK)</a><br>
+      Units: d/L<br>
+      Range: 0 to 100,000
+
+    <p>
+      The feed-to-milk transfer factor is the ratio of chemical concentration in milk
+      to the daily intake of the chemical by the milk animal.
+
+      <hr align="left" width="30%">
+      <a name=CLFPL><b>Feed-to-Poultry Transfer Factor</b> (CLFPL)</a><br>
+      Units: d/kg<br>
+      Range: 0 to 100,000
+
+    <p>
+      The feed-to-poultry transfer factor is the ratio of chemical concentration in
+      fresh poultry tissue to the daily intake of the chemical by the poultry animal.<br>
+
+      <hr align="left" width="30%">
+      <a name=CLFEG><b>Feed-to-Egg Transfer Factor</b> (CLFEG)</a><br>
+      Units: d/kg<br>
+      Range: 0 to 100,000
+
+    <p>
+      The feed-to-egg transfer factor is the ratio of chemical concentration in eggs
+      to the daily intake of the chemical by the egg-laying fowl.
+
+      <hr>
+      <h3>PLANT TRANSFER FACTORS</h3>
+
+    <p>
+      This group includes parameters that describe the transfer of constituents
+      from air and soil to plant foods.
+
+      <hr align="left" width="30%">
+      <a name=CLBVLV><b>Soil-to-Plant Concentration Ratio for Leafy Vegetables</b>
+      (CLBVLV)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      leafy vegetables to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVRV><b>Soil-to-Plant Concentration Ratio for Root Vegetables</b>
+      (CLBVRV)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      root vegetables to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVOV><b>Soil-to-Plant Concentration Ratio for Other Vegetables</b>
+      (CLBVOV)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      other vegetables to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVFR><b>Soil-to-Plant Concentration Ratio for Fruit</b>
+      (CLBVFR)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      fruit to the soil chemical concentration (dry soil).&nbsp; The soil-to-plant
+      concentration ratio accounts for the uptake from soil and transport through
+      roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVCL><b>Soil-to-Plant Concentration Ratio for Cereal</b>
+      (CLBVCL)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      cereal plants to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVAF><b>Soil-to-Plant Concentration Ratio for Animal Forage</b>
+      (CLBVAF)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      animal forage plants to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVAH><b>Soil-to-Plant Concentration Ratio for Hay</b> (CLBVAH)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      hay crops to the soil chemical concentration (dry soil).&nbsp; The
+      soil-to-plant concentration ratio accounts for the uptake from soil and
+      transport through roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLBVAG><b>Soil-to-Plant Concentration Ratio for Grain</b>
+      (CLBVAG)</a><br>
+      Units: kg soil per kg dry plant<br>
+      Range: 0 to 5000
+
+    <p>
+      This parameter is the ratio of plant chemical concentration (dry weight) for
+      grains to the soil chemical concentration (dry soil).&nbsp; The soil-to-plant
+      concentration ratio accounts for the uptake from soil and transport through
+      roots to the edible plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLRCF><b>Root Concentration Factor</b> (CLRCF)</a><br>
+      Units: L soil water per kg dry plant<br>
+      Range: 0 to 10<sup>6</sup>
+
+    <p>
+      The root concentration factor relates chemical concentration in the plant to
+      chemical concentration in soil water.&nbsp; This parameter represents an
+      alternate method for evaluation of uptake to root crops and may be useful when
+      the soil-to-plant concentration ratio is not available.
+
+      <hr align="left" width="30%">
+      <a name=CLAPLV><b>Air-to-Plant Transfer Factor for Leafy Vegetables</b>
+      (CLAPLV)</a><br>
+      Units: kg air per kg dry plant<br>
+      Range: 0 to 10<sup>10</sup>
+
+    <p>
+      This parameter is the ratio of plant chemical concentration to chemical air
+      concentration in which the plant is exposed.&nbsp; It is used to estimate
+      transfer from air to above ground leafy vegetable plant parts.
+
+      <hr align="left" width="30%">
+      <a name=CLAPF><b>Air-to-Plant Transfer Factor for forage</b> (CLAPF)</a><br>
+      Units: mg/kg dry weight plant per mg/kg air<br>
+      Range: 0 to 10<sup>10</sup>
+
+    <p>
+      This parameter is the ratio of plant chemical concentration to chemical air
+      concentration in which the plant is exposed.&nbsp; It is used to estimate
+      transfer from air to above ground forage and hay plant parts.
+
+      <hr>
+      <h3>ENVIRONMENTAL RATE PARAMETERS</h3>
+
+    <p>
+      This group includes parameters that describe environmental rate processes, including
+      loss rates from media, biodegradation, oxidation, hydrolysis, photolysis, and
+      reaction rates.
+
+      <hr align="left" width="30%">
+      <a name=CLTPHALF><b>Physical Loss Half Time in Air</b> (CLTPHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe the net loss rate of a
+      chemical during air transport.
+
+      <hr align="left" width="30%">
+      <a name=CLGPHALF><b>Physical Loss Half Time in Groundwater</b> (CLGPHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe the net loss rate of a
+      chemical during water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLWPHALF><b>Physical Loss Half Time in Surface Water</b> (CLSPHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe the net loss rate of a
+      chemical during surface water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLSPHALF><b>Physical Loss Half Time in Soil</b> (CLSPHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe the net loss rate of a
+      chemical in soil.
+
+      <hr align="left" width="30%">
+      <a name=CLTHALF><b>Half Time in Air</b> (CLTHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during air transport.
+
+      <hr align="left" width="30%">
+      <a name=CLGHALF><b>Half Time in Groundwater</b> (CLGHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLWHALF><b>Half Time in Surface Water</b> (CLWHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) during surface water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLSHALF><b>Half Time in Soil</b> (CLSHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe loss by transformation (radiological decay or chemical reaction) in soil.
+
+      <hr align="left" width="30%">
+      <a name=CLSHCF><b>Half Time in Soil, no leaching</b> (CLSHCF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter is used to describe the loss rate of a chemical from soil,
+      excluding losses due to leaching from the soil.
+
+      <hr align="left" width="30%">
+      <a name=CLBHALF><b>Half Time in Biota</b> (CLBHALF)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This is a general loss parameter used to describe the net loss rate of a
+      chemical from biotic organism.
+
+      <hr align="left" width="30%">
+      <a name=CLOXAIR><b>Oxidation Half Time in Air</b> (CLOXAIR)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter is used to describe the loss rate of a chemical from air
+      resulting from oxidation of the chemical during air transport.
+
+      <hr align="left" width="30%">
+      <a name=CLHYDA><b>Hydrolysis Half Time in Air</b> (CLHYDA)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter is used to describe the loss rate of a chemical from air
+      resulting from hydrolysis of the chemical during air transport.
+
+      <hr align="left" width="30%">
+      <a name=CLHYDW><b>Hydrolysis Half Time in Water</b> (CLHYDW)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter is used to describe the loss rate of a chemical from air
+      resulting from hydrolysis of the chemical during water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLPHTA><b>Photolysis Half Time in Air</b> (CLPHTA)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter used to describe the loss rate of a chemical from air
+      resulting from photolysis of the chemical during air transport.
+
+      <hr align="left" width="30%">
+      <a name=CLPHTW><b>Photolysis Half Time in Water</b> (CLPHTW)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter used to describe the loss rate of a chemical from water
+      resulting from photolysis of the chemical during water transport.
+
+      <hr align="left" width="30%">
+      <a name=CLBIOA><b>Biodegradation Half Time in Air</b> (CLBIOA)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter used to describe the loss rate of a chemical from air
+      resulting from biodegradation of the chemical in air.
+
+      <hr align="left" width="30%">
+      <a name=CLBIOW><b>Biodegradation Half Time in Water</b> (CLBIOW)</a><br>
+      Units:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter used to describe the loss rate of a chemical from water
+      resulting from biodegradation of the chemical in water.
+
+      <hr align="left" width="30%">
+      <a name=CLBIOS><b>Biodegradation Half Time in Soil</b> (CLBIOS)</a><br>
+      Units: days<br>
+      Range: &gt; 0
+
+    <p>
+      This loss parameter used to describe the loss rate of a chemical from soil
+      resulting from biodegradation of the chemical in soil.
+
+      <hr align="left" width="30%">
+      <a name=CLHRRRC><b>Hydroxyl Radical Reaction Rate Constant</b> (CLHRRRC)</a><br>
+      Units: cm<sup>3</sup>/mole sec<br>
+      Range: 0 to 10
+
+    <p>
+      The hydroxyl radical reaction rate constant is the gas phase reaction rate of a
+      chemical with OH radicals in the atmosphere.&nbsp; This parameter is useful for
+      estimation of photo-chemically induced degradation of organic chemicals in the
+      vapor phase.
+
+      <hr align="left" width="30%">
+      <a name=CLVD><b>Deposition Velocity</b> (CLVD)</a><br>
+      Units: m/sec<br>
+      Range: 0 to 1.0
+
+    <p>
+      The deposition velocity is the rate of deposition of particulate matter from
+      air to the ground.&nbsp; For chemicals that exist partly in the vapor phase in
+      air, effective deposition velocity values may be defined.
+
+      <hr align="left" width="30%">
+      <a name=CLCLASS><b>Atmospheric Deposition Class</b> (CLCLASS)</a><br>
+      Units:&nbsp; none<br>
+      Range: 1 to 6 (integer value)
+
+    <p>
+      The atmospheric deposition class is used to describe the characteristics of the
+      chemical for evaluation of losses during atmospheric transport.&nbsp; The
+      current classes are as follows:
+
+    <p>
+      Class Description<br>
+      1&nbsp;&nbsp;&nbsp; particles, radius = 7.5 micron<br>
+      2&nbsp;&nbsp;&nbsp; particles, radius = 3.0 micron<br>
+      3&nbsp;&nbsp;&nbsp; particles, radius = 0.3 micron (default for inorganic chemicals and radionuclides)<br>
+      4&nbsp;&nbsp;&nbsp; depositing gas, surface resistance of reactive gas<br>
+      5&nbsp;&nbsp;&nbsp; non-depositing gas (e.g.&nbsp; volatile organic chemicals)<br>
+      6&nbsp;&nbsp;&nbsp; gas behaving as a particle (same deposition rate as class 3), absorbed on particulate material.
+
+      <hr>
+      <h2>References</h2>
+
+    <p>
+      Andelman, J.&nbsp; B.&nbsp; 1990.&nbsp; Total Exposure to Volatile Organic
+      Chemicals in Potable Water.&nbsp; N.&nbsp; M.&nbsp; Ram, R.&nbsp; F.&nbsp; Christman, K.&nbsp; G.&nbsp; Cantor
+      (eds.).&nbsp; Lewis Publishers, Boca Raton, Florida.
+
+    <p>
+      Bagaasen, LA, JL Bryant, JW Buck, and MK White.&nbsp; 1996.&nbsp; &quot;Remedial
+      Action Assessment System (RAAS) - Version 1.1 Tutorial Cases.&quot;&nbsp; PNL-8233,
+      Rev.&nbsp; 1, Pacific Northwest National Laboratory, Richland, Washington
+
+    <p>
+      Devilliers, J., S.&nbsp; Bintein, and D.&nbsp; Domine.&nbsp; 1996.&nbsp;
+      &quot;Comparison of BCF Models Based on Log P&quot;.&nbsp; Chemosphere.&nbsp; 3:(6)
+      1047-1065.
+
+    <p>
+      EPA.&nbsp; 1997a.&nbsp; Health Effects Assessment Summary Tables: FY 1997
+      Update.&nbsp; EPA-540-R-97-036.&nbsp; Office of Research and Development,
+      United States Environmental Protection Agency.&nbsp; Washington, DC.
+
+    <p>
+      EPA.&nbsp; 1997b.&nbsp; Mercury Study Report to Congress.&nbsp; Volume III: Fate
+      and Transport of Mercury in the Environment.&nbsp; Office of Air Quality
+      Planning and Standards and Office of Research and Development.&nbsp; EPA-452/R-97-005.&nbsp;
+      US Environmental Protection Agency, Washington, DC.
+
+    <p>
+      Howard, P.&nbsp; H.&nbsp; and W.&nbsp; M.&nbsp; Meylan.&nbsp; 1997.&nbsp; Handbook of Physical
+      Properties of Organic Chemicals.&nbsp; Lewis Publishers, Boca Raton, Florida.
+
+    <p>
+      Mackay, D., W.&nbsp; Y.&nbsp; Shiu, and K.&nbsp; C.&nbsp; Ma.&nbsp; 1992.&nbsp; Illustrated Handbook
+      of Physical-Chemical Properties and Environmental Fate for Organic Chemicals.
+      Lewis Publishers, Boca Raton, Florida.
+
+      <hr>
+        <A align="center" href="https://www.pnnl.gov/projects/earth/mepas">FRAMES Homepage</A>
+  </body>
 </html>
