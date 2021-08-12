@@ -73,6 +73,9 @@ Begin VB.Form PlusUI
    End
    Begin VB.Menu help 
       Caption         =   "&Help"
+      Begin VB.Menu howto 
+         Caption         =   "How to..."
+      End
       Begin VB.Menu about 
          Caption         =   "&About"
       End
@@ -240,6 +243,7 @@ Private Sub Form_load()
 Dim i As Integer
   
   StartModule PlusUI, App.Title, 4
+  SetHelpFile App.Path + "\plus.htm"
   Loading.Show
   loadng = True
 
@@ -332,5 +336,9 @@ Private Sub save_Click()
     PutError "Unable to create transaction file" & RunName & ".GID"
   End If
   EndModule
+End Sub
+
+Private Sub howto_Click()
+  GetHelp
 End Sub
 
