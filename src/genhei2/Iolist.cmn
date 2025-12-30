@@ -1,0 +1,6 @@
+C    ADDITION 5 NOV 98  BAN  ADD IDEXW
+C
+C------------
+      integer idex, i30, i31, i32, i33, i34, i35, i36, i37, olog, IDEXW
+      parameter (idex = 10, i30=11, i31=12, i32=13, i33=14,
+     :           i34=15, i35=16, i36=17, i37=18, olog=22, IDEXW=19)

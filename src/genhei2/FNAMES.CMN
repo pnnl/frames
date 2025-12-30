@@ -1,0 +1,50 @@
+C   INTAKE:     FNAMES.CMN             Version Date: 05-Jun-97               
+C   Copyright 1989, 1996 by Battelle Memorial Institute.  All rights reserved.
+C*****************************************************************************
+C                                                                            *
+C                           COMMON BLOCK FNAMES                              *
+C                                                                            *
+C  Common block FNAMES contains file names                                   *
+C                                                                            *
+C  Written by:       Dennis Strenge                                          *
+C                    Battelle Pacific Northwest Laboratories                 *
+C                    P.O. Box 999                                            *
+C                    Richland, WA 99352                                      *
+C                                                                            *
+C  Creation Date:    01/19/89 (Converted to PC)                              *
+C  Last Modified:    05-Jun-97  DLS                                          *
+C                                                                            *
+C*****************************************************************************
+C
+C==== Modular Organization ===================================================
+C
+C     Module of: GENII/INTAKE 
+C     Referenced by modules: INTAKE, GETNAM
+C
+C==== Significant Parameter Designation and Description ======================
+C
+C   Parameter 
+C    Name      Type     Parameter Description
+C  --------- --------  -----------------------------------------------------
+C   GIDFNM   CHAR*128  file name prefix for GID file
+C   RUNFNM   CHAR*128  file name prefix for run files (WFF, WFC, ERR)
+C                      and name of data set in GID file for this run
+C   NSITE    INT       Number of site to be analyzed
+C   NUMRCP   INT       Number of exposure location to be analyzed
+C   GLFNAME  CHAR*32   Name of glyph being analyzed (ExpName)
+C==== Modification History ===================================================
+C
+C    Date      Who  Modification Description
+C  ---------   ---  ------------------------------------------------------
+C  05-Jun-98   BAN  REVISED FOR DOSERISK
+C==== COMMON Block Definition ================================================
+C
+      COMMON/FNAMES/GIDFNM,RUNFNM,NSITE,NUMHEI,GLFNAME
+C
+C==== Variable Declarations ==================================================
+C
+      CHARACTER      GIDFNM*128, RUNFNM*128, GLFNAME*32
+      INTEGER   NSITE, NUMhei
+C
+C---- END OF COMMON BLOCK FNAMES ---------------------------------------------
+C

@@ -1,0 +1,16 @@
+*  The following parameters give the maximium dimensions of arrays in the
+*  dose factor package.  To increase the problem size, edit this file and
+*  recompile all routines.
+*
+*     mage is the number of age groups
+*     mspec is the maximium number of nuclides in a chain
+*     mfact is the maximium number of pathways (inhalation, ingestion, and
+*     external).
+*     morg is the maxium number of organs in the dose factor file.
+*     mcan is the number of cancer sites
+*     mext is the number of external pathways considered.
+*
+      integer mage, mspec, morg, mfact, mcan
+      parameter(mage = 6, mspec = 25, morg = 24, mfact = 3, mcan = 15,
+     .          mext = 3)
+C
