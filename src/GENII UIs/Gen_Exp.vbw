@@ -1,0 +1,12 @@
+gen_exp = 22, 29, 999, 767, C, 44, 58, 1021, 796, C
+Loading = 0, 0, 0, 0, C, 88, 116, 1065, 854, C
+Reference = 0, 0, 0, 0, C, 110, 145, 1087, 883, C
+CSV_IO = 0, 0, 0, 0, C
+CNVRT_IO = 0, 0, 0, 0, C
+DataTypes = 0, 0, 0, 0, C
+PARM_IO = 0, 0, 0, 0, C
+Float = 0, 0, 0, 0, C
+Whole = 0, 0, 0, 0, C
+Selects = 0, 0, 0, 0, C
+Logical = 0, 0, 0, 0, C
+Common = 0, 0, 0, 0, C
