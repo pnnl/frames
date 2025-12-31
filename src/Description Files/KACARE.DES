@@ -16,8 +16,7 @@ See documentation.
 
 MODULE REFERENCES
 Web site:
-  https://www.pnnl.gov/projects/earth/frames-v1
-  https://www.pnnl.gov/constituent-con
+  http://mepas.pnnl.gov/FramesV1/index.stm
 
 VALID CONNECTIONS
 Valid Input Reads
@@ -42,7 +41,7 @@ Country:              USA
 Telephone Number:     (509) 375-3896
 Fax Number:           (509) 375-2019
 Email Address:        Bruce.Napier@pnnl.gov
-URL Address:          https://ramp.nrc-gateway.gov/
+URL Address:          http://www.usnrc-ramp.com
 "
 0,"Read"
 1,"Write"

@@ -9,7 +9,7 @@ This module will display, in ASCI formated text, the contents of a section in an
 
 MODULE REFERENCES
 Other related sites:
-  https://www.pnnl.gov/projects/earth
+  http://mepas.pnl.gov/earth
 
 VALID CONNECTIONS
 Valid Input Reads
@@ -35,7 +35,7 @@ Country:              USA
 Telephone Number:     
 Fax Number:           
 Email Address:        Bruce.Napier@pnnl.gov
-URL Address:          https://ramp.nrc-gateway.gov/
+URL Address:          http://www.usnrc-ramp.com
 "
 3,"Reads"
 1,"epa","Air Dose Compliance File",1,1
