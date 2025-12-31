@@ -1,7 +1,28 @@
+GENII Version 2.10.2
+20 February 2017
+
+Version 2.10.2 is a minor update to Version 2.10.1 to correct some minor difficulties found in the updates of operating systems from Windows XP and Windows 7 to Windows 8 and Windows 10.
+1) Logic was repaired for connection of the User Defined to Chronic Exposure modules
+2) The default parameter for tritium gas (HT) in the database was changed from ?V? (vapor) to ?G? (gas)
+3) Kd values from the database are now available in the Exposure Module/Soil Leaching tab
+4) User Defined Surface Water is now allowed as an input to the Acute Exposure Module
+5) The Known EPF module was revised to allow input of soil, ground, water external inputs
+6) The VB coding for the meteorological data processors to convert joint frequency and CEAM data to GENII format were recompiled for later OS
+7) The Sensitivity capability for the surface water module was enhanced
+8) An inappropriate adjustment of irrigation rate was corrected in the Acute water module
+9) Typographical errors in the SDD Tables 8.2 ? 8.5 were corrected.
+10) The ATO output mirror in the air report has been corrected to list all 16 directions
+11) The decay chain for Mo99 has been corrected to include Tc99m
+12) Output of the GENII puff model has been expanded to up to a 41 by 41 grid; the reporting cutoff for external dose in the puff models has been decreased 
+13) The acute-period aquatic pathway names in the report generator have been corrected (the chronic period names were being used)
+NOTE: Windows 8 and Windows 10 users should turn off the touch screen capabilities for use with FRAMES
+NOTE: Non-US users must adjust the code page to be compliant with US standards for True/False and dot-as-decimal use.
+
+
 GENII Version 2.10.1
 9 September 2012
 
-Version 2.20.1 was prepared in response to DOE Report No. HSS-CR-2011-01, Software Evaluation of GENII V2.10 with FRAMES V1.7 for Inclusion in the DOE Safety SOftware Central Registry.  This report described several QA-related steps necessary for complete acceptance of GENII.  These included some changes in GENII management oversight at PNNL, some additional review and testing, and other changes.  As a result of the subsequent detailed reviews, some minor changes were made to Version 2.10.  THese included:
+Version 2.10.1 was prepared in response to DOE Report No. HSS-CR-2011-01, Software Evaluation of GENII V2.10 with FRAMES V1.7 for Inclusion in the DOE Safety Software Central Registry.  This report described several QA-related steps necessary for complete acceptance of GENII.  These included some changes in GENII management oversight at PNNL, some additional review and testing, and other changes.  As a result of the subsequent detailed reviews, some minor changes were made to Version 2.10.  These included:
 1) Correction of the C14 contribution in the air report generator;
 2) Addition of the population file input to air Report EPA file;
 3) Change of air module error writes to an err file, not to the DOS screen;
@@ -11,7 +32,7 @@ Version 2.20.1 was prepared in response to DOE Report No. HSS-CR-2011-01, Softwa
 7) Logic correction has been made to allow multiple User Defined inputs in one Site for the Chronic Exposure Module;
 8) Capability had inadvertently been lost in earlier updates of the aability to turn off the ATO mirror in the air Report Generator. This was repaired;
 9) Additional input parameters are now output in all Report Generators for QA checking, along with formatting improvements;
-10) AN error in the Surface Water report generator if all zero doses, causing an indicator to not be set, was corrected;
+10) An error in the Surface Water report generator if all zero doses, causing an indicator to not be set, was corrected;
 11) Multiple particle sizes were not getting appropriate settling velocities in all plume models, this was repaired;
 12) Added direction randomization for calms, as in chronic plume air module, to the 95% air module because results reported in 10-degree increments would have been over-reported in the cardinal directions;
 13) Errors occurred in the Biota module under certain inputs were the code was using old defaults if zero values were input, giving odd results.  Also, some cases allowed an unreported overflow condition that was prevented;
